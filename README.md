@@ -94,6 +94,11 @@ graph TD
     style F fill:#F59E0B,stroke:#92400E,stroke-width:1px,color:#fff
 ```
 
+<div align="center">
+  <img src="assets/skill_pack_showcase.jpg" alt="AGI Core Modular Skill Pack Architecture" width="100%">
+  <p><em>Modular glassmorphism architecture: deterministic skill modules with unified cognitive routing.</em></p>
+</div>
+
 ### 🎯 Sector 1: Metacognition & Governance
 - [`epistemic-governance`](skills/epistemic-governance/SKILL.md) — Bayesian truth bounds and machine-verifiable confidence labeling.
 - [`one-shot-ultra-loop-engine`](skills/one-shot-ultra-loop-engine/SKILL.md) — Autonomous 5-pillar execution loop ensuring $Q \ge 9.0$.
