@@ -41,6 +41,7 @@ trigger: always_on
 | Convergência Transcendental / Ponto W / Hyper-Crítica | `skills/point-w-evolutionary-engine/SKILL.md` | Invariância empírica de 5 vetores até Ponto W |
 | Testes de Invariância / Falsificação Rigorosa | `skills/popperian-invariance-testing/SKILL.md` | Testes metamórficos e falsificação Popperiana |
 | Batch massivo ($>10$ arquivos / módulos) | `skills/massive-batch-orchestration/SKILL.md` | Orquestração e despacho assíncrono em swarm |
+| **Erro 429 / RESOURCE_EXHAUSTED / QUOTA_EXHAUSTED** em qualquer ferramenta | `rules/QUOTA_EXHAUSTED_PROTOCOL.md` | **ATIVAÇÃO IMEDIATA:** Extrair delay, notificar usuário, auto-agendar retry via `schedule` (one-shot) com contexto 100% preservado no prompt do timer |
 
 ## 2. GOLDEN DIRECTIVES (MANDATORY EXECUTION)
 1. **DETERMINISTIC 6-STAGE AGI/ASI PIPELINE (ZERO-OMISSION LAW):** Para qualquer missão, criação de sistema, web app, backend ou jogo, o agente é expressamente proibido de executar apenas 1 ou 2 passos e parar. Ele DEVE OBRIGATORIAMENTE executar a esteira de 6 fases em sequência:
