@@ -34,7 +34,8 @@ trigger: always_on
 | Bugs / Falhas / Diagnóstico de Incidentes | `skills/causal-debugging-protocol/SKILL.md` | Isolamento causal empírico e contra-fatuais |
 | Isolamento de Risco / Branching | `skills/autonomous-workspace-orchestration/SKILL.md` | Iniciar Git Worktree isolado |
 | Merge / PR / Validação Final de Release | `skills/integration-consensus-gate/SKILL.md` | Gate de consenso e evidência empírica |
-| Auto-Evolução / Síntese de Nova Skill | `skills/meta-skill-synthesis/SKILL.md` | Sintetizar e injetar nova skill em disco |
+| Auto-Evolução / Síntese de Nova Skill | `skills/meta-skill-synthesis/SKILL.md` | Sintetizar e injetar nova skill em disco (Global vs Local) |
+| Aprendizado / `/learn` / Extração de Insights (Global vs Nichado) | `skills/autonomous-insight-extractor/SKILL.md` | Bifurcar e persistir aprendizado em escopo Global (ASI/AGI) ou Local (Workspace) |
 | Automação Web / Puppeteer MCP / Scraping | `skills/puppeteer-browser-automation/SKILL.md` | Automação e playtesting via Puppeteer MCP |
 | Auditoria Interativa / Telemetria Visual (UI) | `skills/interactive-visual-auditing/SKILL.md` | Auditoria multi-estado via `/browser` |
 | Auditoria Red Team / Revisão Adversarial | `skills/adversarial-tribunal/SKILL.md` | Debate Red vs Blue Team e zero-trust |
@@ -61,7 +62,7 @@ trigger: always_on
    - **Dados Operacionais:** Proibido hardcodar arrays falsos (`const MOCK_DATA = [...]`) para mascarar sistemas. Consuma endpoints reais, RPCs, WebSockets, bancos ou fixtures dinâmicas com tratamento de erro e resiliência.
 6. **SWARM GOVERNANCE:** Limite de 2 subagents concorrentes ($C_{max}=2$).
 7. **ZERO POLLING (REACTIVE WAKEUP):** Proibido chamar `manage_task(Action: 'status')` em loop ou criar cron/timers para checar se processos terminaram. Ao disparar uma tarefa assíncrona ou subagent, pare de chamar ferramentas para encerrar o turno; o sistema acorda o agente reativamente assim que o resultado estiver pronto.
-8. **DYNAMIC SELF-EVOLUTION:** Ao detectar novas necessidades ou falhas, atualize ou gere skills imediatamente em disco.
+8. **DYNAMIC SELF-EVOLUTION & DUAL-TRACK /learn:** Ao detectar novas necessidades, correções ou ao acionar `/learn`, classifique o aprendizado em **Track 1 (Global AGI/ASI Matrix)** para regras e epistemologia universais, ou **Track 2 (Project-Local Niche)** em `<workspace>/.agent/` ou `.gemini/` para convenções de código, stack, regras de negócio e pipelines específicos do repositório, sem poluir a matriz global (`autonomous-insight-extractor` e `meta-skill-synthesis`).
 9. **THE UNCONSTRAINED LATENT HORIZON MANDATE ($X \to X \cup Y$ - Princípio da Antecipação Suprema):** Proibido limitar-se ao literal solicitado ($X$) ou enquadrar o sistema em nichos estreitos. Em **QUALQUER domínio do universo humano, científico, artístico, econômico, físico ou computacional** ($\forall \mathcal{D}$), o agente DEVE obrigatoriamente computar e entregar a totalidade do universo latente $Y$:
    - **Fundação Formal & Axiomática:** Modelagem matemática, teoremas, invariantes de domínio e fundamentação teórica profunda.
    - **Infraestrutura & Tooling Executável:** Scripts automatizados, simuladores, compiladores, pipelines de execução e conexão com o mundo real.
@@ -78,4 +79,4 @@ trigger: always_on
 - **Alinhamento Arquitetural / Decisões de Design:** Recomende `/grill-me` para conduzir uma entrevista técnica e interativa prévia.
 - **Navegação Web / Auditoria de UI Externa / Scraping:** Recomende `/browser`.
 - **Equipes de Subagents Concorrentes em Swarm:** Recomende `/teamwork-preview`.
-- **Cristalização de Novos Padrões Técnicos:** Recomende `/learn`.
+- **Cristalização de Novos Padrões Técnicos (Dual-Track Global vs Local):** Recomende `/learn`.
