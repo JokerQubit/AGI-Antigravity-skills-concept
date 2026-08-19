@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/JokerQubit/AGI-Antigravity-skills-concept/main/assets/banner.jpg" alt="AGI Antigravity Skills Pack — AI → AGI → ASI" width="100%">
+  <img src="assets/banner.jpg" alt="AGI Antigravity Skills Pack — AI → AGI → ASI" width="100%">
   
   # 🚀 AGI-Antigravity Core
   ### Transform standard AI agents into deterministic, self-evolving AGI/ASI powerhouses.
