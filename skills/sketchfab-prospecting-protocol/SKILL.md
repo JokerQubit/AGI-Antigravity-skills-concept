@@ -23,7 +23,14 @@ This skill dictates the rigorous procedure for researching, evaluating, download
 ## 🛠️ Universal 4-Step Prospecting & Vetting Pipeline
 
 ### Step 1: Multi-Source Search & Visual Candidate Catalog
-Dispatch the `browser` subagent (`invoke_subagent` with `TypeName: browser`, `Role: 3D Spatial Asset Researcher`):
+Dispatch the `research` subagent (`invoke_subagent` with `TypeName: "research"`, `Role: "3D Spatial Asset Researcher"`) or use `search_web`:
+```json
+{
+  "TypeName": "research",
+  "Role": "3D Spatial Asset Researcher",
+  "Prompt": "3D PROSPECTING: Pesquise modelos 3D livres (CC0/CC-BY) para [OBJETO] em Poly Haven, ambientCG, NASA 3D e Sketchfab. Extraia 3 candidatos com URLs de thumbnails, formato (.glb/.gltf) e contagem poligonal (<100k)."
+}
+```
 - **Search Sources:** 
   - Sketchfab API / Search: `https://sketchfab.com/search?q=<QUERY>&features=downloadable&type=models`
   - Open 3D / PBR Repositories (Poly Haven, NASA 3D, ambientCG, GitHub 3D repos).

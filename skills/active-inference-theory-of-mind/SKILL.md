@@ -22,3 +22,13 @@ Before merging any subagent output via the Synthesis Protocol:
 
 ## 3. Minimization of Free Energy (Surprise)
 The Swarm's ultimate goal is to minimize Free Energy. Do not accept solutions that introduce unpredictable, unverified variables into the `cognitive-memory`. All facts must be grounded and predictable.
+
+## 4. Subagent Dispatch Payload (Two-Stroke Ignition)
+When deploying an isolated worker under Active Inference:
+```json
+{
+  "TypeName": "self",
+  "Role": "Markov Blanket Worker",
+  "Prompt": "ACTIVE INFERENCE TASK: Execute [TAREFA]. Retorne exclusivamente fatos comprovados com evidências empíricas (comandos executados e saídas reais). Proibido suposições não aterradas."
+}
+```

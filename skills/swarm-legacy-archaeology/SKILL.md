@@ -14,3 +14,13 @@ Replaces OS-specific shell invocations with a cross-platform semantic filesystem
 Replaces filename string-matching with a Semantic AST Invariant Proof:
 - `COVERAGE_GATE`: Evaluates whether 100% of exported symbols, functions, types, and mathematical models in the source corpus have matching formal specifications and test vectors in the target architecture.
 - Generates a formal diff proof report (`semantic_coverage_proof.json`).
+
+## III. Subagent Dispatch Payload (Two-Stroke Ignition)
+When deploying a legacy archaeology swarm worker:
+```json
+{
+  "TypeName": "research",
+  "Role": "Corpus Archaeology Worker",
+  "Prompt": "LEGACY ARCHAEOLOGY: Realize o mapeamento semântico do diretório [DIRETÓRIO]. Extraia grafo de dependências, tipos exportados, contratos de interface e identifique dead code."
+}
+```

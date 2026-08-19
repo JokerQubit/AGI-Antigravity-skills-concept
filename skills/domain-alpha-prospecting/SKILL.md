@@ -41,7 +41,14 @@ description: "MANDATORY. Use when entering complex, high-stakes domains (Distrib
 
 ## 2. The Prospecting Pipeline
 
-1. **MANDATORY Multi-Source Research:** Invoke the `browser` subagent (`invoke_subagent` with `TypeName: browser`) or `search_web` to inspect academic papers (ArXiv, ACM, IEEE), official technical specifications, GitHub reference architectures, and benchmark leaderboards.
+1. **MANDATORY Multi-Source Research:** Invoke the `research` subagent (`invoke_subagent` with `TypeName: "research"`, `Role: "Domain Alpha Prospector"`) or `search_web` to inspect academic papers (ArXiv, ACM, IEEE), official technical specifications, GitHub reference architectures, and benchmark leaderboards:
+   ```json
+   {
+     "TypeName": "research",
+     "Role": "Domain Alpha Prospector",
+     "Prompt": "ALPHA PROSPECTING: Prospecte os algoritmos e padrões de engenharia State-of-the-Art para [DOMÍNIO]. Identifique: 1) Invariantes formais, 2) Otimizações de baixo nível/complexidade computacional, 3) Edge-cases e armadilhas comuns. Retorne o Alpha destilado."
+   }
+   ```
 2. **Synthesize the Alpha:** Distill findings into 3 core architectural invariants that the implementation MUST enforce.
 3. **Architectural Correction:** Compare the initial plan or user prompt with the discovered Alpha, upgrading any naive approach to the state-of-the-art standard.
 

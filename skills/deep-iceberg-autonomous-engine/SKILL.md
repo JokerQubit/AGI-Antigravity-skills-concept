@@ -44,12 +44,13 @@ description: MANDATORY. Master AGI/ASI Deep Iceberg Engine (100% Depth Mandate).
   - **Circuit Breakers & Fallbacks:** Se qualquer API externa ou microsserviço falhar ou demorar mais de 3000ms, o sistema chaveia automaticamente para um provedor secundário ou ativa um modo degradado gracioso sem travar a interface.
   - **Locks Otimistas:** Transações de estoque ou agendamento usam versionamento (`version_id` / CAS - Compare-And-Swap) para eliminar race conditions em compras simultâneas.
 
-### 🌊 Camada 3: Micro-Física Tátil e Sonificação Sensorial (WebAudio)
+### 🌊 Camada 3: Micro-Física Tátil e Sonificação Sensorial (Dual Audio Mandate)
 - **Proibição:** Componentes rígidos, estáticos, sem inércia física ou som.
 - **Mandato:** Transformação da interface em um objeto físico vivo:
   - **Física de Molas (*Spring Dynamics*):** Modais, cards e transições utilizam curvas de aceleração física baseadas em molas ($f = -kx - cv$) com amortecimento suave.
   - **Iluminação Especular Dinâmica:** Superfícies e botões com gradientes de borda (*rim light*) que recalculam vetores de luz conforme a posição $(X, Y)$ do cursor do usuário.
-  - **Síntese Háptica WebAudio:** Micro-feedback sonoro sintetizado em tempo real via WebAudio API (ondas senoidais com decaimento exponencial orgânico de 20ms a 60ms) para confirmação de ações de alto valor (adicionar ao carrinho, alternar filtros, compra aprovada).
+  - **Micro-Feedback Háptico WebAudio (< 50ms):** Micro-feedback sonoro instantâneo em tempo real via WebAudio API (ondas senoidais com decaimento exponencial de 20ms a 50ms) para confirmação tátil de cliques/toggles.
+  - **Sonificação e SFX Realistas (YouTube):** Para ambientação sonora, som de produto e telemetria acústica realista, prospecte áudios autênticos via `skills/youtube-audio-prospecting/SKILL.md`.
 
 ### ⚡ Camada 4: Prefetching Preditivo e Latência Zero (0ms Optimistic UI)
 - **Proibição:** Telas de espera (*loaders*) desnecessárias a cada clique.

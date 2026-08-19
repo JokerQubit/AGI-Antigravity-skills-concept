@@ -46,5 +46,5 @@ Produce the **Accumulated Invariant Register** and `master_refactoring_blueprint
 Following zero-trust scientific review (incorporating mandatory theoretical improvements and falsification checks), synthesize:
 1. **`final_specification.md`**: Supersedes quarantine specification, integrating accepted scientific enhancements and documenting explicit rejection criteria for discarded proposals.
 2. **`production_plan.md`**: Step-by-step machine-executable blueprint driving autonomous worker swarms, enforcing mandatory Gate checkpoints before commit:
-   - **Code Gate (MANDATORY):** Must execute test runner (`pytest` or `npm test`) via `run_command` and confirm zero exit code.
-   - **Visual Gate (MANDATORY for UI/WebGL):** Must invoke `browser` subagent (`invoke_subagent TypeName: browser`), capture screenshot, inspect with `view_file`, and perform 3-point Red Team critique. Claiming completion without visual screenshot proof is FORBIDDEN.
+    - **Code Gate (MANDATORY):** Must execute test runner (`pytest` or `npm test`) via `run_command` and confirm zero exit code.
+    - **Visual Gate (MANDATORY for UI/WebGL):** Must capture full-screen screenshot via Puppeteer MCP (`puppeteer_screenshot(width: 1920, height: 1080)`), inspect with `view_file`, and perform 3-point Red Team critique. Claiming completion without visual screenshot proof is FORBIDDEN.

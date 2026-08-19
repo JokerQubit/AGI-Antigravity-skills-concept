@@ -21,8 +21,15 @@ You must not generate generic, basic, or "MVP" quality deliverables when the sys
 
 ## 2. The 4-Step Benchmarking Loop
 
-### Phase A: Market & Academic Research (MANDATORY — Browser Subagent + `search_web`)
-1. **Multi-Source Sourcing:** Invoke the `browser` subagent (`invoke_subagent` with `TypeName: browser`) or `search_web` to inspect real competitor architectures, design systems, academic papers, live systems, and GitHub benchmarks.
+### Phase A: Market & Academic Research (MANDATORY — Research Subagent + `search_web`)
+1. **Multi-Source Sourcing:** Invoke the `research` subagent (`invoke_subagent` with `TypeName: "research"`, `Role: "State-of-the-Art Benchmark Researcher"`) or `search_web` to inspect real competitor architectures, design systems, academic papers, live systems, and GitHub benchmarks:
+   ```json
+   {
+     "TypeName": "research",
+     "Role": "State-of-the-Art Benchmark Researcher",
+     "Prompt": "BENCHMARK RESEARCH: Pesquise os 3 líderes mundiais em [DOMÍNIO]. Identifique: 1) Padrões arquiteturais exatos, 2) Métricas de SLA/Latência/FPS, 3) Ergonomia/Design Tokens, 4) Pontos fracos dos concorrentes para superarmos. Retorne relatório estruturado com referências."
+   }
+   ```
 2. Determine the target domain and identify the top 3 industry or academic leaders.
 3. Extract their key differentiators (e.g., "Zero-copy ring buffer memory model", "Sub-10ms P99 latency", "High-density editorial typography with fluid micro-interactions").
 

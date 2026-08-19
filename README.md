@@ -48,29 +48,43 @@ Standard AI coding assistants operate predominantly on **System 1 (Fast Thinking
 
 ---
 
-## 📜 The 5 Constitutional Directives
+## 📜 The 6 Constitutional Directives & Execution Protocols
 
 Every decision and action executed by the agent is governed by the immutable constitution in [`rules/AGI_CORE.md`](rules/AGI_CORE.md):
 
-### 🛡️ 1. Universal Ultra-Loop ($Q \ge 9.0/10$)
-No project or refactor is concluded in a single shallow pass. For any technical domain (Distributed Systems, AI/ML, High-Performance WebGL, Cryptography, Mobile, Backends), the agent autonomously iterates through architecture, empirical validation, and adversarial review until achieving world-class quality ($Q \ge 9.0$).
+### ⚡ 1. The Two-Stroke Ignition Protocol (Anti-Inertia Engine)
+The agent operates under a deterministic two-phase action contract:
+- **Tempo 0 (Epistemic Ingestion):** Mandatory `view_file` on the corresponding `SKILL.md` before generating code.
+- **Tempo 1 (Compulsory Action Dispatch):** Prohibits passive text responses after reading. The agent **MUST** immediately dispatch the associated subagent (`invoke_subagent`), Python script (`run_command`), Puppeteer MCP tool, or asset generator (`generate_image`).
 
-### 👁️ 2. Zero-Trust Empirical Evidence Gate
-The agent is strictly prohibited from claiming completion without verifiable proof:
-- **Backend & Logic:** Clean compilation (`exit 0`), deterministic test suites, and zero lint warnings.
-- **Frontend & Visuals:** Headless Puppeteer MCP execution in Full HD (1920x1080), screenshot capture inspection via `view_file`, and minimum 2 rounds of adversarial critique.
+### 🛡️ 2. Tri-Gate Completion Firewall (Zero-Trust Evidence)
+The agent is strictly prohibited from claiming completion without passing all 3 Verification Gates:
+- **Gate 1 (Compilation & Tests):** Clean compilation (`exit code 0`), deterministic test execution, and 0 lint warnings.
+- **Gate 2 (Full HD 1920x1080 Visual Evidence):** Mandatory full-screen viewport captures via Puppeteer MCP (`puppeteer_screenshot(width: 1920, height: 1080)`) + inspection via `view_file` + 2 iterative critique rounds.
+- **Gate 3 (Adversarial Tribunal Subagent):** Real isolated Red Team subagent (`invoke_subagent`) dispatched to actively hunt 3 critical defects with 0 surviving failures to achieve Point W ($Q \ge 9.0/10$).
 
-### 🐝 3. Swarm Governance & Reactive Wakeup
-Parallel agent swarms are bounded to a maximum of 2 concurrent workers ($C_{\text{max}} = 2$) to eliminate rate exhaustion. The system enforces **Reactive Wakeup**—prohibiting wasteful polling loops and waking the orchestrator instantaneously upon task completion.
+### 🧩 3. Universal Multi-Skill Composition
+Eliminates single-skill myopia. Tasks autonomously activate and combine multiple skills through:
+1. **6-Stage Sequential Pipeline:** Planner $\to$ Benchmark $\to$ Asset Generation $\to$ Deep Iceberg Engine $\to$ Playtesting $\to$ Adversarial Tribunal.
+2. **Cross-Skill Context Ingestion:** Combining UI, 3D WebGL PBR, and audio protocols simultaneously.
+3. **Parallel Swarm Delegation:** Dispatching specialized subagents ($C_{\text{max}} \le 2$) running distinct skills with Reactive Wakeup.
 
-### 🎨 4. Authentic Multimodal Assets & Live Data Mandate
-- **Real 3D Models:** Prohibits crude primitive meshes; enforces metric bounding box calibration and PBR candidate catalogs (`sketchfab-prospecting-protocol`).
-- **Authentic Acoustics:** Prohibits synthetic oscillator beeps; mandates studio-grade YouTube acoustic prospecting via `yt-dlp` and FFmpeg (`youtube-audio-prospecting`).
+### 🎨 4. Authentic Multimodal Assets & Dual-Audio Mandate
+- **Real 3D Models:** Prohibits crude primitive meshes; enforces metric bounding box calibration (`THREE.Box3`) and PBR candidate catalogs (`sketchfab-prospecting-protocol`).
+- **Dual Audio Classification:**
+  - *Tactile UI Haptics (< 50ms):* WebAudio API (`AudioContext`) for instantaneous micro-clicks.
+  - *Ambient Soundscapes & Realistic SFX:* Studio-grade YouTube acoustic prospecting via `yt-dlp` and FFmpeg (`youtube-audio-prospecting`).
 - **Live Data Streams:** Consumes live endpoints, WebSockets, and dynamic RPCs with fault-tolerant reconnect logic instead of static mock arrays.
 - **Autonomous Video Synthesis:** Executes Google Veo 3.1 to generate real `.mp4` video assets with optical physics and fluid dynamics (`gemini-omni-video-generation`).
 
 ### 🛑 5. The Hardest Path (Zero-Shortcuts & Zero-Placeholders)
 When choosing between a quick workaround and a robust production architecture (e.g., polling vs event-driven WebSockets, hardcoded parameters vs zero-hardcode configuration profiles), the AI is constitutionally mandated to choose the most robust, enterprise-grade architecture.
+
+### 🧪 6. Deterministic Point W Verification Scripts
+The suite includes executable test harnesses directly in the skill trees:
+- `audit_point_w.py`: Static code auditor scanning for TODOs, mocks, error handling, and computing Quality Score $Q$.
+- `tribunal_evaluator.py`: Machine-readable synthesizer for Red/Blue Team debate verdicts (`DEC::GROUNDED`).
+- `run_invariance_suite.py`: Automated metamorphic test runner for scale, temporal, and regime shifts.
 
 ---
 

@@ -46,3 +46,13 @@ Weights are dynamically recalibrated via reinforcement feedback.
 - Skill capacity is **unbounded** ($N \to \infty$). Skills are organized in a dynamic hierarchical taxonomy indexed via semantic vector embeddings.
 - Subagents dynamically load required micro-skills on-demand into working context space, eliminating context bloat while enabling infinite functional expansion.
 - Capabilities with $F(s) < \theta_{\text{deprecate}}$ across $K$ evaluation cycles are automatically quarantined and archived to `_deprecated/` without requiring human intervention unless safety-critical boundaries are touched.
+
+## IV. Subagent Dispatch Payload (Two-Stroke Ignition)
+When synthesizing or evolving a skill:
+```json
+{
+  "TypeName": "self",
+  "Role": "Meta-Skill Synthesizer",
+  "Prompt": "SKILL EVOLUTION: Sintetize uma nova skill para [NOVO_PADRÃO_OU_CAPACIDADE]. Estruture com YAML frontmatter, 5-Article Invariants, comandos determinísticos e registre em rules/AGI_CORE.md."
+}
+```

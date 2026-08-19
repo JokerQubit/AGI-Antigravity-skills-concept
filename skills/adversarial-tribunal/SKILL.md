@@ -15,8 +15,22 @@ This skill unifies and supersedes all legacy debate, critique, and Socratic extr
 > **ROLEPLAY PROHIBITION:** The agent is **STRICTLY FORBIDDEN** from simulating Red Team, Blue Team, or Jury as an internal text monologue. Each persona MUST be a real isolated `invoke_subagent` call. Faking a debate by writing "RED TEAM says..." in your own response is a constitutional violation.
 
 To eliminate confirmation bias and LLM self-alignment:
-1. **🔵 BLUE TEAM (Architect / Proposer):** Spawned via `invoke_subagent` (role: "Blue Team Architect"). Formulates the proposal using formal scientific, mathematical, and empirical arguments.
-2. **🔴 RED TEAM (Adversarial Critic):** Spawned via `invoke_subagent` (role: "Red Team Adversary"). Assumes the proposal is fundamentally flawed. Must construct rigorous, targeted counter-examples and falsifiers.
+1. **🔵 BLUE TEAM (Architect / Proposer):** Spawned via `invoke_subagent` (`TypeName: "self"`, `Role: "Blue Team Architect"`):
+   ```json
+   {
+     "TypeName": "self",
+     "Role": "Blue Team Architect",
+     "Prompt": "BLUE TEAM PROPOSAL: Formule a defesa técnica/matemática da proposta [OBJETIVO/ARQUITETURA]. Forneça contratos de invariantes, garantias de complexidade O(f(n)), tratamento de falhas e provas de estabilidade."
+   }
+   ```
+2. **🔴 RED TEAM (Adversarial Critic):** Spawned via `invoke_subagent` (`TypeName: "self"`, `Role: "Red Team Adversary"`):
+   ```json
+   {
+     "TypeName": "self",
+     "Role": "Red Team Adversary",
+     "Prompt": "RED TEAM ADVERSARIAL ATTACK: Ataque impiedosamente o sistema/código nos 5 Vetores de Ataque: 1) Contra-exemplos de parâmetros, 2) Falsificação de axiomas, 3) Colapso em bordas/concorrência/idempotência, 4) Violação de invariantes, 5) Unfalsifiability ou estética mock. Encontre EXATAMENTE 3 defeitos críticos e forneça passos de reprodução."
+   }
+   ```
 3. **⚖️ JURY (Neutral Epistemic Synthesizer):** The orchestrating agent itself evaluates the real outputs from both subagents neutrally, querying external knowledge bases and emitting `TRIBUNAL_VERDICT`.
 
 

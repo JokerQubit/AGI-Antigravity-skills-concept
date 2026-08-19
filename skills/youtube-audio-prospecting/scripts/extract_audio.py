@@ -77,12 +77,12 @@ def download_and_extract_audio(query_or_url: str, output_path: str, duration_sec
     for f in temp_dir.glob("*"):
         try:
             f.unlink()
-        except:
-            pass
+        except OSError as err:
+            print(f"[Cleanup Warning] Could not remove temp file {f}: {err}")
     try:
         temp_dir.rmdir()
-    except:
-        pass
+    except OSError as err:
+        print(f"[Cleanup Warning] Could not remove temp dir {temp_dir}: {err}")
 
     print(f"✨ [Audio Prospecting] Authentic Audio Mastered: {out_file} ({out_file.stat().st_size / 1024:.1f} KB)")
     return str(out_file)

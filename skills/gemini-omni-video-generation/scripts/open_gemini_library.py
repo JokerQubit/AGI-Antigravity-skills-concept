@@ -39,7 +39,7 @@ async def open_library(url: str = "https://gemini.google.com/library"):
             while True:
                 await asyncio.sleep(1)
         except (asyncio.CancelledError, KeyboardInterrupt):
-            pass
+            print("Shutting down browser library viewer...")
 
         await context.close()
 

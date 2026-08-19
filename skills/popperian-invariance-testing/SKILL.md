@@ -38,12 +38,20 @@ Every hypothesis, solver, or algorithm must undergo rigorous scientific stress-t
 - Define Falsifier \(F\): `"H is FALSE if [Measurable Condition C holds within time T]."`
 - **MANDATORY EXECUTION:** \(F\) MUST be backed by an executable test runner command (`pytest`, `npm test`, or a standalone Python script) executed via `run_command`. Synthetic textual assertion without command execution is FORBIDDEN.
 
-### Step 2: Automated Metamorphic Battery
+### Step 2: Automated Metamorphic Battery & Subagent Dispatch
 Subject \(H\) to the metamorphic transformation matrix:
 1. **Scale Transform:** \(\mathcal{T}_{\text{scale}}(x, \lambda)\) where \(\lambda \in [10^{-1}, 10^3]\). Output must scale within theoretical complexity bounds \(O(f(n))\).
 2. **Temporal Transform:** Evaluate across out-of-sample data or simulated time windows. Compute distribution drift via Kullback-Leibler divergence \(D_{KL}(P \parallel Q) < \delta\).
 3. **Regime Shift:** Perturb operating conditions (inject latency, fault spikes, parameter saturation). Verify regime bounds.
-4. **Visual/UI Invariance:** If the test touches UI or 3D rendering, invoke `browser` subagent (`invoke_subagent TypeName: browser`) to visually inspect state transitions.
+4. **Visual/UI Invariance:** If the test touches UI or 3D rendering, use Puppeteer MCP (`puppeteer_screenshot(width: 1920, height: 1080)`) + `view_file` to visually inspect state transitions.
+5. **Subagent Falsifier Dispatch:** Invoke subagent falsifier to aggressively construct metamorphic edge cases:
+   ```json
+   {
+     "TypeName": "self",
+     "Role": "Popperian Falsifier",
+     "Prompt": "FALSIFICATION RUN: Execute testes de invariância metamórfica contra o módulo [NOME]. Teste regimes de borda, scale transform (10x, 100x), injeção de ruído e verifique se as invariantes físicas/matemáticas sobrevivem. Retorne relatório de falsificação e exit codes."
+   }
+   ```
 
 ### Step 3: Falsification Verdict Matrix
 - **`VERDICT::NOT_FALSIFIED`:** All metamorphic invariants hold with zero-exit-code command proof. Promote claim to `DEC::GROUNDED`.

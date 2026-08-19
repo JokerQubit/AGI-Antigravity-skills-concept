@@ -21,10 +21,17 @@ Before modifying or reading any massive batch of files, you must:
    - [x] `docs/file_3.md` - Completed
    ```
 
-## 2. Parallel Delegation (Subagent Swarm)
+## 2. Parallel Delegation (Subagent Swarm — $C_{max} \le 2$)
 You must not do the heavy lifting yourself. Your job is to manage the dashboard.
 1. Group the pending tasks into logical, bite-sized batches (e.g., 5 files per batch).
-2. Use the `invoke_subagent` tool to spawn specialized subagents (e.g., `research`, `self`, or specific roles like `Document Parser`).
+2. Use the `invoke_subagent` tool to spawn up to 2 concurrent subagents (`TypeName: "self"` for edits/writes, `TypeName: "research"` for analysis):
+   ```json
+   {
+     "TypeName": "self",
+     "Role": "Batch Worker Agent",
+     "Prompt": "BATCH EXECUTION: Processe o lote de arquivos [LISTA_ARQUIVOS]. Execute a transformação [OBJETIVO] sem introduzir TODOs. Retorne relatório de arquivos modificados via send_message."
+   }
+   ```
 3. Pass explicit, isolated instructions to each subagent for their specific batch.
 
 ## 3. Asynchronous Synchronization & Updates

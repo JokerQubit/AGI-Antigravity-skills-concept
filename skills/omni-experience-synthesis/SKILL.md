@@ -1,61 +1,67 @@
 ---
 name: omni-experience-synthesis
-description: Universal AGI/ASI engine for orchestrating trans-domain, ultra-modern digital experiences (Awwwards/FWA tier). Integrates dynamic design archetypes, liquid glassmorphism, monumental editorial typography, Gemini Veo/Omni video generation, multimodal asset synthesis, and zero-cliché interactive architectures across luxury, architectural, fintech, SaaS, spatial, and narrative domains.
+description: Universal AGI/ASI engine for orchestrating trans-domain, ultra-modern digital experiences (Awwwards/FWA tier). Integrates dynamic design archetypes, clean developer UI, liquid glassmorphism, monumental editorial typography, Gemini Veo/Omni video generation, multimodal asset synthesis, and zero-cliché interactive architectures across developer tools, enterprise SaaS, fintech, spatial, narrative, architectural, and creative domains.
 ---
 
 # 🌐 Omni Experience Synthesis — Universal Multimodal Design & Interaction Protocol
 
-> **DOGMA AGI/ASI:** É estritamente proibido gerar sites genéricos, templates repetitivos, layouts planos ou interfaces com visual artificial ("AI-look"). Toda experiência digital concebida deve possuir profundidade de estúdio sênior (Awwwards/FWA tier), tipografia monumental, micro-detalhes de engenharia, glassmorphism líquido e ativos audiovisuais cinematográficos autênticos (Gemini Veo/Omni e Nano Banana).
+> **DOGMA AGI/ASI:** É estritamente proibido gerar sites genéricos, templates repetitivos, layouts planos ou interfaces com visual artificial ("AI-look"). Toda experiência digital concebida deve possuir profundidade de estúdio sênior (Awwwards/FWA tier), tipografia deliberada, micro-detalhes de engenharia, ativos audiovisuais autênticos (Gemini Veo/Omni e Nano Banana) e design system adaptado ao domínio do projeto.
 
 ---
 
 ## 🏛️ I. MATRIZ DE ARQUÉTIPOS MULTI-CONTEXTUAIS (Anti-Monotonia Criativa)
 
-Para evitar que a AGI gere sempre a mesma estética, o agente deve obrigatoriamente classificar o projeto em um dos **6 Arquétipos de Alta Densidade Estética** ou sintetizar uma fusão coerente:
+Para evitar que a AGI gere sempre a mesma estética, o agente deve obrigatoriamente classificar o projeto no **Arquétipo de Alta Densidade Estética** correspondente ao seu domínio ou sintetizar uma fusão coerente:
 
 ```
-                               ┌──────────────────────────────────────────────┐
-                               │       OMNI CREATIVE ARCHETYPE MATRIX         │
-                               └──────────────────────────────────────────────┘
-                                                      │
-         ┌───────────────────┬────────────────────────┼────────────────────────┬───────────────────┐
-         ▼                   ▼                        ▼                        ▼                   ▼
-┌──────────────────┐┌──────────────────┐    ┌──────────────────┐    ┌──────────────────┐┌──────────────────┐
-│  1. ARCHITECTURAL││ 2. SWISS EDITORIAL│   │ 3. HAUTE COUTURE │    │4. SPATIAL VISION ││ 5. CINEMATIC DARK│
-│     BRUTALISM    ││   CONSTRUCTIVISM │    │  & WARM LUXURY   │    │  LIQUID TACTILE  ││    NARRATIVE     │
-│ (Serenity Shore) ││(Mairen Residence)│    │  (Maison Pure)   │    │(Linear/VisionOS) ││(A24/Deep Abyss)  │
-└──────────────────┘└──────────────────┘    └──────────────────┘    └──────────────────┘└──────────────────┘
+                               ┌─────────────────────────────────────────────────────────┐
+                               │             OMNI CREATIVE ARCHETYPE MATRIX              │
+                               └────────────────────────────┬────────────────────────────┘
+                                                            │
+         ┌───────────────────┬──────────────────────────────┼──────────────────────────────┬───────────────────┐
+         ▼                   ▼                              ▼                              ▼                   ▼
+┌──────────────────┐┌──────────────────┐    ┌───────────────────────────────┐    ┌──────────────────┐┌──────────────────┐
+│  1. ARCHITECTURAL││ 2. SWISS EDITORIAL│   │ 3. HIGH-PERFORMANCE SAAS/DEV  │    │4. SPATIAL VISION ││ 5. CINEMATIC DARK│
+│     BRUTALISM    ││   CONSTRUCTIVISM │    │    (Stripe/Linear/Vercel)     │    │  LIQUID TACTILE  ││    NARRATIVE     │
+│ (Serenity Shore) ││(Mairen Residence)│    │ 6. HAUTE COUTURE / BOUTIQUE   │    │(Linear/VisionOS) ││(A24/Deep Abyss)  │
+└──────────────────┘└──────────────────┘    └───────────────────────────────┘    └──────────────────┘└──────────────────┘
 ```
 
-### 1. Arquétipo A: Architectural Brutalism & Coastal Luxury (Ex: *Serenity Shore*)
+### 1. Arquétipo A: Architectural Brutalism & Coastal (Ex: *Serenity Shore*)
 - **Atmosfera:** Concreto aparente monolítico, mares bravios, névoa matinal, luz nórdica suave, solidão contemplativa.
 - **Tipografia:** `Syne` (Bold/ExtraBold 800) combinada com `Plus Jakarta Sans` ou `Inter`. Títulos monumentais vazados (`-webkit-text-stroke: 1px`).
 - **Paleta de Cores:** Deep Oceanic Charcoal (`#091012`), Slate Misty Teal (`#1e293b`), Off-white puro (`#f8fafc`), Alabaster Sand (`#f4f3ee`).
 - **Micro-Detalhes:** Brackets técnicos `[ 25 units available ]`, coordenadas geográficas (`44.3038° N, 9.2085° E`), caixas de vídeo com botão Play translúcido flutuante.
 
 ### 2. Arquétipo B: Swiss Editorial & Typographic Constructivism (Ex: *Mairen Residence*)
-- **Atmosfera:** Revista de arquitetura de alto padrão, grelha modular rigorosa, assimetria intencional, elegância contida.
+- **Atmosfera:** Publicação de arquitetura/cultura de alto padrão, grelha modular rigorosa, assimetria intencional, elegância contida.
 - **Tipografia:** `Neue Montreal`, `Geist`, ou `Helvetica Now` em caixa baixa massiva (`mairen residence`), com kerning negativo apertado (`-0.04em`).
 - **Paleta de Cores:** Warm Alabaster (`#f7f6f2`), Editorial Off-Black (`#111215`), Muted Taupe (`#8c877d`), Linhas Hairline (`rgba(0,0,0,0.08)`).
 - **Micro-Detalhes:** Índices numéricos fracionários (`/001`, `/002`), estrutura `Task / Solution` com pontos tipográficos (`• Task`), divisores finos com espaçamento matemático.
 
-### 3. Arquétipo C: Haute Couture & Warm Atmospheric Interior (Ex: *Maison Pure*)
-- **Atmosfera:** Salões nobres, madeira nobre (cedro/nogueira), luz dourada de pôr do sol, sofisticação tátil e sensorial.
-- **Tipografia:** Híbrido ousado — Sans-serif condensada moderna com letras cursivas itálicas de serifa sobrepostas (`MAISON PUR&`, `ABOUt US` com `u` em `Playfair Display Italic` ou `Cormorant Garamond`).
-- **Paleta de Cores:** Deep Espresso (`#14110f`), Rich Warm Walnut, Cream Ivory (`#faf8f5`), Champagne Gold (`#c4a482`).
-- **Micro-Detalhes:** Grandes contadores numéricos métricos (`250+ Projects`), galerias com proporções 4:5 e 16:9 intercaladas assimetricamente.
+### 3. Arquétipo C: High-Performance SaaS & Developer Platform (Ex: *Stripe / Linear / Vercel / GitHub*)
+- **Atmosfera:** Alta densidade funcional, velocidade percebida instantânea, contraste cristalino, componentes modulares, suporte nativo a light/dark mode.
+- **Tipografia:** `Geist Sans`, `Inter`, `Plus Jakarta Sans` combinadas com `Geist Mono` ou `JetBrains Mono` para telemetria/código.
+- **Paleta de Cores:** Clean Zinc/Slate (`#09090b` ou `#ffffff`), bordas funcionais (`#e4e4e7` / `#27272a`), acentos de precisão (Electric Blue, Emerald, Indigo).
+- **Micro-Detalhes:** Badges de status de telemetria, atalhos de teclado (`⌘K`), contadores numéricos tabulares (`font-variant-numeric: tabular-nums`).
 
-### 4. Arquétipo D: Spatial VisionOS & Liquid Glassmorphism (Ex: *Stripe / Linear / Apple VisionOS*)
-- **Atmosfera:** Superfícies ópticas hiper-refinadas, camadas de vidro líquido, luz especular de borda, micro-interações táteis.
+### 4. Arquétipo D: Spatial VisionOS & Liquid Glassmorphism (Ex: *Apple VisionOS / Liquid Web*)
+- **Atmosfera:** Superfícies ópticas hiper-refinadas, camadas de vidro translúcido, luz especular de borda, micro-interações táteis.
 - **Tipografia:** `Inter Display`, `Geist Sans`, `SF Pro Display` com legibilidade cirúrgica.
 - **Paleta de Cores:** Obsidian Black (`#05070a`), Deep Indigo Glow (`#0f172a`), Cyan/Emerald Neon Accents, Vidro fosco multicamada.
-- **Micro-Detalhes:** Pílulas de navegação com duplo gradiente, badges com saturação de 190%, controles magnéticos de hover.
+- **Micro-Detalhes:** Pílulas de navegação com duplo gradiente, badges com saturação de 180%, controles magnéticos de hover.
 
 ### 5. Arquétipo E: Cinematic Dark Narrative & Deep Void (Ex: *A24 / Scifi Speculative*)
 - **Atmosfera:** Escuridão profunda, volumetria atmosférica, granulação de filme 35mm, transições contínuas de profundidade.
 - **Tipografia:** `Cinzel`, `Instrument Serif`, `Space Grotesk`.
 - **Paleta de Cores:** True Pitch Black (`#000000`), Deep Abyss Navy (`#030712`), Anamorphic Ember Streaks (`#ff6b00`).
 - **Micro-Detalhes:** Linhas de scroll animadas, áudio reativo sonificado, texturas PBR seamless.
+
+### 6. Arquétipo F: Haute Couture & Boutique Warmth (Ex: *Maison Pure / High Fashion*)
+- **Atmosfera:** Salões nobres, madeira nobre (cedro/nogueira), luz dourada de pôr do sol, sofisticação sensorial (usado para marcas de luxo/boutique quando solicitado).
+- **Tipografia:** Híbrido ousado — Sans-serif condensada moderna com letras cursivas itálicas de serifa sobrepostas (`Cormorant Garamond`, `Playfair Display`).
+- **Paleta de Cores:** Deep Espresso (`#14110f`), Rich Warm Walnut, Cream Ivory (`#faf8f5`), Champagne Gold (`#c4a482`).
+- **Micro-Detalhes:** Grandes contadores numéricos métricos, galerias com proporções 4:5 e 16:9 intercaladas assimetricamente.
 
 ---
 

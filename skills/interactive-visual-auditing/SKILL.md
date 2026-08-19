@@ -14,7 +14,14 @@ description: "MANDATORY. Use after a UI component, frontend page, or game scene 
 ## 1. Multi-State Interactive Playtesting Workflow
 
 ### Phase A: Live Interactive Exploration & State Capture
-1. Dispatch the `browser` subagent (`invoke_subagent` with `TypeName: browser`, `Role: Deep UI/UX Playtester`) or invoke Puppeteer MCP tools directly.
+1. Dispatch the UI Playtester subagent (`invoke_subagent` with `TypeName: "self"`, `Role: "Deep UI/UX Playtester"`) or invoke Puppeteer MCP tools directly (`puppeteer_navigate`, `puppeteer_screenshot`, `puppeteer_click`, etc.):
+   ```json
+   {
+     "TypeName": "self",
+     "Role": "Deep UI/UX Playtester",
+     "Prompt": "PLAYTEST UI: Navegue até localhost:[PORT] usando Puppeteer MCP. 1) Capture screenshot 1920x1080 em repouso. 2) Interaja com botões, modais e inputs e capture screenshot 1920x1080. 3) Teste breakpoint mobile (390x844). Salve os PNGs e reporte anomalias visuais."
+   }
+   ```
 2. **Execute Multi-State Fullscreen Actions (1920x1080 Mandatory):**
    - **Step 1 (Resting Full HD Desktop State):** Navigate to `localhost:<port>`, set viewport to `1920x1080` and capture `state_01_desktop_fullscreen.png` (width: 1920, height: 1080).
    - **Step 2 (Interactive State):** Click navigation links, open sidebars/drawers, trigger modals, type sample text into inputs, capture `state_02_interaction.png` (width: 1920, height: 1080).

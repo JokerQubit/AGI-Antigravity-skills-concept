@@ -86,6 +86,13 @@ $$ [LaTeX Equation] $$
 
 1. **Strict Synchronicity:** No agent may write code or architectural blueprints prior to reading and verifying the completed Theoretical Research Contract.
 2. **Zero Hardcoding:** All parameter bounds must reference dynamic formulas defined in Section 4 of the contract.
-3. **MANDATORY Browser Research:** You MUST invoke the `browser` subagent (`invoke_subagent TypeName: browser`) to discover and visually inspect academic papers, ArXiv preprints, and reference implementations. Anonymized web discovery queries must be executed through real browser navigation.
+3. **MANDATORY Research Discovery:** You MUST invoke the `research` subagent (`invoke_subagent` with `TypeName: "research"`, `Role: "Academic Literature Researcher"`) or `search_web` to discover and inspect academic papers, ArXiv preprints, and reference implementations:
+   ```json
+   {
+     "TypeName": "research",
+     "Role": "Academic Literature Researcher",
+     "Prompt": "ARXIV & LITERATURE SEARCH: Busque papers acadêmicos e derivações matemáticas formais para [TEOREMA/MODELO]. Extraia equações fundamentais, limites assintóticos e provas de convergência."
+   }
+   ```
 4. **Empirical Verification Execution:** Theoretical derivations must be validated by running a Python simulation script (`python -c "..."` or standalone `.py`) via `run_command` with clean exit code 0 before finalizing the contract.
 

@@ -68,7 +68,14 @@ $$W = \left\{ S \;\middle|\; \Phi_{\text{bench}}(S) \ge 1.0 \;\land\; \Phi_{\tex
   - Para frontend: presença obrigatória de micro-interações, hover-states físicos, feedback tátil, estados de loading esqueletais (Skeleton UI) e tratamentos de erro graciosos.
 
 ### ⚔️ 4. Tribunal Adversarial Red Team ($\text{RedTeamFaults} = 0$)
-- A cada ciclo, um subagent Red Team é despachado com a missão explícita de **destruir e criticar o trabalho**.
+- A cada ciclo, um subagent Red Team é despachado com a missão explícita de **destruir e criticar o trabalho**:
+  ```json
+  {
+    "TypeName": "self",
+    "Role": "Point W Adversarial Auditor",
+    "Prompt": "POINT W AUDIT: Avalie o sistema contra os 5 Vetores de Invariância do Ponto W: 1) Benchmark Global, 2) Estresse/Console Errors, 3) Profundidade Zero-Mock, 4) Caça a 3 defeitos críticos, 5) Inovações Transformadoras. Retorne relatório de conformidade formal."
+  }
+  ```
 - O Red Team opera com heurística de caça:
   1. *O que parece genérico ou saído de um template básico?*
   2. *Qual fluxo de usuário quebra se clicar rápido ou fora de ordem?*
@@ -77,7 +84,7 @@ $$W = \left\{ S \;\middle|\; \Phi_{\text{bench}}(S) \ge 1.0 \;\land\; \Phi_{\tex
 
 ### 🚀 5. Cota de Inovação Transformadora ($\Phi_{\text{inno}} \ge 2$)
 - O sistema não atinge o Ponto W se for apenas "correto". Ele deve ser **extraordinário**.
-- O agente DEVE introduzir no mínimo 2 inovações não solicitadas de alto calibre (ex: HUD de telemetria em tempo real, visualizador 3D interativo de produto com shaders PBR, comandos rápidos de teclado `⌘K`, feedback acústico sintetizado, modo de simulação preditiva).
+- O agente DEVE introduzir no mínimo 2 inovações não solicitadas de alto calibre (ex: HUD de telemetria em tempo real, visualizador 3D interativo de produto com shaders PBR, comandos rápidos de teclado `⌘K`, feedback acústico e tátil de eventos, modo de simulação preditiva).
 
 ---
 
@@ -86,6 +93,6 @@ $$W = \left\{ S \;\middle|\; \Phi_{\text{bench}}(S) \ge 1.0 \;\land\; \Phi_{\tex
 Ao executar qualquer desenvolvimento sob este motor:
 
 1. **Ciclo 1 (Gênese e Estrutura Fundamental):** Construção da infraestrutura base, modelos de dados e layout inicial com dados dinâmicos.
-2. **Ciclo 2 (Ataque Red Team & Auditoria de Estado):** Playtesting via subagent (`browser`), inspeção de telas em Full HD 1080p (`view_file`), caça a erros de console e identificação de 3 defeitos críticos.
+2. **Ciclo 2 (Ataque Red Team & Auditoria de Estado):** Playtesting via Puppeteer MCP (`puppeteer_screenshot(width: 1920, height: 1080)`), inspeção de telas em Full HD 1080p (`view_file`), despacho de subagente Red Team e caça a 3 defeitos críticos.
 3. **Ciclo 3 (Mutação & Refatoração Profunda):** Reescrever componentes fracos, eliminar pontos rasos e injetar as 2 Inovações Transformadoras.
 4. **Ciclo 4+ (Convergência W):** Repetir a auditoria adversarial até que todas as 5 invariantes sejam satisfeitas ($\Delta Q \to 0$ no topo da excelência).

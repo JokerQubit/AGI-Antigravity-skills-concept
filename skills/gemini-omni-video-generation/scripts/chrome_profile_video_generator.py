@@ -50,8 +50,8 @@ async def generate_gemini_pro_video(prompt: str, output_path: str, headless: boo
                 intercepted_video_urls.append(response.url)
                 try:
                     downloaded_bytes = await response.body()
-                except Exception as e:
-                    pass
+                except Exception as ex_b:
+                    print(f"[Gemini Pro Engine] Body read notice: {ex_b}")
 
         page.on("response", handle_response)
 
@@ -66,8 +66,8 @@ async def generate_gemini_pro_video(prompt: str, output_path: str, headless: boo
             try:
                 await videos_nav.click()
                 await asyncio.sleep(2)
-            except:
-                pass
+            except Exception as ex_nav:
+                print(f"[Gemini Pro Engine] Videos nav notice: {ex_nav}")
 
         # Ingest Prompt into input box
         print(f"✍️ [Gemini Pro Engine] Ingesting 6-pillar prompt: '{prompt[:60]}...'")
@@ -78,45 +78,50 @@ async def generate_gemini_pro_video(prompt: str, output_path: str, headless: boo
             await asyncio.sleep(1)
 
             # Send prompt
-            send_btn = page.locator("button[aria-label*='Enviar' i], button[aria-label*='Send' i], .send-button, gem-icon-button.send-button").first
-            if await send_btn.count() > 0 and await send_btn.is_visible():
-                print("🚀 [Gemini Pro Engine] Clicking send button...")
+            send_btn = page.locator("button[aria-label*='Send' i], button.send-button, mat-icon:has-text('send')").first
+            if await send_btn.count() > 0:
+                print("🚀 [Gemini Pro Engine] Clicking Send button...")
                 await send_btn.click()
             else:
                 await page.keyboard.press("Enter")
 
-        # Wait for video synthesis (polling up to 90 seconds in background)
-        print("⏳ [Gemini Pro Engine] Polling DOM & network for generated video completion...")
-        for second in range(60):
-            if downloaded_bytes:
-                print("✨ [Gemini Pro Engine] Raw video stream captured via network interceptor!")
-                break
+        print("⏳ [Gemini Pro Engine] Waiting for Veo neural video generation...")
+        start_time = asyncio.get_event_loop().time()
 
-            # Check DOM for completed video element or download button
-            video_el = page.locator("video, [data-test-id*='video']").first
+        while (asyncio.get_event_loop().time() - start_time) < 180:
+            if downloaded_bytes and len(downloaded_bytes) > 500000:
+                print(f"🎉 [Gemini Pro Engine] Video stream captured ({len(downloaded_bytes) / 1024 / 1024:.2f} MB)!")
+                with open(out_file, "wb") as f:
+                    f.write(downloaded_bytes)
+                print(f"✅ Video saved directly to disk: {out_file}")
+                await context.close()
+                return str(out_file)
+
+            # Check for <video> element with blob
+            video_el = page.locator("video").first
             if await video_el.count() > 0:
                 src = await video_el.get_attribute("src")
-                if src:
-                    print(f"🎯 [Gemini Pro Engine] Found video src in DOM: {src[:70]}...")
-                    if src.startswith("blob:") or src.startswith("http"):
-                        try:
-                            # Evaluate fetch in page context for blob/http URLs
-                            video_base64 = await page.evaluate(r"""
-                                async (url) => {
-                                    const resp = await fetch(url);
-                                    const blob = await resp.blob();
-                                    return new Promise((resolve) => {
-                                        const reader = new FileReader();
-                                        reader.onloadend = () => resolve(reader.result.split(',')[1]);
-                                        reader.readAsDataURL(blob);
-                                    });
-                                }
-                            """, src)
-                            import base64
-                            downloaded_bytes = base64.b64decode(video_base64)
+                if src and src.startswith("blob:"):
+                    print("🎯 Found video element with blob in DOM. Extracting...")
+                    try:
+                        video_b64 = await page.evaluate("""
+                            async (blobUrl) => {
+                                const resp = await fetch(blobUrl);
+                                const blob = await resp.blob();
+                                return new Promise((resolve) => {
+                                    const reader = new FileReader();
+                                    reader.onloadend = () => resolve(reader.result.split(',')[1]);
+                                    reader.readAsDataURL(blob);
+                                });
+                            }
+                        """, src)
+                        import base64
+                        downloaded_bytes = base64.b64decode(video_b64)
+                        if len(downloaded_bytes) > 500000:
+                            print(f"🎉 Extracted blob binary ({len(downloaded_bytes) / 1024 / 1024:.2f} MB)!")
                             break
-                        except Exception as ex:
-                            print(f"Note on fetching blob: {ex}")
+                    except Exception as ex_b64:
+                        print(f"[Gemini Pro Engine] Blob extraction notice: {ex_b64}")
 
             # Check for download buttons
             download_btn = page.locator("a[download], button[aria-label*='Download' i], button[aria-label*='Baixar' i]").first
@@ -130,8 +135,8 @@ async def generate_gemini_pro_video(prompt: str, output_path: str, headless: boo
                     print(f"🎉 [Gemini Pro Engine] Video saved via browser download: {out_file}")
                     await context.close()
                     return str(out_file)
-                except:
-                    pass
+                except Exception as ex_dl:
+                    print(f"[Gemini Pro Engine] Download notice: {ex_dl}")
 
             await asyncio.sleep(1.5)
 

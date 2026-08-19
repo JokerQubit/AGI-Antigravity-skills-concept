@@ -95,3 +95,13 @@ The protocol generates `quarantine/scientific_review.md`.
 1. **Mathematical Falsification:** Discovery of an irrecoverable mathematical error or numerical instability in core equations.
 2. **Asymptotic Suboptimality:** Evidence proving the proposed approach is asymptotically inferior to existing state-of-the-art alternatives.
 3. **Safety Violation:** Potential for unhandled NaN propagation, infinite loops, or state corruption.
+
+## 4. Subagent Dispatch Payload (Two-Stroke Ignition)
+When deploying a zero-trust reviewer subagent:
+```json
+{
+  "TypeName": "self",
+  "Role": "Zero-Trust Scientific Reviewer",
+  "Prompt": "SCIENTIFIC REVIEW: Audite a especificação em quarantine/specification.md. Execute ataque contra integridade matemática, estabilidade numérica, complexidade assintótica e segurança de tipos. Emita IMP-[NNN] entries com veredito ACCEPTED/REJECTED."
+}
+```

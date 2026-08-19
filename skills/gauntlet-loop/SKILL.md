@@ -50,7 +50,26 @@ To prevent infinite loops or oscillatory quality degradation:
 
 ---
 
-## 5. Universal Prompt Generation Template
+## 5. Subagent Dispatch Payloads (Two-Stroke Ignition)
+
+Execute the Builder and Blind Critic subagents via `invoke_subagent`:
+
+```json
+[
+  {
+    "TypeName": "self",
+    "Role": "Gauntlet Loop Builder",
+    "Prompt": "GAUNTLET BUILDER: Construa/otimize a implementação de [COMPONENTE] para superar o Reference Bar [BARRA]. Garanta 0 TODOs, 100% tipagem estrita, performance assintótica e testes passando."
+  },
+  {
+    "TypeName": "self",
+    "Role": "Gauntlet Blind Critic",
+    "Prompt": "GAUNTLET BLIND CRITIC: Audite cegamente o artefato gerado contra o Reference Bar. Identifique: 1) A maior lacuna técnica ou visual remanescente, 2) Testes de borda com falha, 3) Decisão inequívoca: WINNER ou REVISE."
+  }
+]
+```
+
+## 6. Universal Prompt Generation Template
 
 Adapt for target domain (keep under 180 words):
 

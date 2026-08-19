@@ -45,8 +45,8 @@ async def fetch_video(output_path: str):
                 print(f"📡 [Video Fetcher] Intercepted video stream: {response.url[:80]}...")
                 try:
                     intercepted_bytes = await response.body()
-                except:
-                    pass
+                except Exception as ex_b:
+                    print(f"[Video Fetcher Notice] Body read: {ex_b}")
 
         page.on("response", handle_response)
 

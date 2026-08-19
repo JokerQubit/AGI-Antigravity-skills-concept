@@ -98,8 +98,8 @@ async def generate_veo_studio_video(prompt: str, output_path: str, reference_ima
                     data = await response.body()
                     if len(data) > 500000:
                         intercepted_bytes = data
-                except Exception as e:
-                    pass
+                except Exception as ex:
+                    print(f"[Stream Note] Response body intercept note: {ex}")
 
         page.on("response", handle_response)
 
@@ -158,9 +158,9 @@ async def generate_veo_studio_video(prompt: str, output_path: str, reference_ima
                             print(f"✅ [Direct Input] Set files on input[type='file'] #{i}!")
                             upload_success = True
                             await asyncio.sleep(3)
-                            break
-                        except Exception as e:
-                            pass
+                        except Exception as ex_in:
+                            print(f"[FileInput Notice] Failed on input #{i}: {ex_in}")
+                            continue
 
             if upload_success:
                 print("⏳ Waiting for image upload thumbnail to register...")
@@ -174,47 +174,54 @@ async def generate_veo_studio_video(prompt: str, output_path: str, reference_ima
         
         if await veo_input.count() > 0:
             await veo_input.click()
-            await asyncio.sleep(0.5)
-            print("🚀 Injecting master cinematic prompt into Google Veo...")
-            await page.keyboard.type(prompt, delay=6)
             await asyncio.sleep(1)
+            await veo_input.fill(veo_prompt)
+        else:
+            await page.keyboard.type(veo_prompt, delay=10)
 
-            # Click Generate / Submit button
-            submit_btn = page.locator("button[aria-label*='Generate' i], button[aria-label*='Enviar' i], button[aria-label*='Send' i], .send-button, gem-icon-button.send-button").first
-            if await submit_btn.count() > 0 and await submit_btn.is_visible():
-                print("✨ Clicking Veo 'Generate' button...")
-                await submit_btn.click()
-            else:
-                await page.keyboard.press("Enter")
+        await asyncio.sleep(1)
 
-            # 5. Capture permanent chat URL as soon as generated
-            await asyncio.sleep(4)
-            permanent_chat_url = page.url
-            print(f"🔗 [Permanent Chat URL]: {permanent_chat_url}")
+        # 5. Click Send / Generate
+        print("🚀 [Step 4] Triggering Google Veo generation...")
+        send_btn = page.locator("button[aria-label*='Send' i], button[aria-label*='Enviar' i], button.send-button, mat-icon:has-text('send')").first
+        if await send_btn.count() > 0 and await send_btn.is_visible():
+            await send_btn.click()
+        else:
+            await page.keyboard.press("Enter")
 
-            # 6. Live rendering monitor (keeps session open until finished)
-            print("⏳ [Step 4] Monitoring Veo neural video synthesis (Waiting up to 150s)...")
-            start_time = time.time()
-            for cycle in range(50):
-                await asyncio.sleep(3)
-                elapsed = int(time.time() - start_time)
+        print("⏳ Generation started. Intercepting Veo MP4 stream and polling for render completion...")
 
-                # Check if network stream intercepted
-                if intercepted_bytes and len(intercepted_bytes) > 500000:
-                    print(f"🎉 [Step 5] Veo video stream captured ({len(intercepted_bytes) / 1024 / 1024:.2f} MB) in {elapsed}s!")
-                    break
+        # 6. Polling & Stream Interception Loop
+        max_wait_seconds = 240
+        start_time = asyncio.get_event_loop().time()
+        cycle = 0
 
-                # Check for completed video element in DOM
-                video_count = await page.locator("video").count()
-                if video_count > 0:
-                    video_el = page.locator("video").first
-                    src = await video_el.get_attribute("src")
-                    if src and (src.startswith("blob:") or src.startswith("http")):
-                        print(f"🎯 Veo video player active in DOM (Elapsed: {elapsed}s). Fetching blob...")
+        while (asyncio.get_event_loop().time() - start_time) < max_wait_seconds:
+            await asyncio.sleep(3)
+            cycle += 1
+            elapsed = int(asyncio.get_event_loop().time() - start_time)
+
+            # Check if network listener caught the MP4 bytes
+            if intercepted_bytes and len(intercepted_bytes) > 500000:
+                print(f"🎉 [Step 5] Intercepted full Veo video stream ({len(intercepted_bytes) / 1024 / 1024:.2f} MB)!")
+                out_file.write_bytes(intercepted_bytes)
+                print(f"✅ Master Veo MP4 written directly to disk: {out_file}")
+                await context.close()
+                return str(out_file)
+
+            # Check for <video> elements with blob: or http: source
+            video_el = page.locator("video").first
+            if await video_el.count() > 0:
+                src = await video_el.get_attribute("src")
+                if src:
+                    if src.startswith("http") and ("google" in src or "mp4" in src):
+                        print(f"🎬 Found direct video URL: {src[:80]}...")
+                    elif src.startswith("blob:"):
+                        # Extract blob via in-browser fetch and Base64 conversion
                         try:
-                            video_b64 = await page.evaluate(r"""
-                                async (url) => {
-                                    const resp = await fetch(url);
+                            video_b64 = await page.evaluate("""
+                                async (blobUrl) => {
+                                    const resp = await fetch(blobUrl);
                                     const blob = await resp.blob();
                                     return new Promise((resolve) => {
                                         const reader = new FileReader();
@@ -228,8 +235,8 @@ async def generate_veo_studio_video(prompt: str, output_path: str, reference_ima
                             if len(intercepted_bytes) > 500000:
                                 print(f"🎉 [Step 5] Veo blob binary extracted: {len(intercepted_bytes) / 1024 / 1024:.2f} MB!")
                                 break
-                        except Exception as e:
-                            pass
+                        except Exception as ex_b64:
+                            print(f"[Blob Extraction Notice] {ex_b64}")
 
                 # Check for Download button
                 dl_btn = page.locator("button[aria-label*='Download' i], button[aria-label*='Baixar' i], a[download]").first
@@ -243,8 +250,8 @@ async def generate_veo_studio_video(prompt: str, output_path: str, reference_ima
                         print(f"🎉 [Step 5] Veo master video saved: {out_file}")
                         await context.close()
                         return str(out_file)
-                    except Exception as ex:
-                        pass
+                    except Exception as ex_dl:
+                        print(f"[Download Button Notice] {ex_dl}")
 
                 if cycle % 5 == 0:
                     print(f"⏳ Generating with Veo... ({elapsed}s elapsed)")

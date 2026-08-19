@@ -45,8 +45,8 @@ async def check_and_download():
                 print(f"📡 [Video Inspector] Intercepted video stream URL: {response.url[:70]}...")
                 try:
                     intercepted_bytes = await response.body()
-                except:
-                    pass
+                except Exception as ex_b:
+                    print(f"[Video Inspector Notice] Body read: {ex_b}")
 
         page.on("response", handle_response)
 

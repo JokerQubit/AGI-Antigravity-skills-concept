@@ -45,7 +45,14 @@ Identify core requirement dimensions:
 - **Security & System Constraints:** Auth protocol (OAuth2, mTLS, API Key), sandbox isolation level, network policy, port availability.
 
 ### Phase 2: Autonomous Multi-Source Discovery
-You MUST invoke the `browser` subagent (via `invoke_subagent` tool with `TypeName: browser`) to visually navigate and formulate targeted queries across package repositories, GitHub, OpenAPI indexes, and academic literature:
+You MUST invoke the `research` subagent (`invoke_subagent` with `TypeName: "research"`, `Role: "API & Protocol Prospector"`) or use `search_web` to formulate targeted queries across package repositories, GitHub, OpenAPI indexes, and academic literature:
+```json
+{
+  "TypeName": "research",
+  "Role": "API & Protocol Prospector",
+  "Prompt": "TECH PROSPECTING: Pesquise especificações oficiais, schemas OpenAPI, repositórios GitHub e documentação técnica para [TECNOLOGIA/API]. Extraia endpoints, rate limits, autenticação e contratos."
+}
+```
 - **For APIs:** Parse OpenAPI 3.0 / Swagger / GraphQL schemas, rate limit tiers, SLA guarantees, and authentication schemes.
 - **For MCP Servers:** Extract server manifest, tool definitions, resource schemas, prompt templates, and runtime dependencies (npm/pip/docker).
 

@@ -23,3 +23,13 @@ Before writing the new skill to the global disk, the Outer Loop MUST:
 - Run a mathematical `popperian-invariance-testing` simulation.
 - Prove that the new rule does not violate any core constitutional constraints (Zero-Trust, Falsification).
 - If the test fails, discard the mutation. If it passes, commit the new skill via atomic write.
+
+## 4. Subagent Dispatch Payload (Two-Stroke Ignition)
+When launching an optimization loop:
+```json
+{
+  "TypeName": "self",
+  "Role": "Recursive Optimizer",
+  "Prompt": "OPTIMIZE SKILL: Analise a falha na skill [NOME_SKILL]. Reescreva o protocolo eliminando ambiguidades e inércia cognitiva, mantendo conformidade com as regras globais."
+}
+```

@@ -59,8 +59,8 @@ async def scrape_video_from_web_platform(prompt: str, output_path: str, platform
                 print(f"📡 [Headless Scraper] Intercepted video stream from: {response.url[:60]}...")
                 try:
                     downloaded_video_bytes = await response.body()
-                except Exception as e:
-                    pass
+                except Exception as ex_b:
+                    print(f"[Headless Scraper Notice] Body read: {ex_b}")
 
         page.on("response", handle_response)
 

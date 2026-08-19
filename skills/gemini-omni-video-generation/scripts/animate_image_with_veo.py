@@ -49,8 +49,8 @@ async def animate_image_with_veo(image_path: str, prompt: str, output_path: str,
                 print(f"📡 [Image-to-Video] Intercepted video stream: {response.url[:70]}...")
                 try:
                     intercepted_bytes = await response.body()
-                except:
-                    pass
+                except Exception as ex_body:
+                    print(f"[Image-to-Video Note] Body read notice: {ex_body}")
 
         page.on("response", handle_response)
 
@@ -123,7 +123,7 @@ async def animate_image_with_veo(image_path: str, prompt: str, output_path: str,
                             intercepted_bytes = base64.b64decode(video_b64)
                             break
                         except Exception as e:
-                            pass
+                            print(f"[Image-to-Video Note] Blob read: {e}")
 
                 download_btn = page.locator("button[aria-label*='Download' i], button[aria-label*='Baixar' i], a[download]").first
                 if await download_btn.count() > 0 and await download_btn.is_visible():
@@ -136,8 +136,8 @@ async def animate_image_with_veo(image_path: str, prompt: str, output_path: str,
                         print(f"🎉 [Image-to-Video] Video successfully saved: {out_file}")
                         await context.close()
                         return str(out_file)
-                    except:
-                        pass
+                    except Exception as ex_dl:
+                        print(f"[Image-to-Video Note] Download notice: {ex_dl}")
 
                 await asyncio.sleep(2.5)
 

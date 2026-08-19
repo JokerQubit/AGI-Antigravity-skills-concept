@@ -56,18 +56,25 @@ Every speculative idea, new feature request, or algorithmic proposal—whether g
 
 ### Phase 2: Multi-Source Epistemic Grounding
 **Objective:** Cross-reference proposal assumptions against scientific literature and system memory.
-- **MANDATORY Browser Research:** You MUST invoke the `browser` subagent (`invoke_subagent TypeName: browser`) to navigate academic engines, technical documentation, and live repositories. Text-only assumptions are forbidden.
+- **MANDATORY Research Grounding:** You MUST invoke the `research` subagent (`invoke_subagent` with `TypeName: "research"`, `Role: "Epistemic Grounding Researcher"`) or `search_web` to navigate academic engines, technical documentation, and live repositories. Text-only assumptions are forbidden.
 - Apply **Information Entropy Filter:** If the proposal relies on unverified heuristics with high epistemic uncertainty, halt and demand prior execution of `scientific-research-contract`.
 
 ### Phase 3: Formal Theoretical Formulation
 **Objective:** Mathematical and asymptotic formalization.
 - Generate formal specification with exact mathematical equations in LaTeX.
-- Enforce **Citation & Evidence Depth:** Minimum 3 independent, verified sources (with real URLs/DOIs verified via browser subagent) supporting the theoretical foundation.
+- Enforce **Citation & Evidence Depth:** Minimum 3 independent, verified sources (with real URLs/DOIs verified via web research) supporting the theoretical foundation.
 - Define explicit **Popperian Falsifier:** State the precise measurable condition under which the thesis is proven false.
 
 ### Phase 4: Adversarial Peer Review & Approval Matrix
 **Objective:** Stress-test the formalized thesis.
-- Submit the formal specification to `adversarial-tribunal` (spawning real Red/Blue subagents via `invoke_subagent`).
+- Submit the formal specification to `adversarial-tribunal` (spawning real Red Team subagent via `invoke_subagent`):
+  ```json
+  {
+    "TypeName": "self",
+    "Role": "Thesis Red Team Adversary",
+    "Prompt": "THESIS ADVERSARIAL AUDIT: Ataque a proposta formal nos 5 vetores: 1) Falsificação de axiomas, 2) Singularidades de borda, 3) Vazamentos de causalidade no DAG, 4) Complexidade O(f(n)), 5) Unfalsifiability. Retorne veredito formal."
+  }
+  ```
 - **Empirical Proof Mandate:** The Bayesian Epistemic Score ($P \ge 0.85$) MUST be derived from zero-exit-code empirical test suite runs (`run_command`). Synthetic score handwaving without test execution proof is STRICTLY FORBIDDEN.
 - Assign Status: `APPROVED_FOR_PROTOTYPE`.
 

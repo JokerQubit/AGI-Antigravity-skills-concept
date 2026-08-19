@@ -60,11 +60,11 @@ $$\text{Prompt}_{\text{Veo}} = \text{Sensor/Óptica} + \text{Física de Materiai
 ### A. Arquitetura Noturna & Monumental (Ex: Museu do Louvre / Sanctuaire)
 > `"Cinematic slow hydraulic dolly-in tracking shot through the deserted Cour Napoléon at night, the glass pyramid illuminated by warm 3000K internal museum spotlights, gentle rain creating refractive optical caustics across triangular glass panes, puddles on dark wet granite parvis reflecting golden light, volumetric misty haze drifting in cool Parisian air, shot on Arri Alexa 65 with Panavision Anamorphic 40mm T2.8 lens, Kodak Vision3 500T color science, fine organic 35mm film grain, 24fps cinematic cadence, zero structural warping."`
 
-### B. Product Showcase: Objeto de Luxo / Tecnologia Monolítica Flutuante
+### B. Product & Hardware Showcase: Dispositivo / Tecnologia Monolítica Flutuante
 > `"Macro studio tracking shot on a motorized rail slowly orbiting a dark obsidian titanium flagship device levitating in mid-air, a harsh single softbox key light sweeping across the micro-beveled edges and matte ceramic glass back, subtle caustic light refraction through an internal borosilicate prism, Hasselblad H6D-100c medium format, 100mm macro probe lens, f/2.8 shallow depth of field with creamy optical bokeh, neutral dark graphite studio background, rigid body geometry, 24fps."`
 
-### C. Interior de Alta Costura & Espaço Arquitetônico
-> `"Slow architectural Steadicam push-in through a grand salon of warm walnut timber slats and antique gilded moldings, warm candlelight from crystal chandeliers casting soft shadows across draped linen and travertine floors, atmospheric dust motes dancing in soft volumetric light beams, Roger Deakins-style natural color palette, Kodak Portra 400 aesthetic, graceful 24fps motion."`
+### C. Interior, Arquitetura & Espaços Físicos
+> `"Slow architectural Steadicam push-in through a grand salon of warm walnut timber slats and floor-to-ceiling glass looking out at misty pines, natural morning light casting soft shadows across low seating and polished concrete floors, atmospheric dust motes dancing in soft volumetric light beams, Roger Deakins-style natural color palette, Kodak Portra 400 aesthetic, graceful 24fps motion."`
 
 ---
 
@@ -259,7 +259,7 @@ const screenMaterial = new THREE.MeshPhysicalMaterial({
 ### Regras do Pipeline Image-to-Video:
 1. **Âncora Estrutural (Nano Banana):** Gere a imagem base com composição rigorosa, texturas tangíveis (vidro borossilicato, mármore, titânio) e iluminação cinemática.
 2. **Animação Temporal (Veo 3.1):** Envie a imagem gerada pelo Nano Banana como anexo de referência para o Veo com prompt de micro-movimentos físicos:
-   - `Prompt:` *"Animate this reference image: slow cinematic camera push-in, subtle rain drops falling with light refraction caustics across the glass pyramid, water puddles rippling on the ground, golden volumetric atmospheric haze drifting, rigid architectural consistency, 60fps luxury motion."*
+   - `Prompt:` *"Animate this reference image: slow cinematic camera push-in, subtle rain drops falling with light refraction caustics across the glass pyramid, water puddles rippling on the ground, golden volumetric atmospheric haze drifting, rigid architectural consistency, 60fps fluid cinematic motion."*
 3. **Disposição Espacial em Camadas (Frontend):** 
    - Camada $Z_0$ (Fundo): Vídeo de ambientação do Veo em loop com `object-fit: cover`.
    - Camada $Z_1$ (Plano Médio): Elementos gráficos e mapas em SVG interativo.

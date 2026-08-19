@@ -47,7 +47,7 @@ trigger: always_on
 
 - **Uso:** Qualquer cena 3D, visualização científica, simulação, engenharia, CAD ou jogo. Proibido cubos/esferas rudimentares onde ativos de produção são esperados. Proibido download cego de modelo aleatório sem inspeção visual prévia.
 - **Skill:** `skills/sketchfab-prospecting-protocol/SKILL.md`
-- **Passo 1 (Catálogo Visual de Candidatos):** Chame subagent (`invoke_subagent` com `TypeName: browser` ou ferramentas MCP registradas) para buscar modelos em repositórios abertos (Sketchfab, Poly Haven, NASA 3D, ambientCG) e extrair metadados/thumbnails de 3 a 5 candidatos.
+- **Passo 1 (Catálogo Visual de Candidatos):** Chame subagent (`invoke_subagent` com `TypeName: "research"`, `Role: "3D Spatial Asset Researcher"`) ou utilize `search_web` / MCP tools para buscar modelos em repositórios abertos (Sketchfab, Poly Haven, NASA 3D, ambientCG) e extrair metadados/thumbnails de 3 a 5 candidatos.
 - **Passo 2 (Avaliação de Topologia & PBR):** Avalie os candidatos quanto ao estilo estético, mapas PBR completos (Albedo, Normal, Roughness, Metalness) e orçamento poligonal ($< 50\text{k} - 100\text{k}$ polígonos para web/tempo real).
 - **Passo 3 (Download & Normalização Métrica):** Baixe em formato `.glb`/`.gltf` para `public/models/`. Aplique obrigatoriamente a função de normalização de escala por Bounding Box (`THREE.Box3`) ajustando as dimensões para metros reais e centralizando o pivô na base.
 
@@ -68,9 +68,12 @@ trigger: always_on
 
 ## 🎵 4. ÁUDIO REAL, TELEMETRIA ACÚSTICA & SINAL → Prospecção & Processamento
 
-- **Uso:** Efeitos sonoros, ambientação, telemetria de áudio, sonificação de dados e sound design. Proibição absoluta de sintetizadores, geradores oscilatórios (`OscillatorNode`) ou sons sintetizados. Obrigatório prospectar e extrair áudios reais diretamente do YouTube.
+- **Uso:** Efeitos sonoros, ambientação, telemetria de áudio, sonificação de dados e sound design.
+- **Classificação Dual Mandatória:**
+  - **Micro-interações de UI / Feedback Háptico (< 50ms):** Permitido WebAudio API (`AudioContext`) para cliques mecânicos, beeps táteis de hover/press e feedback sonoro instantâneo de interface.
+  - **Ambientação, SFX de Produção e Telemetria de Domínio:** Expressamente PROIBIDO o uso de osciladores sintéticos rudimentares. É MANDATÓRIO prospectar e extrair áudio autêntico do YouTube via `skills/youtube-audio-prospecting/SKILL.md`.
 - **Skill:** `skills/youtube-audio-prospecting/SKILL.md`
-- **Passo 1 (Pesquisa de Referência):** Utilize subagent browser ou `search_web` para identificar fontes de áudio de alta fidelidade no YouTube e repositórios multimídia autênticos.
+- **Passo 1 (Pesquisa de Referência):** Utilize `search_web` ou subagent `research` para identificar fontes de áudio de alta fidelidade no YouTube e repositórios multimídia autênticos.
 - **Passo 2 (Extração & Processamento):** Baixe e processe via `yt-dlp` / `ffmpeg` / `pydub` convertendo para formatos web (`.ogg` / `.mp3` / `.wav`).
 - **Passo 3 (Integração):** Salve em `public/audio/` ou `assets/audio/` e integre no motor de áudio com controle de ganho, atenuação espacial e loop suave.
 

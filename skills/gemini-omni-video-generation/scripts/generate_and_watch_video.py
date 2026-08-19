@@ -45,8 +45,8 @@ async def generate_and_watch(prompt: str, output_path: str):
                 print(f"📡 [Live Watcher] Captured video stream: {response.url[:70]}...")
                 try:
                     intercepted_bytes = await response.body()
-                except:
-                    pass
+                except Exception as ex_b:
+                    print(f"[Live Watcher Notice] Body read: {ex_b}")
 
         page.on("response", handle_response)
 
