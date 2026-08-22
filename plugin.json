@@ -1,7 +1,22 @@
 {
   "name": "agi-antigravity-core",
   "version": "1.0.0",
-  "description": "Motor Cognitivo AGI/ASI de orquestração neural (S·R·P·E·V, Swarm, Karl Popper, Red Team)",
-  "author": "jokerofcassinos",
-  "license": "MIT"
+  "description": "Unified Autonomous AGI/ASI IDE Development Platform consolidating Antigravity SDK, Chrome DevTools MCP, Modern Web Guidance, and Superpowers/Gauntlet methodologies.",
+  "author": {
+    "name": "AGI Core Architecture Team",
+    "email": "agi-core@antigravity.ai"
+  },
+  "repository": "https://github.com/agi-antigravity/agi-antigravity-core",
+  "license": "Apache-2.0",
+  "keywords": [
+    "antigravity",
+    "sdk",
+    "devtools",
+    "modern-web",
+    "superpowers",
+    "gauntlet-loop",
+    "agi",
+    "autonomous-agents",
+    "mcp"
+  ]
 }

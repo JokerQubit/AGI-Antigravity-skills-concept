@@ -1,28 +1,78 @@
 ---
 name: causal-debugging-protocol
-description: MANDATORY. Protocolo AGI/ASI de Investigação de Causa Raiz. Proíbe edições do tipo "tentativa-e-erro". Exige mapeamento de fluxo de dados e falsificação causal antes de qualquer correção.
+description: Guides deep causal root-cause investigations using mathematical state tracing, invariant tree verification, and Popperian falsification. Maps failure paths backwards and enforces atomic bug isolation with zero guesswork.
 ---
-# 🔴 CAUSAL DEBUGGING PROTOCOL (Zero-Guessing)
 
-**DOGMA CENTRAL:** Sob nenhuma hipótese uma correção (fix) pode ser proposta sem que a causa raiz tenha sido isolada, provada via instrumentação e mapeada causalmente. O método de "tentativa-e-erro" (guess-and-check) é estritamente proibido.
+# Causal Debugging & Mathematical Falsification Protocol
 
-## 1. Fase de Isolamento Empírico
-- **Ler Rastros:** Analise as stack traces completamente via CLI.
-- **Instrumentação Injetável:** Se o erro não for matematicamente óbvio, injete logs profundos nos nós de intersecção do sistema para isolar o estado falho (ex: boundaries de rede, I/O, renderização). Nunca assuma o estado de uma variável. Imprima-o.
+> *"A defect is an invariant violation. Isolating a defect requires proving which state transition violated the invariant, not guessing which line looks suspicious."*
 
-## 2. Diagrama de Falha Causal
-- Construa mentalmente (ou via artefato `diagrama-causal.md` usando Mermaid) uma árvore de fluxo reverso: 
-  `Sintoma -> Variável Incorreta -> Função Chamadora -> Estado Corrompido -> Causa Raiz`.
+---
 
-## 3. Falsificação Popperiana (A Correção)
-- A correção proposta deve ser atômica (um único vetor). Modificar múltiplas funções simultaneamente para "ver se funciona" viola o rigor científico.
-- **O Limite de 3 Falhas:** Se a correção falhar 3 vezes consecutivas, o problema não é superficial, é **estrutural**. 
-- Pare a depuração imediatamente. Inicie o `adversarial-tribunal` para debater a arquitetura, pois o design subjacente faliu.
+## 1. Core Dogma: Zero-Guessing Causality
 
-## 4. Auditoria Forense de Paridade entre Ambientes (Simulação vs Produção)
-Ao auditar qualquer discrepância entre modelos teóricos, backtests/benchmarks e execução em produção/live:
-1. **Granularidade e Timeframe:** Audite se a escala temporal de ingestão é idêntica (ex: ruído de ticks de 200ms vs agregação de candles de 5m).
-2. **Acumuladores e Estados Recursivos:** Audite se processos auto-excitáveis (Hawkes, Lindblad, VPIN) decaem continuamente ou se estão sendo envenenados por chamadas incondicionais a cada tick.
-3. **Isomorfismo de Loops de Ação:** Verifique se branches que geram lucro na simulação (ex: arbitragens atômicas MEV) estão sendo disparadas autonomamente no loop de produção ou se ficaram restritas a endpoints passivos.
-4. **Fricções e Restrições de Custódia:** Isole assimetrias entre contas alavancadas vs contas Spot long-only e regras de preservação de capital.
+Under the **Causal Debugging Protocol**, no fix may be proposed or committed until the root cause has been mathematically isolated, mapped through a causal failure tree, and proven via observable instrumentation. Guess-and-check edits and speculative multi-file modifications are strictly prohibited.
 
+For hypothesis falsification tables, state transition matrices, and invariant tree models, see the [Falsification Matrices Reference](./references/falsification-matrices.md).
+
+---
+
+## 2. The Backward Causal Failure Tree
+
+Every defect investigation constructs a reverse dependency path from observable symptom to root cause:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ 1. OBSERVED SYMPTOM (Crash / Assertion Failure / Bad I/O)   │
+└──────────────────────────────┬──────────────────────────────┘
+                               │ (Why did this occur?)
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│ 2. CORRUPTED VARIABLE / UNEXPECTED STATE VALUE              │
+└──────────────────────────────┬──────────────────────────────┘
+                               │ (Where was this value assigned?)
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│ 3. CALLING NODE / TRANSITION FUNCTION                       │
+└──────────────────────────────┬──────────────────────────────┘
+                               │ (Why did the transition violate invariant?)
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│ 4. MATHEMATICAL INVARIANT VIOLATION                         │
+└──────────────────────────────┬──────────────────────────────┘
+                               │ (What environmental or logical fault caused this?)
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│ 5. ROOT CAUSE (The deterministic flaw)                      │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 3. Mathematical State Tracing & Instrumentation
+
+1. **State Formalization:** Express the expected behavior as a strict invariant $\mathcal{I}(S) \equiv \text{True}$.
+2. **Boundary Logging:** Inject instrumentation at subsystem boundaries (I/O, IPC, database, scheduler) to measure exact variable states $S_0, S_1, \dots, S_n$.
+3. **Transition Analysis:** Determine the exact index $k$ such that:
+   $$\mathcal{I}(S_{k-1}) = \text{True} \quad \land \quad \mathcal{I}(S_k) = \text{False}$$
+4. **Origin Node Proof:** The function executing transition $S_{k-1} \to S_k$ contains either the flawed logic or failed to validate invalid preconditions from its caller.
+
+---
+
+## 4. Popperian Falsification (Atomic Fix Protocol)
+
+- **Single-Vector Modification:** A proposed fix must modify only the atomic causal node identified in the trace. Modifying multiple decoupled functions simultaneously invalidates scientific causality.
+- **Hypothesis Falsification:** Formulate the fix as a falsifiable assertion:
+  $$\mathcal{H}_0: \text{Fix } F \text{ restores } \mathcal{I}(S_k) = \text{True without altering } \mathcal{I}(S_j) \text{ for } j \neq k$$
+- **The 3-Failure Escalation Limit:** If 3 consecutive atomic fixes fail to restore invariant satisfaction, the defect is structural. Halt debugging immediately and escalate to an architectural tribunal.
+
+---
+
+## 5. Environment Parity Audit Protocol
+
+When investigating discrepancies between local testing, CI pipelines, and production environments:
+
+1. **Temporal & Scale Ingestion:** Verify whether timeframes (e.g. 50ms tick vs 1s batch) alter state accumulation.
+2. **Recursive Accumulator Decay:** Verify that recursive filters, decay factors, and caches are not poisoned by repeated calls.
+3. **Execution Loop Isomorphism:** Verify that asynchronous dispatch loops in simulation are identical in structure to production runtimes.
+4. **Resource & Permission Constraints:** Isolate file handle limits, memory quotas, and execution privileges across environments.

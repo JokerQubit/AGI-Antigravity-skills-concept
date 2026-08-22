@@ -1,0 +1,39 @@
+{
+  "pre-tool-validator": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python hooks/pre_tool_validator.py",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  },
+  "post-tool-linter": {
+    "PostToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python hooks/post_tool_linter.py",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  },
+  "stop-gatekeeper": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "python hooks/stop_gatekeeper.py",
+        "timeout": 30
+      }
+    ]
+  }
+}

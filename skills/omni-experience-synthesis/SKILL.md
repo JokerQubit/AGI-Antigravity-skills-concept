@@ -271,7 +271,7 @@ Ao receber uma missão para criar um site/aplicação:
 ## 🔮 V. KINETIC SCROLLYTELLING & INTERACTIVE MEDIA INTEGRATION
 
 Quando a experiência demandar narrativa visual contínua, desconstrução de produto ou dinamismo de página:
-- **Consulte Obrigatoriamente:** [`skills/interactive-kinetic-media-engine/SKILL.md`](file:///c:/Users/pichau/.gemini/config/plugins/AGI-Antigravity-skills-concept/skills/interactive-kinetic-media-engine/SKILL.md)
+- **Consulte Obrigatoriamente:** [`skills/interactive-kinetic-media-engine/SKILL.md`](../interactive-kinetic-media-engine/SKILL.md)
 - **Pilares Mandatórios:**
   1. **Video Scrubbing & Viewport Sticky:** Mantenha a câmera cinematográfica alinhada com o scroll do usuário usando interpolação `lerp`.
   2. **Parallax Multicamada:** Crie profundidade física com taxas diferenciais de deslocamento e inércia em `requestAnimationFrame`.

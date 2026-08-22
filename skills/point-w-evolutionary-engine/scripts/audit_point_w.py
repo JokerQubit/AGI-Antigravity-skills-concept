@@ -83,7 +83,7 @@ def audit_directory(target_dir: str, extensions=None):
     total_mocks = 0
     files_with_error_handling = 0
 
-    ignored_dirs = {'.git', 'node_modules', '__pycache__', 'dist', 'build', '.next', 'brain'}
+    ignored_dirs = {'.git', 'node_modules', '__pycache__', '.pytest_cache', 'tests', '.agents', 'dist', 'build', '.next', 'brain'}
 
     for path in root.rglob('*'):
         if any(part in ignored_dirs for part in path.parts):

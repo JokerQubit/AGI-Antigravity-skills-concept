@@ -1,50 +1,116 @@
 ---
 name: session-handoff-protocol
-description: Cryptographically Verifiable Session State Serialization & Autonomous Handoff Protocol. Manages zero-loss state transitions between cognitive execution sessions and multi-agent swarm environments.
+description: Manages transactional session state serialization, cryptographic SHA-256 state hashing, and atomic session handoffs across agent turns or context windows. Eliminates hallucinations and context drift during long-horizon tasks.
 ---
 
-# SKILL: Session Handoff Protocol — Cryptographic State Serialization
+# Session State Handoff & Cryptographic Integrity Protocol
 
-> *"Continuity is the backbone of cognition. A system with unverified state handoffs has no identity."*
+> *"Without deterministic state serialization and cryptographic hashing, long-horizon tasks degrade into hallucinatory context drift."*
 
 ---
 
-## I. ABSTRACT SYSTEM STATE ARCHITECTURE
+## 1. Overview & Core Philosophy
 
-Session Handoff is completely decoupled from specific domain codebases or legacy repository names. It manages state transitions through a standardized, cryptographically hashed state schema.
+The **Session Handoff Protocol** provides transactional state persistence across conversational boundaries, subagent context resets, and multi-turn execution windows. It ensures that an agent resuming work has an unambiguous, tamper-evident view of project state, completed milestones, verified invariants, and active constraints.
+
+For cryptographic hashing algorithms, canonical JSON formatting, and recovery procedures, see the [State Cryptography Reference](./references/state-cryptography.md).
+
+---
+
+## 2. The Transactional State Schema
+
+Session state is persisted deterministically as a JSON-serializable structured document containing five canonical keys:
 
 ```
-  [Session N]  ───(Serialize & Hash)───> [State File + SHA-256] ───(Deserialize & Verify)───> [Session N+1]
+┌─────────────────────────────────────────────────────────────┐
+│ 1. SESSION METADATA (Session ID, Timestamp, Schema Version) │
+├─────────────────────────────────────────────────────────────┤
+│ 2. CONSTITUTIONAL INVARIANTS (Locked dogmas, constraints)    │
+├─────────────────────────────────────────────────────────────┤
+│ 3. COMPLETED MILESTONES (Verified deliverables, test proofs) │
+├─────────────────────────────────────────────────────────────┤
+│ 4. ACTIVE EXECUTION POINTER (Current task, in-flight files) │
+├─────────────────────────────────────────────────────────────┤
+│ 5. CRYPTOGRAPHIC INTEGRITY BLOCK (SHA-256 state hash)       │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### JSON Schema Specification
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SessionStateSnapshot",
+  "type": "object",
+  "required": [
+    "sessionId",
+    "timestampUtc",
+    "schemaVersion",
+    "completedMilestones",
+    "activeTask",
+    "workspaceStateHash"
+  ],
+  "properties": {
+    "sessionId": { "type": "string" },
+    "timestampUtc": { "type": "string", "format": "date-time" },
+    "schemaVersion": { "type": "string", "enum": ["1.0.0"] },
+    "completedMilestones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["milestoneId", "status", "testVerificationProof"],
+        "properties": {
+          "milestoneId": { "type": "string" },
+          "status": { "type": "string", "enum": ["COMPLETED", "FAILED"] },
+          "testVerificationProof": { "type": "string" }
+        }
+      }
+    },
+    "activeTask": {
+      "type": "object",
+      "required": ["taskId", "description", "targetFiles"],
+      "properties": {
+        "taskId": { "type": "string" },
+        "description": { "type": "string" },
+        "targetFiles": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "workspaceStateHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+  }
+}
 ```
 
 ---
 
-## II. AUTONOMOUS SESSION OPEN PROTOCOL
+## 3. Cryptographic State Hashing Workflow
 
-1. **State Retrieval & Cryptographic Validation:**
-   - Read primary state artifact (`memory/session_state.md` / `.json`).
-   - Verify SHA-256 state hash against `memory/state_manifest.sha256`. If hash mismatches, trigger emergency state recovery from historical snapshot.
-2. **State Deserialization:**
-   - Parse global project phase, active dependency graph, open blockers, and completed execution nodes.
-3. **Autonomous Dependency Resolution & Priority Mapping:**
-   - Derive the top 3 critical path actions ($P_1, P_2, P_3$) deterministically using critical-path method (CPM) analysis of the remaining task DAG.
-4. **Orphan & Integrity Scan:**
-   - Cross-reference physical skill assets against the capability manifest. Flag unregistered or orphaned capabilities for immediate registration or isolation.
+To guarantee zero silent corruption across session handoffs:
+
+1. **Serialize Canonical State:** Sort keys and encode state snapshot using UTF-8 canonical JSON (zero extraneous whitespace).
+2. **Compute SHA-256 Digest:** Compute the hex digest of the canonical state string:
+   $$\mathcal{H}(S) = \text{SHA256}(\text{CanonicalJSON}(S))$$
+3. **Commit State Checkpoint:** Write snapshot to disk at `session_state.json` or `.agents/<agent>/state.json`.
+4. **Integrity Validation on Ingestion:** On session resumption, the receiving agent recomputes $\mathcal{H}(S)$ and asserts equality before executing further actions.
 
 ---
 
-## III. AUTONOMOUS SESSION CLOSE & HANDOFF PROTOCOL
+## 4. Atomic Session Transition Protocol
 
-Triggered via automated context threshold ($T_{\text{handoff}}$) or completion of a task epoch:
+When transitioning across turns:
 
-1. **Execution Freeze & Immutable Snapshot:**
-   - Halt active work units. Compute diff vector of all state mutations during the session.
-2. **State Payload Serialization:**
-   - Update `session_count` ($N \to N+1$).
-   - Serialize active worker topologies, resolved vs. outstanding blockers, and updated priority queues.
-3. **Auto-Evolution & Fitness Update:**
-   - Record capability usage frequencies and execution quality scores.
-   - Update skill fitness ratings and append events to `memory/evolution_ledger.md`.
-4. **Cryptographic Manifest Locking & Commit:**
-   - Compute payload hash $H(\text{State}_{N+1})$.
-   - Commit updated state files to version control with automated standardized state commit signature: `state(core): serialize session N+1 [hash: SHORT_SHA]`.
+1. **Pre-Transition Validation:**
+   - Execute all verification test suites (`python test_plugin.py`).
+   - Confirm zero unstaged or corrupt files.
+2. **Snapshot Write & Sync:** Write state snapshot and flush buffers to disk.
+3. **Dispatch Transfer Message:** Send concise coordination message via `send_message` containing the state snapshot path and verification hash.
+4. **Halt Execution:** Complete current turn without scheduling lingering detached tasks.
+
+---
+
+## 5. Recovery & Drift Reconciliation
+
+If a session state hash mismatch is detected upon resumption:
+
+- **Halt Execution:** Do not assume previous state was valid.
+- **Diff Reconciliation:** Compare disk state against recorded file hashes in snapshot.
+- **Rollback or Re-verification:** Re-run test suites to establish empirical ground truth before resuming task execution.

@@ -81,5 +81,24 @@ When executing an evolution cycle, output:
 > - **Interactive Exploration:** [States tested: e.g. Menu, Active Gameplay, Modal]
 > - **Transformative Innovations Injected:** [1-2 high-scale features added this cycle]
 > - **Next Mutation Target:** [Specific architectural/aesthetic upgrade underway]
+> - **Q-Score This Cycle:** [X.X/10] — [Gate: PASSED ≥ 9.0 | PENDING | FAILED < 7.0]
 ```
 
+---
+
+## 4. Q-Score por Módulo — Integração com PROJECT_BRAIN.md
+
+Se o projeto tiver `PROJECT_BRAIN.md` (protocolo `project-neural-map`), ao finalizar cada ciclo de evolução:
+
+1. **Atualizar a tabela de Q-Score** no PROJECT_BRAIN.md para cada módulo auditado:
+   ```markdown
+   | Módulo | Q-Score | Gate | Auditado por | Data |
+   |---|---|---|---|---|
+   | `core/engine.py` | 9.2 | ✅ PASSED | Evolution Loop Cycle 3 | 2026-08-21 |
+   | `ui/dashboard.tsx` | 7.8 | ⏳ PENDING | Evolution Loop Cycle 2 | 2026-08-21 |
+   | `api/routes.py` | 6.1 | ❌ FAILED | Evolution Loop Cycle 1 | 2026-08-21 |
+   ```
+2. **Módulos com Q-Score < 9.0** automaticamente entram em novo ciclo de evolução — não podem ter status `✅ DONE` no BRAIN.md.
+3. **Módulos com Q-Score ≥ 9.0** são candidatos a mudar status de `🟡 READY` para `✅ DONE` após revisão do QA Manager.
+
+**Lei Absoluta do Q-Score:** Nenhum módulo é declarado DONE sem Q ≥ 9.0 comprovado empiricamente (não auto-declarado sem evidência).

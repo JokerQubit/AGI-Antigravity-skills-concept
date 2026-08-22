@@ -1,87 +1,116 @@
 ---
 name: gauntlet-loop
-description: High-rigor iterative improvement protocol. Deconstructs objectives, deploys double-blind Builder and Critic subagent ensembles against an empirical reference bar, and loops until verified superiority and convergence are achieved.
-applies_when: Use for iterative optimization, benchmark refinement, builder-critic adversarial loops, code quality convergence, or when triggered by /goal command.
-does_not_apply_when: Single-pass basic question answering or trivial minor file edits.
+description: Orchestrates double-blind Builder and Critic adversarial verification loops against an explicit Named Reference Bar. Enforces Dual-Gate convergence (empirical test pass and blind qualitative score Q >= 9.0) with Lyapunov delta stabilization.
 ---
 
-# SKILL: Gauntlet Loop Engine
+# Gauntlet-Loop Adversarial Quality Engine
 
-> *"Iterative refinement without empirical ground truth is merely aesthetic drift."*
-
----
-
-## 1. Core Architecture
-
-The Gauntlet Loop transforms any development or research goal into a self-correcting multi-agent refinement process:
-1. **Establish Ground Truth Bar:** Retrieve an explicit, named reference artifact, theoretical baseline, or benchmark suite.
-2. **Atomic Deconstruction:** Break the work into independently judgeable components.
-3. **Double-Blind Ensemble Execution:** Fan out independent **Builder** and **Critic** subagents with isolated context boundaries.
-4. **Empirical & Blind Comparison:** The Critic evaluates artifacts blind (identifiers stripped) combined with deterministic sandbox execution metrics.
-5. **Lyapunov Convergence Safeguard:** Loop until the artifact beats the bar AND quality improvement stabilizes (\(\Delta Q < \epsilon\)).
+> *"Refinement without an empirical reference bar produces aesthetic drift. True quality requires double-blind adversarial verification."*
 
 ---
 
-## 2. The Reference Bar Protocol
+## 1. Overview & Architecture
 
-A valid reference bar must meet three criteria:
-- **Named:** A concrete reference implementation, design spec, paper baseline, or benchmark suite.
-- **Fetchable:** Fully accessible to Critic subagents for direct side-by-side inspection.
-- **Measurable:** Contains both qualitative criteria AND deterministic execution benchmarks.
+The **Gauntlet Loop** transforms engineering objectives into an adversarial multi-agent refinement process. It eliminates subjective self-evaluation by decoupling the creator from the evaluator and judging candidate implementations against an authoritative **Named Reference Bar**.
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ 1. Establish Named Reference Bar (Ground Truth)              │
+│    - Named, fetchable, measurable baseline implementation   │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│ 2. Builder Subagent Generation / Iteration                  │
+│    - Implement candidate artifact meeting all constraints   │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│ 3. Anonymization & Dual-Gate Evaluation                      │
+│    - Strip identifiers (Candidate vs Reference Bar)         │
+│    - Gate A: Deterministic Empirical Test Suite (100% pass) │
+│    - Gate B: Blind Critic Qualitative Audit (Q >= 9.0)      │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                ┌──────────────┴──────────────┐
+                ▼                             ▼
+        [Pass Both Gates]             [Fail Either Gate]
+                │                             │
+                ▼                             ▼
+   Converged: Produce Handoff     Check Lyapunov Delta:
+                                  If N=5 or Delta Q < epsilon:
+                                  Decompose / Escalate
+                                  Else: Loop to Builder
+```
+
+For mathematical convergence formulas, blinded scoring rubrics, and tribunal escalation protocols, see the [Adversarial Benchmarking Reference](./references/adversarial-benchmarking.md).
 
 ---
 
-## 3. Double-Blind Critic & Execution Engine
+## 2. The Named Reference Bar Protocol
 
-To prevent subjective LLM bias and hallucinated approvals:
-- **Identifier Stripping:** Artifacts A (Reference) and B (Candidate) are anonymized before passing to Critic.
-- **Deterministic Verification Dual-Gate:**
-  - *Gate A (Empirical Execution):* Automated test suite pass, zero static analysis warnings, performance latency/throughput bounds satisfied.
-  - *Gate B (Blind Qualitative Critic):* Critic identifies specific remaining gaps and declares winner.
-- **Exit Condition:** Candidate MUST pass Gate A (Empirical) AND win Gate B (Critic) across 2 consecutive loops.
+Every Gauntlet Loop invocation requires an authoritative Reference Bar meeting three criteria:
 
----
-
-## 4. Convergence & Stability Safeguard
-
-To prevent infinite loops or oscillatory quality degradation:
-- Track delta improvement metric \(\Delta Q_k = Q_k - Q_{k-1}\).
-- If after \(N = 5\) iterations \(\Delta Q_k < \epsilon\) without winning, trigger **Adversarial Decomposition Pass**: re-split component into smaller sub-problems or escalate to `adversarial-tribunal` (`skills/adversarial-tribunal/SKILL.md`).
+1. **Named:** An explicit standard, industry specification, golden benchmark dataset, or production baseline codebase.
+2. **Fetchable:** Accessible on disk or via network for direct side-by-side comparison.
+3. **Measurable:** Contains both deterministic quantitative metrics (test suites, latency, type coverage) and qualitative requirements (modularity, clarity, API cleanliness).
 
 ---
 
-## 5. Subagent Dispatch Payloads (Two-Stroke Ignition)
+## 3. The Dual-Gate Convergence System
 
-Execute the Builder and Blind Critic subagents via `invoke_subagent`:
+A candidate artifact is certified only when it simultaneously satisfies both verification gates:
+
+### Gate A: Deterministic Empirical Gate
+- **100% Test Pass:** All unit, integration, and property tests pass with exit code 0.
+- **Zero Static Violations:** 0 linter errors, 0 type checker warnings, 0 syntax defects.
+- **Performance Thresholds:** Latency, memory footprint, and asymptotic bounds satisfy operational targets.
+
+### Gate B: Blind Qualitative Critic Gate
+- **Double-Blind Review:** Artifacts A (Reference Bar) and B (Candidate) are stripped of metadata/author tags.
+- **Independent Critic Subagent:** The Critic audits architecture, edge-case resilience, and documentation without knowing the candidate's provenance.
+- **Quality Score Threshold:** Candidate must achieve a composite quality score $Q \ge 9.0 / 10.0$ and outperform the Reference Bar.
+
+---
+
+## 4. Lyapunov Delta Stabilization & Convergence Safeguards
+
+To prevent infinite loops, thrashing, or cyclic regressions:
+- Track quality change per iteration:
+  $$\Delta Q_k = Q_k - Q_{k-1}$$
+- **Early Termination:** If after $N = 5$ iterations $\Delta Q_k < \epsilon$ without satisfying both gates, trigger an **Adversarial Decomposition Pass**:
+  1. Break the component into smaller sub-modules.
+  2. Isolate the specific failing dimension (empirical vs qualitative).
+  3. Escalate unresolved architectural impasses to an adversarial tribunal.
+
+---
+
+## 5. Subagent Dispatch Schema
+
+When dispatching Builder and Blind Critic subagents via `invoke_subagent` or `send_message`:
 
 ```json
-[
-  {
-    "TypeName": "self",
-    "Role": "Gauntlet Loop Builder",
-    "Prompt": "GAUNTLET BUILDER: Construa/otimize a implementação de [COMPONENTE] para superar o Reference Bar [BARRA]. Garanta 0 TODOs, 100% tipagem estrita, performance assintótica e testes passando."
+{
+  "BuilderPayload": {
+    "Role": "Gauntlet Builder",
+    "Objective": "Construct and refine candidate module to exceed Reference Bar standards",
+    "Constraints": ["Zero placeholders", "100% type annotations", "All tests passing"]
   },
-  {
-    "TypeName": "self",
+  "BlindCriticPayload": {
     "Role": "Gauntlet Blind Critic",
-    "Prompt": "GAUNTLET BLIND CRITIC: Audite cegamente o artefato gerado contra o Reference Bar. Identifique: 1) A maior lacuna técnica ou visual remanescente, 2) Testes de borda com falha, 3) Decisão inequívoca: WINNER ou REVISE."
+    "Objective": "Perform double-blind adversarial audit of Anonymized Artifact A vs Anonymized Artifact B",
+    "EvaluationCriteria": ["Architectural elegance", "Edge-case coverage", "Defensive contracts", "Q-score (0-10)"]
   }
-]
+}
 ```
 
-## 6. Universal Prompt Generation Template
+---
 
-Adapt for target domain (keep under 180 words):
+## 6. Execution Protocol Checklist
 
-```
-Goal: [OBJECTIVE]
-Reference Bar: [NAMED_FETCHABLE_BAR]
-
-Step 1: Inspect the Reference Bar directly.
-Step 2: Deconstruct objective into atomic sub-components.
-Step 3: For each component, spawn an isolated Builder subagent and a separate Blind Critic subagent.
-Step 4: The Blind Critic must inspect Candidate vs Bar with labels stripped, run empirical verification tests, declare the winner, and identify the single largest remaining gap.
-Step 5: Loop iteratively until Candidate passes all empirical execution gates AND wins blind comparison.
-
-Log loop progress continuously in [PROGRESS_LEDGER].
-```
+- [ ] Has an explicit Named Reference Bar been identified and loaded?
+- [ ] Are Candidate and Reference Bar stripped of identifying provenance before Critic review?
+- [ ] Has Gate A (Empirical Test Suite) passed with exit code 0?
+- [ ] Has Gate B (Blind Critic) awarded $Q \ge 9.0$?
+- [ ] Has Lyapunov delta stability $\Delta Q_k \ge \epsilon$ been confirmed across iterations?
