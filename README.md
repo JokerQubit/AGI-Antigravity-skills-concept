@@ -48,6 +48,10 @@
 ## 2. Visual Architecture and Showcase
 
 <p align="center">
+  <img src="assets/architecture_diagram.svg" alt="5-Sector Neural Architecture Diagram" width="100%" />
+</p>
+
+<p align="center">
   <img src="assets/skill_pack_showcase.jpg" alt="Skill Pack Showcase" width="100%" />
 </p>
 
@@ -67,6 +71,7 @@ agi-antigravity-core/
 ├── PROJECT_BRAIN.md                  # Persistent architectural neural map and telemetry
 ├── assets/                           # Visual assets and architecture diagrams
 │   ├── banner.jpg
+│   ├── architecture_diagram.svg
 │   └── skill_pack_showcase.jpg
 ├── rules/
 │   └── AGENTS.md                     # Consolidated constitutional rules (<300 lines)
