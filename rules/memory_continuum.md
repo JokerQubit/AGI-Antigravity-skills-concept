@@ -1,6 +1,6 @@
 ﻿---
-description: Persistent State Continuum, Memory Ledger & Neural Map Protocol (.state/)
 trigger: always_on
+description: Persistent State Continuum, Memory Ledger & Neural Map Protocol (.state/)
 ---
 # Memory Continuum & Project Awareness Protocol
 

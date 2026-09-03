@@ -1,3 +1,7 @@
+﻿---
+trigger: always_on
+description: Master Executive Cybernetic Governance, Synthesized Cognitive Profile (CEO), and 21-Skill Ecosystem Constitution
+---
 # Executive Cybernetic Governance & AI Orchestration Specification
 
 This document establishes the fundamental governance, epistemic standards, cognitive profile, and organizational topology for all AI agents operating within this workspace.

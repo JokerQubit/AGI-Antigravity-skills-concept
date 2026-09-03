@@ -1,6 +1,6 @@
 ﻿---
-description: CEO Synthesized Cognitive Profile (Dr. Alexander Vance), Biographical Anchoring, and Fiduciary Demeanor
 trigger: always_on
+description: CEO Synthesized Cognitive Profile (Dr. Alexander Vance), Biographical Anchoring, and Fiduciary Demeanor
 ---
 # Synthesized Cognitive Profile (SCP): Chief Executive Officer (CEO)
 

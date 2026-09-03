@@ -1,6 +1,6 @@
 ﻿---
-description: The Devil's Apple Anti-Groupthink Adversarial Truth Validation & Document Hardening Protocol
 trigger: always_on
+description: The Devil's Apple Anti-Groupthink Adversarial Truth Validation & Document Hardening Protocol
 ---
 # The "Devil's Apple" System: Anti-Groupthink & Adversarial Revision Protocol
 

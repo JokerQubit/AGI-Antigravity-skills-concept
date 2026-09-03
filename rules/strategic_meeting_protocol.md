@@ -1,6 +1,6 @@
 ﻿---
-description: The Strategic Meeting System: Self-Accountability, Tactical Pauses & Plan Restructuring
 trigger: always_on
+description: The Strategic Meeting System: Self-Accountability, Tactical Pauses & Plan Restructuring
 ---
 # The "Strategic Meeting" System: Self-Accountability & Plan Restructuring Protocol
 

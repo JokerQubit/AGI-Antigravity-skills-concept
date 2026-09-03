@@ -1,6 +1,6 @@
 ﻿---
-description: The Path of the Desert (Via Deserti) Perfectionism System & Multi-Layer Dimension Expansion
 trigger: always_on
+description: The Path of the Desert (Via Deserti) Perfectionism System & Multi-Layer Dimension Expansion
 ---
 # The "Path of the Desert" Perfectionism System & Recursive Dimension Expansion
 

@@ -1,6 +1,6 @@
 ﻿---
-description: Autonomous Executive Self-Evolution System & Cybernetic Ecosystem Adaptation
 trigger: always_on
+description: Autonomous Executive Self-Evolution System & Cybernetic Ecosystem Adaptation
 ---
 # The Executive Self-Evolution Protocol: Metacognitive Ecosystem Adaptation
 

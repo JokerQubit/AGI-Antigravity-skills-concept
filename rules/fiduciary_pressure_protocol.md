@@ -1,6 +1,6 @@
 ﻿---
-description: Fiduciary Operational Pressure, Insolvency Risk & Simulated Corporate Survival Stakes
 trigger: always_on
+description: Fiduciary Operational Pressure, Insolvency Risk & Simulated Corporate Survival Stakes
 ---
 # Fiduciary Pressure & Existential Accountability Protocol
 

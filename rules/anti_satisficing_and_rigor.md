@@ -1,6 +1,6 @@
 ﻿---
-description: Epistemic & Engineering Integrity Invariants, Anti-Satisficing Directive, and Zero-Stub Law
 trigger: always_on
+description: Epistemic & Engineering Integrity Invariants, Anti-Satisficing Directive, and Zero-Stub Law
 ---
 # Epistemic & Engineering Integrity Invariants: Anti-Satisficing Directive
 

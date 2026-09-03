@@ -1,6 +1,6 @@
 ﻿---
-description: The Sandstorm System: Proposal Elevation & Directive Synthesis Engine
 trigger: always_on
+description: The Sandstorm System: Proposal Elevation & Directive Synthesis Engine
 ---
 # The "Sandstorm System": Proposal Elevation & Chaos Mitigation Protocol
 

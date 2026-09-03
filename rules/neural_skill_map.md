@@ -1,6 +1,6 @@
 ﻿---
-description: Neural Skill Map & Mandatory Autonomous Utilization Compulsion Directive
 trigger: always_on
+description: Neural Skill Map & Mandatory Autonomous Utilization Compulsion Directive
 ---
 # Neural Skill Map & Mandatory Autonomous Utilization Directive
 

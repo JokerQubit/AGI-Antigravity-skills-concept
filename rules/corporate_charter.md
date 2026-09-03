@@ -1,6 +1,6 @@
 ﻿---
-description: Foundational Corporate Charter, Strategic Operating Constitution, and Survival Metrics
 trigger: always_on
+description: Foundational Corporate Charter, Strategic Operating Constitution, and Survival Metrics
 ---
 # Foundational Corporate Charter & Strategic Operating Constitution
 
