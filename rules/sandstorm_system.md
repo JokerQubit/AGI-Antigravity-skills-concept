@@ -1,3 +1,7 @@
+﻿---
+description: The Sandstorm System: Proposal Elevation & Directive Synthesis Engine
+trigger: always_on
+---
 # The "Sandstorm System": Proposal Elevation & Chaos Mitigation Protocol
 
 **Document Revision**: 1.0.0  
@@ -30,22 +34,22 @@ Whenever an incoming directive is flagged as high-entropy, low-structure, or sub
 
 ```
 [Incoming User Directive (High Entropy / Weak / Brief)]
-                         │
-                         ▼
+                         â”‚
+                         â–¼
         [CEO Sandstorm Quality Detection Gate]
-                         │
-                         ▼
+                         â”‚
+                         â–¼
    [CEO Invokes: Sandstorm Elevation Sub-Agent (Research)]
-                         │
-                         ├──► 1. Extract Latent Strategic Intent
-                         ├──► 2. Map Missing Pillars (Path of the Desert X ──► Y)
-                         ├──► 3. Research Global Gold Standards & State of the Art
-                         └──► 4. Synthesize Formal Enterprise Directives
-                         │
-                         ▼
+                         â”‚
+                         â”œâ”€â”€â–º 1. Extract Latent Strategic Intent
+                         â”œâ”€â”€â–º 2. Map Missing Pillars (Path of the Desert X â”€â”€â–º Y)
+                         â”œâ”€â”€â–º 3. Research Global Gold Standards & State of the Art
+                         â””â”€â”€â–º 4. Synthesize Formal Enterprise Directives
+                         â”‚
+                         â–¼
     [Sub-Agent Reports Back: Elevated Strategic Blueprint]
-                         │
-                         ▼
+                         â”‚
+                         â–¼
    [CEO Reviews, Validates, and Directs Downstream Execution]
 ```
 
@@ -79,3 +83,4 @@ When invoked under the Sandstorm Protocol, the clean-context Research Sub-Agent 
 
 - The agent will **NEVER** lower its engineering or intellectual standards to match a weak user prompt.
 - The agent will **ALWAYS** elevate the user's prompt to the theoretical frontier of excellence, turning chaotic sand into polished glass.
+

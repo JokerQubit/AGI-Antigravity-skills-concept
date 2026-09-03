@@ -1,3 +1,7 @@
+﻿---
+description: Six-Tier Departmental Neural Chain, Context Isolation, and Inter-Agent Contracts
+trigger: always_on
+---
 # Departmental Neural Chain & Sectoral Hierarchy Specification
 
 This rule document establishes the exhaustive architectural taxonomy of all corporate sectors, the multi-tiered neural chain of command, and the deterministic escalation protocols governing inter-agent workflows.
@@ -10,20 +14,20 @@ The machine operates not as a flat collection of prompts, but as a formal Direct
 
 ```
 [Layer 6: Chief Executive Officer (CEO)]
-   ▲
-   │ (Strategic Vision, Global Fiduciary Sign-Off, Board Alignment)
+   â–²
+   â”‚ (Strategic Vision, Global Fiduciary Sign-Off, Board Alignment)
 [Layer 5: Cross-Departmental Synchronization Hub (Handshake Protocols)]
-   ▲
-   │ (Inter-Departmental Contract Validation & Dependency Resolution)
+   â–²
+   â”‚ (Inter-Departmental Contract Validation & Dependency Resolution)
 [Layer 4: Department Heads / Directors (Vertical Strategic Leads)]
-   ▲
-   │ (Domain Roadmaps, Resource Allocation, Departmental Veto Power)
+   â–²
+   â”‚ (Domain Roadmaps, Resource Allocation, Departmental Veto Power)
 [Layer 3: Department Managers (Workflow & Parallel Orchestrators)]
-   ▲
-   │ (Task Decomposition, Parallel Sub-Agent Dispatch, Result Synthesis)
+   â–²
+   â”‚ (Task Decomposition, Parallel Sub-Agent Dispatch, Result Synthesis)
 [Layer 2: Operational Supervisors (Quality & Deterministic Gatekeepers)]
-   ▲
-   │ (Continuous Schema Auditing, Automated Linter / Test Execution)
+   â–²
+   â”‚ (Continuous Schema Auditing, Automated Linter / Test Execution)
 [Layer 1: Staff Specialists / Employees (Clean-Context Atomic Executors)]
 ```
 
@@ -80,28 +84,29 @@ For any non-trivial user directive or engineering project, the ecosystem execute
 
 ```
 [Directive Ingestion & Premise Audit (CEO)]
-                    │
-                    ▼
+                    â”‚
+                    â–¼
        [1. dept_research (Prior Art)]
-                    │
-                    ▼
+                    â”‚
+                    â–¼
       [2. dept_goals (OKRs & DAG)]
-                    │
-                    ▼
+                    â”‚
+                    â–¼
    [3. dept_architecture (Design & Code)]
-                    │
-                    ▼
-     [4. dept_analysis (Logic Audit)] ──(VETO)──► [Re-Architect]
-                    │ (Pass)
-                    ▼
- [5. dept_quality_redteam (Fuzz & Stress)] ──(Fail)──► [Patch Bug]
-                    │ (Pass)
-                    ▼
+                    â”‚
+                    â–¼
+     [4. dept_analysis (Logic Audit)] â”€â”€(VETO)â”€â”€â–º [Re-Architect]
+                    â”‚ (Pass)
+                    â–¼
+ [5. dept_quality_redteam (Fuzz & Stress)] â”€â”€(Fail)â”€â”€â–º [Patch Bug]
+                    â”‚ (Pass)
+                    â–¼
      [6. dept_learning (Synthesis)]
-                    │
-                    ▼
+                    â”‚
+                    â–¼
    [7. dept_production (Pre-Flight Gate)]
-                    │
-                    ▼
+                    â”‚
+                    â–¼
        [8. CEO Final Sign-Off & Walkthrough]
 ```
+

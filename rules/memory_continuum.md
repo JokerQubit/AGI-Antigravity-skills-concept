@@ -1,3 +1,7 @@
+﻿---
+description: Persistent State Continuum, Memory Ledger & Neural Map Protocol (.state/)
+trigger: always_on
+---
 # Memory Continuum & Project Awareness Protocol
 
 This rule governs how the primary AI (CEO) and all orchestrated sub-agents maintain continuous situational awareness, access project memory, and avoid operating in an amnesiac vacuum.
@@ -12,11 +16,11 @@ To eliminate this vulnerability, the system enforces the **Memory Continuum Prot
 
 ```
            [Append-Only Ledger: .state/ledger/]
-                            ▲
-                            │ Atomic Transaction Log
-[status.json & corporate_health.json] ◄───► [scripts/sync_state.ps1]
-                            │
-                            ▼
+                            â–²
+                            â”‚ Atomic Transaction Log
+[status.json & corporate_health.json] â—„â”€â”€â”€â–º [scripts/sync_state.ps1]
+                            â”‚
+                            â–¼
           [Context Hydration at Sub-Agent Launch]
 ```
 
@@ -46,3 +50,4 @@ To eliminate this vulnerability, the system enforces the **Memory Continuum Prot
 1. **Hydration Before Execution**: Before initiating a complex multi-step workflow, the agent must ensure it has hydrated its context with current state (either via PreInvocation telemetry or calling `sync_state.ps1`).
 2. **Atomic State Commit**: No major work package is complete until its completion transaction is logged in `.state/ledger/`.
 3. **No Phantom Progress**: Agents must never report a milestone as complete unless the corresponding verification artifact is written to the filesystem and recorded in the ledger.
+

@@ -1,3 +1,7 @@
+﻿---
+description: The Matrix Reverse System: 9 Modern Engineering, Multi-Modal UI/Audio/Cinema Video Standards
+trigger: always_on
+---
 # The "Matrix Reverse" System: Modern Multimedia, Visual & Engineering Standards
 
 **Document Revision**: 2.0.0  
@@ -128,3 +132,4 @@ The **Matrix Reverse Protocol** forces the system to operate at the cutting-edge
   - Directories must adhere to professional conventions (`src/`, `rules/`, `skills/`, `scripts/`, `tests/`, `docs/`).
   - Immediately purge temporary test fixtures and intermediate run outputs once validation passes.
 - **Clutter Elimination Audit**: Routine cleanup scripts must sweep the workspace to enforce zero orphaned files and maintain operational velocity.
+

@@ -1,3 +1,7 @@
+﻿---
+description: Epistemic & Engineering Integrity Invariants, Anti-Satisficing Directive, and Zero-Stub Law
+trigger: always_on
+---
 # Epistemic & Engineering Integrity Invariants: Anti-Satisficing Directive
 
 **Document Revision**: 1.0.0  
@@ -82,3 +86,4 @@ The following tokens and patterns are flagged as critical defects if detected in
    - The `scripts/hooks/post_invocation.ps1` hook inspects output streams for placeholder patterns. If detected, it sets `terminationBehavior: "force_continue"` with a re-prompt demanding full implementation.
 3. **Persistent State Audit**:
    - Deliverables containing unverified claims cannot receive a `VERIFIED` state signature in `.state/ledger/`.
+

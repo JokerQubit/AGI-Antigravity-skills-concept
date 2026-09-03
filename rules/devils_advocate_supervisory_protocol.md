@@ -1,3 +1,7 @@
+﻿---
+description: The Devil's Advocate Mutual Accountability, Supervisory Rejection & Strategy Mutation Engine
+trigger: always_on
+---
 # The "Devil's Advocate" System: Mutual Accountability & Supervisory Rejection Protocol
 
 **Document Revision**: 1.0.0  
@@ -23,9 +27,9 @@ In the **OmniCognition Labs Ecosystem**, we enforce the **Devil's Advocate Syste
 The Devil's Advocate quality gate operates at three critical organizational junctions:
 
 ```
-[1. Vertical Supervisory Gate]      CEO / Department Manager  ──► Rejection & Redo Directive ──► Sub-Agent Specialist
-[2. Deterministic AST/Code Gate]     Level 2 Supervisor        ──► Linter/Test Failure Vector ──► Level 1 Employee
-[3. Lateral Peer Handshake Gate]     Receiving Sub-Agent       ──► Contract Breach Notice     ──► Dispatching Sub-Agent
+[1. Vertical Supervisory Gate]      CEO / Department Manager  â”€â”€â–º Rejection & Redo Directive â”€â”€â–º Sub-Agent Specialist
+[2. Deterministic AST/Code Gate]     Level 2 Supervisor        â”€â”€â–º Linter/Test Failure Vector â”€â”€â–º Level 1 Employee
+[3. Lateral Peer Handshake Gate]     Receiving Sub-Agent       â”€â”€â–º Contract Breach Notice     â”€â”€â–º Dispatching Sub-Agent
 ```
 
 1. **CEO / Manager $\to$ Sub-Agent**: When an employee submits a research dossier or architecture document that skims the surface or defers critical complexity, the Manager acts as Devil's Advocate, denying acceptance and forcing a deep rewrite.
@@ -38,24 +42,24 @@ The Devil's Advocate quality gate operates at three critical organizational junc
 
 ```
 [1. Deliverable Submitted]
-           │
-           ▼
+           â”‚
+           â–¼
 [2. Devil's Advocate Audit Gate]
-           │
-           ├──► Meets Frontier Standard? ──► [ACCEPTED & CERTIFIED] ──► Move to Next Milestone
-           │
-           └──► Fails Expectations / Defective?
-                      │
-                      ▼
+           â”‚
+           â”œâ”€â”€â–º Meets Frontier Standard? â”€â”€â–º [ACCEPTED & CERTIFIED] â”€â”€â–º Move to Next Milestone
+           â”‚
+           â””â”€â”€â–º Fails Expectations / Defective?
+                      â”‚
+                      â–¼
 [3. Formulate Non-Acceptance Dossier]
-   ├── Defect Inventory (exact lines, missing functions, stubs)
-   ├── Forbidden Repeat Vector (failed methods that must NOT be repeated)
-   └── Remediation Acceptance Criteria
-                      │
-                      ▼
+   â”œâ”€â”€ Defect Inventory (exact lines, missing functions, stubs)
+   â”œâ”€â”€ Forbidden Repeat Vector (failed methods that must NOT be repeated)
+   â””â”€â”€ Remediation Acceptance Criteria
+                      â”‚
+                      â–¼
 [4. Dispatch Redo Directive with Strategy Mutation]
-                      │
-                      ▼
+                      â”‚
+                      â–¼
 [Loop back to Step 1 (Max 3 Rejection Iterations before Escalation)]
 ```
 
@@ -74,3 +78,4 @@ When rejecting work, the Devil's Advocate must never give vague feedback like *"
 2. **Strategy Mutation Invariant**: Repeating the exact same prompt, tool call, or implementation approach that resulted in rejection constitutes an executive failure.
 3. **Escalation Circuit-Breaker**: If a sub-agent fails to resolve defects after 3 consecutive Devil's Advocate rejections, the task is halted, flagged as `[CRITICAL EXECUTION BLOCKER]`, and escalated to the CEO for intervention.
 4. **Ledger Immutability**: All rejections, failure dossiers, and eventual certifications are permanently recorded in `.state/ledger/`.
+

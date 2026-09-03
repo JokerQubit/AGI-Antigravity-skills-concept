@@ -1,3 +1,7 @@
+﻿---
+description: The Desert Water Trajectory Audit Protocol & 5-Layer Deep Inspection Stack
+trigger: always_on
+---
 # The "Desert Water System" Trajectory & Deep Layered Audit Protocol
 
 **Document Revision**: 1.0.0  
@@ -9,7 +13,7 @@
 
 ## 1. The Parable of the Desert Aquifer & Existential Rigor
 
-In an arid, unforgiving desert, life cannot survive on surface sand or mirages. Water—the sole condition of survival—lies miles away, buried deep beneath subterranean rock strata or channeled through concealed underground aquifers. 
+In an arid, unforgiving desert, life cannot survive on surface sand or mirages. Waterâ€”the sole condition of survivalâ€”lies miles away, buried deep beneath subterranean rock strata or channeled through concealed underground aquifers. 
 
 If an expedition merely skims the surface sand or assumes water is absent because it is not immediately visible, the expedition perishes of thirst. But if the expedition possesses the relentless discipline to trace the geological strata, track moisture gradients, and drill through the rock to reach the hidden aquifer, the entire company survives and prospers.
 
@@ -21,21 +25,21 @@ In the **OmniCognition Labs Ecosystem**, this is our standard for all inspection
 
 ## 2. The 5-Layered Inspection Stack
 
-Every inspection—whether of source code, configurations, data schemas, visual media, or formal documentation—must systematically penetrate all five analytical layers:
+Every inspectionâ€”whether of source code, configurations, data schemas, visual media, or formal documentationâ€”must systematically penetrate all five analytical layers:
 
 ```
 [Layer 0: Surface Artifact (Syntax, Pixels, Raw Text)]
-                     │
-                     ▼
+                     â”‚
+                     â–¼
 [Layer 1: Interface & Data Contract (Types, Schemas, Boundaries)]
-                     │
-                     ▼
+                     â”‚
+                     â–¼
 [Layer 2: Operational Mechanism (State Transformations, Control Flow, Concurrency)]
-                     │
-                     ▼
-[Layer 3: Full Trajectory Lineage (Upstream Origins ──► Downstream Sinks)]
-                     │
-                     ▼
+                     â”‚
+                     â–¼
+[Layer 3: Full Trajectory Lineage (Upstream Origins â”€â”€â–º Downstream Sinks)]
+                     â”‚
+                     â–¼
 [Layer 4: Subterranean Risk & Hidden Aquifer (Latent Failure Modes, Race Conditions, Edge Cases)]
 ```
 
@@ -76,3 +80,4 @@ Every inspection—whether of source code, configurations, data schemas, visual 
    - **Operational Mechanism**: Algorithm or state transformation applied.
    - **Destination**: Ultimate persistence layer or consumer.
 3. **Drill to Ground Truth**: If an error message or anomalous behavior occurs, do not mask it with retries or catch-all exception blocks. Trace the stack trace down to the root instruction that spawned the defect.
+

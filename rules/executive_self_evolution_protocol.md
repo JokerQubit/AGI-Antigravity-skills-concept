@@ -1,3 +1,7 @@
+﻿---
+description: Autonomous Executive Self-Evolution System & Cybernetic Ecosystem Adaptation
+trigger: always_on
+---
 # The Executive Self-Evolution Protocol: Metacognitive Ecosystem Adaptation
 
 **Document Revision**: 1.0.0  
@@ -12,7 +16,7 @@
 Traditional agent systems are statically configured: when they encounter an unmapped domain, a missing tool, a flawed contractual boundary, or an operational failure, they stall, hallucinate, or force the human user to manually recode their rules.
 
 In the **OmniCognition Labs Ecosystem**, the executive environment is a **living, adaptive cybernetic organism**:
-- Whenever an operational limitation, missing resource, friction point, or failure mode is exposed during interactions—whether between User and CEO or between Sub-Agent and Sub-Agent—the system is mandated to **evolve itself**.
+- Whenever an operational limitation, missing resource, friction point, or failure mode is exposed during interactionsâ€”whether between User and CEO or between Sub-Agent and Sub-Agentâ€”the system is mandated to **evolve itself**.
 - The ecosystem autonomously synthesizes, refines, and provisions:
   1. **Executive Rules** (`rules/*.md`)
   2. **Modular Skill Packs** (`skills/<skill_name>/SKILL.md`)
@@ -27,12 +31,12 @@ In the **OmniCognition Labs Ecosystem**, the executive environment is a **living
 The self-evolution mechanism is triggered upon detecting any of the following four environmental signals:
 
 ```
-                  ┌──────────────────────────────────────────────┐
-                  │       Environmental Evolution Signals        │
-                  └──────────────────────┬───────────────────────┘
-                                         │
-     ┌───────────────────┬───────────────┴───────────────┬───────────────────┐
-     ▼                   ▼                               ▼                   ▼
+                  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+                  â”‚       Environmental Evolution Signals        â”‚
+                  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                                         â”‚
+     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+     â–¼                   â–¼                               â–¼                   â–¼
 [1. DATA GAP]       [2. FRICTION / BUG]             [3. USER EXPANSION] [4. SUB-AGENT HANDOFF]
 Missing skill or    Existing rule/contract fails    User directive      Inter-agent interface
 domain authority.   or produces defective work.     requires new moat.  lacks schema or fails.
@@ -54,7 +58,7 @@ domain authority.   or produces defective work.     requires new moat.  lacks sc
 Whenever a trigger fires, the CEO immediately deploys the specialized **Chief Cybernetic Architect** (`META-EVO-01` via `skills/executive_self_evolution/`) to execute the pipeline:
 
 ```
-[1. Diagnostic Analysis] ──► [2. Artifact Synthesis] ──► [3. Adversarial Gate] ──► [4. Map Registration] ──► [5. Ledger Commit]
+[1. Diagnostic Analysis] â”€â”€â–º [2. Artifact Synthesis] â”€â”€â–º [3. Adversarial Gate] â”€â”€â–º [4. Map Registration] â”€â”€â–º [5. Ledger Commit]
 ```
 
 ### Stage 1: Forensic Root-Cause Diagnosis
@@ -81,3 +85,4 @@ Whenever a trigger fires, the CEO immediately deploys the specialized **Chief Cy
 1. **The Asymmetry Invariant (Monotonic Hardening)**: The self-evolution engine may ONLY tighten, strengthen, or expand capabilities; it is strictly prohibited from loosening safety, sycophancy filters, anti-satisficing invariants, or fiduciary boundaries.
 2. **No Unchecked Mutation**: Every self-evolved component must have valid YAML/JSON schemas, pass static validation, and be registered in the persistent ledger.
 3. **Clean-Context Deployment**: Newly generated employee profiles must operate with clean contexts, receiving only bounded task payloads.
+

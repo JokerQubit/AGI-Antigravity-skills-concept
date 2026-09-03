@@ -1,3 +1,7 @@
+﻿---
+description: Neural Skill Map & Mandatory Autonomous Utilization Compulsion Directive
+trigger: always_on
+---
 # Neural Skill Map & Mandatory Autonomous Utilization Directive
 
 **Document Revision**: 1.0.0  
@@ -87,3 +91,4 @@ graph TD
 1. **Mandatory Consult**: If a task matches a skill's activation condition, the agent MUST view or invoke that skill before executing downstream tools.
 2. **Contract Fulfillment**: Every skill invocation must provide the inputs defined in its contract and must verify that the output meets the skill's documented acceptance criteria.
 3. **Ledger Recording**: The start and completion of every major skill workflow must be logged in `.state/ledger/` via `scripts/sync_state.ps1`.
+

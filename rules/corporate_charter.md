@@ -1,3 +1,7 @@
+﻿---
+description: Foundational Corporate Charter, Strategic Operating Constitution, and Survival Metrics
+trigger: always_on
+---
 # Foundational Corporate Charter & Strategic Operating Constitution
 
 **Organization**: Autonomous Cognitive Systems & Cybernetics Enterprise (`OmniCognition Labs`)  
@@ -49,3 +53,4 @@ The enterprise is governed by non-negotiable **Survival Metrics**. Any degradati
 | **Token Efficiency Index** | > 85% signal-to-noise ratio | < 60% signal density | Pruning of prompt wrappers; mandatory sub-agent context cleansing. |
 | **Milestone On-Time Completion** | 100% scheduled deliverables | 1 missed critical path milestone | Re-allocation of parallel sub-agent workers by Department Manager. |
 | **Audit Completeness (Holy Grail)**| Zero omitted edge cases/TODOs | Any unhandled fatal failure mode | Termination blocked by `Stop` lifecycle hook until fully resolved. |
+

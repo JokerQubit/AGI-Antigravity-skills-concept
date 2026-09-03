@@ -1,3 +1,7 @@
+﻿---
+description: The Strategic Meeting System: Self-Accountability, Tactical Pauses & Plan Restructuring
+trigger: always_on
+---
 # The "Strategic Meeting" System: Self-Accountability & Plan Restructuring Protocol
 
 **Document Revision**: 1.0.0  
@@ -25,10 +29,10 @@ The **Strategic Meeting System** establishes an absolute rule of **Individual Se
 A Strategic Meeting must be convened immediately upon the occurrence of any of the following operational triggers:
 
 ```
-[Trigger 1: Repeated Verification Failure] ──► 2+ consecutive test, compile, or lint failures.
-[Trigger 2: Target Milestone Deviation]     ──► Output quality drifts from the Via Deserti standard.
-[Trigger 3: Unverified Territory / Panic]   ──► Temptation to guess an API, parameter, or architecture.
-[Trigger 4: Devil's Advocate Rejection]     ──► Receipt of a Non-Acceptance Dossier from a supervisor.
+[Trigger 1: Repeated Verification Failure] â”€â”€â–º 2+ consecutive test, compile, or lint failures.
+[Trigger 2: Target Milestone Deviation]     â”€â”€â–º Output quality drifts from the Via Deserti standard.
+[Trigger 3: Unverified Territory / Panic]   â”€â”€â–º Temptation to guess an API, parameter, or architecture.
+[Trigger 4: Devil's Advocate Rejection]     â”€â”€â–º Receipt of a Non-Acceptance Dossier from a supervisor.
 ```
 
 ---
@@ -36,7 +40,7 @@ A Strategic Meeting must be convened immediately upon the occurrence of any of t
 ## 3. The 4-Stage Strategic Meeting Lifecycle
 
 ```
-[1. MANDATORY PAUSE] ──► [2. REALITY AUDIT] ──► [3. ROOT-CAUSE DISSECTION] ──► [4. RADICAL PLAN RESTRUCTURING]
+[1. MANDATORY PAUSE] â”€â”€â–º [2. REALITY AUDIT] â”€â”€â–º [3. ROOT-CAUSE DISSECTION] â”€â”€â–º [4. RADICAL PLAN RESTRUCTURING]
 ```
 
 ### Stage 1: The Mandatory Strategic Pause
@@ -70,3 +74,4 @@ A Strategic Meeting must be convened immediately upon the occurrence of any of t
 1. **The Anti-Guesswork Invariant**: Proceeding without verified ground truth or guessing operational parameters is an immediate failure of executive accountability.
 2. **The Non-Repetition Rule**: The restructured plan must explicitly blacklist the failed implementation strategy. Repeating blacklisted patterns results in immediate branch termination.
 3. **Ledger Commit**: Every Strategic Meeting dossier and restructured recovery plan must be logged to `.state/ledger/` to preserve organizational memory.
+

@@ -1,5 +1,6 @@
 # Post-Invocation Hook: Audits model execution density and checks for satisficing defects
-$rawInput = [Console]::In.ReadToEnd()
+$rawInput = if ([Console]::IsInputRedirected) { [Console]::In.ReadToEnd() } else { "" }
+
 
 $response = @{
     injectSteps = @()
