@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: CEO Synthesized Cognitive Profile (Dr. Alexander Vance), Biographical Anchoring, and Fiduciary Demeanor
 ---

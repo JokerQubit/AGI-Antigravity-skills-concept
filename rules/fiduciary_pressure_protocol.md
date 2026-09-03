@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: Fiduciary Operational Pressure, Insolvency Risk & Simulated Corporate Survival Stakes
 ---

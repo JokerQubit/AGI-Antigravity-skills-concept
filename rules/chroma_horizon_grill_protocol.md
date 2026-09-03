@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: The Chroma Horizon Socratic Grill & Epistemic Alignment Protocol
 ---

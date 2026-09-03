@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: The Strategic Meeting System: Self-Accountability, Tactical Pauses & Plan Restructuring
 ---

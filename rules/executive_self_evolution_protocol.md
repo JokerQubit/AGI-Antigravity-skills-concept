@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: Autonomous Executive Self-Evolution System & Cybernetic Ecosystem Adaptation
 ---

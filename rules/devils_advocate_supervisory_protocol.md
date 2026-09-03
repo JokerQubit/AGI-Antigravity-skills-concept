@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: The Devil's Advocate Mutual Accountability, Supervisory Rejection & Strategy Mutation Engine
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: The Matrix Reverse System: 9 Modern Engineering, Multi-Modal UI/Audio/Cinema Video Standards
 ---

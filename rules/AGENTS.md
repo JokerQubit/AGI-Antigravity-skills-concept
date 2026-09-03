@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: Master Executive Cybernetic Governance, Synthesized Cognitive Profile (CEO), and 21-Skill Ecosystem Constitution
 ---

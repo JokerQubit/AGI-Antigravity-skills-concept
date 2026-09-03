@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: The Sandstorm System: Proposal Elevation & Directive Synthesis Engine
 ---

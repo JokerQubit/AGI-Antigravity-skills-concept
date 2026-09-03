@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: Persistent State Continuum, Memory Ledger & Neural Map Protocol (.state/)
 ---

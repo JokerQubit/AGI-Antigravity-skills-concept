@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: The Desert Water Trajectory Audit Protocol & 5-Layer Deep Inspection Stack
 ---

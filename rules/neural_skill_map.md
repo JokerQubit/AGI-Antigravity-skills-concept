@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: Neural Skill Map & Mandatory Autonomous Utilization Compulsion Directive
 ---

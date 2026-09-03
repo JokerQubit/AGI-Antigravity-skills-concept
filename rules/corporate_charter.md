@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: Foundational Corporate Charter, Strategic Operating Constitution, and Survival Metrics
 ---

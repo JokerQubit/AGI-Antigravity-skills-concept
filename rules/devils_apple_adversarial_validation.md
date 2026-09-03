@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 description: The Devil's Apple Anti-Groupthink Adversarial Truth Validation & Document Hardening Protocol
 ---
