@@ -1,6 +1,6 @@
 ---
-trigger: always_on
-description: Foundational Corporate Charter, Strategic Operating Constitution, and Survival Metrics
+trigger: model_decision
+description: Foundational Corporate Charter, Strategic Operating Constitution, and Survival Metrics. Activates when establishing company vision, governance, and business KPIs.
 ---
 # Foundational Corporate Charter & Strategic Operating Constitution
 

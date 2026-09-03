@@ -1,6 +1,6 @@
 ---
-trigger: always_on
-description: The Strategic Meeting System: Self-Accountability, Tactical Pauses & Plan Restructuring
+trigger: model_decision
+description: The Strategic Meeting System: Self-Accountability & Plan Restructuring. Activates when a node encounters persistent blockers or mission drift.
 ---
 # The "Strategic Meeting" System: Self-Accountability & Plan Restructuring Protocol
 

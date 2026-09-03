@@ -1,6 +1,6 @@
 ---
-trigger: always_on
-description: The Devil's Apple Anti-Groupthink Adversarial Truth Validation & Document Hardening Protocol
+trigger: model_decision
+description: The Devil's Apple Anti-Groupthink Adversarial Truth Validation Protocol. Activates to audit consensus plans and directly harden documents on disk.
 ---
 # The "Devil's Apple" System: Anti-Groupthink & Adversarial Revision Protocol
 

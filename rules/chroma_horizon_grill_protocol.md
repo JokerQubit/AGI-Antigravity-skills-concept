@@ -1,6 +1,6 @@
 ---
-trigger: always_on
-description: The Chroma Horizon Socratic Grill & Epistemic Alignment Protocol
+trigger: model_decision
+description: The Chroma Horizon Socratic Grill & Epistemic Alignment Protocol. Activates during hypothesis exploration, idea debate, and architectural vetting across agents.
 ---
 # The "Chroma Horizon" System: Universal Socratic Grill & Epistemic Alignment Protocol
 

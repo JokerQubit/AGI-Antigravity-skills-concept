@@ -1,6 +1,6 @@
 ---
-trigger: always_on
-description: The Desert Water Trajectory Audit Protocol & 5-Layer Deep Inspection Stack
+trigger: model_decision
+description: The Desert Water Trajectory Audit Protocol & 5-Layer Deep Inspection Stack. Activates during deep forensic audits, bug investigations, and data lineage tracing.
 ---
 # The "Desert Water System" Trajectory & Deep Layered Audit Protocol
 

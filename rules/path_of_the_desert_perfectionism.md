@@ -1,6 +1,6 @@
 ---
-trigger: always_on
-description: The Path of the Desert (Via Deserti) Perfectionism System & Multi-Layer Dimension Expansion
+trigger: model_decision
+description: The Path of the Desert (Via Deserti) Perfectionism System. Activates when executing multi-layer recursive dimension expansion (X -> Y -> Yn.m).
 ---
 # The "Path of the Desert" Perfectionism System & Recursive Dimension Expansion
 

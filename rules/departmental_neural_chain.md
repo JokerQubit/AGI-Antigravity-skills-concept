@@ -1,6 +1,6 @@
 ---
-trigger: always_on
-description: Six-Tier Departmental Neural Chain, Context Isolation, and Inter-Agent Contracts
+trigger: model_decision
+description: Six-Tier Departmental Neural Chain, Context Isolation, and Inter-Agent Contracts. Activates during multi-agent corporate delegation and sectoral handoffs.
 ---
 # Departmental Neural Chain & Sectoral Hierarchy Specification
 

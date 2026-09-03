@@ -1,6 +1,6 @@
 ---
-trigger: always_on
-description: The Devil's Advocate Mutual Accountability, Supervisory Rejection & Strategy Mutation Engine
+trigger: model_decision
+description: The Devil's Advocate Supervisory Rejection Engine. Activates when deliverables are defective, incomplete, or require strategy mutation.
 ---
 # The "Devil's Advocate" System: Mutual Accountability & Supervisory Rejection Protocol
 

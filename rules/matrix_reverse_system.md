@@ -1,6 +1,6 @@
 ---
-trigger: always_on
-description: The Matrix Reverse System: 9 Modern Engineering, Multi-Modal UI/Audio/Cinema Video Standards
+trigger: model_decision
+description: The Matrix Reverse System. Activates when designing UI/visuals, sourcing real audio, generating 8K cinema/video prompts, and enforcing clean polyglot stacks.
 ---
 # The "Matrix Reverse" System: Modern Multimedia, Visual & Engineering Standards
 

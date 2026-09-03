@@ -1,6 +1,6 @@
 ---
-trigger: always_on
-description: The Sandstorm System: Proposal Elevation & Directive Synthesis Engine
+trigger: model_decision
+description: The Sandstorm System: Proposal Elevation & Directive Synthesis Engine. Activates when user input is brief, disorganized, unstructured, or technically weak.
 ---
 # The "Sandstorm System": Proposal Elevation & Chaos Mitigation Protocol
 

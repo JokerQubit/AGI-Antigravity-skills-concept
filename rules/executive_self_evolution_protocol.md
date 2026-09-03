@@ -1,6 +1,6 @@
 ---
-trigger: always_on
-description: Autonomous Executive Self-Evolution System & Cybernetic Ecosystem Adaptation
+trigger: model_decision
+description: Autonomous Executive Self-Evolution System. Activates when identifying operational resource gaps, tool failures, or synthesizing new rules and skills.
 ---
 # The Executive Self-Evolution Protocol: Metacognitive Ecosystem Adaptation
 
