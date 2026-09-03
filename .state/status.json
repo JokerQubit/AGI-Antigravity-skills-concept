@@ -1,0 +1,61 @@
+﻿{
+    "$schema":  "http://json-schema.org/draft-07/schema#",
+    "project_id":  "omnicognition-agi-research",
+    "enterprise_name":  "OmniCognition Labs",
+    "global_phase":  "active_operations",
+    "active_sprint":  {
+                          "sprint_id":  "SPRINT-01",
+                          "name":  "Foundational Executive Cybernetic Ecosystem Deployment",
+                          "status":  "in_progress",
+                          "started_at":  "2026-09-03T17:42:00-03:00"
+                      },
+    "active_departments":  [
+                               {
+                                   "department_id":  "dept_research",
+                                   "head_id":  "DIR-RES-01",
+                                   "status":  "idle",
+                                   "current_mandate":  "Completed"
+                               },
+                               {
+                                   "department_id":  "dept_goals",
+                                   "head_id":  "CSO-GOAL-01",
+                                   "status":  "idle",
+                                   "current_mandate":  "Completed"
+                               },
+                               {
+                                   "department_id":  "dept_architecture",
+                                   "head_id":  "CTO-ENG-01",
+                                   "status":  "idle",
+                                   "current_mandate":  "Completed"
+                               },
+                               {
+                                   "department_id":  "dept_analysis",
+                                   "head_id":  "AUD-EPI-01",
+                                   "status":  "idle",
+                                   "current_mandate":  "Completed"
+                               },
+                               {
+                                   "department_id":  "dept_quality_redteam",
+                                   "head_id":  "RED-QA-01",
+                                   "status":  "idle",
+                                   "current_mandate":  "Completed"
+                               },
+                               {
+                                   "department_id":  "dept_learning",
+                                   "head_id":  "DIR-LRN-01",
+                                   "status":  "idle",
+                                   "current_mandate":  "Completed"
+                               },
+                               {
+                                   "department_id":  "dept_production",
+                                   "head_id":  "VP-OPS-01",
+                                   "status":  "idle",
+                                   "current_mandate":  "Completed"
+                               }
+                           ],
+    "knowledge_root":  "rules/corporate_charter.md",
+    "synthesized_skills":  [
+
+                           ],
+    "last_updated":  "2026-09-03T17:48:41-03:00"
+}

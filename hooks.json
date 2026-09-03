@@ -1,0 +1,25 @@
+{
+  "agi-executive-guards": {
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "powershell -ExecutionPolicy Bypass -File .\\scripts\\hooks\\pre_invocation.ps1",
+        "timeout": 15
+      }
+    ],
+    "PostInvocation": [
+      {
+        "type": "command",
+        "command": "powershell -ExecutionPolicy Bypass -File .\\scripts\\hooks\\post_invocation.ps1",
+        "timeout": 15
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "powershell -ExecutionPolicy Bypass -File .\\scripts\\hooks\\stop_gate.ps1",
+        "timeout": 15
+      }
+    ]
+  }
+}

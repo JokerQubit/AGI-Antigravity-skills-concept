@@ -1,0 +1,16 @@
+﻿{
+    "audio_ingestion_manifest":  {
+                                     "spatial_ui_placement":  "UI hover micro-haptic feedback + 3D positional background soundscape",
+                                     "sourcing_instruction":  "Prompt user for high-fidelity YouTube video/audio link demonstrating authentic mechanical or environmental acoustic behavior.",
+                                     "required_asset":  "Cybernetic Executive War Room soundscape \u0026 interaction audio",
+                                     "target_duration":  "00:03 - 00:08 (loopable ambient / 1.5s one-shot click)",
+                                     "bitrate_standard":  "48kHz / 24-bit uncompressed WAV or 320kbps MP3"
+                                 },
+    "cinema_image_prompt":  "Cinematic 8K wide architectural photograph of Cybernetic Executive War Room, shot on Sony Venice 2 8K Full-Frame cinema camera with Cooke Anamorphic/i Full Frame Plus 50mm T2.3 prime lens, Tiffen 1/4 Black Pro-Mist filter. Dramatic low-angle perspective, volumetric god rays streaming through floor-to-ceiling frosted glass panels, ambient dusk lighting with balanced teal and tungsten tones. Realistic surface micro-textures, subtle brushed titanium reflections, translucent glass refraction with 1px luminous edge highlights. 35mm Kodak Vision3 5219 film grain emulation, shallow depth of field with organic anamorphic oval bokeh, deep ambient occlusion, zero digital oversharpening, master DaVinci Resolve color grade.",
+    "category":  "cinematic_scene",
+    "timestamp":  "2026-09-03T18:42:49-03:00",
+    "subject":  "Cybernetic Executive War Room",
+    "logo_icon_prompt":  "Modern minimalist vector logo representing Cybernetic Executive War Room, clean geometric silhouette, Golden Ratio proportions, monochrome dark charcoal on frosted translucent glass backdrop, extreme optical balance, negative space symmetry, high-end Swiss corporate aesthetic, scalable SVG vector quality, zero clutter, iconic prestige design.",
+    "gemini_video_prompt":  "Smooth 4K 60fps cinematic tracking shot of Cybernetic Executive War Room. The camera performs a slow, continuous forward dolly-in through frosted glass architectural arches, gracefully tilting up 15 degrees. Volumetric atmospheric haze drifts across the frame as subtle amber and cyan rim lights illuminate geometric surfaces. Photorealistic reflections, seamless physics-based motion, zero temporal artifacts, cinematic aspect ratio 16:9.",
+    "glassmorphism_css":  ".glass-panel {\n  background: rgba(255, 255, 255, 0.08);\n  backdrop-filter: blur(24px);\n  -webkit-backdrop-filter: blur(24px);\n  border: 1px solid rgba(255, 255, 255, 0.18);\n  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);\n  border-radius: 16px;\n}"
+}

@@ -1,0 +1,8 @@
+﻿{
+    "initiator":  "Devil\u0027s Advocate (SUP-ADV-01)",
+    "event_type":  "SUPERVISORY_WORK_REJECTED",
+    "verification_status":  "RECORDED",
+    "timestamp":  "2026-09-03T19:01:40-03:00",
+    "description":  "Rejected deliverable \u0027src/consensus_engine.rs\u0027 from EMP-CORE-101 at round 1. Formulated Non-Acceptance Dossier and dispatched Redo directive.",
+    "transaction_id":  "TX-0043-SUPERVISORY_WORK_REJECTED"
+}

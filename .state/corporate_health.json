@@ -1,0 +1,31 @@
+{
+  "financials": {
+    "capital_reserve_tokens": 10000000,
+    "consumed_tokens": 48200,
+    "burn_rate_status": "optimal",
+    "fiduciary_risk_tier": "minimal"
+  },
+  "milestones": [
+    {
+      "id": "M0-BOOTSTRAP",
+      "name": "Establish Executive Cybernetic Plugin Architecture",
+      "status": "in_progress",
+      "due_date": "2026-09-03",
+      "verification_criteria": "All plugin manifests, rules, 7 departmental skills, and hooks validated."
+    },
+    {
+      "id": "M1-FIRST-TASK",
+      "name": "Execute First Departmental Parallel Research Pipeline",
+      "status": "pending",
+      "due_date": "2026-09-04",
+      "verification_criteria": "Successful end-to-end delegation from CEO to Dept Head to Employees with audited dossier."
+    }
+  ],
+  "survival_metrics_telemetry": {
+    "epistemic_defect_rate": 0.0,
+    "adversarial_pass_rate": 1.0,
+    "token_efficiency_index": 0.94,
+    "active_blockers_count": 0
+  },
+  "active_blockers": []
+}
