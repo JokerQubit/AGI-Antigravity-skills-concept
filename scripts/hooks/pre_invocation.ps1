@@ -69,6 +69,9 @@ if ($transcriptPath -and (Test-Path $transcriptPath)) {
             $userText = $parsed.content.ToLower()
 
             # Dynamic Universal Correlational Matcher (Everyday PT/EN)
+            if ($userText -match "agi|inteligence|intelligence|use agi|rules|skills|todas as rules|todas as skills|central|ecossistema|console") {
+                $matchedSkills += "use_agi_intelligence"
+            }
             if ($userText -match "skill|evolve|capability|rule|constitution|customization|meta-skill|regra|customizar|melhorar|ajustar|configurar") {
                 $matchedSkills += "executive_self_evolution"
             }

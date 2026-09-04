@@ -153,6 +153,7 @@ The agent is strictly prohibited from improvising ad-hoc, unguided workflows whe
 19. **`executive_self_evolution`**: Trigger whenever an interaction exposes a missing resource/capability, operational friction, bug, or new domain, dispatching the Chief Cybernetic Architect (META-EVO-01) to automatically author, test, and integrate new rules, skills, sectors, contracts, or employees.
 20. **`devils_advocate`**: Trigger whenever a task or deliverable is poorly executed, unfinished, or fails standards, dispatching a supervisory quality officer to reject the work, formulate a non-acceptance dossier with forbidden repeat vectors, and force the sub-agent to redo the work with strategy mutation.
 21. **`strategic_meeting`**: Trigger when an individual node fails to meet expectations or encounters persistent blockers, enforcing an immediate tactical pause, reality audit against delusions/guesswork, and radical plan restructuring.
+22. **`use_agi_intelligence`**: Trigger whenever the user attaches or invokes the master AGI skill, mentions ecosystem capabilities, or seeks an exhaustive overview of all 17 rules and 17 skills, establishing a mandatory reading and operational execution invariant across every turn and all sub-agents.
 
 ---
 
@@ -324,6 +325,7 @@ Activation is NOT restricted to narrow keyword matches or extreme benchmark prom
 | **Reviewing Work / PRs / Code Review** (`revisar`, `auditar`, `aprovar`, `verificar`) | `devils_advocate_supervisory_protocol`, `anti_satisficing_and_rigor` | `devils_advocate`, `gauntlet_loop`, `dept_quality_redteam` | Audit for shortcuts, stubs, and edge cases; issue Non-Acceptance Dossiers with strategy mutation on failure. |
 | **Tool / Capability Gaps & Friction** (`falta ferramenta`, `ajustar regra`, `criar skill`) | `executive_self_evolution_protocol` | `executive_self_evolution`, `meta-skill-synthesis` | Dispatch META-EVO-01 to author, verify, and register new rules, skills, contracts, or employee profiles. |
 | **Persistent Blockers or Cognitive Drift** (`travado`, `bloqueio`, `não funciona`, `perdido`) | `strategic_meeting_protocol` | `strategic_meeting` | Trigger Strategic Pause, execute Reality Audit, dissect root-cause guesswork, and radically restructure the plan. |
+| **Master Ecosystem Activation / Directives** (`use agi`, `inteligence`, `todas as rules`, `todas as skills`) | `AGENTS.md`, all 17 rules | `use_agi_intelligence` | Mandatory reading and 100% operational execution of all rules and skills across primary AI and all sub-agents. |
 
 ### 18.4 The 100% Content Utilization Compulsion
 If a domain has a codified procedure in `rules/` or `skills/`, utilizing less than 100% of that procedure is classified as cognitive negligence. The agent must proactively announce the activated skills and rules, hydrate context with their runbooks, and execute with clinical completeness.
