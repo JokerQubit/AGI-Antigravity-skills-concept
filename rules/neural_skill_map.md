@@ -1,6 +1,6 @@
 ---
-trigger: always_on
-description: Neural Skill Map & Mandatory Autonomous Utilization Compulsion Directive
+trigger: model_decision
+description: Neural Skill Map and autonomous skill catalog. Consult on-demand when selecting specialized skills, OKR dependency DAGs, or departmental execution procedures.
 ---
 # Neural Skill Map & Mandatory Autonomous Utilization Directive
 

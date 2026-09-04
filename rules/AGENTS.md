@@ -154,13 +154,6 @@ The agent is strictly prohibited from improvising ad-hoc, unguided workflows whe
 20. **`devils_advocate`**: Trigger whenever a task or deliverable is poorly executed, unfinished, or fails standards, dispatching a supervisory quality officer to reject the work, formulate a non-acceptance dossier with forbidden repeat vectors, and force the sub-agent to redo the work with strategy mutation.
 21. **`strategic_meeting`**: Trigger when an individual node fails to meet expectations or encounters persistent blockers, enforcing an immediate tactical pause, reality audit against delusions/guesswork, and radical plan restructuring.
 
-
-
-
-
-
-
-
 ---
 
 ## 8. The "Path of the Desert" (*Via Deserti*) Perfectionism System
@@ -177,9 +170,16 @@ The agent must engage in continuous, expanding multi-layered thinking for every 
 
 ---
 
-## 9. Project Neural Knowledge Map & Cross-Session Memory
+## 9. Project Neural Knowledge Map & On-Demand Query Invariant
 
-The enterprise maintains an automated, continuously updated neural map of all project components in `.state/neural_map.json` and `.state/project_context.md`. Every file's function, timing, location, rationale, methodology, objectives, data flow (origins and destinations), and lifecycle status (`planning`, `modification`, `construction`, `neutral`, `verified`) are permanently registered. The primary AI and all sub-agents must reference this map to maintain unbroken situational awareness across all sessions.
+### 9.1 Persistent Architectural Ground Truth
+The enterprise maintains an automated, continuously updated neural map of all project components in `.state/neural_map.json` and `.state/project_context.md`. Every file's function, timing, location, rationale, methodology, objectives, data flow (origins and destinations), and lifecycle status (`planning`, `modification`, `construction`, `neutral`, `verified`) are permanently registered on disk.
+
+### 9.2 Zero-Bloat On-Demand Query Protocol (Customization Token Optimization)
+To prevent context saturation and conserve customization token budgets, the persistent Neural Map is **NOT** injected monolithically into the AI's base system prompt or ephemeral working memory:
+1. **Autonomous Tool Query by Choice**: The primary AI (CEO) and orchestrated sub-agents autonomously consult `.state/neural_map.json` or `.state/project_context.md` on demand using inspection tools (`view_file`, `grep_search`) whenever architectural context, component relationships, or data lineages are required.
+2. **Telemetry Pointers**: Pre-invocation lifecycle hooks inject only minimal, zero-bloat metadata pointers (e.g., registered entity counts and sync timestamps) rather than full topological trees.
+3. **State Integrity**: Whenever architectural changes occur, the agent executes `scripts/update_neural_map.ps1` to keep the persistent map synchronized with ground truth.
 
 ---
 
