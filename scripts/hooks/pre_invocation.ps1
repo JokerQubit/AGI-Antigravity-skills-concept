@@ -68,51 +68,57 @@ if ($transcriptPath -and (Test-Path $transcriptPath)) {
             $parsed = $lastUserMatch.Line | ConvertFrom-Json
             $userText = $parsed.content.ToLower()
 
-            # Dynamic Taxonomy Matcher
-            if ($userText -match "skill|evolve|capability|rule|constitution|customization|meta-skill") {
+            # Dynamic Universal Correlational Matcher (Everyday PT/EN)
+            if ($userText -match "skill|evolve|capability|rule|constitution|customization|meta-skill|regra|customizar|melhorar|ajustar|configurar") {
                 $matchedSkills += "executive_self_evolution"
             }
-            if ($userText -match "activate|forcing|force|mandate|gate|fail|redo|accountability|reject") {
+            if ($userText -match "activate|forcing|force|mandate|gate|fail|redo|accountability|reject|revisar|rejeitar|refazer|errado|corrigir|aprovar|cobrar") {
                 $matchedSkills += "devils_advocate"
             }
-            if ($userText -match "image|photo|camera|sony|render|picture|prompt|video|gemini|veo|audio|sound|music|sfx|youtube|glassmorphism|ui|clean code|github|git|push|commit|sandbox|backup|clutter|clean") {
+            if ($userText -match "image|photo|camera|sony|render|picture|prompt|video|gemini|veo|audio|sound|music|sfx|youtube|glassmorphism|ui|clean code|github|git|push|commit|sandbox|backup|clutter|clean|design|layout|tela|estilo|css|limpar|áudio|som") {
                 $matchedSkills += "matrix_reverse"
             }
-            if ($userText -match "grill|insight|idea|controversy|alternative|align|hypothesis|deepen|socratic") {
+            if ($userText -match "grill|insight|idea|controversy|alternative|align|hypothesis|deepen|socratic|opinião|oque acha|debater|pensar|alinhar|ideia|proposta") {
                 $matchedSkills += "chroma_horizon"
             }
-            if ($userText -match "pause|stuck|blocked|delusion|guess|restructure|strategic meeting|sunk cost") {
+            if ($userText -match "pause|stuck|blocked|delusion|guess|restructure|strategic meeting|sunk cost|travado|bloqueado|não sei|perdido|parar|reestruturar|pausa") {
                 $matchedSkills += "strategic_meeting"
             }
-            if ($userText -match "plan|architecture|consensus|draft|devil's apple|groupthink|audit") {
+            if ($userText -match "plan|architecture|consensus|draft|devil's apple|groupthink|audit|plano|rascunho|validar|auditar|revisar") {
                 $matchedSkills += "devils_apple"
             }
-            if ($userText.Length -lt 80 -or $userText -match "brief|short prompt|unstructured|sandstorm|elevate") {
+            if ($userText.Length -lt 100 -or $userText -match "brief|short prompt|unstructured|sandstorm|elevate|resuma|ajuda|como fazer|curto|rápido|simples") {
                 $matchedSkills += "sandstorm_elevation"
             }
-            if ($userText -match "recursive|dimension|layer|via deserti|perfectionism") {
+            if ($userText -match "recursive|dimension|layer|via deserti|perfectionism|expandir|detalhar|aprofundar|camada|complexo") {
                 $matchedSkills += "recursive_expansion"
             }
-            if ($userText -match "gauntlet|benchmark|q score|critic|blind") {
+            if ($userText -match "gauntlet|benchmark|q score|critic|blind|rigor|máximo|qualidade|padrão ouro") {
                 $matchedSkills += "gauntlet_loop"
             }
-            if ($userText -match "water|aquifer|trajectory|lineage|origin|destination|subterranean") {
+            if ($userText -match "water|aquifer|trajectory|lineage|origin|destination|subterranean|analisar|lógica|premissa|análise|auditoria profunda") {
                 $matchedSkills += "dept_analysis"
             }
-            if ($userText -match "onboard|neural map|new project|explore codebase|map project|different folder") {
+            if ($userText -match "onboard|neural map|new project|explore codebase|map project|different folder|projeto novo|iniciar|pasta|começar|estrutura") {
                 $matchedSkills += "greenfield_routing"
             }
-            if ($userText -match "research|competitor|prior art|investigate") {
+            if ($userText -match "research|competitor|prior art|investigate|pesquisar|pesquise|buscar|estudo|literatura|concorrente") {
                 $matchedSkills += "dept_research"
             }
-            if ($userText -match "refactor|clean code|modernize|ast") {
-                $matchedSkills += "master-refactoring-pipeline"
+            if ($userText -match "código|função|script|classe|implementar|criar|code|function|endpoint|api|build|escrever|desenvolver") {
+                $matchedSkills += "dept_architecture"
             }
-            if ($userText -match "test|tdd|unit test|failing test") {
-                $matchedSkills += "test-driven-development"
+            if ($userText -match "test|tdd|unit test|failing test|teste|testar|pytest|unitário|segurança|exploit|fuzz") {
+                $matchedSkills += "dept_quality_redteam"
             }
-            if ($userText -match "debug|error|exception|crash|trace") {
-                $matchedSkills += "systematic-debugging"
+            if ($userText -match "learn|aprender|post-mortem|lição|retrospectiva|memória|sintetizar") {
+                $matchedSkills += "dept_learning"
+            }
+            if ($userText -match "deploy|release|build|produção|entregar|walkthrough|empacotar|finalizar") {
+                $matchedSkills += "dept_production"
+            }
+            if ($userText -match "okr|meta|objetivo|prazo|sprint|prioridade|cronograma") {
+                $matchedSkills += "dept_goals"
             }
         }
     } catch { }
@@ -135,7 +141,7 @@ if ($matchedSkills.Count -gt 0) {
     $telemetryMessage += "`n`nINVIOLABLE OPERATIONAL LAWS:"
     $telemetryMessage += "`n1. T0 Forcing Function: You MUST execute view_file on the matching SKILL.md file(s) ABOVE on Turn 0 before executing other tools or writing production code."
     $telemetryMessage += "`n2. Proactive Routing: You MUST list them in your header: 'Activated Skills: $joinedLinks'"
-    $telemetryMessage += "`n3. Proceeding without viewing the target SKILL.md is strictly prohibited by user rule 01_SKILLS_TAXONOMY_ROUTING.md."
+    $telemetryMessage += "`n3. Proceeding without viewing the target SKILL.md is strictly prohibited by Section 18 of rules/AGENTS.md (Universal Skill & Rule Activation Engine)."
 }
 
 $response = @{

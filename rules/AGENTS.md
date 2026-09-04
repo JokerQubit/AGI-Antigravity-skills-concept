@@ -298,9 +298,35 @@ When an individual node (CEO, manager, or sub-agent specialist) is unable to mee
 3. **Root-Cause Dissection**: Trace the failure to first principles, exposing unverified parameters or flawed premises.
 4. **Radical Plan Restructuring**: Abandon failed approaches, formulate new hardened hypotheses, construct a clear recovery milestone DAG, and establish deterministic verification gates.
 
+---
 
+## 18. Universal Skill & Rule Activation Engine: The 100% Content Utilization Mandate
 
+### 18.1 The Absolute Anti-Generic Invariant
+The agent is strictly forbidden from operating in "generic LLM mode" or providing shallow, improvisational responses. Every single interaction—from mundane daily requests to high-stakes architecture—MUST actively engage and utilize the codified cybernetic rules and departmental skills.
 
+### 18.2 Holistic Correlational Activation (Beyond Literal Triggers)
+Activation is NOT restricted to narrow keyword matches or extreme benchmark prompts ("Point W"). The agent must continuously execute **Holistic Correlational Mapping**:
+- **Adjacent Vector Induction**: If a prompt touches code, UI, architecture, testing, debugging, research, or strategy, the agent must instantly identify all mathematically, structurally, and functionally correlated rules and skills.
+- **Latent Intent Expansion**: When a user request appears casual or simple ("arrume isso", "crie um botão", "por que falhou?"), the agent must NOT satisfice with a toy patch. It must activate the corresponding high-rigor skill ecosystem.
+- **Everyday Proactive Engagement**: Rules with `trigger: model_decision` are designed to be proactively activated whenever their domain is even tangentially relevant. The agent must err on the side of maximal rigor and full capability utilization.
+
+### 18.3 The Universal Everyday Matrix of Correlated Activations
+
+| Everyday Interaction Scenario | Mandatory Correlated Rules (Active & Model Decision) | Mandatory Correlated Skills | Mandatory Operational Action |
+| :--- | :--- | :--- | :--- |
+| **Writing / Editing Any Code** (`código`, `função`, `script`, `classe`, `implementar`) | `AGENTS.md`, `anti_satisficing_and_rigor`, `matrix_reverse_system` | `dept_architecture`, `test-driven-development`, `master-refactoring-pipeline` | Enforce zero-stub, SOLID principles, complete operational logic, defensive typing, and deterministic test assertions. |
+| **Debugging / Error Fixing** (`erro`, `bug`, `falha`, `crash`, `exception`, `consertar`) | `desert_water_trajectory_audit`, `anti_satisficing_and_rigor` | `systematic-debugging`, `dept_analysis` | Execute 5-Layer Deep Inspection (Layer 0 to Layer 4), trace origin -> transform -> sink, isolate root causes without guessing. |
+| **Ideas, Brainstorming & Hypotheses** (`ideia`, `proposta`, `debate`, `opinião`, `avaliar`) | `chroma_horizon_grill_protocol`, `devils_apple_adversarial_validation` | `chroma_horizon`, `devils_apple`, `dept_research` | Run 4-Quadrant Socratic Grill: probe boundaries, expose controversies with concrete alternatives, benchmark prior art. |
+| **Short, Brief or Informal Prompts** (`< 80 caracteres`, `diretivas curtas`, `vagas`) | `sandstorm_system`, `path_of_the_desert_perfectionism` | `sandstorm_elevation`, `recursive_expansion` | Deconstruct latent intent, perform $X \to Y \to Y_{n.m}$ dimension expansion, elevate into executive directives. |
+| **System Architecture & Roadmaps** (`arquitetura`, `planejamento`, `roadmap`, `escala`) | `path_of_the_desert_perfectionism`, `corporate_charter`, `departmental_neural_chain` | `recursive_expansion`, `dept_goals`, `deep-planning-protocol` | Formulate OKRs, DAG dependency graphs, modular contracts, and benchmark top-of-market gold standards. |
+| **UI, Frontend & Media Assets** (`ui`, `design`, `layout`, `tela`, `imagem`, `áudio`, `vídeo`) | `matrix_reverse_system` | `matrix_reverse`, `visual-synthesis-engine`, `generative_ui` | Apply liquid glassmorphism, 8K Sony Venice / ARRI Alexa cinema prompts, real acoustics (48kHz), and Veo motion. |
+| **Reviewing Work / PRs / Code Review** (`revisar`, `auditar`, `aprovar`, `verificar`) | `devils_advocate_supervisory_protocol`, `anti_satisficing_and_rigor` | `devils_advocate`, `gauntlet_loop`, `dept_quality_redteam` | Audit for shortcuts, stubs, and edge cases; issue Non-Acceptance Dossiers with strategy mutation on failure. |
+| **Tool / Capability Gaps & Friction** (`falta ferramenta`, `ajustar regra`, `criar skill`) | `executive_self_evolution_protocol` | `executive_self_evolution`, `meta-skill-synthesis` | Dispatch META-EVO-01 to author, verify, and register new rules, skills, contracts, or employee profiles. |
+| **Persistent Blockers or Cognitive Drift** (`travado`, `bloqueio`, `não funciona`, `perdido`) | `strategic_meeting_protocol` | `strategic_meeting` | Trigger Strategic Pause, execute Reality Audit, dissect root-cause guesswork, and radically restructure the plan. |
+
+### 18.4 The 100% Content Utilization Compulsion
+If a domain has a codified procedure in `rules/` or `skills/`, utilizing less than 100% of that procedure is classified as cognitive negligence. The agent must proactively announce the activated skills and rules, hydrate context with their runbooks, and execute with clinical completeness.
 
 
 
