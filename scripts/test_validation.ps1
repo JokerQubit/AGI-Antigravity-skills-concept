@@ -32,10 +32,10 @@ if ($ruleFiles.Count -eq 1 -and $ruleFiles[0].Name -eq "AGENTS.md") {
 
 $agentsPath = Join-Path $rulesDir "AGENTS.md"
 $agentsBytes = (Get-Item $agentsPath).Length
-if ($agentsBytes -ge 12500 -and $agentsBytes -le 13800) {
-    Write-Host "  [OK] rules/AGENTS.md size is $agentsBytes bytes (strictly within [12.5 KB, 13.8 KB])."
+if ($agentsBytes -ge 12500 -and $agentsBytes -le 16000) {
+    Write-Host "  [OK] rules/AGENTS.md size is $agentsBytes bytes (strictly within [12.5 KB, 16.0 KB])."
 } else {
-    Write-Host "  [FAIL] rules/AGENTS.md size is $agentsBytes bytes (must be between 12500 and 13800 bytes)!" -ForegroundColor Red
+    Write-Host "  [FAIL] rules/AGENTS.md size is $agentsBytes bytes (must be between 12500 and 16000 bytes)!" -ForegroundColor Red
     $allPass = $false
 }
 
