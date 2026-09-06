@@ -60,13 +60,13 @@ if ($rawInput) {
                 } catch { }
             }
             if ($lastUser) {
-                if ($lastUser -match "(desenhe|design|ui|ux|layout|video|audio|imagem|midia|media|glassmorphism)") { $targetSkill = "matrix_reverse" }
-                elseif ($lastUser -match "(meta|okr|sprint|objetivo|roadmap|planejamento)") { $targetSkill = "dept_goals" }
-                elseif ($lastUser -match "(arquitetura|modulo|schema|banco|api|topologia|codigo|code)") { $targetSkill = "dept_architecture" }
-                elseif ($lastUser -match "(teste|stress|fuzz|redteam|vulnerabilidade|seguranca)") { $targetSkill = "dept_quality_redteam" }
-                elseif ($lastUser -match "(rejeitar|refazer|bloquear|defeito|supervisor|qualidade)") { $targetSkill = "devils_advocate" }
-                elseif ($lastUser -match "(duvida|questionar|discutir|alinhar|discordar|socratico|grill|sinto|acha|acha que)") { $targetSkill = "chroma_horizon" }
-                elseif ($lastUser -match "(pesquisar|estudar|investigar|literatura|benchmark)") { $targetSkill = "dept_research" }
+                if ($lastUser -match "\b(?i)(desenhe|design|\bui\b|\bux\b|layout|video|audio|imagem|midia|\bmedia\b|glassmorphism)\b") { $targetSkill = "matrix_reverse" }
+                elseif ($lastUser -match "\b(?i)(sub[- ]?agent|subagent|processo|sess[aã]o|delega[cç]|cyberneti|arquitetura|modulo|schema|banco|api|topologia|codigo|code)\b") { $targetSkill = "dept_architecture" }
+                elseif ($lastUser -match "\b(?i)(meta|okr|sprint|objetivo|roadmap|planejamento)\b") { $targetSkill = "dept_goals" }
+                elseif ($lastUser -match "\b(?i)(teste|stress|fuzz|redteam|vulnerabilidade|seguranca)\b") { $targetSkill = "dept_quality_redteam" }
+                elseif ($lastUser -match "\b(?i)(rejeitar|refazer|bloquear|defeito|supervisor|qualidade)\b") { $targetSkill = "devils_advocate" }
+                elseif ($lastUser -match "\b(?i)(duvida|questionar|discutir|alinhar|discordar|socratico|grill|sinto|acha|acha que)\b") { $targetSkill = "chroma_horizon" }
+                elseif ($lastUser -match "\b(?i)(pesquisar|estudar|investigar|literatura|benchmark)\b") { $targetSkill = "dept_research" }
             }
         }
     } catch { }
