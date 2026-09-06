@@ -20,14 +20,14 @@ $result = @{
     category = $Category
 }
 
-# 1. Cinema-Grade Image Prompt (Sony Venice 8K Standard)
-$result.cinema_image_prompt = "Cinematic 8K wide architectural photograph of $Subject, shot on Sony Venice 2 8K Full-Frame cinema camera with Cooke Anamorphic/i Full Frame Plus 50mm T2.3 prime lens, Tiffen 1/4 Black Pro-Mist filter. Dramatic low-angle perspective, volumetric god rays streaming through floor-to-ceiling frosted glass panels, ambient dusk lighting with balanced teal and tungsten tones. Realistic surface micro-textures, subtle brushed titanium reflections, translucent glass refraction with 1px luminous edge highlights. 35mm Kodak Vision3 5219 film grain emulation, shallow depth of field with organic anamorphic oval bokeh, deep ambient occlusion, zero digital oversharpening, master DaVinci Resolve color grade."
+# 1. Cinema-Grade Industrial Image Prompt (Sony Venice 8K Standard - Zero Text / Zero Human)
+$result.cinema_image_prompt = "Ultra-wide 8K architectural photograph of an unmanned, monolithic research facility housing $Subject at twilight, shot on Sony Venice 2 8K Full-Frame cinema camera with Cooke Anamorphic/i Full Frame Plus 50mm T2.3 prime lens, Tiffen 1/4 Black Pro-Mist filter. Dramatic low-angle perspective, dark brushed titanium monoliths, liquid-cooled optical computing nodes, subtle amber and cool teal fiber-optic ribbons, natural glass caustics and physical reflections on polished concrete floor. Realistic surface micro-textures, CNC-machined dark anodized aluminum plates, authentic 35mm Kodak Vision3 5219 film grain emulation, shallow depth of field with organic anamorphic oval bokeh, deep ambient occlusion, master DaVinci Resolve color grade. Absolutely no text, no letters, no typography, no words, no signs, no human beings, no people, no characters, no faces, no suits."
 
-# 2. Minimalist Logo / Icon Prompt
-$result.logo_icon_prompt = "Modern minimalist vector logo representing $Subject, clean geometric silhouette, Golden Ratio proportions, monochrome dark charcoal on frosted translucent glass backdrop, extreme optical balance, negative space symmetry, high-end Swiss corporate aesthetic, scalable SVG vector quality, zero clutter, iconic prestige design."
+# 2. Minimalist SVG Vector System (Pure Code Directive)
+$result.logo_icon_prompt = "Pure semantic SVG vector asset representing $Subject. Authored in clean XML code: viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round'. Bold geometric silhouette, Golden Ratio symmetry, zero raster pixels, zero diffusion hallucination, enterprise-grade SVG design system standard."
 
-# 3. Gemini / Veo AI Video Prompt
-$result.gemini_video_prompt = "Smooth 4K 60fps cinematic tracking shot of $Subject. The camera performs a slow, continuous forward dolly-in through frosted glass architectural arches, gracefully tilting up 15 degrees. Volumetric atmospheric haze drifts across the frame as subtle amber and cyan rim lights illuminate geometric surfaces. Photorealistic reflections, seamless physics-based motion, zero temporal artifacts, cinematic aspect ratio 16:9."
+# 3. Gemini / Veo AI Video Prompt (Unmanned Kinetic Camera Motion)
+$result.gemini_video_prompt = "Smooth 4K 60fps cinematic tracking shot of an unmanned $Subject installation. The camera performs a slow, continuous forward dolly-in through frosted glass architectural arches, gracefully tilting up 15 degrees. Volumetric atmospheric haze drifts across the frame as subtle amber and cyan rim lights illuminate geometric CNC metal surfaces and fiber-optic conduits. Photorealistic reflections, seamless physics-based motion, zero temporal artifacts, cinematic aspect ratio 16:9. Absolutely no humans, no characters, no text, no logos."
 
 # 4. Audio Ingestion Manifest (YouTube Sourcing Spec)
 $result.audio_ingestion_manifest = @{

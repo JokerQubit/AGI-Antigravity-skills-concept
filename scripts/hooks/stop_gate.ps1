@@ -18,7 +18,10 @@ $rejectionReason = ""
 if (Test-Path $healthPath) {
     try {
         $health = Get-Content $healthPath -Raw | ConvertFrom-Json
-        $blockers = @($health.active_blockers)
+        $rawBlockers = @()
+        if ($health.active_blockers) { $rawBlockers += $health.active_blockers }
+        if ($health.critical_blockers) { $rawBlockers += $health.critical_blockers }
+        $blockers = @($rawBlockers | Where-Object { $null -ne $_ -and "$_".Trim() -ne "" })
         if ($blockers.Count -gt 0) {
             $allowStop = $false
             $blockerDetails = $blockers -join "; "
