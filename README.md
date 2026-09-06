@@ -139,9 +139,9 @@ As systems evolve, developers and agents often relax tests or remove constraints
 
 <div align="center">
 
-![Tiered Optical Substrate](assets/images/cybernetic_architecture.jpg)
+![Monolithic Cybernetic Server Architecture](assets/images/cybernetic_architecture.jpg)
 
-*Figure 2: Tiered Optical-Quantum Substrate Architecture. Shot on ARRI Alexa 35 with Leica Noctilux 50mm f/0.95 lens. High-density fiber ribbons, beam splitters, and CNC-machined dark anodized chassis plates.*
+*Figure 2: Symmetrical Monolithic Server Aisle & Cybernetic Architecture. Shot on Sony Venice 2 8K Full-Frame camera with Cooke Anamorphic/i 50mm T2.3 prime lens and Tiffen 1/4 Black Pro-Mist filter. Towering brushed titanium server monoliths with internal cool teal and amber fiber-optic conduits, floor-to-ceiling glass curtain walls facing misty pine forest at dusk, and physical reflections across polished dark concrete.*
 
 </div>
 
@@ -257,9 +257,9 @@ sequenceDiagram
 
 <div align="center">
 
-![Optical Quartz Prism Nexus](assets/images/cognitive_engine.jpg)
+![Central Optical Computing Core](assets/images/cognitive_engine.jpg)
 
-*Figure 3: Multi-Faceted Optical Quartz Crystal Suspended in Magnetic Levitation. Shot on Hasselblad H6D-100c medium format camera. Pure collimated emerald, amber, and sapphire laser interference within vacuum chamber.*
+*Figure 3: Central Optical Processing Chamber & Core Engine Pedestal. Shot on Sony Venice 2 8K Full-Frame camera with Cooke Anamorphic/i 50mm T2.3 prime lens and Tiffen 1/4 Black Pro-Mist filter. Cylindrical titanium and borosilicate glass chamber with suspended prism optics casting collimated amber and cyan light caustics onto polished concrete beneath twilight forest vistas.*
 
 </div>
 
