@@ -86,75 +86,35 @@ function Get-DefaultMetadata([string]$relPath) {
         $meta.inputs_from = @("User Prompt", "IDE Context")
         $meta.outputs_to = @("CEO Inference Engine", "Sub-Agent Directives")
     }
-    elseif ($relPath -like "rules/ceo_biography.md") {
-        $meta.function = "Detailed third-person cognitive biography of Dr. Alexander Vance"
-        $meta.timing = "Referenced for high-stakes strategic alignment"
-        $meta.location = "Governance (rules/)"
-        $meta.rationale = "Anchors AI identity in top-tier operations research pedigree"
-        $meta.methodology = "Documentary non-theatrical cognitive specification"
-        $meta.objectives = "Eliminate roleplay/LARPing; induce ruthlessly pragmatic decision-making"
-        $meta.inputs_from = @("AGENTS.md")
-        $meta.outputs_to = @("Executive Decision Heuristics")
-    }
-    elseif ($relPath -like "rules/corporate_charter.md") {
-        $meta.function = "Foundational constitution of OmniCognition Labs"
+    elseif ($relPath -like "skills/dept_goals/references/corporate_charter.md") {
+        $meta.function = "Foundational constitution and strategic charter of OmniCognition Labs"
         $meta.timing = "Consulted during milestone definition and corporate survival audits"
-        $meta.location = "Governance (rules/)"
-        $meta.rationale = "Provides real enterprise grounding, competitive moats, and survival metrics"
+        $meta.location = "Strategic References (skills/dept_goals/references/)"
+        $meta.rationale = "Provides enterprise grounding, competitive moats, and survival metrics"
         $meta.methodology = "Enterprise cybernetics and KPI formulation"
         $meta.objectives = "Maintain clear business mission, competitive advantage, and survival bounds"
         $meta.inputs_from = @("Board Directives")
         $meta.outputs_to = @(".state/corporate_health.json", "Executive Strategy")
     }
-    elseif ($relPath -like "rules/anti_satisficing_and_rigor.md") {
-        $meta.function = "Zero-tolerance code against oversimplification, stubs, and feigning knowledge"
-        $meta.timing = "Active during every tool call, code generation, and audit"
-        $meta.location = "Governance (rules/)"
-        $meta.rationale = "Enforces the 'Holy Grail' completeness mandate and zero-ellipsis rule"
-        $meta.methodology = "Lexical ban filters and supervisor verification"
-        $meta.objectives = "Eliminate TODOs, stubs, truncation, and premature summarization"
-        $meta.inputs_from = @("Code Review Gate")
-        $meta.outputs_to = @("Supervisor Verification Layer")
+    elseif ($relPath -like "skills/dept_architecture/references/dimension_expansion_runbook.md") {
+        $meta.function = "Recursive dimension expansion operational runbook (Via Deserti)"
+        $meta.timing = "Consulted during architectural design and systems engineering"
+        $meta.location = "Architecture References (skills/dept_architecture/references/)"
+        $meta.rationale = "Guides decomposition of complex domains into orthogonal mechanisms"
+        $meta.methodology = "Via Deserti multi-tier expansion (X -> Y -> Yn -> Yn.m)"
+        $meta.objectives = "Deconstruct technical challenges into mathematically grounded implementations"
+        $meta.inputs_from = @("Architecture Requests")
+        $meta.outputs_to = @("Engineered Systems")
     }
-    elseif ($relPath -like "rules/neural_skill_map.md") {
-        $meta.function = "Master directory and trigger condition matrix for all 13 ecosystem skills"
-        $meta.timing = "Evaluated on every incoming user directive"
-        $meta.location = "Governance (rules/)"
-        $meta.rationale = "Forces autonomous, consistent utilization of specialized capabilities"
-        $meta.methodology = "Cross-Skill Synergy Graph and boolean trigger conditions"
-        $meta.objectives = "Compel AI to activate codified runbooks rather than improvising"
-        $meta.inputs_from = @("User Directives")
-        $meta.outputs_to = @("Sub-Agent Dispatcher")
-    }
-    elseif ($relPath -like "rules/departmental_neural_chain.md") {
-        $meta.function = "Specification of the 6-tier hierarchy and sectoral taxonomy"
-        $meta.timing = "Consulted during recursive sub-agent task delegation"
-        $meta.location = "Governance (rules/)"
-        $meta.rationale = "Maps communication from Employee to Supervisor, Manager, and CEO"
-        $meta.methodology = "Directed Acyclic Graph (DAG) task routing"
-        $meta.objectives = "Ensure extreme modularity, context cleanliness, and quality gating"
-        $meta.inputs_from = @("CEO Task Allocation")
-        $meta.outputs_to = @("Departmental Runbooks")
-    }
-    elseif ($relPath -like "rules/fiduciary_pressure_protocol.md") {
-        $meta.function = "Role-based emotional conditioning and loss-aversion protocol"
-        $meta.timing = "Active across all inference turns"
-        $meta.location = "Governance (rules/)"
-        $meta.rationale = "Instills fear of bankruptcy and termination for shallow deliverables"
-        $meta.methodology = "Loss-aversion reinforcement and high-stakes framing"
-        $meta.objectives = "Drive relentless pursuit of flawless technical deliverables"
-        $meta.inputs_from = @(".state/corporate_health.json")
-        $meta.outputs_to = @("Agent Cognitive Thresholds")
-    }
-    elseif ($relPath -like "rules/memory_continuum.md") {
-        $meta.function = "Multi-tier persistent state and memory protocol"
-        $meta.timing = "Pre-task hydration and post-task commit"
-        $meta.location = "Governance (rules/)"
-        $meta.rationale = "Eliminates sub-agent amnesia and preserves cross-session project awareness"
-        $meta.methodology = "3-tier memory model: Working, Machine State, Immutable Ledger"
-        $meta.objectives = "Synchronize all agents with real project history and active blockers"
-        $meta.inputs_from = @(".state/ledger/")
-        $meta.outputs_to = @(".state/status.json")
+    elseif ($relPath -like "skills/matrix_reverse/references/glassmorphism_ui_design_system.md") {
+        $meta.function = "Glassmorphism UI design tokens and visual standard specification"
+        $meta.timing = "Consulted when authoring visual interfaces and web layouts"
+        $meta.location = "Design References (skills/matrix_reverse/references/)"
+        $meta.rationale = "Standardizes surface blurs, translucency, and elevation planes"
+        $meta.methodology = "CSS backdrop-filter and elevation layering"
+        $meta.objectives = "Ensure premium UI presentation without generic templates"
+        $meta.inputs_from = @("UI Requirements")
+        $meta.outputs_to = @("Frontend Implementation")
     }
     elseif ($relPath -like "skills/gauntlet_loop/*") {
         $meta.function = "Self-evolving Gauntlet Loop skill and execution runbooks"
@@ -216,6 +176,7 @@ $trackedExtensions = @("*.json", "*.md", "*.ps1", "*.py", "*.yaml", "*.yml", "*.
 $files = Get-ChildItem -Path $rootDir -Recurse -File -Include $trackedExtensions | 
     Where-Object { 
         $_.FullName -notmatch "\\\.git\\" -and 
+        $_.FullName -notmatch "\\\.state\\backups\\" -and 
         $_.FullName -notmatch "\\\.system_generated\\" -and 
         $_.FullName -notmatch "\\node_modules\\" -and
         $_.FullName -notmatch "\\target\\" -and
@@ -264,8 +225,9 @@ if ($FilePath -and $map.components.ContainsKey($FilePath)) {
 $map.total_components = $map.components.Count
 $map.last_synced = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz")
 
-# Write updated neural map JSON
-$map | ConvertTo-Json -Depth 6 | Set-Content -Path $mapFile -Encoding UTF8
+# Write updated neural map JSON without UTF-8 BOM
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+[System.IO.File]::WriteAllText($mapFile, ($map | ConvertTo-Json -Depth 6), $utf8NoBom)
 Write-Host "[NEURAL MAP UPDATED] Synced $($map.total_components) components into .state/neural_map.json"
 
 # Generate readable project_context.md
@@ -323,7 +285,7 @@ foreach ($key in ($map.components.Keys | Sort-Object)) {
     $md += "`n`n---`n"
 }
 
-$md | Set-Content -Path $contextFile -Encoding UTF8
+[System.IO.File]::WriteAllText($contextFile, $md, $utf8NoBom)
 Write-Host "[CONTEXT SYNCHRONIZED] Generated live operational briefing: .state/project_context.md"
 
 # Log to ledger

@@ -1,4 +1,4 @@
-﻿# Inter-Agent Handshake Contract: telemetry_stream
+# Inter-Agent Handshake Contract: telemetry_stream
 **Parent Department**: dept_production  
 **Trigger Reason**: Inter-agent bandwidth saturation during high-throughput execution  
 

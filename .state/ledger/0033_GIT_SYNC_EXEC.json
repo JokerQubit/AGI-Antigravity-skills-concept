@@ -1,4 +1,4 @@
-﻿{
+{
     "initiator":  "Matrix Reverse Sync",
     "event_type":  "GIT_SYNC_EXEC",
     "verification_status":  "RECORDED",

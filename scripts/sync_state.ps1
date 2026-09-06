@@ -32,7 +32,8 @@ switch ($Action.ToLower()) {
         }
         
         $entryPath = Join-Path $ledgerDir "$nextIdx`_$EventType.json"
-        $entry | ConvertTo-Json -Depth 5 | Set-Content -Path $entryPath -Encoding UTF8
+        $utf8NoBom = New-Object System.Text.UTF8Encoding $false
+        [System.IO.File]::WriteAllText($entryPath, ($entry | ConvertTo-Json -Depth 5), $utf8NoBom)
         Write-Host "[LEDGER COMMIT] $txId recorded: $Description"
     }
 
@@ -46,7 +47,8 @@ switch ($Action.ToLower()) {
                 }
             }
             $status.last_updated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz")
-            $status | ConvertTo-Json -Depth 10 | Set-Content -Path $statusFile -Encoding UTF8
+            $utf8NoBom = New-Object System.Text.UTF8Encoding $false
+            [System.IO.File]::WriteAllText($statusFile, ($status | ConvertTo-Json -Depth 10), $utf8NoBom)
             Write-Host "[STATUS UPDATE] Department $DeptId status set to $DeptStatus"
         }
     }

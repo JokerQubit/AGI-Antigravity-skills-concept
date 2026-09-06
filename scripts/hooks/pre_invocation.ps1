@@ -11,12 +11,21 @@ $risk = "minimal"
 $phase = "active_operations"
 $sprint = "unassigned"
 $compCount = 0
+$blockerCount = 0
+$blockerAlert = ""
 
 if (Test-Path $healthPath) {
     try {
         $health = Get-Content $healthPath -Raw | ConvertFrom-Json
         if ($health.financials.burn_rate_status) { $burn = $health.financials.burn_rate_status }
         if ($health.financials.fiduciary_risk_tier) { $risk = $health.financials.fiduciary_risk_tier }
+        if ($health.active_blockers) {
+            $blockerList = @($health.active_blockers)
+            $blockerCount = $blockerList.Count
+            if ($blockerCount -gt 0) {
+                $blockerAlert = " [ALERT: $($blockerList -join '; ')]"
+            }
+        }
     } catch { }
 }
 
@@ -38,7 +47,7 @@ if (Test-Path $mapPath) {
 
 $telemetryLines = @(
     "[EXECUTIVE TELEMETRY INJECTION]",
-    "Corporate Health: Burn Rate Tier [$burn], Fiduciary Risk [$risk].",
+    "Corporate Health: Burn Rate Tier [$burn], Fiduciary Risk [$risk], Active Blockers: [$blockerCount]$blockerAlert.",
     "Operational Phase: [$phase], Active Sprint: [$sprint].",
     "Neural Map: [$compCount] active components mapped in .state/neural_map.json & .state/project_context.md.",
     "Executive Directive: Maintain strict anti-sycophancy, mandate Premise Audits, and preserve clean-context sub-agent delegation."

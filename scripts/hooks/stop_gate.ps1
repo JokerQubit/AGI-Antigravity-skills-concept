@@ -1,16 +1,19 @@
 # Stop Gate Hook: Evaluates corporate state and active blockers before allowing agent termination
-$rawInput = [Console]::In.ReadToEnd()
+$rawInput = if ([Console]::IsInputRedirected) { [Console]::In.ReadToEnd() } else { "" }
 
-$healthPath = Join-Path $PSScriptRoot "..\..\.state\corporate_health.json"
+$rootDir = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
+$healthPath = Join-Path $rootDir ".state\corporate_health.json"
 $allowStop = $true
 $rejectionReason = ""
 
 if (Test-Path $healthPath) {
     try {
         $health = Get-Content $healthPath -Raw | ConvertFrom-Json
-        if ($health.active_blockers.Count -gt 0) {
+        $blockers = @($health.active_blockers)
+        if ($blockers.Count -gt 0) {
             $allowStop = $false
-            $rejectionReason = "[STOP GATE REJECTION] Critical corporate blockers remain unresolved in .state/corporate_health.json. Re-enter loop to resolve."
+            $blockerDetails = $blockers -join "; "
+            $rejectionReason = "[STOP GATE REJECTION] Critical corporate blockers remain unresolved in .state/corporate_health.json: [$blockerDetails]. Re-enter loop to resolve."
         }
     } catch {
         # If unparseable, do not deadlock
