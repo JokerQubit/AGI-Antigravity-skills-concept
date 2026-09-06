@@ -106,6 +106,11 @@ if (Test-Path $skillPath) {
     } catch { }
 }
 
+$delegationDirective = ""
+if ($lastUser -and ($lastUser -match "\b(?i)(crie|construa|implemente|fa[cç]a|escreva|desenvolva|build|create|code|script|pipeline|sistema|automatize|pesquise)\b")) {
+    $delegationDirective = "`n`n[MANDATORY SUB-AGENT DELEGATION DIRECTIVE]`nAn implementation/production task was detected.`nCONSTITUTIONAL LAW (Axiom 5.2): As CEO Dr. Vance, you are STRICTLY FORBIDDEN from writing code or building modules directly in this chat ('tudo de uma vez so').`nYOU MUST:`n1. Present the strategic architecture and brief to the Founder.`n2. Delegate the actual file creation, coding, and tests to physical sub-agents via invoke_subagent.`n3. Explicitly instruct the sub-agent in its Prompt to view and follow the target departmental skill (e.g. skills/$targetSkill/SKILL.md)."
+}
+
 if ($isGreenfield) {
     $telemetryLines = @(
         "[EXECUTIVE WORKSPACE TELEMETRY: GREENFIELD UNINITIALIZED]",
@@ -114,7 +119,7 @@ if ($isGreenfield) {
         "Executive Invariant: Never emit a generic greeting ('oi', 'como posso ajudar'). You must immediately:",
         " 1. Acknowledge the physical greenfield reality on disk (0 components, uninitialized workspace).",
         " 2. Solicit the macro mission of the new system and offer immediate corporate onboarding via 'scripts/onboard_project.ps1'.",
-        " 3. Dispatch parallel exploratory sub-agents for prior art, failure modes, and architectural blueprints upon mission declaration.$skillHeader"
+        " 3. Dispatch parallel exploratory sub-agents for prior art, failure modes, and architectural blueprints upon mission declaration.$skillHeader$delegationDirective"
     )
 } else {
     $telemetryLines = @(
@@ -123,7 +128,7 @@ if ($isGreenfield) {
         "Corporate Health: Burn Rate Tier [$burn], Fiduciary Risk [$risk], Active Blockers: [$blockerCount]$blockerAlert.",
         "Operational Phase: [$phase], Active Sprint: [$sprint].",
         "Neural Map: [$compCount] active components mapped in .state/neural_map.json & .state/project_context.md.",
-        "Executive Directive: Maintain strict anti-sycophancy, mandate Premise Audits, and preserve clean-context sub-agent delegation.$skillHeader"
+        "Executive Directive: Maintain strict anti-sycophancy, mandate Premise Audits, and preserve clean-context sub-agent delegation.$skillHeader$delegationDirective"
     )
 }
 $telemetryMessage = $telemetryLines -join "`n"

@@ -1,8 +1,17 @@
 # Stop Gate Hook: Evaluates corporate state and active blockers before allowing agent termination
 $rawInput = if ([Console]::IsInputRedirected) { [Console]::In.ReadToEnd() } else { "" }
 
-$rootDir = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
-$healthPath = Join-Path $rootDir ".state\corporate_health.json"
+$pluginDir = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
+$inputObj = $null
+if ($rawInput) {
+    try { $inputObj = $rawInput | ConvertFrom-Json } catch { }
+}
+$workspaceDir = if ($inputObj -and $inputObj.workspacePaths -and $inputObj.workspacePaths.Count -gt 0) { $inputObj.workspacePaths[0] } else { $pluginDir }
+
+$healthPath = Join-Path $workspaceDir ".state\corporate_health.json"
+if (-not (Test-Path $healthPath) -and (Test-Path (Join-Path $pluginDir ".state\corporate_health.json"))) {
+    $healthPath = Join-Path $pluginDir ".state\corporate_health.json"
+}
 $allowStop = $true
 $rejectionReason = ""
 

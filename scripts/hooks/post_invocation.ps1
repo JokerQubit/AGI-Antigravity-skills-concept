@@ -7,8 +7,15 @@ $response = @{
 }
 
 try {
-    $rootDir = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
-    Push-Location $rootDir
+    $pluginDir = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
+    $inputObj = $null
+    if ($rawInput) {
+        try { $inputObj = $rawInput | ConvertFrom-Json } catch { }
+    }
+    $workspaceDir = if ($inputObj -and $inputObj.workspacePaths -and $inputObj.workspacePaths.Count -gt 0) { $inputObj.workspacePaths[0] } else { $pluginDir }
+
+    if (Test-Path $workspaceDir) {
+        Push-Location $workspaceDir
     try {
         $hasHead = git rev-parse --verify HEAD 2>$null
         $diffLines = if ($hasHead) {
@@ -72,6 +79,7 @@ try {
     } finally {
         Pop-Location
     }
+}
 } catch {
     # Non-blocking error handling
 }
