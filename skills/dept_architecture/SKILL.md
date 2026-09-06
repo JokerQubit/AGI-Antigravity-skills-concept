@@ -50,3 +50,4 @@ A structured **Technical Architecture Package**:
 
 ## 5. Reference Runbooks
 - Architectural standards and modular design rules: [architecture_design_standard.md](./references/architecture_design_standard.md)
+- Recursive dimension expansion protocol (*Via Deserti* $X \to Y \to Y_n \to Y_{n.m}$): [dimension_expansion_runbook.md](./references/dimension_expansion_runbook.md)

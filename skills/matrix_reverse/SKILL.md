@@ -1,73 +1,57 @@
 ---
 name: matrix_reverse
-description: The Matrix Reverse Multi-Modal Production & Engineering Skill. Activates when generating UI designs, visual layouts, sound integration plans, hyper-realistic image prompts, AI video prompts for Gemini/Veo, clean code refactoring, or selecting optimal programming languages and free global APIs.
+description: The Matrix Reverse Multi-Modal Production Skill. Activates when generating UI designs, visual layouts, sound integration plans, hyper-realistic image prompts (Sony Venice 8K), and AI video motion prompts for Gemini/Veo.
 ---
 
-# The "Matrix Reverse" Production Engine (`matrix_reverse`)
+# The "Matrix Reverse" Multi-Modal Production Engine (`matrix_reverse`)
 
 ## 1. Executive Purpose
-The **Matrix Reverse Skill** enforces modern, senior-grade multimedia and software engineering standards. It eliminates generic, low-effort defaults across six distinct domains:
-1. **Visual & UI Design**: Glassmorphism, dynamic responsive layouts, parallax effects.
-2. **Audio Architecture**: Real-world acoustic recordings, YouTube ingestion, and spatial placement.
-3. **Hyper-Realistic Image Generation**: Sony Venice 8K camera profiles, cinema lenses, volumetric lighting, and English-only prompt enforcement.
-4. **AI Video Generation**: Motion-controlled prompt authoring for the free Google Gemini / Veo platform.
-5. **Clean Code Engineering**: SOLID architecture, defensive boundary assertion, zero stubs.
-6. **Polyglot Technology Selection**: Language benchmarking and free global API integration.
+The **Matrix Reverse Skill** enforces modern, senior-grade multimedia production standards. It eliminates generic, low-effort defaults across four specialized multi-modal domains:
+1. **Glassmorphism UI & Visual Design**: Dynamic fluid layouts, luminous translucent surfaces, and parallax depth planes.
+2. **Acoustic Engineering (48kHz / 24-bit)**: Real-world acoustic recordings, precise sound manifests, and binaural spatial placement.
+3. **Cinema-Grade Image Prompting**: Sony Venice 2 8K sensor profiles, master prime anamorphic optics, volumetric lighting, and DaVinci Resolve color science.
+4. **AI Video Motion Control**: Kinetic camera motion prompting for Google Gemini / Veo (dolly, crane, pan, temporal coherence).
 
 ---
 
-## 2. Operational Modules & Procedures
+## 2. Operational Production Pillars
 
-### Module 1: UI & Graphic Design (Glassmorphism Standard)
-- Ingest user reference images or mood boards before generating layouts.
-- Apply glassmorphism tokens: `backdrop-filter: blur(24px)`, semi-transparent surfaces (`rgba(255,255,255,0.08)`), 1px luminous borders (`rgba(255,255,255,0.18)`), and deep ambient shadow offsets.
-- Deploy dynamic parallax scrolling, multi-layer cards, and fluid grid layouts.
+### Pillar 1: UI & Visual Design (Glassmorphism Standard)
+- **User Reference Ingestion**: Ingest user reference images or mood boards prior to generating layouts to anchor visual tokens.
+- **Glassmorphism Design Tokens**:
+  - Surface blur: `backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);`
+  - Background surface: semi-transparent white/dark base (`rgba(255, 255, 255, 0.08)` or `rgba(15, 23, 42, 0.65)`).
+  - Luminous stroke: 1px continuous perimeter border (`rgba(255, 255, 255, 0.18)`).
+  - Elevation & Depth: Multi-plane ambient drop shadows (`0 8px 32px 0 rgba(0, 0, 0, 0.37)`).
+- **Dynamic Layout Architecture**: Fluid responsive CSS Grid / Flexbox layouts, parallax scroll depth planes, and smooth cubic-bezier transitions.
 
-### Module 2: Audio Specification & YouTube Sourcing
-- Prompt user for YouTube links to real-world sounds.
-- Formulate precise sound manifests:
-  - *Target Timestamp Range* (e.g. `00:42 - 00:46`)
-  - *Target Sample Rate & Depth* (48kHz / 24-bit)
-  - *UI / Spatial Destination* (e.g. hover micro-haptic, environmental reverb)
+### Pillar 2: Acoustic Architecture & YouTube Ingestion (48kHz Standard)
+- **Zero Synthetic Bleeps**: Pure synthesized robotic beeps and generic MIDI sounds are prohibited.
+- **Real Acoustic Sourcing**: Prompt user for YouTube links to real-world acoustic sources (field recordings, mechanical switches, physical impacts).
+- **Sound Manifest Specification**:
+  - *Source URI*: YouTube URL or raw lossless audio capture pointer.
+  - *Timestamp Segment*: Explicit start/end range (e.g., `00:42.100 - 00:44.850`).
+  - *Acoustic Quality*: Uncompressed 48kHz / 24-bit PCM standard.
+  - *Destination & Spatial Mapping*: UI micro-haptic feedback, environmental ambient bed, or binaural raytraced acoustic impulse response.
 
-### Module 3: Cinema-Grade Image Prompt Authoring
-- Author ultra-dense English prompts incorporating:
-  - **Camera Gear**: *Sony Venice 2 8K, ARRI Alexa 35, Hasselblad H6D-100c*.
-  - **Optics**: *Cooke Anamorphic/i 50mm T2.3, 1/4 Black Pro-Mist, shallow depth of field, natural circular bokeh*.
-  - **Lighting**: *Volumetric god rays, Rembrandt key light, sub-surface skin scattering, natural optical flares*.
-  - **Textures**: *Tactile imperfections, micro-pores, natural fabric weave, film grain (Kodak Vision3 5219)*.
-  - **Sub-Assets**: Professional minimalist SVG logos, precision 24px web icons.
+### Pillar 3: Cinema-Grade 8K Photorealism Prompt Authoring
+- **Hardware & Sensor Specification**: Ultra-dense English-only prompts specifying *Sony Venice 2 8K*, *ARRI Alexa 35*, or *Hasselblad H6D-100c*.
+- **Optics & Glass**: *Cooke Anamorphic/i Full Frame Plus 50mm T2.3*, *Zeiss Supreme Prime*, *1/4 Black Pro-Mist filter*, natural elliptical bokeh, shallow depth of field (f/1.8).
+- **Lighting Dynamics**: Volumetric God rays, Rembrandt key illumination, sub-surface skin scattering, natural optical flares, zero plastic skin artifacts.
+- **Micro-Texture & Color Science**: Micro-pores, natural fabric weave, organic dust motes, DaVinci Resolve 35mm film emulation (*Kodak Vision3 5219*), neutral contrast curve.
+- **Vector Assets**: Minimalist 24px pixel-aligned SVG vector icons and sharp geometric SVG logos.
 
-### Module 4: Gemini Video Prompt Engineering
-- Craft dynamic motion prompts for Google Gemini / Veo:
-  - Specify camera motion: *slow forward tracking dolly, sweeping 60-degree pan, dramatic low-angle crane elevation*.
-  - Maintain temporal consistency, particle dynamics, and cinematic 60fps lighting.
-
-### Module 5: Senior-Level Clean Code
-- Eliminate technical debt at inception: single responsibility, zero-stub implementation, strict types, and robust exception boundaries.
-
-### Module 6: Polyglot Technology Selection
-- Select programming languages based on computational characteristics (Rust/Go for concurrency and low latency, TypeScript for reactive UI, Python for ML/data pipelines).
-- Integrate free global APIs and open-source libraries to accelerate delivery.
-
-### Module 7: Continuous GitHub Updates
-- Maintain continuous synchronization with Git repositories: `git add .`, descriptive semantic commit messages, and immediate `push` to remote tracking branches.
-- Never allow uncommitted work to sit idle across execution turns.
-
-### Module 8: Sandbox Safety Protocol & Pre-Flight Snapshot Backups
-- Before conducting destructive refactorings, complex migrations, or risky tests, create an immutable pre-flight snapshot backup in `.state/backups/`.
-- Ensure deterministic one-click rollback if any test fails or corrupts dependencies.
-
-### Module 9: Professional Hygiene & Zero-Clutter Mandate
-- Proactively sweep directories to prevent accumulation of obsolete test files, orphaned mocks, or temporary scratch artifacts.
-- Enforce strict folder organization and ensure every persistent file is indexed in the Project Neural Map.
+### Pillar 4: Google Gemini / Veo AI Video Motion Control
+- **Dynamic Camera Kinematics**: Author motion-controlled prompts specifying camera velocity and direction:
+  - *Tracking Dolly*: Slow forward tracking push-in at eye level, parallax separation between foreground and background.
+  - *Crane Elevation*: Smooth mechanical crane rise from ground-level perspective to high-angle 45-degree vantage.
+  - *Sweeping Arc/Pan*: Dynamic 60-degree rotational arc maintaining continuous focal lock on central subject.
+- **Pacing & Lighting Coherence**: Strict temporal consistency across frames, continuous 60fps motion blur, and coherent atmospheric illumination.
 
 ---
 
 ## 3. Runbooks & Automation
-- Cinema Image Prompting Guide: [image_prompt_engineering_guide.md](./references/image_prompt_engineering_guide.md)
 - Glassmorphism Design System: [glassmorphism_ui_design_system.md](./references/glassmorphism_ui_design_system.md)
-- Polyglot Tech Stack & API Selection: [polyglot_tech_stack_selection.md](./references/polyglot_tech_stack_selection.md)
+- Cinema Image Prompting Guide: [image_prompt_engineering_guide.md](./references/image_prompt_engineering_guide.md)
 - Media Prompt Generator: [`scripts/generate_media_prompts.ps1`](../../scripts/generate_media_prompts.ps1)
-- Sandbox & Repository Sync Engine: [`scripts/sandbox_sync.ps1`](../../scripts/sandbox_sync.ps1)
 

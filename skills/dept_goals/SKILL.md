@@ -48,3 +48,4 @@ A structured **Execution Plan & Alignment Matrix**:
 
 ## 5. Reference Runbooks
 - OKR formulation standards and dependency modeling: [okr_alignment_matrix.md](./references/okr_alignment_matrix.md)
+- Corporate Charter & Strategic Operating Constitution: [corporate_charter.md](./references/corporate_charter.md)

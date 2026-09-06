@@ -227,14 +227,27 @@ $files = Get-ChildItem -Path $rootDir -Recurse -File -Include $trackedExtensions
     }
 
 
+$activeKeys = @()
 foreach ($f in $files) {
     $rel = $f.FullName.Substring($rootDir.Length + 1).Replace("\", "/")
+    $activeKeys += $rel
     if ($map.components.ContainsKey($rel)) {
         # Preserve user-customized fields, update timestamp
         $map.components[$rel].last_updated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz")
     } else {
         $map.components[$rel] = Get-DefaultMetadata $rel
     }
+}
+
+# Prune obsolete components no longer present on disk
+$keysToRemove = @()
+foreach ($key in $map.components.Keys) {
+    if ($activeKeys -notcontains $key) {
+        $keysToRemove += $key
+    }
+}
+foreach ($k in $keysToRemove) {
+    $map.components.Remove($k)
 }
 
 # Manual parameter override if passed
