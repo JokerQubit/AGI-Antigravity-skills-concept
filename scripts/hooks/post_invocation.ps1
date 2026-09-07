@@ -29,7 +29,9 @@ try {
             '^\+\s*/\*\s*TODO',
             '^\+\s*/\*\s*FIXME',
             '^\+\s*#\s*TODO',
-            '^\+\s*pass\s*$'
+            '^\+\s*pass\s*$',
+            '^\+\s*throw\s+new\s+NotImplementedException',
+            '^\+\s*raise\s+NotImplementedError'
         )
 
         if ($diffLines) {

@@ -1,5 +1,5 @@
 param(
-    [string]$UserInput = "make me a cool shooter game with good graphics and guns",
+    [string]$UserInput = "",
     [switch]$ForceElevation
 )
 
@@ -13,67 +13,106 @@ Write-Host "         SANDSTORM ELEVATION & DIRECTIVE SYNTHESIS ENGINE"
 Write-Host "================================================================="
 Write-Host "Raw User Directive: '$UserInput'`n"
 
-# 1. Evaluate Sandstorm Entropy & Structure
+if ([string]::IsNullOrWhiteSpace($UserInput)) {
+    Write-Host "[ERROR] No user input provided to Sandstorm engine." -ForegroundColor Red
+    exit 1
+}
+
+# 1. Real Entropy & Structural Analysis
 $words = $UserInput.Split([char[]]@(' ', "`t", "`n", "`r"), [StringSplitOptions]::RemoveEmptyEntries)
 $wordCount = $words.Count
-$hasTechnicalConstraints = $UserInput -match "(architecture|schema|api|concurrency|database|protocol|performance|latency|interface)"
-$isBrief = $wordCount -lt 25
+$hasTechnicalConstraints = $UserInput -match "\b(?i)(arquitetura|schema|api|concorr[eê]ncia|banco|protocolo|performance|lat[eê]ncia|interface|database|async|threads|mutex|tipagem|testes)\b"
+$isBrief = $wordCount -lt 20
 
-$isSandstorm = $isBrief -or (-not $hasTechnicalConstraints) -or $ForceElevation
+$entropyTier = "nominal"
+if ($wordCount -lt 10) { $entropyTier = "critical_sandstorm" }
+elseif ($wordCount -lt 25 -or (-not $hasTechnicalConstraints)) { $entropyTier = "moderate_sandstorm" }
 
-Write-Host "[ANALYSIS] Word Count: $wordCount | Technical Constraints Found: $hasTechnicalConstraints"
+$isSandstorm = ($entropyTier -ne "nominal") -or $ForceElevation
+
+Write-Host "[ANALYSIS] Word Count: $wordCount | Technical Density: $(if ($hasTechnicalConstraints) { 'High' } else { 'Low' }) | Entropy Tier: $entropyTier"
 if ($isSandstorm) {
     Write-Host "[SANDSTORM DETECTED] Prompt is high-entropy, low-structure, or sub-standard." -ForegroundColor Yellow
     Write-Host "  -> Invoking Research Sub-Agent (RES-SAND-01) with clean context..." -ForegroundColor Cyan
 } else {
     Write-Host "[NOMINAL STRUCTURE] Directive meets baseline structural criteria." -ForegroundColor Green
-    exit 0
 }
 
-# 2. Research Sub-Agent Synthesis Simulation
-Start-Sleep -Milliseconds 400
+# 2. Dynamic Domain Inference & Nucleus Extraction
+$domain = "General Systems Engineering"
+$coreObjective = $UserInput
 
+if ($UserInput -match "\b(?i)(youtube|video|seo|titulo|thumbnail|transcri[cç]|ranking|canal)\b") {
+    $domain = "Algorithmic Video Intelligence & High-Conversion YouTube SEO"
+    $coreObjective = "Architect a production-grade YouTube SEO and video metadata intelligence engine with transcript extraction, semantic title generation, and competitive gap analysis."
+} elseif ($UserInput -match "\b(?i)(trade|trading|quant|alpha|xauusd|bolsa|finance|mercado|orderbook|backtest)\b") {
+    $domain = "Sovereign Quantitative Alpha & Low-Latency Trading Systems"
+    $coreObjective = "Architect a deterministic quantitative trading and risk management platform with tick-level orderbook modeling, sub-millisecond execution, and strict Kelly drawdowns."
+} elseif ($UserInput -match "\b(?i)(sub[- ]?agent|multi[- ]agent|agi|cyberneti|govern|governan[cç]a|orquestra)\b") {
+    $domain = "Autonomous Cybernetic Multi-Agent Orchestration & Epistemic Governance"
+    $coreObjective = "Architect an autopoietic multi-agent cognitive operating kernel enforcing zero-stub invariants, clean-context sub-agent delegation, and deterministic lifecycle gating."
+} elseif ($UserInput -match "\b(?i)(banco|database|sql|cache|redis|postgres|duckdb|armazenamento)\b") {
+    $domain = "High-Throughput Distributed Persistence & Analytical Query Systems"
+    $coreObjective = "Architect an ACID-compliant, low-latency persistence layer with write-ahead immutable ledgers, atomic schema migrations, and column-store analytical indexing."
+}
+
+# 3. Dynamic 3-Pillar Elevation Formulation
 $elevationReport = @{
     original_input = $UserInput
     timestamp = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz")
+    entropy_tier = $entropyTier
+    domain = $domain
     status = "elevated"
-    deconstructed_intent = "Architect an industry-defining tactical FPS simulation adhering to the Path of the Desert standard."
+    deconstructed_intent = $coreObjective
     pillars = @(
         @{
-            pillar = "Pillar 1: Visual & Optical Rendering"
-            gold_standard = "Bodycam + UE5 Nanite/Lumen Photogrammetry"
-            directives = @("Implement virtualized micro-polygon geometry", "Enforce physical optical lens aberration shaders")
+            pillar = "Pillar 1: Core Algorithmic & Mechanism Plane"
+            gold_standard = "Via Deserti Zero-Approximation Standard"
+            directives = @(
+                "Implement end-to-end data processing pipelines with strict type contracts and defensive boundary validation.",
+                "Eliminate all naive sleep loops, mocks, and unhandled failure branches in production code."
+            )
         },
         @{
-            pillar = "Pillar 2: Acoustic & Spatial Mechanics"
-            gold_standard = "Real Binaural Impulse Raytracing"
-            directives = @("Deploy 3D sound reflection raytracer calculating material absorption", "Enforce speed-of-sound distance propagation delay")
+            pillar = "Pillar 2: Concurrency, Fault Tolerance & State Persistence"
+            gold_standard = "Deterministic State Machine & Distributed Partition Safety"
+            directives = @(
+                "Enforce atomic handle lifecycles, structured error backoff, and idempotent retry envelopes.",
+                "Maintain real-time persistent telemetry feeding into local ledger and health manifests."
+            )
         },
         @{
-            pillar = "Pillar 3: Terminal Ballistics & Dynamic World Destruction"
-            gold_standard = "Escape from Tarkov + Battlefield Dynamic Debris"
-            directives = @("Run 4th-order Runge-Kutta ballistic trajectory integration", "Implement finite-element stress tensor structural collapse")
+            pillar = "Pillar 3: Adversarial Quality Verification & Zero-Stub Delivery"
+            gold_standard = "Formal Verification & Supervisory Non-Acceptance Gating"
+            directives = @(
+                "Commission independent sub-agent test matrices verifying edge boundaries and error recovery.",
+                "Enforce physical git diff inspection blocking any commit containing stub placeholders."
+            )
         }
     )
     executive_action_plan = @(
-        "Assign Strategic Research Dossier to dept_research for competitive teardown.",
-        "Commission Systems Architecture to dept_architecture for formal component schemas.",
-        "Instruct dept_analysis to execute Premise Audit and boundary verification.",
-        "Deploy gauntlet_loop for iterative builder-critic refinement of core engine."
+        "Dispatch clean-context Research Sub-Agent to survey state-of-the-art implementations for $domain.",
+        "Commission Systems Architecture to author formal component schemas and implementation plan.",
+        "Instruct Chief Epistemic Auditor to execute Premise Audit and boundary verification.",
+        "Subject all architectural drafts to Devil's Apple adversarial hardening prior to user delivery."
     )
 }
 
-$elevationReport | ConvertTo-Json -Depth 6 | Set-Content -Path $reportFile -Encoding UTF8
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+$jsonContent = $elevationReport | ConvertTo-Json -Depth 6
+[System.IO.File]::WriteAllText($reportFile, $jsonContent, $utf8NoBom)
 
 Write-Host "`n[SUB-AGENT REPORT DELIVERED TO CEO]" -ForegroundColor Green
-Write-Host "  -> Latent Intent Identified: $($elevationReport.deconstructed_intent)" -ForegroundColor White
-Write-Host "  -> Formulated $($elevationReport.pillars.Count) World-Class Technical Pillars" -ForegroundColor Cyan
-Write-Host "  -> Generated $($elevationReport.executive_action_plan.Count) Actionable Executive Directives for CEO Sign-Off`n" -ForegroundColor Yellow
+Write-Host "  -> Inferred Domain:     $domain" -ForegroundColor Cyan
+Write-Host "  -> Deconstructed Goal:   $coreObjective" -ForegroundColor White
+Write-Host "  -> Generated $($elevationReport.pillars.Count) World-Class Technical Pillars" -ForegroundColor Cyan
+Write-Host "  -> Generated $($elevationReport.executive_action_plan.Count) Actionable Executive Directives`n" -ForegroundColor Yellow
 
 foreach ($act in $elevationReport.executive_action_plan) {
     Write-Host "  [DIRECTIVE] $act"
 }
 
 # Log to corporate ledger
-& powershell -ExecutionPolicy Bypass -File $stateScript -Action log-event -Initiator "Research Sub-Agent (RES-SAND-01)" -EventType "SANDSTORM_PROPOSAL_ELEVATED" -Description "Elevated low-structure user prompt into 3-pillar world-class specification with 4 executive directives." | Out-Null
+& powershell -ExecutionPolicy Bypass -File $stateScript -Action log-event -Initiator "Research Sub-Agent (RES-SAND-01)" -EventType "SANDSTORM_PROPOSAL_ELEVATED" -Description "Elevated user prompt in domain '$domain' into 3-pillar world-class specification with 4 executive directives." | Out-Null
 Write-Host "`n[LEDGER LOGGED] Transaction committed to .state/ledger/" -ForegroundColor Green
+
