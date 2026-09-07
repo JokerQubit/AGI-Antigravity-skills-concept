@@ -41,7 +41,7 @@ if (Test-Path $agentsPath) {
     $allPass = $false
 }
 
-# Rule 3: Every rule file must be calibrated [10 KB, 17.5 KB] and have no UTF-8 BOM
+# Rule 3: Every rule file must be calibrated [3,800, 5,800] bytes (<= 1,500 tokens) and have no UTF-8 BOM
 foreach ($rf in $ruleFiles) {
     $bytes = [System.IO.File]::ReadAllBytes($rf.FullName)
     $hasBom = ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF)
@@ -52,11 +52,11 @@ foreach ($rf in $ruleFiles) {
         $allPass = $false
     }
 
-    # Calibrated window: 10 KB (10240 bytes) to 17.5 KB (17920 bytes)
-    if ($size -ge 10240 -and $size -le 17920) {
-        Write-Host "  [OK] $($rf.Name) size is $size bytes (calibrated within [10.0 KB, 17.5 KB])."
+    # Calibrated window: 3,800 bytes to 5,800 bytes (target ~4.2 KB to 5.4 KB, <= 1,500 tokens)
+    if ($size -ge 3800 -and $size -le 5800) {
+        Write-Host "  [OK] $($rf.Name) size is $size bytes (calibrated within [3800, 5800] bytes, <= 1500 tokens)."
     } else {
-        Write-Host "  [FAIL] $($rf.Name) size is $size bytes (must be between 10240 and 17920 bytes)!" -ForegroundColor Red
+        Write-Host "  [FAIL] $($rf.Name) size is $size bytes (must be between 3800 and 5800 bytes)!" -ForegroundColor Red
         $allPass = $false
     }
 
