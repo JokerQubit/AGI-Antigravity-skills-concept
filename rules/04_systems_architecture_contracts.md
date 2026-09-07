@@ -50,4 +50,4 @@ function Set-AtomicJsonState([string]$path, [object]$data) {
 - [ ] Preconditions/Postconditions mathematically formulated; zero unhandled exceptions.
 - [ ] Concurrency races eliminated via atomic swap files and 5000ms mutex timeouts.
 - [ ] Buffer capacities bounded to $\le 64\,\text{MB}$; handles enclosed in `try/finally`.
-- [ ] State machines modeled with complete 5-tuple $(S, \Sigma, \delta, s_0, F)$.\n
+- [ ] State machines modeled with complete 5-tuple $(S, \Sigma, \delta, s_0, F)$.

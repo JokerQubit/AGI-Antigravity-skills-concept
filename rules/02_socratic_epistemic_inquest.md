@@ -50,4 +50,4 @@ Log: `powershell -ExecutionPolicy Bypass -File .\scripts\sync_state.ps1 -Action 
 ## 6. Layer 2 to Layer 3 Handshake Contract
 - [ ] Gate E1: No missing functions/files; Gate E2: null, zero, negative, maximum integer behavior defined.
 - [ ] Gate E3: $O(N)$ space/time formal bounds; Gate E4: crash and partition recovery specified.
-- [ ] Gate E5: Every Q2 flaw paired with hardened alternative; zero outstanding `[HARD HALT]` conditions.\n
+- [ ] Gate E5: Every Q2 flaw paired with hardened alternative; zero outstanding `[HARD HALT]` conditions.

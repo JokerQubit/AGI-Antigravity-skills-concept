@@ -1,0 +1,8 @@
+{
+    "initiator":  "AUD-EPI-01",
+    "event_type":  "NEURAL_RULES_VERIFIED_AND_REPAIRED",
+    "verification_status":  "RECORDED",
+    "timestamp":  "2026-09-06T22:28:06-03:00",
+    "description":  "Repaired literal newline escape sequences in all 12 rules, calibrated measure_rules.py to empirical Gemini BPE ratio length/3.08, verified all rules strictly within [2800, 3900] bytes and ~1000-1150 tokens.",
+    "transaction_id":  "TX-0159-NEURAL_RULES_VERIFIED_AND_REPAIRED"
+}

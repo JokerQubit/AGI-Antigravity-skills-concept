@@ -52,4 +52,4 @@ Dispatch: Read skill, run `scripts/detect_sandstorm.ps1`, infer domain, author 3
 
 Layer 1 to Layer 2 Handshake Contract:
 - [ ] `entropy_tier` defined; `domain` matches 8-domain taxonomy; exactly 3 pillars populated.
-- [ ] `executive_action_plan` contains >= 4 directives; transaction `SANDSTORM_PROPOSAL_ELEVATED` recorded in ledger.\n
+- [ ] `executive_action_plan` contains >= 4 directives; transaction `SANDSTORM_PROPOSAL_ELEVATED` recorded in ledger.

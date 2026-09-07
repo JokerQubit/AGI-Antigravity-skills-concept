@@ -55,4 +55,4 @@ If a sub-agent reaches 3 consecutive rejections ($r = 3$): execution halts, `SUP
 - [ ] All previous non-acceptance defects proven resolved on physical disk.
 - [ ] Zero stubs, zero empty catch blocks, zero syntax errors confirmed.
 - [ ] Strategy mutation verified on all prior rejections; Gauntlet quality score $Q \ge 0.95$ achieved.
-- [ ] Transaction `SUPERVISORY_WORK_CERTIFIED` recorded in `.state/ledger/`.\n
+- [ ] Transaction `SUPERVISORY_WORK_CERTIFIED` recorded in `.state/ledger/`.

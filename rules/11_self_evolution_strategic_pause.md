@@ -42,4 +42,4 @@ Closed-Loop Master Handshake:
 - [ ] Monotonic hardening invariant preserved; active rules in `rules/` strictly <= 14 files.
 - [ ] Rule file sizes calibrated within [2,800, 3,900] bytes (target 3,000 to 3,600 bytes, ~1,000 to 1,150 tokens).
 - [ ] All generated scripts and rules verified as BOM-free UTF-8; strategic pause executed on 2 failures.
-- [ ] Post-mortem RCA logged to ledger; neural map re-indexed without backup file pollution.\n
+- [ ] Post-mortem RCA logged to ledger; neural map re-indexed without backup file pollution.

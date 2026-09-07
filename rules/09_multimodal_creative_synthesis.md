@@ -42,4 +42,4 @@ Execution: `powershell -ExecutionPolicy Bypass -File .\scripts\generate_media_pr
 ## 5. Layer 9 to Layer 10 Handshake Contract
 - [ ] UI components satisfy Zero Device Frame mandate; optical prompts declare physical sensor, lens, $T$-stop, Kelvins.
 - [ ] Monospace telemetry grid engineered with zero layout shift; spatial acoustics and speed-of-sound delays modeled.
-- [ ] Manifest `.state/matrix_reverse_latest.json` verified BOM-free UTF-8; transaction `MATRIX_REVERSE_MEDIA_GEN` in ledger.\n
+- [ ] Manifest `.state/matrix_reverse_latest.json` verified BOM-free UTF-8; transaction `MATRIX_REVERSE_MEDIA_GEN` in ledger.

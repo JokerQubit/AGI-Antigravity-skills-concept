@@ -39,4 +39,4 @@ Dossier Schema (`.state/devils_apple_latest.json`):
 Transitive closure: consumer adapters re-tested, `.state/status.json` schema compatible, sequential transactions (`TX-0000` to `TX-NNNN`) unbroken without gaps.
 - [ ] Clean-context adversarial red team review completed; dynamic AST parse confirmed with zero syntax warnings.
 - [ ] UTF-8 BOM-free integrity verified; fuzzing matrix evaluated against nulls, extremes, and surrogate pairs.
-- [ ] In-place hardening applied and verified in git diff; transaction `DEVILS_APPLE_VALIDATION` recorded in ledger.\n
+- [ ] In-place hardening applied and verified in git diff; transaction `DEVILS_APPLE_VALIDATION` recorded in ledger.

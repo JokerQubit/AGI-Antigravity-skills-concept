@@ -41,4 +41,4 @@ Packaging Verification: `plugin.json` SemVer, `hooks.json` path validity, `rules
 - [ ] Zero stubs, zero placeholder markers, zero `pass` statements, zero ellipses (`...`).
 - [ ] SOLID principles and defensive boundary types verified; all handles in deterministic `finally`.
 - [ ] Automated tests executed on disk with exit code 0; git commit authored with semantic formatting.
-- [ ] Pre-flight snapshot created in `.state/backups/`.\n
+- [ ] Pre-flight snapshot created in `.state/backups/`.

@@ -16,10 +16,8 @@ def check_rules():
         has_bom = data.startswith(b'\xef\xbb\xbf')
         length = len(data)
         total_bytes += length
-        # Approximate token count: words * 1.3 or length / 3.8
-        text = data.decode('utf-8', errors='replace')
-        words = len(text.split())
-        est_tokens = int(words * 1.35)
+        # Calibrated Gemini BPE token count: empirical ratio ~3.08 bytes/token from Antigravity UI modal telemetry
+        est_tokens = int(length / 3.08)
         total_tokens += est_tokens
         
         status = "OK"
@@ -36,7 +34,7 @@ def check_rules():
         print(f"{f:<40} {length:<10} {est_tokens:<15} {status}")
         
     print("-" * 75)
-    print(f"Total: {len(files)} files, {total_bytes} bytes, ~{total_tokens} tokens total.")
+    print(f"Total: {len(files)} files, {total_bytes} bytes, ~{total_tokens} tokens total (Rules Budget: <15,000 tokens).")
     return all_ok
 
 if __name__ == '__main__':

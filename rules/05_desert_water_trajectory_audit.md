@@ -50,4 +50,4 @@ Dispatch: `Prompt: "You are AUD-DES-01. Read skills/desert_water/SKILL.md. Targe
 - [ ] Layer 0: UTF-8 BOM-free confirmed; Layer 1: boundary types, nullability validated.
 - [ ] Layer 2: Runtime complexity bounded; handles deterministically disposed in `finally`.
 - [ ] Layer 3: Complete data lineage traced; Layer 4: concurrency races, resource leaks audited.
-- [ ] Dynamic dimension expansion verified; transaction `DIMENSION_EXPANSION_EXEC` recorded in ledger.\n
+- [ ] Dynamic dimension expansion verified; transaction `DIMENSION_EXPANSION_EXEC` recorded in ledger.

@@ -52,4 +52,4 @@ Transaction Schema:
 - [ ] Tier 1 context cleanly wiped; Tier 2 machine manifests valid JSON without UTF-8 BOM.
 - [ ] Tier 3 ledger updated with sequential transaction ID and SHA-256 hash.
 - [ ] Neural map synchronized; verified containing 0 backup files.
-- [ ] Active blockers verified; stop gate conditions evaluated; fiduciary burn rate optimal.\n
+- [ ] Active blockers verified; stop gate conditions evaluated; fiduciary burn rate optimal.

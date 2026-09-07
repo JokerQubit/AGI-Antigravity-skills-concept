@@ -56,4 +56,4 @@ Dispatch: `Prompt: "You are [Role]. Read skills/<dept>/SKILL.md. Adhere to Layer
 - Adversarial Pass Rate: 100% passing tests; pass rate < 95% triggers rollback.
 - Token Efficiency: > 85% signal density; high-entropy prompts trigger Sandstorm.
 - Disk Parity: 100% agreement between declared state and physical disk.
-- Calibration Window: Rules in `rules/` reside strictly between 2,800 and 3,900 bytes (target 3,000 to 3,600 bytes, ~1,000 to 1,150 tokens); active rules <= 14.\n
+- Calibration Window: Rules in `rules/` reside strictly between 2,800 and 3,900 bytes (target 3,000 to 3,600 bytes, ~1,000 to 1,150 tokens); active rules <= 14.

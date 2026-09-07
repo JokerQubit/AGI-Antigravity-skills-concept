@@ -52,4 +52,4 @@ Rule: No stage begins until preceding stage artifacts are committed to disk and 
 ## 6. Layer 3 to Layer 4 Handshake Contract
 - [ ] DAG acyclicity proven (zero cycles); critical path and parallelization milestones mapped.
 - [ ] Global frontier benchmarks and historical failure modes documented.
-- [ ] Token budgets bounded with $\alpha$ density limits; `.state/status.json` valid BOM-free UTF-8.\n
+- [ ] Token budgets bounded with $\alpha$ density limits; `.state/status.json` valid BOM-free UTF-8.

@@ -672,7 +672,7 @@ ALL_RULES = [
 def write_all():
     rules_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'rules')
     for name, fn in ALL_RULES:
-        text = fn().strip() + '\\n'
+        text = fn().strip() + '\n'
         b = text.encode('utf-8')
         target_path = os.path.join(rules_dir, name)
         with open(target_path, 'wb') as f:
@@ -687,7 +687,7 @@ if __name__ == '__main__':
         print(f"{'Rule File':<42} {'Bytes':<8} {'Status'}")
         print('-' * 65)
         for name, fn in ALL_RULES:
-            text = fn().strip() + '\\n'
+            text = fn().strip() + '\n'
             b = text.encode('utf-8')
             size = len(b)
             status = "OK [3000, 3600]" if (3000 <= size <= 3600) else f"OUT OF TARGET ({size})"
