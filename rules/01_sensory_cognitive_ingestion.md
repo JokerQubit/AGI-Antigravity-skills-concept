@@ -31,7 +31,7 @@ Operational Classification Tiers:
 ### 2.2 3-Pillar Technical Elevation
 - Pillar 1 (Algorithmic Plane): Replaces superficial prototypes with mathematically sound algorithms, strict typing, and defensive boundaries.
 - Pillar 2 (Concurrency & Persistence Plane): Replaces unbuffered sleep loops with atomic event monitors, thread-safe mutexes, and append-only ledgers.
-- Pillar 3 (Adversarial Quality Plane): Independent sub-agent test matrices, boundary failure verification, and physical git-diff stub rejection.
+- Pillar 3 (Adversarial Quality Plane): Independent sub-agent test matrices, boundary failure verification, and physical git-diff zero-stub rejection.
 
 ### 2.3 Sandstorm JSON Contract (`.state/sandstorm_elevation_latest.json`)
 ```json

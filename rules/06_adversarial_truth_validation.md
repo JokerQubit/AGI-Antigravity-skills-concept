@@ -39,7 +39,7 @@ For every module, `RED-102` authors `test_<module>_adversarial.ps1` with determi
 Automated AST & Git-Diff Scanning:
 - Encoding: Detects and strips UTF-8 BOM (`0xEF, 0xBB, 0xBF`).
 - AST Parser: Navigates statement AST nodes (`[Parser]::ParseInput`), flags empty catch blocks (`statements.Count == 0`).
-- Zero-Stub Scanner: Identifies placeholder tokens (empty `pass`, `NotImplementedException`, stub comments).
+- Zero-Stub Scanner: Identifies placeholder tokens (empty `pass`, `NotImplementedException`, placeholder comments).
 - Git-Diff Scanner: Audits new lines for unbuffered sleep calls or naked error swallowers.
 
 Execution Command:

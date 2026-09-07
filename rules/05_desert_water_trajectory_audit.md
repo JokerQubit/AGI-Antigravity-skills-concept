@@ -49,12 +49,12 @@ Committed to `.state/dimension_expansion_latest.json`.
 
 1. File Byte Inspection: Verify absence of UTF-8 BOM (`0xEF, 0xBB, 0xBF`) via `[IO.File]::ReadAllBytes`.
 2. AST Parsing: Ingest code into native AST parsers (`[Parser]::ParseInput` for PowerShell, AST engines for Python/TypeScript). Check for empty catch blocks and stubs.
-3. Git Diff Trajectory: Inspect diffs via `git diff HEAD -U0` for banned tokens (`pass`, stub comments).
+3. Git Diff Trajectory: Inspect diffs via `git diff HEAD -U0` for banned tokens (`pass`, placeholder comments).
 4. Handle Lifecycle Audit: Trace every handle (`Open`, `New-Object`, socket) to its enclosing `try/finally` disposal.
 
 Mathematical Lineage Invariant:
 Let $D_0$ be initial payload and $D_k$ be data at step $k$. Lineage must satisfy semantic conservation:
-$$\mathcal{I}(D_k) \subseteq \mathcal{I}(D_{k-1}) \cup \Delta_{\text{valid}}, \ quad \forall k$$
+$$\mathcal{I}(D_k) \subseteq \mathcal{I}(D_{k-1}) \cup \Delta_{\text{valid}}, \quad \forall k$$
 Unverified information loss or unhandled payload mutation constitutes illegal trajectory drift.
 
 Sub-Agent Dispatch Directive:
