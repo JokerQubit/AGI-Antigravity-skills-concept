@@ -1,5 +1,5 @@
 ---
-trigger: always_on
+trigger: model_decision
 description: Layer 11 Cybernetic Self-Evolution, Emergency Strategic Pause, and Strategic Meeting Engine
 ---
 # Layer 11: Cybernetic Self-Evolution & Strategic Pause

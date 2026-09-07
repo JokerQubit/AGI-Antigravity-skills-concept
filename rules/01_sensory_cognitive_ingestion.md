@@ -1,5 +1,5 @@
 ---
-trigger: always_on
+trigger: model_decision
 description: Layer 1 Sensory Ingestion, Sandstorm Elevation, and Greenfield Onboarding
 ---
 # Layer 1: Cognitive Sensory Ingestion & Sensory Elevation

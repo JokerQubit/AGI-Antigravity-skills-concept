@@ -1,0 +1,8 @@
+{
+    "initiator":  "System",
+    "event_type":  "HYPOTHESIS_RECORDED",
+    "verification_status":  "RECORDED",
+    "timestamp":  "2026-09-07T18:20:21-03:00",
+    "description":  "Recorded hypothesis HYP-003 [PROVEN_FACT]: Monte Sinai M1 breakout fails due to 78% chop, whereas M15 holographic A-VWAP serves as causal multi-timeframe directional wind filter.",
+    "transaction_id":  "TX-0174-HYPOTHESIS_RECORDED"
+}

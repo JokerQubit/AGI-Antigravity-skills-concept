@@ -1,0 +1,8 @@
+{
+    "initiator":  "System",
+    "event_type":  "SESSION_BLOCKER_SET",
+    "verification_status":  "RECORDED",
+    "timestamp":  "2026-09-07T18:26:14-03:00",
+    "description":  "Registered session blocker: BLK-VAL-TEST.",
+    "transaction_id":  "TX-0217-SESSION_BLOCKER_SET"
+}

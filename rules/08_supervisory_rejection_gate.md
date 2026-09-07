@@ -1,5 +1,6 @@
 ---
-trigger: always_on
+trigger: glob
+globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
 description: Layer 8 Supervisory Rejection Gate, Devil's Advocate Protocol, and Gauntlet Loop
 ---
 # Layer 8: Supervisory Rejection Gate & Quality Escalation

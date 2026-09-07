@@ -1,5 +1,5 @@
 ---
-trigger: always_on
+trigger: model_decision
 description: Layer 3 Strategic Goal Decomposition, DAG Task Scheduling, and Session Pacing
 ---
 # Layer 3: Strategic Goal Decomposition & Empirical Research

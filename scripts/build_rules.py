@@ -65,7 +65,7 @@ Dispatch: `Prompt: "You are [Role]. Read skills/<dept>/SKILL.md. Adhere to Layer
 
 def build_l01():
     return """---
-trigger: always_on
+trigger: model_decision
 description: Layer 1 Sensory Ingestion, Sandstorm Elevation, and Greenfield Onboarding
 ---
 # Layer 1: Cognitive Sensory Ingestion & Sensory Elevation
@@ -123,7 +123,7 @@ Layer 1 to Layer 2 Handshake Contract:
 
 def build_l02():
     return """---
-trigger: always_on
+trigger: model_decision
 description: Layer 2 Socratic Epistemic Inquest, Chroma Horizon 4-Quadrant Drill, and Anti-Sycophancy
 ---
 # Layer 2: Socratic Epistemic Inquest & Epistemic Alignment
@@ -179,7 +179,7 @@ Log: `powershell -ExecutionPolicy Bypass -File .\\scripts\\sync_state.ps1 -Actio
 
 def build_l03():
     return """---
-trigger: always_on
+trigger: model_decision
 description: Layer 3 Strategic Goal Decomposition, DAG Task Scheduling, and Session Pacing
 ---
 # Layer 3: Strategic Goal Decomposition & Empirical Research
@@ -237,7 +237,8 @@ Rule: No stage begins until preceding stage artifacts are committed to disk and 
 
 def build_l04():
     return """---
-trigger: always_on
+trigger: glob
+globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
 description: Layer 4 Systems Architecture, Interface Contracts, and Concurrency Invariants
 ---
 # Layer 4: Systems Architecture & Defensive Contracts
@@ -293,7 +294,8 @@ function Set-AtomicJsonState([string]$path, [object]$data) {
 
 def build_l05():
     return """---
-trigger: always_on
+trigger: glob
+globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
 description: Layer 5 Desert Water 5-Layer Forensic Trajectory Audit and Dimension Expansion
 ---
 # Layer 5: Desert Water Forensic Trajectory Audit
@@ -349,7 +351,8 @@ Dispatch: `Prompt: "You are AUD-DES-01. Read skills/desert_water/SKILL.md. Targe
 
 def build_l06():
     return """---
-trigger: always_on
+trigger: glob
+globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
 description: Layer 6 Adversarial Truth Validation, Devil's Apple Protocol, and In-Place Hardening
 ---
 # Layer 6: Adversarial Truth Validation & Devil's Apple
@@ -394,7 +397,8 @@ Transitive closure: consumer adapters re-tested, `.state/status.json` schema com
 
 def build_l07():
     return """---
-trigger: always_on
+trigger: glob
+globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
 description: Layer 7 Production Zero-Stub Execution, Senior Clean Code, and Sandbox Safety
 ---
 # Layer 7: Production Zero-Stub Execution & Senior Clean Code
@@ -441,7 +445,8 @@ Packaging Verification: `plugin.json` SemVer, `hooks.json` path validity, `rules
 
 def build_l08():
     return """---
-trigger: always_on
+trigger: glob
+globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
 description: Layer 8 Supervisory Rejection Gate, Devil's Advocate Protocol, and Gauntlet Loop
 ---
 # Layer 8: Supervisory Rejection Gate & Quality Escalation
@@ -502,7 +507,7 @@ If a sub-agent reaches 3 consecutive rejections ($r = 3$): execution halts, `SUP
 
 def build_l09():
     return """---
-trigger: always_on
+trigger: model_decision
 description: Layer 9 Multi-Modal Creative Synthesis, Matrix Reverse Protocol, and Cinema Optics
 ---
 # Layer 9: Multi-Modal Creative Synthesis & Cinema Optics
@@ -550,7 +555,7 @@ Execution: `powershell -ExecutionPolicy Bypass -File .\\scripts\\generate_media_
 
 def build_l10():
     return """---
-trigger: always_on
+trigger: model_decision
 description: Layer 10 Persistent Memory Continuum, Immutable Append-Only Ledger, and Fiduciary Financials
 ---
 # Layer 10: Memory Continuum & Immutable Ledger
@@ -608,7 +613,7 @@ Transaction Schema:
 
 def build_l11():
     return """---
-trigger: always_on
+trigger: model_decision
 description: Layer 11 Cybernetic Self-Evolution, Emergency Strategic Pause, and Strategic Meeting Engine
 ---
 # Layer 11: Cybernetic Self-Evolution & Strategic Pause

@@ -1,0 +1,8 @@
+{
+    "initiator":  "AUD-EPI-01",
+    "event_type":  "HYPOTHESIS_RECORDED",
+    "verification_status":  "RECORDED",
+    "timestamp":  "2026-09-07T18:20:40-03:00",
+    "description":  "Recorded hypothesis HYP-004 [FATAL_FALLACY]: Monte Sinai M15 Kinematic Macro Filter improves Apex Ensemble performance by filtering opposite-direction entries",
+    "transaction_id":  "TX-0176-HYPOTHESIS_RECORDED"
+}

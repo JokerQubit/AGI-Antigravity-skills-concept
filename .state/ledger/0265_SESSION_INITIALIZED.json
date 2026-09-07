@@ -1,0 +1,8 @@
+{
+    "initiator":  "Dr. Alexander Vance (CEO)",
+    "event_type":  "SESSION_INITIALIZED",
+    "verification_status":  "RECORDED",
+    "timestamp":  "2026-09-07T18:38:45-03:00",
+    "description":  "Initialized session SES-20260907-183844-c3b6 for actor Dr. Alexander Vance (CEO) [L6_CEO].",
+    "transaction_id":  "TX-0265-SESSION_INITIALIZED"
+}

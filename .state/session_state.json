@@ -1,0 +1,73 @@
+{
+    "root_session":  {
+                         "cognitive_scratchpad":  {
+                                                      "premises":  [
+
+                                                                   ],
+                                                      "hypotheses":  [
+                                                                         {
+                                                                             "status":  "PROVEN_FACT",
+                                                                             "timestamp":  "2026-09-07T20:56:13-03:00",
+                                                                             "id":  "HYP-001",
+                                                                             "statement":  "Session state engine verified on physical disk",
+                                                                             "verified_by":  "System"
+                                                                         }
+                                                                     ]
+                                                  },
+                         "root_conversation_id":  "738b452f-eb86-47ad-83d5-3e1ce7c9b042",
+                         "active_blockers":  null,
+                         "session_id":  "SES-20260907-205608-044a",
+                         "created_at":  "2026-09-07T20:56:08-03:00",
+                         "actor_role":  "ACTOR_PRIMARY_CEO",
+                         "actor":  "Dr. Alexander Vance (CEO)",
+                         "active_mandate":  "Validation suite root session",
+                         "last_updated":  "2026-09-07T20:56:16-03:00",
+                         "last_user_snippet":  "OlÃƒÆ’Ã‚Â¡ Vance, como estÃƒÆ’Ã‚Â¡ o progresso da arquitetura neural?"
+                     },
+    "last_updated":  "2026-09-07T20:56:16-03:00",
+    "subagents":  {
+                      "738b452f-eb86-47ad-83d5-3e1ce7c9b042":  {
+                                                                   "actor":  "Level 1 Specialist",
+                                                                   "active_blockers":  [
+
+                                                                                       ],
+                                                                   "subagent_id":  "738b452f-eb86-47ad-83d5-3e1ce7c9b042",
+                                                                   "role_tier":  "L1_SPECIALIST",
+                                                                   "registered_at":  "2026-09-07T18:34:10-03:00"
+                                                               },
+                      "95ba693b-2f24-47f1-9b85-73d13720b839":  {
+                                                                   "actor":  "Level 1 Specialist",
+                                                                   "active_blockers":  [
+
+                                                                                       ],
+                                                                   "subagent_id":  "95ba693b-2f24-47f1-9b85-73d13720b839",
+                                                                   "role_tier":  "L1_SPECIALIST",
+                                                                   "registered_at":  "2026-09-07T18:42:59-03:00"
+                                                               },
+                      "cc40d89e-6cbc-429d-9f54-146997617bf8":  {
+                                                                   "actor":  "Level 1 Specialist",
+                                                                   "active_blockers":  [
+
+                                                                                       ],
+                                                                   "subagent_id":  "cc40d89e-6cbc-429d-9f54-146997617bf8",
+                                                                   "role_tier":  "L1_SPECIALIST",
+                                                                   "registered_at":  "2026-09-07T18:43:04-03:00"
+                                                               }
+                  },
+    "active_blockers":  null,
+    "hypotheses":  [
+                       {
+                           "status":  "PROVEN_FACT",
+                           "timestamp":  "2026-09-07T20:56:13-03:00",
+                           "id":  "HYP-001",
+                           "statement":  "Session state engine verified on physical disk",
+                           "verified_by":  "System"
+                       }
+                   ],
+    "session_id":  "SES-20260907-205608-044a",
+    "created_at":  "2026-09-07T20:56:08-03:00",
+    "actor":  "Dr. Alexander Vance (CEO)",
+    "role_tier":  "L6_CEO",
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "active_mandate":  "Validation suite root session"
+}

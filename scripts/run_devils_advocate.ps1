@@ -108,9 +108,9 @@ for ($r = 1; $r -le $MaxRounds; $r++) {
     Write-Host "[DEVIL'S ADVOCATE AUDIT: ROUND $r / $MaxRounds]" -ForegroundColor Cyan
     Start-Sleep -Milliseconds 150
 
-    $detectedDefects = Audit-Deliverable -filePath $resolvedPath
+    $detectedDefects = @(Audit-Deliverable -filePath $resolvedPath)
 
-    if ($detectedDefects.Count -gt 0 -and $r -lt $MaxRounds) {
+    if ($detectedDefects.Count -gt 0) {
         $primaryDefect = $detectedDefects[0]
         $forbidden = "Do not introduce placeholders, empty catch blocks, or unverified stubs into production paths."
         $remediation = "Fully implement operational logic, handle all exception paths, and adhere strictly to Zero-Stub Law."
@@ -119,7 +119,6 @@ for ($r = 1; $r -le $MaxRounds; $r++) {
         Write-Host "    -> Defect:            $primaryDefect" -ForegroundColor Yellow
         Write-Host "    -> Forbidden Vector:  $forbidden" -ForegroundColor Magenta
         Write-Host "    -> Remediation:       $remediation" -ForegroundColor White
-        Write-Host "  -> Returning to $SubAgentId for REDO with mandatory strategy mutation...`n" -ForegroundColor Cyan
 
         $roundEntry = @{
             round = $r
@@ -133,6 +132,20 @@ for ($r = 1; $r -le $MaxRounds; $r++) {
         # Log rejection to corporate ledger
         if (Test-Path $stateScript) {
             & powershell -ExecutionPolicy Bypass -File $stateScript -Action log-event -Initiator "Devil's Advocate (SUP-ADV-01)" -EventType "SUPERVISORY_WORK_REJECTED" -Description "Rejected deliverable '$relTarget' from $SubAgentId at round $r. Found $($detectedDefects.Count) defects." | Out-Null
+        }
+
+        if ($r -eq $MaxRounds) {
+            Write-Host "  [MAX ROUNDS REACHED] Sub-agent $SubAgentId failed supervisory gate after $MaxRounds rounds!" -ForegroundColor Red
+            Write-Host "  -> Escalating to Strategic Meeting (SM) for radical restructuring..." -ForegroundColor Yellow
+            $auditLog.status = "rejected_max_rounds_reached"
+
+            $stratMeetingScript = Join-Path $PSScriptRoot "run_strategic_meeting.ps1"
+            if (Test-Path $stratMeetingScript) {
+                & powershell -ExecutionPolicy Bypass -File $stratMeetingScript -NodeId $SubAgentId -FailedGoal "Pass Zero-Stub & AST supervisory audit for deliverable '$relTarget'" -ObservedReality "$($detectedDefects.Count) unresolved defects after $MaxRounds rounds: $($detectedDefects -join '; ')" | Out-Null
+            }
+            break
+        } else {
+            Write-Host "  -> Returning to $SubAgentId for REDO with mandatory strategy mutation...`n" -ForegroundColor Cyan
         }
     } else {
         Write-Host "  [VERDICT: CERTIFIED & ACCEPTED] Remediated deliverable satisfies all criteria!" -ForegroundColor Green
@@ -167,3 +180,4 @@ $reportJson = $auditLog | ConvertTo-Json -Depth 6
 [System.IO.File]::WriteAllText($reportFile, $reportJson, $utf8NoBom)
 
 Write-Host "`n[SUPERVISORY CYCLE SEALED] Dossier saved to: .state/devils_advocate_latest.json" -ForegroundColor Green
+if ($finalApproved) { exit 0 } else { exit 1 }

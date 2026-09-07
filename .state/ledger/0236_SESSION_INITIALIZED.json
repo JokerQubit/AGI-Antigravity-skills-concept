@@ -1,0 +1,8 @@
+{
+    "initiator":  "TEST-WORKER",
+    "event_type":  "SESSION_INITIALIZED",
+    "verification_status":  "RECORDED",
+    "timestamp":  "2026-09-07T18:28:25-03:00",
+    "description":  "Initialized session SES-20260907-182825-7fba for actor TEST-WORKER [L1_SPECIALIST].",
+    "transaction_id":  "TX-0236-SESSION_INITIALIZED"
+}

@@ -362,13 +362,64 @@ OmniCognition integrates directly with Antigravity 2.0 lifecycle hooks declared 
 }
 ```
 
-### 7.1 Hook Verification Contracts
-- **`PreInvocation` (`pre_invocation.ps1`)**: Runs prior to agent prompt ingestion. Injects corporate health telemetry, active sprint identifier, and JIT skill metadata. Ensures context starts grounded in physical repository state.
-- **`PostInvocation` (`post_invocation.ps1`)**: Executes after every model response. Scans for Monolithic Prompt Theater violations (e.g., simulated department conversations in main chat) and audits git staging status.
-- **`Stop` (`stop_gate.ps1`)**: Deterministic task completion gate. Halts termination if:
-  1. Active blockers remain open in `.state/status.json`.
-  2. The working directory contains uncommitted git modifications.
-  3. Supervisory test assertions fail AST validation.
+### 7.1 Hook Verification Contracts & Actor Demarcation
+- **`PreInvocation` (`pre_invocation.ps1`)**: Runs prior to agent prompt ingestion.
+  1. **Subagent Actor Demarcation**: Inspects `session_state.json` and initial transcript headers. If executing inside an ephemeral subagent worker, it completely lifts CEO Vance's code creation ban and injects `[LEVEL 1 SPECIALIST]` operational telemetry under the Zero-Stub Law. If running in the root conversation, it injects executive governance and Axiom 15.
+  2. **Reverse Transcript Parsing**: Employs a reverse-seeking parser that traverses backwards from the tail of the transcript, guaranteeing that the true user directive is never lost even after 50+ tool calls.
+  3. **Cognitive Blocker Injection**: Injects `BLK-PREMISE-AUDIT` upon detection of new user directives, requiring the agent to ground all premises on physical disk prior to formulating plans.
+- **`PostInvocation` (`post_invocation.ps1`)**: Executes after every model response. Scans for Monolithic Prompt Theater violations and verifies git hygiene.
+- **`Stop` (`stop_gate.ps1`)**: Deterministic task completion gate with mechanical disk coupling.
+  1. **Active Blocker Enforcement**: Queries `session_state.json`. If `BLK-PREMISE-AUDIT` or any session blocker is open, it rejects termination (`decision: continue`), mechanically forcing the model back into the tool loop to perform empirical investigation.
+  2. **Deadlock Safety Circuit Breaker**: Reads `$inputObj.executionNum` natively from the Antigravity host runtime. If the model attempts to stop 4 or more times without resolving blockers, it trips an emergency `[STRATEGIC PAUSE]`, preventing infinite termination loops.
+  3. **Actor Scope Isolation**: Subagents only evaluate blockers registered specifically under their conversation ID, eliminating false deadlocks from root session blockers.
+
+### 7.2 The 5-Layer Reflective Cognitive Architecture
+
+```
+                  ┌──────────────────────────────────────────────┐
+                  │          ENTRADA DO USUÁRIO / FOUNDER         │
+                  └──────────────────────┬───────────────────────┘
+                                         │
+ ┌───────────────────────────────────────▼───────────────────────────────────────┐
+ │ CAMADA 1: INGESTÃO SENSORIAL, DEMARCAÇÃO DE ATORES & SESSÃO (L1)              │
+ │ • Parser Reverso: varre o transcript de trás para frente buscando o input real.│
+ │ • Identificação de Ator: isola o CEO Vance (orquestrador) dos subagentes L1.  │
+ │ • Inicialização da FSM em .state/session_state.json.                          │
+ │ • Bloqueio Mecânico: injeta BLK-PREMISE-AUDIT travando encerramentos precoces.│
+ └───────────────────────────────────────┬───────────────────────────────────────┘
+                                         │
+ ┌───────────────────────────────────────▼───────────────────────────────────────┐
+ │ CAMADA 2: INQUÉRITO FORENSE & PARAR PARA PENSAR (L2 + L3)                     │
+ │ • Axioma 15 Estendido: Proibida resposta direta sem Scratchpad de Hipóteses.   │
+ │ • Extração de Premissas: Classificação em [PROVEN_FACT] vs [FATAL_FALLACY].   │
+ │ • Leitura Obrigatória de Disco: view_file e grep_search antes de conclusões.  │
+ │ • Resolução do Blocker 1 via sync_state.ps1 -Action resolve-blocker.          │
+ └───────────────────────────────────────┬───────────────────────────────────────┘
+                                         │
+ ┌───────────────────────────────────────▼───────────────────────────────────────┐
+ │ CAMADA 3: SISTEMAS & ARQUITETURA DEFENSIVA: CONTRATOS E DAG (L4 + L7)         │
+ │ • Barreira de Planejamento: emissão de implementation_plan.md com DAG formal. │
+ │ • Injeção do Blocker 2: BLOCKER_DEVILS_APPROVAL_PENDING.                      │
+ │ • Despacho de Subagentes Limpos (com instruções focadas, sem persona do CEO). │
+ └───────────────────────────────────────┬───────────────────────────────────────┘
+                                         │
+ ┌───────────────────────────────────────▼───────────────────────────────────────┐
+ │ CAMADA 4: O GAUNTLET ADVERSARIAL REAL: OS DOIS DEVILS (L6 + L8)               │
+ │ • Devil's Apple (Pré-Execução): Auditoria crítica do plano com Institutional  │
+ │   Distrust, caçando pontos únicos de falha e premissas fracas.                │
+ │ • Devil's Advocate (Pós-Execução): Inspeção AST, testes reais, zero-stub.     │
+ │   -> Se reprovado: Força Strategy Mutation (Algoritmo, Concorrência, Tipos).  │
+ │   -> Se atingir limite de rodadas: HALT REAL e disparo de Reunião Estratégica.│
+ │ • Resolução do Blocker 2 no disco após certificação Q >= 0.95.                │
+ └───────────────────────────────────────┬───────────────────────────────────────┘
+                                         │
+ ┌───────────────────────────────────────▼───────────────────────────────────────┐
+ │ CAMADA 5: CONTINUUM DE MEMÓRIA, LEDGER HASH & STOP GATE (L10 + L11)           │
+ │ • Commit atômico no ledger TX-XXXX com encadeamento de hash SHA-256.          │
+ │ • Verificação do Stop Gate: se blockers == 0, permite encerramento (allow);  │
+ │   caso contrário, devolve decision: continue e força o modelo ao trabalho.    │
+ └───────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
@@ -384,19 +435,28 @@ powershell -ExecutionPolicy Bypass -File scripts/update_neural_map.ps1
 powershell -ExecutionPolicy Bypass -File scripts/sync_state.ps1 -Action log-event `
   -Initiator "CTO-ENG-01" -EventType "ARCHITECTURE_UPGRADE" -Description "Hardened optical matrix substrate."
 
-# 3. Execute Chroma Horizon 4-Quadrant Socratic Grill
-powershell -ExecutionPolicy Bypass -File scripts/run_chroma_grill.ps1 -Proposal "Migrate state machine to Raft consensus"
+# 3. Session State Engine: Initialize session, set/resolve blockers, record hypotheses
+powershell -ExecutionPolicy Bypass -File scripts/sync_state.ps1 -Action init-session -Initiator "Founder" -Description "Quantum Core Sprint"
+powershell -ExecutionPolicy Bypass -File scripts/sync_state.ps1 -Action set-blocker -BlockerId "BLK-PREMISE-AUDIT" -Description "Verify physical disk state"
+powershell -ExecutionPolicy Bypass -File scripts/sync_state.ps1 -Action record-hypothesis -Hypothesis "Host runtime provides executionNum natively" -Confidence "PROVEN_FACT"
+powershell -ExecutionPolicy Bypass -File scripts/sync_state.ps1 -Action resolve-blocker -BlockerId "BLK-PREMISE-AUDIT"
 
-# 4. Run Devil's Apple adversarial audit on an architectural document
+# 4. Execute Chroma Horizon 4-Quadrant Socratic Grill with physical AST inspection
+powershell -ExecutionPolicy Bypass -File scripts/run_chroma_grill.ps1 -TargetFile "scripts/sync_state.ps1"
+
+# 5. Run Devil's Advocate supervisory gate with AST analysis and automatic Strategic Meeting escalation
+powershell -ExecutionPolicy Bypass -File scripts/run_devils_advocate.ps1 -TargetDeliverable "scripts/sync_state.ps1" -MaxRounds 3
+
+# 6. Run Devil's Apple adversarial audit on an architectural document
 powershell -ExecutionPolicy Bypass -File scripts/run_devils_apple.ps1 -ArtifactPath ".state/plans/v2_architecture.md"
 
-# 5. Generate cinema-grade industrial image, video, and acoustic manifests
-powershell -ExecutionPolicy Bypass -File scripts/generate_media_prompts.ps1 -Subject "Optical Supercomputing Hall"
+# 7. Execute dynamic Strategic Meeting self-accountability session
+powershell -ExecutionPolicy Bypass -File scripts/run_strategic_meeting.ps1 -NodeId "EMP-DEV-101" -FailedGoal "Implement Lock-Free Ring Buffer" -ObservedReality "Race condition detected under 64-thread load"
 
-# 6. Trigger an emergency Strategic Meeting circuit breaker
-powershell -ExecutionPolicy Bypass -File scripts/run_strategic_meeting.ps1 -TriggerReason "Persistent test failure in distributed locking"
+# 8. Execute automated end-to-end test validation suite (100% Zero-Stub pass required)
+powershell -ExecutionPolicy Bypass -File scripts/test_validation.ps1
 
-# 7. Execute recursive dimension expansion across engineering domain X
+# 9. Execute recursive dimension expansion across engineering domain X
 powershell -ExecutionPolicy Bypass -File scripts/expand_dimensions.ps1 -Domain "Distributed Consensus"
 ```
 

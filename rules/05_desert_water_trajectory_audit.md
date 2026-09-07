@@ -1,5 +1,6 @@
 ---
-trigger: always_on
+trigger: glob
+globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
 description: Layer 5 Desert Water 5-Layer Forensic Trajectory Audit and Dimension Expansion
 ---
 # Layer 5: Desert Water Forensic Trajectory Audit

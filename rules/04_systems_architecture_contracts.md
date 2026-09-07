@@ -1,5 +1,6 @@
 ---
-trigger: always_on
+trigger: glob
+globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
 description: Layer 4 Systems Architecture, Interface Contracts, and Concurrency Invariants
 ---
 # Layer 4: Systems Architecture & Defensive Contracts

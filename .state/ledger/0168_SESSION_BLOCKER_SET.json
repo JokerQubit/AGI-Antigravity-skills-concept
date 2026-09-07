@@ -1,0 +1,8 @@
+{
+    "initiator":  "System",
+    "event_type":  "SESSION_BLOCKER_SET",
+    "verification_status":  "RECORDED",
+    "timestamp":  "2026-09-07T18:19:05-03:00",
+    "description":  "Registered session blocker: BLK-PREMISE-AUDIT.",
+    "transaction_id":  "TX-0168-SESSION_BLOCKER_SET"
+}

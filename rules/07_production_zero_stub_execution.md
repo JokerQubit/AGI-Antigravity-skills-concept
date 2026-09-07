@@ -1,5 +1,6 @@
 ---
-trigger: always_on
+trigger: glob
+globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
 description: Layer 7 Production Zero-Stub Execution, Senior Clean Code, and Sandbox Safety
 ---
 # Layer 7: Production Zero-Stub Execution & Senior Clean Code

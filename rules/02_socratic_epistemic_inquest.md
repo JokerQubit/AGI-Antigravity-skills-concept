@@ -1,5 +1,5 @@
 ---
-trigger: always_on
+trigger: model_decision
 description: Layer 2 Socratic Epistemic Inquest, Chroma Horizon 4-Quadrant Drill, and Anti-Sycophancy
 ---
 # Layer 2: Socratic Epistemic Inquest & Epistemic Alignment
