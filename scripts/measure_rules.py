@@ -26,11 +26,11 @@ def check_rules():
         if has_bom:
             status = "BOM FOUND"
             all_ok = False
-        elif length < 3800:
-            status = f"TOO SMALL ({length} < 3800)"
+        elif length < 2800:
+            status = f"TOO SMALL ({length} < 2800)"
             all_ok = False
-        elif length > 5800:
-            status = f"TOO LARGE ({length} > 5800)"
+        elif length > 3900:
+            status = f"TOO LARGE ({length} > 3900)"
             all_ok = False
             
         print(f"{f:<40} {length:<10} {est_tokens:<15} {status}")
