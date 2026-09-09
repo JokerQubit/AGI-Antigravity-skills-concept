@@ -22,6 +22,25 @@ $sessionFile = Join-Path $stateDir "session_state.json"
 
 if (!(Test-Path $ledgerDir)) { New-Item -ItemType Directory -Path $ledgerDir -Force | Out-Null }
 
+function Get-SafeSessionState {
+    param([string]$FilePath, [string]$CommandPath, [string]$InitActor)
+    if (-not (Test-Path $FilePath) -or (Get-Item $FilePath).Length -eq 0) {
+        & powershell -ExecutionPolicy Bypass -File $CommandPath -Action init-session -Initiator $InitActor | Out-Null
+    }
+    $res = $null
+    try {
+        $raw = Get-Content $FilePath -Raw
+        if ($raw -and $raw.Trim().Length -gt 0) {
+            $res = $raw | ConvertFrom-Json
+        }
+    } catch {}
+    if (-not $res) {
+        & powershell -ExecutionPolicy Bypass -File $CommandPath -Action init-session -Initiator $InitActor | Out-Null
+        $res = Get-Content $FilePath -Raw | ConvertFrom-Json
+    }
+    return $res
+}
+
 switch ($Action.ToLower()) {
     "log-event" {
         $existing = Get-ChildItem -Path $ledgerDir -Filter "*.json" | Measure-Object
@@ -126,12 +145,7 @@ switch ($Action.ToLower()) {
 
     "set-blocker" {
         $bId = if ($BlockerId) { $BlockerId } elseif ($Description) { $Description } else { "BLK-GENERAL" }
-        if (-not (Test-Path $sessionFile)) {
-            & powershell -ExecutionPolicy Bypass -File $PSCommandPath -Action init-session -Initiator $Initiator -BlockerId $bId -Description $Description | Out-Null
-            return
-        }
-
-        $sess = Get-Content $sessionFile -Raw | ConvertFrom-Json
+        $sess = Get-SafeSessionState -FilePath $sessionFile -CommandPath $PSCommandPath -InitActor $Initiator
         $existing = @()
         if ($sess.root_session -and $sess.root_session.active_blockers) {
             $existing = @($sess.root_session.active_blockers)
@@ -159,8 +173,8 @@ switch ($Action.ToLower()) {
                 $sess.root_session.active_blockers = $updatedList
                 $sess.root_session.last_updated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz")
             }
-            $sess.active_blockers = $updatedList
-            $sess.last_updated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz")
+            if ($sess.PSObject.Properties['active_blockers']) { $sess.active_blockers = $updatedList } else { $sess | Add-Member -MemberType NoteProperty -Name 'active_blockers' -Value $updatedList -Force }
+            if ($sess.PSObject.Properties['last_updated']) { $sess.last_updated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz") } else { $sess | Add-Member -MemberType NoteProperty -Name 'last_updated' -Value (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz") -Force }
 
             $utf8NoBom = New-Object System.Text.UTF8Encoding $false
             $temp = "$sessionFile.tmp.$([System.Guid]::NewGuid().ToString('N'))"
@@ -176,9 +190,8 @@ switch ($Action.ToLower()) {
 
     "resolve-blocker" {
         $bId = if ($BlockerId) { $BlockerId } elseif ($Description) { $Description } else { "BLK-PREMISE-AUDIT" }
-        if (Test-Path $sessionFile) {
-            $sess = Get-Content $sessionFile -Raw | ConvertFrom-Json
-            
+        $sess = Get-SafeSessionState -FilePath $sessionFile -CommandPath $PSCommandPath -InitActor $Initiator
+        if ($sess) {
             # Helper to filter blockers
             $filterBlockers = {
                 param($list)
@@ -191,17 +204,15 @@ switch ($Action.ToLower()) {
                         }
                     }
                 }
-                return $rem
+                return ,@($rem)
             }
 
-            if ($sess.root_session -and $sess.root_session.active_blockers) {
-                $sess.root_session.active_blockers = & $filterBlockers $sess.root_session.active_blockers
+            if ($sess.root_session) {
+                $sess.root_session.active_blockers = @(& $filterBlockers $sess.root_session.active_blockers)
                 $sess.root_session.last_updated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz")
             }
-            if ($sess.active_blockers) {
-                $sess.active_blockers = & $filterBlockers $sess.active_blockers
-            }
-            $sess.last_updated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz")
+            $sess.active_blockers = @(& $filterBlockers $sess.active_blockers)
+            if ($sess.PSObject.Properties['last_updated']) { $sess.last_updated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz") } else { $sess | Add-Member -MemberType NoteProperty -Name 'last_updated' -Value (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz") -Force }
 
             $utf8NoBom = New-Object System.Text.UTF8Encoding $false
             $temp = "$sessionFile.tmp.$([System.Guid]::NewGuid().ToString('N'))"
@@ -235,11 +246,8 @@ switch ($Action.ToLower()) {
     "record-hypothesis" {
         $hypText = if ($Hypothesis) { $Hypothesis } elseif ($Description) { $Description } else { "Unspecified hypothesis" }
         $statusVal = if ($Confidence) { $Confidence } else { "UNVERIFIED_HYPOTHESIS" }
-        if (-not (Test-Path $sessionFile)) {
-            & powershell -ExecutionPolicy Bypass -File $PSCommandPath -Action init-session -Initiator $Initiator | Out-Null
-        }
+        $sess = Get-SafeSessionState -FilePath $sessionFile -CommandPath $PSCommandPath -InitActor $Initiator
 
-        $sess = Get-Content $sessionFile -Raw | ConvertFrom-Json
         $hypList = @()
         if ($sess.root_session -and $sess.root_session.cognitive_scratchpad -and $sess.root_session.cognitive_scratchpad.hypotheses) {
             $hypList = @($sess.root_session.cognitive_scratchpad.hypotheses)
@@ -263,8 +271,8 @@ switch ($Action.ToLower()) {
             $sess.root_session.cognitive_scratchpad.hypotheses = $updatedHyp
             $sess.root_session.last_updated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz")
         }
-        $sess.hypotheses = $updatedHyp
-        $sess.last_updated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz")
+        if ($sess.PSObject.Properties['hypotheses']) { $sess.hypotheses = $updatedHyp } else { $sess | Add-Member -MemberType NoteProperty -Name 'hypotheses' -Value $updatedHyp -Force }
+        if ($sess.PSObject.Properties['last_updated']) { $sess.last_updated = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz") } else { $sess | Add-Member -MemberType NoteProperty -Name 'last_updated' -Value (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz") -Force }
 
         $utf8NoBom = New-Object System.Text.UTF8Encoding $false
         $temp = "$sessionFile.tmp.$([System.Guid]::NewGuid().ToString('N'))"

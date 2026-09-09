@@ -7,65 +7,153 @@
                                                       "hypotheses":  [
                                                                          {
                                                                              "status":  "PROVEN_FACT",
-                                                                             "timestamp":  "2026-09-07T20:56:13-03:00",
+                                                                             "timestamp":  "2026-09-08T21:34:06-03:00",
                                                                              "id":  "HYP-001",
                                                                              "statement":  "Session state engine verified on physical disk",
+                                                                             "verified_by":  "System"
+                                                                         },
+                                                                         {
+                                                                             "status":  "PROVEN_FACT",
+                                                                             "timestamp":  "2026-09-08T21:36:44-03:00",
+                                                                             "id":  "HYP-002",
+                                                                             "statement":  "AETHXX Studio company foundation, vector assets, production website, and operational playbooks are 100% complete and validated on physical disk",
+                                                                             "verified_by":  "System"
+                                                                         },
+                                                                         {
+                                                                             "status":  "PROVEN_FACT",
+                                                                             "timestamp":  "2026-09-08T21:37:52-03:00",
+                                                                             "id":  "HYP-003",
+                                                                             "statement":  "Operational and domain playbooks must reside within active project agent rules (.agents/rules/*.md or AGENTS.md) with YAML triggers to ensure active injection into AI context, as inert docs are excluded from runtime ingestion",
+                                                                             "verified_by":  "System"
+                                                                         },
+                                                                         {
+                                                                             "status":  "PROVEN_FACT",
+                                                                             "timestamp":  "2026-09-08T21:39:17-03:00",
+                                                                             "id":  "HYP-004",
+                                                                             "statement":  "AGI rules must explicitly codify the Playbooks-as-Rules Invariant across AGENTS.md, Layer 1, Layer 3, and Layer 7/8, strictly prohibiting creating playbooks in docs/ and mandating .agents/rules/ with YAML triggers",
+                                                                             "verified_by":  "System"
+                                                                         },
+                                                                         {
+                                                                             "status":  "PROVEN_FACT",
+                                                                             "timestamp":  "2026-09-08T21:40:44-03:00",
+                                                                             "id":  "HYP-005",
+                                                                             "statement":  "All 12 AGI rule files have been updated with the Playbooks-as-Rules Invariant across AGENTS.md, Layer 1, Layer 3, Layer 7, and Layer 8, strictly prohibiting creating playbooks in docs/ and enforcing .agents/rules/*.md, with 100% calibration compliance between 2800 and 3900 bytes",
+                                                                             "verified_by":  "System"
+                                                                         },
+                                                                         {
+                                                                             "status":  "PROVEN_FACT",
+                                                                             "timestamp":  "2026-09-08T21:41:14-03:00",
+                                                                             "id":  "HYP-006",
+                                                                             "statement":  "Workspace delightful-hopper contains an unpatched sync_state.ps1 with the PropertyNotFound bug on last_updated and experienced a PowerShell nested-quote variable expansion parsing error",
+                                                                             "verified_by":  "System"
+                                                                         },
+                                                                         {
+                                                                             "status":  "PROVEN_FACT",
+                                                                             "timestamp":  "2026-09-08T21:41:29-03:00",
+                                                                             "id":  "HYP-007",
+                                                                             "statement":  "The errors in delightful-hopper stem from (1) unpatched sync_state.ps1 which is now updated with safe session loading, (2) nested PowerShell double-quote expansion of variable dollar user, and (3) Mercado Livre API restricting title edits with BODY_INVALID_FIELDS on sold/catalog items",
+                                                                             "verified_by":  "System"
+                                                                         },
+                                                                         {
+                                                                             "status":  "PROVEN_FACT",
+                                                                             "timestamp":  "2026-09-08T21:42:31-03:00",
+                                                                             "id":  "HYP-008",
+                                                                             "statement":  "Playbooks successfully migrated to calibrated agent rules in .agents/rules and root AGENTS.md with active AI context ingestion",
                                                                              "verified_by":  "System"
                                                                          }
                                                                      ]
                                                   },
-                         "root_conversation_id":  "738b452f-eb86-47ad-83d5-3e1ce7c9b042",
-                         "active_blockers":  null,
-                         "session_id":  "SES-20260907-205608-044a",
-                         "created_at":  "2026-09-07T20:56:08-03:00",
+                         "root_conversation_id":  "f949f96c-47ab-479c-bf56-7d32710e73d0",
+                         "active_blockers":  [
+                                                 [
+
+                                                 ]
+                                             ],
+                         "session_id":  "SES-20260908-213401-3d06",
+                         "created_at":  "2026-09-08T21:34:01-03:00",
                          "actor_role":  "ACTOR_PRIMARY_CEO",
                          "actor":  "Dr. Alexander Vance (CEO)",
                          "active_mandate":  "Validation suite root session",
-                         "last_updated":  "2026-09-07T20:56:16-03:00",
-                         "last_user_snippet":  "OlÃƒÆ’Ã‚Â¡ Vance, como estÃƒÆ’Ã‚Â¡ o progresso da arquitetura neural?"
+                         "last_updated":  "2026-09-08T21:43:36-03:00",
+                         "last_user_snippet":  "\u003cUSER_REQUEST\u003e\nÃ¢â‚¬Â¦\\delightful-hopper \u003e powershell -ExecutionPolicy Bypass -File .\\scripts\\sync_state.ps1 -Action resolve"
                      },
-    "last_updated":  "2026-09-07T20:56:16-03:00",
+    "last_updated":  "2026-09-08T21:43:36-03:00",
     "subagents":  {
-                      "738b452f-eb86-47ad-83d5-3e1ce7c9b042":  {
+                      "e83a96e4-4ec4-449d-8e52-acb6f069f16a":  {
                                                                    "actor":  "Level 1 Specialist",
                                                                    "active_blockers":  [
 
                                                                                        ],
-                                                                   "subagent_id":  "738b452f-eb86-47ad-83d5-3e1ce7c9b042",
+                                                                   "subagent_id":  "e83a96e4-4ec4-449d-8e52-acb6f069f16a",
                                                                    "role_tier":  "L1_SPECIALIST",
-                                                                   "registered_at":  "2026-09-07T18:34:10-03:00"
-                                                               },
-                      "95ba693b-2f24-47f1-9b85-73d13720b839":  {
-                                                                   "actor":  "Level 1 Specialist",
-                                                                   "active_blockers":  [
-
-                                                                                       ],
-                                                                   "subagent_id":  "95ba693b-2f24-47f1-9b85-73d13720b839",
-                                                                   "role_tier":  "L1_SPECIALIST",
-                                                                   "registered_at":  "2026-09-07T18:42:59-03:00"
-                                                               },
-                      "cc40d89e-6cbc-429d-9f54-146997617bf8":  {
-                                                                   "actor":  "Level 1 Specialist",
-                                                                   "active_blockers":  [
-
-                                                                                       ],
-                                                                   "subagent_id":  "cc40d89e-6cbc-429d-9f54-146997617bf8",
-                                                                   "role_tier":  "L1_SPECIALIST",
-                                                                   "registered_at":  "2026-09-07T18:43:04-03:00"
+                                                                   "registered_at":  "2026-09-08T21:24:41-03:00"
                                                                }
                   },
-    "active_blockers":  null,
+    "active_blockers":  [
+                            [
+
+                            ]
+                        ],
     "hypotheses":  [
                        {
                            "status":  "PROVEN_FACT",
-                           "timestamp":  "2026-09-07T20:56:13-03:00",
+                           "timestamp":  "2026-09-08T21:34:06-03:00",
                            "id":  "HYP-001",
                            "statement":  "Session state engine verified on physical disk",
                            "verified_by":  "System"
+                       },
+                       {
+                           "status":  "PROVEN_FACT",
+                           "timestamp":  "2026-09-08T21:36:44-03:00",
+                           "id":  "HYP-002",
+                           "statement":  "AETHXX Studio company foundation, vector assets, production website, and operational playbooks are 100% complete and validated on physical disk",
+                           "verified_by":  "System"
+                       },
+                       {
+                           "status":  "PROVEN_FACT",
+                           "timestamp":  "2026-09-08T21:37:52-03:00",
+                           "id":  "HYP-003",
+                           "statement":  "Operational and domain playbooks must reside within active project agent rules (.agents/rules/*.md or AGENTS.md) with YAML triggers to ensure active injection into AI context, as inert docs are excluded from runtime ingestion",
+                           "verified_by":  "System"
+                       },
+                       {
+                           "status":  "PROVEN_FACT",
+                           "timestamp":  "2026-09-08T21:39:17-03:00",
+                           "id":  "HYP-004",
+                           "statement":  "AGI rules must explicitly codify the Playbooks-as-Rules Invariant across AGENTS.md, Layer 1, Layer 3, and Layer 7/8, strictly prohibiting creating playbooks in docs/ and mandating .agents/rules/ with YAML triggers",
+                           "verified_by":  "System"
+                       },
+                       {
+                           "status":  "PROVEN_FACT",
+                           "timestamp":  "2026-09-08T21:40:44-03:00",
+                           "id":  "HYP-005",
+                           "statement":  "All 12 AGI rule files have been updated with the Playbooks-as-Rules Invariant across AGENTS.md, Layer 1, Layer 3, Layer 7, and Layer 8, strictly prohibiting creating playbooks in docs/ and enforcing .agents/rules/*.md, with 100% calibration compliance between 2800 and 3900 bytes",
+                           "verified_by":  "System"
+                       },
+                       {
+                           "status":  "PROVEN_FACT",
+                           "timestamp":  "2026-09-08T21:41:14-03:00",
+                           "id":  "HYP-006",
+                           "statement":  "Workspace delightful-hopper contains an unpatched sync_state.ps1 with the PropertyNotFound bug on last_updated and experienced a PowerShell nested-quote variable expansion parsing error",
+                           "verified_by":  "System"
+                       },
+                       {
+                           "status":  "PROVEN_FACT",
+                           "timestamp":  "2026-09-08T21:41:29-03:00",
+                           "id":  "HYP-007",
+                           "statement":  "The errors in delightful-hopper stem from (1) unpatched sync_state.ps1 which is now updated with safe session loading, (2) nested PowerShell double-quote expansion of variable dollar user, and (3) Mercado Livre API restricting title edits with BODY_INVALID_FIELDS on sold/catalog items",
+                           "verified_by":  "System"
+                       },
+                       {
+                           "status":  "PROVEN_FACT",
+                           "timestamp":  "2026-09-08T21:42:31-03:00",
+                           "id":  "HYP-008",
+                           "statement":  "Playbooks successfully migrated to calibrated agent rules in .agents/rules and root AGENTS.md with active AI context ingestion",
+                           "verified_by":  "System"
                        }
                    ],
-    "session_id":  "SES-20260907-205608-044a",
-    "created_at":  "2026-09-07T20:56:08-03:00",
+    "session_id":  "SES-20260908-213401-3d06",
+    "created_at":  "2026-09-08T21:34:01-03:00",
     "actor":  "Dr. Alexander Vance (CEO)",
     "role_tier":  "L6_CEO",
     "$schema":  "https://json-schema.org/draft/2020-12/schema",

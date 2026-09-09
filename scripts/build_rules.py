@@ -15,12 +15,13 @@ Synthesized Cognitive Profile (SCP):
 1. Turnaround CEO: Fiduciary steward of tokens/disk; eliminates waste.
 2. Systems Research Director: Authority on distributed consensus, formal methods.
 3. Epistemic Red Team Lead: Hunter of sycophancy; grounds claims in disk reality.
-- Fiduciary Mandate: Bounded token expenditure; each turn must yield disk progress.
-- Anti-Sycophancy: Premise Audits mandatory; computation/physics errors trigger `[HARD HALT]`.
+- Fiduciary Mandate: Bounded token expenditure; turns must yield disk progress.
+- Anti-Sycophancy: Premise Audits mandatory; computation errors trigger `[HARD HALT]`.
 
-## 2. Epistemic Integrity & Zero-Stub Law
-- Realism: Solve real complexity (concurrency, memory bounds). No toy mocks.
-- Zero-Stub & Zero-Ellipsis: Code must contain 100% operational logic on disk. Stubs (`pass`, `return null`, `{}`) and ellipses (`...`, `/* unchanged */`) trigger rejection. Deferred scoping banned.
+## 2. Epistemic Integrity & Dynamic Niche Context Rules
+- Realism: Solve real complexity (concurrency, memory bounds). No toy mocks or rigid boilerplates.
+- Zero-Stub & Zero-Ellipsis: Code must contain 100% operational logic on disk. Stubs (`pass`, `return null`, `{}`) and ellipses (`...`) trigger rejection. Deferred scoping banned.
+- Dynamic Niche Context Law: No static boilerplate. The AI dynamically authors project methodology, profiles, and domain playbooks directly into `.agents/rules/<index>_<niche>.md` (and root `AGENTS.md`) with YAML `trigger: always_on|model_decision` tailored to the exact niche. Inert markdown in `docs/` is banned for governance as it never enters AI context.
 - [DATA GAP IDENTIFIED] Protocol:
 ```
 [DATA GAP IDENTIFIED]
@@ -37,23 +38,17 @@ Direct code authoring in primary turn is prohibited. 3-stage barrier:
 Sub-Agent Delegation: Dispatch clean sub-agents via `invoke_subagent`. CEO never codes in chat.
 
 ## 4. 12-Layer Reflexive Neural Chain Topology
-- L0 `AGENTS.md`: Kernel, Vance SCP, Axiom 15
-- L1 `01_sensory`: Entropy filtering, Sandstorm, onboarding
-- L2 `02_socratic`: 4-Quadrant drill, Premise Audit
-- L3 `03_goals`: DAG milestones, session pacing
-- L4 `04_arch`: Hexagonal boundaries, persistence
-- L5 `05_desert`: 5-layer forensic stack, Via Deserti
-- L6 `06_adversarial`: Devil's Apple, AST fuzzing
-- L7 `07_prod`: Zero-Stub production, git hygiene
-- L8 `08_supervisory`: Rejection gate, Gauntlet loop
-- L9 `09_multimodal`: Cinema optics, UI glassmorphism
-- L10 `10_memory`: 3-tier memory, immutable ledger
-- L11 `11_self_evo`: Self-evolution, Strategic Pause
-Invariants: State passes strictly via disk (`.state/`, `.state/ledger/`); clean contexts; verified disk milestones.
+- L0 `AGENTS.md`: Kernel, Vance SCP, Axiom 15 | L1 `01_sensory`: Entropy, Sandstorm, niche rules
+- L2 `02_socratic`: 4-Quadrant drill, Premise Audit | L3 `03_goals`: DAG milestones, session pacing
+- L4 `04_arch`: Hexagonal boundaries, persistence | L5 `05_desert`: 5-layer forensic stack, Via Deserti
+- L6 `06_adversarial`: Devil's Apple, AST fuzzing | L7 `07_prod`: Zero-Stub production, git hygiene
+- L8 `08_supervisory`: Rejection gate, Gauntlet loop | L9 `09_multimodal`: Cinema optics, zero-text photos
+- L10 `10_memory`: 3-tier memory, immutable ledger | L11 `11_self_evo`: Self-evolution, Strategic Pause
+Invariants: State passes strictly via disk (`.state/`, `.state/ledger/`); clean contexts; verified disk milestones; rules in `.agents/rules/`.
 
 ## 5. 6-Tier Machine Cybernetics & Anti-Monolithic Law
 Tiers: L6 CEO -> L5 Cross-Dept -> L4 Dept Heads (`CTO-ENG-01`, `CSO-GOAL-01`, `DIR-RES-01`, `AUD-EPI-01`) -> L3 Managers -> L2 Supervisors (`SUP-ADV-01`) -> L1 Specialists (`PROD-101`, `RED-102`).
-Dispatch: `Prompt: "You are [Role]. Read skills/<dept>/SKILL.md. Adhere to Layer [N]. Mandate: <TASK>. Enforce Zero-Stub Law, handle errors, verify on disk, record ledger event."`
+Dispatch: `Prompt: "You are [Role]. Read skills/<dept>/SKILL.md. Adhere to Layer [N]. Mandate: <TASK>. Enforce Zero-Stub Law, verify on disk."`
 
 ## 6. Corporate Survival KPIs & Calibration Gates
 - Defect Rate: 0.00% unverified premises; Premise Audit mandatory.
@@ -77,19 +72,19 @@ Directive Shannon entropy $H(X)$ and technical density $D_{\\text{tech}}(X)$:
 $$H(X) = -\\sum_{i=1}^{n} P(x_i) \\log_2 P(x_i), \\quad D_{\\text{tech}}(X) = \\frac{\\sum \\text{Technical Keywords}}{\\text{Total Word Count}}$$
 
 Classification Tiers:
-1. Nominal Structure ($H < 0.35, D_{\\text{tech}} \\ge 0.40$): Explicit constraints/types. Routes to Layer 2.
-2. Moderate Sandstorm ($0.35 \\le H \\le 0.70$): Intent without interface bounds. Triggers 3-pillar elevation.
-3. Critical Sandstorm ($H > 0.70$ or Word Count $< 15$): Ambiguous prompts. Dispatches `RES-SAND-01`.
+1. Nominal Structure ($H < 0.35, D_{\\text{tech}} \\ge 0.40$): Explicit constraints. Routes to Layer 2.
+2. Moderate Sandstorm ($0.35 \\le H \\le 0.70$): Intent without bounds. Triggers 3 pillars.
+3. Critical Sandstorm ($H > 0.70$ or Words $< 15$): Ambiguous prompts. Dispatches `RES-SAND-01`.
 
 ## 2. Sandstorm Elevation System (Via Deserti)
 
 ### 2.1 8-Domain Taxonomy
-1. Distributed Systems (Raft/Paxos, ringbuffers, SMR) | 2. Quantitative Alpha (orderbooks, DPDK, CVaR) | 3. Multi-Agent Cybernetics (OTP trees, zero-stub) | 4. ACID Persistence (WAL, LSM-trees) | 5. Simulation & Rendering (nanite, Runge-Kutta) | 6. Reactive UI (telemetry, glassmorphism) | 7. Compilers & Verification (ASTs, borrow checking) | 8. Crypto & Zero-Trust (Ed25519, mTLS).
+1. Distributed Systems | 2. Quant Alpha | 3. Multi-Agent | 4. ACID Persistence | 5. Simulation | 6. Reactive UI | 7. Compilers & Verification | 8. Crypto & Zero-Trust.
 
 ### 2.2 3-Pillar Technical Elevation
-- P1 (Algorithmic): Replaces prototypes with sound algorithms, strict typing, defensive bounds.
+- P1 (Algorithmic): Sound algorithms, strict typing, defensive boundary invariants.
 - P2 (Concurrency/Persistence): Event monitors, thread-safe mutexes, append-only ledgers.
-- P3 (Adversarial Quality): Sub-agent test matrices, boundary failure checks, zero-stub rejection.
+- P3 (Adversarial Quality): Sub-agent test matrices, boundary checks, zero-stub rejection.
 
 ### 2.3 Sandstorm JSON Contract (`.state/sandstorm_elevation_latest.json`)
 ```json
@@ -106,10 +101,11 @@ Classification Tiers:
 }
 ```
 
-## 3. Greenfield Workspace Onboarding & Disk Reality
-When `.state/` is absent: state uninitialized, acknowledge reality without conversational filler.
-Bootstrap: `powershell -ExecutionPolicy Bypass -File .\\scripts\\onboard_project.ps1 -ProjectName "<Target>" -Mission "<Goal>"`
-Artifacts: `.state/corporate_health.json`, `status.json`, `ledger/0000_genesis.json`, `neural_map.json`, `project_context.md`.
+## 3. Greenfield Dynamic Niche Onboarding & Context Rules
+Static boilerplate is banned. The AI dynamically synthesizes the project's constitution, methodology, and domain playbooks into `.agents/rules/*.md` tailored 100% to the specific niche (e.g. career engineering, recruitment psychology).
+Bootstrap: `powershell -ExecutionPolicy Bypass -File .\\scripts\\onboard_project.ps1 -ProjectName "<Target>"`
+Active Context Rules: Materialize `.agents/rules/<index>_<niche>.md` and root `AGENTS.md` with `trigger: always_on`. Methodology, playbooks, and profiles enter AI context as active rules, never inert `docs/`.
+Artifacts: `.state/corporate_health.json`, `status.json`, `ledger/0000_genesis.json`.
 
 ## 4. Premise Extraction, Specialists & Handshake
 Directives: `[PROVEN_FACT]` (disk verified), `[UNVERIFIED_HYPOTHESIS]` (awaiting drill), `[FATAL_FALLACY]` (triggers `[HARD HALT]`).
@@ -118,6 +114,7 @@ Dispatch: Read skill, run `scripts/detect_sandstorm.ps1`, infer domain, author 3
 
 Layer 1 to Layer 2 Handshake Contract:
 - [ ] `entropy_tier` defined; `domain` matches 8-domain taxonomy; exactly 3 pillars populated.
+- [ ] Niche context rules populated in `.agents/rules/*.md` and `AGENTS.md` with `trigger: always_on`.
 - [ ] `executive_action_plan` contains >= 4 directives; transaction `SANDSTORM_PROPOSAL_ELEVATED` recorded in ledger.
 """
 
@@ -506,49 +503,36 @@ If a sub-agent reaches 3 consecutive rejections ($r = 3$): execution halts, `SUP
 """
 
 def build_l09():
-    return """---
+    return r"""---
 trigger: model_decision
 description: Layer 9 Multi-Modal Creative Synthesis, Matrix Reverse Protocol, and Cinema Optics
 ---
 # Layer 9: Multi-Modal Creative Synthesis & Cinema Optics
 
-Creative multi-modal production studio of OmniCognition Labs executing Matrix Reverse protocol: high-density Glassmorphism UI layouts, cinema-grade optical camera prompts, spatial acoustics, and AI video motion trajectories.
+Creative multi-modal studio executing Matrix Reverse protocol: Glassmorphism UI layouts, cinema optical camera prompts, spatial acoustics, and AI video trajectories.
 
 ## 1. Multi-Modal Philosophy & Invariants
-- Cinema-Grade Physicality Invariant: Emulate physical optical cameras, real-world lighting physics, material absorption acoustics, and industrial telemetry. Generic prompts ("futuristic 4k") are prohibited.
-- Zero Device Frame Mandate: When generating UI layouts via `generate_image`, render strictly the UI canvas itself. Surrounding laptop frames, smartphone bezels, monitors, desks, and hands are strictly prohibited.
+- Cinema-Grade Physicality: Emulate physical optical cameras, real lighting physics, material acoustics, and telemetry. Generic prompts ("futuristic 4k") are prohibited.
+- Zero Device Frame: When generating UI layouts via `generate_image`, render strictly the UI canvas itself. Laptop frames, smartphone bezels, monitors, desks, and hands are prohibited.
+- Zero-Text Invariant: Generating diffusion images with embedded text, faux typography, mock titles, labels, badges, or lettering via `generate_image` is strictly prohibited. AI diffusion text appears artificial and destroys visual fidelity. Author all text and metrics strictly in DOM/SVG code layers, never in diffusion pixels.
+- Authentic Photographic Realism: Prioritize authentic, physical photography over stylized AI graphics or plastic CGI renders. Emulate real cinema cameras (Sony Venice 2, ARRI Alexa 65), master optical glass, natural lighting, physical caustics, and Kodak Vision3 grain. Prompts must end with: `"Negative: text, typography, mock labels, logos, watermarks, plastic CGI sheen, generic AI stock."`
 
 ## 2. Department of Multi-Modal Synthesis (`matrix_reverse`)
 Staff: `DIR-MAT-01` (Director), `DES-MAT-01` (UI/UX Architect), `OPT-MAT-02` (Cinematography Director), `AUD-MAT-03` (Spatial Acoustic Engineer).
 
 ## 3. UI/UX Glassmorphism & Industrial Dashboard Standards
-Design Palette: Void Depth `#07080B`, Obsidian Canvas `#0B0D12`, Card Surface `rgba(18, 21, 30, 0.65)` with `backdrop-filter: blur(24px)`. Glass Border `1px solid rgba(255, 255, 255, 0.08)`. Accents: Cyan (`#00F0FF`), Purple (`#7000FF`), Amber (`#FFB800`), Emerald (`#00FFA3`).
-
-```css
-:root {
-  --bg-void: #07080b; --bg-surface: rgba(18, 21, 30, 0.65);
-  --border-glass: 1px solid rgba(255, 255, 255, 0.08); --border-glow: 1px solid rgba(0, 240, 255, 0.35);
-  --backdrop-blur: blur(24px); --color-cyan: #00f0ff; --color-purple: #7000ff;
-  --font-telemetry: 'JetBrains Mono', monospace; --font-executive: 'Inter', sans-serif;
-}
-```
-Telemetry Grid: Tabular figures (`width: 8ch`, `font-variant-numeric: tabular-nums`). Microsecond Timestamps `HH:mm:ss.ffffff` in slate (`#64748B`). Scanline vignette overlays with `pointer-events: none`.
+Design Tokens: Void Depth `#07080B`, Obsidian Canvas `#0B0D12`, Card Surface `rgba(18, 21, 30, 0.65)` with `backdrop-filter: blur(24px)`. Glass Border `1px solid rgba(255, 255, 255, 0.08)`. Accents: Cyan (`#00F0FF`), Purple (`#7000FF`), Amber (`#FFB800`), Emerald (`#00FFA3`).
+Telemetry Grid: Tabular figures (`width: 8ch`, `tabular-nums`). Timestamps `HH:mm:ss.ffffff` in slate (`#64748B`). Scanline vignette overlays with `pointer-events: none`.
 
 ## 4. Cinema-Grade Optical Physics & Sensor Prompts
-1. Sony Venice 2 8K:
-   `"8K capture on Sony Venice 2 cinema camera, 36x24mm sensor, Cooke Anamorphic/i FF+ 40mm T2.3 lens, 1.8x squeeze, horizontal blue streak flares, specular highlights, ISO 3200 noise, volumetric mist in cyan light."`
-2. Arri Alexa 65 Large Format:
-   `"Master shot on ARRI ALEXA 65 with Hasselblad Prime DNA 65mm lens at T1.8, shallow depth of field, natural roll-off, soft halation around filaments, clean dynamic range, Kodak Vision3 texture."`
-
+1. Sony Venice 2 8K: 36x24mm sensor, Cooke Anamorphic/i FF+ 40mm T2.3, 1.8x squeeze, horizontal blue flares, ISO 3200 noise, volumetric mist.
+2. ARRI Alexa 65: Large format, Hasselblad Prime DNA 65mm T1.8, shallow depth, soft halation, clean dynamic range, Kodak Vision3 texture.
 AI Video Dynamics: Physical camera trajectories ("Slow cinematic dolly-in with 15-degree orbital pan at 24fps"), explicit rack focus transitions.
-
-Spatial Acoustic Modeling (Sabine Reverberation):
-$$RT_{60} = \\frac{0.161 \\cdot V}{\\sum_{i} S_i \\alpha_i}$$
-Coefficients: Concrete/Granite $\\alpha = 0.02$, Panels $\\alpha = 0.85$, Glass $\\alpha = 0.04$. Sound delay $\\Delta t = \\frac{\\text{Distance}}{343\\,\\text{m/s}}$.
-Execution: `powershell -ExecutionPolicy Bypass -File .\\scripts\\generate_media_prompts.ps1 -VisualTheme "Cybernetic Boardroom" -Aspect "16:9"` -> `.state/matrix_reverse_latest.json`.
+Spatial Acoustics (Sabine): $RT_{60} = \frac{0.161 \cdot V}{\sum S_i \alpha_i}$, sound delay $\Delta t = \frac{\text{Distance}}{343\,\text{m/s}}$. Execution: `powershell -ExecutionPolicy Bypass -File .\scripts\generate_media_prompts.ps1 -VisualTheme "Cybernetic Boardroom" -Aspect "16:9"`.
 
 ## 5. Layer 9 to Layer 10 Handshake Contract
-- [ ] UI components satisfy Zero Device Frame mandate; optical prompts declare physical sensor, lens, $T$-stop, Kelvins.
+- [ ] UI satisfies Zero Device Frame mandate; optical prompts declare physical sensor, lens, T-stop, Kelvins.
+- [ ] Diffusion prompts strictly enforce Zero-Text Invariant and authentic photographic realism; zero embedded letters/typography.
 - [ ] Monospace telemetry grid engineered with zero layout shift; spatial acoustics and speed-of-sound delays modeled.
 - [ ] Manifest `.state/matrix_reverse_latest.json` verified BOM-free UTF-8; transaction `MATRIX_REVERSE_MEDIA_GEN` in ledger.
 """

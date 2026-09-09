@@ -106,6 +106,10 @@ if ($inputObj -and $inputObj.transcriptPath -and (Test-Path $inputObj.transcript
             try {
                 $to = $tailLines[$i] | ConvertFrom-Json
                 if ($to.type -eq 'USER_INPUT' -and $to.content) {
+                    if ($to.content.IndexOf("Stop hook blocked termination", [System.StringComparison]::OrdinalIgnoreCase) -ge 0 -or
+                        $to.content.IndexOf("<SYSTEM_MESSAGE>", [System.StringComparison]::OrdinalIgnoreCase) -ge 0) {
+                        continue
+                    }
                     if (-not $lastUser) {
                         $lastUser = $to.content
                     }
@@ -140,8 +144,14 @@ if (Test-Path $sessionFile) {
 
 # 3. Session State Management & Blocker Injection
 $hasPremiseBlocker = $false
-if (-not $isGreenfield) {
-    $userSnippet = if ($lastUser) { $lastUser.Substring(0, [Math]::Min(120, $lastUser.Length)) } else { "" }
+    $cleanUser = if ($lastUser) {
+        $u = $lastUser
+        $u = [regex]::Replace($u, "(?is)<\s*USER_REQUEST\s*>", "")
+        $u = [regex]::Replace($u, "(?is)<\s*/\s*USER_REQUEST\s*>", "")
+        $u = [regex]::Replace($u, "(?is)<\s*ADDITIONAL_METADATA\s*>.*?<\s*/\s*ADDITIONAL_METADATA\s*>", "")
+        $u.Trim()
+    } else { "" }
+    $userSnippet = if ($cleanUser) { $cleanUser.Substring(0, [Math]::Min(120, $cleanUser.Length)).Trim() } else { "" }
     $now = (Get-Date).ToString("yyyy-MM-ddTHH:mm:sszzz")
     
     if (-not $isSubAgent) {
@@ -210,7 +220,15 @@ if (-not $isGreenfield) {
 
             # Check if this is a brand new user prompt
             $lastSnippet = if ($sessionObj.root_session.last_user_snippet) { $sessionObj.root_session.last_user_snippet } elseif ($sessionObj.last_user_snippet) { $sessionObj.last_user_snippet } else { "" }
-            $needsNewAudit = ($userSnippet -and $lastSnippet -ne $userSnippet)
+            $lastClean = if ($lastSnippet) {
+                $u = $lastSnippet
+                $u = [regex]::Replace($u, "(?is)<\s*USER_REQUEST\s*>", "")
+                $u = [regex]::Replace($u, "(?is)<\s*/\s*USER_REQUEST\s*>", "")
+                $u = [regex]::Replace($u, "(?is)<\s*ADDITIONAL_METADATA\s*>.*?<\s*/\s*ADDITIONAL_METADATA\s*>", "")
+                $u.Trim()
+            } else { "" }
+            $lastCleanSnippet = if ($lastClean) { $lastClean.Substring(0, [Math]::Min(120, $lastClean.Length)).Trim() } else { "" }
+            $needsNewAudit = ($userSnippet -and $lastCleanSnippet -ne $userSnippet)
             
             $existingBlockers = @()
             if ($sessionObj.root_session -and $sessionObj.root_session.active_blockers) {

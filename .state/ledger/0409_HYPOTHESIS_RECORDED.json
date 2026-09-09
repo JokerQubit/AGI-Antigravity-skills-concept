@@ -1,0 +1,8 @@
+{
+    "initiator":  "System",
+    "event_type":  "HYPOTHESIS_RECORDED",
+    "verification_status":  "RECORDED",
+    "timestamp":  "2026-09-08T21:39:17-03:00",
+    "description":  "Recorded hypothesis HYP-004 [PROVEN_FACT]: AGI rules must explicitly codify the Playbooks-as-Rules Invariant across AGENTS.md, Layer 1, Layer 3, and Layer 7/8, strictly prohibiting creating playbooks in docs/ and mandating .agents/rules/ with YAML triggers",
+    "transaction_id":  "TX-0409-HYPOTHESIS_RECORDED"
+}
