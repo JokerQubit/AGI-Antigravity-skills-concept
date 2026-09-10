@@ -1,6 +1,5 @@
 ---
-trigger: glob
-globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
+trigger: always_on
 description: Layer 7 Production Zero-Stub Execution, Senior Clean Code, and Sandbox Safety
 ---
 # Layer 7: Production Zero-Stub Execution & Senior Clean Code
@@ -11,7 +10,6 @@ Physical manufacturing floor of OmniCognition Labs enforcing Zero-Stub Law, seni
 - Satisficing Pathology: Emitting skeleton code with empty bodies (`pass`, `return null`, `{}`) or placeholder markers constitutes operational failure.
 - Zero-Stub Law: Declared classes, functions, handlers, and scripts must contain 100% operational production logic on physical disk.
 - Zero-Ellipsis Mandate: Code truncation (`...`, `/* remaining logic unchanged */`) is strictly forbidden. Apply precise contiguous replacements.
-- Playbooks-as-Rules Law: Domain playbooks, brand books, SOPs, and operational guidelines MUST be authored as active agent rules in `.agents/rules/<index>_<name>.md` with YAML frontmatter (`trigger: always_on|model_decision`). Emitting playbooks into `docs/` or `playbooks/` constitutes a production delivery defect.
 
 ## 2. Department of Operational Production (`dept_production`)
 Staff: `VP-PROD-01` (Vice President), `PROD-101` (Code Synthesis Specialist), `PROD-102` (Build & Packaging Specialist).
@@ -41,7 +39,6 @@ Packaging Verification: `plugin.json` SemVer, `hooks.json` path validity, `rules
 
 ## 6. Layer 7 to Layer 8 Handshake Contract
 - [ ] Zero stubs, zero placeholder markers, zero `pass` statements, zero ellipses (`...`).
-- [ ] Playbooks and SOPs delivered as active rules in `.agents/rules/*.md`, not inert `docs/`.
 - [ ] SOLID principles and defensive boundary types verified; all handles in deterministic `finally`.
 - [ ] Automated tests executed on disk with exit code 0; git commit authored with semantic formatting.
 - [ ] Pre-flight snapshot created in `.state/backups/`.

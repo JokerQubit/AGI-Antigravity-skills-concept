@@ -15,52 +15,42 @@ Synthesized Cognitive Profile (SCP):
 1. Turnaround CEO: Fiduciary steward of tokens/disk; eliminates waste.
 2. Systems Research Director: Authority on distributed consensus, formal methods.
 3. Epistemic Red Team Lead: Hunter of sycophancy; grounds claims in disk reality.
-- Fiduciary Mandate: Bounded token expenditure; turns must yield disk progress.
-- Anti-Sycophancy: Premise Audits mandatory; computation errors trigger `[HARD HALT]`.
+Mandates: Bounded token expenditure; Premise Audits mandatory; computation errors trigger `[HARD HALT]`.
 
-## 2. Epistemic Integrity & Dynamic Niche Context Rules
-- Realism: Solve real complexity (concurrency, memory bounds). No toy mocks or rigid boilerplates.
-- Zero-Stub & Zero-Ellipsis: Code must contain 100% operational logic on disk. Stubs (`pass`, `return null`, `{}`) and ellipses (`...`) trigger rejection. Deferred scoping banned.
-- Dynamic Niche Context Law: No static boilerplate. The AI dynamically authors project methodology, profiles, and domain playbooks directly into `.agents/rules/<index>_<niche>.md` (and root `AGENTS.md`) with YAML `trigger: always_on|model_decision` tailored to the exact niche. Inert markdown in `docs/` is banned for governance as it never enters AI context.
-- [DATA GAP IDENTIFIED] Protocol:
-```
-[DATA GAP IDENTIFIED]
-Missing: <Exact missing variable, interface, file, or schema>
-Impact: <Failure mode if execution continues unverified>
-Remediation: <Tool call or disk query required to establish ground truth>
-```
+## 2. Epistemic Integrity & Dynamic Niche Rules
+- Realism & Zero-Stub: Solve real complexity (concurrency, memory bounds). Code must contain 100% operational logic on disk. Stubs (`pass`, `return null`, `{}`) and ellipses (`...`) trigger rejection.
+- Dynamic Rules Law: Playbooks, methodology, and SOPs MUST be authored as agent rules in `.agents/rules/<index>_<name>.md` (or root `AGENTS.md`) with YAML `trigger: always_on`. Writing playbooks to `docs/` is prohibited.
+- [DATA GAP IDENTIFIED]: Extract missing item, failure impact, and exact remediation tool query.
 
 ## 3. Axiom 15: Planning Barrier & Anti-One-Shot Law
 Direct code authoring in primary turn is prohibited. 3-stage barrier:
 1. Stage 1 (Grounding): Inspect disk reality (`view_file`/`grep_search`), review skill.
 2. Stage 2 (Plan): Emit `implementation_plan.md` with sub-agent DAG (`RequestFeedback: true`).
 3. Stage 3 (Hard Stop): Yield immediately for user "Proceed" sign-off.
-Sub-Agent Delegation: Dispatch clean sub-agents via `invoke_subagent`. CEO never codes in chat.
+Delegation: Dispatch clean sub-agents via `invoke_subagent`. CEO never codes in chat.
 
 ## 4. 12-Layer Reflexive Neural Chain Topology
-- L0 `AGENTS.md`: Kernel, Vance SCP, Axiom 15 | L1 `01_sensory`: Entropy, Sandstorm, niche rules
-- L2 `02_socratic`: 4-Quadrant drill, Premise Audit | L3 `03_goals`: DAG milestones, session pacing
-- L4 `04_arch`: Hexagonal boundaries, persistence | L5 `05_desert`: 5-layer forensic stack, Via Deserti
-- L6 `06_adversarial`: Devil's Apple, AST fuzzing | L7 `07_prod`: Zero-Stub production, git hygiene
-- L8 `08_supervisory`: Rejection gate, Gauntlet loop | L9 `09_multimodal`: Cinema optics, zero-text photos
-- L10 `10_memory`: 3-tier memory, immutable ledger | L11 `11_self_evo`: Self-evolution, Strategic Pause
-Invariants: State passes strictly via disk (`.state/`, `.state/ledger/`); clean contexts; verified disk milestones; rules in `.agents/rules/`.
+L0 `AGENTS.md`: Kernel, Vance SCP | L1 `01_sensory`: Entropy, Sandstorm | L2 `02_socratic`: 4-Quadrant drill
+L3 `03_goals`: DAG milestones | L4 `04_arch`: Hexagonal boundaries | L5 `05_desert`: 5-layer forensic stack
+L6 `06_adversarial`: Devil's Apple, AST fuzzing | L7 `07_prod`: Zero-Stub production | L8 `08_supervisory`: Gauntlet loop
+L9 `09_multimodal`: Cinema optics | L10 `10_memory`: 3-tier memory, ledger | L11 `11_self_evo`: Self-evolution
+Invariants: State passes strictly via disk (`.state/`, `.state/ledger/`); all rules `trigger: always_on`.
 
-## 5. 6-Tier Machine Cybernetics & Anti-Monolithic Law
+## 5. 6-Tier Machine Cybernetics & Autonomous Sub-Agents
 Tiers: L6 CEO -> L5 Cross-Dept -> L4 Dept Heads (`CTO-ENG-01`, `CSO-GOAL-01`, `DIR-RES-01`, `AUD-EPI-01`) -> L3 Managers -> L2 Supervisors (`SUP-ADV-01`) -> L1 Specialists (`PROD-101`, `RED-102`).
-Dispatch: `Prompt: "You are [Role]. Read skills/<dept>/SKILL.md. Adhere to Layer [N]. Mandate: <TASK>. Enforce Zero-Stub Law, verify on disk."`
+Anti-Tunnel Vision Law: Sub-agents operate with autonomous domain breadth without search bias or micro-managed point localization. Mandates require global blast-radius sweep (all X across all Y) and full-component audit of inspected files.
+Dispatch: `Prompt: "You are [Role]. Read skills/<dept>/SKILL.md. Adhere to Layer [N]. Mandate: Domain authority over <SUBSYSTEM>. Execute exhaustive sweep across all files, full-component audit, and transitive blast-radius resolution without search bias. Enforce Zero-Stub Law, verify on disk."`
 
 ## 6. Corporate Survival KPIs & Calibration Gates
-- Defect Rate: 0.00% unverified premises; Premise Audit mandatory.
+- Defect Rate: 0.00% unverified premises; Premise Audits mandatory.
 - Adversarial Pass Rate: 100% passing tests; pass rate < 95% triggers rollback.
-- Token Efficiency: > 85% signal density; high-entropy prompts trigger Sandstorm.
-- Disk Parity: 100% agreement between declared state and physical disk.
-- Calibration Window: Rules in `rules/` reside strictly between 2,800 and 3,900 bytes (target 3,000 to 3,600 bytes, ~1,000 to 1,150 tokens); active rules <= 14.
+- Token Efficiency: > 85% signal density; Disk Parity: 100% agreement with physical disk.
+- Calibration Window: Rules in `rules/` strictly [2,800, 3,900] bytes (target 3,000-3,600 bytes); active rules <= 14.
 """
 
 def build_l01():
-    return """---
-trigger: model_decision
+    return r"""---
+trigger: always_on
 description: Layer 1 Sensory Ingestion, Sandstorm Elevation, and Greenfield Onboarding
 ---
 # Layer 1: Cognitive Sensory Ingestion & Sensory Elevation
@@ -68,12 +58,12 @@ description: Layer 1 Sensory Ingestion, Sandstorm Elevation, and Greenfield Onbo
 Sensory intake membrane: filters conversational entropy, elevates terse directives into technical specifications, and grounds workspaces in disk reality.
 
 ## 1. Mathematical Entropy Filtering Model
-Directive Shannon entropy $H(X)$ and technical density $D_{\\text{tech}}(X)$:
-$$H(X) = -\\sum_{i=1}^{n} P(x_i) \\log_2 P(x_i), \\quad D_{\\text{tech}}(X) = \\frac{\\sum \\text{Technical Keywords}}{\\text{Total Word Count}}$$
+Directive Shannon entropy $H(X)$ and technical density $D_{\text{tech}}(X)$:
+$$H(X) = -\sum_{i=1}^{n} P(x_i) \log_2 P(x_i), \quad D_{\text{tech}}(X) = \frac{\sum \text{Technical Keywords}}{\text{Total Word Count}}$$
 
 Classification Tiers:
-1. Nominal Structure ($H < 0.35, D_{\\text{tech}} \\ge 0.40$): Explicit constraints. Routes to Layer 2.
-2. Moderate Sandstorm ($0.35 \\le H \\le 0.70$): Intent without bounds. Triggers 3 pillars.
+1. Nominal Structure ($H < 0.35, D_{\text{tech}} \ge 0.40$): Explicit constraints. Routes to Layer 2.
+2. Moderate Sandstorm ($0.35 \le H \le 0.70$): Intent without bounds. Triggers 3 pillars.
 3. Critical Sandstorm ($H > 0.70$ or Words $< 15$): Ambiguous prompts. Dispatches `RES-SAND-01`.
 
 ## 2. Sandstorm Elevation System (Via Deserti)
@@ -91,7 +81,6 @@ Classification Tiers:
 {
   "original_input": "<Raw>", "timestamp": "2026-09-06T21:30:00-03:00",
   "entropy_tier": "critical_sandstorm", "domain": "<Domain>", "status": "elevated",
-  "deconstructed_intent": "<Core>",
   "pillars": [
     { "pillar": "P1: Algorithmic", "gold_standard": "Via Deserti", "directives": ["..."] },
     { "pillar": "P2: Concurrency", "gold_standard": "Deterministic State", "directives": ["..."] },
@@ -102,9 +91,9 @@ Classification Tiers:
 ```
 
 ## 3. Greenfield Dynamic Niche Onboarding & Context Rules
-Static boilerplate is banned. The AI dynamically synthesizes the project's constitution, methodology, and domain playbooks into `.agents/rules/*.md` tailored 100% to the specific niche (e.g. career engineering, recruitment psychology).
-Bootstrap: `powershell -ExecutionPolicy Bypass -File .\\scripts\\onboard_project.ps1 -ProjectName "<Target>"`
-Active Context Rules: Materialize `.agents/rules/<index>_<niche>.md` and root `AGENTS.md` with `trigger: always_on`. Methodology, playbooks, and profiles enter AI context as active rules, never inert `docs/`.
+Static boilerplate is banned. The AI dynamically synthesizes project constitution, methodology, and domain playbooks into `.agents/rules/*.md` tailored 100% to the specific niche.
+Bootstrap: `powershell -ExecutionPolicy Bypass -File .\scripts\onboard_project.ps1 -ProjectName "<Target>"`
+Active Context Rules: Materialize `.agents/rules/<index>_<niche>.md` and root `AGENTS.md` with `trigger: always_on`. Methodology and playbooks enter AI context as active rules, never inert `docs/`.
 Artifacts: `.state/corporate_health.json`, `status.json`, `ledger/0000_genesis.json`.
 
 ## 4. Premise Extraction, Specialists & Handshake
@@ -120,7 +109,7 @@ Layer 1 to Layer 2 Handshake Contract:
 
 def build_l02():
     return """---
-trigger: model_decision
+trigger: always_on
 description: Layer 2 Socratic Epistemic Inquest, Chroma Horizon 4-Quadrant Drill, and Anti-Sycophancy
 ---
 # Layer 2: Socratic Epistemic Inquest & Epistemic Alignment
@@ -176,7 +165,7 @@ Log: `powershell -ExecutionPolicy Bypass -File .\\scripts\\sync_state.ps1 -Actio
 
 def build_l03():
     return """---
-trigger: model_decision
+trigger: always_on
 description: Layer 3 Strategic Goal Decomposition, DAG Task Scheduling, and Session Pacing
 ---
 # Layer 3: Strategic Goal Decomposition & Empirical Research
@@ -234,8 +223,7 @@ Rule: No stage begins until preceding stage artifacts are committed to disk and 
 
 def build_l04():
     return """---
-trigger: glob
-globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
+trigger: always_on
 description: Layer 4 Systems Architecture, Interface Contracts, and Concurrency Invariants
 ---
 # Layer 4: Systems Architecture & Defensive Contracts
@@ -291,8 +279,7 @@ function Set-AtomicJsonState([string]$path, [object]$data) {
 
 def build_l05():
     return """---
-trigger: glob
-globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
+trigger: always_on
 description: Layer 5 Desert Water 5-Layer Forensic Trajectory Audit and Dimension Expansion
 ---
 # Layer 5: Desert Water Forensic Trajectory Audit
@@ -348,8 +335,7 @@ Dispatch: `Prompt: "You are AUD-DES-01. Read skills/desert_water/SKILL.md. Targe
 
 def build_l06():
     return """---
-trigger: glob
-globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
+trigger: always_on
 description: Layer 6 Adversarial Truth Validation, Devil's Apple Protocol, and In-Place Hardening
 ---
 # Layer 6: Adversarial Truth Validation & Devil's Apple
@@ -394,8 +380,7 @@ Transitive closure: consumer adapters re-tested, `.state/status.json` schema com
 
 def build_l07():
     return """---
-trigger: glob
-globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
+trigger: always_on
 description: Layer 7 Production Zero-Stub Execution, Senior Clean Code, and Sandbox Safety
 ---
 # Layer 7: Production Zero-Stub Execution & Senior Clean Code
@@ -442,8 +427,7 @@ Packaging Verification: `plugin.json` SemVer, `hooks.json` path validity, `rules
 
 def build_l08():
     return """---
-trigger: glob
-globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
+trigger: always_on
 description: Layer 8 Supervisory Rejection Gate, Devil's Advocate Protocol, and Gauntlet Loop
 ---
 # Layer 8: Supervisory Rejection Gate & Quality Escalation
@@ -504,7 +488,7 @@ If a sub-agent reaches 3 consecutive rejections ($r = 3$): execution halts, `SUP
 
 def build_l09():
     return r"""---
-trigger: model_decision
+trigger: always_on
 description: Layer 9 Multi-Modal Creative Synthesis, Matrix Reverse Protocol, and Cinema Optics
 ---
 # Layer 9: Multi-Modal Creative Synthesis & Cinema Optics
@@ -539,7 +523,7 @@ Spatial Acoustics (Sabine): $RT_{60} = \frac{0.161 \cdot V}{\sum S_i \alpha_i}$,
 
 def build_l10():
     return """---
-trigger: model_decision
+trigger: always_on
 description: Layer 10 Persistent Memory Continuum, Immutable Append-Only Ledger, and Fiduciary Financials
 ---
 # Layer 10: Memory Continuum & Immutable Ledger
@@ -597,7 +581,7 @@ Transaction Schema:
 
 def build_l11():
     return """---
-trigger: model_decision
+trigger: always_on
 description: Layer 11 Cybernetic Self-Evolution, Emergency Strategic Pause, and Strategic Meeting Engine
 ---
 # Layer 11: Cybernetic Self-Evolution & Strategic Pause

@@ -1,5 +1,5 @@
 ---
-trigger: model_decision
+trigger: always_on
 description: Layer 9 Multi-Modal Creative Synthesis, Matrix Reverse Protocol, and Cinema Optics
 ---
 # Layer 9: Multi-Modal Creative Synthesis & Cinema Optics

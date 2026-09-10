@@ -1,5 +1,5 @@
 ---
-trigger: model_decision
+trigger: always_on
 description: Layer 3 Strategic Goal Decomposition, DAG Task Scheduling, and Session Pacing
 ---
 # Layer 3: Strategic Goal Decomposition & Empirical Research
@@ -9,7 +9,6 @@ Translates verified consensus into formal OKRs, computes sub-agent DAG task depe
 ## 1. Strategic Planning & Multi-Stage Session Pacing
 - Anti-Rush Invariant: Monolithic "one-shot" execution is banned. Initiatives execute deliberately across staged sessions, with milestones committed to disk.
 - Fiduciary Resource Budgeting: Deconstruct tasks so specialists run in clean-context windows. Milestones are binary (100% complete with tests or 0%).
-- Playbooks-as-Rules DAG Law: Sub-agent tasks or milestones targeting playbooks, brand books, SOPs, or workflows MUST output active agent rules under `.agents/rules/<index>_<name>.md` with YAML triggers (`always_on|model_decision`). Tasks delegating playbooks to `docs/` or `playbooks/` are invalid.
 
 ## 2. Department of Strategic Goal Setting (`dept_goals`)
 Staff: `CSO-GOAL-01` (Chief Strategy Officer), `GOAL-101` (OKR Metric Engineer), `GOAL-102` (DAG Dependency Analyst).

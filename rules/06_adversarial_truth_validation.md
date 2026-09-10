@@ -1,6 +1,5 @@
 ---
-trigger: glob
-globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
+trigger: always_on
 description: Layer 6 Adversarial Truth Validation, Devil's Apple Protocol, and In-Place Hardening
 ---
 # Layer 6: Adversarial Truth Validation & Devil's Apple

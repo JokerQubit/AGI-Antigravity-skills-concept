@@ -1,6 +1,5 @@
 ---
-trigger: glob
-globs: ["**/*.ps1", "**/*.py", "**/*.ts", "**/*.js", "**/*.rs", "**/*.go"]
+trigger: always_on
 description: Layer 8 Supervisory Rejection Gate, Devil's Advocate Protocol, and Gauntlet Loop
 ---
 # Layer 8: Supervisory Rejection Gate & Quality Escalation
@@ -8,7 +7,7 @@ description: Layer 8 Supervisory Rejection Gate, Devil's Advocate Protocol, and 
 Sovereign supervisory quality gatekeeper: executes Devil's Advocate non-acceptance protocol, enforces mandatory strategy mutations, conducts Gauntlet builder-critic loop, and blocks premature delivery.
 
 ## 1. Supervisory Non-Acceptance & Strategy Mutations
-Deterministic Rejection Gate: Deliverables containing stubs, unhandled exceptions, missing edge cases, or playbooks/SOPs emitted to `docs/` instead of `.agents/rules/*.md` are rejected immediately. Passive acceptance is forbidden.
+Deterministic Rejection Gate: Deliverables containing stubs, unhandled exceptions, or missing edge cases are rejected immediately. Passive acceptance is forbidden.
 
 Strategy Mutation Mandate:
 - Retrying an identical failing method is STRICTLY FORBIDDEN.
@@ -54,6 +53,6 @@ If a sub-agent reaches 3 consecutive rejections ($r = 3$): execution halts, `SUP
 
 - [ ] Deliverable status `CERTIFIED_APPROVED` in `.state/devils_advocate_latest.json`.
 - [ ] All previous non-acceptance defects proven resolved on physical disk.
-- [ ] Zero stubs, zero empty catch blocks; playbooks verified in `.agents/rules/*.md`, not `docs/`.
+- [ ] Zero stubs, zero empty catch blocks, zero syntax errors confirmed.
 - [ ] Strategy mutation verified on all prior rejections; Gauntlet quality score $Q \ge 0.95$ achieved.
 - [ ] Transaction `SUPERVISORY_WORK_CERTIFIED` recorded in `.state/ledger/`.

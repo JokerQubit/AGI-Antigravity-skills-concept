@@ -1,5 +1,5 @@
 ---
-trigger: model_decision
+trigger: always_on
 description: Layer 10 Persistent Memory Continuum, Immutable Append-Only Ledger, and Fiduciary Financials
 ---
 # Layer 10: Memory Continuum & Immutable Ledger

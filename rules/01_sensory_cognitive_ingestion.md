@@ -1,5 +1,5 @@
 ---
-trigger: model_decision
+trigger: always_on
 description: Layer 1 Sensory Ingestion, Sandstorm Elevation, and Greenfield Onboarding
 ---
 # Layer 1: Cognitive Sensory Ingestion & Sensory Elevation
@@ -30,7 +30,6 @@ Classification Tiers:
 {
   "original_input": "<Raw>", "timestamp": "2026-09-06T21:30:00-03:00",
   "entropy_tier": "critical_sandstorm", "domain": "<Domain>", "status": "elevated",
-  "deconstructed_intent": "<Core>",
   "pillars": [
     { "pillar": "P1: Algorithmic", "gold_standard": "Via Deserti", "directives": ["..."] },
     { "pillar": "P2: Concurrency", "gold_standard": "Deterministic State", "directives": ["..."] },
@@ -41,9 +40,9 @@ Classification Tiers:
 ```
 
 ## 3. Greenfield Dynamic Niche Onboarding & Context Rules
-Static boilerplate is banned. The AI dynamically synthesizes the project's constitution, methodology, and domain playbooks into `.agents/rules/*.md` tailored 100% to the specific niche (e.g. career engineering, recruitment psychology).
+Static boilerplate is banned. The AI dynamically synthesizes project constitution, methodology, and domain playbooks into `.agents/rules/*.md` tailored 100% to the specific niche.
 Bootstrap: `powershell -ExecutionPolicy Bypass -File .\scripts\onboard_project.ps1 -ProjectName "<Target>"`
-Active Context Rules: Materialize `.agents/rules/<index>_<niche>.md` and root `AGENTS.md` with `trigger: always_on`. Playbooks, methodology, and SOPs enter AI context strictly as active rules; saving playbooks to `docs/` or `playbooks/` is prohibited.
+Active Context Rules: Materialize `.agents/rules/<index>_<niche>.md` and root `AGENTS.md` with `trigger: always_on`. Methodology and playbooks enter AI context as active rules, never inert `docs/`.
 Artifacts: `.state/corporate_health.json`, `status.json`, `ledger/0000_genesis.json`.
 
 ## 4. Premise Extraction, Specialists & Handshake
