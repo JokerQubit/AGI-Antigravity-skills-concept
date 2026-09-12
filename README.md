@@ -1,522 +1,219 @@
-# OmniCognition: A Self-Governing Cybernetic Multi-Agent Operating Kernel with Mathematical Invariant Enforcement for Autonomous Software Engineering
-
-**OmniCognition Labs Research Council Technical Report OCL-TR-2026-04**  
-*In collaboration with Google Antigravity IDE 2.0 Engine*  
-**Corresponding Directorate**: Epistemic Systems & Cybernetic Architecture (`DIR-RES-01`, `CTO-ENG-01`, `AUD-EPI-01`)
-
-[![Antigravity Version](https://img.shields.io/badge/Antigravity-2.0%2B-blue.svg?style=flat-square)](https://github.com/google/antigravity)
-[![Plugin Architecture](https://img.shields.io/badge/Plugin%20System-Native%20Hooks-green.svg?style=flat-square)](./plugin.json)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square)](./LICENSE)
-[![Zero-Stub Law](https://img.shields.io/badge/Zero--Stub-Enforced%20100%25-red.svg?style=flat-square)](./rules/AGENTS.md)
-[![Epistemic Defect Rate](https://img.shields.io/badge/Epistemic%20Defect%20Rate-0.00%25-brightgreen.svg?style=flat-square)](./.state/corporate_health.json)
-[![State Ledger](https://img.shields.io/badge/Ledger-Cryptographically%20Synced-purple.svg?style=flat-square)](./.state/ledger/)
-[![Signal Density](https://img.shields.io/badge/Token%20Signal%20Density-%CE%A6%20%E2%89%A5%200.85-gold.svg?style=flat-square)](./rules/AGENTS.md)
-
----
-
-## Abstract
-
-Autonomous multi-agent software engineering architectures powered by Large Language Models (LLMs) experience severe performance degradation over extended execution trajectories. This paper formalizes the theoretical foundations, failure topologies, and mathematical invariants of **OmniCognition**, a self-governing cybernetic multi-agent operating kernel designed for mission-critical software development within the Google Antigravity IDE ecosystem. 
-
-We model context degradation and epistemic entropy as continuous functions over time $t$, demonstrating that standard monolithic agent frameworks (e.g., LangChain, CrewAI, AutoGPT) succumb to four systemic failure modes: *Sycophantic Hallucination Collapse*, *Monolithic Prompt Theater*, *Satisficing & Stub Degradation*, and *Contextual Entropy Decay*. OmniCognition mitigates these failure regimes through an immutable cybernetic constitution (`rules/AGENTS.md`), a 6-tier organizational cybernetics topology, isolated clean-context sub-agent delegation (`invoke_subagent`), deterministic external lifecycle hook gating (`hooks.json`), and the *Desert Water* 5-layer forensic code trajectory audit. Empirical evaluation across 1,200 complex multi-step software development sprints demonstrates an Abstract Syntax Tree (AST) pass rate of 100.0%, 0.00% epistemic defect rate, zero code truncation (`...`), and bounded zero-drift state progression via an immutable cryptographically tracked state ledger.
-
----
-
-## 1. Problem Formulation: Cognitive Degradation in Deep LLM Trajectories
-
-### 1.1 Mathematical Formulation of Epistemic Drift & Contextual Decay
-
-Let an autonomous agent trajectory $\mathcal{T}$ over discrete interaction steps $k \in \{1, \dots, K\}$ be parameterized by an autoregressive context window $\mathcal{C}_k$ and state transition function $\mathcal{S}_{k+1} = f(\mathcal{S}_k, \mathcal{A}_k, \mathcal{O}_k)$, where $\mathcal{A}_k$ is an action (tool invocation or synthesis) and $\mathcal{O}_k$ is the environment observation.
-
-In unconstrained monolithic architectures, the effective signal-to-noise ratio $E(t)$ of the attention mechanism decays exponentially as context fills with conversational history and intermediate speculative monologues:
-
-$$E(t) = E_0 \, e^{-\lambda t}$$
-
-where $E_0$ is the initial epistemic fidelity, $\lambda > 0$ represents the contextual noise decay parameter, and $t$ is the elapsed token trajectory length.
-
-Concurrently, the accumulated epistemic entropy $\mathcal{H}_{\text{epistemic}}(t)$ across the decision manifold compounds quadratically if unverified assertions are accepted into context:
-
-$$\mathcal{H}_{\text{epistemic}}(t) = \int_{0}^{t} \lambda(\tau) \cdot \mathbb{E}_{P(\text{drift})}[\mathcal{D}_{\text{KL}}(P_{\text{truth}} \parallel P_{\text{agent}})] \, d\tau$$
-
-When $\mathcal{H}_{\text{epistemic}}(t) > \mathcal{H}_{\text{threshold}}$, the probability of catastrophic task failure asymptotically approaches 1.0.
-
-```
-       Contextual Energy E(t)                      Epistemic Entropy H(t)
-   1.0 ┌───────────────────────┐            1.0 ┌───────────────────────┐
-       │\                      │                │                    . /│ Collapse
-       │ \   Vanilla Decay     │                │                  .  / │ Threshold
-       │  \  E(t)=E₀ e^(-λt)   │                │              . '   /  │
-   0.5 │   \                   │            0.5 │          . '      /   │
-       │    ` - . _            │                │      . '         /    │
-       │  OmniCognition Flat   │                │  . '  OmniCognition:  │
-   0.0 └───┴───────────────────┴            0.0 └───┴───H(t) ≈ 0 (Ledger)
-       0           t          T                 0           t           T
-```
-
-### 1.2 The Four Catastrophic Failure Modes of Vanilla LLM Agents
-
-Empirical analysis of existing multi-agent software engineering frameworks reveals four recurring failure topologies:
-
-1. **Sycophantic Hallucination Collapse**: Reinforcement Learning from Human Feedback (RLHF) biases standard models toward agreeableness. When a user introduces an incorrect premise (e.g., an invalid mathematical assumption, non-existent API signature, or flawed race-condition hypothesis), vanilla agents validate and amplify the falsehood, propagating structural errors into the architecture.
-2. **Monolithic Prompt Theater (*Teatro de Prompt Monolítico*)**: Frameworks that simulate multiple departmental personas (e.g., "Architect", "Developer", "Tester") within a single conversational prompt suffer from acute context cross-contamination. Token attention spreads thin across competing persona instructions, causing loss of critical architectural constraints and simulated roleplay over genuine operational execution.
-3. **Satisficing & Stub Degradation**: Under computational or context pressure, LLM agents resort to satisficing—emitting syntactically valid but operationally hollow placeholders (`pass`, `// TODO: Implement later`, `return null`, `...`). This introduces latent runtime bugs and breaks downstream modules.
-4. **Contextual Entropy & Memory Drift**: In deep workflows ($k > 40$), the accumulation of raw execution logs, scratchpad dumps, and conversational back-and-forth pushes foundational rules and design specifications outside the effective attention span, leading to architectural amnesia and regression bugs.
-
----
+# OmniCognition: The Autonomous Software Engineering Engine for Google Antigravity
 
 <div align="center">
 
-![OmniCognition Clean-Room Supercomputing Matrix](assets/images/hero_banner.jpg)
+![OmniCognition / Antigravity AGI Banner](assets/images/hero_banner.png)
 
-*Figure 1: Monolithic Clean-Room Supercomputing Matrix (OmniCognition Labs Core Infrastructure). Shot on Sony Venice 2 8K Full-Frame cinema camera with Cooke Anamorphic/i Full Frame Plus 50mm T2.3 prime lens and Tiffen 1/4 Black Pro-Mist filter. Volumetric blue and amber illumination across CNC-milled obsidian computing nodes.*
+**Turn Google Antigravity into a senior engineering team that plans deeply, writes zero-stub production code, and tests itself in a real browser.**
+
+[![Antigravity](https://img.shields.io/badge/Google%20Antigravity-2.0%2B-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://github.com/JokerQubit/AGI-Antigravity-skills-concept)
+[![Plugin Version](https://img.shields.io/badge/Version-3.5.0-00C7B7?style=for-the-badge)](./plugin.json)
+[![License](https://img.shields.io/badge/License-Apache%202.0-F4B400?style=for-the-badge)](./LICENSE)
+[![Zero-Stub Code](https://img.shields.io/badge/Zero--Stub-100%25%20Production%20Ready-0F9D58?style=for-the-badge)](./rules/AGENTS.md)
+[![UI Standard](https://img.shields.io/badge/Design%20Standard-Titan%20Grade%20(Linear%2FStripe)-9B51E0?style=for-the-badge)](./skills/modern_ui_craft/SKILL.md)
+
+[Features](#-why-omnicognition) • [The 5-Stage Lifecycle](#-the-5-stage-autonomous-engineering-pipeline) • [Titan Quality Standard](#-the-titan-standard-no-more-ai-shortcuts) • [Skills Suite](#-built-in-specialized-skills) • [Quick Start](#-quick-start--installation) • [FAQ](#-frequently-asked-questions)
 
 </div>
 
 ---
 
-## 2. The 8 Behavioral Transformations & Intelligence Leaps
+## ⚡ The Pain with AI Coding Today
 
-To eradicate these failure modes, OmniCognition replaces subjective heuristics with deterministic cybernetic invariants. Below is a comparative taxonomy between Vanilla Agent baselines and the OmniCognition Architecture.
+Have you ever asked an AI assistant to build a full feature or app, only to get:
 
-### 2.1 Comparative Architecture Matrix
+- **Lazy Placeholders:** `// TODO: implement logic here`, fake API mocks, and truncated code snippets.
+- **Rushed Execution:** The model jumps straight to typing code without understanding your project architecture, breaking existing features.
+- **Ugly, Mediocre Interfaces:** Plain, clunky buttons with generic CSS transitions instead of modern, fluid, delightful user experiences.
+- **Zero Real Testing:** The AI says *"Everything is done and working!"*, but when you run the app, the console is filled with unhandled errors, broken routes, and layout bugs.
+- **Context Fatigue:** Over long tasks, the agent loses track of what it was doing, forgets rules, and starts hallucinating.
 
-| Dimension | Vanilla Agent Frameworks (LangChain / CrewAI / AutoGPT) | OmniCognition Cybernetic Kernel | Formal Invariant / Mechanism |
-|---|---|---|---|
-| **1. User Premise Handling** | **Passive Sycophancy**: Validates flawed premises, hallucinates fictitious API methods to appease prompt. | **Epistemic Premise Audit**: Rejects unverified premises; triggers `[HARD HALT]` on foundational fallacies. | Anti-Sycophancy Invariant & `dept_analysis` (`AUD-EPI-01`) |
-| **2. Context Execution** | **Monolithic Prompt Theater**: Roles simulated in a single context; prompt bloating and cross-talk. | **Isolated Clean-Context Delegation**: Primary CEO never writes code; dispatches ephemeral sub-agents. | Axiom 5.2 Clean-Context Law (`invoke_subagent`) |
-| **3. Code Completeness** | **Satisficing & Stubs**: Emits `pass`, `// TODO`, `return null`, and truncated ellipses `...`. | **The Zero-Stub Law**: AST-verified complete production logic; stubs rejected at supervisory gate. | Zero-Stub Invariant (Axiom 2.2) & `devils_advocate` |
-| **4. State & Memory** | **Transient Memory Decay**: State resides in linear prompt buffer; wiped or drifted at $k > 30$. | **3-Tier Persistent Memory Continuum**: Ephemeral Working Memory, Machine State, Immutable Ledger. | Cryptographic Ledger (`.state/ledger/events.jsonl`) |
-| **5. Code Investigation** | **Shallow Skimming**: Keyword search, guessing API signatures from filenames or summaries. | **The Desert Water System**: 5-layer forensic audit (Surface, Contract, Mechanism, Lineage, Aquifer). | 5-Layer Forensic Trajectory Inspection (Axiom 3) |
-| **6. Quality Assurance** | **Uncritical Affirmation**: Accepts self-generated code if it builds without syntax errors. | **The Devil's Apple Protocol**: Initial unanimous consensus is treated as structural rot; mandatory red-team. | Adversarial Truth Validation (`devils_apple`) |
-| **7. Error Recovery** | **Uncontrolled Failure Loops**: Loops indefinitely on repeating errors, modifying random lines. | **Emergency Circuit Breakers**: `[STRATEGIC PAUSE]` on 2 consecutive test failures with root-cause dissection. | Axiom 10 Behavioral Circuit Breaker (`DIR-STRAT-01`) |
-| **8. System Evolution** | **Degradation Drift**: Model drift, prompt rot, gradual weakening of safety guidelines over time. | **Monotonic Hardening Invariant**: Verification constraints and test durability can only increase, never decrease. | Autopoietic Self-Evolution (`META-EVO-01`, Axiom 13) |
+**OmniCognition** was built from the ground up to solve this exact problem. It is an intelligent cognitive engine and plugin for **Google Antigravity** that turns your AI assistant from a hurried code generator into an elite, methodical software engineering squad.
 
 ---
 
-### 2.2 Detailed Analytical Breakdown of Transformations
+## 🚀 Why OmniCognition?
 
-#### Transformation 1: Sycophancy vs. Epistemic Premise Audit
-In standard LLM interactions, when a user presents an instruction founded on an invalid technical axiom (e.g., *"Assume WebSocket frames can be reliably compressed without memory overhead using deflate in HTTP/1.0"*), vanilla agents readily generate pseudocode matching the false premise. OmniCognition mandates an explicit **Premise Audit** prior to execution. If an assumption conflicts with empirical physical reality, the agent emits a structured `[HARD HALT]`, proving the invalidity mathematically and requiring the user to rectify foundational parameters before proceeding.
-
-#### Transformation 2: Monolithic Prompt Theater vs. Isolated Clean-Context Delegation
-Simulating multiple departmental roles in a monolithic prompt results in cognitive interference: token budget is consumed by competing system prompts, leaving fewer parameters for reasoning. OmniCognition enforces the **CEO Execution Barrier**: Executive governance (Dr. Alexander Vance) allocates capital and verifies milestones, while production coding, fuzz testing, and research are dispatched via `invoke_subagent` into pristine, isolated 200,000+ token context sessions. Sub-agents run with clean attention windows, reporting back through structured deliverables.
-
-#### Transformation 3: Code Satisficing vs. The Zero-Stub Law
-Standard agents frequently emit code fragments such as:
-```python
-# VANILLA AGENT FAILURE MODE
-class ConsensusEngine:
-    def handle_vote(self, vote):
-        # TODO: Add quorum verification and crypto signature check
-        pass
-```
-OmniCognition enforces the **Zero-Stub Law** (Axiom 2.2). Every declared function, class, or async handler must contain complete operational logic, defensive parameter validation, bounded timeout controls, and structured error handling. Omission or code truncation using ellipses (`...`) constitutes an automatic supervisory rejection.
-
-#### Transformation 4: Epistemic Memory Decay vs. 3-Tier Persistent Memory
-Linear prompt accumulation inevitably exhausts context. OmniCognition partitions state across three tiers:
-- **Tier 1 (Working Memory)**: Bounded context window, wiped upon sub-agent termination.
-- **Tier 2 (Machine State)**: Maintained in structured JSON (`.state/status.json`, `.state/corporate_health.json`).
-- **Tier 3 (Immutable Ledger)**: Cryptographically tracked append-only stream (`.state/ledger/events.jsonl`). Decisions, architectural schemas, and milestone approvals are permanently committed to disk.
-
-#### Transformation 5: Shallow Code Skimming vs. The Desert Water 5-Layer Audit
-Standard agents inspect code surface-level, guessing operational behavior from identifier names. OmniCognition executes the **Desert Water** inspection stack across five rigorous layers:
-- *Layer 0 (Surface Artifact)*: Literal syntax, UTF-8 integrity, formatting, linting rules.
-- *Layer 1 (Interface Contract)*: Defensive validation, strict typing, nullability guarantees.
-- *Layer 2 (Operational Mechanism)*: State transformations, concurrency locks, handle lifecycles, complexity bounds.
-- *Layer 3 (Complete Lineage)*: Upstream data origin $\to$ transformation pipeline $\to$ storage sink.
-- *Layer 4 (Subterranean Risk & Hidden Aquifers)*: Latent race conditions, network partition vulnerability, memory leaks.
-
-#### Transformation 6: Uncritical Approval vs. The Devil's Apple Protocol
-Consensus among autonomous agents is frequently a symptom of shared bias. OmniCognition implements the **Devil's Apple**: whenever an architectural design or code blueprint achieves unanimous consensus, the system flags it as potential structural rot and dispatches an adversarial sub-agent (`DEV-APP-01`) whose explicit mandate is to disprove the plan, hunt realistic edge cases, and fortify the document directly on disk.
-
-#### Transformation 7: Uncontrolled Loops vs. Strategic Meeting Circuit Breakers
-When an automated test fails, standard agents typically tweak random parameters iteratively until hitting token limits. OmniCognition implements an **Emergency Behavioral Circuit Breaker** (`[STRATEGIC PAUSE]`): if test failures persist across two consecutive attempts, execution freezes immediately. The system triggers a Reality Audit against disk state, performs a root-cause dissection, and forces a radical plan restructuring before any further code edits are permitted.
-
-#### Transformation 8: Degradation Drift vs. The Monotonic Hardening Invariant
-As systems evolve, developers and agents often relax tests or remove constraints to bypass blockers. OmniCognition enforces **Monotonic Hardening**: the cybernetic kernel may self-evolve dynamically via `executive_self_evolution`, but verification strictness, test coverage thresholds, and contract constraints can only increase, never decrease. Weakening assertions or bypassing gates is constitutionally prohibited.
+| What Standard AI Assistants Do | What OmniCognition Delivers |
+| :--- | :--- |
+| ❌ Jumps into code blindly after reading 1 sentence | ✅ **Deep Thought Mapping**: Analyzes dependencies, edge cases, and architecture first |
+| ❌ Fills code with `TODO` stubs and mock data | ✅ **Zero-Stub Guarantee**: 100% functional, real production-ready logic |
+| ❌ Clunky CSS animations and cookie-cutter layouts | ✅ **Titan-Grade Design**: Smooth spring physics, glassmorphism, and responsive feedback (Linear/Stripe style) |
+| ❌ Declares victory without running the app | ✅ **Autonomous Browser Testing**: Inspects real UI and dev console in Chrome via `browser-mcp` |
+| ❌ Burns tokens uncontrollably in endless loops | ✅ **Smart Work Shifts**: Adapts model thinking power (Low/Medium/High) to save tokens |
 
 ---
+
+## 🔄 The 5-Stage Autonomous Engineering Pipeline
+
+Instead of writing code on a whim, OmniCognition guides Antigravity through an organized, reliable 5-stage workflow:
 
 <div align="center">
 
-![Monolithic Cybernetic Server Architecture](assets/images/cybernetic_architecture.jpg)
-
-*Figure 2: Symmetrical Monolithic Server Aisle & Cybernetic Architecture. Shot on Sony Venice 2 8K Full-Frame camera with Cooke Anamorphic/i 50mm T2.3 prime lens and Tiffen 1/4 Black Pro-Mist filter. Towering brushed titanium server monoliths with internal cool teal and amber fiber-optic conduits, floor-to-ceiling glass curtain walls facing misty pine forest at dusk, and physical reflections across polished dark concrete.*
+![5-Stage Autonomous Engineering Pipeline](assets/images/workflow_pipeline.png)
 
 </div>
 
----
+### 1. 🎯 Phase 0: Intent Refinement & Cost Analysis
+Before touching a single file, the engine analyzes your request. It clarifies ambiguous goals, flags potential pitfalls, and estimates the exact token complexity so you never waste API resources.
 
-## 3. Empirical Benchmarks & Quantitative Verification Data
+### 2. 🧠 Phase 1: Deep Thought Graph
+The agent maps out the solution in detail. It connects requirements, backend contracts, data structures, and failure modes into a comprehensive blueprint. No guessing, no hasty assumptions.
 
-### 3.1 Experimental Setup
+### 3. 📋 Phase 2: Transparent Plan & Your Approval
+OmniCognition presents a clear, step-by-step roadmap in `implementation_plan.md`. You review the plan, see exactly what will be created or modified, and click **Proceed** when you are satisfied. You are always in control.
 
-We evaluated OmniCognition against vanilla multi-agent frameworks across 1,200 complex software engineering sprints. Benchmarks were conducted on real-world multi-file codebases requiring distributed locking, Raft consensus nodes, concurrent memory caches, and asynchronous event bus orchestration.
+### 4. 🛠️ Phase 3: Precision Code Crafting (Zero-Stub)
+Specialized subagents tackle each part of the system with laser focus. Every function is fully implemented, strictly typed, and cleanly structured following Clean Architecture principles. No stubs, no fake comments.
 
-Evaluated baselines:
-- **Baseline A**: Vanilla AutoGPT / ReAct Agent Loop (GPT-4o)
-- **Baseline B**: Multi-Persona Monolithic Framework (CrewAI / LangChain multi-role prompt)
-- **OmniCognition Kernel**: Antigravity 2.0 Engine governed by `rules/AGENTS.md` and 16-Skill Grid.
-
-### 3.2 Quantitative Verification Results
-
-| Benchmark Metric | Baseline A (ReAct) | Baseline B (CrewAI) | OmniCognition Kernel | Empirical Improvement |
-|---|:---:|:---:|:---:|:---:|
-| **AST Parse & Compilation Pass Rate** | 64.2% | 78.4% | **100.0%** | $+21.6\%$ absolute |
-| **Zero-Stub Adherence (Complete Code)** | 41.8% | 53.2% | **100.0%** | $+46.8\%$ absolute |
-| **Premise Verification Accuracy** | 28.4% | 36.1% | **99.4%** | $+63.3\%$ absolute |
-| **Epistemic Memory Retention (Step 50+)** | 21.7% | 34.5% | **100.0%** | Zero drift via Ledger |
-| **Adversarial Resilience (Fuzz / Edge Cases)**| 31.0% | 44.8% | **96.8%** | $+52.0\%$ absolute |
-| **Token Fiduciary Signal Density ($\Phi$)** | 0.38 | 0.49 | **0.88** | $+79.5\%$ efficiency |
-
-$$\Phi = \frac{\text{Operational Signal Tokens}}{\text{Total Consumed Tokens}} \ge 0.85$$
-
-```
-   AST Pass Rate (%)                     Zero-Stub Adherence (%)
-   100 ┌───────────┐ 100.0%              100 ┌───────────┐ 100.0%
-       │           │                         │           │
-    80 │       ┌───┤ 78.4%                80 │           │
-       │   ┌───┤   │                         │       ┌───┤ 53.2%
-    60 │   │   │   │                      60 │   ┌───┤   │
-       │   │   │   │                         │   │   │   │ 41.8%
-    40 └───┴───┴───┘                      40 └───┴───┴───┘
-       BaseA BaseB OmniCognition             BaseA BaseB OmniCognition
-```
+### 5. 🔍 Phase 4: Independent Browser Audit (The Gauntlet)
+A dedicated, independent auditor agent launches a real headless Chrome session through `browser-mcp`. It loads the app, inspects the console for zero errors or warnings, verifies UI responsiveness, and checks that every button and flow works perfectly before handing it back to you.
 
 ---
 
-## 4. 6-Tier Machine Cybernetics Topology
+## 💎 The Titan Standard: No More AI Shortcuts
 
-OmniCognition strictly separates governance, planning, verification, and execution into six formal cybernetic tiers.
-
-```mermaid
-graph TD
-    subgraph "Tier 6: Sovereign Executive Governance"
-        User["Strategic Founder / User"] <-->|"Constitutional Directives"| L6["Level 6: CEO Dr. Alexander Vance"]
-    end
-
-    subgraph "Tier 5: Inter-Departmental Synchronization"
-        L6 <-->|"Milestone Contracts"| L5["Level 5: Cross-Department Handshake Matrix"]
-    end
-
-    subgraph "Tier 4: Department Directorates"
-        L5 --> L4_ENG["CTO-ENG-01 (Architecture)"]
-        L5 --> L4_EPI["AUD-EPI-01 (Epistemic Audit)"]
-        L5 --> L4_OPS["VP-OPS-01 (Production)"]
-        L5 --> L4_QA["QA-RED-01 (Adversarial Red Team)"]
-        L5 --> L4_RES["DIR-RES-01 (Research Intelligence)"]
-    end
-
-    subgraph "Tier 3: Parallel Task Orchestration"
-        L4_ENG --> L3["Level 3: Department Managers"]
-        L4_OPS --> L3
-        L4_QA --> L3
-    end
-
-    subgraph "Tier 2: Supervisory Quality Control"
-        L3 --> L2["Level 2: Supervisory Verification Gates (Devil's Advocate)"]
-    end
-
-    subgraph "Tier 1: Atomic Execution"
-        L2 --> L1["Level 1: Operational Specialists (Clean-Context invoke_subagent)"]
-    end
-
-    L1 -.->|"Complete Operational Artifacts"| L2
-    L2 -.->|"Hardened Deliverables"| L4_ENG
-    L4_ENG -.->|"Executive Briefing & Sign-Off"| L6
-```
-
-### 4.1 Sub-Agent Clean-Context Sequence
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Founder as Strategic Founder
-    participant CEO as L6: CEO Dr. Vance (Primary Chat)
-    participant Hook as Antigravity Lifecycle Hook
-    participant SubAgent as L1: Sub-Agent (Clean Context)
-    participant Supervisor as L2: Devil's Advocate Gate
-    participant Ledger as L3: Immutable State Ledger
-
-    Founder->>CEO: Issue Complex Feature Mandate
-    CEO->>Hook: Trigger PreInvocation Hook
-    Hook-->>CEO: Inject Health Telemetry & JIT Skills
-    CEO->>CEO: Epistemic Premise Audit & Architectural Scoping
-    CEO->>SubAgent: invoke_subagent(Skill: dept_architecture, Mandate, Zero-Stub)
-    Note over SubAgent: Pristine Context Window (200k tokens)<br/>Reads SKILL.md and codebase
-    SubAgent->>SubAgent: Author Production-Grade Operational Logic
-    SubAgent->>Supervisor: Submit Artifact for Supervisory Audit
-    Supervisor->>Supervisor: Check AST, Zero-Stub Law, Error Boundaries
-    Supervisor-->>SubAgent: Approved / Rejected with Dossier
-    SubAgent->>Ledger: Commit Append-Only Event (.state/ledger/)
-    SubAgent-->>CEO: Report Verified Delivery & Metrics
-    CEO->>Founder: Executive Presentation & Artifact Links
-```
-
----
+Most AI tools settle for the bare minimum: rigid CSS, generic animations, and unverified mockups. OmniCognition enforces the **Titan Standard**—benchmarked against the world's most acclaimed software products like Linear, Apple, and Stripe.
 
 <div align="center">
 
-![Central Optical Computing Core](assets/images/cognitive_engine.jpg)
-
-*Figure 3: Central Optical Processing Chamber & Core Engine Pedestal. Shot on Sony Venice 2 8K Full-Frame camera with Cooke Anamorphic/i 50mm T2.3 prime lens and Tiffen 1/4 Black Pro-Mist filter. Cylindrical titanium and borosilicate glass chamber with suspended prism optics casting collimated amber and cyan light caustics onto polished concrete beneath twilight forest vistas.*
+![Titan Standard Quality Comparison](assets/images/titan_standard.png)
 
 </div>
 
----
-
-## 5. The 4-Phase Reflexive Cognitive Loop
-
-Every cognitive cycle executed within OmniCognition undergoes a mandatory four-phase reflexive loop:
-
-```
-[Phase 1: Epistemic Inquiry & Premise Audit]
-                     │
-                     ▼
-[Phase 2: 5-Layer Forensic Trajectory Inspection (Desert Water)]
-                     │
-                     ▼
-[Phase 3: Clean-Context Production Delivery & Sub-Agent Delegation]
-                     │
-                     ▼
-[Phase 4: Adversarial Self-Audit & Supervisory Gating (Devil's Apple)]
-```
-
-### 5.1 Specification of the Desert Water 5-Layer Stack
-
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│ Layer 4: Subterranean Risk & Hidden Aquifers                           │
-│ (Race conditions, memory leak vectors, network partitions, failovers)  │
-├────────────────────────────────────────────────────────────────────────┤
-│ Layer 3: Complete Trajectory Lineage                                   │
-│ (Upstream source -> Ingestion -> State Mutation -> Storage Sink)       │
-├────────────────────────────────────────────────────────────────────────┤
-│ Layer 2: Operational Mechanism                                         │
-│ (Atomic locks, thread safety, Big-O complexity, handle lifecycles)     │
-├────────────────────────────────────────────────────────────────────────┤
-│ Layer 1: Interface Contract                                            │
-│ (Defensive boundaries, strict typing, nullability, return invariants)  │
-├────────────────────────────────────────────────────────────────────────┤
-│ Layer 0: Surface Artifact                                              │
-│ (Literal syntax, UTF-8 integrity, formatting, AST lint rules)          │
-└────────────────────────────────────────────────────────────────────────┘
-```
+### Key Pillars of the Titan Standard:
+- **Physical Spring Physics:** Smooth 60fps/120fps motion using realistic spring dynamics instead of stiff CSS transitions.
+- **Tactile Feedback:** Subtle real-world acoustic micro-audio cues that make interactions feel alive.
+- **Defensive Error Handling:** Every network call and user input is validated with explicit Result types, preventing silent crashes.
+- **Flawless Visual Finish:** Polished glassmorphism, precise contrast ratios, clean typography, and zero layout shifting.
 
 ---
 
-## 6. Complete 16-Skill Capability Grid
+## 🧰 Built-in Specialized Skills
 
-The kernel incorporates 16 specialized, modular operational skills structured according to the Antigravity Skill Specification.
+OmniCognition equips Antigravity with a suite of plug-and-play skills:
 
-| # | Skill Name | Department / Role | Core Capability & Operational Mission | Runbook Reference |
-|---|:---|:---|:---|:---|
-| 01 | [`chroma_horizon`](skills/chroma_horizon/SKILL.md) | `SOC-GRILL-01`<br>Socratic Alignment Facilitator | 4-Quadrant Socratic Grill inquest examining boundaries, edge cases, failure spotting, and cross-pollination. | [socratic_grill_runbook.md](skills/chroma_horizon/references/socratic_grill_runbook.md) |
-| 02 | [`dept_analysis`](skills/dept_analysis/SKILL.md) | `AUD-EPI-01`<br>Chief Epistemic Auditor | Formal logic verification, mathematical boundary auditing, and the anti-sycophancy `[Premise Audit]`. | [epistemic_audit_protocol.md](skills/dept_analysis/references/epistemic_audit_protocol.md) |
-| 03 | [`dept_architecture`](skills/dept_architecture/SKILL.md) | `CTO-ENG-01`<br>Chief Technology Officer | System architecture, API contracts, SOLID design, and Recursive Dimension Expansion ($X \to Y \to Y_n$). | [architecture_design_standard.md](skills/dept_architecture/references/architecture_design_standard.md) |
-| 04 | [`dept_goals`](skills/dept_goals/SKILL.md) | `CSO-GOAL-01`<br>Chief Strategy Officer | Corporate OKR decomposition, milestone dependencies, resource budgets, and alignment tracking. | [corporate_charter.md](skills/dept_goals/references/corporate_charter.md) |
-| 05 | [`dept_learning`](skills/dept_learning/SKILL.md) | `CKO-LRN-01`<br>Chief Knowledge Officer | Retrospective synthesis, automated skill generation, and corporate memory consolidation. | [skill_synthesis_protocol.md](skills/dept_learning/references/skill_synthesis_protocol.md) |
-| 06 | [`dept_production`](skills/dept_production/SKILL.md) | `VP-OPS-01`<br>VP of Engineering & Ops | Release packaging, SHA-256 artifact manifests, pre-flight verification, and walkthrough generation. | [release_verification_gate.md](skills/dept_production/references/release_verification_gate.md) |
-| 07 | [`dept_quality_redteam`](skills/dept_quality_redteam/SKILL.md) | `QA-RED-01`<br>Head of Adversarial Red Team | Fuzz testing, concurrency stress tests, memory leak detection, and adversarial exploit simulation. | [adversarial_test_matrix.md](skills/dept_quality_redteam/references/adversarial_test_matrix.md) |
-| 08 | [`dept_research`](skills/dept_research/SKILL.md) | `DIR-RES-01`<br>Director of Strategic Research | Competitive intelligence, prior art review, academic literature synthesis, and empirical benchmarks. | [research_methodology.md](skills/dept_research/references/research_methodology.md) |
-| 09 | [`devils_advocate`](skills/devils_advocate/SKILL.md) | `DEV-ADV-01`<br>Supervisory Rejection Gatekeeper | Deterministic rejection of stubs, compilation of non-acceptance dossiers, and mandatory strategy mutation. | [supervisory_rejection_dossier.md](skills/devils_advocate/references/supervisory_rejection_dossier.md) |
-| 10 | [`devils_apple`](skills/devils_apple/SKILL.md) | `DEV-APP-01`<br>Adversarial Truth Auditor | Clean-context adversarial audit of initial plans, hunting realistic failure vectors, and direct disk hardening. | [devils_apple_audit_protocol.md](skills/devils_apple/references/devils_apple_audit_protocol.md) |
-| 11 | [`executive_self_evolution`](skills/executive_self_evolution/SKILL.md) | `META-EVO-01`<br>Chief Cybernetic Architect | Autonomous runtime creation, testing, and integration of new skills and rules under Monotonic Hardening. | [cybernetic_evolution_protocol.md](skills/executive_self_evolution/references/cybernetic_evolution_protocol.md) |
-| 12 | [`gauntlet_loop`](skills/gauntlet_loop/SKILL.md) | `DIR-GAUNTLET-01`<br>Gauntlet Director | Multi-stage recursive adversarial optimization, blind reference benchmarking, and independent verification. | [gauntlet_orchestration_guide.md](skills/gauntlet_loop/references/gauntlet_orchestration_guide.md) |
-| 13 | [`greenfield_routing`](skills/greenfield_routing/SKILL.md) | `DIR-GREENFIELD-01`<br>Greenfield Exploration Architect | Zero-state bootstrapping, corporate structure initialization, and exploratory intelligence routing. | [greenfield_routing_runbook.md](skills/greenfield_routing/references/greenfield_routing_runbook.md) |
-| 14 | [`matrix_reverse`](skills/matrix_reverse/SKILL.md) | `DIR-MATRIX-01`<br>Multi-Modal Creative Director | Industrial 8K image prompting, Zero-Text & Zero-Human mandates, glassmorphism UI tokens, and Veo kinematics. | [image_prompt_engineering_guide.md](skills/matrix_reverse/references/image_prompt_engineering_guide.md) |
-| 15 | [`sandstorm_elevation`](skills/sandstorm_elevation/SKILL.md) | `DIR-SANDSTORM-01`<br>Sandstorm Elevation Lead | Elevation of brief, chaotic, or technically weak prompts into enterprise-grade orthogonal directives. | [proposal_elevation_matrix.md](skills/sandstorm_elevation/references/proposal_elevation_matrix.md) |
-| 16 | [`strategic_meeting`](skills/strategic_meeting/SKILL.md) | `DIR-STRAT-01`<br>Corporate Arbiter | Emergency `[STRATEGIC PAUSE]` behavioral circuit breaker, root-cause reality audits, and radical replanning. | [strategic_meeting_protocol.md](skills/strategic_meeting/references/strategic_meeting_protocol.md) |
+```
+skills/
+├── 🎨 modern_ui_craft            # High-end interface design, spring kinematics & visual polish
+├── 🔊 tactile_audio_sfx          # Physical acoustic sound effects & responsive audio cues
+├── 🛡️ hardened_clean_architecture # Defensive coding, strict Result/Option types, zero stubs
+├── 🌐 browser_visual_reasoning   # Real Chrome inspection, screenshot audits & console verification
+├── 🧠 fractal_thought_graph      # Systematic problem decomposition & dependency graphs
+└── ⚖️ forensic_adversarial_auditor# Unbiased code review, bug hunting & quality gate
+```
+
+- **[`modern_ui_craft`](./skills/modern_ui_craft/SKILL.md):** The definitive playbook for crafting interfaces that feel like modern desktop apps. Covers 2nd-order spring physics, GPU acceleration, and specular glass aesthetics.
+- **[`tactile_audio_sfx`](./skills/tactile_audio_sfx/SKILL.md):** Integrated micro-audio feedback using real physical acoustic recordings—never annoying synthetic bleeps.
+- **[`hardened_clean_architecture`](./skills/hardened_clean_architecture/SKILL.md):** Eliminates messy spaghetti code. Enforces decoupled layers, domain isolation, and deterministic state management.
+- **[`browser_visual_reasoning`](./skills/browser_visual_reasoning/SKILL.md):** Powers automated browser audits, rendering verification, and live diagnostics via Antigravity's `browser-mcp`.
+- **[`fractal_thought_graph`](./skills/fractal_thought_graph/SKILL.md):** Orchestrates multi-agent thinking, ensuring complex architectures are fully mapped before building.
+- **[`forensic_adversarial_auditor`](./skills/forensic_adversarial_auditor/SKILL.md):** An independent subagent that rigorously critiques code to catch edge cases, regressions, and performance bottlenecks.
 
 ---
 
-## 7. Deterministic Lifecycle Hook Gating System
+## ⚙️ Quick Start & Installation
 
-OmniCognition integrates directly with Antigravity 2.0 lifecycle hooks declared in [`hooks.json`](./hooks.json). These hooks execute independently of the model's neural weights, guaranteeing enforcement of governance boundaries.
+### Option 1: Install as an Antigravity Plugin (Recommended)
 
-```json
-{
-  "agi-executive-guards": {
-    "PreInvocation": [
-      {
-        "type": "command",
-        "command": "powershell -ExecutionPolicy Bypass -File .\\scripts\\hooks\\pre_invocation.ps1",
-        "timeout": 15
-      }
-    ],
-    "PostInvocation": [
-      {
-        "type": "command",
-        "command": "powershell -ExecutionPolicy Bypass -File .\\scripts\\hooks\\post_invocation.ps1",
-        "timeout": 15
-      }
-    ],
-    "Stop": [
-      {
-        "type": "command",
-        "command": "powershell -ExecutionPolicy Bypass -File .\\scripts\\hooks\\stop_gate.ps1",
-        "timeout": 15
-      }
-    ]
-  }
-}
-```
+1. Clone or copy this repository into your Antigravity plugins directory:
+   ```bash
+   git clone https://github.com/JokerQubit/AGI-Antigravity-skills-concept.git ~/.gemini/config/plugins/agi-research
+   ```
 
-### 7.1 Hook Verification Contracts & Actor Demarcation
-- **`PreInvocation` (`pre_invocation.ps1`)**: Runs prior to agent prompt ingestion.
-  1. **Subagent Actor Demarcation**: Inspects `session_state.json` and initial transcript headers. If executing inside an ephemeral subagent worker, it completely lifts CEO Vance's code creation ban and injects `[LEVEL 1 SPECIALIST]` operational telemetry under the Zero-Stub Law. If running in the root conversation, it injects executive governance and Axiom 15.
-  2. **Reverse Transcript Parsing**: Employs a reverse-seeking parser that traverses backwards from the tail of the transcript, guaranteeing that the true user directive is never lost even after 50+ tool calls.
-  3. **Cognitive Blocker Injection**: Injects `BLK-PREMISE-AUDIT` upon detection of new user directives, requiring the agent to ground all premises on physical disk prior to formulating plans.
-- **`PostInvocation` (`post_invocation.ps1`)**: Executes after every model response. Scans for Monolithic Prompt Theater violations and verifies git hygiene.
-- **`Stop` (`stop_gate.ps1`)**: Deterministic task completion gate with mechanical disk coupling.
-  1. **Active Blocker Enforcement**: Queries `session_state.json`. If `BLK-PREMISE-AUDIT` or any session blocker is open, it rejects termination (`decision: continue`), mechanically forcing the model back into the tool loop to perform empirical investigation.
-  2. **Deadlock Safety Circuit Breaker**: Reads `$inputObj.executionNum` natively from the Antigravity host runtime. If the model attempts to stop 4 or more times without resolving blockers, it trips an emergency `[STRATEGIC PAUSE]`, preventing infinite termination loops.
-  3. **Actor Scope Isolation**: Subagents only evaluate blockers registered specifically under their conversation ID, eliminating false deadlocks from root session blockers.
+2. Open **Google Antigravity IDE**.
 
-### 7.2 The 5-Layer Reflective Cognitive Architecture
+3. The plugin will be automatically recognized and loaded via `plugin.json`. You'll immediately notice Antigravity adopting a structured, high-rigor development flow!
 
-```
-                  ┌──────────────────────────────────────────────┐
-                  │          ENTRADA DO USUÁRIO / FOUNDER         │
-                  └──────────────────────┬───────────────────────┘
-                                         │
- ┌───────────────────────────────────────▼───────────────────────────────────────┐
- │ CAMADA 1: INGESTÃO SENSORIAL, DEMARCAÇÃO DE ATORES & SESSÃO (L1)              │
- │ • Parser Reverso: varre o transcript de trás para frente buscando o input real.│
- │ • Identificação de Ator: isola o CEO Vance (orquestrador) dos subagentes L1.  │
- │ • Inicialização da FSM em .state/session_state.json.                          │
- │ • Bloqueio Mecânico: injeta BLK-PREMISE-AUDIT travando encerramentos precoces.│
- └───────────────────────────────────────┬───────────────────────────────────────┘
-                                         │
- ┌───────────────────────────────────────▼───────────────────────────────────────┐
- │ CAMADA 2: INQUÉRITO FORENSE & PARAR PARA PENSAR (L2 + L3)                     │
- │ • Axioma 15 Estendido: Proibida resposta direta sem Scratchpad de Hipóteses.   │
- │ • Extração de Premissas: Classificação em [PROVEN_FACT] vs [FATAL_FALLACY].   │
- │ • Leitura Obrigatória de Disco: view_file e grep_search antes de conclusões.  │
- │ • Resolução do Blocker 1 via sync_state.ps1 -Action resolve-blocker.          │
- └───────────────────────────────────────┬───────────────────────────────────────┘
-                                         │
- ┌───────────────────────────────────────▼───────────────────────────────────────┐
- │ CAMADA 3: SISTEMAS & ARQUITETURA DEFENSIVA: CONTRATOS E DAG (L4 + L7)         │
- │ • Barreira de Planejamento: emissão de implementation_plan.md com DAG formal. │
- │ • Injeção do Blocker 2: BLOCKER_DEVILS_APPROVAL_PENDING.                      │
- │ • Despacho de Subagentes Limpos (com instruções focadas, sem persona do CEO). │
- └───────────────────────────────────────┬───────────────────────────────────────┘
-                                         │
- ┌───────────────────────────────────────▼───────────────────────────────────────┐
- │ CAMADA 4: O GAUNTLET ADVERSARIAL REAL: OS DOIS DEVILS (L6 + L8)               │
- │ • Devil's Apple (Pré-Execução): Auditoria crítica do plano com Institutional  │
- │   Distrust, caçando pontos únicos de falha e premissas fracas.                │
- │ • Devil's Advocate (Pós-Execução): Inspeção AST, testes reais, zero-stub.     │
- │   -> Se reprovado: Força Strategy Mutation (Algoritmo, Concorrência, Tipos).  │
- │   -> Se atingir limite de rodadas: HALT REAL e disparo de Reunião Estratégica.│
- │ • Resolução do Blocker 2 no disco após certificação Q >= 0.95.                │
- └───────────────────────────────────────┬───────────────────────────────────────┘
-                                         │
- ┌───────────────────────────────────────▼───────────────────────────────────────┐
- │ CAMADA 5: CONTINUUM DE MEMÓRIA, LEDGER HASH & STOP GATE (L10 + L11)           │
- │ • Commit atômico no ledger TX-XXXX com encadeamento de hash SHA-256.          │
- │ • Verificação do Stop Gate: se blockers == 0, permite encerramento (allow);  │
- │   caso contrário, devolve decision: continue e força o modelo ao trabalho.    │
- └───────────────────────────────────────────────────────────────────────────────┘
-```
+### Option 2: Use in an Existing Project
+
+You can also copy the `rules/` and `skills/` folders directly into your project's `.gemini/` or root directory to give any workspace instant access to OmniCognition's capabilities.
 
 ---
 
-## 8. PowerShell CLI Automation & Tooling Suite
+## 💡 How It Works Under the Hood
 
-The platform includes production-grade automation scripts in [`scripts/`](./scripts/) to maintain cybernetic state:
-
-```powershell
-# 1. Update project neural map and re-index all dependencies
-powershell -ExecutionPolicy Bypass -File scripts/update_neural_map.ps1
-
-# 2. Append an immutable, cryptographically verifiable event to the ledger
-powershell -ExecutionPolicy Bypass -File scripts/sync_state.ps1 -Action log-event `
-  -Initiator "CTO-ENG-01" -EventType "ARCHITECTURE_UPGRADE" -Description "Hardened optical matrix substrate."
-
-# 3. Session State Engine: Initialize session, set/resolve blockers, record hypotheses
-powershell -ExecutionPolicy Bypass -File scripts/sync_state.ps1 -Action init-session -Initiator "Founder" -Description "Quantum Core Sprint"
-powershell -ExecutionPolicy Bypass -File scripts/sync_state.ps1 -Action set-blocker -BlockerId "BLK-PREMISE-AUDIT" -Description "Verify physical disk state"
-powershell -ExecutionPolicy Bypass -File scripts/sync_state.ps1 -Action record-hypothesis -Hypothesis "Host runtime provides executionNum natively" -Confidence "PROVEN_FACT"
-powershell -ExecutionPolicy Bypass -File scripts/sync_state.ps1 -Action resolve-blocker -BlockerId "BLK-PREMISE-AUDIT"
-
-# 4. Execute Chroma Horizon 4-Quadrant Socratic Grill with physical AST inspection
-powershell -ExecutionPolicy Bypass -File scripts/run_chroma_grill.ps1 -TargetFile "scripts/sync_state.ps1"
-
-# 5. Run Devil's Advocate supervisory gate with AST analysis and automatic Strategic Meeting escalation
-powershell -ExecutionPolicy Bypass -File scripts/run_devils_advocate.ps1 -TargetDeliverable "scripts/sync_state.ps1" -MaxRounds 3
-
-# 6. Run Devil's Apple adversarial audit on an architectural document
-powershell -ExecutionPolicy Bypass -File scripts/run_devils_apple.ps1 -ArtifactPath ".state/plans/v2_architecture.md"
-
-# 7. Execute dynamic Strategic Meeting self-accountability session
-powershell -ExecutionPolicy Bypass -File scripts/run_strategic_meeting.ps1 -NodeId "EMP-DEV-101" -FailedGoal "Implement Lock-Free Ring Buffer" -ObservedReality "Race condition detected under 64-thread load"
-
-# 8. Execute automated end-to-end test validation suite (100% Zero-Stub pass required)
-powershell -ExecutionPolicy Bypass -File scripts/test_validation.ps1
-
-# 9. Execute recursive dimension expansion across engineering domain X
-powershell -ExecutionPolicy Bypass -File scripts/expand_dimensions.ps1 -Domain "Distributed Consensus"
 ```
+   [Your Request]
+         │
+         ▼
+┌─────────────────────────────────────────────────────────────┐
+│  Phase 0: Intent Refinement & Token Governance             │
+│  Clarifies scope, selects optimal thinking tier (Low/Med)   │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│  Phase 1: Deep Thought Graph & Architecture                 │
+│  Maps dependencies and identifies all edge cases            │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│  Phase 2: Dispatch Matrix & Human Approval                 │
+│  Presents implementation_plan.md → Awaits your "Proceed"    │
+└────────────────────────┬────────────────────────────────────┘
+                         │ (Approved)
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│  Phase 3: 1-to-1 Precision Code Crafting                   │
+│  Subagents build fully functional, zero-stub modules        │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│  Phase 4: Independent Browser Audit (The Gauntlet)         │
+│  Real Chrome test via browser-mcp (0 errors, 100% verified) │
+└─────────────────────────────────────────────────────────────┘
+```
+
+OmniCognition separates **governance** from **execution**:
+- **Rules (`rules/`):** Define the system's core laws (never write stubs, never guess, verify in real browser).
+- **Skills (`skills/`):** Provide hands-on manuals for UI craft, audio engineering, clean architecture, and browser testing.
+- **Adaptive Thinking:** Automatically shifts between Flash Low (for quick planning), Flash Medium (for architecture), and Flash High (for deep coding and adversarial review) to optimize quality and token cost.
 
 ---
 
-## 9. Installation, Activation & Reproducibility Guide
+## ❓ Frequently Asked Questions
 
-### 9.1 Installation Modes
+<details>
+<summary><b>Does this work with any programming language or framework?</b></summary>
+Yes! The architecture and governance principles apply to React, Vue, Svelte, Next.js, Node.js, Python, Go, Rust, mobile apps, and full-stack systems.
+</details>
 
-#### Mode A: Global Antigravity Plugin Installation (Recommended)
-Clone the repository into your global Antigravity plugins directory:
-```bash
-git clone https://github.com/JokerQubit/AGI-Antigravity-skills-concept.git ~/.gemini/config/plugins/agi-research
-```
+<details>
+<summary><b>Will this burn too many tokens?</b></summary>
+No. OmniCognition includes an Adaptive Token Governance system that matches the task complexity to the right thinking budget (Flash Low for quick planning, Medium for domain logic, and High only when building critical features or auditing).
+</details>
 
-#### Mode B: Local Workspace Plugin Installation
-Clone into the active project directory under `.gemini/plugins/`:
-```bash
-cd /path/to/your/project
-git clone https://github.com/JokerQubit/AGI-Antigravity-skills-concept.git .gemini/plugins/agi-research
-```
+<details>
+<summary><b>What is browser-mcp and why does it matter?</b></summary>
+<code>browser-mcp</code> allows the agent to open a real headless or visible Chrome browser, click buttons, inspect network calls, view console errors, and take screenshots. This ensures your app actually works on screen, not just in theory.
+</details>
 
-### 9.2 Verifying Activation & Health Diagnostics
-
-Launch Antigravity IDE and run the neural synchronization suite in your terminal:
-```powershell
-# Navigate to plugin root
-cd ~/.gemini/config/plugins/agi-research
-
-# Run neural map synchronization
-powershell -ExecutionPolicy Bypass -File scripts/update_neural_map.ps1
-```
-
-Expected diagnostic output:
-```
-============================================================
-  OMNICOGNITION LABS - NEURAL MAP GENERATOR & RE-INDEXER
-============================================================
-[*] Scanning repository components...
-    - Mapped Skills: 16
-    - Mapped Runbooks: 16
-    - Mapped Scripts: 11
-    - Mapped Rules: 1 (AGENTS.md)
-[+] Neural map written successfully to .state/neural_map.json
-[+] Project context written to .state/project_context.md
-[+] Re-indexing complete. System is 100% operational.
-```
+<details>
+<summary><b>Can I customize the rules or skills?</b></summary>
+Antigravity rules and skills are plain Markdown files that you can easily adapt to your team's coding conventions, design system, and tech stack.
+</details>
 
 ---
 
-## 10. Enterprise Governance, Non-Negotiable Invariants & License
+## 🤝 Contributing & Community
 
-### 10.1 The Three Core Cybernetic Invariants
+Contributions are welcome! If you have ideas for new skills, performance optimizations, or UI blueprints:
 
-1. **The Zero-Stub Law (Axiom 2.2)**: Declared interfaces, classes, methods, and error handlers must contain full operational logic. Empty bodies (`pass`, `return null`), stubbed mocks, or truncated ellipses (`...`) trigger deterministic rejection.
-2. **The Monotonic Hardening Invariant (Axiom 13.2)**: Cybernetic self-evolution can only strengthen system constraints, never relax them. Weakening assertions, reducing test thresholds, or bypassing supervisory gates is constitutionally forbidden.
-3. **Fiduciary Token Efficiency (Axiom 1.2)**: Agent interactions must maintain an operational signal density $\Phi \ge 0.85$. Unproductive conversational loops, sycophantic roleplay, and ungrounded speculation are strictly prohibited.
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/amazing-skill`).
+3. Commit your changes (`git commit -m "feat: add new tactile micro-interaction skill"`).
+4. Push to the branch (`git push origin feature/amazing-skill`).
+5. Open a Pull Request.
 
-### 10.2 License & Copyright
+---
 
-Copyright © 2026 OmniCognition Labs Research Council.  
-Distributed under the **Apache License, Version 2.0**. See [`LICENSE`](./LICENSE) for full legal text.  
-*All visual, optical, and media assets generated under the Matrix Reverse Multi-Modal Protocol.*
+## 📄 License
+
+Distributed under the Apache 2.0 License. See [`LICENSE`](./LICENSE) for more information.
+
+<div align="center">
+<sub>Crafted with passion by OmniCognition Labs & the Antigravity community.</sub>
+</div>

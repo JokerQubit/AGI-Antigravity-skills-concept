@@ -1,6 +1,9 @@
 {
   "name": "agi-research",
-  "description": "Executive cybernetic multi-agent orchestration architecture for Antigravity IDE.",
-  "version": "1.0.0",
-  "author": "AGI Research Systems & Cognitive Cybernetics Council"
+  "version": "3.5.0",
+  "description": "Universal Polymath Cognitive Architecture: 5-Epoch Lifecycle, Cognitive Work Shifts, Prompt Refiner, Epistemic Halt, Bespoke Dynamic Squad Synthesis (Zero Templates), Chief Ontologist Research, Synaptic Relay Neural Bus (HOLD/GO), Swarm Meta-Identity & Peer Veto Consensus.",
+  "author": "OmniCognition Labs",
+  "rules": "rules",
+  "skills": "skills",
+  "mcp": "mcp_config.json"
 }

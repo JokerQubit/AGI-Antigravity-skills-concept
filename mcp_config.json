@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "browser-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@agent360/browser-mcp@latest"
+      ]
+    }
+  }
+}
