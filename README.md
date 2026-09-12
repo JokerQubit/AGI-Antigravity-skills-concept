@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![OmniCognition / Antigravity AGI Banner](assets/images/hero_banner.png)
+![OmniCognition / Antigravity AGI Banner](assets/images/hero_workstation_real.png)
 
 **Turn Google Antigravity into a senior engineering team that plans deeply, writes zero-stub production code, and tests itself in a real browser.**
 
@@ -50,7 +50,7 @@ Instead of writing code on a whim, OmniCognition guides Antigravity through an o
 
 <div align="center">
 
-![5-Stage Autonomous Engineering Pipeline](assets/images/workflow_pipeline.png)
+![5-Stage Autonomous Engineering Pipeline](assets/images/workflow_pipeline_real.png)
 
 </div>
 
@@ -77,7 +77,7 @@ Most AI tools settle for the bare minimum: rigid CSS, generic animations, and un
 
 <div align="center">
 
-![Titan Standard Quality Comparison](assets/images/titan_standard.png)
+![Titan Standard Quality Comparison](assets/images/titan_review_real.png)
 
 </div>
 
