@@ -186,19 +186,23 @@ export const TitanDrawer: React.FC<DrawerProps> = ({ isOpen, onClose, children }
 
 ---
 
-## 3. Direção de Arte & Engenharia Óptica para `generate_image`
+## 3. Direção de Arte Fotográfica & Engenharia Óptica para `generate_image`
 
-Para erradicar imagens amadoras e ilustrações vetoriais infantis, toda geração de imagens fotográficas deve obedecer à **Fórmula Óptica de 6 Variáveis**:
+### O Banimento Inegociável dos Clichês de IA Genérica:
+- **TERMINANTEMENTE PROIBIDO:** Circuitos brilhantes neon azul/ciano, gráficos isométricos flutuantes com nós brilhantes, chips cósmicos, cubos holográficos, ilustrações pseudo-futuristas de ficção científica barata, e textos ilegíveis gerados pela IA. Imagens com esse padrão denunciam "IA genérica amadora" e destroem a credibilidade de qualquer produto.
+- **O PADRÃO OBRIGATÓRIO (FOTOGRAFIA REALISTA & EDITORIAL PROFISSIONAL):** Toda imagem gerada deve se assemelhar a uma **fotografia real autêntica de classe mundial** (publicada em revistas de design de produto como Wallpaper*, Monocle, publicações da Apple, Stripe Press, Linear ou Teenage Engineering) ou a um **design editorial de produto de altíssima fidelidade**.
 
-$$\text{Prompt} = \text{[Sujeito]} + \text{[Câmera]} + \text{[Lente \& Abertura]} + \text{[Iluminação]} + \text{[LUT / Grão]} + \text{[Invariante Negativo]}$$
+Para garantir realismo palpável, profundidade óptica e textura orgânica, toda chamada a `generate_image` deve obedecer à **Fórmula Óptica de 6 Variáveis**:
+
+$$\text{Prompt} = \text{[Cenário Real \& Sujeito Tangível]} + \text{[Câmera Real]} + \text{[Lente \& Abertura]} + \text{[Iluminação Orgânica]} + \text{[Materialidade \& Cores]} + \text{[Invariante Negativo Rigoroso]}$$
 
 ### As 6 Variáveis Fotográficas Obrigatórias:
-1. **Câmera:** `Hasselblad H6D-100c medium format`, `Leica M11 Rangefinder`, `Sony A7R V` ou `ARRI Alexa Mini LF`.
-2. **Lente & Abertura:** `85mm f/1.2 prime lens`, `35mm f/1.4 Summilux`, `90mm f/2.8 macro lens`.
-3. **Iluminação:** `Directional chiaroscuro side lighting`, `intense cool rim light`, `soft diffused beauty dish`.
-4. **LUT / Grão:** `Kodak Portra 400 film stock`, `Fujifilm Pro 400H`, `subtle 35mm analog film grain`, `deep crushed blacks`.
-5. **Composição:** `Negative space on left/right for typography overlay`, `cinematic editorial framing`.
-6. **Invariante Negativo:** `no text, no watermark, no labels, no words, no letters, no UI, clean frame`.
+1. **Sujeito Tangível & Realista:** Estações de trabalho de engenharia limpas, mesas de carvalho maciço escuro ou concreto arquitetônico, monitores reais de alta fidelidade (Pro Display XDR / Studio Display) com código escuro real e nítido, teclados mecânicos usinados em alumínio CNC, dispositivos de hardware tátil de alta precisão.
+2. **Câmera Real:** `Hasselblad H6D-100c medium format`, `Leica M11 Rangefinder`, `Sony A7R V` ou `Phase One IQ4 150MP`.
+3. **Lente & Abertura:** `50mm f/1.4 prime lens`, `85mm f/1.2 prime lens`, `90mm f/2.8 macro lens` (profundidade de campo óptica natural com bokeh orgânico suave, sem blur artificial).
+4. **Iluminação Orgânica / Estúdio:** `Soft directional morning window light with subtle warm tungsten desk lamp fill`, `clean diffused architectural studio softbox`, `elegant chiaroscuro edge lighting with deep matte blacks`.
+5. **Materialidade & Paleta:** Alumínio anodizado cinza espacial, vidro temperado fosco, carvalho preto escovado, cerâmica fosca, aço inoxidável escovado. Paleta sóbria, elegante e sem cores fluorescentes berrantes.
+6. **Invariante Negativo Rigoroso (Obrigatório em todo prompt):** `no neon glowing circuits, no sci-fi holograms, no floating futuristic cubes, no cheesy AI art, no 3D isometric glowing nodes, no illegible text, no watermarks, no distorted artifacts, realistic photography only`.
 
 ---
 
