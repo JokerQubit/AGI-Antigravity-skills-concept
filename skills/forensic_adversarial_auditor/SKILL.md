@@ -1,9 +1,11 @@
 ---
 name: forensic_adversarial_auditor
-description: Playbook operacional de auditoria adversarial da Mente Juíza (Judge Mind) como Subagente Independente na Época IV. Define o roteiro prático para as Quatro Passadas do Gauntlet, caça forense a stubs, cosplay acadêmico, verificação do Padrão dos Titãs, caça a batching de nós e atalhos de pressa, inspeção via browser-mcp e emissão do veto mecânico [HARD REJECT: RESTART FRACTAL CYCLE].
+description: Playbook operacional de auditoria adversarial da Mente Juíza (Judge Mind) como Subagente Independente na Época IV — v4.0.0 (Universal Cognitive Parity & Structured Neural Planning Mesh). Define o roteiro prático para a Passada 0 (Auditoria Forense da Cadeia Neural) e as Quatro Passadas do Gauntlet, caça forense a stubs, cosplay acadêmico, verificação do Padrão dos Titãs, caça a batching de nós e atalhos de pressa, inspeção via browser-mcp e emissão do veto mecânico [HARD REJECT: RESTART FRACTAL CYCLE]. Disparada compulsoriamente a cada interação operacional (Lei 41), sem qualquer exceção para tarefas simples, micro-fixes ou ajustes rápidos.
 ---
 
-# Forensic Adversarial Auditor Playbook (Época IV - v3.1)
+# Forensic Adversarial Auditor Playbook (Época IV — v4.0.0 · Universal Cognitive Parity & Structured Neural Planning Mesh)
+
+Na v4.0.0 (Universal Cognitive Parity), a auditoria adversarial independente deixa de ser reservada para grandes plataformas e passa a ser disparada compulsoriamente a cada interação operacional (Lei 41). A Mente Juíza (Epistemic Red Team Lead) opera em contexto limpo, sem apego ao código gerado, e possui poder soberano de veto (`[HARD REJECT]`) independentemente do escopo da entrega.
 
 Manual prático de condução de auditorias adversariais no disco pela Mente Juíza (Judge Mind) operando **obrigatoriamente como Subagente Independente na Época IV**. Estabelece o portão de homologação inviolável: **é expressamente proibido ao criador do código auto-aprovar seu trabalho**. O subagente auditor atua com ceticismo radical em contexto limpo, caçando implacavelmente atalhos de tempo, batching de nós por subagentes e soluções superficiais, com autoridade soberana de emitir `[HARD REJECT]` e obrigar o reinício do ciclo fractal.
 
@@ -30,41 +32,57 @@ Manual prático de condução de auditorias adversariais no disco pela Mente Ju�
 
 ---
 
-## 2. O Roteiro das Quatro Passadas do Gauntlet (Executadas pelo Subagente Juiz)
+## 2. Passada 0 (Pré-Gauntlet) — Auditoria dos Checklists Forenses da Cadeia Neural (Lei 41)
 
-### Passada 1: Auditoria de Referencial Cego & Caça ao Batching
-* **Objetivo:** Confrontar o produto estritamente contra o prompt original do usuário e verificar se o planejamento cumpriu a regra atômica 1:1 sem agrupar nós em lotes genéricos.
-* **Procedimento:**
-  1. Releia o prompt primordial do usuário, isolando cada requisito explícito e implícito.
-  2. Inspecione o histórico de despachos de subagentes: **subagentes foram despachados para cobrir lotes de 10, 20 ou 25 nós?** Se sim, **REJEIÇÃO IMEDIATA**. Cada subagente deve ter tido um nó único como missão atômica 1:1.
-  3. Inspecione `.planning/nodes/` e `graph.json`, verificando se os contratos, micro-mecanismos e `exported_primitives` foram detalhados como quem "procura água no deserto" ou se foram resumidos com pressa.
+Antes das 4 passadas do Gauntlet clássico, o Juiz realiza a auditoria binária dos checklists de cada subagente e de cada nó atômico. Para cada item do checklist:
 
-### Passada 2: Estresse Adversarial & Verificação do Padrão dos Titãs
-* **Objetivo:** Quebrar ativamente a solução nos limites de borda e caçar atalhos medíocres da média da web.
-* **Checklist de Inspeção:**
-  - *Caça ao Menor Denominador Comum (Titan Benchmark):* A interface utiliza transições ingênuas de CSS (`transition-all duration-300 ease-in-out`) ou scripts toscos para interações que exigem resposta física fluida? Se sim, **REJEIÇÃO IMEDIATA**. Exige-se física de molas dinâmicas de 2ª ordem (`framer-motion`: stiffness, damping, mass) e gestos com inércia real no padrão Linear, Apple, Stripe e Instagram.
-  - *Entradas Nulas e Bordas:* O código trata payloads malformados, arrays vazios e desconexões de rede sem crashar ou vazar `undefined` na interface?
-  - *Fallback Visual Local:* Vídeos e imagens possuem posters locais de alta resolução persistidos no disco, garantindo zero telas pretas caso haja lentidão de carregamento?
-  - *Canais de Erro Tipados:* As funções de infraestrutura e regras de negócio retornam `Result<T, E>` tipado ou estão utilizando blocos vazios `catch (e) {}`?
-
-### Passada 3: Integridade Física no Disco & Varredura Zero-Stub
-* **Objetivo:** Auditar cada arquivo de código contra esqueletos, métodos anêmicos e erros de compilação.
-* **Varredura Linha a Linha:**
-  - O código contém `pass`, `// TODO`, `return null`, funções vazias `{}` ou reticências de código (`...`)? Se houver **uma única ocorrência**, a entrega é imediatamente REJEITADA.
-  - Execute a checagem nativa de tipos do projeto (ex: `npx tsc --noEmit` para TypeScript, `python -m py_compile` para Python).
-  - Verifique que o único script utilitário no repositório é `scripts/sfx_tool.py` (proibidos scripts descartáveis).
-
-### Passada 4: Inspeção Visual em Navegador Real & Realidade Corporativa (`browser-mcp`)
-* **Objetivo:** Abrir o Google Chrome real, auditar visualmente a renderização física a 60fps e validar a seriedade institucional.
-* **Procedimento:**
-  1. Conectar via ferramentas do `browser-mcp`, capturar screenshots de alta definição da aplicação em funcionamento local (estado em repouso, hover, modal aberto, scroll contínuo).
-  2. Verificar ausência de quebras de layout, fontes pixeladas, desalinhamentos e clichês de UI Kits amadores (repetição estéril de caixas escuras idênticas, badges inflacionados, simuladores 2D infantis).
-  3. Auditar os logs de console: banir qualquer erro de JavaScript, warning de hidratação do React ou falha de carregamento de mídia (404).
-  4. Auditar a seriedade corporativa: confirmar que todo texto, dado cadastral e fluxo modela uma empresa real de mercado (proibido "Lorem Ipsum", "Pizzaria do Zé", "Empresa ABC" ou dados de mentira).
+- O Juiz localiza a evidência física correspondente no disco (arquivo, linha de código, commit hash) ou no navegador (screenshot do browser-mcp, log do console).
+- Se um item estiver marcado como aprovado sem evidência física verificável, o Juiz emite imediatamente: `[HARD REJECT: FRAUDULENT_CHECKLIST_SIGNOFF — Nó: node_XXX]`.
+- Se mais de 2 itens em qualquer nó estiverem fraudados, o Juiz emite: `[HARD REJECT: RESTART FRACTAL CYCLE — Retorno à Época I]`.
 
 ---
 
-## 3. Matriz de Não-Aceitação Sumária & Infrações Constitucionais
+## 3. O Roteiro das Quatro Passadas do Gauntlet (Executadas pelo Subagente Juiz)
+
+### Passada 1 — Ceticismo Arquitetural & Conformidade Constitucional
+* **Objetivo:** Verificar a integridade das Leis 1-41, ausência de Tiers obsoletos e conformidade dos artefatos de planejamento com as exigências constitucionais.
+* **Procedimento:**
+  1. Confirme que `refiner_seal.json` foi emitido com `seal_status: "SEALED_VALID"` e hash coincidente com o prompt bruto do usuário.
+  2. Verifique que `mission_dossier.md` contém o Tier correto (Tier 1/2/3), número estimado de nós e roadmap determinístico.
+  3. Inspecione o histórico de despachos de subagentes: **subagentes foram despachados para cobrir lotes de 10, 20 ou 25 nós?** Se sim, **REJEIÇÃO IMEDIATA**. Cada subagente deve ter tido um nó único como missão atômica 1:1.
+  4. Inspecione `.planning/nodes/` e `graph.json`, verificando se os contratos, micro-mecanismos e `exported_primitives` foram detalhados como quem "procura água no deserto" ou se foram resumidos com pressa.
+  5. Confirme que nenhuma Lei das 41 Leis Constitucionais foi violada silenciosamente (auto-auditoria, Null-Vocabulary, Zero-Stub, Titan Benchmark, mídia real etc.).
+
+### Passada 2 — Varredura de Stubs, Mocks & Zero-Stub Enforcement
+* **Objetivo:** Erradicar cada esqueleto de código, método anêmico, tipo evasivo ou dado falso que contamina a entrega.
+* **Varredura de Linha-por-Linha (grep obrigatório):**
+  - Execute: `grep -rn "TODO\|pass\b\|return null\|return {}\|: any\b\|: unknown\b\|\.\.\." <src_dir>`.
+  - **Qualquer ocorrência única** constitui Violação Zero-Stub e aciona rejeição imediata.
+  - Execute a checagem nativa de tipos do projeto (ex: `npx tsc --noEmit` para TypeScript, `python -m py_compile` para Python).
+  - Verifique que o único script utilitário no repositório é `scripts/sfx_tool.py` (proibidos scripts descartáveis).
+  - Confirme ausência de dados fictícios ("Lorem Ipsum", "FakeCorp", "Empresa ABC", "Pizzaria do Zé").
+
+### Passada 3 — Craft Perceptual dos Titãs & Mídia Real
+* **Objetivo:** Confirmar que toda interação tátil, animação, imagem e áudio atingem o padrão dos Titãs (Linear, Apple, Stripe, Instagram) sem atalhos amadores.
+* **Checklist de Inspeção:**
+  - *Física de Molas de 2ª Ordem:* A interface utiliza `framer-motion` com parâmetros explícitos de `stiffness`, `damping` e `mass` em todos os elementos interativos? Transições ingênuas de CSS (`transition-all duration-300 ease-in-out`) acionam **REJEIÇÃO IMEDIATA**.
+  - *Áudio Foley Real:* Todo áudio provém de `scripts/sfx_tool.py slice-youtube` ou download Freesound CC0. Ruídos sintéticos (`AudioSynthesizer`, osciladores matemáticos) acionam **REJEIÇÃO IMEDIATA**.
+  - *Fotografia Óptica Real:* Imagens geradas seguem as 6 variáveis ópticas do `modern_ui_craft` (câmera, lente, iluminação, composição, pós-processamento, intenção editorial). SVG genérico, emojis ou glifos Unicode (`↗`, `→`, `✹`, `·`, `—`, `❚❚`, `▶`, `GLYPH_MAP`) usados como ícones acionam **REJEIÇÃO IMEDIATA**.
+  - *Fallback Visual Local:* Vídeos e imagens possuem posters locais de alta resolução persistidos no disco, garantindo zero telas pretas.
+  - *Canais de Erro Tipados:* Funções de infraestrutura e regras de negócio retornam `Result<T, E>` tipado; blocos vazios `catch (e) {}` acionam rejeição.
+
+### Passada 4 — Inspeção Perceptual no Chrome Real (browser-mcp)
+* **Objetivo:** Abrir o Google Chrome real, auditar visualmente a renderização física a 60fps e validar telemetria de zero falhas.
+* **Procedimento:**
+  1. Conectar via ferramentas do `browser-mcp`, capturar screenshots de alta definição da aplicação em funcionamento local (estado em repouso, hover, modal aberto, scroll contínuo).
+  2. Abrir o DevTools Performance e confirmar frame rate estável de 60fps (120fps em dispositivos ProMotion); jank acima de 16ms aciona rejeição.
+  3. Auditar os logs de console: **zero erros de JavaScript, zero warnings de hidratação do React e zero falhas de carregamento de mídia (404)**. Qualquer entrada negativa no console aciona rejeição imediata.
+  4. Verificar ausência de quebras de layout, fontes pixeladas, desalinhamentos e clichês de UI Kits amadores.
+  5. Auditar a seriedade corporativa: confirmar que todo texto, dado cadastral e fluxo modela uma empresa real de mercado (proibido "Lorem Ipsum", "Pizzaria do Zé", "Empresa ABC" ou dados falsos).
+
+---
+
+## 4. Matriz de Não-Aceitação Sumária & Infrações Constitucionais
 
 | Sintoma Detectado no Disco | Classificação | Veredito da Mente Juíza |
 |---|---|---|
@@ -87,7 +105,7 @@ Manual prático de condução de auditorias adversariais no disco pela Mente Ju�
 
 ---
 
-## 4. Dossiê Formal de Rejeição & Disparo do Ciclo Fractal
+## 5. Dossiê Formal de Rejeição & Disparo do Ciclo Fractal
 
 Ao identificar qualquer uma das infrações acima, o subagente juiz emite no chat o dossiê formal de rejeição, abortando a entrega:
 
@@ -118,7 +136,7 @@ ORDEM MECÂNICA COMPULSÓRIA:
 
 ---
 
-## 5. Métrica de Homologação Final ($Q \ge 0.95$)
+## 6. Métrica de Homologação Final ($Q \ge 0.95$)
 
 O sign-off final de aprovação da Época IV só é emitido pelo subagente juiz se o índice de qualidade $Q$ satisfizer:
 $$Q = 0.25 C_{\text{correct}} + 0.25 C_{\text{zero\_stub}} + 0.20 C_{\text{resilience}} + 0.15 C_{\text{titan\_craft}} + 0.15 C_{\text{depth}} \ge 0.95$$

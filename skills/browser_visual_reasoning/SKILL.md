@@ -1,11 +1,13 @@
 ---
 name: browser_visual_reasoning
-description: Manual técnico de inspeção perceptual em navegador real via browser-mcp (Agent360). Governa a captura de telas, diagnóstico de console, verificação do Padrão dos Titãs e o ciclo de retroalimentação fractal executado pelo Subagente Juiz Independente na Época IV.
+description: "v4.0 — Universal Cognitive Parity — Inspeção Perceptual Adversarial no Chrome Real. Manual técnico de inspeção perceptual obrigatória via browser-mcp (Agent360). Governa a captura de telas, diagnóstico de console, verificação do Padrão dos Titãs e o ciclo de retroalimentação fractal executado pelo Subagente Juiz Independente na Época IV — acionado compulsoriamente a cada interação operacional sem distinção de escopo."
 ---
 
-# Browser Visual Reasoning & Perceptual Critique Playbook (v3.0)
+# Browser Visual Reasoning & Perceptual Critique Playbook (v4.0 — Universal Cognitive Parity — Inspeção Perceptual Adversarial no Chrome Real)
 
 Manual prático de validação visual e raciocínio em tempo de execução via navegador real do usuário, utilizando a infraestrutura do **Browser MCP** ([Agent360](https://github.com/agent360dk/browser-mcp)). Estabelece o portão mecânico inviolável: **a homologação só ocorre se o Subagente Juiz Independente na Época IV inspecionar a aplicação no Chrome real, diagnosticar zero erros/warnings no console, confirmar o Padrão dos Titãs e aprovar o padrão estético de classe mundial.**
+
+> **v4.0.0 — Universal Cognitive Parity:** Na v4.0.0, a inspeção perceptual no Chrome real via browser-mcp é acionada compulsoriamente pela Época IV a cada interação operacional — sem distinção entre "pequeno componente" e "plataforma completa". Não existe entrega que dispense a Passada 4 do Gauntlet com telemetria de zero erros no console.
 
 ---
 
@@ -24,12 +26,18 @@ O **Browser MCP** opera em duas metades conectadas localmente:
 ## 2. A Lei da Verificação Visual Obrigatória pelo Subagente Juiz (The Perceptual Gate)
 
 - **Veto Absoluto à Entrega Cega e à Auto-Aprovação:** É terminantemente proibido concluir uma tarefa ou declarar código homologado sem que o Subagente Juiz Independente tenha aberto e examinado visualmente a aplicação renderizada no navegador real na Época IV.
+- **Mandato de Contexto Limpo (v4.0 — Invariante Absoluto):** O subagente Red Team Juiz DEVE obrigatoriamente operar em contexto limpo, sem qualquer apego ao código gerado pelo Agente Principal. Ele não conhece intenções do autor, não absorve boas intenções e não concede crédito por esforço — somente pelo resultado verificável no Chrome real. Qualquer desvio deste mandato invalida o veredito.
+- **Trindade de Ferramentas Obrigatórias (Zero Exceções):** Em toda auditoria de Época IV, o subagente juiz DEVE invocar as três ferramentas a seguir sem exceção:
+  1. `browser_navigate` — Navegar explicitamente até a URL da aplicação em execução.
+  2. `browser_screenshot` — Capturar evidência visual em repouso, durante interação e em estados dinâmicos.
+  3. `browser_console_logs` — Extrair telemetria completa de console para confirmar zero erros, zero warnings críticos e zero 404s.
 - **Procedimento de Validação em Tempo de Execução:**
   1. Subir o servidor de desenvolvimento local da aplicação (ex: `npm run dev`, `python -m http.server`, `vite`).
   2. Navegar no Chrome para a URL local (`http://localhost:3000`, `http://localhost:5173`, etc.) via `browser_navigate`.
   3. Capturar screenshots de alta resolução da página em repouso, durante rolagem e em estados interativos (modais, menus, gavetas).
   4. Extrair os logs de console da aba (`browser_console_logs`) para confirmar **zero erros de JavaScript, zero warnings de hidratação e zero requisições 404 de mídia**.
   5. Inspecionar a fluidez cinemática e ausência de travamentos.
+
 
 ---
 
@@ -81,3 +89,20 @@ Se a inspeção visual e o diagnóstico de console revelarem **qualquer falha, m
 ```
 
 - **Invariante da Auto-Evolução:** O sistema nunca se contenta com uma primeira versão mediana. O ciclo de retroalimentação força o refinamento recursivo até o ápice do design e da engenharia mundial.
+
+---
+
+## 5. Checklist Forense de Inspeção Perceptual (Binário — Lei 41)
+
+> Executado pelo subagente Red Team Juiz na Época IV. Um único item reprovado dispara `[HARD REJECT]`.
+
+- [ ] **Zero Erros no Console:** `browser_console_logs` retorna zero entradas de nível `error`.
+- [ ] **Zero Warnings Críticos:** zero `warning` de hidratação SSR, memory leak, CORS ou deprecation grave.
+- [ ] **Zero Assets 404:** zero requisições HTTP com status 404 na aba Network do DevTools.
+- [ ] **60fps Verificado:** gravação do DevTools Performance mostra zero dropped frames por mais de 100ms contínuos.
+- [ ] **Layout Sem Shift (CLS = 0):** zero Cumulative Layout Shift; elementos não saltam após carregamento inicial.
+- [ ] **Contraste WCAG AA:** contrastes de texto verificados visualmente no screenshot; mínimo 4.5:1 para texto normal.
+- [ ] **Fotografia Real Renderizada:** screenshots confirmam imagens fotográficas editoriais reais — zero placeholder, SVG genérico ou fundo sólido vazio.
+- [ ] **Animações Fluidas:** screenshot ou recording confirma transições sem frame-drop visível; zero `transition-all duration-300` detectado via DevTools Animations.
+- [ ] **Física de Molas Confirmada:** inspeção visual confirma comportamento de spring (overshoot natural) em componentes interativos — não movimento linear duro.
+

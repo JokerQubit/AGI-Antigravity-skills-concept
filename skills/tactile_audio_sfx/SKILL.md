@@ -1,11 +1,15 @@
 ---
 name: tactile_audio_sfx
-description: Manual técnico de engenharia de áudio físico real via gravações acústicas do YouTube (slice-youtube) e Freesound CC0 com scripts/sfx_tool.py, e integração de micro-áudio responsivo em aplicações web.
+version: 4.0.0
+description: "v4.0 — Universal Cognitive Parity — Áudio Acústico Físico Real. Manual técnico de engenharia de áudio físico real via gravações acústicas do YouTube (slice-youtube) e Freesound CC0 com scripts/sfx_tool.py, e integração de micro-áudio responsivo em aplicações web. Síntese matemática por script constitui fraude de áudio e aciona [HARD HALT] sem exceção."
 ---
 
-# Tactile Audio Engineering: Áudio Físico Real Playbook
+# Tactile Audio Engineering: Áudio Físico Real Playbook v4.0 — Universal Cognitive Parity
+
+Na v4.0.0, toda interação operacional que toque componentes com feedback sonoro dispara compulsoriamente as salvaguardas desta skill — sem distinção entre "adicionar um beep simples" e "sistema de SFX completo". Não existe som que justifique síntese matemática por script: qualquer áudio gerado via AudioSynthesizer, OscillatorNode ou gerador matemático constitui fraude de áudio e aciona `[HARD HALT]`.
 
 Manual prático para obtenção e integração de efeitos sonoros táteis capturados exclusivamente do mundo real. Veda sumariamente o uso de ruídos gerados por script (white/brown noise), ondas matemáticas senoidais e síntese procedural, exigindo amostras acústicas físicas reais (Foley CC0 e recortes cirúrgicos de estúdio via YouTube) através do utilitário `scripts/sfx_tool.py`.
+
 
 ---
 
@@ -17,9 +21,12 @@ Manual prático para obtenção e integração de efeitos sonoros táteis captur
 
 ---
 
-## 2. Métodos Primários de Extração de Áudio Real (`scripts/sfx_tool.py`)
+## 2. Métodos Mandatórios de Extração de Áudio Real (`scripts/sfx_tool.py`) — v4.0: Uso Obrigatório Universal
 
-O script `scripts/sfx_tool.py` fornece métodos de alta fidelidade para aquisição de áudio real:
+> **[HARD HALT se violado]** O uso de `scripts/sfx_tool.py` é **mandatório e incondicional** para todo e qualquer áudio produzido no projeto. Não existe categoria de som ("beep simples", "clique rápido", "feedback mínimo") que isente o agente de usar este utilitário. A ausência de `sfx_tool.py` na cadeia de produção de qualquer arquivo de áudio constitui fraude operacional imediata.
+
+O script `scripts/sfx_tool.py` fornece os únicos métodos homologados de aquisição de áudio real:
+
 
 ### Método A: Fatiamento Cirúrgico de Áudio do YouTube (`slice-youtube`)
 Captura trechos com precisão de milissegundos e normalização de volume padrão EBU R128 (`loudnorm`):
@@ -131,3 +138,17 @@ export const sfx = SoundManager.getInstance();
 1. **Discreto & Baixo Volume:** O volume de feedback tátil deve ser sutil (`0.2` a `0.4`), nunca estridente.
 2. **Respeito ao Mute:** Sempre forneça controle de volume ou mute na interface quando sons forem reproduzidos.
 3. **Desbloqueio no Primeiro Gesto:** Inicialize o contexto de áudio a partir do primeiro clique ou toque do usuário para atender às políticas de segurança dos navegadores.
+
+---
+
+## Checklist Forense de Áudio Real (Binário — Lei 41)
+> Auditado pelo Red Team Juiz na Época IV. Um único item fraudado dispara `[HARD REJECT: FRAUDULENT_CHECKLIST_SIGNOFF]`.
+
+- [ ] **Origem Acústica Real:** todo áudio provém de `scripts/sfx_tool.py slice-youtube` (YouTube real) ou download CC0 do Freesound; zero síntese matemática.
+- [ ] **Zero OscillatorNode/AudioSynthesizer:** grep no repositório por `OscillatorNode`, `AudioSynthesizer`, `createOscillator`, `Math.sin` em contexto de áudio — zero ocorrências.
+- [ ] **Latência de Disparo < 30ms:** áudio pré-carregado com `AudioContext` e `AudioBuffer`; zero `new Audio()` lazy com delay perceptível.
+- [ ] **Resposta Tátil Sincronizada:** SFX dispara no frame exato do evento de input (mousedown/keydown), não no mouseup ou callback assíncrono.
+- [ ] **Formatos Reais no Disco:** arquivos `.wav` ou `.ogg` em `assets/audio/` com tamanho > 1KB (zero arquivos vazios ou stubs de placeholder).
+- [ ] **Fallback Silencioso Gracioso:** se áudio falhar (usuário sem permissão), a UI continua funcional sem erros no console.
+- [ ] **Zero Erros de Console:** zero `NotAllowedError`, `NotSupportedError` ou uncaught promises em contexto de áudio; verificado via `browser_console_logs`.
+

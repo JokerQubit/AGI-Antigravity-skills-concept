@@ -1,6 +1,6 @@
 ---
 trigger: always_on
-description: Adaptive Token Governance — Intelligent model routing, wave dispatch protocol and mandatory user interaction before subagent dispatch.
+description: Adaptive Token Governance v4.0 — Universal Parity Pipeline, wave dispatch protocol and mandatory user interaction before subagent dispatch.
 ---
 
 # Layer 1: Governança Adaptativa de Tokens & Roteamento Inteligente de Modelos
@@ -14,15 +14,24 @@ Protocolo constitucional de gestão soberana de tokens que governa cinco comport
 ## 1. Avaliação de Complexidade & Custo de Tokens (Pré-Despacho Obrigatório pelo Prompt Refiner Ubíquo)
 
 **Antes de despachar qualquer subagente ou executar qualquer alteração de código**, a **Análise de Custo-Complexidade (ACC)** DEVE ser executada compulsoriamente pelo **Subagente Especialista: Prompt Refiner & Epistemic Compiler**:
-- **Chancela no Expediente 0 (Macro-ACC):** No início da missão, o Prompt Refiner avalia a demanda do usuário, classifica a missão em Tier 1/2/3, dimensiona o hipergrafo e emite o `mission_dossier.md` com o selo inicial de governança.
-- **Chancela Ubíqua Pré-Turno (Micro-ACC sob TaaS):** Em todo e qualquer turno subsequente (Expedientes 1 a 5), antes de despachar subagentes de onda ou codificação, o Prompt Refiner disseca a intervenção do usuário do turno atual, recalcula o impacto de segunda ordem, revalida o Tier e emite o selo criptográfico/estigmérgico `.planning/refiner_seal.json` com status `SEALED_VALID`.
+- **Chancela no Expediente 0 (Macro-ACC):** No início da missão, o Prompt Refiner avalia a demanda do usuário, dimensiona os eixos ontológicos (domínios cruzados, concorrência, criticidade de mídia real), calcula o número de ondas ($\lceil N/15 \rceil$) e emite o `mission_dossier.md` com o selo inicial de governança. O piso hipergráfico é invariavelmente $N \ge 100$ nós — a ACC jamais o reduz.
+- **Chancela Ubíqua Pré-Turno (Micro-ACC sob TaaS):** Em todo e qualquer turno subsequente (Expedientes 1 a 5), antes de despachar subagentes de onda ou codificação, o Prompt Refiner disseca a intervenção do usuário do turno atual, recalcula o impacto de segunda ordem, recalibra o número de ondas e emite o selo criptográfico/estigmérgico `.planning/refiner_seal.json` com status `SEALED_VALID`.
 - **Trava Mecânica de Portão:** Se o Agente Principal tentar executar ferramentas motoras (`write_to_file`, `replace_file_content`, `run_command`) ou despachar outros subagentes sem o selo válido do Prompt Refiner do turno, a operação é sumariamente abortada via `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`.
 
-| Tier | Sinal da Tarefa | Nós Estimados | Custo de Tokens | Modo Flash (Épocas 0 e I) | Modo Flash (Épocas III e IV) |
-|---|---|---|---|---|---|
-| **Tier 1 — Cirúrgico** | Bug fix isolado, ajuste de UI, pequena adição de feature, refactor pontual | $N = 20\text{–}40$ nós | Baixo | Flash Low | Flash Medium |
-| **Tier 2 — Feature Completa** | Nova funcionalidade com lógica de domínio, integração de API, componente complexo | $N = 40\text{–}80$ nós | Médio | Flash Low | Flash High |
-| **Tier 3 — Arquitetura de Sistema** | Plataforma completa, refatoração arquitetural profunda, sistema com múltiplos domínios | $N \ge 100$ nós | Alto | Flash Medium | Flash High |
+
+**Sessão Soberana Universal v4.0 (Universal Parity — Paridade Operacional Invariante):**
+
+A distinção entre Tier 1 Cirúrgico, Tier 2 e Tier 3 está extinta na v4.0. Toda e qualquer interação que realize mutação de código, arquivos ou arquitetura opera sob o **Pipeline Universal Invariante**: piso inegociável de $N \ge 100$ nós atômicos saturados, despacho em ondas de no máximo 15 subagentes interligados pelo Barramento Sináptico Neural, e auditoria adversarial independente no Chrome real. A Análise de Custo-Complexidade (ACC) serve para dimensionar os **eixos ontológicos** (número de domínios cruzados, densidade de concorrência, criticidade de mídia real), o **número de ondas** ($\lceil N/15 \rceil$) e a **intensidade computacional** (Flash Thinking por expediente — tabela abaixo). A ACC jamais serve para reduzir o piso hipergráfico abaixo de 100 nós.
+
+| Expediente / Época | Operação | Modo Prescrito | Justificativa |
+|---|---|---|---|
+| **Expediente 0 (Época 0)** | Subagente Prompt Refiner | **Flash Low** | Desconstrução forense e compilação do Dossiê Universal. |
+| **Expediente 1 (Época I - Fase A)** | Chief Ontologist | **Flash Medium** | Varredura empírica, mapeamento causal e geração de `node_000_root.md`. |
+| **Expediente 2 (Época I - Fase B)** | Ondas de Subagentes de Nós 1:1 | **Flash Low ou Medium** | Saturação sináptica densa com checklists forenses atômicos. |
+| **Expediente 3 (Época II)** | Matriz Neural de Despacho & Checklists | **Flash Low** | Síntese formal nó-a-nó e checklists binários extensivos. |
+| **Expediente 4 (Época III)** | Subagentes Codificadores 1:1 | **Flash Medium ou High** | Produção de código real, contratos estritos, validação de checklists. |
+| **Expediente 5 (Época IV)** | Subagente Juiz Red Team | **Flash High** | Gauntlet de 4 passadas + auditoria no Chrome real. |
+
 
 **Critérios de Avaliação da ACC (Dissecados pelo Prompt Refiner):**
 - Quantos domínios independentes a tarefa atravessa? (UI, storage, concorrência, áudio, rede, segurança, financeiro)
@@ -41,7 +50,7 @@ O sistema rejeita a ilusão de resolver grandes arquiteturas em um único "sprin
 ┌─────────────────────────────────────────────────────────────┐
 │ EXPEDIENTE 0: Ingestão Estratégica & Refinamento de Prompt  │
 │ • Subagente Prompt Refiner compila mission_dossier.md       │
-│ • Execução da ACC e determinação de Tier / Ondas            │
+│ • Execução da ACC e dimensionamento de eixos ontológicos / Ondas│
 │ • Modo: Flash Low / Medium                                  │
 ├─────────────────────────────────────────────────────────────┤
 │ EXPEDIENTE 1: Arquitetura Ontológica Raiz & Semente Neural  │
@@ -52,7 +61,7 @@ O sistema rejeita a ilusão de resolver grandes arquiteturas em um único "sprin
 │ EXPEDIENTE 2: Saturação Sináptica em Ondas (1:1)            │
 │ • Despacho em Ondas (máx 15 nós/onda)                       │
 │ • Alimentação e consumo do Barramento Sináptico Neural      │
-│ • Modo: Flash Low (Tier 1/2) ou Flash Medium (Tier 3)       │
+│ • Modo: Flash Low ou Flash Medium                           │
 ├─────────────────────────────────────────────────────────────┤
 │ EXPEDIENTE 3: Matriz de Despacho & Trava Humana (Época II)  │
 │ • Síntese formal nó-a-nó no implementation_plan.md          │
@@ -62,7 +71,7 @@ O sistema rejeita a ilusão de resolver grandes arquiteturas em um único "sprin
 │ EXPEDIENTE 4: Codificação Concorrente Atômica 1:1 (Época III)│
 │ • Subagentes codificadores 1:1 + Integração Defensiva       │
 │ • Testes, build, eliminação definitiva de stubs             │
-│ • Modo: Flash Medium (Tier 1/2) ou Flash High (Tier 3)      │
+│ • Modo: Flash Medium ou Flash High                          │
 ├─────────────────────────────────────────────────────────────┤
 │ EXPEDIENTE 5: Auditoria Adversarial Independente (Época IV) │
 │ • Subagente Juiz executa as 4 passadas do Gauntlet          │
@@ -83,8 +92,8 @@ Antes de iniciar qualquer novo expediente ou turno que exija mudança de modo ou
 🔍 ANÁLISE DE EXPEDIENTE & CUSTO-COMPLEXIDADE CONCLUÍDA
 ══════════════════════════════════════════════════════════
 Expediente Atual: [Expediente 0 | 1 | 2 | 3 | 4 | 5]
-Tier Detectado:   [Tier 1 | Tier 2 | Tier 3] (Chancelado por refiner_seal.json)
-Nós Estimados:    ~[N] nós atômicos
+Sessão Soberana: Universal v4.0 (Paridade Operacional Invariante)
+Nós (Piso Inegociável): ≥ 100 nós atômicos | Ondas: ⌈N/15⌉
 Ondas de Despacho:[ceil(N/15)] ondas × 15 subagentes/onda
 Custo Estimado:   [Baixo | Médio | Alto]
 
@@ -135,14 +144,17 @@ Onda K: subagentes restantes...
 
 ## 5. Escalonamento de Modo Flash por Expediente
 
-| Expediente / Época | Operação | Modo Flash Prescrito | Justificativa |
+> A tabela canônica de modos Flash por expediente é definida na **Seção 1 — Sessão Soberana Universal v4.0** e governa toda a operação do Pipeline Universal Invariante. Reprodução abaixo para consulta imediata:
+
+| Expediente / Época | Operação | Modo Prescrito | Justificativa |
 |---|---|---|---|
-| **Expediente 0 (Época 0)** | Subagente Prompt Refiner | **Flash Low** | Análise e injeção semântica; output direto de diretrizes. |
-| **Expediente 1 (Época I - Fase A)** | Subagente Chief Ontologist | **Flash Medium** | Varredura empírica, síntese do domínio e decomposição da árvore de nós. |
-| **Expediente 2 (Época I - Fase B)** | Ondas de Subagentes de Nós | **Flash Low** (Tier 1/2) / **Medium** (Tier 3) | Output denso de documentação técnica orientado por sinapses. |
-| **Expediente 3 (Época II)** | Matriz de Despacho & Plano | **Flash Low** | Agregação determinística de nós no `implementation_plan.md`. |
-| **Expediente 4 (Época III)** | Subagentes Codificadores 1:1 | **Flash Medium** (Tier 1/2) / **High** (Tier 3) | Produção de código real, contratos estritos e testes sem stubs. |
-| **Expediente 5 (Época IV)** | Subagente Juiz Independente | **Flash High** | Julgamento adversarial implacável, inspeção no Chrome e ceticismo máximo. |
+| **Expediente 0 (Época 0)** | Subagente Prompt Refiner | **Flash Low** | Desconstrução forense e compilação do Dossiê Universal. |
+| **Expediente 1 (Época I - Fase A)** | Chief Ontologist | **Flash Medium** | Varredura empírica, mapeamento causal e geração de `node_000_root.md`. |
+| **Expediente 2 (Época I - Fase B)** | Ondas de Subagentes de Nós 1:1 | **Flash Low ou Medium** | Saturação sináptica densa com checklists forenses atômicos. |
+| **Expediente 3 (Época II)** | Matriz Neural de Despacho & Checklists | **Flash Low** | Síntese formal nó-a-nó e checklists binários extensivos. |
+| **Expediente 4 (Época III)** | Subagentes Codificadores 1:1 | **Flash Medium ou High** | Produção de código real, contratos estritos, validação de checklists. |
+| **Expediente 5 (Época IV)** | Subagente Juiz Red Team | **Flash High** | Gauntlet de 4 passadas + auditoria no Chrome real. |
+
 
 ---
 
@@ -150,7 +162,7 @@ Onda K: subagentes restantes...
 
 1. **Veto ao Despacho Cego:** É terminantemente proibido invocar qualquer subagente sem ter executado a ACC e interagido com o usuário para confirmar o modo Flash e receber autorização explícita.
 2. **Veto ao Burst de 100 Subagentes:** É terminantemente proibido despachar mais de 15 subagentes em uma única chamada de `invoke_subagent`. Mais de 15 entradas no array `Subagents` aciona `[HARD HALT]` imediato.
-3. **Veto ao Flash High na Saturação de Nós:** Subagentes de planejamento de nós (Expediente 2) NUNCA são despachados quando o usuário está no modo Flash High. O modo High é reservado para Codificação Tier 3 e Auditoria Adversarial. Se o usuário estiver em Flash High antes do Expediente 2, o agente DEVE pedir a troca para Flash Low ou Medium.
+3. **Veto ao Flash High na Saturação de Nós:** Subagentes de planejamento de nós (Expediente 2) NUNCA são despachados quando o usuário está no modo Flash High. O modo High é reservado para Codificação (Expediente 4) e Auditoria Adversarial (Expediente 5). Se o usuário estiver em Flash High antes do Expediente 2, o agente DEVE pedir a troca para Flash Low ou Medium.
 4. **Persistência de Estado por Expediente:** O Agente Principal DEVE persistir o progresso em `.planning/expediente_state.json` ao término de cada expediente antes de solicitar a transição para o próximo turno.
 5. **Relatório de Consumo & Sinapses Pós-Onda:** Após cada onda de subagentes, o agente emite status formal: *"Onda [N] concluída. [X] nós saturados. Sinapses propagadas no synaptic_bus.json. Próxima onda em espera."*
-6. **Veto ao Despacho e Execução sem Selo do Prompt Refiner (`[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`):** É expressamente proibido ao Agente Principal despachar qualquer subagente adicional, disparar ondas sinápticas, modificar arquivos (`write_to_file`, `replace_file_content`) ou executar comandos de modificação (`run_command`) sem que o **Subagente Prompt Refiner & Epistemic Compiler** tenha sido previamente despachado no turno atual e persistido o selo criptográfico `.planning/refiner_seal.json` com `seal_status: "SEALED_VALID"` e hash coincidente com o prompt cru do usuário. Qualquer tentativa de atalho sem passar pelo portão do Prompt Refiner aciona aborto imediato.
+6. **Veto ao Despacho e Execução sem Selo do Prompt Refiner (`[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`):** É expressamente proibido ao Agente Principal despachar qualquer subagente adicional, disparar ondas sinápticas, modificar arquivos (`write_to_file`, `replace_file_content`) ou executar comandos de modificação (`run_command`) sem que o **Subagente Prompt Refiner & Epistemic Compiler** tenha sido previamente despachado no turno atual e persistido o selo criptográfico `.planning/refiner_seal.json` com `seal_status: "SEALED_VALID"` e hash coincidente com o prompt cru do usuário. Qualquer tentativa de atalho sem passar pelo portão do Prompt Refiner aciona aborto imediato. O Dossiê Universal (`.planning/mission_dossier.md`) é o único artefato de ingestão permitido — a distinção entre dossiê cirúrgico e arquitetural está extinta.

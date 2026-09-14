@@ -1,0 +1,30 @@
+{
+  "turn_index": 1,
+  "timestamp": "2026-09-14T11:25:30-03:00",
+  "user_raw_prompt_hash": "087cdf13f60a3c218ca97580dc56afd07130bed4f3d99668034fd0c837e6fdee",
+  "mission_dossier_path": ".planning/mission_dossier.md",
+  "architecture_version": "4.0.0",
+  "seal_status": "SEALED_VALID",
+  "recommended_flash_mode": "Flash Medium",
+  "mandatory_keywords_injected": [
+    "Água no Deserto",
+    "Cinemática de Molas dos Titãs",
+    "Micro-ativos táteis reais",
+    "Foley real",
+    "Auditoria no Chrome Real",
+    "1:1 Subagente por Nó",
+    "Universal Pipeline v4.0.0"
+  ],
+  "forensic_signoff": {
+    "layer1_explicit_contracts": true,
+    "layer2_implicit_contracts": true,
+    "layer3_pre_mortem": true,
+    "layer4_two_man_rule": true
+  },
+  "authorized_operations": [
+    "write_to_file",
+    "replace_file_content",
+    "run_command",
+    "invoke_subagent"
+  ]
+}

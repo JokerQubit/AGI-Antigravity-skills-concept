@@ -1,6 +1,6 @@
 ---
 name: universal_prompt_refiner
-description: Playbook de Engenharia e Controle Operacional do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate). Governa o despacho obrigatório do Subagente Prompt Refiner antes de qualquer intervenção operacional, a compilação do Dossiê de Missão (Cirúrgico vs Arquitetural), desconstrução forense da demanda em camadas, roadmap determinístico para o enxame, matriz de regras/skills ativadas por primeiros princípios, planos de despacho sob medida, pre-mortem forense e critérios fiduciários de aceite.
+description: Playbook de Engenharia e Controle Operacional do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate) v4.0. Governa o despacho obrigatório do Subagente Prompt Refiner antes de qualquer intervenção operacional, a compilação do Dossiê Universal (.planning/mission_dossier.md) via track único universal, desconstrução forense da demanda em camadas, roadmap determinístico para o enxame, matriz de regras/skills ativadas por primeiros princípios, planos de despacho sob medida, pre-mortem forense e critérios fiduciários de aceite.
 ---
 
 # Universal Prompt Refiner Gate Playbook (Época 0 - v4.0)
@@ -29,7 +29,7 @@ A ilusão da "tarefa cirúrgica simples" é a fonte primária de incidentes em s
 - *"É apenas uma correção de tipagem"* $\to$ Converte `Result<T, E>` em `any` disfarçado, quebrando contratos downstream de 12 arquivos.
 - *"É apenas rodar um comando de build"* $\to$ Executa em porta já ocupada, orfanando processos Node em background e corrompendo o lockfile.
 
-O Portão de Ingestão Mandatória Ubíqua não desacelera o trabalho: ele **elimina o atrito do retrabalho**, adaptando dinamicamente a sua densidade (Track Cirúrgico vs Track Arquitetural).
+O Portão de Ingestão Mandatória Ubíqua não desacelera o trabalho: ele **elimina o atrito do retrabalho**, operando como track único universal (Dossiê Universal `.planning/mission_dossier.md`) para toda e qualquer intervenção.
 
 ---
 
@@ -88,67 +88,22 @@ Em conformidade estrita com as Leis 32 e 40:
 
 ---
 
-## 2. Formato do Artefato por Granularidade: Cirúrgico vs Grandes Missões
+## 2. Dossiê Universal v4.0 (Track Único — Paridade Operacional Invariante)
 
-O protocolo elimina o desperdício de tokens e a sobrecarga burocrática segregando a saída em dois formatos físicos complementares:
+Todo Dossiê de Missão, independentemente da escala da intervenção, contém obrigatoriamente:
 
-| Dimensão | Track Cirúrgico (Tier 1) | Track Arquitetural & Features (Tier 2/3) |
-|---|---|---|
-| **Escopo Típico** | Bug fixes pontuais, micro-ajustes de UI, patches, scripts CLI | Novas telas, refatores de arquitetura, novos domínios, plataformas |
-| **Artefato no Disco** | `.planning/surgical_mission_dossier.md` | `.planning/mission_dossier.md` |
-| **Extensão Típica** | 30 a 60 linhas de alta densidade | 120 a 300+ linhas exaustivas |
-| **Saturação de Nós** | Dispensa saturação hipergráfica de 100 nós | Mandatória saturação de $N \ge 100$ nós atômicos 1:1 |
-| **Tempo de Refino** | 1 ciclo rápido de compilação epistêmica | Varredura empírica profunda com Chief Ontologist |
+### Dossiê Universal v4.0 (Track Único — Paridade Operacional Invariante)
+Todo Dossiê de Missão, independentemente da escala da intervenção, contém obrigatoriamente:
+- **Seção A:** Desconstrução Forense em 4 Camadas (Lei 38) — CE, CI, Pre-Mortem, Two-Man Rule
+- **Seção B:** Roadmap Mecânico Passo a Passo Determinístico (arquivo por arquivo)
+- **Seção C:** Matriz de Regras e Skills Ativadas com justificativa de Primeiros Princípios
+- **Seção D:** Bespoke Dynamic Squad Blueprint (subagentes especializados 1:1 sob medida)
+- **Seção E:** Matriz de Checklists Forenses Extensivos da Cadeia Neural (8-20 critérios binários por nó/subagente)
+- **Seção F:** Critérios Estritos de Aceite Fiduciário para o Red Team na Época IV
 
-### 2.1. Schema do Track Cirúrgico (`.planning/surgical_mission_dossier.md`)
+O artefato físico único é `.planning/mission_dossier.md`. O caminho `surgical_mission_dossier.md` está erradicado e é proibido. Toda referência a "Track Cirúrgico", "Tier 1 Cirúrgico", "Quick Track" ou "Tier 1" no contexto de roteamento de dossiê constitui fraude operacional e aciona `[HARD HALT]`.
 
-```markdown
-# SURGICAL MISSION DOSSIER (Tier 1 - Quick Track)
-**Task Hash:** [short-hash] | **Timestamp:** YYYY-MM-DDTHH:MM:SS
-**Classification:** Tier 1 Cirúrgico | **Flash Thinking Prescrito:** Flash Low
 
-## 1. Deconstrução Forense Relâmpago
-- **Causa Raiz & Sintoma:** [Identificação cirúrgica do defeito ou demanda]
-- **Arquivos Alvo:** [`caminho/do/arquivo.ext:L10-L25`](file:///caminho/do/arquivo.ext#L10-L25)
-- **Contrato de Modificação:** [Assinatura exata antes vs depois]
-
-## 2. Roadmap Determinístico (3 a 5 Passos Mecânicos)
-1. Despachar Subagente Cirúrgico: `[Bespoke Role Name]`
-2. Aplicar alteração atômica em `[arquivo]` garantindo zero stubs e tipagem estrita
-3. Executar comando de checagem nativa: `[comando]`
-4. Verificar ausência de efeitos colaterais em downstream
-
-## 3. Matriz de Ativação Constitucional
-- **Regras Ativadas:** [Ex: Lei 18 (Zero-Stub), Lei 39 (Malha Fechada)]
-- **Skills Convocadas:** [Ex: hardened_clean_architecture]
-- **Justificativa de Primeiros Princípios:** [Por que a física desta mudança exige estas travas]
-
-## 4. Subagente Cirúrgico Específico (Bespoke Dispatch)
-- **Role:** [Ex: FloatingPointPrecisionFixer]
-- **Tooling:** `replace_file_content`, `run_command`
-- **Invariante Local:** [Ex: Não alterar a interface pública da função X]
-
-## 5. Pre-Mortem & Armadilhas Silenciosas
-- **Risco 1:** [Possível quebra de teste X ou mutação colateral]
-- **Mitigação:** [Uso de cópia imutável / checagem de limites]
-
-## 6. Aceite Fiduciário Imediato
-- [ ] Compilação limpa (`$LASTEXITCODE == 0`)
-- [ ] Teste unitário isolado cobrindo o caso de borda executado e passando
-- [ ] Zero stubs ou restos de depuração (`console.log`)
-```
-
-### 2.2. Schema do Track de Grandes Missões (`.planning/mission_dossier.md`)
-
-Para Tiers 2 e 3, o artefato expande-se para o dossiê arquitetural completo:
-- Integração formal com a Análise de Custo-Complexidade (ACC);
-- Identificação dos 8 Eixos Ontológicos da demanda;
-- Mapeamento das ondas de saturação sináptica com barramento neural (`synaptic_bus.json`);
-- Alinhamento explícito com o Diretor Cognitivo Soberano e as personas mundiais de referência;
-- Prescrição de ativos de áudio físico real (Foley fatiado via `scripts/sfx_tool.py slice-youtube`);
-- Protocolo perceptual de inspeção no Chrome via `browser-mcp` com 4 passadas do Gauntlet.
-
----
 
 ## 3. Exemplar Contrastivo & Autópsia Forense de Falha
 
@@ -370,7 +325,7 @@ Quando qualquer nova demanda ou turno se inicia (sob o paradigma Turn-as-a-Sessi
       "TypeName": "self",
       "Role": "Universal Prompt Refiner & Epistemic Compiler",
       "Model": "flash",
-      "Prompt": "Você é o compilador epistêmico do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate). Sua missão é congelar qualquer impulso de ação e compilar o Dossiê Executivo de Missão e o Selo Estigmérgico de Despacho antes de qualquer modificação física. Analise a demanda crua do usuário: [INSERIR_DEMANDA_CRUA]. 1. Execute a Análise de Custo-Complexidade (ACC) e classifique em Tier 1 Cirúrgico ou Tier 2/3 Sistema; 2. Se for Tier 1, grave o artefato físico .planning/surgical_mission_dossier.md; se for Tier 2/3, grave .planning/mission_dossier.md; 3. O dossiê deve conter com rigor absoluto: (a) Desconstrução Forense em 4 Camadas (Lei 38); (b) Roadmap Mecânico Passo a Passo determinístico; (c) Matriz de Regras e Skills Ativadas com justificativa de Primeiros Princípios; (d) Plano de Despacho de Subagentes Específicos sob medida (Bespoke Dynamic Squads); (e) Matriz de Modos de Quebra e Pre-Mortem Forense; (f) Critérios Estritos de Aceite Fiduciário para o Red Team na Época IV. 4. Emita compulsoriamente no disco o Selo Estigmérgico de Despacho (.planning/refiner_seal.json) com o hash criptográfico da demanda crua, status 'SEALED_VALID', Tier ACC auditado, modo Flash prescrito e lista estrita de operações autorizadas. Aplique o Null-Vocabulary estrito. Grave os arquivos no disco e notifique o Agente Principal para proceder."
+      "Prompt": "Você é o compilador epistêmico do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate). Sua missão é congelar qualquer impulso de ação e compilar o Dossiê Executivo de Missão e o Selo Estigmérgico de Despacho antes de qualquer modificação física. Analise a demanda crua do usuário: [INSERIR_DEMANDA_CRUA]. 1. Execute a Análise de Custo-Complexidade (ACC) para dimensionar eixos ontológicos, número de ondas e intensidade computacional — jamais para reduzir o piso de 100 nós; 2. Grave o artefato físico .planning/mission_dossier.md (Dossiê Universal — único artefato permitido); 3. O dossiê deve conter com rigor absoluto: (a) Desconstrução Forense em 4 Camadas (Lei 38); (b) Roadmap Mecânico Passo a Passo determinístico; (c) Matriz de Regras e Skills Ativadas com justificativa de Primeiros Princípios; (d) Plano de Despacho de Subagentes Específicos sob medida (Bespoke Dynamic Squads); (e) Matriz de Modos de Quebra e Pre-Mortem Forense; (f) Critérios Estritos de Aceite Fiduciário para o Red Team na Época IV. 4. Emita compulsoriamente no disco o Selo Estigmérgico de Despacho (.planning/refiner_seal.json) com o hash criptográfico da demanda crua, status 'SEALED_VALID', session_mode: 'Universal v4.0 — Sovereign Session', modo Flash prescrito e lista estrita de operações autorizadas. Aplique o Null-Vocabulary estrito. Grave os arquivos no disco e notifique o Agente Principal para proceder."
     }
   ]
 }
@@ -386,7 +341,7 @@ O selo é um artefato estigmérgico obrigatório emitido exclusivamente pelo Pro
   "timestamp": "2026-09-14T11:20:00-03:00",
   "user_raw_prompt_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "mission_dossier_path": ".planning/mission_dossier.md",
-  "acc_tier": "Tier 2",
+  "session_mode": "Universal v4.0 — Sovereign Session",
   "recommended_flash_mode": "Flash Low",
   "mandatory_keywords_injected": [
     "Água no Deserto",
@@ -429,3 +384,24 @@ Refiner & Epistemic Compiler para validação forense do turno.
 
 ### 4.3. O Ciclo Vital de Fechamento (Teardown Transacional)
 Ao término do turno (Lei 37), o Agente Principal invalida transacionalmente o selo ativo (`"seal_status": "TURN_CONSUMED"`). Isso garante que o próximo turno desperte em estado limpo, forçando compulsoriamente um novo despacho do Prompt Refiner durante o Cold Boot Handshake.
+
+---
+
+## 5. Geração da Matriz de Checklists Forenses da Cadeia Neural (Lei 41)
+
+O Prompt Refiner deve compilar, dentro do `mission_dossier.md` (Seção E — Matriz de Checklists), a lista completa de critérios binários que cada subagente da Época III e o Red Team da Época IV devem verificar. Para cada arquivo ou nó a ser produzido, o dossiê lista:
+
+| Critério | Descrição | Verificável em |
+|---|---|---|
+| Tipagem Estrita `Result<T,E>` | Zero `any`, `unknown` ou casts inseguros | TypeScript/source |
+| Zero-Stub | Zero `TODO`, `pass`, `return null`, `{}` vazio | Grep no repositório |
+| Física de Molas dos Titãs | `framer-motion` com stiffness/damping/mass reais; zero `transition-all duration-300` | Inspeção de código |
+| Isolamento de Thread/GPU | Zero bloqueio de main thread; apenas `transform`/`opacity` | DevTools Performance |
+| Áudio Físico Real | Gravações acústicas via `sfx_tool.py`; zero síntese por script | Grep por `AudioSynthesizer`/`oscillator` |
+| Fotografia Óptica Real | `generate_image` com 6 variáveis ópticas; zero SVG genérico/emoji | Inspeção visual |
+| Concorrência Atômica | Mutex sináptico (HOLD/GO); Atomic Swap na escrita; idempotência | Review de contrato |
+| Telemetria Zero Erros | `$LASTEXITCODE === 0`; zero erros/warnings/404s no console | browser-mcp console |
+| Pre-Mortem Blindado | Falha T+6 meses modelada e neutralizada em nó atômico | node_XXX_premortem.md |
+| Null-Vocabulary | Zero preâmbulos, bajulação ou fórmulas de encerramento | Review de output |
+
+O Red Team (Época IV) audita cada linha desta matriz com evidência física no disco ou no navegador. Qualquer item marcado como concluído sem evidência dispara `[HARD REJECT: FRAUDULENT_CHECKLIST_SIGNOFF]`.

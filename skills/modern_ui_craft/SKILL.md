@@ -1,9 +1,12 @@
 ---
 name: modern_ui_craft
-description: Playbook técnico de excelência em Design de Interfaces e Engenharia Perceptual no Padrão dos Titãs (Linear, Apple, Stripe, Instagram). Governa a cinemática tátil com física de molas de 2ª ordem via framer-motion (banindo transition-all duration-300), direção de arte fotográfica para generate_image (6 variáveis ópticas), glassmorphism especular, vídeo cinemático e micro-ativos táteis reais.
+version: 4.0.0
+description: "v4.0 — Universal Cognitive Parity — Craft Perceptual dos Titãs. Playbook técnico de excelência em Design de Interfaces e Engenharia Perceptual no Padrão dos Titãs (Linear, Apple, Stripe, Instagram). Governa a cinemática tátil com física de molas de 2ª ordem via framer-motion (banindo transition-all duration-300), direção de arte fotográfica para generate_image (6 variáveis ópticas), glassmorphism especular, vídeo cinemático e micro-ativos táteis reais. Ativado compulsoriamente em toda interação visual, layout ou animação — sem exceção de escopo."
 ---
 
-# Modern UI Craft & Studio Aesthetics Engineering Playbook (Padrão dos Titãs)
+# Modern UI Craft & Studio Aesthetics Engineering Playbook — v4.0 (Universal Cognitive Parity — Craft Perceptual dos Titãs)
+
+Na v4.0.0, o craft perceptual desta skill é ativado compulsoriamente em toda interação que toque qualquer componente visual, layout ou animação — sem distinção entre "micro-ajuste de CSS" e "grande redesign". A dicotomia de escopo está extinta: não existe ajuste de UI que não exija física de molas de 2ª ordem, isolamento de GPU e latência tátil sub-16ms.
 
 Manual prático de engenharia perceptual e design de interfaces de padrão de excelência internacional (referências Awwwards Site of the Day, Red Dot, Apple Human Interface Guidelines, Linear e Stripe). Abrange a cinemática tátil de 60fps/120fps baseada em **física dinâmica de molas de 2ª ordem**, direção de arte fotográfica analógica via `generate_image`, erradicação de vetores estéreis e glifos Unicode como ícones, e layouts fluidos contínuos.
 
@@ -104,7 +107,7 @@ export const motionTokens = {
 
 ## 2. Componentes Dinâmicos com Física dos Titãs & GPU Compositor Isolation
 
-Toda animação dinâmica deve operar estritamente sobre propriedades aceleradas por hardware (`transform`, `opacity`), isoladas na thread do compositor da GPU para garantir 60fps/120fps sem engasgos de reflow:
+**v4.0 — Universal Parity Invariant:** `framer-motion` com física de molas de 2ª ordem (stiffness, damping, mass explícitos) e isolamento de GPU compositor são aplicados **sempre, em qualquer componente interativo**, sem exceção de escopo ou porte. A distinção entre "componente simples" e "componente dinâmico" está extinta. Toda animação — sem exceção — opera estritamente sobre propriedades aceleradas por hardware (`transform`, `opacity`), isoladas na thread do compositor da GPU para garantir 60fps/120fps sem engasgos de reflow:
 
 ### 1. Botão Tátil com Retorno Inercial Orgânico:
 ```tsx
@@ -276,3 +279,17 @@ $$\text{Prompt} = \text{[Cenário Real \& Sujeito Tangível]} + \text{[Câmera R
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 ```
+
+---
+
+## Checklist Forense de UI Craft (Binário — Lei 41)
+> Auditado pelo Red Team Juiz na Época IV via browser-mcp. Um único item fraudado dispara `[HARD REJECT: FRAUDULENT_CHECKLIST_SIGNOFF]`.
+
+- [ ] **Física de Molas de 2ª Ordem:** `framer-motion` com `stiffness`, `damping`, `mass` explícitos; zero `transition-all duration-300 ease-in-out`.
+- [ ] **Isolamento de Thread/GPU:** zero `layout` thrashing; animações restritas a `transform` e `opacity`; `will-change` aplicado cirurgicamente.
+- [ ] **Latência Tátil Sub-16ms:** resposta visual ao input em menos de 16ms (1 frame a 60fps); verificado no DevTools Performance.
+- [ ] **Fotografia Óptica Real:** `generate_image` com câmera (Hasselblad/Leica/Sony A7R), lente prime, abertura, iluminação, composição e profundidade de campo; zero SVG genérico, emoji ou glifo Unicode como elemento visual.
+- [ ] **Banimento de Clichês de IA:** zero circuitos neon azul/ciano, hologramas flutuantes, cubos de energia ou ilustrações isométricas com texto ilegível.
+- [ ] **Rubber-Banding & Gestos Diretos:** direct manipulation com rubber-banding real em listas/carrosséis; zero scroll snap estático.
+- [ ] **60fps no Chrome Real:** zero dropped frames na gravação do DevTools Performance a 60fps; verificado via browser-mcp screenshot.
+- [ ] **Zero Erros no Console:** zero warnings, zero 404s de assets, zero unhandled promise rejections; verificado via `browser_console_logs`.

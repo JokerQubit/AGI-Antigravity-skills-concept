@@ -1,17 +1,21 @@
 ---
 name: hardened_clean_architecture
-description: Manual prático de engenharia de software defensiva, Clean Architecture desacoplada, tipagem estrita via uniões discriminadas Result/Option, Atomic Swap de persistência e erradicação definitiva de stubs.
+version: 4.0.0
+description: "v4.0 — Universal Cognitive Parity & Structured Neural Planning Mesh. Manual prático de engenharia de software defensiva, Clean Architecture desacoplada, tipagem estrita via uniões discriminadas Result/Option, Atomic Swap de persistência e erradicação definitiva de stubs. Ativado compulsoriamente em toda mutação de código ou arquitetura, sem distinção de escopo."
 ---
 
-# Hardened Clean Architecture & Defensive Code Playbook
+# Hardened Clean Architecture & Defensive Code Playbook — v4.0 (Universal Cognitive Parity & Structured Neural Planning Mesh)
 
 Manual de implementação de engenharia de software em nível de produção sênior. Estabelece padrões determinísticos para segregação de camadas arquiteturais, manipulação tipada de erros sem exceções cegas, persistência atômica e eliminação absoluta de stubs e esqueletos no código.
+
+> **Salvaguarda v4.0 — Ativação Compulsória Universal:**
+> Na v4.0.0, as salvaguardas de Clean Architecture Defensiva desta skill são disparadas compulsoriamente a qualquer interação operacional que toque arquivos de código ou arquitetura — sem distinção de escopo ou complexidade. O conceito de "ajuste cirúrgico simples" que dispensa Result<T,E>, Atomic Swap ou testes está terminantemente extinto.
 
 ---
 
 ## 1. Topologia Limpa de Camadas Desacopladas
 
-Toda aplicação com lógica de domínio complexa deve separar responsabilidades em três camadas fundamentais:
+Toda interação que realize mutação em código ou arquitetura deve separar responsabilidades em três camadas fundamentais:
 
 ```text
 src/
@@ -155,7 +159,7 @@ export async function pollUntilReady<T>(
 
 ## 5. Implementação Completa Zero-Stub & Pedagogia Contrastiva (Lei 36)
 
-Todo método, classe ou função persistido em arquivos de produção deve conter sua implementação real completa, livre de esqueletos, stubs ou atalhos fáceis. O código deve satisfazer o padrão dos Titãs por meio de contraste cirúrgico:
+Todo método, classe ou função persistido em arquivos de produção deve conter sua implementação real completa, livre de esqueletos, stubs ou atalhos fáceis — **em toda e qualquer interação que realize mutação em código ou arquitetura, sem distinção de escopo ou complexidade**. O código deve satisfazer o padrão dos Titãs por meio de contraste cirúrgico:
 
 ### [EXEMPLAR CONTRASTIVO 1: SERVIÇO DE DOMÍNIO & TRATAMENTO DE ERROS]
 
@@ -289,3 +293,17 @@ Na fase de escrita de código (Época III), **subagentes especializados DEVEM se
    - Cada subagente lê diretamente o arquivo exato do nó designado em `.planning/nodes/`, implementando 100% da lógica detalhada sem atalhos ou stubs.
 4. **Integração Física pelo Chief Architect:** O Agente Principal integra os módulos, valida a compilação cruzada (`npx tsc --noEmit`), tipos estritos e execução dos testes nativos, preparando o repositório para a submissão obrigatória ao **Subagente Juiz Independente na Época IV** (que conduzirá a inspeção visual e diagnósticos via `browser-mcp`).
 
+---
+
+## 7. Checklist Forense de Clean Architecture (Binário — Lei 41)
+
+> Auditado item a item pelo Red Team Juiz na Época IV. Um único item marcado como aprovado sem evidência física no disco dispara `[HARD REJECT: FRAUDULENT_CHECKLIST_SIGNOFF]`.
+
+- [ ] **Result<T,E> / Option<T>:** zero `any`, `unknown`, casts inseguros ou `throw` implícito sem captura.
+- [ ] **Zero-Stub:** zero `TODO`, `pass`, `return null`, `{}` vazio, `...`, mocks de produção.
+- [ ] **Atomic Swap:** toda escrita em disco usa swap atômico (escrever em arquivo temp → renomear atomicamente via `fs.renameSync`).
+- [ ] **Portas Desacopladas:** interfaces em `src/core/ports/`; implementações em `src/adapters/`; zero import cruzado entre camadas.
+- [ ] **Idempotência:** toda operação mutadora é idempotente; re-execução não produz estado inconsistente.
+- [ ] **Cobertura de Tipos Discriminados:** unions discriminadas para todos os estados de erro/sucesso do domínio.
+- [ ] **Zero Vazamento de Domínio:** termos de governança interna do agente ("Época", "Zero-Stub", "Gauntlet") não aparecem em interfaces de usuário, logs de produção ou APIs externas.
+- [ ] **Telemetria Zero Erros:** build limpo (`$LASTEXITCODE === 0`); zero erros/warnings no console do navegador (`browser_console_logs`).

@@ -1,9 +1,9 @@
 ---
 name: fractal_thought_graph
-description: Manual técnico e playbook operacional para gestão do substrato de pensamento (.planning/nodes/), modelagem determinística do manifesto graph.json, protocolo de expansão fractal polímata até a Fronteira do Impassável e despacho concorrente atômico 1:1 de subagentes.
+description: "v4.0 — Universal Cognitive Parity & Structured Neural Planning Mesh (Lei 41: Cadeia Neural Estruturada de Planejamento). Manual técnico e playbook operacional para gestão do substrato de pensamento (.planning/nodes/), modelagem determinística do manifesto graph.json, protocolo de expansão fractal polímata até a Fronteira do Impassável e despacho concorrente atômico 1:1 de subagentes."
 ---
 
-# Fractal Thought Graph Operations Playbook (v3.3)
+# Fractal Thought Graph Operations Playbook (v4.0 — Universal Cognitive Parity & Structured Neural Planning Mesh | Lei 41: Cadeia Neural Estruturada de Planejamento)
 
 Manual prático de orquestração do substrato cognitivo pré-execução (`.planning/`). Estabelece a metodologia de expansão de pensamento de nível AGI: **a erradicação definitiva da preguiça estocástica, do batching reducionista e do isolamento neural** através da conexão polímata universal entre domínios correlacionados e não-correlacionados. Governa a cadeia causal contínua ($X \to Y \to \text{Ramificações de 2ª, 3ª e 4ª ordem}$) até a **Fronteira do Impassável** ($N \ge 100$) com:
 1. **Ingestão Estratégica via Subagente Prompt Refiner** (compilação do `mission_dossier.md`).
@@ -70,7 +70,7 @@ Antes de qualquer dedução arquitetural ou despacho de nós, o Agente Principal
 
 ## 3. Matriz de Ativação de Skills & Regras
 - Skills Ativadas: [fractal_thought_graph, modern_ui_craft, tactile_audio_sfx, hardened_clean_architecture, browser_visual_reasoning, autonomous_computer_use]
-- Tier de Complexidade ACC: [Tier 1 | Tier 2 | Tier 3]
+- Tier de Complexidade ACC: Sessão Soberana v4.0 — Piso Inegociável ≥ 100 Nós
 
 ## 4. Protocolo de Deconstrução Forense Prévia (Lei 38)
 ### 4.1 Camada 1: Contratos Explícitos Mapeados (CE-01 ... CE-n)
@@ -155,14 +155,16 @@ O Agente Principal é **TERMINANTEMENTE PROIBIDO** de inventar tópicos de nós 
       "axis": "concurrency",
       "depth": 1,
       "research_foundation": "Benchmark LMAX Disruptor e Zero-Allocation pipelines.",
-      "target_file": ".planning/nodes/node_001_concurrency_engine.md"
+      "target_file": ".planning/nodes/node_001_concurrency_engine.md",
+      "checklist_ref": ".planning/nodes/node_001_concurrency_engine.md#checklist-forense-atômico-de-verificação"
     },
     {
       "id": "node_002_titan_spring_kinematics",
       "axis": "hci_gestures",
       "depth": 1,
       "research_foundation": "Física de molas de 2ª ordem Linear/Apple via framer-motion.",
-      "target_file": ".planning/nodes/node_002_titan_spring_kinematics.md"
+      "target_file": ".planning/nodes/node_002_titan_spring_kinematics.md",
+      "checklist_ref": ".planning/nodes/node_002_titan_spring_kinematics.md#checklist-forense-atômico-de-verificação"
     }
   ]
 }
@@ -209,6 +211,20 @@ Todo nó gerado por um subagente atômico DEVE conter o cabeçalho de autoconsci
 |---|---|---|---|
 | `gesture_drag_elasticity` | number | GO | 0.45 |
 | `transaction_commit_fn` | signature | GO | `(tx: Transaction) -> Result<TxHash, StorageError>` |
+
+## Checklist Forense Atômico de Verificação
+> Auditado binariamente [0=REPROVADO | 1=APROVADO] pelo subagente codificador e pelo Red Team Juiz.
+
+- [ ] **Tipagem Estrita:** `Result<T,E>` / `Option<T>`; zero `any`, `unknown`, casts inseguros.
+- [ ] **Zero-Stub:** zero `TODO`, `pass`, `return null`, funções `{}` vazias, `...`.
+- [ ] **Física de Molas dos Titãs:** `framer-motion` (stiffness, damping, mass); zero `transition-all duration-300 ease-in-out`.
+- [ ] **Isolamento de Thread/GPU:** zero bloqueio de main thread; apenas `transform`/`opacity` para animações.
+- [ ] **Áudio Físico Real:** gravações acústicas via `sfx_tool.py`; zero `AudioSynthesizer`, `oscillator`, síntese matemática.
+- [ ] **Fotografia Óptica Real:** `generate_image` com 6 variáveis ópticas (câmera, lente, abertura, iluminação, composição, profundidade); zero SVG genérico, emoji, glifo Unicode.
+- [ ] **Concorrência Atômica:** Synaptic Mutex respeitado (HOLD/GO); Atomic Swap na escrita em disco; idempotência garantida.
+- [ ] **Telemetria Zero Erros:** `$LASTEXITCODE === 0`; zero erros/warnings/404s no console do navegador (`browser_console_logs`).
+- [ ] **Pre-Mortem Blindado:** falha catastrófica T+6 meses modelada e neutralizada no nó.
+- [ ] **Null-Vocabulary:** zero preâmbulos, bajulação, fórmulas de encerramento ou termos de cosplay acadêmico.
 ```
 
 ---
@@ -307,6 +323,96 @@ Turno 5: Expediente 5 — Auditoria Adversarial Independente no Chrome Real (Fla
 
 ---
 
+## 6.1. Época II — Matriz Neural de Despacho & Checklists (`implementation_plan.md`)
+
+O `implementation_plan.md` é o artefato formal da Época II. Não é um rascunho livre: é a **Matriz Neural de Despacho & Checklists**, com quatro seções obrigatórias e invioláveis, emitida com `RequestFeedback: true` e aguardada aprovação explícita humana antes de qualquer escrita em produção.
+
+### Seção 1 — Matriz de Tarefas vs. Subagentes Especialistas 1:1
+
+Tabela determinística que mapeia cada nó atômico ao seu subagente codificador exclusivo. Nenhum subagente compartilha nó.
+
+| Nó / Arquivo | Subagente Especialista | Role | Dependências Sinápticas | Status |
+|---|---|---|---|---|
+| `node_001_concurrency_engine.md` / `src/core/concurrency/engine.ts` | Subagente-001 | Zero-Allocation Concurrency Engine Specialist | — | PENDING |
+| `node_002_titan_spring_kinematics.md` / `src/ui/spring/kinematics.ts` | Subagente-002 | Framer-Motion 2nd-Order Damped Spring Specialist | — | PENDING |
+| `node_016_fluid_gestures.md` / `src/ui/gestures/fluidController.ts` | Subagente-016 | Fluid Gesture & Rubber-Banding Specialist | `spring_stiffness` (node_002 GO), `spring_damping` (node_002 GO) | HOLD |
+
+> Replicar para todos os $N \ge 100$ nós saturados antes de emitir a matriz para aprovação.
+
+---
+
+### Seção 2 — Mapeamento de Contratos Sinápticos & Trava HOLD/GO
+
+Por nó, listar `[SYNAPTIC_INPUTS]`, `[SYNAPTIC_OUTPUTS]` e estado de trava vigente no `synaptic_bus.json`.
+
+```markdown
+#### node_016_fluid_gestures
+
+[SYNAPTIC_INPUTS]
+- spring_stiffness  : number  | node_002 | GO  | 380 N/m
+- spring_damping    : number  | node_002 | GO  | 30
+- wal_atomic_swap   : fn      | node_003 | GO  | (path, data) -> Result<void, IOError>
+
+[SYNAPTIC_OUTPUTS]
+- gesture_drag_elasticity  : number   | GO  | 0.45
+- fluid_gesture_controller : contract | GO  | interface FluidGestureController { ... }
+
+Estado no synaptic_bus.json: mutex_status = "HOLD" até node_002 emitir GO.
+```
+
+---
+
+### Seção 3 — Checklists Forenses Extensivos por Subagente/Arquivo
+
+Para cada subagente/arquivo na Seção 1, reproduzir integralmente a **Matriz de Verificação Binária** (10 critérios). Auditada pelo subagente codificador na Época III e pelo Red Team Juiz na Época IV.
+
+```markdown
+#### Checklist Forense — Subagente-016 / node_016_fluid_gestures / fluidController.ts
+
+- [ ] **Tipagem Estrita:** `Result<T,E>` / `Option<T>`; zero `any`, `unknown`, casts inseguros.
+- [ ] **Zero-Stub:** zero `TODO`, `pass`, `return null`, funções `{}` vazias, `...`.
+- [ ] **Física de Molas dos Titãs:** `framer-motion` (stiffness, damping, mass); zero `transition-all duration-300 ease-in-out`.
+- [ ] **Isolamento de Thread/GPU:** zero bloqueio de main thread; apenas `transform`/`opacity` para animações.
+- [ ] **Áudio Físico Real:** gravações acústicas via `sfx_tool.py`; zero `AudioSynthesizer`, `oscillator`, síntese matemática.
+- [ ] **Fotografia Óptica Real:** `generate_image` com 6 variáveis ópticas (câmera, lente, abertura, iluminação, composição, profundidade); zero SVG genérico, emoji, glifo Unicode.
+- [ ] **Concorrência Atômica:** Synaptic Mutex respeitado (HOLD/GO); Atomic Swap na escrita em disco; idempotência garantida.
+- [ ] **Telemetria Zero Erros:** `$LASTEXITCODE === 0`; zero erros/warnings/404s no console do navegador (`browser_console_logs`).
+- [ ] **Pre-Mortem Blindado:** falha catastrófica T+6 meses modelada e neutralizada no nó.
+- [ ] **Null-Vocabulary:** zero preâmbulos, bajulação, fórmulas de encerramento ou termos de cosplay acadêmico.
+```
+
+> Replicar este bloco para cada linha da Seção 1.
+
+---
+
+### Seção 4 — Sequenciamento Determinístico de Handoffs
+
+Ordem de execução, dependências GO/HOLD e sequência de commits semânticos. Zero ambiguidade de handoff entre subagentes.
+
+```markdown
+## Ordem de Execução (Waves)
+
+Wave 1 [Nós 001–015] — Camada Base (sem dependências upstream)
+  → Cada subagente escreve seu nó e emite SYNAPTIC_OUTPUTS com mutex_status: "GO".
+  → Agente Principal consolida synaptic_bus.json.
+  → Commit semântico: `feat(planning): saturate wave-1 base nodes [001-015]`
+
+Wave 2 [Nós 016–030] — Camada Intermediária (dependências da Wave 1)
+  → Subagentes consomem sinapses GO da Wave 1.
+  → Nós em HOLD aguardam sinal GO explícito do produtor antes de progredir.
+  → Commit semântico: `feat(planning): saturate wave-2 intermediate nodes [016-030]`
+
+[Repetir para cada wave até N >= 100]
+
+## Handoff Final para Época III
+  → Condição: todos os nós com status SATURATED no graph.json.
+  → Condição: zero sinapses com mutex_status: "HOLD" no synaptic_bus.json.
+  → Ação: Agente Principal emite implementation_plan.md com RequestFeedback: true.
+  → Bloqueio: ferramentas de escrita em produção BLOQUEADAS até aprovação explícita ("Proceed").
+```
+
+---
+
 ## 7. Exemplo Canônico de Invocação de Onda Sináptica (Época I, Fase B)
 
 Exemplo de despacho da Onda 2, onde os subagentes declaram autoconsciência de enxame, respeitam o status das travas Mutex e submetem contratos à auditoria de pares:
@@ -345,14 +451,16 @@ O arquivo `graph.json` consolida a topologia final do hipergrafo e as primitivas
       "axis": "concurrency",
       "depth": 1,
       "status": "SATURATED",
-      "summary": "Motor de concorrência com optimistic locking e zero frame allocation."
+      "summary": "Motor de concorrência com optimistic locking e zero frame allocation.",
+      "checklist_ref": ".planning/nodes/node_001_concurrency_engine.md#checklist-forense-atômico-de-verificação"
     },
     {
       "id": "node_002_titan_spring_kinematics",
       "axis": "hci_gestures",
       "depth": 1,
       "status": "SATURATED",
-      "summary": "Cinemática de molas de 2ª ordem no padrão dos Titãs (Linear/Apple)."
+      "summary": "Cinemática de molas de 2ª ordem no padrão dos Titãs (Linear/Apple).",
+      "checklist_ref": ".planning/nodes/node_002_titan_spring_kinematics.md#checklist-forense-atômico-de-verificação"
     }
   ],
   "edges": [

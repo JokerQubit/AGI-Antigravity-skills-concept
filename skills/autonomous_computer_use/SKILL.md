@@ -1,11 +1,14 @@
 ---
 name: autonomous_computer_use
-description: Playbook de Engenharia e Controle Operacional para Computer Use Autônomo de nível AGI. Governa o Ciclo OODA em malha fechada (Observe -> Orient -> Decide -> Act), a hierarquia mecânica de menor atrito motor (Arquivo/CLI > DOM > GUI XY), protocolos determinísticos de auto-cura (portas presas EADDRINUSE, processos órfãos, locks de arquivos EBUSY/EPERM, caches corrompidos) e verificação sensorial em navegador real via browser-mcp com telemetria de zero erros.
+version: 4.0
+description: "v4.0 — Universal Cognitive Parity — Autonomous Computer Use & OODA Closed-Loop. Playbook de Engenharia e Controle Operacional para Computer Use Autônomo de nível AGI. Governa o Ciclo OODA em malha fechada (Observe -> Orient -> Decide -> Act), a hierarquia mecânica de menor atrito motor (Arquivo/CLI > DOM > GUI XY), protocolos determinísticos de auto-cura (portas presas EADDRINUSE, processos órfãos, locks de arquivos EBUSY/EPERM, caches corrompidos), verificação sensorial em navegador real via browser-mcp com telemetria de zero erros e Checklist Forense Binário obrigatório (Lei 41)."
 ---
 
-# Autonomous Computer Use & Closed-Loop Motor Control (Padrão AGI)
+# Autonomous Computer Use & Closed-Loop Motor Control — v4.0 (Universal Cognitive Parity)
 
 Manual de engenharia e governança de interação motora, sensorial e computacional com o sistema operacional (Windows 11, PowerShell, Node.js, compiladores, processos em background) e navegador web via `browser-mcp`. Estabelece o fim definitivo do paradigma amador "dispare e reze" (*fire-and-forget*), impondo **autonomia de malha fechada, propriocepção de ambiente e auto-cura determinística**.
+
+Na v4.0.0, o Ciclo OODA em Malha Fechada e o Self-Healing Protocol são disparados compulsoriamente em toda ação motora — sem distinção entre "comando simples" e "pipeline complexo". Não existe comando CLI que dispense verificação sensorial pós-execução (`$LASTEXITCODE === 0` e ausência de stderr fatais).
 
 ---
 
@@ -201,3 +204,17 @@ if (-not $Ready) { throw "Falha na inicialização do servidor local na porta $P
 # - browser_console_logs() -> validação de ZERO erros e warnings
 # - browser_screenshot() -> persistência da prova visual de alta definição no disco
 ```
+
+---
+
+## Checklist Forense de Autonomous Computer Use (Binário — Lei 41)
+
+> Auditado pelo Agente Principal após cada ação motora e confirmado pelo Red Team na Época IV. Um único item reprovado sem evidência física dispara `[HARD REJECT: FRAUDULENT_CHECKLIST_SIGNOFF]`.
+
+- [ ] **$LASTEXITCODE === 0:** todo comando shell retornou exit code 0; zero execuções "fire-and-forget" sem verificação pós-execução.
+- [ ] **Zero stderr Fatal:** ausência de exceções fatais, stack traces não capturadas ou mensagens `ERROR` em stderr.
+- [ ] **Hierarquia de Menor Atrito Respeitada:** Arquivo/AST > CLI > API Local > DOM > XY — XY usado apenas em Canvas/WebGL sem representação DOM acessível.
+- [ ] **Self-Healing Ativo:** colisões de porta (`EADDRINUSE`), locks (`EBUSY`/`EPERM`) e caches corrompidos tratados autonomamente sem delegar ao usuário.
+- [ ] **Working Tree Clean:** `git status` confirma zero arquivos untracked ou modificados sem commit ao final de cada expediente.
+- [ ] **Commit Semântico Verificado:** `git log -n 1` confirma commit com mensagem semântica e hash válido após cada expediente.
+- [ ] **Zero Processos Órfãos:** confirmação de zero processos de compilação ou servidor abandonados em background após cada turno.
