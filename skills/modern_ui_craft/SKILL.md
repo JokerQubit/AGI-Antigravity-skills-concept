@@ -23,6 +23,40 @@ Curvas de Bézier cúbicas estáticas soam mecânicas, artificiais e congeladas.
 - **Damping ($c$):** O coeficiente de amortecimento. Evita oscilações eternas e dita se o retorno é sub-amortecido (com bounce orgânico) ou criticamente amortecido (sem overshoot, foco cirúrgico).
 - **Mass ($m$):** A inércia do elemento. Elementos pesados (painéis grandes, gavetas) possuem maior massa; botões e pílulas possuem massa leve.
 
+### [EXEMPLAR CONTRASTIVO DE UI: CINEMÁTICA INTERATIVA (Lei 36)]
+
+#### ❌ WRONG (Anti-Pattern: Transição Dura & Amadora):
+```css
+.card {
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+```
+
+##### 🔬 Autópsia de Falha Post-Mortem:
+1. **Perda de Conservação de Momento:** Se o ponteiro entrar e sair antes dos 300ms, a curva estática sofre corte brusco (*clipping visual*), sem amortecer a velocidade residual.
+2. **Latência Tátil Perceptível (>50ms):** A curva ease-in-out desacelera no início da interação, transmitindo uma sensação de lentidão e peso morto sob o toque.
+3. **Pena de Layout Reflow:** `transition: all` observa todas as propriedades calculadas (incluindo dimensões e bordas), disparando reflows contínuos de layout na thread principal da CPU.
+
+---
+
+#### ✅ CORRECT (Padrão Titã: Mola de 2ª Ordem Isolada na GPU):
+```tsx
+<motion.div
+  whileHover={{ y: -4, scale: 1.01 }}
+  whileTap={{ scale: 0.98 }}
+  transition={{
+    type: 'spring',
+    stiffness: 450,
+    damping: 28,
+    mass: 0.7
+  }}
+  style={{ willChange: 'transform' }}
+>
+```
+
 ### Catálogo de Presets Físicos dos Titãs:
 ```typescript
 // src/lib/motionTokens.ts

@@ -153,36 +153,128 @@ export async function pollUntilReady<T>(
 
 ---
 
-## 5. Implementação Completa Zero-Stub (Banimento de Esqueletos)
+## 5. Implementação Completa Zero-Stub & Pedagogia Contrastiva (Lei 36)
 
-Todo método ou função persistido em arquivos de produção deve conter sua implementação real completa:
+Todo método, classe ou função persistido em arquivos de produção deve conter sua implementação real completa, livre de esqueletos, stubs ou atalhos fáceis. O código deve satisfazer o padrão dos Titãs por meio de contraste cirúrgico:
 
-* **PROIBIDO:**
-  ```typescript
-  export class UserService {
-    async getUser(id: string) {
-      // TODO: implementar busca no banco
+### [EXEMPLAR CONTRASTIVO 1: SERVIÇO DE DOMÍNIO & TRATAMENTO DE ERROS]
+
+#### ❌ WRONG (Anti-Pattern: Menor Denominador Comum da Web):
+```typescript
+export class UserService {
+  async getUser(id: string) {
+    try {
+      // TODO: implementar cache redis
+      const res = await db.query('SELECT * FROM users WHERE id = ' + id);
+      return res.rows[0];
+    } catch (e) {
+      console.error('Erro ao buscar usuario:', e);
       return null;
     }
   }
-  ```
-* **OBRIGATÓRIO:**
-  ```typescript
-  export class UserService {
-    constructor(private readonly repository: UserRepository) {}
+}
+```
 
-    async getUser(id: string): Promise<Result<User, UserNotFoundError>> {
-      if (!id || id.trim().length === 0) {
-        return Err(new UserNotFoundError('ID de usuário inválido.'));
-      }
-      const user = await this.repository.findById(id);
+##### 🔬 Autópsia de Falha Post-Mortem:
+1. **Vulnerabilidade Crítica de SQL Injection:** Concatenação direta de strings sem parametrização ou sanitização tipada.
+2. **Degradação de Tipos e Nil Deception:** Retornar `null` em caso de erro faz o chamador assumir que o usuário não existe quando, na verdade, o banco pode ter falhado por timeout ou crash de rede.
+3. **Engolimento Silencioso de Exceções:** `console.error` seguido de `return null` destrói o rastro de depuração e mascara a indisponibilidade de infraestrutura.
+4. **Acoplamento Global Indireto:** Acesso direto a uma variável global `db` em vez de receber uma porta abstrata (`UserRepository`) por injeção de dependência.
+5. **Stub Oculto:** O comentário `// TODO: implementar cache redis` posterga responsabilidades essenciais de desempenho.
+
+---
+
+#### ✅ CORRECT (Padrão Titã: Hardened Clean Architecture & Result<T, E>):
+```typescript
+import { Result, Ok, Err } from '../result';
+import { User, UserId } from '../entities/User';
+import { UserRepository } from '../ports/UserRepository';
+
+export type GetUserError =
+  | { code: 'INVALID_ID_FORMAT'; message: string }
+  | { code: 'USER_NOT_FOUND'; userId: string }
+  | { code: 'STORAGE_UNAVAILABLE'; cause: Error };
+
+export class UserService {
+  constructor(private readonly repository: UserRepository) {}
+
+  async getUser(rawId: string): Promise<Result<User, GetUserError>> {
+    const idValidation = UserId.create(rawId);
+    if (!idValidation.success) {
+      return Err({
+        code: 'INVALID_ID_FORMAT',
+        message: idValidation.error.message,
+      });
+    }
+
+    try {
+      const user = await this.repository.findById(idValidation.value);
       if (!user) {
-        return Err(new UserNotFoundError(`Usuário com ID ${id} não localizado.`));
+        return Err({
+          code: 'USER_NOT_FOUND',
+          userId: rawId,
+        });
       }
       return Ok(user);
+    } catch (error) {
+      return Err({
+        code: 'STORAGE_UNAVAILABLE',
+        cause: error instanceof Error ? error : new Error(String(error)),
+      });
     }
   }
-  ```
+}
+```
+
+---
+
+### [EXEMPLAR CONTRASTIVO 2: PERSISTÊNCIA ATÔMICA VS. CORRUPÇÃO DE ARQUIVO]
+
+#### ❌ WRONG (Anti-Pattern: Escrita Direta Não-Atômica):
+```typescript
+import fs from 'fs';
+
+export function saveSettings(filePath: string, data: object): void {
+  // Escrita ingênua direta: se a energia cair ou o processo for morto aqui,
+  // o arquivo fica vazio ou corrompido com meio payload gravado.
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
+}
+```
+
+##### 🔬 Autópsia de Falha Post-Mortem:
+1. **Corrupção Imediata por Truncamento:** `writeFileSync` trunca o arquivo antes de começar a gravar os novos bytes. Qualquer interrupção resulta em perda total dos dados.
+2. **Race Conditions Não Gerenciadas:** Leitores concorrentes leem payloads parciais e inválidos durante a janela de gravação.
+
+---
+
+#### ✅ CORRECT (Padrão Titã: Atomic Swap com Transacionalidade POSIX):
+```typescript
+import fs from 'fs';
+import path from 'path';
+import crypto from 'crypto';
+
+export function saveSettingsAtomic(targetPath: string, data: unknown): void {
+  const serialized = JSON.stringify(data, null, 2);
+  const tempPath = `${targetPath}.${crypto.randomBytes(6).toString('hex')}.tmp`;
+  const dir = path.dirname(targetPath);
+
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+
+  // 1. Gravação integral no arquivo temporário isolado
+  const fd = fs.openSync(tempPath, 'w');
+  try {
+    fs.writeFileSync(fd, serialized, 'utf-8');
+    fs.fsyncSync(fd); // Força a liberação física dos buffers da controladora
+  } finally {
+    fs.closeSync(fd);
+  }
+
+  // 2. Troca atômica garantida pelo sistema operacional (invariante POSIX/Win32)
+  fs.renameSync(tempPath, targetPath);
+}
+```
 
 ---
 

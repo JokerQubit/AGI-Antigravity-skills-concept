@@ -374,3 +374,87 @@ Se o **Subagente Juiz Independente** na Época IV emitir `[HARD REJECT: RESTART 
 3. Despacha novas ondas atômicas 1:1 com alimentação do barramento sináptico até sanar cada apontamento.
 4. Constrói novo plano na Época II, reconstrói na Época III e reapresenta ao Gauntlet na Época IV.
 
+---
+
+## 10. Protocolo de Higiene da Cadeia de Pensamento (CoT Hygiene Protocol)
+
+Tokens de raciocínio dentro do modo Thinking do Flash são recursos computacionais nobres orientados a impacto prático. O sistema proíbe categoricamente a **ruminação estocástica estéril** (gastar tokens debatendo consigo mesmo sem produzir avanço causal).
+
+### As Três Leis da Tração Causal no Thinking:
+1. **Respiração 1 — Leitura & Isolamento:** Identificar a demanda real, as restrições duras e a incógnita central em poucas frases diretas.
+2. **Respiração 2 — Tração & Modos de Falha:** Mapear a cadeia causal de consequências $X \to Y \to Z$, antecipar os modos silenciosos de falha e definir a ferramenta/arquivo alvo.
+3. **Corte & Despacho:** Encerrar imediatamente o pensamento interno e emitir a chamada de ferramenta ou a gravação do artefato no disco. Se o pensamento começar a se repetir ou parafrasear o que já foi dito, **corte no meio da frase e execute**.
+
+### Assinaturas de Degradação Neuronal (Terminantemente Proibidas no Thinking):
+- *Auto-narração metalinguística:* "Estou considerando como planejar a próxima etapa..."
+- *Parafraseamento triplo:* Repetir a ordem do usuário com palavras diferentes.
+- *Falso debate interno (Hedging):* Ficar ponderando "por um lado, por outro lado" em vez de escolher o caminho dos Titãs.
+
+---
+
+## 11. Exemplar Contrastivo de Nó: Anti-Pattern vs. Padrão Titã (Autópsia de Falha)
+
+Para garantir que cada nó em `.planning/nodes/` atinja densidade de engenharia real e satisfaça a Lei da Pedagogia Contrastiva (Lei 36), os subagentes devem confrontar sua produção contra o exemplar contrastivo:
+
+### [EXEMPLAR ANTI-PATTERN: NÓ FRACO / REDUCIONISTA]
+```markdown
+# Node 015 - User Authentication Service
+
+## Descrição
+Implementar serviço de autenticação de usuários com JWT e salvar no banco de dados.
+
+## Tarefas
+- Criar endpoint de login
+- Validar senha
+- Gerar token JWT e retornar para o usuário
+- Salvar sessão no banco
+```
+
+#### Autópsia de Falha Post-Mortem (Por que este nó é sumariamente reprovado):
+1. **Zero Contratos Tipados:** Não define a assinatura das interfaces, os tipos de payload ou a estrutura da união discriminada de erro (`Result<Session, AuthError>`).
+2. **Cegueira a Modos Silenciosos de Falha:** Ignora timing attacks na comparação de hash de senha, replay attacks de JWT, esgotamento de conexões de pool de banco e race conditions de refresh token.
+3. **Inexistência de Sinapses:** Não declara `[SYNAPTIC_INPUTS]` nem `[SYNAPTIC_OUTPUTS]`, tornando-se um silo desconectado do barramento neural.
+4. **Preguiça em Lote Disfarçada:** Reduz 4 responsabilidades arquiteturais complexas a uma lista de tópicos genéricos da média da web.
+
+---
+
+### [EXEMPLAR TITÃ: NÓ SATURADO SOB O PRINCÍPIO "ÁGUA NO DESERTO"]
+```markdown
+# Node 015 - Idempotent Argon2id Authentication Pipeline & Constant-Time Verification
+
+## [SWARM_META_IDENTITY]
+- MY_SWARM_ROLE: Core Authentication & Cryptographic Identity Engine
+- MY_SYNAPTIC_ANCHOR: Consome 'db_connection_pool' do Node 003 e 'jwt_signing_key_rotation' do Node 004
+- MY_SWARM_DELIVERABLE: src/core/auth/authenticateUser.ts e src/core/ports/IAuthService.ts
+
+## [SYNAPTIC_INPUTS]
+- db_pool: Pool<DatabaseClient> (mutex_status: 'GO')
+- crypto_params: Argon2idConfig { memoryCost: 65536, timeCost: 3, parallelism: 4 }
+
+## 1. Contratos Formais Invariantes & Tipagem Estrita
+```typescript
+export interface AuthCredentials {
+  readonly email: EmailAddress; // Value object com sanitização RFC 5322
+  readonly secret: RawPassword; // Buffer protegido em memória contra swap
+}
+
+export type AuthFailure =
+  | { code: 'INVALID_CREDENTIALS'; timingDelayMs: number }
+  | { code: 'ACCOUNT_LOCKED'; retryAfterEpoch: number }
+  | { code: 'ENTROPY_EXHAUSTED'; fallbackToBackoff: boolean };
+
+export type AuthResult = Result<AuthenticatedSession, AuthFailure>;
+```
+
+## 2. Micro-Mecanismos Concretos & Prevenção de Timing Attacks
+- Utilização de `crypto.timingSafeEqual` sobre buffers pré-alocados de tamanho idêntico.
+- Equalização sintética de latência: se o usuário não for localizado, executa uma derivação dummy de Argon2id com parâmetros idênticos antes de retornar `INVALID_CREDENTIALS`, impedindo enumeração de usuários por side-channel de tempo.
+- Atomic token rotation com revogação transacional em caso de colisão de hash.
+
+## 3. [SYNAPTIC_OUTPUTS]
+- authenticated_session_token: BearerTokenEnvelope { ttlSeconds: 900, refreshRotationGraceMs: 5000 }
+- auth_audit_event_stream: Observable<SecurityAuditLogEntry>
+- mutex_status: 'GO'
+```
+
+
