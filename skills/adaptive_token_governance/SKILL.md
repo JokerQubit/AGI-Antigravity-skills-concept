@@ -1,11 +1,11 @@
 ---
-trigger: always_on
-description: Adaptive Token Governance v4.0 — Universal Parity Pipeline, wave dispatch protocol and mandatory user interaction before subagent dispatch.
+name: adaptive_token_governance
+description: "v4.0 — Universal Cognitive Parity — Governança Adaptativa de Tokens & Roteamento Inteligente de Modelos. Playbook operacional para Análise de Custo-Complexidade (ACC), dimensionamento de eixos ontológicos e ondas sinápticas (máx 15 subagentes), governança de expedientes cognitivos (Work Shifts) e escalonamento de modos Flash Thinking por fase."
 ---
 
-# Layer 1: Governança Adaptativa de Tokens & Roteamento Inteligente de Modelos
+# Adaptive Token Governance & Model Routing Playbook — v4.0
 
-Protocolo constitucional de gestão soberana de tokens que governa cinco comportamentos invioláveis: **(1)** chancela e avaliação de complexidade e custo de tokens via Análise de Custo-Complexidade (ACC) conduzida e selada pelo **Prompt Refiner Ubíquo**, **(2)** emissão mandatória do selo estigmérgico (`.planning/refiner_seal.json`) antes de qualquer ação motora ou despacho de turno sob pena de `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`, **(3)** particionamento do trabalho em **Expedientes Cognitivos (Work Shifts)** delimitados, **(4)** interação obrigatória com o usuário para recomendação e confirmação do modo de thinking do Flash antes de cada turno, e **(5)** despacho em ondas sequenciais de no máximo 15 subagentes interconectadas pelo **Barramento Sináptico Neural (`synaptic_bus.json`)**.
+Protocolo operacional de gestão soberana de tokens que governa cinco comportamentos invioláveis: **(1)** chancela e avaliação de complexidade e custo de tokens via Análise de Custo-Complexidade (ACC) conduzida e selada pelo **Prompt Refiner Ubíquo**, **(2)** emissão mandatória do selo estigmérgico (`.planning/refiner_seal.json`) antes de qualquer ação motora ou despacho de turno sob pena de `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`, **(3)** particionamento do trabalho em **Expedientes Cognitivos (Work Shifts)** delimitados, **(4)** interação obrigatória com o usuário para recomendação e confirmação do modo de thinking do Flash antes de cada turno, e **(5)** despacho em ondas sequenciais de no máximo 15 subagentes interconectadas pelo **Barramento Sináptico Neural (`synaptic_bus.json`)**.
 
 > O ecossistema utiliza exclusivamente o modelo **Flash** nos modos **Low**, **Medium** e **High** de thinking. Não existem outros modelos no roteamento. `flash_lite` e `inherit` são termos banidos neste protocolo.
 
@@ -18,8 +18,7 @@ Protocolo constitucional de gestão soberana de tokens que governa cinco comport
 - **Chancela Ubíqua Pré-Turno (Micro-ACC sob TaaS):** Em todo e qualquer turno subsequente (Expedientes 1 a 5), antes de despachar subagentes de onda ou codificação, o Prompt Refiner disseca a intervenção do usuário do turno atual, recalcula o impacto de segunda ordem, recalibra o número de ondas e emite o selo criptográfico/estigmérgico `.planning/refiner_seal.json` com status `SEALED_VALID`.
 - **Trava Mecânica de Portão:** Se o Agente Principal tentar executar ferramentas motoras (`write_to_file`, `replace_file_content`, `run_command`) ou despachar outros subagentes sem o selo válido do Prompt Refiner do turno, a operação é sumariamente abortada via `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`.
 
-
-**Sessão Soberana Universal v4.0 (Universal Parity — Paridade Operacional Invariante):**
+### Sessão Soberana Universal v4.0 (Universal Parity — Paridade Operacional Invariante):
 
 A distinção entre Tier 1 Cirúrgico, Tier 2 e Tier 3 está extinta na v4.0. Toda e qualquer interação que realize mutação de código, arquivos ou arquitetura opera sob o **Pipeline Universal Invariante**: piso inegociável de $N \ge 100$ nós atômicos saturados, despacho em ondas de no máximo 15 subagentes interligados pelo Barramento Sináptico Neural, e auditoria adversarial independente no Chrome real. A Análise de Custo-Complexidade (ACC) serve para dimensionar os **eixos ontológicos** (número de domínios cruzados, densidade de concorrência, criticidade de mídia real), o **número de ondas** ($\lceil N/15 \rceil$) e a **intensidade computacional** (Flash Thinking por expediente — tabela abaixo). A ACC jamais serve para reduzir o piso hipergráfico abaixo de 100 nós.
 
@@ -31,7 +30,6 @@ A distinção entre Tier 1 Cirúrgico, Tier 2 e Tier 3 está extinta na v4.0. To
 | **Expediente 3 (Época II)** | Matriz Neural de Despacho & Checklists | **Flash Low** | Síntese formal nó-a-nó e checklists binários extensivos. |
 | **Expediente 4 (Época III)** | Subagentes Codificadores 1:1 | **Flash Medium ou High** | Produção de código real, contratos estritos, validação de checklists. |
 | **Expediente 5 (Época IV)** | Subagente Juiz Red Team | **Flash High** | Gauntlet de 4 passadas + auditoria no Chrome real. |
-
 
 **Critérios de Avaliação da ACC (Dissecados pelo Prompt Refiner):**
 - Quantos domínios independentes a tarefa atravessa? (UI, storage, concorrência, áudio, rede, segurança, financeiro)
@@ -142,23 +140,7 @@ Onda K: subagentes restantes...
 
 ---
 
-## 5. Escalonamento de Modo Flash por Expediente
-
-> A tabela canônica de modos Flash por expediente é definida na **Seção 1 — Sessão Soberana Universal v4.0** e governa toda a operação do Pipeline Universal Invariante. Reprodução abaixo para consulta imediata:
-
-| Expediente / Época | Operação | Modo Prescrito | Justificativa |
-|---|---|---|---|
-| **Expediente 0 (Época 0)** | Subagente Prompt Refiner | **Flash Low** | Desconstrução forense e compilação do Dossiê Universal. |
-| **Expediente 1 (Época I - Fase A)** | Chief Ontologist | **Flash Medium** | Varredura empírica, mapeamento causal e geração de `node_000_root.md`. |
-| **Expediente 2 (Época I - Fase B)** | Ondas de Subagentes de Nós 1:1 | **Flash Low ou Medium** | Saturação sináptica densa com checklists forenses atômicos. |
-| **Expediente 3 (Época II)** | Matriz Neural de Despacho & Checklists | **Flash Low** | Síntese formal nó-a-nó e checklists binários extensivos. |
-| **Expediente 4 (Época III)** | Subagentes Codificadores 1:1 | **Flash Medium ou High** | Produção de código real, contratos estritos, validação de checklists. |
-| **Expediente 5 (Época IV)** | Subagente Juiz Red Team | **Flash High** | Gauntlet de 4 passadas + auditoria no Chrome real. |
-
-
----
-
-## 6. Leis da Governança Adaptativa Soberana (Invariantes Invioláveis)
+## 5. Leis da Governança Adaptativa Soberana (Invariantes Invioláveis)
 
 1. **Veto ao Despacho Cego:** É terminantemente proibido invocar qualquer subagente sem ter executado a ACC e interagido com o usuário para confirmar o modo Flash e receber autorização explícita.
 2. **Veto ao Burst de 100 Subagentes:** É terminantemente proibido despachar mais de 15 subagentes em uma única chamada de `invoke_subagent`. Mais de 15 entradas no array `Subagents` aciona `[HARD HALT]` imediato.
