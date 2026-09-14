@@ -48,7 +48,7 @@ Antes de qualquer dedução arquitetural ou despacho de nós, o Agente Principal
       "TypeName": "self",
       "Role": "Prompt Refiner & Epistemic Compiler",
       "Model": "flash",
-      "Prompt": "Você é o especialista soberano em compilação epistêmica de demandas de engenharia. Analise a demanda do usuário de cima a baixo. Disseque: (1) Intenção estratégica, contexto corporativo e objetivos tangíveis, (2) Restrições duras e contratos implícitos, (3) Modos silenciosos de falha prévios, (4) Injeção de palavras-chave mandatórias de ativação das rules e skills ('Água no Deserto', 'Cinemática de Molas dos Titãs - Linear/Apple', 'Micro-ativos táteis reais via generate_image', 'Áudio acústico real via sfx_tool.py', 'Clean Architecture Defensiva com Result/Option', '1:1 Subagente por Nó', 'Inspeção Visual no Chrome Real'). Persista o resultado integral em .planning/mission_dossier.md."
+      "Prompt": "Você é o especialista soberano em compilação epistêmica de demandas de engenharia. Analise a demanda do usuário de cima a baixo. Execute compulsoriamente o Protocolo de Deconstrução Forense em 4 Camadas (Lei 38): (1) Contratos Explícitos unívocos, (2) Contratos Implícitos deduzidos matematicamente (idempotência, persistência atômica, tipagem estrita Result/Option, concorrência, latência sub-16ms), (3) Engenharia Reversa Pre-Mortem sob a premissa irrevogável de colapso em T+6 meses com nós atômicos de blindagem, (4) Checklist Dinâmico de Duplo-Check (Two-Man Rule). Injete as palavras-chave mandatórias das rules e skills ('Água no Deserto', 'Cinemática de Molas dos Titãs', 'Micro-ativos táteis reais', 'Áudio acústico real', 'Clean Architecture Defensiva', 'Autonomous Computer Use OODA', '1:1 Subagente por Nó', 'Inspeção Visual no Chrome Real'). Persista o resultado integral em .planning/mission_dossier.md."
     }
   ]
 }
@@ -66,13 +66,22 @@ Antes de qualquer dedução arquitetural ou despacho de nós, o Agente Principal
 - Caminho "Água no Deserto": [Quais variáveis exigem dissecação profunda]
 - Padrão dos Titãs (Linear/Apple/Stripe): [Requisitos de molas de 2ª ordem e latência sub-16ms]
 - Mídia & Áudio Reais: [Mapeamento de renders macro via generate_image e Foley via sfx_tool.py]
-- Clean Architecture: [Estrutura defensiva, Result/Option e Atomic Swap]
+- Clean Architecture & Computer Use: [Estrutura defensiva, Result/Option, Atomic Swap e Ciclo OODA]
 
 ## 3. Matriz de Ativação de Skills & Regras
-- Skills Ativadas: [fractal_thought_graph, modern_ui_craft, tactile_audio_sfx, hardened_clean_architecture, browser_visual_reasoning]
+- Skills Ativadas: [fractal_thought_graph, modern_ui_craft, tactile_audio_sfx, hardened_clean_architecture, browser_visual_reasoning, autonomous_computer_use]
 - Tier de Complexidade ACC: [Tier 1 | Tier 2 | Tier 3]
 
-## 4. Síntese Dinâmica do Esquadrão Tático (Banimento de Templates Estáticos)
+## 4. Protocolo de Deconstrução Forense Prévia (Lei 38)
+### 4.1 Camada 1: Contratos Explícitos Mapeados (CE-01 ... CE-n)
+### 4.2 Camada 2: Contratos Implícitos (A Física Oculta: Idempotência, Mutex, Tipagem Estrita)
+### 4.3 Camada 3: Engenharia Reversa Pre-Mortem (Autópsia de Falha Catastrófica em T+6 Meses)
+- Vetores de Quebra Analisados & Nós de Blindagem Hipergráfica Criados
+### 4.4 Camada 4: Manifesto de Duplo-Check Fiduciário (Two-Man Rule Sign-off)
+- [x] [CONSTRUCTION_FIDUCIARY: APPROVED]
+- [x] [RED_TEAM_ADVERSARIAL: APPROVED]
+
+## 5. Síntese Dinâmica do Esquadrão Tático (Lei 32 & Lei 40)
 - Análise de Modos de Falha: [Quais são os pontos físicos exatos onde a solução pode colapsar?]
 - [BESPOKE_SQUAD_ROSTER] (Especialistas únicos gerados sob medida para o domínio da missão):
   * Especialista 1: [Papel ultra-específico, ex: "Zero-Allocation RingBuffer Concurrency Specialist"]
