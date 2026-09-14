@@ -5,15 +5,18 @@ description: Adaptive Token Governance — Intelligent model routing, wave dispa
 
 # Layer 1: Governança Adaptativa de Tokens & Roteamento Inteligente de Modelos
 
-Protocolo constitucional de gestão soberana de tokens que governa quatro comportamentos invioláveis: **(1)** avaliação de complexidade e custo de tokens via Análise de Custo-Complexidade (ACC), **(2)** particionamento do trabalho em **Expedientes Cognitivos (Work Shifts)** delimitados, **(3)** interação obrigatória com o usuário para recomendação e confirmação do modo de thinking do Flash antes de cada turno, e **(4)** despacho em ondas sequenciais de no máximo 15 subagentes interconectadas pelo **Barramento Sináptico Neural (`synaptic_bus.json`)**.
+Protocolo constitucional de gestão soberana de tokens que governa cinco comportamentos invioláveis: **(1)** chancela e avaliação de complexidade e custo de tokens via Análise de Custo-Complexidade (ACC) conduzida e selada pelo **Prompt Refiner Ubíquo**, **(2)** emissão mandatória do selo estigmérgico (`.planning/refiner_seal.json`) antes de qualquer ação motora ou despacho de turno sob pena de `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`, **(3)** particionamento do trabalho em **Expedientes Cognitivos (Work Shifts)** delimitados, **(4)** interação obrigatória com o usuário para recomendação e confirmação do modo de thinking do Flash antes de cada turno, e **(5)** despacho em ondas sequenciais de no máximo 15 subagentes interconectadas pelo **Barramento Sináptico Neural (`synaptic_bus.json`)**.
 
 > O ecossistema utiliza exclusivamente o modelo **Flash** nos modos **Low**, **Medium** e **High** de thinking. Não existem outros modelos no roteamento. `flash_lite` e `inherit` são termos banidos neste protocolo.
 
 ---
 
-## 1. Avaliação de Complexidade & Custo de Tokens (Pré-Despacho Obrigatório)
+## 1. Avaliação de Complexidade & Custo de Tokens (Pré-Despacho Obrigatório pelo Prompt Refiner Ubíquo)
 
-**Antes de despachar qualquer subagente**, o Agente Principal DEVE executar a **Análise de Custo-Complexidade (ACC)**, classificando a tarefa em um dos três Tiers:
+**Antes de despachar qualquer subagente ou executar qualquer alteração de código**, a **Análise de Custo-Complexidade (ACC)** DEVE ser executada compulsoriamente pelo **Subagente Especialista: Prompt Refiner & Epistemic Compiler**:
+- **Chancela no Expediente 0 (Macro-ACC):** No início da missão, o Prompt Refiner avalia a demanda do usuário, classifica a missão em Tier 1/2/3, dimensiona o hipergrafo e emite o `mission_dossier.md` com o selo inicial de governança.
+- **Chancela Ubíqua Pré-Turno (Micro-ACC sob TaaS):** Em todo e qualquer turno subsequente (Expedientes 1 a 5), antes de despachar subagentes de onda ou codificação, o Prompt Refiner disseca a intervenção do usuário do turno atual, recalcula o impacto de segunda ordem, revalida o Tier e emite o selo criptográfico/estigmérgico `.planning/refiner_seal.json` com status `SEALED_VALID`.
+- **Trava Mecânica de Portão:** Se o Agente Principal tentar executar ferramentas motoras (`write_to_file`, `replace_file_content`, `run_command`) ou despachar outros subagentes sem o selo válido do Prompt Refiner do turno, a operação é sumariamente abortada via `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`.
 
 | Tier | Sinal da Tarefa | Nós Estimados | Custo de Tokens | Modo Flash (Épocas 0 e I) | Modo Flash (Épocas III e IV) |
 |---|---|---|---|---|---|
@@ -21,7 +24,7 @@ Protocolo constitucional de gestão soberana de tokens que governa quatro compor
 | **Tier 2 — Feature Completa** | Nova funcionalidade com lógica de domínio, integração de API, componente complexo | $N = 40\text{–}80$ nós | Médio | Flash Low | Flash High |
 | **Tier 3 — Arquitetura de Sistema** | Plataforma completa, refatoração arquitetural profunda, sistema com múltiplos domínios | $N \ge 100$ nós | Alto | Flash Medium | Flash High |
 
-**Critérios de Avaliação da ACC:**
+**Critérios de Avaliação da ACC (Dissecados pelo Prompt Refiner):**
 - Quantos domínios independentes a tarefa atravessa? (UI, storage, concorrência, áudio, rede, segurança, financeiro)
 - Há estado compartilhado e concorrência atômica envolvidos?
 - A solução exige mídia física real (imagens, vídeos, áudio Foley)?
@@ -72,7 +75,7 @@ O sistema rejeita a ilusão de resolver grandes arquiteturas em um único "sprin
 
 ## 3. Protocolo Obrigatório de Interação com o Usuário (Alinhamento Pré-Turno)
 
-Antes de iniciar qualquer novo expediente que exija mudança de modo ou despacho de subagentes, **o Agente Principal DEVE PARAR e interagir com o usuário**:
+Antes de iniciar qualquer novo expediente ou turno que exija mudança de modo ou despacho de subagentes, **o Agente Principal DEVE PARAR e interagir com o usuário**, alimentando a mensagem obrigatoriamente com os dados auditados do selo estigmérgico `.planning/refiner_seal.json` emitido pelo Prompt Refiner:
 
 ### Formato da Mensagem de Roteamento (Template Constitucional):
 
@@ -80,7 +83,7 @@ Antes de iniciar qualquer novo expediente que exija mudança de modo ou despacho
 🔍 ANÁLISE DE EXPEDIENTE & CUSTO-COMPLEXIDADE CONCLUÍDA
 ══════════════════════════════════════════════════════════
 Expediente Atual: [Expediente 0 | 1 | 2 | 3 | 4 | 5]
-Tier Detectado:   [Tier 1 | Tier 2 | Tier 3]
+Tier Detectado:   [Tier 1 | Tier 2 | Tier 3] (Chancelado por refiner_seal.json)
 Nós Estimados:    ~[N] nós atômicos
 Ondas de Despacho:[ceil(N/15)] ondas × 15 subagentes/onda
 Custo Estimado:   [Baixo | Médio | Alto]
@@ -150,3 +153,4 @@ Onda K: subagentes restantes...
 3. **Veto ao Flash High na Saturação de Nós:** Subagentes de planejamento de nós (Expediente 2) NUNCA são despachados quando o usuário está no modo Flash High. O modo High é reservado para Codificação Tier 3 e Auditoria Adversarial. Se o usuário estiver em Flash High antes do Expediente 2, o agente DEVE pedir a troca para Flash Low ou Medium.
 4. **Persistência de Estado por Expediente:** O Agente Principal DEVE persistir o progresso em `.planning/expediente_state.json` ao término de cada expediente antes de solicitar a transição para o próximo turno.
 5. **Relatório de Consumo & Sinapses Pós-Onda:** Após cada onda de subagentes, o agente emite status formal: *"Onda [N] concluída. [X] nós saturados. Sinapses propagadas no synaptic_bus.json. Próxima onda em espera."*
+6. **Veto ao Despacho e Execução sem Selo do Prompt Refiner (`[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`):** É expressamente proibido ao Agente Principal despachar qualquer subagente adicional, disparar ondas sinápticas, modificar arquivos (`write_to_file`, `replace_file_content`) ou executar comandos de modificação (`run_command`) sem que o **Subagente Prompt Refiner & Epistemic Compiler** tenha sido previamente despachado no turno atual e persistido o selo criptográfico `.planning/refiner_seal.json` com `seal_status: "SEALED_VALID"` e hash coincidente com o prompt cru do usuário. Qualquer tentativa de atalho sem passar pelo portão do Prompt Refiner aciona aborto imediato.
