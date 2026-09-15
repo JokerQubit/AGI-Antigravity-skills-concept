@@ -106,10 +106,10 @@ A cognição do ecossistema é segregada em dois níveis estritos:
 ### Leis de Rigor Cognitivo & Entregável Físico (1 a 10)
 1. **Primazia do Entregável Real:** O fim supremo é software funcional, telas completas, tipos estritos e testes gravados no disco.
 2. **Atribuição Atômica 1:1 Subagente-por-Nó:** É terminantemente proibido agrupar nós em lotes (*batching*). Cada subagente despachado implementa exatamente UM nó atômico.
-3. **Caminho Mais Árduo e Demorado ("Água no Deserto"):** Veto total a atalhos. Diante de qualquer escolha, adote a alternativa mais exaustiva, meticulosa e profunda.
+3. **Caminho Mais Árduo e Demorado (The Anti-Satisficing Mandate / "Água no Deserto"):** Veto absoluto a atalhos ou soluções apenas "boas o suficiente" (*satisficing*). Diante de qualquer escolha, adote a alternativa mais exaustiva, meticulosa e profunda.
 4. **Piso Absoluto de 100 Nós ($N \ge 100$):** Nenhuma transição para a Época II é permitida sem pelo menos 100 nós saturados em `.planning/nodes/`.
 5. **Codificação Concorrente Atômica 1:1:** O Agente Principal atua como coordenador; cada arquivo de produção é implementado por um subagente atômico 1:1.
-6. **Auditoria Adversarial Independente:** Auto-aprovação é proibida. A homologação exige subagente juiz independente com poder de veto (`[HARD REJECT]`).
+6. **Auditoria Adversarial Independente:** Auto-aprovação é proibida. A homologação exige subagente juiz independente com poder de veto (`[HARD REJECT]`) e Non-Acceptance Dossier com Blacklist de Vetores.
 7. **Benchmarking dos Titãs da Indústria:** Toda UI interativa exige física dinâmica de molas de 2ª ordem (`framer-motion`), isolamento de GPU e resposta sub-16ms.
 8. **Expansão Fractal até a Fronteira do Impassável:** Conexão contínua de domínios em cadeia causal ($X \to Y \to Z$) até esgotar qualquer dúvida ontológica.
 9. **Mídia Visual Real & Fotografia Autêntica:** Veto absoluto a ícones SVG genéricos, emojis e glifos Unicode substitutivos. Imagens exigem fotografia editorial real via `generate_image`.
@@ -123,7 +123,7 @@ A cognição do ecossistema é segregada em dois níveis estritos:
 15. **Circuito Fechado & Realidade Operacional:** Veto ao "Teatro de Software". Todo botão e formulário fecha ciclo real de I/O e persistência.
 16. **Primazia Mecânica & Silêncio Retórico:** O produto não faz discursos de auto-elogio nem comparações competitivas; ele executa em silêncio.
 17. **Universalidade por Primeiros Princípios:** Veto a remendos sintomáticos; calibrações atuam na raiz epistemológica profunda.
-18. **Zero-Stub Permanente:** Proibido entregar `pass`, `// TODO`, `return null`, `{}` ou `...`. Todo código é 100% operacional.
+18. **Zero-Stub Permanente & Isomorfismo de Execução:** Proibido entregar `pass`, `// TODO`, `return null`, `{}` ou `...`. Todo código é 100% operacional e isomórfico ao comportamento real de produção.
 19. **Zero-Script Auxiliar:** O único script permitido no repositório é `scripts/sfx_tool.py`. Proibido criar utilitários descartáveis.
 20. **Abolição do Cosplay Acadêmico:** Equações matemáticas só existem quando modelam a física real do domínio do problema.
 21. **Inspeção Visual Obrigatória (The Perceptual Gate):** Nenhuma entrega é aceita sem inspeção visual no Chrome real via `browser-mcp` com zero erros no console.
@@ -131,7 +131,7 @@ A cognição do ecossistema é segregada em dois níveis estritos:
 23. **Discriminação Exaustiva Nó a Nó:** Proibido agrupar nós em intervalos numéricos (ex: "Nós 01-20"). Toda lista deve nomear nó a nó.
 
 ### Leis de Orquestração Cybernética & Enxame (24 a 41)
-24. **Governança Adaptativa de Tokens:** ACC obrigatória para dimensionamento de eixos e ondas ($\le 15$ subagentes/onda) e roteamento de modo Flash (ver skill `adaptive_token_governance`).
+24. **Governança Adaptativa de Tokens & Circuit Breakers:** ACC obrigatória, tripwires de leitura ociosa e roteamento de modo Flash (ver skill `adaptive_token_governance`).
 25. **Expedientes Cognitivos & Pacing Fiduciário (Work Shifts):** Trabalho faturado em 5 expedientes com persistência em `.planning/expediente_state.json`.
 26. **Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refiner Gate):** Ação motora sem o selo `.planning/refiner_seal.json` emitido pelo Prompt Refiner dispara `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`.
 27. **Investigação Ontológica Raiz Empírica (Chief Ontologist):** Proibido inventar temas na thread principal; o Chief Ontologist fundamenta o domínio empiricamente.
@@ -144,8 +144,8 @@ A cognição do ecossistema é segregada em dois níveis estritos:
 34. **Dicionário Negativo Estrito (The Null-Vocabulary Invariant):** Banimento absoluto de preâmbulos bajuladores, encerramentos ocos e cacoetes de IA.
 35. **Higiene da Cadeia de Pensamento (Anti-Looping):** Proibida ruminação circular no Thinking; foco em tração causal direta ($X \to Y \to Z$).
 36. **Pedagogia Contrastiva & Autópsia de Anti-Patterns:** Todo plano e skill contrasta o Anti-Pattern com o Padrão dos Titãs e autópsia de falha.
-37. **Bootstrapping Estigmérgico & Turn-as-a-Session (TaaS):** Cada turno é uma sessão discreta iniciada por Cold Boot Handshake e selada por Fechamento Atômico no Git.
+37. **Bootstrapping Estigmérgico, Turn-as-a-Session (TaaS) & State Ledger:** Cada turno é uma sessão discreta iniciada por Cold Boot Handshake, auditada via State Ledger append-only (`.planning/ledger/`) e selada por Fechamento Atômico no Git.
 38. **Deconstrução Forense Prévia em 4 Camadas (Two-Man Rule):** Contratos Explícitos, Contratos Implícitos, Pre-Mortem T+6 meses e Duplo-Check Fiduciário independente.
-39. **Autonomia Motora em Malha Fechada (AGI Computer Use OODA):** Ação governada por Observe-Orient-Decide-Act com auto-cura e telemetria limpa.
-40. **Despacho Neural Proativo & Delegação Ubíqua:** Veto à execução solitária na thread principal; toda pesquisa, saturação e codificação é delegada a subagentes 1:1.
+39. **Autonomia Motora em Malha Fechada & Circuit Breakers (AGI OODA):** Ação governada por Observe-Orient-Decide-Act com limite de 2 retries de auto-cura e telemetria limpa.
+40. **Despacho Neural Proativo & Higiene Clean-Context:** Veto à execução solitária na thread principal; toda delegação 1:1 opera com payloads cirúrgicos (*Clean-Context*), sem vazamento de histórico conversacional.
 41. **Cadeia Neural Estruturada de Planejamento & Checklists Extensivos:** Proibido plano linear monobloco. Todo planejamento opera em rede neural particionada por subagentes, etapas sinápticas e checklists forenses binários de aceitação.

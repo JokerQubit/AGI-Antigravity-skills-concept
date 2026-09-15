@@ -1,5 +1,5 @@
 ---
-name: swarm_orchestration
+trigger: always_on
 description: "v4.0 — Universal Cognitive Parity — Orquestração Cybernética de Enxame & Governança Neural. Playbook operacional para gestão do Barramento Sináptico Neural (synaptic_bus.json), exclusão mútua sináptica (HOLD/GO), síntese dinâmica sob medida de esquadrões (Bespoke Dynamic Squads), identidade e autoconsciência de enxame, e veto técnico entre pares (Peer Veto)."
 ---
 

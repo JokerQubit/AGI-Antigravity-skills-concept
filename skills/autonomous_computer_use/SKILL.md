@@ -133,6 +133,13 @@ npx tsc --noEmit
 
 ---
 
+### F. Circuit Breaker de Remediação Autônoma (Anti-Loop Invariant)
+*Invariante:* A auto-cura autônoma é uma salvaguarda determinística, não uma licença para loops infinitos.
+- **Teto Rígido de 2 Ciclos:** Todo procedimento de auto-cura tem limite absoluto de **2 tentativas consecutivas** para o mesmo incidente.
+- **Disparo de Trava Epistêmica:** Se após 2 ciclos de remediação o erro persistir (porta travada por serviço do sistema, falha recorrente de compilação ou lock de arquivo persistente), é terminantemente proibido insistir em looping. O agente DEVE emitir `[EPISTEMIC_HALT: CIRCUIT_BREAKER_TRIPPED]`, reportar o diagnóstico forense e suspender a execução motora.
+
+---
+
 ## 4. Protocolo de Fechamento de Malha (Closed-Loop Verification Protocol)
 
 Nenhuma tarefa de Computer Use é considerada concluída sem a satisfação cumulativa da **Triangulação de Telemetria**:

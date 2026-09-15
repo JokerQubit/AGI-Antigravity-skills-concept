@@ -105,15 +105,15 @@ Antes das 4 passadas do Gauntlet clássico, o Juiz realiza a auditoria binária 
 
 ---
 
-## 5. Dossiê Formal de Rejeição & Disparo do Ciclo Fractal
+## 5. Dossiê Formal de Rejeição & Mandato de Não-Repetição (Non-Repetition Mandate)
 
-Ao identificar qualquer uma das infrações acima, o subagente juiz emite no chat o dossiê formal de rejeição, abortando a entrega:
+Ao identificar qualquer uma das infrações acima, o subagente juiz emite no chat o **Dossiê Formal de Não-Aceitação com Blacklist de Vetores**. É terminantemente proibido ao enxame tentar contornar a rejeição com ajustes cosméticos ou repetir a mesma rota que falhou:
 
 ```text
 [HARD REJECT: RESTART FRACTAL CYCLE]
 ================================================================================
 AUDITOR INDEPENDENTE: Epistemic Red Team Lead (Judge Mind)
-PASSADA DO GAUNTLET: [Passada 1 | Passada 2 | Passada 3 | Passada 4]
+PASSADA DO GAUNTLET: [Passada 0 | Passada 1 | Passada 2 | Passada 3 | Passada 4]
 INFRAÇÃO DETECTADA: <Código da Infração, ex: NON_ACCEPTANCE_BATCHED_NODE_SUBAGENTS>
 ARQUIVO COMPROMETIDO: <caminho_do_arquivo>
 LINHAS COMPROMETIDAS: <linhas>
@@ -121,16 +121,22 @@ LINHAS COMPROMETIDAS: <linhas>
 EVIDÊNCIA NO DISCO / CONSOLE:
   `<trecho exato do código, log de console ou screenshot capturado>`
 
-PADRÃO EXIGIDO (ATÔMICO 1:1 & ÁGUA NO DESERTO):
-  `<especificação de como a implementação deve atingir o estado da arte com profundidade máxima>`
+BLACKLIST DE VETORES DE FALHA (NON-REPETITION MANDATE):
+  [x] VETOR BLOQUEADO 1: <Descrição exata da abordagem proibida de ser repetida>
+  [x] VETOR BLOQUEADO 2: <Padrão, estrutura ou atalho técnico sumariamente banido>
+  (Qualquer novo plano ou código que reincida nestes vetores será rejeitado sumariamente na Passada 0).
+
+PADRÃO EXIGIDO (ATÔMICO 1:1, ÁGUA NO DESERTO & MUTAÇÃO ESTRATÉGICA):
+  `<especificação de como a arquitetura deve mutar para atingir o estado da arte>`
 
 ORDEM MECÂNICA COMPULSÓRIA:
   1. O Agente Principal DEVE REABRIR FORMALMENTE A ÉPOCA I.
-  2. Despachar subagentes em relação atômica 1:1 para gerar novos nós (N >= 100)
+  2. Mutar deterministamente a estratégia técnica contornando a Blacklist.
+  3. Despachar subagentes em relação atômica 1:1 para gerar novos nós (N >= 100)
      dissecando cada micro-mecanismo até a Fronteira do Impassável.
-  3. Atualizar graph.json com as novas primitivas calculadas.
-  4. Estruturar nova Matriz de Despacho na Época II e reconstruir o código na Época III.
-  5. Submeter à nova auditoria independente na Época IV.
+  4. Atualizar graph.json com as novas primitivas calculadas.
+  5. Estruturar nova Matriz de Despacho na Época II e reconstruir o código na Época III.
+  6. Submeter à nova auditoria independente na Época IV.
 ================================================================================
 ```
 

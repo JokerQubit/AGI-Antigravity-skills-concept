@@ -1,5 +1,5 @@
 ---
-name: adaptive_token_governance
+trigger: always_on
 description: "v4.0 — Universal Cognitive Parity — Governança Adaptativa de Tokens & Roteamento Inteligente de Modelos. Playbook operacional para Análise de Custo-Complexidade (ACC), dimensionamento de eixos ontológicos e ondas sinápticas (máx 15 subagentes), governança de expedientes cognitivos (Work Shifts) e escalonamento de modos Flash Thinking por fase."
 ---
 
