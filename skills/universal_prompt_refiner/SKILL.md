@@ -70,11 +70,12 @@ Todo despacho do Subagente Prompt Refiner deve gerar compulsoriamente o Dossiê 
 O Prompt Refiner fundamenta a ativação de cada regra e skill na **física real do problema** (ex: atrito de GPU, inércia de gesto, concorrência de arquivos).
 
 ### (d) Bespoke Dynamic Squad Blueprint (Ordem Executiva Compulsória de Despacho)
-Em conformidade estrita com as Leis 32 e 40:
+Em conformidade estrita com as Leis 32, 40 e 42:
 - **Ordem de Execução Mandatória:** A Seção D NÃO é decorativa; é uma ordem de despacho executiva imediata para o Agente Principal. Mutacionar código sem despachar os subagentes mapeados aciona `[HARD HALT: SQUAD_DISPATCH_BYPASSED]`.
 - **Dupla Investigativa Obrigatória (Two-Mind Minimum):** Para qualquer tarefa investigativa ou alteração de arquivo existente, o esquadrão DEVE conter no mínimo:
-  * **Subagente Alfa (Causal Root Cause):** Especialista na mecânica microscópica interna da falha ou alteração.
-  * **Subagente Beta (Downstream Blast Radius):** Especialista no raio de impacto colateral, interfaces externas e contratos.
+  * **Subagente Alfa (Causal Root Cause):** Especialista na mecânica microscópica interna da falha ou alteração. Grava laudo em `.planning/investigations/inv_001_root_cause.md`.
+  * **Subagente Beta (Downstream Blast Radius):** Especialista no raio de impacto colateral, interfaces externas e contratos. Grava laudo em `.planning/investigations/inv_002_blast_radius.md`.
+- **Handoff de Alta Fidelidade (Lei 42):** Os subagentes codificadores de produção DEVEM receber os caminhos desses laudos e a instrução expressa de ler os arquivos via `view_file` antes de codificar — banindo resumos pré-frontais com perda.
 - **Parametrização Estrita:** Para cada subagente: `Role`, `TypeName: "self"` ou `"research"`, `Model: "flash"`, prompt cirúrgico Clean-Context e ferramentas autorizadas.
 
 ### (e) Matriz de Modos de Quebra e Pre-Mortem Forense

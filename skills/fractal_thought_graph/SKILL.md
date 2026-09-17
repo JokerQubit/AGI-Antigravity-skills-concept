@@ -27,6 +27,9 @@ Governa a conexão polímata universal entre domínios correlacionados e não-co
 ├── synaptic_bus.json           # Barramento Sináptico Neural: Ledger de contratos, tipos, status HOLD/GO e sinapses
 ├── expediente_state.json       # Persistência de Estado do Turno/Expediente Cognitivo Atual
 ├── graph.json                  # Manifesto Central Consolidado: Grafo, arestas tipadas e primitivas
+├── investigations/             # Laudos periciais brutos de alta fidelidade (Lei 42)
+│   ├── inv_001_root_cause.md   # Laudo microscópico emitido pelo Subagente Alfa
+│   └── inv_002_blast_radius.md # Laudo de raio de impacto emitido pelo Subagente Beta
 ├── node_000_root.md            # [MODO ARQUITETURAL APENAS] Decomposição Ontológica Raiz
 ├── hypergraph_seed.json        # [MODO ARQUITETURAL APENAS] Semente Empírica: Lista dos 100+ nós
 └── nodes/                      # [MODO ARQUITETURAL APENAS] Piso mínimo inegociável de 100 nós (N >= 100)
@@ -131,7 +134,27 @@ Quando a máquina depara-se com incerteza ($\varepsilon > 0$), APIs não documen
 
 O Agente Principal é **TERMINANTEMENTE PROIBIDO** de inventar tópicos de nós de cabeça ou investigar falhas sozinho na thread principal. A decomposição e a investigação devem ser fruto de trabalho de subagentes especializados.
 
-### Invocação do Chief Ontologist Subagent:
+### Invocação da Dupla Investigativa (Modo Direto / Operacional):
+```json
+{
+  "Subagents": [
+    {
+      "TypeName": "self",
+      "Role": "Causal Root Cause Forensic Investigator (Subagente Alfa)",
+      "Model": "flash",
+      "Prompt": "Você é o Subagente Alfa. Sua missão é dissecar a mecânica microscópica interna da falha ou alteração solicitada em: [ARQUIVOS]. Investigue fluxo de controle, variáveis, condições de corrida e estados inválidos. GRAVE O LAUDO PERICIAL BRUTO COMPLETO EM: .planning/investigations/inv_001_root_cause.md. Seja cirúrgico, inclua linhas exatas e trechos de código. O subagente codificador de produção lerá este documento na íntegra via view_file (Lei 42). Aplique Null-Vocabulary."
+    },
+    {
+      "TypeName": "self",
+      "Role": "Downstream Blast Radius Auditor (Subagente Beta)",
+      "Model": "flash",
+      "Prompt": "Você é o Subagente Beta. Sua missão é mapear o raio de destruição colateral, contratos upstream/downstream, importações e quebras externas causadas pela alteração de: [ARQUIVOS]. GRAVE O LAUDO PERICIAL BRUTO COMPLETO EM: .planning/investigations/inv_002_blast_radius.md. O subagente codificador de produção lerá este documento na íntegra via view_file (Lei 42). Aplique Null-Vocabulary."
+    }
+  ]
+}
+```
+
+### Invocação do Chief Ontologist Subagent (Modo Arquitetural):
 ```json
 {
   "Subagents": [

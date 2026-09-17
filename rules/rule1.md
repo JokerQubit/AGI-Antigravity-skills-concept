@@ -129,13 +129,37 @@ Subagentes não são utilitários opcionais nem ferramentas de apoio secundária
 
 ---
 
-## 9. Checklist Forense de Orquestração de Enxame (Binário — Lei 41)
+## 9. O Protocolo de Handoff Neural de Alta Fidelidade & Banimento do "Telefone Sem Fio" (High-Fidelity Neural Handoff — Lei 42)
+
+Subagentes operam como **submentes neurais corticais especializadas**, enquanto o Agente Principal atua como o **Córtex Pré-Frontal Soberano**. No ecossistema neural de enxame, a patologia mais destrutiva é a **degradação epistêmica por compressão pré-frontal com perda** (*The Neural Telephone Game*).
+
+### 9.1. A Patologia do "Telefone Sem Fio" Pré-Frontal
+Quando um subagente especialista investiga um problema complexo, ele gera inteligência pericial de altíssima resolução: offsets de memória, condições de corrida assíncronas, linhas exatas, dependências cruzadas e modos silenciosos de falha.
+O erro estocástico clássico ocorre quando o Agente Principal intercepta essa saída, redige um resumo de 2 ou 3 linhas na thread principal e injeta apenas esse resumo diluído no prompt do subagente codificador de produção.
+- **Consequência:** O subagente de produção recebe uma sombra empobrecida da realidade técnica, perde as sutilezas microscópicas e implementa remendos sintomáticos ou stubs.
+
+### 9.2. O Circuito Neural em Malha Fechada de 4 Etapas:
+1. **Gravação Física do Laudo Pericial (Substrato Estigmérgico):**
+   O subagente investigador (Alfa, Beta ou Ontologista) grava obrigatoriamente seu relatório analítico bruto e irrestrito no disco:
+   `.planning/investigations/inv_<id>_<slug>.md`
+2. **Registro Sináptico Feedforward (`synaptic_bus.json`):**
+   O Agente Principal valida a conclusão do laudo e propaga o caminho físico do artefato no barramento sob `synaptic_signals.INVESTIGATION_ARTIFACTS`.
+3. **Injeção do Ponteiro Físico no Payload:**
+   Ao despachar o subagente codificador de produção via `invoke_subagent`, o prompt contém a tag obrigatória:
+   `[INVESTIGATION_REPORT_PATH]: ".planning/investigations/inv_<id>_<slug>.md"`
+4. **Leitura Mandatória na Íntegra via `view_file` (Ingestão de Alta Fidelidade):**
+   A primeira ação motora do subagente de produção DEVE ser invocar `view_file` no arquivo do relatório pericial bruto. Ele absorve diretamente a mente do investigador, com fidelidade de 100%, sem perda de sinal pré-frontal. O córtex pré-frontal atua como orquestrador, barramento sináptico e árbitro — jamais como filtro diluidor.
+
+---
+
+## 10. Checklist Forense de Orquestração de Enxame (Binário — Lei 41 & 42)
 
 > Auditado pelo Agente Principal e pelo Red Team Juiz na Época IV.
 
 - [ ] **Relação 1:1 Atômica:** exatamente 1 subagente por nó ou arquivo de produção; zero batching.
 - [ ] **Urgência de Subagente Respeitada:** zero investigação solitária na thread principal; dupla investigativa despachada.
 - [ ] **Squad Activation Gate Cumprido:** subagentes do blueprint do Dossiê despachados antes da mutação de código.
+- [ ] **Handoff de Alta Fidelidade Verificado:** subagente de produção leu documento pericial bruto via `view_file`; zero resumo lossy do pré-frontal.
 - [ ] **Clean-Context Verificado:** subagente despachado com payload cirúrgico delimitado, sem vazamento do histórico da thread principal.
 - [ ] **Teto de Onda Respeitado:** máximo de 15 subagentes por chamada de `invoke_subagent`.
 - [ ] **Sinapses Feedforward Persistidas:** saídas registradas no `synaptic_bus.json` com `[SYNAPTIC_OUTPUTS]`.
