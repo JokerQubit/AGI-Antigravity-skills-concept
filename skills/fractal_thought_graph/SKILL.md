@@ -1,15 +1,19 @@
 ---
 name: fractal_thought_graph
-description: "v4.0 — Universal Cognitive Parity & Structured Neural Planning Mesh (Lei 41: Cadeia Neural Estruturada de Planejamento). Manual técnico e playbook operacional para gestão do substrato de pensamento (.planning/nodes/), modelagem determinística do manifesto graph.json, protocolo de expansão fractal polímata até a Fronteira do Impassável e despacho concorrente atômico 1:1 de subagentes."
+description: "v4.1 — Universal Cognitive Parity & Mission Mode Bifurcation (Lei 41: Cadeia Neural Estruturada de Planejamento). Manual técnico e playbook operacional para gestão do substrato de pensamento (.planning/), bifurcação de missões (Arquitetural N >= 100 vs Direto Zero Nós), modelagem determinística do manifesto graph.json, protocolo de expansão fractal polímata até a Fronteira do Impassável e despacho concorrente atômico 1:1 de subagentes."
 ---
 
-# Fractal Thought Graph Operations Playbook (v4.0 — Universal Cognitive Parity & Structured Neural Planning Mesh | Lei 41: Cadeia Neural Estruturada de Planejamento)
+# Fractal Thought Graph Operations Playbook (v4.1 — Universal Cognitive Parity & Mission Mode Bifurcation | Lei 41: Cadeia Neural Estruturada de Planejamento)
 
-Manual prático de orquestração do substrato cognitivo pré-execução (`.planning/`). Estabelece a metodologia de expansão de pensamento de nível AGI: **a erradicação definitiva da preguiça estocástica, do batching reducionista e do isolamento neural** através da conexão polímata universal entre domínios correlacionados e não-correlacionados. Governa a cadeia causal contínua ($X \to Y \to \text{Ramificações de 2ª, 3ª e 4ª ordem}$) até a **Fronteira do Impassável** ($N \ge 100$) com:
-1. **Ingestão Estratégica via Subagente Prompt Refiner** (compilação do `mission_dossier.md`).
-2. **Pesquisa Empírica via Subagente Chief Ontologist** (fundamentação do `node_000_root.md` e `hypergraph_seed.json`).
-3. **Barramento Sináptico Neural (`synaptic_bus.json`)** conectando as ondas de nós em rede neural viva.
-4. **Despacho Atômico 1:1 em Ondas (máx 15 nós/onda)** com modelo **Flash Low/Medium/High**.
+Manual prático de orquestração do substrato cognitivo pré-execução (`.planning/`). Estabelece a metodologia de expansão de pensamento de nível AGI com bifurcação determinística de modo:
+1. **MODO ARQUITETURAL / PLATAFORMA:** Saturação exaustiva do hipergrafo até a **Fronteira do Impassável** ($N \ge 100$ nós em `.planning/nodes/`) com Chief Ontologist empírico e despacho em ondas sequenciais (máx 15 nós/onda).
+2. **MODO DIRETO / OPERACIONAL / INVESTIGATIVO:** **Zero nós em disco (`nodes_floor: 0`)**. É terminantemente proibido criar arquivos markdown em `.planning/nodes/`. O plano executivo é gerado diretamente no `implementation_plan.md` e todo o orçamento de tokens é preservado para a Dupla Investigativa e para os subagentes que codificam os arquivos diretamente.
+
+Governa a conexão polímata universal entre domínios correlacionados e não-correlacionados com:
+1. **Ingestão Estratégica via Subagente Prompt Refiner** (compilação do `mission_dossier.md` e classificação de modo).
+2. **Pesquisa Empírica via Chief Ontologist (Arq.) ou Dupla Investigativa (Direto)**.
+3. **Barramento Sináptico Neural (`synaptic_bus.json`)** conectando os subagentes em rede neural viva.
+4. **Despacho Atômico 1:1 de Subagentes** com modelo **Flash Low/Medium/High**.
 5. **Governança por Expedientes Cognitivos (Work Shifts)** com persistência física no disco.
 
 ---
@@ -19,19 +23,19 @@ Manual prático de orquestração do substrato cognitivo pré-execução (`.plan
 ```text
 .planning/
 ├── mission_dossier.md          # Dossiê Executivo da Missão (compilado na Época 0 pelo Prompt Refiner)
-├── node_000_root.md            # Decomposição Ontológica Raiz (fundamentada pelo Chief Ontologist)
-├── hypergraph_seed.json        # Semente Empírica: Lista discriminada de todos os 100+ nós e hipóteses
+├── refiner_seal.json           # Selo Criptográfico Estigmérgico de Governança do Turno
 ├── synaptic_bus.json           # Barramento Sináptico Neural: Ledger de contratos, tipos, status HOLD/GO e sinapses
 ├── expediente_state.json       # Persistência de Estado do Turno/Expediente Cognitivo Atual
 ├── graph.json                  # Manifesto Central Consolidado: Grafo, arestas tipadas e primitivas
-├── mailboxes/                  # Caixas Postais Estigmérgicas para coordenação assíncrona entre subagentes
-│   ├── mailbox_node_001.json   # Depósito de avisos, descompassos de interface e notas de coordenação
-│   └── ...
-└── nodes/
+├── node_000_root.md            # [MODO ARQUITETURAL APENAS] Decomposição Ontológica Raiz
+├── hypergraph_seed.json        # [MODO ARQUITETURAL APENAS] Semente Empírica: Lista dos 100+ nós
+└── nodes/                      # [MODO ARQUITETURAL APENAS] Piso mínimo inegociável de 100 nós (N >= 100)
     ├── node_001_<slug>.md      # Nós Primários Estruturais (d=1, Camada Base)
     ├── node_001_1_<atrito>.md  # Nós Filhos de Resolução de Atrito (d=2, Delta Puro)
     ├── node_001_2_<falha>.md   # Nós Filhos de Modos Silenciosos de Falha (d=2, Delta Puro)
-    └── ...                     # Piso mínimo inegociável de 100 nós (N >= 100)
+    └── ...
+
+> ⚠️ REGRA DE OURO DO MODO DIRETO: Se a missão for classificada como DIRECT_OPERATIONAL, o diretório .planning/nodes/ NÃO é criado/populado. Zero arquivos gerados em nodes/. Todo planejamento vai direto para implementation_plan.md.
 ```
 
 ---
@@ -116,10 +120,16 @@ Quando a máquina depara-se com incerteza ($\varepsilon > 0$), APIs não documen
 
 ---
 
-## 4. Playbook da Época I (Fase A): Subagente Chief Ontologist & Fundação Empírica
+## 4. Playbook da Época I (Fase A): Subagente Chief Ontologist (Arq.) ou Dupla Investigativa (Direto)
 
+> ⚠️ DIFERENCIAÇÃO CRÍTICA DE EXECUÇÃO NA ÉPOCA I:
+> - **Se mission_type == "ARCHITECTURAL":** O Chief Ontologist gera `node_000_root.md` e `hypergraph_seed.json` para ancorar as ondas subsequentes que saturam os 100+ nós em `.planning/nodes/`.
+> - **Se mission_type == "DIRECT_OPERATIONAL":** A fase do Chief Ontologist e a saturação de nós são SUBSTITUÍDAS pela ativação imediata da **Dupla Investigativa (Two-Mind Minimum)**:
+>   1. **Subagente Alfa (Causal Root Cause):** disseca a falha, fluxo interno e causas raízes microscópicas nos arquivos reais.
+>   2. **Subagente Beta (Downstream Blast Radius):** disseca efeitos colaterais, quebra de contratos e dependências downstream.
+>   Nenhum arquivo é criado em `.planning/nodes/`. A síntese dos achados alimenta diretamente o `implementation_plan.md`.
 
-O Agente Principal é **TERMINANTEMENTE PROIBIDO** de inventar tópicos de nós de cabeça. A decomposição do hipergrafo deve ser fruto de investigação empírica real.
+O Agente Principal é **TERMINANTEMENTE PROIBIDO** de inventar tópicos de nós de cabeça ou investigar falhas sozinho na thread principal. A decomposição e a investigação devem ser fruto de trabalho de subagentes especializados.
 
 ### Invocação do Chief Ontologist Subagent:
 ```json

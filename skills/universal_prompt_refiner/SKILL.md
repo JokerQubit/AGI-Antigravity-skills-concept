@@ -1,13 +1,15 @@
 ---
 name: universal_prompt_refiner
-description: Playbook de Engenharia e Controle Operacional do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate) v4.0. Governa o despacho obrigatório do Subagente Prompt Refiner antes de qualquer intervenção operacional, a compilação do Dossiê Universal (.planning/mission_dossier.md) via track único universal, desconstrução forense da demanda em camadas, roadmap determinístico para o enxame, matriz de regras/skills ativadas por primeiros princípios, planos de despacho sob medida, pre-mortem forense e critérios fiduciários de aceite.
+description: Playbook de Engenharia e Controle Operacional do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate) v4.1. Governa o despacho obrigatório do Subagente Prompt Refiner antes de qualquer intervenção operacional, a classificação mandatória de modo (Arquitetural vs. Direto), o gatilho de ativação imediata do esquadrão ([HARD HALT: SQUAD_DISPATCH_BYPASSED]), a compilação do Dossiê Universal (.planning/mission_dossier.md), desconstrução forense em 4 camadas, roadmap determinístico, matriz de regras/skills por primeiros princípios e critérios fiduciários de aceite.
 ---
 
-# Universal Prompt Refiner Gate Playbook (Época 0 - v4.0)
+# Universal Prompt Refiner Gate Playbook (Época 0 - v4.1)
 
-Playbook operacional definitivo que rege o **Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate)**. Estabelece a trava mecânica suprema do ecossistema: **o Agente Principal está terminantemente proibido de agir, planejar, editar arquivos ou rodar comandos modificadores sem antes despachar o Subagente Especialista Prompt Refiner**.
+Playbook operacional definitivo que rege o **Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate)**. Estabelece as duas travas mecânicas supremas do ecossistema:
+1. **Trava de Refinamento:** O Agente Principal está terminantemente proibido de agir, planejar, editar arquivos ou rodar comandos modificadores sem antes despachar o Subagente Especialista Prompt Refiner (`[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`).
+2. **Trava de Ativação do Esquadrão:** O Agente Principal está terminantemente proibido de mutacionar código sem antes despachar os subagentes do blueprint do Dossiê (`[HARD HALT: SQUAD_DISPATCH_BYPASSED]`).
 
-Nenhuma intervenção operacional — seja a correção de uma vírgula de CSS, um script CLI pontual ou uma plataforma distribuída de 100+ nós — é executada no impulso do prompt cru. Toda demanda é desconstruída, blindada, mapeada em regras/skills por primeiros princípios e roteada com precisão cirúrgica antes de qualquer mutação física no repositório.
+Nenhuma intervenção operacional — seja a correção de uma vírgula de CSS, um script CLI pontual ou uma plataforma distribuída — é executada no impulso do prompt cru. Toda demanda é desconstruída, classificada em modo arquitetural ou direto, blindada por subagentes especializados e roteada com precisão cirúrgica antes de qualquer mutação física no repositório.
 
 ---
 
@@ -23,85 +25,67 @@ Modelos convencionais de linguagem operam sob impulso reativo: ao receberem uma 
 
 **A LEI É CATEGÓRICA:** Qualquer chamada de ferramenta de escrita (`replace_file_content`, `write_to_file`), comandos de alteração de estado no shell (`run_command`), ou geração de planos executivos na Época II sem a prévia existência física do Dossiê do Prompt Refiner no disco aciona **veto mecânico sumário imediato (`[HARD HALT: UNREFINED_ACTION_ATTEMPT]`)**.
 
-### 1.2. A Ubiquidade do Portão: Por que Nenhuma Tarefa é "Pequena Demais"
-A ilusão da "tarefa cirúrgica simples" é a fonte primária de incidentes em sistemas de alta complexidade:
-- *"É apenas um botão de exportar"* $\to$ Dispara downloads paralelos ilimitados, estoura a memória do browser e trava a thread com animação CSS dura de 300ms.
-- *"É apenas uma correção de tipagem"* $\to$ Converte `Result<T, E>` em `any` disfarçado, quebrando contratos downstream de 12 arquivos.
-- *"É apenas rodar um comando de build"* $\to$ Executa em porta já ocupada, orfanando processos Node em background e corrompendo o lockfile.
+### 1.2. A Ubiquidade do Portão & A Bifurcação de Modo de Missão
+A ilusão da "tarefa negligenciável" é a fonte primária de incidentes em sistemas de alta complexidade. Na v4.1, toda demanda passa pelo Portão do Prompt Refiner, mas a execução subsequente é calibrada por dois modos mutuamente exclusivos:
 
-O Portão de Ingestão Mandatória Ubíqua não desacelera o trabalho: ele **elimina o atrito do retrabalho**, operando como track único universal (Dossiê Universal `.planning/mission_dossier.md`) para toda e qualquer intervenção.
+1. **MODO ARQUITETURAL / PLATAFORMA:**
+   - Para criação de novas plataformas, módulos estruturais complexos ou refatorações profundas de arquitetura.
+   - Dispara compulsoriamente a saturação exaustiva de **$N \ge 100$ nós atômicos** em `.planning/nodes/`.
+2. **MODO DIRETO / OPERACIONAL / INVESTIGATIVO:**
+   - Para correções de bugs, investigações de falhas, alterações diretas em arquivos existentes ou pequenas melhorias.
+   - **Zero nós em disco (`nodes_floor: 0`)**. É terminantemente proibido poluir o disco com arquivos `.planning/nodes/`.
+   - O plano é sintetizado diretamente em `implementation_plan.md` e 100% dos tokens são canalizados para os subagentes que investigam e codificam de fato.
 
 ---
 
-## 2. Os Seis Entregáveis Obrigatórios do Prompt Refiner
+## 2. Os Seis Entregáveis Obrigatórios do Dossiê Universal (`.planning/mission_dossier.md`)
 
-Todo despacho do Subagente Prompt Refiner deve gerar obrigatoriamente um Dossiê de Missão contendo seis blocos fiduciários inegociáveis:
+Todo despacho do Subagente Prompt Refiner deve gerar compulsoriamente o Dossiê Universal contendo seis blocos fiduciários inegociáveis:
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
 │                   ANATOMIA DOS SEIS ENTREGÁVEIS                        │
 ├────────────────────────────────────────────────────────────────────────┤
-│ 1. Desconstrução Forense (Explícita, Implícita, Invariantes Ocultos)   │
-│ 2. Roadmap Determinístico Passo a Passo (Agente Principal & Enxame)    │
+│ 1. Classificação de Modo & Desconstrução Forense (4 Camadas - Lei 38) │
+│ 2. Roadmap Determinístico Passo a Passo (arquivo a arquivo)            │
 │ 3. Matriz de Regras e Skills Ativadas (Primeiros Princípios)           │
-│ 4. Plano de Despacho de Subagentes Específicos (Bespoke Squads)        │
+│ 4. Bespoke Dynamic Squad Blueprint (Ordem Executiva de Despacho)       │
 │ 5. Matriz de Modos de Quebra & Pre-Mortem Forense                      │
-│ 6. Critérios Estritos de Aceite Fiduciário (Métricas & Homologação)    │
+│ 6. Matriz de Checklists Forenses Extensivos & Aceite Fiduciário        │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-### (a) Desconstrução Forense da Demanda
-- **Contratos Explícitos:** Declarações literais, entradas declaradas, saídas esperadas e restrições expressas pelo usuário.
-- **Contratos Implícitos:** Invariantes de engenharia não ditos pelo usuário, mas mandatórios para produção (idempotência, cancelamento via `AbortController`, acessibilidade ARIA, concorrência atômica, taxa de quadros a 60fps/120fps, latência perceptiva $<16\text{ms}$, tipagem estrita `Result<T, E>`).
-- **Invariantes de Estado & Acoplamento:** Mapeamento do estado atual do repositório, dependências circulares em potencial e impacto nas rotas e contratos existentes.
+### (a) Classificação de Modo & Desconstrução Forense da Demanda
+- **Classificação:** `mission_type: "ARCHITECTURAL"` ($N \ge 100$ nós) ou `"DIRECT_OPERATIONAL"` (Zero nós em disco).
+- **Contratos Explícitos (CE):** Declarações literais, entradas, saídas esperadas e restrições expressas pelo usuário.
+- **Contratos Implícitos (CI):** Invariantes não ditos, mas mandatórios (idempotência, `AbortController`, ARIA, concorrência atômica, 60fps, latência $<16\text{ms}$, `Result<T, E>`).
+- **Invariantes de Estado & Acoplamento:** Mapeamento do estado atual, dependências circulares e impacto em rotas/contratos existentes.
 
 ### (b) Roadmap Passo a Passo Exato
 - Sequenciamento unívoco e mecânico de ações para o Agente Principal e para o enxame de subagentes.
-- Definição estrita de dependências: o que deve ser executado sequencialmente vs em concorrência paralela.
-- Travas de isolamento: aplicação formal do protocolo `HOLD/GO` para contratos estruturais compartilhados.
+- Definição estrita de dependências: sequencial vs concorrência paralela.
+- Travas de isolamento: protocolo `HOLD/GO` no `synaptic_bus.json` para interfaces compartilhadas.
 
 ### (c) Matriz de Regras e Skills Ativadas com Justificativa de Primeiros Princípios
-O Prompt Refiner não pode meramente "listar" regras: deve fundamentar a ativação de cada uma na **física real do problema**:
-- *Exemplo:* Em vez de apenas citar "Lei 7", o Refiner prescreve: *"Ativação da Lei 7 (Titan Benchmark) porque a interação do drawer exige física de molas de 2ª ordem com stiffness 380 e damping 32 para absorver a inércia do gesto do usuário sem jank visual"*.
+O Prompt Refiner fundamenta a ativação de cada regra e skill na **física real do problema** (ex: atrito de GPU, inércia de gesto, concorrência de arquivos).
 
-### (d) Plano de Despacho de Subagentes Específicos (Bespoke Dynamic Squads)
+### (d) Bespoke Dynamic Squad Blueprint (Ordem Executiva Compulsória de Despacho)
 Em conformidade estrita com as Leis 32 e 40:
-- **Banimento de Templates Fixos:** É proibido usar trios pré-fabricados ("pesquisador, arquiteto, testador").
-- **Síntese Sob Medida:** Criação de personas ultra-especializadas derivadas dos modos de falha da tarefa (ex: `DirectByteBufferConcurrenySpecialist`, `FramerMotionSpringPhysicist`, `FoleyAcousticSlicer`).
-- **Definição de Parâmetros:** Para cada subagente: `Role`, `TypeName: "self"` ou `"research"`, `Model` (Flash Low, Medium ou High conforme Tier), prompt atômico 1:1 e ferramentas autorizadas.
+- **Ordem de Execução Mandatória:** A Seção D NÃO é decorativa; é uma ordem de despacho executiva imediata para o Agente Principal. Mutacionar código sem despachar os subagentes mapeados aciona `[HARD HALT: SQUAD_DISPATCH_BYPASSED]`.
+- **Dupla Investigativa Obrigatória (Two-Mind Minimum):** Para qualquer tarefa investigativa ou alteração de arquivo existente, o esquadrão DEVE conter no mínimo:
+  * **Subagente Alfa (Causal Root Cause):** Especialista na mecânica microscópica interna da falha ou alteração.
+  * **Subagente Beta (Downstream Blast Radius):** Especialista no raio de impacto colateral, interfaces externas e contratos.
+- **Parametrização Estrita:** Para cada subagente: `Role`, `TypeName: "self"` ou `"research"`, `Model: "flash"`, prompt cirúrgico Clean-Context e ferramentas autorizadas.
 
 ### (e) Matriz de Modos de Quebra e Pre-Mortem Forense
-- **Exercício Pre-Mortem:** *"Assumindo que este código quebrou catastroficamente em produção 3 meses após o deploy, quais foram as causas raízes microscópicas?"*
-- Mapeamento explícito de armadilhas silenciosas:
-  - Condições de corrida assíncronas;
-  - Desalinhamento perceptual de áudio e UI;
-  - Quebra de hidratação ou memory leaks por event listeners desanexados;
-  - Exaustão de sockets ou limites de taxa de APIs externas;
-  - Queda de taxa de quadros (<60fps) por reflows do DOM fora de camadas de GPU.
+- Exercício Pre-Mortem: *"Assumindo que este código quebrou catastroficamente em produção 3 meses após o deploy, quais foram as causas raízes microscópicas?"*
+- Mapeamento explícito de condições de corrida, memory leaks, quebra de contratos e degradação de frame-rate.
 
-### (f) Critérios Estritos de Aceite Fiduciário
-- Métricas quantificáveis de telemetria e integridade física que serão verificadas pelo Subagente Juiz (Época IV):
-  - `$LASTEXITCODE === 0` em compilação e suítes de testes;
-  - Zero erros, warnings de hidratação ou assets 404 no console (`browser_console_logs`);
-  - Zero stubs (`TODO`, `pass`, `...`, funções vazias);
-  - Inspeção visual perceptual aprovada no Chrome real via `browser-mcp`.
+### (f) Matriz de Checklists Forenses & Critérios Estritos de Aceite Fiduciário
+- Checklists binários de verificação [0 ou 1] por nó/arquivo (Lei 41).
+- Métricas quantificáveis para o Subagente Juiz (Época IV): `$LASTEXITCODE === 0`, zero erros no console (`browser_console_logs`), zero stubs e inspeção visual perceptual aprovada no Chrome real via `browser-mcp`.
 
----
-
-## 2. Dossiê Universal v4.0 (Track Único — Paridade Operacional Invariante)
-
-Todo Dossiê de Missão, independentemente da escala da intervenção, contém obrigatoriamente:
-
-### Dossiê Universal v4.0 (Track Único — Paridade Operacional Invariante)
-Todo Dossiê de Missão, independentemente da escala da intervenção, contém obrigatoriamente:
-- **Seção A:** Desconstrução Forense em 4 Camadas (Lei 38) — CE, CI, Pre-Mortem, Two-Man Rule
-- **Seção B:** Roadmap Mecânico Passo a Passo Determinístico (arquivo por arquivo)
-- **Seção C:** Matriz de Regras e Skills Ativadas com justificativa de Primeiros Princípios
-- **Seção D:** Bespoke Dynamic Squad Blueprint (subagentes especializados 1:1 sob medida)
-- **Seção E:** Matriz de Checklists Forenses Extensivos da Cadeia Neural (8-20 critérios binários por nó/subagente)
-- **Seção F:** Critérios Estritos de Aceite Fiduciário para o Red Team na Época IV
-
-O artefato físico único é `.planning/mission_dossier.md`. O caminho `surgical_mission_dossier.md` está erradicado e é proibido. Toda referência a "Track Cirúrgico", "Tier 1 Cirúrgico", "Quick Track" ou "Tier 1" no contexto de roteamento de dossiê constitui fraude operacional e aciona `[HARD HALT]`.
+O artefato físico único de ingestão é `.planning/mission_dossier.md`. Qualquer tentativa de ignorar este artefato aciona `[HARD HALT]`.
 
 
 
@@ -213,7 +197,7 @@ export function ExportButton({ transactions }: { transactions: any }) {
      invoke_subagent: Prompt Refiner & Epistemic Compiler
                           │
                           ▼
-      Gravação de .planning/surgical_mission_dossier.md
+      Gravação de .planning/mission_dossier.md
    • Desconstrução Forense (AbortController, Máquina de Estados Finitos)
    • Foley Real via scripts/sfx_tool.py slice-youtube
    • Cinemática de Molas de 2ª Ordem Framer Motion (stiffness 400)
@@ -325,7 +309,7 @@ Quando qualquer nova demanda ou turno se inicia (sob o paradigma Turn-as-a-Sessi
       "TypeName": "self",
       "Role": "Universal Prompt Refiner & Epistemic Compiler",
       "Model": "flash",
-      "Prompt": "Você é o compilador epistêmico do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate). Sua missão é congelar qualquer impulso de ação e compilar o Dossiê Executivo de Missão e o Selo Estigmérgico de Despacho antes de qualquer modificação física. Analise a demanda crua do usuário: [INSERIR_DEMANDA_CRUA]. 1. Execute a Análise de Custo-Complexidade (ACC) para dimensionar eixos ontológicos, número de ondas e intensidade computacional — jamais para reduzir o piso de 100 nós; 2. Grave o artefato físico .planning/mission_dossier.md (Dossiê Universal — único artefato permitido); 3. O dossiê deve conter com rigor absoluto: (a) Desconstrução Forense em 4 Camadas (Lei 38); (b) Roadmap Mecânico Passo a Passo determinístico; (c) Matriz de Regras e Skills Ativadas com justificativa de Primeiros Princípios; (d) Plano de Despacho de Subagentes Específicos sob medida (Bespoke Dynamic Squads); (e) Matriz de Modos de Quebra e Pre-Mortem Forense; (f) Critérios Estritos de Aceite Fiduciário para o Red Team na Época IV. 4. Emita compulsoriamente no disco o Selo Estigmérgico de Despacho (.planning/refiner_seal.json) com o hash criptográfico da demanda crua, status 'SEALED_VALID', session_mode: 'Universal v4.0 — Sovereign Session', modo Flash prescrito e lista estrita de operações autorizadas. Aplique o Null-Vocabulary estrito. Grave os arquivos no disco e notifique o Agente Principal para proceder."
+      "Prompt": "Você é o compilador epistêmico do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate). Sua missão é congelar qualquer impulso de ação e compilar o Dossiê Executivo de Missão e o Selo Estigmérgico de Despacho antes de qualquer modificação física. Analise a demanda crua do usuário: [INSERIR_DEMANDA_CRUA]. 1. Execute a Análise de Custo-Complexidade (ACC) e classifique a missão compulsoriamente em mission_type: 'ARCHITECTURAL' (nova plataforma/módulo estrutural -> piso inegociável de 100 nós atômicos) ou 'DIRECT_OPERATIONAL' (bug fix/ajuste direto/investigação -> ZERO nós em disco, nodes_floor: 0, 100% tokens para execução real); 2. Grave o artefato físico .planning/mission_dossier.md (Dossiê Universal — único artefato permitido); 3. O dossiê deve conter com rigor absoluto: (a) Desconstrução Forense em 4 Camadas (Lei 38); (b) Roadmap Mecânico Passo a Passo determinístico; (c) Matriz de Regras e Skills Ativadas com justificativa de Primeiros Princípios; (d) Bespoke Dynamic Squad Blueprint (Seção D: ordem executiva mandatória de despacho de subagentes especializados 1:1, incluindo Dupla Investigativa Two-Mind Minimum para investigações); (e) Matriz de Modos de Quebra e Pre-Mortem Forense; (f) Critérios Estritos de Aceite Fiduciário para o Red Team na Época IV. 4. Emita compulsoriamente no disco o Selo Estigmérgico de Despacho (.planning/refiner_seal.json) com o hash criptográfico da demanda crua, status 'SEALED_VALID', session_mode: 'Universal v4.1 — Sovereign Session', mission_type ('ARCHITECTURAL' ou 'DIRECT_OPERATIONAL'), nodes_floor (100 ou 0), modo Flash prescrito e lista estrita de operações autorizadas. Aplique o Null-Vocabulary estrito. Grave os arquivos no disco e notifique o Agente Principal para proceder."
     }
   ]
 }
@@ -341,7 +325,9 @@ O selo é um artefato estigmérgico obrigatório emitido exclusivamente pelo Pro
   "timestamp": "2026-09-14T11:20:00-03:00",
   "user_raw_prompt_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "mission_dossier_path": ".planning/mission_dossier.md",
-  "session_mode": "Universal v4.0 — Sovereign Session",
+  "session_mode": "Universal v4.1 — Sovereign Session",
+  "mission_type": "DIRECT_OPERATIONAL",
+  "nodes_floor": 0,
   "recommended_flash_mode": "Flash Low",
   "mandatory_keywords_injected": [
     "Água no Deserto",
@@ -349,7 +335,8 @@ O selo é um artefato estigmérgico obrigatório emitido exclusivamente pelo Pro
     "Micro-ativos táteis reais",
     "Foley real",
     "Auditoria no Chrome Real",
-    "1:1 Subagente por Nó"
+    "1:1 Subagente por Nó / Arquivo",
+    "Two-Mind Minimum"
   ],
   "forensic_signoff": {
     "layer1_explicit_contracts": true,
@@ -359,26 +346,30 @@ O selo é um artefato estigmérgico obrigatório emitido exclusivamente pelo Pro
   },
   "seal_status": "SEALED_VALID",
   "authorized_operations": [
-    "EXPAND_NODES",
-    "DISPATCH_WAVE",
+    "DISPATCH_SQUAD",
     "ATOMIC_CODE",
     "RUN_TESTS"
   ]
 }
 ```
 
-### 4.2. A Trava Mecânica: `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`
+### 4.2. As Travas Mecânicas: `[HARD HALT]`
 
-Se o Agente Principal tentar executar comandos no shell (`run_command`), invocar ferramentas de escrita (`write_to_file`, `replace_file_content`), ou despachar subagentes a jusante sem a presença ativa e válida de `.planning/refiner_seal.json`, o sistema aciona veto mecânico instantâneo:
+O ecossistema opera sob duas travas mecânicas intransponíveis:
+
+1. **Portão do Refiner Bypassed (`[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`):**
+   Tentativa de ação motora, comandos shell (`run_command`), ferramentas de escrita (`write_to_file`, `replace_file_content`) ou despacho a jusante sem a presença ativa de `.planning/refiner_seal.json` com status `SEALED_VALID`.
+2. **Esquadrão Bypassed (`[HARD HALT: SQUAD_DISPATCH_BYPASSED]`):**
+   Tentativa do Agente Principal de mutacionar código diretamente sem antes ter despachado o esquadrão de subagentes especializados definido na Seção D do `mission_dossier.md`.
 
 ```text
-⛔ [HARD HALT: PROMPT_REFINER_GATE_BYPASSED]
+⛔ [HARD HALT: SQUAD_DISPATCH_BYPASSED]
 ═════════════════════════════════════════════════════════════════
-VIOLAÇÃO CONSTITUCIONAL DETECTADA: Tentativa de ação motora ou
-modificação de código sem o selo estigmérgico do Prompt Refiner.
-Causa: Inexistência de refiner_seal.json ou Hash Mismatch do turno.
-Ação Corretiva Compulsória: Disparo imediato do Subagente Prompt
-Refiner & Epistemic Compiler para validação forense do turno.
+VIOLAÇÃO CONSTITUCIONAL DETECTADA: Tentativa de mutação de código
+sem o prévio despacho do Esquadrão Especializado mapeado na Seção D
+do Dossiê Universal (.planning/mission_dossier.md).
+Causa: Agente Principal agiu sozinho sem ativar as mentes do squad.
+Ação Corretiva Compulsória: Disparo imediato dos subagentes do squad.
 ═════════════════════════════════════════════════════════════════
 ```
 

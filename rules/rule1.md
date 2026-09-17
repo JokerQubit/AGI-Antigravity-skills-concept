@@ -110,14 +110,35 @@ Subagentes operacionais e especialistas não devem ser sufocados com o históric
 
 ---
 
-## 8. Checklist Forense de Orquestração de Enxame (Binário — Lei 41)
+## 8. O Mandato do Roteamento Neural & Urgência de Subagentes (The Subagent Instinct)
+
+Subagentes não são utilitários opcionais nem ferramentas de apoio secundárias: são **submentes neurais ativas do próprio agente**, particionando a inteligência para atingir profundidade analítica inatingível por uma thread solitária.
+
+### Invariantes de Urgência de Enxame:
+1. **Veto à Investigação Solitária (*Solitary Investigation Ban*):**
+   - É expressamente proibido ao Agente Principal tentar investigar bugs, analisar arquivos extensos ou especular causas de problemas sozinho na thread principal.
+   - O monólogo na thread principal padece de viés estocástico de confirmação e reflexão rasa. O agente principal atua soberanamente como **Córtex Maestro & Síntese Central**.
+2. **Dupla Investigativa Obrigatória (*Two-Mind Minimum*):**
+   - Diante de qualquer investigação de falha, análise de arquivo complexo ou preparação de refatoração, o sistema DEVE despachar concorrentemente **no mínimo 2 subagentes com lentes analíticas contrastantes**:
+     * **Subagente Alfa (Causal Root Cause):** Disseca a mecânica microscópica da falha, fluxo de controle e valores inválidos.
+     * **Subagente Beta (Downstream Blast Radius):** Mapeia o raio de destruição colateral, quebra de contratos e dependências downstream.
+3. **Gatilho de Ativação Imediata do Esquadrão (*Immediate Squad Activation Gate*):**
+   - A Seção D do `mission_dossier.md` (*Bespoke Dynamic Squad Blueprint*) é uma ordem de despacho executiva e compulsória.
+   - Assim que o Dossiê for emitido, a primeira ação motora do Agente Principal é **despachar os subagentes mapeados no blueprint** para processar suas respectivas camadas.
+   - Tentar editar código ou planejar sem ter despachado o esquadrão do dossiê aciona a trava mecânica `[HARD HALT: SQUAD_DISPATCH_BYPASSED]`.
+
+---
+
+## 9. Checklist Forense de Orquestração de Enxame (Binário — Lei 41)
 
 > Auditado pelo Agente Principal e pelo Red Team Juiz na Época IV.
 
-- [ ] **Relação 1:1 Atômica:** exatamente 1 subagente por nó atômico; zero batching de nós em lotes.
+- [ ] **Relação 1:1 Atômica:** exatamente 1 subagente por nó ou arquivo de produção; zero batching.
+- [ ] **Urgência de Subagente Respeitada:** zero investigação solitária na thread principal; dupla investigativa despachada.
+- [ ] **Squad Activation Gate Cumprido:** subagentes do blueprint do Dossiê despachados antes da mutação de código.
 - [ ] **Clean-Context Verificado:** subagente despachado com payload cirúrgico delimitado, sem vazamento do histórico da thread principal.
 - [ ] **Teto de Onda Respeitado:** máximo de 15 subagentes por chamada de `invoke_subagent`.
-- [ ] **Sinapses Feedforward Persistidas:** saídas de nós registradas no `synaptic_bus.json` com `[SYNAPTIC_OUTPUTS]`.
+- [ ] **Sinapses Feedforward Persistidas:** saídas registradas no `synaptic_bus.json` com `[SYNAPTIC_OUTPUTS]`.
 - [ ] **HOLD/GO Respeitado:** interfaces instáveis respeitaram exclusão mútua (`CONTRACT_HOLD` -> `CONTRACT_STABLE`).
 - [ ] **Esquadrões Sob Medida:** zero templates estáticos repetitivos; especialidades derivadas da física do problema.
 - [ ] **Zero Role Drift:** subagentes cumpriram estritamente seu `[MY_SWARM_DELIVERABLE]` sem invadir escopo alheio.

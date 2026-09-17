@@ -1,7 +1,7 @@
 {
   "name": "agi-research",
-  "version": "4.0.0",
-  "description": "Universal Polymath Cognitive Architecture v4.0.0: Universal Parity Pipeline (every interaction triggers the complete 5-Epoch cycle), Structured Neural Planning Mesh & Forensic Binary Checklists (Law 41), Stigmergic Cold Boot & Turn-as-a-Session (TaaS), Universal Prompt Refiner Gate (Epoch 0, mandatory seal & dossier), Chief Ontologist Empirical Research, Synaptic Relay Neural Bus (HOLD/GO), 1:1 Atomic Subagent Dispatch (max 15/wave), Adversarial Red Team Gauntlet (Pre-Gauntlet Pass 0 + 4 Passes + Chrome Real Inspection), Titan-Grade Spring Physics & Real Acoustic Audio Foley, Zero-Stub Clean Architecture (Result/Option, Atomic Swap), AGI Closed-Loop OODA Self-Healing, Null-Vocabulary Fiduciary Posture.",
+  "version": "4.1.0",
+  "description": "Universal Polymath Cognitive Architecture v4.1.0: Mission Mode Bifurcation (Architectural N >= 100 Nodes vs Direct Zero-Nodes Operational Track), Subagent Instinct (Solitary Investigation Ban, Two-Mind Minimum: Causal Root Cause + Downstream Blast Radius), Immediate Squad Activation Gate ([HARD HALT: SQUAD_DISPATCH_BYPASSED]), Universal Parity Pipeline (5 Epochs), Structured Neural Planning Mesh & Forensic Checklists (Law 41), Universal Prompt Refiner Gate (Epoch 0 mandatory seal), Synaptic Relay Neural Bus (HOLD/GO), Adversarial Red Team Gauntlet with Chrome Real Inspection, Titan Spring Physics & Real Acoustic Audio, Zero-Stub Clean Architecture, AGI OODA Self-Healing.",
   "author": "OmniCognition Labs",
   "rules": "rules",
   "skills": "skills",
