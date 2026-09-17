@@ -126,6 +126,10 @@ Subagentes não são utilitários opcionais nem ferramentas de apoio secundária
    - A Seção D do `mission_dossier.md` (*Bespoke Dynamic Squad Blueprint*) é uma ordem de despacho executiva e compulsória.
    - Assim que o Dossiê for emitido, a primeira ação motora do Agente Principal é **despachar os subagentes mapeados no blueprint** para processar suas respectivas camadas.
    - Tentar editar código ou planejar sem ter despachado o esquadrão do dossiê aciona a trava mecânica `[HARD HALT: SQUAD_DISPATCH_BYPASSED]`.
+4. **O Firewall de Contexto & Banimento de Pesquisa na Thread Principal (*The Context Firewall Invariant*):**
+   - É expressamente proibido ao Agente Principal realizar buscas externas na web (`search_web`), pesquisar documentação/limites de APIs, ler mais de 2 arquivos exploratórios ou rodar sequências de comandos de diagnóstico na thread principal.
+   - Fazer investigações ou buscas na thread principal contamina a memória de trabalho com milhares de tokens de ruído (*context rot*), degradando o foco do agente e induzindo alucinações.
+   - **A utilidade real do subagente:** Atua como uma **sandbox descartável de contexto limpo**. Ele suja as mãos, processa 30.000 tokens de documentação e código bruto, e retorna ao Córtex Central apenas a pepita de ouro lapidada (o laudo ou patch exato), mantendo a thread principal cirúrgica, lúcida e veloz.
 
 ---
 
