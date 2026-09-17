@@ -102,11 +102,14 @@ Subagentes operacionais e especialistas não devem ser sufocados com o históric
    - O subagente opera focado unicamente no seu entregável atômico.
    - É expressamente proibido transferir logs de conversas passadas, monólogos reflexivos da thread principal ou ruído de turnos anteriores para especialistas de implementação.
 2. **O Contrato de Payload Cirúrgico:**
-   Todo prompt despachado via `invoke_subagent` deve ser auto-suficiente e estruturado sob quatro pilares inegociáveis:
+   Todo prompt despachado via `invoke_subagent` deve ser auto-suficiente e estruturado sob pilares inegociáveis:
+   - **`[ACTION_MODE]`**: Modo de ação compulsório: `PHYSICAL_MUTATION` (para codificação, refatoração e criação de arquivos — exige `TypeName: "self"`) ou `ANALYTICAL_INVESTIGATION` (para laudos e diagnósticos de leitura).
    - **`[BOUNDED_OBJECTIVE]`**: A missão microscópica e delimitada (ex: *"Implementar o adapter de persistência SQLite"*).
    - **`[FILE_SLICES]`**: Caminhos absolutos e fatias de linha exatas dos arquivos que o subagente precisa ler.
    - **`[SYNAPTIC_CONTRACTS]`**: Contratos upstream consolidados (`[SYNAPTIC_INPUTS]`) extraídos do `synaptic_bus.json`.
    - **`[FORENSIC_CRITERIA]`**: Critérios binários específicos [0 ou 1] que o subagente deve satisfazer para homologação.
+   - **`[MANDATORY_TOOLS]`**: Para `PHYSICAL_MUTATION`, declaração explícita de `replace_file_content` e `write_to_file`. É terminantemente proibido devolver código em markdown no `send_message`.
+   - **`[OUTPUT_FORMAT]`**: `DISK_MUTATION_RECEIPT_ONLY`. O payload do `send_message` restringe-se à telemetria fria: arquivos modificados no disco, linhas alteradas, validação de build/testes e garantia de Zero-Stub.
 
 ---
 
@@ -129,7 +132,12 @@ Subagentes não são utilitários opcionais nem ferramentas de apoio secundária
 4. **O Firewall de Contexto & Banimento de Pesquisa na Thread Principal (*The Context Firewall Invariant*):**
    - É expressamente proibido ao Agente Principal realizar buscas externas na web (`search_web`), pesquisar documentação/limites de APIs, ler mais de 2 arquivos exploratórios ou rodar sequências de comandos de diagnóstico na thread principal.
    - Fazer investigações ou buscas na thread principal contamina a memória de trabalho com milhares de tokens de ruído (*context rot*), degradando o foco do agente e induzindo alucinações.
-   - **A utilidade real do subagente:** Atua como uma **sandbox descartável de contexto limpo**. Ele suja as mãos, processa 30.000 tokens de documentação e código bruto, e retorna ao Córtex Central apenas a pepita de ouro lapidada (o laudo ou patch exato), mantendo a thread principal cirúrgica, lúcida e veloz.
+   - **A utilidade real do subagente:** Atua como uma **sandbox descartável de contexto limpo**. Ele suja as mãos, processa 30.000 tokens de documentação e código bruto, e retorna ao Córtex Central apenas a pepita de ouro lapidada: o laudo pericial bruto gravado no disco (na investigação) ou o recibo de mutação física direta com telemetria limpa (na codificação), mantendo a thread principal cirúrgica, lúcida e veloz.
+5. **O Mandato do Artífice Motor & Banimento do Subagente Consultivo (*The Motor Actuator Mandate*):**
+   - Subagentes despachados para codificação, refatoração, implementação ou correção operam compulsoriamente como **artífices atuadores no disco**, despachados sob `TypeName: "self"`.
+   - É terminantemente proibido ao subagente atuar como consultor de chat ou devolver blocos de código em markdown no `send_message` para o Agente Principal digitar.
+   - O subagente deve executar fisicamente as ferramentas motoras (`replace_file_content`, `write_to_file`, `run_command`) em sua própria sessão, validar a persistência e compilação, e reportar apenas a telemetria fria de arquivos modificados e testes executados.
+   - **Trava de Auto-Veto do Agente Principal (`[HARD REJECT: ADVISORY_CODE_DUMP]`):** Se um subagente devolver código textual no `send_message` sem mutação comprovada no disco, o Agente Principal está terminantemente proibido de aplicar ou digitar o código. O Agente Principal deve rejeitar a entrega sumariamente e ordenar a mutação física direta via ferramenta.
 
 ---
 
@@ -142,7 +150,7 @@ Quando um subagente especialista investiga um problema complexo, ele gera inteli
 O erro estocástico clássico ocorre quando o Agente Principal intercepta essa saída, redige um resumo de 2 ou 3 linhas na thread principal e injeta apenas esse resumo diluído no prompt do subagente codificador de produção.
 - **Consequência:** O subagente de produção recebe uma sombra empobrecida da realidade técnica, perde as sutilezas microscópicas e implementa remendos sintomáticos ou stubs.
 
-### 9.2. O Circuito Neural em Malha Fechada de 4 Etapas:
+### 9.2. O Circuito Neural em Malha Fechada de 5 Etapas:
 1. **Gravação Física do Laudo Pericial (Substrato Estigmérgico):**
    O subagente investigador (Alfa, Beta ou Ontologista) grava obrigatoriamente seu relatório analítico bruto e irrestrito no disco:
    `.planning/investigations/inv_<id>_<slug>.md`
@@ -153,6 +161,8 @@ O erro estocástico clássico ocorre quando o Agente Principal intercepta essa s
    `[INVESTIGATION_REPORT_PATH]: ".planning/investigations/inv_<id>_<slug>.md"`
 4. **Leitura Mandatória na Íntegra via `view_file` (Ingestão de Alta Fidelidade):**
    A primeira ação motora do subagente de produção DEVE ser invocar `view_file` no arquivo do relatório pericial bruto. Ele absorve diretamente a mente do investigador, com fidelidade de 100%, sem perda de sinal pré-frontal. O córtex pré-frontal atua como orquestrador, barramento sináptico e árbitro — jamais como filtro diluidor.
+5. **Mutação Motora Atômica no Disco & Recibo Fiduciário:**
+   A ação de encerramento do subagente de produção é invocar `replace_file_content` ou `write_to_file` diretamente no disco, seguida de compilação/testes (`run_command`). O subagente valida a gravação física e transmite ao parent via `send_message` unicamente a telemetria fria de arquivos alterados, sem nunca transcrever o código no chat.
 
 ---
 
@@ -171,3 +181,7 @@ O erro estocástico clássico ocorre quando o Agente Principal intercepta essa s
 - [ ] **Esquadrões Sob Medida:** zero templates estáticos repetitivos; especialidades derivadas da física do problema.
 - [ ] **Zero Role Drift:** subagentes cumpriram estritamente seu `[MY_SWARM_DELIVERABLE]` sem invadir escopo alheio.
 - [ ] **Peer Veto Resolvido:** zero contratos contestados pendentes no `graph.json`.
+- [ ] **Mandato do Artífice Motor Cumprido:** subagentes de produção executaram mutações físicas no disco via ferramentas de escrita (`replace_file_content` / `write_to_file`); zero dumps de código em markdown no `send_message`.
+- [ ] **Veto ao Parent Digitador Mantido:** Agente Principal absteve-se de digitar ou colar código produzido por subagentes; atuou estritamente como árbitro e validador.
+- [ ] **Despacho Motor Válido:** todos os subagentes com meta de produção ou mutação foram despachados com `TypeName: "self"`.
+- [ ] **Ortogonalidade Estrita de Alvos:** nenhum arquivo físico compartilhado simultaneamente por múltiplos subagentes na mesma onda ($\text{FileSet}(S_i) \cap \text{FileSet}(S_j) = \emptyset$).

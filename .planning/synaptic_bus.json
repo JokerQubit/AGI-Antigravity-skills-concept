@@ -1,0 +1,33 @@
+{
+  "bus_version": "4.1.0",
+  "active_expediente": 3,
+  "synaptic_signals": {
+    "CONTRACT_STATUS": {
+      "rules/AGENTS.md": "CONTRACT_STABLE",
+      "rules/rule1.md": "CONTRACT_STABLE",
+      "skills/swarm_orchestration/SKILL.md": "CONTRACT_STABLE",
+      "skills/hardened_clean_architecture/SKILL.md": "CONTRACT_STABLE",
+      "skills/autonomous_computer_use/SKILL.md": "CONTRACT_STABLE",
+      "D:/MTA San Andreas 1.6/server/mods/deathmatch/resources/.agents/rules/agents.md": "CONTRACT_STABLE"
+    },
+    "INVESTIGATION_ARTIFACTS": [
+      ".planning/investigations/inv_001_root_cause_advisory_subagents.md",
+      ".planning/investigations/inv_002_blast_radius_motor_mandate.md",
+      ".planning/investigations/inv_003_red_team_gauntlet.md"
+    ]
+  },
+  "propagated_synapses": [
+    {
+      "origin_node": "inv_001_root_cause_advisory_subagents.md",
+      "emitted_by": "RootCauseForensicInvestigator",
+      "synaptic_output": "Instituir Lei 43 (Mandato do Artífice Motor & Banimento do Subagente Consultivo). Erradicar 'retorna a pepita de ouro lapidada (o patch exato)' de rule1.md:132 e swarm_orchestration:132. Proibir o parent de atuar como digitador sob pena de [HARD REJECT: ADVISORY_CODE_DUMP].",
+      "consumed_by": ["rules/AGENTS.md", "rules/rule1.md", "skills/swarm_orchestration/SKILL.md"]
+    },
+    {
+      "origin_node": "inv_002_blast_radius_motor_mandate.md",
+      "emitted_by": "DownstreamBlastRadiusAuditor",
+      "synaptic_output": "Obrigatoriedade de TypeName: 'self' para qualquer subagente com meta motora. Regra de Ortogonalidade Estrita 1:1 Subagente-por-Arquivo para prevenir race conditions. Aplicação de [ACTION_MODE: PHYSICAL_MUTATION] no payload cirúrgico e checklists binários de mutação em disco.",
+      "consumed_by": ["rules/rule1.md", "skills/swarm_orchestration/SKILL.md", "skills/hardened_clean_architecture/SKILL.md", "skills/autonomous_computer_use/SKILL.md", "D:/MTA San Andreas 1.6/server/mods/deathmatch/resources/.agents/rules/agents.md"]
+    }
+  ]
+}

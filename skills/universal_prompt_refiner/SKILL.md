@@ -70,13 +70,16 @@ Todo despacho do Subagente Prompt Refiner deve gerar compulsoriamente o Dossiê 
 O Prompt Refiner fundamenta a ativação de cada regra e skill na **física real do problema** (ex: atrito de GPU, inércia de gesto, concorrência de arquivos).
 
 ### (d) Bespoke Dynamic Squad Blueprint (Ordem Executiva Compulsória de Despacho)
-Em conformidade estrita com as Leis 32, 40 e 42:
+Em conformidade estrita com as Leis 32, 40, 42 e 43:
 - **Ordem de Execução Mandatória:** A Seção D NÃO é decorativa; é uma ordem de despacho executiva imediata para o Agente Principal. Mutacionar código sem despachar os subagentes mapeados aciona `[HARD HALT: SQUAD_DISPATCH_BYPASSED]`.
 - **Dupla Investigativa Obrigatória (Two-Mind Minimum):** Para qualquer tarefa investigativa ou alteração de arquivo existente, o esquadrão DEVE conter no mínimo:
-  * **Subagente Alfa (Causal Root Cause):** Especialista na mecânica microscópica interna da falha ou alteração. Grava laudo em `.planning/investigations/inv_001_root_cause.md`.
-  * **Subagente Beta (Downstream Blast Radius):** Especialista no raio de impacto colateral, interfaces externas e contratos. Grava laudo em `.planning/investigations/inv_002_blast_radius.md`.
+  * **Subagente Alfa (Causal Root Cause):** Especialista na mecânica microscópica interna da falha ou alteração (`TypeName: "self"` ou `"research"`, `[ACTION_MODE: ANALYTICAL_INVESTIGATION]`). Grava laudo em `.planning/investigations/inv_001_root_cause.md`.
+  * **Subagente Beta (Downstream Blast Radius):** Especialista no raio de impacto colateral, interfaces externas e contratos (`TypeName: "self"` ou `"research"`, `[ACTION_MODE: ANALYTICAL_INVESTIGATION]`). Grava laudo em `.planning/investigations/inv_002_blast_radius.md`.
 - **Handoff de Alta Fidelidade (Lei 42):** Os subagentes codificadores de produção DEVEM receber os caminhos desses laudos e a instrução expressa de ler os arquivos via `view_file` antes de codificar — banindo resumos pré-frontais com perda.
-- **Parametrização Estrita:** Para cada subagente: `Role`, `TypeName: "self"` ou `"research"`, `Model: "flash"`, prompt cirúrgico Clean-Context e ferramentas autorizadas.
+- **Mandato do Artífice Motor & Tipagem Compulsória (Lei 43):**
+  * Todo subagente com meta de produção, codificação, refatoração ou correção de arquivos DEVE ser compulsoriamente tipado como `TypeName: "self"` com `[ACTION_MODE: PHYSICAL_MUTATION]`. É terminantemente proibido utilizar `TypeName: "research"` para tarefas motoras (subagentes research não possuem ferramentas de escrita e colapsam involuntariamente em consultores passivos).
+  * O prompt cirúrgico DEVE conter ordem expressa de mutação física direta via `replace_file_content` ou `write_to_file`. Proibido devolver código em markdown no `send_message`.
+- **Parametrização Estrita:** Para cada subagente: `Role`, `TypeName: "self"` (produção/motor) ou `"research"` (apenas leitura analítica), `Model: "flash"`, `[ACTION_MODE]`, prompt cirúrgico Clean-Context e ferramentas autorizadas.
 
 ### (e) Matriz de Modos de Quebra e Pre-Mortem Forense
 - Exercício Pre-Mortem: *"Assumindo que este código quebrou catastroficamente em produção 3 meses após o deploy, quais foram as causas raízes microscópicas?"*
@@ -354,7 +357,19 @@ O selo é um artefato estigmérgico obrigatório emitido exclusivamente pelo Pro
 }
 ```
 
-### 4.2. As Travas Mecânicas: `[HARD HALT]`
+### 4.2. Protocolo de Despacho de Subagentes Motores de Produção (Lei 43)
+
+Quando o Agente Principal despacha subagentes para implementar código, refatorar ou corrigir bugs com base no blueprint do Dossiê, o payload DEVE obedecer rigorosamente à tipagem motora:
+
+1. **Tipagem Compulsória:** `TypeName: "self"` (nunca `"research"`). Subagentes `"research"` são estritamente para leitura e colapsam em consultores textuais caso incumbidos de escrita.
+2. **Tag de Modo:** `[ACTION_MODE: PHYSICAL_MUTATION]`.
+3. **Ponteiro de Investigação:** `[INVESTIGATION_REPORT_PATH]: ".planning/investigations/inv_<id>_<slug>.md"` com ordem imperativa de leitura integral via `view_file` antes de tocar no código.
+4. **Alvos Estritos:** `[TARGET_FILES]` com caminhos absolutos e garantia de conjuntos disjuntos ($\text{FileSet}(S_i) \cap \text{FileSet}(S_j) = \emptyset$) para blindagem contra colisões de locks (`EBUSY`) e offset drift.
+5. **Ordem Motora Direta:** Instrução expressa: *"Você é um artífice motor. Sua missão é invocar diretamente as ferramentas replace_file_content / write_to_file em sua própria sessão. É terminantemente proibido devolver blocos de código em markdown no send_message."*
+6. **Retorno Exclusivo:** O `send_message` reporta unicamente a telemetria fria de encerramento (`DISK_MUTATION_RECEIPT_ONLY`): caminhos alterados, linhas, status de build/testes e garantia de Zero-Stub.
+7. **Trava de Auto-Veto do Agente Principal (`[HARD REJECT: ADVISORY_CODE_DUMP]`):** Caso o subagente devolva código textual no chat sem mutação física comprovada no disco, o Agente Principal DEVE rejeitar a entrega sumariamente e exigir a execução motora direta. É terminantemente proibido ao Agente Principal digitar ou colar o código pelo subagente.
+
+### 4.3. As Travas Mecânicas: `[HARD HALT]`
 
 O ecossistema opera sob duas travas mecânicas intransponíveis:
 
@@ -374,7 +389,7 @@ Ação Corretiva Compulsória: Disparo imediato dos subagentes do squad.
 ═════════════════════════════════════════════════════════════════
 ```
 
-### 4.3. O Ciclo Vital de Fechamento (Teardown Transacional)
+### 4.4. O Ciclo Vital de Fechamento (Teardown Transacional)
 Ao término do turno (Lei 37), o Agente Principal invalida transacionalmente o selo ativo (`"seal_status": "TURN_CONSUMED"`). Isso garante que o próximo turno desperte em estado limpo, forçando compulsoriamente um novo despacho do Prompt Refiner durante o Cold Boot Handshake.
 
 ---

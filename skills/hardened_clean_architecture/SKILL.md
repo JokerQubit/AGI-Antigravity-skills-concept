@@ -282,16 +282,20 @@ export function saveSettingsAtomic(targetPath: string, data: unknown): void {
 
 ---
 
-## 6. Orquestração e Codificação Concorrente por Subagentes por Nó (Node-by-Node Subagent Craft)
+## 6. Orquestração e Codificação Concorrente por Subagentes Motores 1:1 (Node-by-Node Subagent Craft & Motor Mandate)
 
-Na fase de escrita de código (Época III), **subagentes especializados DEVEM ser despachados para codificar os nós físicos no disco**:
+Na fase de escrita de código (Época III), **subagentes especializados DEVEM ser despachados como artífices motores para codificar e mutacionar diretamente os arquivos físicos no disco**:
 
-1. **Veto ao Resumo Reducionista:** Resumir 100+ nós em um texto raso faz o agente esquecer 90% das micro-decisões, fórmulas, tokens e tratamentos de borda saturados na Época I. É expressamente proibido ao Agente Principal ignorar os nós e codificar tudo sozinho na thread principal.
-2. **Contratos Compartilhados como Base Invariante:** Antes de despachar os subagentes de codificação, o Agente Principal (Chief Systems Architect) define e grava as tipagens e interfaces centrais em `src/core/ports/` e `src/core/types/` a partir das `exported_primitives` do `graph.json`. Isso elimina qualquer risco de divergência de imports ou contratos.
-3. **Despacho Concorrente Atômico 1:1 de Subagentes por Nó (`invoke_subagent` com `TypeName: "self"`):**
-   - Cada subagente recebe a responsabilidade atômica 1:1 de implementar o código referente a um nó específico designado (ex: Subagente 1 codifica a Entidade do Domínio a partir de `node_001_domain_entity.md`; Subagente 2 codifica o Storage Adapter a partir de `node_002_storage_adapter.md`). É proibido agrupar múltiplos nós sob um único subagente codificador.
-   - Cada subagente lê diretamente o arquivo exato do nó designado em `.planning/nodes/`, implementando 100% da lógica detalhada sem atalhos ou stubs.
-4. **Integração Física pelo Chief Architect:** O Agente Principal integra os módulos, valida a compilação cruzada (`npx tsc --noEmit`), tipos estritos e execução dos testes nativos, preparando o repositório para a submissão obrigatória ao **Subagente Juiz Independente na Época IV** (que conduzirá a inspeção visual e diagnósticos via `browser-mcp`).
+1. **Veto ao Resumo Reducionista & Handoff de Alta Fidelidade:** Resumir nós ou laudos periciais em texto raso dilui micro-decisões, fórmulas e tratamentos de borda. Subagentes codificadores recebem o laudo bruto (`[INVESTIGATION_REPORT_PATH]`) ou o nó designado em `.planning/nodes/` e devem lê-lo na íntegra via `view_file` como sua primeira ação motora.
+2. **Contratos Compartilhados & Synaptic Mutex:** Contratos estruturais (`src/core/ports/`, `src/core/types/`) são despachados na Onda base sob `CONTRACT_HOLD` no `synaptic_bus.json`. Os subagentes motores gravam diretamente os arquivos de contrato e validam a compilação. Somente após a liberação determinística `CONTRACT_STABLE (GO)`, os adaptadores consumidores são despachados na onda seguinte.
+3. **Despacho Concorrente Atômico 1:1 com Mandato do Artífice Motor (`TypeName: "self"`, `[ACTION_MODE: PHYSICAL_MUTATION]`):**
+   - Cada subagente motor recebe a responsabilidade atômica 1:1 de implementar e mutacionar fisicamente no disco exatamente UM arquivo ou nó designado (ex: Subagente 1 grava a Entidade do Domínio via `write_to_file`/`replace_file_content`; Subagente 2 grava o Storage Adapter).
+   - É terminantemente proibido ao subagente devolver blocos de código em markdown no `send_message`. O subagente DEVE executar a mutação física chamando diretamente as ferramentas de escrita em sua própria sessão.
+   - Todo código é 100% operacional, isomórfico e zero-stub (proibido `pass`, `// TODO`, `return null`, `{}`).
+4. **Validação e Arbitragem pelo Chief Architect (Veto ao Parent Digitador):**
+   - O Agente Principal atua exclusivamente como árbitro, orquestrador e validador fiduciário: verifica a consistência cruzada, valida a compilação (`npx tsc --noEmit`) e executa a suíte de testes.
+   - É expressamente proibido ao Agente Principal digitar, copiar ou aplicar código pelos subagentes (`[HARD REJECT: ADVISORY_CODE_DUMP]`). Toda mutação física é de responsabilidade estrita dos subagentes motores 1:1.
+   - Preparação do repositório para a submissão obrigatória ao **Subagente Juiz Independente na Época IV** (que conduzirá a inspeção visual e diagnósticos via `browser-mcp`).
 
 ---
 
@@ -307,3 +311,4 @@ Na fase de escrita de código (Época III), **subagentes especializados DEVEM se
 - [ ] **Cobertura de Tipos Discriminados:** unions discriminadas para todos os estados de erro/sucesso do domínio.
 - [ ] **Zero Vazamento de Domínio:** termos de governança interna do agente ("Época", "Zero-Stub", "Gauntlet") não aparecem em interfaces de usuário, logs de produção ou APIs externas.
 - [ ] **Telemetria Zero Erros:** build limpo (`$LASTEXITCODE === 0`); zero erros/warnings no console do navegador (`browser_console_logs`).
+- [ ] **Mandato do Artífice Motor:** arquivos de portas, entidades e adaptadores gravados diretamente no disco pelos subagentes 1:1 via ferramentas de escrita; zero digitação manual pelo Agente Principal.

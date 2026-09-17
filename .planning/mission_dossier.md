@@ -1,269 +1,208 @@
-# Executive Mission Dossier: Reestruturação Integral da Arquitetura Cognitiva v4.0.0
-**Identificador da Missão:** OMNICOGNITION-V4-UNIVERSAL-PIPELINE-RESTRUCTURE
-**Compilador Epistêmico:** Universal Prompt Refiner & Epistemic Compiler (Portão de Ingestão Mandatória Ubíqua)
-**Data de Compilação:** 2026-09-14T11:25:00-03:00
-**Prompt Cru do Usuário:**
-> *"quero tornar todos os processo obrigatorio a cada interação, todas as rules e skill em geral. inves de enxegar como tarefa complexa vs tarefa simples. quero que faça a reestruturação completa da maquina, 1 por 1, linha por linha, tornando o gatilho a cada sessão/interação"*
-**User Raw Prompt SHA-256:** `087cdf13f60a3c218ca97580dc56afd07130bed4f3d99668034fd0c837e6fdee`
-**Versão Alvo da Arquitetura:** `4.0.0`
+# Dossiê Executivo de Missão: Mandato do Artífice Motor & Erradicação do Subagente Consultor
+
+**Portão de Ingestão Mandatória Ubíqua — Época 0 (v4.1)**  
+**Hash da Demanda Crua (SHA-256):** `2e4ac3d69239e1fd8318908b5834493d53ef9fdb636f8e8ab6ae6c853071929d`  
+**Demanda Crua:** `"faça os sub agent alterar o codigo inves de apenas retornar relatorios para a IA"`  
+**Data/Hora:** `2026-09-17T20:05:00-03:00`  
+**Classificação Soberana de Missão:** `DIRECT_OPERATIONAL`  
+**Piso de Nós em Disco (`nodes_floor`):** `0` (Zero arquivos em `.planning/nodes/`; 100% de tokens preservados para execução e especialização motora do esquadrão)  
+**Modo Flash Prescrito:** `Flash Low` (Planejamento/Ingestão) → `Flash Medium` (Investigação & Codificação) → `Flash High` (Gauntlet Red Team)
 
 ---
 
-## 1. Decomposição de Objetivos & Contexto Fiduciário Soberano
+## 1. Classificação de Modo & Desconstrução Forense em 4 Camadas (Lei 38)
 
-### 1.1 Meta Comercial e Operacional Real (Zero Cosplay)
-A demanda do usuário estabelece uma mudança paradigmática definitiva no ecossistema OmniCognition: a **erradicação completa e irrestrita da bifurcação entre "tarefa simples" e "tarefa complexa"**. Na versão v3.8.0, subsistiam concessões perigosas — nomeadamente os conceitos de "Tier 1 Cirúrgico" e o artefato paralelo `surgical_mission_dossier.md`, que dispensavam a saturação hipergráfica de 100 nós para alterações consideradas pontuais. 
-
-A experiência empírica de engenharia demonstra que essa dicotomia é o cavalo de Troia da degradação estocástica: sob a bandeira de "tarefa cirúrgica simples", o modelo relaxa as salvaguardas, introduz stubs, adota CSS medíocre de 300ms, pula a inspeção no Chrome e gera quebras em cascata no ecossistema.
-
-A v4.0.0 estabelece a **Universalidade Invariante do Pipeline Completo**:
-- **Toda e qualquer interação que realize mutação de código, arquivos ou arquitetura dispara obrigatoriamente as 5 Épocas Cognitivas completas.**
-- **O piso de 100 nós atômicos saturados ($N \ge 100$) em `.planning/nodes/` é universal e compulsório**, sem qualquer exceção de escopo.
-- **Todas as 8 skills e 2 rules operam em simbiose síncrona obrigatória a cada interação.**
-- Extinção irreversível de `Tier 1/2/3`, de `surgical_mission_dossier.md` e de qualquer atalho de "Quick Track".
-- Unificação sob o **Dossiê Universal Único (`.planning/mission_dossier.md`)** e o **Selo Estigmérgico Criptográfico (`.planning/refiner_seal.json`)**.
-
-### 1.2 Stakeholders, Criticidade e SLA de Desempenho
-- **Fiduciário de Governança:** Turnaround CEO & Chief Systems Architect.
-- **Nível de Criticidade:** Máxima / Nível Nuclear de Arquitetura (Modificação constitucional dos arquivos fundamentais do cérebro do agente).
-- **SLA de Integridade:** Zero divergência semântica entre regras e skills, zero stubs, conformidade 1:1 rigorosa subagente-nó, validação de compilação sem falhas (`$LASTEXITCODE === 0`).
+### 1.1. Análise de Custo-Complexidade (ACC) & Classificação Soberana
+- **Classificação:** `DIRECT_OPERATIONAL`.
+- **Justificativa Fiduciária:** A demanda visa a correção comportamental e a blindagem normativa de execução motora dos subagentes no ecossistema de governança (`rules/` e `skills/`). Não se trata da criação de uma nova plataforma verde de software do zero (o que demandaria o piso arquitetural de $\ge 100$ nós), mas sim de uma calibração cirúrgica e profunda nos protocolos de orquestração de enxame, regras constitucionais e templates de prompt de despacho.
+- **Piso de Nós (`nodes_floor`):** `0`. É terminantemente proibido poluir o repositório com arquivos de nós em `.planning/nodes/`. O plano de intervenção é unificado e executado diretamente através do esquadrão sob o `implementation_plan.md`.
 
 ---
 
-## 2. Injeção de Diretrizes Constitucionais Mandatórias
+### 1.2. Desconstrução Forense em 4 Camadas
 
-1. **Princípio do Caminho Mais Árduo e Profundo ("Água no Deserto"):**
-   - Banimento total de atalhos rápidos ou resumos sintéticos. A reestruturação da máquina v4.0.0 deve ser executada arquivo por arquivo, linha por linha, com dissecação exaustiva de cada micro-cláusula constitucional.
-2. **O Paradigma dos Titãs (Linear, Apple, Stripe, Instagram):**
-   - O padrão de excelência de interface, áudio e concorrência não é negociável nem facultativo. Cada componente de software construído deve integrar molas de 2ª ordem, isolamento fora da thread principal, áudio acústico físico real e latência perceptiva sub-16ms.
-3. **Mídia Visual Real & Áudio Acústico Físico:**
-   - Banimento absoluto de emojis, ícones SVG genéricos e caracteres Unicode substitutivos. Todo elemento visual deve ser fotografia editorial de alta resolução via `generate_image` ou tipografia suíça pura. Todo áudio deve provir de gravações acústicas físicas reais fatiadas via `scripts/sfx_tool.py`.
-4. **Clean Architecture Defensiva & Autonomous Computer Use OODA:**
-   - Erradicação definitiva de stubs (`TODO`, `pass`, mocks). Tipagem estrita via uniões discriminadas `Result<T, E>`. Execução motora governada estritamente pelo Ciclo OODA em malha fechada e auto-cura determinística de portas e processos órfãos.
-5. **A Lei da Atribuição Atômica 1:1 Subagente-por-Nó:**
-   - É expressamente proibido agrupar múltiplos arquivos ou nós sob a responsabilidade de um único subagente na Época III. Cada arquivo e componente a ser refatorado na v4.0.0 terá um subagente especialista atômico 1:1 dedicado.
-6. **Auditoria Adversarial Independente no Chrome Real (Gauntlet das 4 Passadas):**
-   - A Mente Juíza (Epistemic Red Team Lead) atuará em contexto limpo através de subagente independente, abrindo o navegador real via `browser-mcp`, auditando console com zero warnings/erros e possuindo poder soberano de veto (`[HARD REJECT]`).
+#### Camada 1: Contratos Explícitos (CE)
+- **CE-01:** Subagentes despachados para tarefas de implementação ou correção de código DEVEM executar fisicamente as alterações nos arquivos alvo utilizando as ferramentas motoras de escrita (`replace_file_content` ou `write_to_file`).
+- **CE-02:** É expressamente proibido ao subagente de codificação limitar-se a redigir relatórios, sugestões de código em blocos markdown ou propostas de diff devolvidas via `send_message` para que o Agente Principal (parent) as digite manualmente.
+- **CE-03:** A devolução de propostas em texto no `send_message` sem a prévia e comprovada mutação física dos arquivos no disco passa a constituir falha sumária da tarefa (`[HARD REJECT: ADVISORY_ONLY_SUBAGENT]`).
+
+#### Camada 2: Contratos Implícitos (CI) & Arquiteturais
+- **CI-01 (Bifurcação Funcional de Subagentes):** O ecossistema deve segregar com precisão matemática duas classes ontológicas de subagentes:
+  1. *Subagentes de Investigação/Auditoria:* Despachados com `TypeName: "research"` ou `"self"` focados em diagnóstico, telemetria, pesquisa web e auditoria. Seu entregável exclusivo é um laudo pericial gravado fisicamente em disco (`.planning/investigations/inv_<slug>.md`).
+  2. *Subagentes de Codificação/Produção (Artífices Motores):* Despachados compulsoriamente com `TypeName: "self"` (que herda ferramentas de escrita e shell). Seu entregável obrigatório é a mutação física dos arquivos de produção no disco via `replace_file_content` / `write_to_file` e validação com testes via `run_command`.
+- **CI-02 (Mandato Motor no Prompt de Despacho):** O prompt injetado no subagente de codificação não pode conter ambiguidades retóricas como "analise e sugira alterações". Ele DEVE conter o bloco mandatório `[ACTION_MODE: PHYSICAL_MUTATION]` com a ordem taxativa de alterar os arquivos e rodar testes de sanidade antes de qualquer comunicação de retorno.
+- **CI-03 (Papel Fiduciário do Agente Principal):** O Agente Principal (parent) atua como Chief Systems Architect e orquestrador do barramento sináptico. Se o Agente Principal receber uma proposta de código via `send_message` e começar a aplicar o diff manualmente na thread principal, ele incorre em violação gravíssima de orquestração (perda de concorrência e contaminação de contexto). O parent DEVE rejeitar a entrega e exigir a execução motora do subagente.
+- **CI-04 (Higiene de `send_message`):** A ferramenta `send_message` do subagente de produção deve transmitir unicamente o laudo de fechamento atômico: arquivos alterados no disco, linhas modificadas, hashes, status de compilação/testes (`$LASTEXITCODE === 0`) e confirmação de zero stubs. Proibido despejar dumps de código não aplicados no `send_message`.
+
+#### Camada 3: Exercício Pre-Mortem Forense (T+6 Meses)
+*Cenário Hipotético de Falha:* Decorridos 6 meses, o sistema volta a apresentar estagnação: o Agente Principal gasta milhares de tokens colando código manualmente, a concorrência 1:1 é abandonada e regressões silenciosas voltam a ocorrer.  
+*Autópsia das Causas Raízes Microscópicas:*
+1. **Falha de Permissão de Ferramenta (Tool Siloing):** O subagente foi despachado com `TypeName: "research"` para implementar código. Como "research" só tem ferramentas de leitura, o modelo se viu incapaz de escrever no disco e "recorreu" a enviar o código em texto via `send_message`.
+   *Contramedida:* Regra inegociável exigindo `TypeName: "self"` para qualquer subagente que realize mutação de código.
+2. **Ambiguidade Semântica no Prompt do Subagente:** O prompt dizia "Elabore a implementação do componente X". O LLM interpretou "elaborar" como ato discursivo/intelectual e produziu uma redação técnica.
+   *Contramedida:* Injeção do bloco de comando imperativo motor `[MANDATO_DO_ARTIFICE_MOTOR]` no topo de todo prompt de codificação.
+3. **Codicilina de Subagente (Subagent Reminder Drift):** O reminder do sistema diz *"You MUST use send_message to communicate all results..."*, o que leva o subagente a acreditar que seu produto final é a mensagem, e não o arquivo no disco.
+   *Contramedida:* Instrução expressa no prompt de despacho: "Sua mensagem via `send_message` é apenas o relatório de conclusão da alteração física já realizada no disco. Alterar o disco é pré-requisito mandatório antes de chamar `send_message`."
+
+#### Camada 4: Duplo-Check Fiduciário & Regra de Dois Homens (Two-Man Rule)
+- A alteração proposta fecha o ciclo mecânico completo? Sim.
+- Remove a tentação da IA de atuar como "consultora de poltrona"? Sim.
+- Garante que a governança adaptativa de tokens seja respeitada? Sim, preservando a thread principal de poluição de código e transferindo o esforço motor para os subagentes atômicos.
 
 ---
 
-## 3. Desconstrução Forense em 4 Camadas (Lei 38)
+## 2. Roadmap Mecânico Passo a Passo Determinístico
+
+O plano de intervenção abrange cinco mutações físicas coordenadas nos arquivos de governança do ecossistema:
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
-│             DESCONSTRUÇÃO FORENSE EM 4 CAMADAS (LEI 38)                 │
+│               FLUXO DETERMINÍSTICO DE IMPLEMENTAÇÃO                    │
 ├────────────────────────────────────────────────────────────────────────┤
-│ Camada 1: Contratos Explícitos (Reestruturação v4.0.0 linha por linha) │
-│ Camada 2: Contratos Implícitos (Extinção de Tiers, Dossiê Único, N>=100)│
-│ Camada 3: Engenharia Reversa Pre-Mortem (Armadilhas de Colapso T+6m)   │
-│ Camada 4: Duplo-Check Fiduciário (Two-Man Rule Sign-off)               │
+│ 1. ÉPOCA I: Ativação da Dupla Investigativa (Alfa & Beta)              │
+│    • Alfa: Mapeamento da raiz patológica nos prompts de despacho       │
+│    • Beta: Mapeamento de blast radius nas skills e regras              │
+│ 2. ÉPOCA II: implementation_plan.md formal & Parada Fiduciária         │
+│ 3. ÉPOCA III: Codificação Concorrente 1:1 por Subagentes Motores      │
+│    • Subagente 1: rules/AGENTS.md (Constituição & Leis 5 e 43)        │
+│    • Subagente 2: rules/rule1.md & skills/swarm_orchestration/SKILL.md │
+│    • Subagente 3: skills/hardened_clean_architecture/SKILL.md & OODA  │
+│ 4. ÉPOCA IV: Gauntlet Adversarial Independente (Subagente Juiz)        │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 3.1 Camada 1: Contratos Explícitos Mapeados
-- **CE-01 (Universalidade do Gatilho):** Todos os processos, regras e skills devem ser obrigatórios a cada interação que mutacione o sistema, sem distinção de complexidade de tarefa.
-- **CE-02 (Eliminação de Complexo vs Simples):** O conceito de tarefa simples/cirúrgica que permite atalhos ou bypass de etapas está sumariamente extinto do vocabulário e da lógica da máquina.
-- **CE-03 (Reestruturação Completa Linha por Linha):** Todos os 10 arquivos estruturais do ecossistema (2 rules e 8 skills) mais o manifesto do plugin (`plugin.json`) e a documentação mestra (`README.md`) devem ser revisados e reestruturados linha por linha para sincronizar a versão 4.0.0.
-- **CE-04 (Gatilho Ubíquo por Sessão/Interação):** A cada intervenção do usuário, o ciclo completo é disparado a partir da Época 0, validado pelo selo criptográfico do Prompt Refiner.
+### Detalhamento Passo a Passo:
 
-### 3.2 Camada 2: Contratos Implícitos & Invariantes Ocultos
-- **CI-01 (Extinção dos Tiers 1/2/3 em `rules/adaptive_token_governance.md`):** O roteamento estocástico baseado em "Tier 1 (20-40 nós), Tier 2 (40-80 nós), Tier 3 (100+ nós)" deve ser completamente substituído pela **Governança Unificada de Expedientes v4.0.0**, onde o piso inegociável de 100 nós ($N \ge 100$) aplica-se a qualquer tarefa motora. A Análise de Custo-Complexidade (ACC) passa a calibrar os eixos de impacto e a densidade de ondas, mas JAMAIS a reduzir o piso hipergráfico.
-- **CI-02 (Extinção do `surgical_mission_dossier.md` em `skills/universal_prompt_refiner/SKILL.md`):** Eliminação completa do schema do "Quick Track" e do arquivo cirúrgico. O único artefato de governança de ingestão emitido no disco é `.planning/mission_dossier.md`.
-- **CI-03 (Universalização do Hipergrafo em `skills/fractal_thought_graph/SKILL.md`):** Remoção de qualquer menção a "Tier de Complexidade ACC" nas instruções e substituição pela garantia formal do piso universal de 100 nós saturados em ondas de no máximo 15 subagentes com Barramento Sináptico Neural (`synaptic_bus.json`).
-- **CI-04 (Elevação Constitucional em `rules/AGENTS.md`):** Elevação da versão de v3.8 para v4.0.0. Reformulação das Leis 24 e 26, eliminando concessões cirúrgicas, consolidando a ubiquidade das 5 Épocas para qualquer modificação do codebase e vinculando formalmente todas as 8 skills ao núcleo constitucional.
-- **CI-05 (Sincronização Holística das 8 Skills):** Cada uma das 8 skills deve explicitar que suas salvaguardas (Clean Architecture defensiva, cinemática de molas dos Titãs, áudio foley real, inspeção visual via browser-mcp, OODA em malha fechada e auditoria do Red Team em 4 passadas) são acionadas compulsoriamente sempre que seu respectivo domínio for impactado na interação.
-- **CI-06 (Atualização de Metadados de Versão):** `plugin.json` atualizado de `"version": "3.8.0"` para `"4.0.0"`; `README.md` atualizado com a taxonomia universal v4.0.0 eliminando menções a "thinking tier (Low/Med)".
+#### Passo 1: Despacho da Dupla Investigativa (Two-Mind Minimum)
+- **Subagente Alfa (Causal Root Cause):** Investiga e disseca por que os subagentes optaram por relatar em vez de mutar, analisando a interação entre `TypeName`, permissões de MCP/ferramentas e a semântica de `send_message`. Grava `.planning/investigations/inv_001_root_cause_advisory_subagents.md`.
+- **Subagente Beta (Downstream Blast Radius):** Mapeia todos os pontos em `rules/AGENTS.md`, `rules/rule1.md`, `skills/swarm_orchestration/SKILL.md`, `skills/hardened_clean_architecture/SKILL.md` e `skills/autonomous_computer_use/SKILL.md` que necessitam da injeção do Mandato do Artífice Motor. Grava `.planning/investigations/inv_002_blast_radius_motor_mandate.md`.
 
-### 3.3 Camada 3: Engenharia Reversa Pre-Mortem Forense
-*Hipótese de Falha Catastrófica:* Assumindo que a versão v4.0.0 foi implantada e, em 3 meses, o sistema entrou em loop recursivo infinito, congelou em consultas de leitura ou foi abandonado por sobrecarga de atrito operacional. Quais foram as causas raízes microscópicas?
+#### Passo 2: Consolidação da Época II no `implementation_plan.md`
+- Apresentação da matriz de alterações exatas, contratos alterados e travas HOLD/GO no barramento sináptico.
+- Parada mecânica aguardando confirmação explícita.
 
-1. **Armadilha Silenciosa 1 (Loop de Interação em Consultas de Leitura / Deadlock Epistêmico):**
-   - *Causa Raiz:* O agente interpretar que uma simples pergunta investigativa (ex: "em qual linha está a função X?") exige a criação de 100 nós em `.planning/nodes/` e despacho de 15 subagentes, travando a usabilidade em leitura.
-   - *Trava de Blindagem:* Definição categórica da bifurcação funcional:
-     - **Interações Motoras / Mutadoras (Escrita de Código, Alteração de Arquivos, Criação de Features, Refatoração, Comandos de Estado):** Pipeline Universal Completo Mandatório (Épocas 0 a IV, Dossiê Universal, Selo Estigmérgico, Piso de 100 Nós, Despacho 1:1, Auditoria Red Team no Chrome).
-     - **Interações Estritamente Investigativas / Leitura Pura (Perguntas conceituais, localização de símbolos, explicação de arquitetura):** Executadas diretamente com rigor de pesquisa, sem alteração física no disco e sem poluição de nós de planejamento.
-2. **Armadilha Silenciosa 2 (Inconsistência Criptográfica de Hash e Rejeição Sumária):**
-   - *Causa Raiz:* Se o Prompt Refiner gerar o selo estigmérgico `.planning/refiner_seal.json` com um hash divergente da string exata do usuário, o Agente Principal trava instantaneamente em `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`.
-   - *Trava de Blindagem:* Cálculo determinístico via SHA-256 da string exata enviada pelo usuário, validado e selado com status `SEALED_VALID`.
-3. **Armadilha Silenciosa 3 (Residual de Termos Obsoletos no Repositório / Falha no Gauntlet):**
-   - *Causa Raiz:* Restar menções a "Tier 1 Cirúrgico" ou "surgical_mission_dossier" em comentários ou tabelas de skills secundárias, fazendo a Mente Juíza emitir `[HARD REJECT]` por inconsistência terminológica.
-   - *Trava de Blindagem:* Varredura exaustiva por grep e substituição atômica 1:1 em todos os arquivos markdown do repositório.
-4. **Armadilha Silenciosa 4 (Colapso de Recursos por Batching Oculto):**
-   - *Causa Raiz:* Um subagente na Época III tentar editar 3 skills de uma vez para "ganhar tempo".
-   - *Trava de Blindagem:* Veto absoluto ao batching. Cada arquivo a ser alterado terá um subagente com papel único no esquadrão tático bespoke.
+#### Passo 3: Execução da Época III por Subagentes Codificadores Motores (`TypeName: "self"`)
+- **Mutação A (`rules/AGENTS.md`):**
+  * Atualização da Lei 5 (Codificação Concorrente Atômica 1:1): Adicionar a cláusula pétrea do Mandato do Artífice Motor.
+  * Criação formal da Lei 43 (ou fortalecimento da Lei 5 e 42): Proibição categórica de subagentes consultivos/relatores em fases de produção. A devolução de código não aplicado via `send_message` aciona `[HARD REJECT: ADVISORY_ONLY_SUBAGENT]`.
+- **Mutação B (`rules/rule1.md` & `skills/swarm_orchestration/SKILL.md`):**
+  * Criação da Seção 7.1: *O Protocolo do Artífice Motor & O Veto ao Subagente Consultor*.
+  * Definição do Template Obrigatório de Despacho de Codificação contendo `[ACTION_MODE: PHYSICAL_MUTATION]` e ordem imperativa de chamada a `replace_file_content` / `write_to_file`.
+  * Definição do formato restrito de `send_message` pós-mutação (apenas telemetria, diff de linhas e status de testes).
+  * Atualização do Checklist Forense de Orquestração (Seção 10).
+- **Mutação C (`skills/hardened_clean_architecture/SKILL.md`):**
+  * Atualização da Seção 6: reforço do comportamento motor autônomo dos subagentes na implementação dos arquivos de portas, adaptadores e entidades.
+- **Mutação D (`skills/autonomous_computer_use/SKILL.md`):**
+  * Inclusão do ciclo OODA para subagentes motores, enfatizando a primazia da ação direta no disco sobre a deliberação retórica.
 
-### 3.4 Camada 4: Duplo-Check Fiduciário (Two-Man Rule Sign-off)
-- [x] `[CONSTRUCTION_FIDUCIARY: APPROVED]` — Aprovado pelo Fiduciário de Execução. A universalização do pipeline protege o código de degradação, garante zero-stub integral e unifica a máquina sob um único padrão internacional.
-- [x] `[RED_TEAM_ADVERSARIAL: APPROVED]` — Aprovado pela Liderança Adversarial. A eliminação do "Tier 1 Cirúrgico" extingue a maior brecha de segurança epistêmica e complacência do sistema, fechando todas as rotas de atalho.
+#### Passo 4: Auditoria Adversarial Independente (Época IV)
+- Despacho do Subagente Juiz Red Team (`TypeName: "self"`) para executar o Gauntlet em 4 passadas:
+  * Passada 0: Auditoria binária de checklists forenses.
+  * Passada 1: Ceticismo e busca por brechas residuais onde subagentes possam reverter para consultores.
+  * Passada 2: Zero-Stub e consistência léxica.
+  * Passada 3: Verificação de impacto em testes e integridade de git.
 
 ---
 
-## 4. Roadmap Mecânico Passo a Passo Determinístico
+## 3. Matriz de Regras e Skills Ativadas com Justificativa de Primeiros Princípios
 
-A reestruturação integral v4.0.0 será executada em conformidade estrita com o ciclo das 5 Épocas. O plano detalha as mutações arquivo por arquivo:
-
-```text
-ESTRUTURAÇÃO DAS ETAPAS DE EXECUÇÃO:
-
-ÉPOCA 0: Ingestão Mandatória Ubíqua (EM ANDAMENTO - Conclusão com emissão deste Dossiê e Selo)
-  ├── Gravação de .planning/mission_dossier.md
-  └── Gravação de .planning/refiner_seal.json
-
-ÉPOCA I: Arquitetura Ontológica & Saturação Sináptica 1:1 (Piso Universal N >= 100 Nós)
-  ├── Subagente Chief Ontologist: Análise empírica e geração de node_000_root.md + hypergraph_seed.json
-  └── Despacho em Ondas Sinápticas (máx 15/onda): Mapeamento dos 100+ micro-nós da reestruturação v4.0.0
-
-ÉPOCA II: Matriz de Despacho & Trava Humana
-  ├── Consolidação de implementation_plan.md com mapeamento nó a nó
-  └── Parada mecânica aguardando confirmação ("Proceed") do usuário
-
-ÉPOCA III: Codificação Concorrente Atômica 1:1 (Bespoke Dynamic Squad)
-  ├── Subagente 1: rules/AGENTS.md (Constituição v4.0.0)
-  ├── Subagente 2: rules/adaptive_token_governance.md (Governança v4.0.0)
-  ├── Subagente 3: skills/universal_prompt_refiner/SKILL.md (Portão Ubíquo v4.0.0)
-  ├── Subagente 4: skills/fractal_thought_graph/SKILL.md (Hipergrafo Universal v4.0.0)
-  ├── Subagente 5: skills/hardened_clean_architecture/SKILL.md (Clean Arch v4.0.0)
-  ├── Subagente 6: skills/modern_ui_craft/SKILL.md (Titan UI v4.0.0)
-  ├── Subagente 7: skills/tactile_audio_sfx/SKILL.md (Acoustic SFX v4.0.0)
-  ├── Subagente 8: skills/browser_visual_reasoning/SKILL.md (Visual Reasoning v4.0.0)
-  ├── Subagente 9: skills/forensic_adversarial_auditor/SKILL.md (Auditor v4.0.0)
-  ├── Subagente 10: skills/autonomous_computer_use/SKILL.md (Computer Use v4.0.0)
-  ├── Subagente 11: plugin.json & README.md (Metadados & Docs v4.0.0)
-  └── Agente Principal: Validação cruzada, compilação de scripts e unificação
-
-ÉPOCA IV: Auditoria Adversarial Independente (Gauntlet das 4 Passadas no Chrome Real)
-  ├── Despacho de Subagente Independente (Adversarial Judge)
-  ├── Passada 1 (Referencial Cego & Banimento de Batching)
-  ├── Passada 2 (Padrão dos Titãs & Invariantes de Interface)
-  ├── Passada 3 (Varredura Zero-Stub & Tipagem Estrita)
-  ├── Passada 4 (Inspeção Visual e Telemetria no Chrome via browser-mcp)
-  └── Emissão do Veredito Soberano de Homologação
-```
-
-### Detalhamento Cirúrgico Arquivo por Arquivo:
-
-#### 1. [`rules/AGENTS.md`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/rules/AGENTS.md)
-- **Cabeçalho:** Atualizar para `Layer 0: Governança Executiva Cybernética & Núcleo Constitucional Polímata (v4.0.0)`.
-- **Diagrama das 5 Épocas:** Eliminar distinção cirúrgico vs arquitetural na Época 0. Consolidar o Portão Universal e o piso de 100 nós ($N \ge 100$) como mandatórios para toda tarefa mutadora.
-- **Lei 24 (Governança de Tokens):** Atualizar para v4.0.0, extinguindo a divisão de Tiers 1/2/3 como balizadores de escopo de nós; unificar sob a governança de expedientes universais com piso de 100 nós.
-- **Lei 26 (Universal Prompt Refiner Gate):** Remover menção a `.planning/surgical_mission_dossier.md` e a "Tier 1 Cirúrgico". Consolidar a obrigatoriedade exclusiva de `.planning/mission_dossier.md` e `.planning/refiner_seal.json`.
-- **Leis 28 a 40:** Garantir alinhamento textual absoluto com o princípio do gatilho universal e a vigência compulsória de todas as skills.
-
-#### 2. [`rules/adaptive_token_governance.md`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/rules/adaptive_token_governance.md)
-- **Cabeçalho:** Atualizar para `Layer 1: Governança Adaptativa de Tokens & Roteamento Inteligente de Modelos (v4.0.0)`.
-- **Seção 1 (Avaliação de Complexidade):** Extinguir a tabela de "Tier 1 — Cirúrgico (20-40 nós), Tier 2 — Feature Completa (40-80 nós), Tier 3 — Arquitetura de Sistema (100+ nós)". Substituir pelo protocolo **Universal Cognitive Scale (UCS)**, onde a complexidade define a profundidade da decomposição causal ($N = 100, 150, 200, 300+$ nós) e a quantidade de ondas de subagentes (em lotes de 15), mantendo $N \ge 100$ como piso inegociável absoluto para toda mutação.
-- **Seção 2 (Expedientes Cognitivos):** Alinhar os expedientes para refletir a saturação sináptica universal de 100+ nós em ondas sequenciais.
-- **Seção 3 (Template da Mensagem):** Remover `[Tier 1 | Tier 2 | Tier 3]`. Atualizar para `Perfil da Demanda: [Arquitetura Universal v4.0.0] | Piso Hipergráfico: N >= 100`.
-- **Seção 5 (Escalonamento Flash):** Unificar os modos de thinking do Flash por expediente de forma transparente e previsível.
-
-#### 3. [`skills/universal_prompt_refiner/SKILL.md`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/universal_prompt_refiner/SKILL.md)
-- **Cabeçalho:** Atualizar para `Universal Prompt Refiner Gate Playbook (Época 0 - v4.0.0)`.
-- **Seção 1:** Reafirmar que nenhuma tarefa mutadora é pequena demais para o ciclo completo. A ilusão de "tarefa cirúrgica simples" é catalogada formalmente como anti-pattern extinto.
-- **Seção 2:** Erradicar a divisão entre Track Cirúrgico e Track Arquitetural. Eliminar o schema de `.planning/surgical_mission_dossier.md`. Consolidar o Schema Único de `.planning/mission_dossier.md` contendo todos os 6 blocos obrigatórios para 100% das missões.
-- **Seção 4:** Atualizar o prompt de invocação e o JSON do selo estigmérgico `.planning/refiner_seal.json` para refletir `architecture_version: "4.0.0"`, removendo campos de `acc_tier` obsoleto.
-
-#### 4. [`skills/fractal_thought_graph/SKILL.md`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/fractal_thought_graph/SKILL.md)
-- **Cabeçalho:** Atualizar para `Fractal Thought Graph Operations Playbook (v4.0.0)`.
-- **Seção 2:** Atualizar o template do Dossiê de Missão, removendo a linha `"Tier de Complexidade ACC: [Tier 1 | Tier 2 | Tier 3]"` e substituindo por `"Perfil de Saturação: Universal Polymath (N >= 100)"`.
-- **Seções 3 a 7:** Consolidar a propagação estrita do Barramento Sináptico Neural (`synaptic_bus.json`) e das caixas postais (`mailboxes/`) em todas as interações.
-
-#### 5. [`skills/hardened_clean_architecture/SKILL.md`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/hardened_clean_architecture/SKILL.md)
-- **Cabeçalho:** Atualizar para `v4.0.0`.
-- **Invariantes:** Declarar expressamente que toda intervenção no código (mesmo a alteração de um único método) deve cumprir Clean Architecture desacoplada, tipagem estrita `Result<T, E>` e substituição atômica sem stubs.
-
-#### 6. [`skills/modern_ui_craft/SKILL.md`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/modern_ui_craft/SKILL.md)
-- **Cabeçalho:** Atualizar para `v4.0.0`.
-- **Invariantes dos Titãs:** Reafirmar que qualquer elemento visual ou interativo construído no repositório DEVE adotar cinemática de molas de 2ª ordem (`framer-motion`), proibindo terminantemente transições de CSS genérico (`transition-all duration-300`), imagens de IA clichê e emojis.
-
-#### 7. [`skills/tactile_audio_sfx/SKILL.md`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/tactile_audio_sfx/SKILL.md)
-- **Cabeçalho:** Atualizar para `v4.0.0`.
-- **Invariantes de Áudio:** Banir de forma irrevogável qualquer síntese matemática de som (bipes, ondas senoidais via script); obrigar que todo áudio em qualquer interação decorra de gravações físicas reais fatiadas pelo `sfx_tool.py slice-youtube` ou Freesound CC0.
-
-#### 8. [`skills/browser_visual_reasoning/SKILL.md`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/browser_visual_reasoning/SKILL.md)
-- **Cabeçalho:** Atualizar para `v4.0.0`.
-- **Invariantes Visuais:** Tornar a inspeção no Chrome real via `browser-mcp` obrigatória em toda sessão onde houver interface visual renderizável, com telemetria de zero erros e zero warnings de console.
-
-#### 9. [`skills/forensic_adversarial_auditor/SKILL.md`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/forensic_adversarial_auditor/SKILL.md)
-- **Cabeçalho:** Atualizar para `v4.0.0`.
-- **Invariantes do Gauntlet:** Confirmar que as 4 Passadas do Gauntlet são executadas sem exceção de porte de tarefa. Inserir verificação específica contra termos residuais de "Tier 1/2/3" ou atalhos cirúrgicos no repositório.
-
-#### 10. [`skills/autonomous_computer_use/SKILL.md`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/autonomous_computer_use/SKILL.md)
-- **Cabeçalho:** Atualizar para `v4.0.0`.
-- **Invariantes OODA:** Exigir Ciclo OODA em malha fechada para qualquer comando CLI ou manipulação de ambiente, garantindo auto-cura de portas presas e processos órfãos.
-
-#### 11. [`plugin.json`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/plugin.json) & [`README.md`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/README.md)
-- **`plugin.json`:** Atualizar `"version"` para `"4.0.0"`.
-- **`README.md`:** Atualizar badges para `v4.0.0`, remover menções a "thinking tier (Low/Med)" no diagrama da Fase 0 e descrever a nova arquitetura unificada de rigor universal.
+| Regra / Skill | Justificativa por Primeiros Princípios |
+|---|---|
+| **`rules/AGENTS.md` (Lei 1, 5, 18, 40, 42)** | *Primazia do Entregável Real & Ação Motora Descentralizada:* O valor de um sistema de software existe na matéria física (bits gravados no disco, arquivos compilados, testes passando). Delegar raciocínio para subagentes sem delegar a execução motora transforma o Córtex Central em um digitador estocástico sobrecarregado, degradando o throughput e induzindo esquecimento. |
+| **`rules/rule1.md` & `swarm_orchestration`** | *Topologia de Malha Ativa vs. Ilhas de Consulta:* Em um enxame cybernético, cada nó deve ser um atuador (*actuator*), não um conselheiro passivo. Se um nó apenas emite texto, o canal de comunicação se satura com tráfego inútil de dados não estruturados. |
+| **`rules/rule2.md` & `adaptive_token_governance`** | *Conservação Fiduciária de Contexto:* Fazer o Agente Principal ler relatórios de subagentes e transcrever código consome tokens desnecessariamente na thread principal. A alteração direta pelo subagente preserva o orçamento de contexto para orquestração de alto nível. |
+| **`hardened_clean_architecture`** | *Atomicidade & Isolamento Estrutural:* Cada arquivo de domínio ou adaptador deve ser construído de ponta a ponta pelo seu subagente designado, sem intervenções parciais ou stubs. |
+| **`autonomous_computer_use`** | *Ciclo OODA Motor em Malha Fechada:* A observação e orientação só têm valor se desaguarem na Ação (Act). Subagente sem Ação motora é um loop aberto estéril. |
+| **`forensic_adversarial_auditor`** | *Verificação Empírica Indefectível:* O auditor não aceita "intenção de código"; audita a alteração gravada e persistida no filesystem. |
 
 ---
 
-## 5. Matriz de Regras e Skills Ativadas (Primeiros Princípios)
+## 4. Bespoke Dynamic Squad Blueprint (Seção D: Ordem Executiva Compulsória de Despacho)
 
-| Regra / Skill Convocada | Domínio Físico | Justificativa de Primeiros Princípios |
-|---|---|---|
-| **Lei 01 (Primazia do Entregável Real)** | Física de Disco | Garante que toda a reestruturação resulte em arquivos concretos, válidos e testados no repositório físico. |
-| **Lei 02 (Atribuição Atômica 1:1 Subagente-Nó)** | Teoria da Informação & Entropia | O agrupamento de múltiplos arquivos em um único subagente degrada a atenção neural. A relação 1:1 garante máxima saturação técnica por arquivo. |
-| **Lei 03 (Princípio "Água no Deserto")** | Epistemologia Operacional | Veda sumariamente qualquer pressa ou atalho simplista; impõe a revisão linha por linha com profundidade máxima. |
-| **Lei 04 (Piso Universal de 100 Nós)** | Hipergrafo Cognitivo | Nenhuma dedução arquitetural motora é confiável sem desdobrar as ramificações causais até a Fronteira do Impassável ($N \ge 100$). |
-| **Lei 06 (Auditoria Adversarial Independente)** | Teoria dos Jogos & Viés Cognitivo | A mente criadora padece de auto-complacência. A homologação da v4.0.0 exige julgamento impiedoso por subagente independente. |
-| **Lei 24 (Governança Adaptativa de Tokens)** | Alocação de Recursos Computacionais | Orquestra a transição dos modos de thinking do Flash sem recorrer a tiers simplistas que degradem o rigor cognitivo. |
-| **Lei 26 (Universal Prompt Refiner Gate)** | Controle Cybernético Pré-Execução | Congela qualquer impulso reativo estocástico e sela a autorização formal da missão no disco via `refiner_seal.json`. |
-| **Lei 34 (Null-Vocabulary Sludge Ban)** | Linguística Computacional & Postura | Erradica bajulações, pedidos de desculpas e jargões servis, mantendo foco 100% fiduciário em engenharia de sistemas. |
-| **Lei 37 (Turn-as-a-Session Estigmérgico)** | Teoria de Controle de Sistemas | Cada turno é uma sessão atômica completa com cold boot, leitura estigmérgica, refino, execução e teardown limpo. |
-| **Lei 38 (Desconstrução Forense em 4 Camadas)** | Engenharia Reversa de Requisitos | Disseca contratos explícitos, implícitos, pre-mortem e duplo-check antes de qualquer linha de código. |
-| **`universal_prompt_refiner`** | Governança de Entrada | Conduz a compilação do presente dossiê e a emissão do selo de despacho. |
-| **`fractal_thought_graph`** | Substrato de Pensamento | Modela a topologia dos 100+ nós da reestruturação e rege o barramento sináptico neural. |
-| **`hardened_clean_architecture`** | Arquitetura de Software | Garante que os contratos de todas as skills permaneçam estritamente desacoplados e tipados. |
-| **`forensic_adversarial_auditor`** | Garantia da Qualidade | Executa o Gauntlet das 4 Passadas para aprovação ou rejeição da entrega v4.0.0. |
+> **AVISO DE GATILHO MECÂNICO (Lei 26 & 40):** A presente seção é uma ordem executiva de despacho imediato. O Agente Principal está terminantemente proibido de mutacionar arquivos sem despachar os subagentes especializados abaixo.
 
----
+### Fase 1: Dupla Investigativa (Época I - Two-Mind Minimum)
 
-## 6. Bespoke Dynamic Squad Blueprint (Época III: Codificação Atômica 1:1)
+#### 1. Subagente Alfa: Root Cause Forensic Investigator
+- **Role:** `Root Cause Forensic Investigator`
+- **TypeName:** `self`
+- **Model:** `flash`
+- **Clean-Context Payload:**
+  - `[BOUNDED_OBJECTIVE]`: Investigar a causa raiz microscópica da patologia de subagentes consultivos. Mapear arquivos `rules/AGENTS.md`, `rules/rule1.md`, `skills/swarm_orchestration/SKILL.md` e prompts de despacho anteriores, identificando onde faltou a ordem motora imperativa.
+  - `[FILE_SLICES]`: `rules/AGENTS.md:110-157`, `rules/rule1.md:100-160`, `skills/swarm_orchestration/SKILL.md:95-160`.
+  - `[MY_SWARM_DELIVERABLE]`: Gravar laudo pericial detalhado em `.planning/investigations/inv_001_root_cause_advisory_subagents.md`.
+  - `[FORENSIC_CRITERIA]`: Identificar pelo menos 3 causas estruturais nos textos das regras/skills que permitiram o desvio de função.
 
-Na Época III, o Agente Principal atuará soberanamente como **Chief Systems Architect**, estruturando os contratos de unificação e despachando um esquadrão tático especializado, concebido sob medida (Lei 32 e Lei 40), onde cada subagente terá a missão atômica 1:1 de reestruturar exatamente UM arquivo no disco:
-
-```text
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                   BESPOKE DYNAMIC SQUAD ROSTER (ÉPOCA III - ATRIBUIÇÃO 1:1)             │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ 1. ConstitutionalKernelSpecialist      → Reestrutura rules/AGENTS.md                   │
-│ 2. AdaptiveTokenGovernanceSpecialist   → Reestrutura rules/adaptive_token_governance.md│
-│ 3. UniversalGatePlaybookArchitect     → Reestrutura skills/universal_prompt_refiner    │
-│ 4. FractalSubstrateModeler             → Reestrutura skills/fractal_thought_graph      │
-│ 5. CleanArchitectureDefensiveEngineer  → Reestrutura skills/hardened_clean_architecture│
-│ 6. TitanKinematicCraftsman             → Reestrutura skills/modern_ui_craft            │
-│ 7. RealAcousticAudioEngineer           → Reestrutura skills/tactile_audio_sfx          │
-│ 8. ChromePerceptualTelemetryExpert     → Reestrutura skills/browser_visual_reasoning   │
-│ 9. AdversarialRedTeamJudgeCompiler     → Reestrutura skills/forensic_adversarial_auditor│
-│ 10. AutonomousOODASystemsController    → Reestrutura skills/autonomous_computer_use    │
-│ 11. EcosystemManifestAndDocsIntegrator → Reestrutura plugin.json e README.md           │
-└────────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-### Especificações Técnicas de Despacho Atômico (Época III):
-1. **Subagente 1:** `Role: "Constitutional Kernel Specialist"` | `TypeName: "self"` | Alvo: `rules/AGENTS.md` (v4.0.0).
-2. **Subagente 2:** `Role: "Adaptive Token Governance Specialist"` | `TypeName: "self"` | Alvo: `rules/adaptive_token_governance.md` (v4.0.0).
-3. **Subagente 3:** `Role: "Universal Gate Playbook Architect"` | `TypeName: "self"` | Alvo: `skills/universal_prompt_refiner/SKILL.md` (v4.0.0).
-4. **Subagente 4:** `Role: "Fractal Substrate Modeler"` | `TypeName: "self"` | Alvo: `skills/fractal_thought_graph/SKILL.md` (v4.0.0).
-5. **Subagente 5:** `Role: "Clean Architecture Defensive Engineer"` | `TypeName: "self"` | Alvo: `skills/hardened_clean_architecture/SKILL.md` (v4.0.0).
-6. **Subagente 6:** `Role: "Titan Kinematic Craftsman"` | `TypeName: "self"` | Alvo: `skills/modern_ui_craft/SKILL.md` (v4.0.0).
-7. **Subagente 7:** `Role: "Real Acoustic Audio Engineer"` | `TypeName: "self"` | Alvo: `skills/tactile_audio_sfx/SKILL.md` (v4.0.0).
-8. **Subagente 8:** `Role: "Chrome Perceptual Telemetry Expert"` | `TypeName: "self"` | Alvo: `skills/browser_visual_reasoning/SKILL.md` (v4.0.0).
-9. **Subagente 9:** `Role: "Adversarial Red Team Judge Compiler"` | `TypeName: "self"` | Alvo: `skills/forensic_adversarial_auditor/SKILL.md` (v4.0.0).
-10. **Subagente 10:** `Role: "Autonomous OODA Systems Controller"` | `TypeName: "self"` | Alvo: `skills/autonomous_computer_use/SKILL.md` (v4.0.0).
-11. **Subagente 11:** `Role: "Ecosystem Manifest & Docs Integrator"` | `TypeName: "self"` | Alvo: `plugin.json` e `README.md` (v4.0.0).
+#### 2. Subagente Beta: Downstream Blast Radius & Tooling Auditor
+- **Role:** `Downstream Blast Radius & Tooling Auditor`
+- **TypeName:** `self`
+- **Model:** `flash`
+- **Clean-Context Payload:**
+  - `[BOUNDED_OBJECTIVE]`: Mapear o raio de impacto colateral da imposição do Mandato do Artífice Motor. Verificar requisitos de permissões (`TypeName: "self"` vs `"research"`), regras de concorrência (`CONTRACT_HOLD`/`CONTRACT_STABLE`) e possíveis conflitos em escritas paralelas.
+  - `[FILE_SLICES]`: `skills/hardened_clean_architecture/SKILL.md:280-310`, `skills/adaptive_token_governance/SKILL.md:1-80`, `skills/autonomous_computer_use/SKILL.md:1-100`.
+  - `[MY_SWARM_DELIVERABLE]`: Gravar laudo pericial detalhado em `.planning/investigations/inv_002_blast_radius_motor_mandate.md`.
+  - `[FORENSIC_CRITERIA]`: Mapear contratos que devem ser protegidos contra corrida de arquivos e diretrizes de auto-cura.
 
 ---
 
-## 7. Critérios Estritos de Aceite Fiduciário (Red Team Gauntlet - Época IV)
+### Fase 2: Subagentes Codificadores Motores 1:1 (Época III)
 
-O Subagente Juiz Independente auditará a entrega na Época IV sob os seguintes critérios eliminatórios:
-1. **Erradicação Completa de Tiers e Quick Tracks:** Execução de varredura por busca textual (`grep_search`) no repositório confirmando ZERO menções ativas a `Tier 1`, `Tier 2`, `Tier 3`, `surgical_mission_dossier.md` ou atalhos simplistas de execução.
-2. **Harmonização de Versão v4.0.0:** Todos os 10 arquivos estruturais e manifestos refletem formalmente a versão `4.0.0`.
-3. **Integridade de Scripts:** O comando `python scripts/sfx_tool.py --help` executa com `$LASTEXITCODE === 0` sem nenhum erro de sintaxe ou importação.
-4. **Validação do Manifesto do Plugin:** `plugin.json` contém JSON rigorosamente válido com `"version": "4.0.0"` e referências corretas.
-5. **Universalidade do Hipergrafo:** Garantia documental e mecânica de que toda intervenção mutadora exige $N \ge 100$ nós em `.planning/nodes/`.
-6. **Inspeção Visual e Telemetria:** Nos componentes visuais de documentação ou teste, zero erros de console e conformidade com o Padrão dos Titãs.
+> *Nota:* A ser disparada na Época III após aprovação do `implementation_plan.md`. Cada subagente recebe a instrução imperativa de ler o laudo pericial da Fase 1 antes de executar a mutação física.
+
+#### 3. Subagente Codificador 1: Constitutional Governance Craftsman
+- **Role:** `Constitutional Governance Craftsman`
+- **TypeName:** `self`
+- **Model:** `flash`
+- **Missão:** Modificar fisicamente `rules/AGENTS.md` e `rules/rule1.md` aplicando o Mandato do Artífice Motor, a cláusula pétrea anti-consultor e a atualização das Leis 5, 40, 42 e criação da Lei 43.
+- **Ferramentas Obrigatórias:** `replace_file_content`, `view_file`.
+- **Ação Motora:** Mutação física direta no disco. Proibido retornar propostas em markdown.
+
+#### 4. Subagente Codificador 2: Swarm Playbook & Architecture Craftsman
+- **Role:** `Swarm Playbook & Architecture Craftsman`
+- **TypeName:** `self`
+- **Model:** `flash`
+- **Missão:** Modificar fisicamente `skills/swarm_orchestration/SKILL.md` e `skills/hardened_clean_architecture/SKILL.md` integrando os protocolos do Artífice Motor, templates de despacho motor e checklists binários de validação.
+- **Ferramentas Obrigatórias:** `replace_file_content`, `view_file`.
+- **Ação Motora:** Mutação física direta no disco. Proibido retornar propostas em markdown.
 
 ---
-*Dossiê compilado e selado pelo Universal Prompt Refiner & Epistemic Compiler em conformidade estrita com a Lei 26 e a Lei 38.*
+
+### Fase 3: Auditoria Adversarial Independente (Época IV)
+
+#### 5. Subagente Juiz: Epistemic Red Team Judge
+- **Role:** `Epistemic Red Team Judge`
+- **TypeName:** `self`
+- **Model:** `flash`
+- **Missão:** Conduzir o Gauntlet Adversarial de 4 passadas, auditando se os arquivos no disco contêm as regras de bloqueio e se foi eliminada qualquer possibilidade de subagentes atuarem como relatores passivos. Emite veredito formal `[HOMOLOGATED_SUCCESS]` ou `[HARD REJECT]`.
+
+---
+
+## 5. Matriz de Modos de Quebra e Pre-Mortem Forense
+
+| ID | Modo Silencioso de Quebra ($X \to Y \to \text{Falha}$) | Severidade | Gatilho Causal | Contramedida Fiduciária Determinística |
+|---|---|---|---|---|
+| **MQ-01** | Subagente de codificação despachado como `TypeName: "research"`. O subagente não possui ferramentas de escrita (`replace_file_content`) e é forçado a devolver o código em texto via `send_message`. | Crítica | Despacho incorreto pelo Agente Principal. | Regra mecânica em `rules/AGENTS.md`: subagentes com meta de implementação DEVEM ser despachados compulsoriamente com `TypeName: "self"`. Despacho com "research" para código dispara veto sumário. |
+| **MQ-02** | Subagente com `TypeName: "self"` ignora as ferramentas motoras por viés estocástico de assistente ("Aqui está o código sugerido para você colar"). | Alta | Prompt fraco ou ausência de trava comportamental no prompt de despacho. | Inclusão mandatória do bloco `[ACTION_MODE: PHYSICAL_MUTATION]` e regra de que retorno de código no `send_message` sem mutação física no disco é rejeição imediata com re-despacho forçado. |
+| **MQ-03** | Múltiplos subagentes tentando editar o mesmo arquivo simultaneamente gerando race conditions e conflitos de git (`EBUSY` / conflito de chunks). | Alta | Concorrência sem particionamento de arquivos. | Travas de concorrência sináptica (`synaptic_bus.json`): regra estrita de 1 subagente por arquivo e mutex sináptico `CONTRACT_HOLD`/`CONTRACT_STABLE`. |
+| **MQ-04** | Agente Principal cede à tentação de copiar o código do `send_message` e editar o arquivo ele mesmo, quebrando o papel de Chief Systems Architect. | Média | Preguiça algorítmica do Agente Principal. | Trava constitucional: se o parent detectar que o subagente não chamou ferramentas de escrita, o parent está PROIBIDO de digitar o código; deve enviar `send_message` ordenando a mutação ou re-despachar. |
+
+---
+
+## 6. Matriz de Checklists Forenses e Critérios Estritos de Aceite Fiduciário (Lei 41)
+
+> Esta matriz será auditada item a item pelo Subagente Juiz Red Team na Época IV. A ausência de evidência física no disco em qualquer item reprova a entrega.
+
+| # | Item de Verificação Fiduciária | Evidência Exigida no Disco | Status |
+|---|---|---|---|
+| **CHK-01** | **Mandato do Artífice Motor em `rules/AGENTS.md`** | Presença formal da cláusula pétrea na Lei 5 e/ou Lei 43 banindo subagentes consultivos e exigindo mutação direta via ferramentas de escrita. | `[PENDENTE_EXECUCAO]` |
+| **CHK-02** | **Protocolo do Artífice Motor em `rules/rule1.md`** | Nova seção detalhando o fluxo motor do subagente, proibição de dump de código no `send_message` e regras de encerramento da tarefa. | `[PENDENTE_EXECUCAO]` |
+| **CHK-03** | **Template de Despacho de Mutação em `skills/swarm_orchestration/SKILL.md`** | Inclusão do template de prompt com `[ACTION_MODE: PHYSICAL_MUTATION]`, `TypeName: "self"` e diretrizes de rejeição imediata. | `[PENDENTE_EXECUCAO]` |
+| **CHK-04** | **Blindagem de Clean Architecture em `skills/hardened_clean_architecture/SKILL.md`** | Atualização da Seção 6 reforçando que os nós são implementados diretamente pelos subagentes no disco, sem intermediação manual do parent. | `[PENDENTE_EXECUCAO]` |
+| **CHK-05** | **Zero Nós em Disco (`nodes_floor: 0`)** | Diretório `.planning/nodes/` limpo ou sem acréscimo de nós espúrios; 100% de tokens focados no código real. | `[CONFORME]` |
+| **CHK-06** | **Two-Mind Minimum Respeitado** | Laudos `inv_001_root_cause_advisory_subagents.md` e `inv_002_blast_radius_motor_mandate.md` persistidos no disco na Época I. | `[PENDENTE_EXECUCAO]` |
+| **CHK-07** | **Zero-Stub Permanente** | Nenhuma menção a `TODO`, `pass` ou stubs nos arquivos alterados de governança. | `[PENDENTE_EXECUCAO]` |
+| **CHK-08** | **Null-Vocabulary Respeitado** | Nenhum clichê de assistente, preâmbulo bajulador ou encerramento oco nos artefatos de missão. | `[CONFORME]` |
+| **CHK-09** | **Selo Estigmérgico Válido** | `.planning/refiner_seal.json` gravado com hash coincidente e status `SEALED_VALID`. | `[CONFORME]` |
+
+---
+*Dossiê compilado e selado pelo Compilador Epistêmico do Portão de Ingestão Mandatória Ubíqua.*

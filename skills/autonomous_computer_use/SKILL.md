@@ -50,6 +50,13 @@ Toda ação motora sobre o computador deve executar compulsoriamente os quatro q
 └─────────────────────────────────────────────────────────────┘
 ```
 
+### 1.1. O Mandato do Artífice Motor no Quadrante ACT & VERIFY (Lei 43)
+
+Subagentes despachados com objetivo de produção, refatoração ou correção (`[ACTION_MODE: PHYSICAL_MUTATION]`, `TypeName: "self"`) fecham o ciclo OODA compulsoriamente dentro de sua própria sessão de execução:
+1. **Atuação Física Direta (Nível 1 - Arquivo):** O subagente não interrompe seu ciclo no quadrante DECIDE nem emite propostas textuais no chat. Ele dispara compulsoriamente ferramentas motoras de escrita (`replace_file_content`, `write_to_file`) para consumar a mutação física no disco.
+2. **Validação Sensorial Estrita (Nível 2 - CLI & Compilação):** Imediatamente após a mutação no filesystem, o subagente executa a etapa VERIFY disparando ferramentas de execução CLI (`run_command`) para validar que `$LASTEXITCODE === 0` (ex: compilação estática `npx tsc --noEmit`, suítes de teste ou linters).
+3. **Telemetria de Malha Fechada:** Somente após a mutação persistida e a validação sensorial executada, o subagente emite o `send_message` contendo o recibo fiduciário de encerramento (`DISK_MUTATION_RECEIPT_ONLY`). Devolver blocos de código em markdown no chat sem ter atuado fisicamente nas ferramentas motoras constitui colapso consultivo e aciona `[HARD REJECT: ADVISORY_ONLY_SUBAGENT]`.
+
 ---
 
 ## 2. Hierarquia Mecânica de Menor Atrito Motor
@@ -225,3 +232,4 @@ if (-not $Ready) { throw "Falha na inicialização do servidor local na porta $P
 - [ ] **Working Tree Clean:** `git status` confirma zero arquivos untracked ou modificados sem commit ao final de cada expediente.
 - [ ] **Commit Semântico Verificado:** `git log -n 1` confirma commit com mensagem semântica e hash válido após cada expediente.
 - [ ] **Zero Processos Órfãos:** confirmação de zero processos de compilação ou servidor abandonados em background após cada turno.
+- [ ] **Loop OODA Motor Fechado pelo Subagente:** subagentes motores executaram ACT via ferramentas de escrita (`replace_file_content` / `write_to_file`) e VERIFY via compilação/testes (`run_command`) antes de notificar o parent; zero dumps de código em markdown no `send_message`.
