@@ -1,20 +1,22 @@
 ---
 name: fractal_thought_graph
-description: "v4.1 — Universal Cognitive Parity & Mission Mode Bifurcation (Lei 41: Cadeia Neural Estruturada de Planejamento). Manual técnico e playbook operacional para gestão do substrato de pensamento (.planning/), bifurcação de missões (Arquitetural N >= 100 vs Direto Zero Nós), modelagem determinística do manifesto graph.json, protocolo de expansão fractal polímata até a Fronteira do Impassável e despacho concorrente atômico 1:1 de subagentes."
+description: "v5.0 — The Autonomous Hyper-Cortex Sovereign Engine. Manual técnico e playbook operacional para gestão do substrato de pensamento (.planning/), coordenação harmônica entre o grafo fractal estigmérgico e o dynamic_thought_router (ToT com poda fiduciária A* e GoT com fusão multilinear e relaxamento cíclico), bifurcação de missões (Arquitetural N >= 100 vs Direto Zero Nós), modelagem determinística do manifesto graph.json e thought_graph.json, e despacho concorrente atômico 1:1 de subagentes sob monitoramento metacognitivo de 2ª ordem."
 ---
 
-# Fractal Thought Graph Operations Playbook (v4.1 — Universal Cognitive Parity & Mission Mode Bifurcation | Lei 41: Cadeia Neural Estruturada de Planejamento)
+# Fractal Thought Graph Operations Playbook (v5.0 — The Autonomous Hyper-Cortex | Leis 41, 44 & 45)
 
-Manual prático de orquestração do substrato cognitivo pré-execução (`.planning/`). Estabelece a metodologia de expansão de pensamento de nível AGI com bifurcação determinística de modo:
-1. **MODO ARQUITETURAL / PLATAFORMA:** Saturação exaustiva do hipergrafo até a **Fronteira do Impassável** ($N \ge 100$ nós em `.planning/nodes/`) com Chief Ontologist empírico e despacho em ondas sequenciais (máx 15 nós/onda).
-2. **MODO DIRETO / OPERACIONAL / INVESTIGATIVO:** **Zero nós em disco (`nodes_floor: 0`)**. É terminantemente proibido criar arquivos markdown em `.planning/nodes/`. O plano executivo é gerado diretamente no `implementation_plan.md` e todo o orçamento de tokens é preservado para a Dupla Investigativa e para os subagentes que codificam os arquivos diretamente.
+Manual prático de orquestração do substrato cognitivo pré-execução (`.planning/`). Estabelece a metodologia de expansão de pensamento de nível AGI com bifurcação determinística de modo e integração profunda com o **Dynamic Thought Router** (`skills/dynamic_thought_router`):
+1. **MODO ARQUITETURAL / PLATAFORMA:** Saturação exaustiva do hipergrafo até a **Fronteira do Impassável** ($N \ge 100$ nós em `.planning/nodes/`) com Chief Ontologist empírico, despacho em ondas sequenciais (máx 15 nós/onda) e coordenação sináptica de topologias avançadas (ToT e GoT).
+2. **MODO DIRETO / OPERACIONAL / INVESTIGATIVO:** **Zero nós em disco (`nodes_floor: 0`)**. É terminantemente proibido criar arquivos markdown em `.planning/nodes/`. O plano executivo é gerado diretamente no `implementation_plan.md` e todo o orçamento de tokens é preservado para a Dupla Investigativa e para os subagentes que codificam os arquivos diretamente sob Linear Causal Stream (LCS) ou Dialética Adversarial (DAS).
 
 Governa a conexão polímata universal entre domínios correlacionados e não-correlacionados com:
-1. **Ingestão Estratégica via Subagente Prompt Refiner** (compilação do `mission_dossier.md` e classificação de modo).
-2. **Pesquisa Empírica via Chief Ontologist (Arq.) ou Dupla Investigativa (Direto)**.
-3. **Barramento Sináptico Neural (`synaptic_bus.json`)** conectando os subagentes em rede neural viva.
-4. **Despacho Atômico 1:1 de Subagentes** com modelo **Flash Low/Medium/High**.
-5. **Governança por Expedientes Cognitivos (Work Shifts)** com persistência física no disco.
+1. **Ingestão Estratégica via Subagente Prompt Refiner** (compilação do `mission_dossier.md`, extração do vetor $\mathbf{x}$ e classificação de modo).
+2. **Dynamic Thought Router Integrado** (seleção e coordenação entre LCS, ToT, GoT e DAS com persistência em `.planning/thought_graph.json`).
+3. **Pesquisa Empírica via Chief Ontologist (Arq.) ou Dupla Investigativa (Direto)**.
+4. **Barramento Sináptico Neural (`synaptic_bus.json`)** conectando os subagentes em rede neural viva.
+5. **Despacho Atômico 1:1 de Subagentes** com modelo **Flash Low/Medium/High**.
+6. **Governança por Expedientes Cognitivos (Work Shifts)** e **State Ledger Append-Only** (`.planning/ledger/`).
+7. **Metacognição de 2ª Ordem ($M_2$)** com monitoramento contínuo da incerteza epistêmica ($\varepsilon_t$).
 
 ---
 
@@ -25,8 +27,11 @@ Governa a conexão polímata universal entre domínios correlacionados e não-co
 ├── mission_dossier.md          # Dossiê Executivo da Missão (compilado na Época 0 pelo Prompt Refiner)
 ├── refiner_seal.json           # Selo Criptográfico Estigmérgico de Governança do Turno
 ├── synaptic_bus.json           # Barramento Sináptico Neural: Ledger de contratos, tipos, status HOLD/GO e sinapses
+├── thought_graph.json          # Topologia Cognitiva Ativa do Dynamic Thought Router (LCS/ToT/GoT/DAS)
 ├── expediente_state.json       # Persistência de Estado do Turno/Expediente Cognitivo Atual
 ├── graph.json                  # Manifesto Central Consolidado: Grafo, arestas tipadas e primitivas
+├── ledger/                     # Livro-Razão Transacional Imutável Append-Only (txn_XXXX.json)
+├── mailboxes/                  # Caixas Postais Estigmérgicas para Alertas Assíncronos Inter-Subagentes
 ├── investigations/             # Laudos periciais brutos de alta fidelidade (Lei 42)
 │   ├── inv_001_root_cause.md   # Laudo microscópico emitido pelo Subagente Alfa
 │   └── inv_002_blast_radius.md # Laudo de raio de impacto emitido pelo Subagente Beta
@@ -40,6 +45,63 @@ Governa a conexão polímata universal entre domínios correlacionados e não-co
 
 > ⚠️ REGRA DE OURO DO MODO DIRETO: Se a missão for classificada como DIRECT_OPERATIONAL, o diretório .planning/nodes/ NÃO é criado/populado. Zero arquivos gerados em nodes/. Todo planejamento vai direto para implementation_plan.md.
 ```
+
+---
+
+## 1.1. A Coexistência Harmônica: Grafo Fractal Estigmérgico vs. Dynamic Thought Router
+
+O ecossistema v5.0 supera a falsa dicotomia entre planejamento persistido e raciocínio online através da separação formal de papéis:
+
+1. **O Grafo Fractal Estigmérgico (Substrato Espacial & Histórico):**
+   - Opera no domínio da persistência em disco (`.planning/nodes/`, `graph.json`, `synaptic_bus.json`).
+   - Define a ontologia estática e evolutiva do sistema, a decomposição em $N \ge 100$ nós atômicos em missões arquiteturais, os contratos fiduciários e o histórico transacional append-only em `.planning/ledger/`.
+   - Garante rastreabilidade, auditabilidade pós-sessão e imunidade contra perda de memória de trabalho (*zero context rot*).
+
+2. **O Dynamic Thought Router (Substrato Temporal & Operacional Online):**
+   - Opera no domínio da inferência ativa e da deliberação em tempo de execução (`skills/dynamic_thought_router`, `.planning/thought_graph.json`).
+   - Roteia dinamicamente o fluxo cognitivo de cada subagente entre 4 topologias: Linear Causal Stream (LCS), Tree of Thoughts (ToT), Graph of Thoughts (GoT) e Dialectical Adversarial Synthesis (DAS), baseado no vetor de atributos da demanda $\mathbf{x} = \langle D_{\text{ont}}, U_{\text{unc}}, B_{\text{bif}}, C_{\text{conc}}, S_{\text{sens}}, P_{\text{risk}} \rangle \in [0, 1]^6$.
+
+### Coordenação Harmônica de ToT e GoT com o Grafo Fractal:
+
+```text
+┌───────────────────────────────────────────────────────────────────────────────────────────┐
+│                    COORDENAÇÃO FRACTAL + DYNAMIC THOUGHT ROUTER v5.0                      │
+├───────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                           │
+│   [GRAFO FRACTAL ESTRUTURAL]                     [DYNAMIC THOUGHT ROUTER EM EXECUÇÃO]    │
+│   • .planning/nodes/ (N >= 100)                  • .planning/thought_graph.json           │
+│                                                                                           │
+│   ┌─────────────────────────────┐                ┌─────────────────────────────────────┐  │
+│   │ Nó Isolado com Bifurcação   │ ─────────────> │ Tree of Thoughts (ToT)              │  │
+│   │ Algorítmica ou Concorrência │                │ • Poda Fiduciária A* (f(n) >= 0.75) │  │
+│   │ (ex: node_001, node_003)    │ <───────────── │ • Eliminação dura de stubs/locks    │  │
+│   └─────────────────────────────┘   Caminho      └─────────────────────────────────────┘  │
+│                                      Ótimo Podado                                         │
+│                                                                                           │
+│   ┌─────────────────────────────┐                ┌─────────────────────────────────────┐  │
+│   │ Nós Interdependentes em     │ ─────────────> │ Graph of Thoughts (GoT)             │  │
+│   │ Malha Cross-Domain          │                │ • Fusão Multilinear F_fuse          │  │
+│   │ (UI GPU + ACID Storage)     │ <───────────── │ • Agregação Sináptica A_synaptic    │  │
+│   └─────────────────────────────┘   Contratos    │ • Relaxamento Cíclico R_relax       │  │
+│                                      Fundidos    └─────────────────────────────────────┘  │
+│                                                                                           │
+└───────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### A. Coordenação Tree of Thoughts (ToT) no Grafo Fractal:
+- **Quando acionada:** Ao saturar um nó que apresenta $B_{\text{bif}} \ge 0.4$ (espaço de busca combinatorial, algoritmos de renderização, balanceamento de cache ou isolamento de falhas multi-hipótese).
+- **Mecanismo Operacional:**
+  1. O subagente do nó expande de 2 a 4 ramificações candidatas ($v_1, v_2, v_3$).
+  2. Aplica a **Função de Avaliação Fiduciária $A^*$**: $f(n) = g(n) + h(n)$, onde $h(n)$ pondera tipagem estrita `Result<T,E>` (0.35), eficiência de tempo/memória (0.25), resiliência a modos de falha (0.25) e clareza de contrato (0.15).
+  3. **Poda Fiduciária Dura:** Qualquer ramo com $f(n) < \theta_{\text{prune}} = 0.75$ ou com violações constitucionais (stubs, `any`, síntese de áudio senoidal) é podado imediatamente.
+  4. O nó persistido no disco `.planning/nodes/node_XXX.md` registra formalmente o ramo vencedor e a justificativa estigmérgica da poda dos demais, eliminando suposições estocásticas.
+
+#### B. Coordenação Graph of Thoughts (GoT) no Grafo Fractal:
+- **Quando acionada:** Em sistemas em malha com alta interdependência cruzada ($D_{\text{ont}} \ge 0.6, C_{\text{conc}} \ge 0.7$), onde nós de domínios ortogonais (ex: frame rate de GPU na UI, persistência atômica WAL no storage, sincronização assíncrona de rede) colidem em contratos compartilhados.
+- **Mecanismo Operacional:**
+  1. **Operador de Fusão de Pensamento ($\mathcal{F}_{\text{fuse}}$):** Recebe os contratos emitidos por nós pares e sintetiza nós de agregação que preservam todos os invariantes simultaneamente sem colisão de thread ou degradação do SLA sub-16ms.
+  2. **Operador de Agregação Sináptica ($\mathcal{A}_{\text{synaptic}}$):** Atualiza `.planning/synaptic_bus.json` com resolução determinística de precedência topológica, sincronizando os sinais `CONTRACT_HOLD` e `CONTRACT_STABLE (GO)`.
+  3. **Operador de Relaxamento Cíclico ($\mathcal{R}_{\text{relax}}$):** Detecta acoplamentos circulares entre nós do hipergrafo ($A \to B \to A$) e desacopla via injeção de dependência e portas assíncronas isoladas.
 
 ---
 
@@ -98,28 +160,37 @@ Antes de qualquer dedução arquitetural ou despacho de nós, o Agente Principal
 
 ---
 
-## 3. Protocolo da Trava Epistêmica (`EPISTEMIC_HALT`) & Sondas Investigativas
+## 3. Protocolo Metacognitivo de 2ª Ordem: Trava Epistêmica (`[EPISTEMIC_HALT]`), Calibração de $\varepsilon_t$ & Sondas Investigativas
 
-Quando a máquina depara-se com incerteza ($\varepsilon > 0$), APIs não documentadas, ambiguidades de regra de negócio ou comportamento anômalo, **é expressamente proibido adivinhar, usar valores default ou criar stubs**.
+No Hyper-Cortex v5.0, a cognição opera com separação entre o **Motor de Execução Cognitiva ($C_1$)** e o **Córtex Monitor de Segunda Ordem ($M_2$)**. É expressamente proibida a inferência estocástica desgovernada ou a mutação física de arquivos sob regime de incerteza crítica ($\varepsilon_t > 0.40$).
 
-### Fluxo Operacional de Desbloqueio:
-1. **Acionamento Imediato:** O agente declara no Chain-of-Thought:  
-   `[EPISTEMIC_HALT: <DESCRIÇÃO_EXATA_DA_INCERTEZA_TÉCNICA>]`
-2. **Despacho de Sonda Empírica:** Despacha um subagente focado exclusivamente em liquidar a dúvida:
-```json
-{
-  "Subagents": [
-    {
-      "TypeName": "research",
-      "Role": "Empirical Forensic Scout",
-      "Model": "flash",
-      "Prompt": "Execute varredura forense para liquidar a seguinte incerteza técnica: [DESCRIÇÃO]. Inspecione arquivos locais, execute testes isolados ou pesquise documentações oficiais. Retorne evidências empíricas incontestáveis (código real, retornos de chamada, assinaturas exatas)."
-    }
-  ]
-}
-```
-3. **Liquidação e Liberação do Fluxo:** Ao receber os fatos comprovados, o agente registra no CoT:  
-   `[EPISTEMIC_RESUME: Incerteza liquidada com base em evidências comprovadas. Retomando fluxo sem palpites.]`
+### 3.1. Formalismo Matemático da Incerteza Epistêmica ($\varepsilon_t$)
+A variável escalar $\varepsilon_t \in [0.0, 1.0]$ quantifica a entropia do raciocínio a cada etapa:
+$$\varepsilon_t = 0.30 \cdot \mathcal{H}_{\text{entropy}}(S_t) + 0.30 \cdot \mathcal{D}_{\text{disagreement}}(\mathcal{W}_t) + 0.25 \cdot \Delta_{\text{drift}}(G_0, G_t) + 0.15 \cdot \Omega_{\text{satisficing}}(A_t)$$
+
+- $\mathcal{H}_{\text{entropy}}(S_t)$: Entropia normalizada sobre o espaço de hipóteses concorrentes baseada em evidências empíricas $E_t$.
+- $\mathcal{D}_{\text{disagreement}}(\mathcal{W}_t)$: Divergência Jensen-Shannon entre mentes do enxame (ex: Dupla Investigativa Alfa vs. Beta).
+- $\Delta_{\text{drift}}(G_0, G_t)$: Afastamento semântico/estrutural em relação ao vetor de intenção original $G_0$.
+- $\Omega_{\text{satisficing}}(A_t)$: Penalidade por atalhos ou preguiça algorítmica (`any`, stubs, ausência de física de molas).
+
+### 3.2. Os Três Regimes de Convicção Epistêmica:
+| Faixa de $\varepsilon_t$ | Estado Epistêmico | Regime Operacional | Ação do Hyper-Cortex |
+|---|---|---|---|
+| **$0.00 \le \varepsilon_t \le 0.15$** | `ZONE_GREEN` (Certeza Determinística) | Ação Motora Destravada | Subagentes motores autorizados a mutações atômicas via ferramentas de escrita. |
+| **$0.15 < \varepsilon_t \le 0.40$** | `ZONE_AMBER` (Atrito Probabilístico) | Deliberação Focalizada | Elevação mandatória para **Flash Medium/High**. Injeção de verificação empírica via comando ou probe estigmérgico antes de mutar arquivos. |
+| **$\varepsilon_t > 0.40$** | `ZONE_RED` (Ambiguidade Crítica) | Congelamento Imediato | **Disparo compulsório do gatilho `[EPISTEMIC_HALT]`**. Nenhuma mutação de arquivo é permitida. |
+
+### 3.3. Catálogo Exaustivo dos Cinco Gatilhos Binários de Parada:
+1. **`HALT_CRITICAL_UNCERTAINTY` ($\varepsilon_t > 0.40$):** Incerteza crítica. Congela escrita e exige formulação formal da dúvida em `synaptic_bus.json`.
+2. **`HALT_CONFIRMATION_BIAS_LOOP`:** Ruminação estocástica por 2 turnos consecutivos sem emitir comando determinístico ou ler arquivo real via `view_file`.
+3. **`HALT_GOAL_DRIFT_EXCEEDED` ($\Delta_{\text{drift}} > 0.35$):** Tentativa de expandir escopo para arquivos ou subsistemas fora do `mission_dossier.md`.
+4. **`HALT_PREMATURE_CONVERGENCE`:** Tentativa de fechar investigação ou design sem confrontar no mínimo duas hipóteses contrastantes ($K \ge 2$) ou Antítese Red Team.
+5. **`HALT_CONSECUTIVE_REPAIR_COLLAPSE`:** Duas tentativas consecutivas de auto-cura falham ($LASTEXITCODE \ne 0$). Terceira tentativa às cegas é banida.
+
+### 3.4. Protocolo de Recuperação Tripartite Pós-Halt:
+1. **Fase de Congelamento (Freeze):** Persistência do estado exato da divergência em `.planning/expediente_state.json`.
+2. **Fase da Sonda de Fato Bruto (Root-Probe):** Despacho de probe empírica isolada com `TypeName: "research"` para inspecionar arquivos, rodar testes ou consultar documentação oficial.
+3. **Fase de Re-Ancoragem Fiduciária (Re-Anchoring):** Recálculo de $\varepsilon_t$. Somente se $\varepsilon_t \le 0.15$, o estado transiciona de `HALT` para `RESUME_GO`.
 
 ---
 
@@ -250,6 +321,10 @@ Todo nó gerado por um subagente atômico DEVE conter o cabeçalho de autoconsci
 
 - [ ] **Tipagem Estrita:** `Result<T,E>` / `Option<T>`; zero `any`, `unknown`, casts inseguros.
 - [ ] **Zero-Stub:** zero `TODO`, `pass`, `return null`, funções `{}` vazias, `...`.
+- [ ] **Topologia de Pensamento (Lei 44):** Topologia (LCS/ToT/GoT/DAS) selecionada pelo `dynamic_thought_router` conforme vetor $\mathbf{x}$; zero flatten cego ou cosplay reflexivo.
+- [ ] **Poda Fiduciária & Tripwire Dialético (Lei 45):** Ramos ToT podados se $f(n) < 0.75$; deliberação DAS convergida em $K \le 3$ iterações.
+- [ ] **Incerteza Epistêmica Controlada (Lei 44/M2):** $\varepsilon_t \le 0.15$ para ação motora; ausência de viés de confirmação ($IVC \le 2.0$).
+- [ ] **Guarda de Deriva de Objetivo (Lei 46):** $\Delta_{\text{drift}} \le 0.35$; zero mutação fora do perímetro do dossiê.
 - [ ] **Física de Molas dos Titãs:** `framer-motion` (stiffness, damping, mass); zero `transition-all duration-300 ease-in-out`.
 - [ ] **Isolamento de Thread/GPU:** zero bloqueio de main thread; apenas `transform`/`opacity` para animações.
 - [ ] **Áudio Físico Real:** gravações acústicas via `sfx_tool.py`; zero `AudioSynthesizer`, `oscillator`, síntese matemática.
@@ -404,6 +479,10 @@ Para cada subagente/arquivo na Seção 1, reproduzir integralmente a **Matriz de
 
 - [ ] **Tipagem Estrita:** `Result<T,E>` / `Option<T>`; zero `any`, `unknown`, casts inseguros.
 - [ ] **Zero-Stub:** zero `TODO`, `pass`, `return null`, funções `{}` vazias, `...`.
+- [ ] **Topologia de Pensamento (Lei 44):** Topologia (LCS/ToT/GoT/DAS) selecionada pelo `dynamic_thought_router` conforme vetor $\mathbf{x}$; zero flatten cego ou cosplay reflexivo.
+- [ ] **Poda Fiduciária & Tripwire Dialético (Lei 45):** Ramos ToT podados se $f(n) < 0.75$; deliberação DAS convergida em $K \le 3$ iterações.
+- [ ] **Incerteza Epistêmica Controlada (Lei 44/M2):** $\varepsilon_t \le 0.15$ para ação motora; ausência de viés de confirmação ($IVC \le 2.0$).
+- [ ] **Guarda de Deriva de Objetivo (Lei 46):** $\Delta_{\text{drift}} \le 0.35$; zero mutação fora do perímetro do dossiê.
 - [ ] **Física de Molas dos Titãs:** `framer-motion` (stiffness, damping, mass); zero `transition-all duration-300 ease-in-out`.
 - [ ] **Isolamento de Thread/GPU:** zero bloqueio de main thread; apenas `transform`/`opacity` para animações.
 - [ ] **Áudio Físico Real:** gravações acústicas via `sfx_tool.py`; zero `AudioSynthesizer`, `oscillator`, síntese matemática.

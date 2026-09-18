@@ -1,19 +1,20 @@
 ---
 name: universal_prompt_refiner
-description: Playbook de Engenharia e Controle Operacional do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate) v4.1. Governa o despacho obrigatório do Subagente Prompt Refiner antes de qualquer intervenção operacional, a classificação mandatória de modo (Arquitetural vs. Direto), o gatilho de ativação imediata do esquadrão ([HARD HALT: SQUAD_DISPATCH_BYPASSED]), a compilação do Dossiê Universal (.planning/mission_dossier.md), desconstrução forense em 4 camadas, roadmap determinístico, matriz de regras/skills por primeiros princípios e critérios fiduciários de aceite.
+description: Playbook de Engenharia e Controle Operacional do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate) v5.0 (Hyper-Cortex Ingestion Gate). Governa o despacho obrigatório do Subagente Prompt Refiner antes de qualquer intervenção operacional, a classificação mandatória de modo (Arquitetural vs. Direto), o cálculo da Assinatura Física do Problema Phi(P) em 8 eixos, a Matriz de Auto-Ativação de Skills, a medição contínua de Incerteza Epistêmica epsilon_t, o gatilho de ativação imediata do esquadrão ([HARD HALT: SQUAD_DISPATCH_BYPASSED]), a compilação do Dossiê Universal (.planning/mission_dossier.md), desconstrução forense em 4 camadas, roadmap determinístico, matriz de regras/skills por primeiros princípios, atribuição de Topologia de Pensamento (LCS, ToT, GoT, DAS), encadeamento quádruplo e critérios fiduciários de aceite.
 ---
 
-# Universal Prompt Refiner Gate Playbook (Época 0 - v4.1)
+# Universal Prompt Refiner Gate Playbook (Época 0 - v5.0 — Hyper-Cortex Ingestion Gate)
 
-Playbook operacional definitivo que rege o **Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate)**. Estabelece as duas travas mecânicas supremas do ecossistema:
+Playbook operacional definitivo que rege o **Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate & Hyper-Cortex Ingestion Gate v5.0)**. Estabelece as travas mecânicas supremas do ecossistema:
 1. **Trava de Refinamento:** O Agente Principal está terminantemente proibido de agir, planejar, editar arquivos ou rodar comandos modificadores sem antes despachar o Subagente Especialista Prompt Refiner (`[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`).
 2. **Trava de Ativação do Esquadrão:** O Agente Principal está terminantemente proibido de mutacionar código sem antes despachar os subagentes do blueprint do Dossiê (`[HARD HALT: SQUAD_DISPATCH_BYPASSED]`).
+3. **Trava de Incerteza Epistêmica:** Incerteza crítica ($\varepsilon_t > 0.40$) aciona o congelamento imediato da esteira (`[EPISTEMIC_HALT: CRITICAL_UNCERTAINTY_EXCEEDED]`).
 
-Nenhuma intervenção operacional — seja a correção de uma vírgula de CSS, um script CLI pontual ou uma plataforma distribuída — é executada no impulso do prompt cru. Toda demanda é desconstruída, classificada em modo arquitetural ou direto, blindada por subagentes especializados e roteada com precisão cirúrgica antes de qualquer mutação física no repositório.
+Nenhuma intervenção operacional — seja a correção de uma vírgula de CSS, um script CLI pontual ou uma plataforma distribuída — é executada no impulso do prompt cru. Toda demanda é desconstruída, avaliada em sua assinatura física $\vec{\Phi}(P)$, classificada em modo arquitetural ou direto, blindada por subagentes especializados, associada à sua Topologia de Pensamento e roteada com precisão cirúrgica antes de qualquer mutação física no repositório.
 
 ---
 
-## 1. O Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate)
+## 1. O Portão de Ingestão Mandatória Ubíqua & Córtex Monitor de 2ª Ordem
 
 ### 1.1. O Veto Absoluto à Ação por Impulso Estocástico
 Modelos convencionais de linguagem operam sob impulso reativo: ao receberem uma solicitação, disparam ferramentas de edição de arquivos ou geração de planos imediatamente. Esse vício cognitivo resulta em:
@@ -26,7 +27,7 @@ Modelos convencionais de linguagem operam sob impulso reativo: ao receberem uma 
 **A LEI É CATEGÓRICA:** Qualquer chamada de ferramenta de escrita (`replace_file_content`, `write_to_file`), comandos de alteração de estado no shell (`run_command`), ou geração de planos executivos na Época II sem a prévia existência física do Dossiê do Prompt Refiner no disco aciona **veto mecânico sumário imediato (`[HARD HALT: UNREFINED_ACTION_ATTEMPT]`)**.
 
 ### 1.2. A Ubiquidade do Portão & A Bifurcação de Modo de Missão
-A ilusão da "tarefa negligenciável" é a fonte primária de incidentes em sistemas de alta complexidade. Na v4.1, toda demanda passa pelo Portão do Prompt Refiner, mas a execução subsequente é calibrada por dois modos mutuamente exclusivos:
+A ilusão da "tarefa negligenciável" é a fonte primária de incidentes em sistemas de alta complexidade. Na v5.0, toda demanda passa pelo Portão do Prompt Refiner, mas a execução subsequente é calibrada por dois modos mutuamente exclusivos:
 
 1. **MODO ARQUITETURAL / PLATAFORMA:**
    - Para criação de novas plataformas, módulos estruturais complexos ou refatorações profundas de arquitetura.
@@ -36,22 +37,65 @@ A ilusão da "tarefa negligenciável" é a fonte primária de incidentes em sist
    - **Zero nós em disco (`nodes_floor: 0`)**. É terminantemente proibido poluir o disco com arquivos `.planning/nodes/`.
    - O plano é sintetizado diretamente em `implementation_plan.md` e 100% dos tokens são canalizados para os subagentes que investigam e codificam de fato.
 
+### 1.3. A Assinatura Física do Problema $\vec{\Phi}(P)$ em 8 Eixos
+Toda tarefa de engenharia possui uma assinatura física microscópica mensurável no espaço vetorial $\vec{\Phi}(P) \in [0, 1]^8$:
+
+$$\vec{\Phi}(P) = \begin{bmatrix}
+\phi_{\text{spatial}} & \text{(Renderização visual, layout, animação, GPU, latência de frame)} \\
+\phi_{\text{acoustic}} & \text{(Feedback sonoro, transdução tátil, foley mecânico, áudio real)} \\
+\phi_{\text{state}} & \text{(Persistência, ACID, concorrência de I/O, file locks, atomic swap)} \\
+\phi_{\text{epistemic}} & \text{(Incerteza documental, ambiguidade de requisitos, risco adversarial)} \\
+\phi_{\text{cognitive}} & \text{(Espaço de estados combinatório, múltiplos caminhos, trade-offs)} \\
+\phi_{\text{economic}} & \text{(Orçamento de tokens, escala de nós, limites de contexto, shifts)} \\
+\phi_{\text{distributed}} & \text{(Múltiplos agentes concorrentes, protocolos de barramento, peer veto)} \\
+\phi_{\text{perceptual}} & \text{(Inspeção em navegador real, DevTools, console de runtime, DOM vivo)}
+\end{bmatrix}$$
+
+O Prompt Refiner calcula $\vec{\Phi}(P)$ durante a desconstrução forense e injeta os valores no `mission_dossier.md` e no `refiner_seal.json`.
+
+### 1.4. A Matriz Universal de Auto-Ativação de Skills ($\mathbf{W}$)
+A seleção de skills não segue listas estáticas cegas. A ativação de cada skill $\mathcal{S}_i$ é computada determinísticamente pela projeção da assinatura do problema sobre a matriz de pesos de afinidade física $\mathbf{W} \in \mathbb{R}^{m \times 8}$:
+
+$$\vec{\alpha} = \sigma\left( \mathbf{W} \vec{\Phi}(P) - \vec{\theta} \right)$$
+
+Onde $\sigma(z) = \frac{1}{1 + e^{-z}}$ e $\vec{\theta}$ representa os limiares de ativação. Se $\alpha_i \ge 0.5$, a skill é **compulsoriamente ativada** e suas dependências são expandidas em DAG com ordenação topológica acíclica.
+
+### 1.5. Quantificação Contínua de Incerteza Epistêmica ($\varepsilon_t$)
+O Córtex Monitor de 2ª Ordem ($M_2$) quantifica continuamente a incerteza epistêmica $\varepsilon_t \in [0.0, 1.0]$:
+
+$$\varepsilon_t = w_1 \cdot \mathcal{H}_{\text{entropy}}(S_t) + w_2 \cdot \mathcal{D}_{\text{disagreement}}(\mathcal{W}_t) + w_3 \cdot \Delta_{\text{drift}}(G_0, G_t) + w_4 \cdot \Omega_{\text{satisficing}}(A_t)$$
+
+Com pesos fiduciários convexos: $w_1 = 0.30$, $w_2 = 0.30$, $w_3 = 0.25$, $w_4 = 0.15$.
+
+#### Regimes Operacionais de $\varepsilon_t$:
+- **`ZONE_GREEN` ($0.00 \le \varepsilon_t \le 0.15$):** Certeza Determinística. Ação motora autorizada via `replace_file_content` / `write_to_file`.
+- **`ZONE_AMBER` ($0.15 < \varepsilon_t \le 0.40$):** Atrito Probabilístico. Elevação para Flash Medium/High; injeção de probe empírica antes da escrita.
+- **`ZONE_RED` ($\varepsilon_t > 0.40$):** Ambiguidade Crítica. **Disparo compulsório de `[EPISTEMIC_HALT]`**. Congelamento imediato de mutações de arquivos.
+
+#### Gatilhos Formais de `[EPISTEMIC_HALT]`:
+1. `HALT_CRITICAL_UNCERTAINTY` ($\varepsilon_t > 0.40$): Incerteza crítica sem fundamento empírico.
+2. `HALT_CONFIRMATION_BIAS_LOOP`: Ruminação teórica por 2 turnos sem probe física no disco.
+3. `HALT_GOAL_DRIFT_EXCEEDED` ($\Delta_{\text{drift}} > 0.35$): Mutação fora do escopo do Dossiê.
+4. `HALT_PREMATURE_CONVERGENCE`: Proposta de encerramento sem triangulação dialética (Alfa vs. Beta).
+5. `HALT_CONSECUTIVE_REPAIR_COLLAPSE`: 2 falhas consecutivas de auto-cura no mesmo alvo.
+
 ---
 
-## 2. Os Seis Entregáveis Obrigatórios do Dossiê Universal (`.planning/mission_dossier.md`)
+## 2. Os Sete Entregáveis Obrigatórios do Dossiê Universal (`.planning/mission_dossier.md`)
 
-Todo despacho do Subagente Prompt Refiner deve gerar compulsoriamente o Dossiê Universal contendo seis blocos fiduciários inegociáveis:
+Todo despacho do Subagente Prompt Refiner deve gerar compulsoriamente o Dossiê Universal contendo os blocos fiduciários inegociáveis:
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
-│                   ANATOMIA DOS SEIS ENTREGÁVEIS                        │
+│                   ANATOMIA DOS ENTREGÁVEIS v5.0                        │
 ├────────────────────────────────────────────────────────────────────────┤
 │ 1. Classificação de Modo & Desconstrução Forense (4 Camadas - Lei 38) │
-│ 2. Roadmap Determinístico Passo a Passo (arquivo a arquivo)            │
-│ 3. Matriz de Regras e Skills Ativadas (Primeiros Princípios)           │
-│ 4. Bespoke Dynamic Squad Blueprint (Ordem Executiva de Despacho)       │
-│ 5. Matriz de Modos de Quebra & Pre-Mortem Forense                      │
-│ 6. Matriz de Checklists Forenses Extensivos & Aceite Fiduciário        │
+│ 2. Assinatura Física do Problema Φ(P) & Matriz de Auto-Ativação (W)    │
+│ 3. Roadmap Determinístico Passo a Passo (arquivo a arquivo)            │
+│ 4. Matriz de Regras e Skills Ativadas (Primeiros Princípios)           │
+│ 5. Bespoke Dynamic Squad Blueprint & Topologias Cognitivas (LCS/ToT/GoT│
+│ 6. Matriz de Modos de Quebra & Pre-Mortem Forense                      │
+│ 7. Matriz de Checklists Forenses Extensivos & Aceite Fiduciário        │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -61,17 +105,28 @@ Todo despacho do Subagente Prompt Refiner deve gerar compulsoriamente o Dossiê 
 - **Contratos Implícitos (CI):** Invariantes não ditos, mas mandatórios (idempotência, `AbortController`, ARIA, concorrência atômica, 60fps, latência $<16\text{ms}$, `Result<T, E>`).
 - **Invariantes de Estado & Acoplamento:** Mapeamento do estado atual, dependências circulares e impacto em rotas/contratos existentes.
 
-### (b) Roadmap Passo a Passo Exato
+### (b) Assinatura Física do Problema $\vec{\Phi}(P)$ & Auto-Ativação de Skills
+- Computação exaustiva dos 8 eixos de $\vec{\Phi}(P)$.
+- Aplicação da Matriz $\mathbf{W}$ para auto-ativação determinística das skills necessárias, garantindo o atendimento a todas as pré-condições operacionais (UISC v5.0).
+
+### (c) Roadmap Passo a Passo Exato
 - Sequenciamento unívoco e mecânico de ações para o Agente Principal e para o enxame de subagentes.
 - Definição estrita de dependências: sequencial vs concorrência paralela.
 - Travas de isolamento: protocolo `HOLD/GO` no `synaptic_bus.json` para interfaces compartilhadas.
 
-### (c) Matriz de Regras e Skills Ativadas com Justificativa de Primeiros Princípios
-O Prompt Refiner fundamenta a ativação de cada regra e skill na **física real do problema** (ex: atrito de GPU, inércia de gesto, concorrência de arquivos).
-
-### (d) Bespoke Dynamic Squad Blueprint (Ordem Executiva Compulsória de Despacho)
-Em conformidade estrita com as Leis 32, 40, 42 e 43:
+### (d) Bespoke Dynamic Squad Blueprint & Atribuição de Topologia de Pensamento (Ordem Executiva de Despacho)
+Em conformidade estrita com as Leis 32, 40, 42, 43, 44 e 45:
 - **Ordem de Execução Mandatória:** A Seção D NÃO é decorativa; é uma ordem de despacho executiva imediata para o Agente Principal. Mutacionar código sem despachar os subagentes mapeados aciona `[HARD HALT: SQUAD_DISPATCH_BYPASSED]`.
+- **Atribuição Obrigatória de Topologia de Pensamento:**
+  Todo subagente e fluxo de trabalho do esquadrão DEVE ser explicitamente parametrizado com sua **Topologia Cognitiva Ótima**:
+  * **LCS (Linear Causal Sequence):** Cadeias determinísticas diretas de causa e efeito ($X \to Y \to Z$). Indicado para refatorações pontuais, scripts CLI determinísticos e pipelines sem bifurcação.
+  * **ToT (Tree of Thoughts):** Exploração em árvore com poda analítica e backtracking. Indicado para trade-offs heurísticos, seleção de algoritmos ou exploração de múltiplos designs arquiteturais concorrentes.
+  * **GoT (Graph of Thoughts):** Hipergrafo direcionado acíclico com convergência, divergência e fusão de nós de raciocínio. Indicado para sistemas distribuídos, modelagem de concorrência massiva e expansão de nós na Época I.
+  * **DAS (Dialectic Adversarial Synthesis):** Confronto dialético tripartite (Tese Alfa $\to$ Antítese Beta/Red Team $\to$ Síntese Fiduciária Empírica). Obrigatório para diagnósticos de causa raiz e auditoria pré-homologação.
+- **Protocolo de Encadeamento Quádruplo dos Titãs:**
+  Para demandas que atravessam lógica, interface, áudio e validação, o blueprint deve compor formalmente a esteira integrada:
+  $$\mathcal{S}_{\text{DTR}} \xrightarrow{\tau_1} \mathcal{S}_{\text{MUC}} \xrightarrow{\tau_2} \mathcal{S}_{\text{TAS}} \xrightarrow{\tau_3} \mathcal{S}_{\text{FAA \& BVR}}$$
+  Onde os contratos intermediários $\tau_1$ (especificação cinemática de molas e estados), $\tau_2$ (ganchos de eventos táteis e transientes de áudio) e $\tau_3$ (hashes de áudio e checklist de telemetria) são propagados deterministicamente pelo `synaptic_bus.json`.
 - **Dupla Investigativa Obrigatória (Two-Mind Minimum):** Para qualquer tarefa investigativa ou alteração de arquivo existente, o esquadrão DEVE conter no mínimo:
   * **Subagente Alfa (Causal Root Cause):** Especialista na mecânica microscópica interna da falha ou alteração (`TypeName: "self"` ou `"research"`, `[ACTION_MODE: ANALYTICAL_INVESTIGATION]`). Grava laudo em `.planning/investigations/inv_001_root_cause.md`.
   * **Subagente Beta (Downstream Blast Radius):** Especialista no raio de impacto colateral, interfaces externas e contratos (`TypeName: "self"` ou `"research"`, `[ACTION_MODE: ANALYTICAL_INVESTIGATION]`). Grava laudo em `.planning/investigations/inv_002_blast_radius.md`.
@@ -79,7 +134,7 @@ Em conformidade estrita com as Leis 32, 40, 42 e 43:
 - **Mandato do Artífice Motor & Tipagem Compulsória (Lei 43):**
   * Todo subagente com meta de produção, codificação, refatoração ou correção de arquivos DEVE ser compulsoriamente tipado como `TypeName: "self"` com `[ACTION_MODE: PHYSICAL_MUTATION]`. É terminantemente proibido utilizar `TypeName: "research"` para tarefas motoras (subagentes research não possuem ferramentas de escrita e colapsam involuntariamente em consultores passivos).
   * O prompt cirúrgico DEVE conter ordem expressa de mutação física direta via `replace_file_content` ou `write_to_file`. Proibido devolver código em markdown no `send_message`.
-- **Parametrização Estrita:** Para cada subagente: `Role`, `TypeName: "self"` (produção/motor) ou `"research"` (apenas leitura analítica), `Model: "flash"`, `[ACTION_MODE]`, prompt cirúrgico Clean-Context e ferramentas autorizadas.
+- **Parametrização Estrita:** Para cada subagente: `Role`, `TypeName: "self"` (produção/motor) ou `"research"` (apenas leitura analítica), `Model: "flash"`, `[ACTION_MODE]`, Topologia Cognitiva atribuída (`LCS` | `ToT` | `GoT` | `DAS`), prompt cirúrgico Clean-Context e ferramentas autorizadas.
 
 ### (e) Matriz de Modos de Quebra e Pre-Mortem Forense
 - Exercício Pre-Mortem: *"Assumindo que este código quebrou catastroficamente em produção 3 meses após o deploy, quais foram as causas raízes microscópicas?"*
@@ -313,7 +368,7 @@ Quando qualquer nova demanda ou turno se inicia (sob o paradigma Turn-as-a-Sessi
       "TypeName": "self",
       "Role": "Universal Prompt Refiner & Epistemic Compiler",
       "Model": "flash",
-      "Prompt": "Você é o compilador epistêmico do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate). Sua missão é congelar qualquer impulso de ação e compilar o Dossiê Executivo de Missão e o Selo Estigmérgico de Despacho antes de qualquer modificação física. Analise a demanda crua do usuário: [INSERIR_DEMANDA_CRUA]. 1. Execute a Análise de Custo-Complexidade (ACC) e classifique a missão compulsoriamente em mission_type: 'ARCHITECTURAL' (nova plataforma/módulo estrutural -> piso inegociável de 100 nós atômicos) ou 'DIRECT_OPERATIONAL' (bug fix/ajuste direto/investigação -> ZERO nós em disco, nodes_floor: 0, 100% tokens para execução real); 2. Grave o artefato físico .planning/mission_dossier.md (Dossiê Universal — único artefato permitido); 3. O dossiê deve conter com rigor absoluto: (a) Desconstrução Forense em 4 Camadas (Lei 38); (b) Roadmap Mecânico Passo a Passo determinístico; (c) Matriz de Regras e Skills Ativadas com justificativa de Primeiros Princípios; (d) Bespoke Dynamic Squad Blueprint (Seção D: ordem executiva mandatória de despacho de subagentes especializados 1:1, incluindo Dupla Investigativa Two-Mind Minimum para investigações); (e) Matriz de Modos de Quebra e Pre-Mortem Forense; (f) Critérios Estritos de Aceite Fiduciário para o Red Team na Época IV. 4. Emita compulsoriamente no disco o Selo Estigmérgico de Despacho (.planning/refiner_seal.json) com o hash criptográfico da demanda crua, status 'SEALED_VALID', session_mode: 'Universal v4.1 — Sovereign Session', mission_type ('ARCHITECTURAL' ou 'DIRECT_OPERATIONAL'), nodes_floor (100 ou 0), modo Flash prescrito e lista estrita de operações autorizadas. Aplique o Null-Vocabulary estrito. Grave os arquivos no disco e notifique o Agente Principal para proceder."
+      "Prompt": "Você é o compilador epistêmico do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate & Hyper-Cortex Ingestion Gate v5.0). Sua missão é congelar qualquer impulso de ação e compilar o Dossiê Executivo de Missão e o Selo Estigmérgico de Despacho antes de qualquer modificação física. Analise a demanda crua do usuário: [INSERIR_DEMANDA_CRUA]. 1. Execute a Análise de Custo-Complexidade (ACC), extraia a Assinatura Física do Problema Phi(P) em 8 eixos, aplique a Matriz de Auto-Ativação de Skills (W), quantifique a Incerteza Epistêmica epsilon_t e classifique a missão compulsoriamente em mission_type: 'ARCHITECTURAL' (nova plataforma/módulo estrutural -> piso inegociável de 100 nós atômicos) ou 'DIRECT_OPERATIONAL' (bug fix/ajuste direto/investigação -> ZERO nós em disco, nodes_floor: 0, 100% tokens para execução real); 2. Grave o artefato físico .planning/mission_dossier.md (Dossiê Universal — único artefato permitido); 3. O dossiê deve conter com rigor absoluto: (a) Desconstrução Forense em 4 Camadas (Lei 38); (b) Assinatura Física Phi(P) & Matriz de Auto-Ativação; (c) Roadmap Mecânico Passo a Passo determinístico; (d) Bespoke Dynamic Squad Blueprint com atribuição de Topologias de Pensamento (LCS/ToT/GoT/DAS) e Encadeamento Quádruplo dos Titãs; (e) Matriz de Modos de Quebra e Pre-Mortem Forense; (f) Critérios Estritos de Aceite Fiduciário para o Red Team na Época IV. 4. Emita compulsoriamente no disco o Selo Estigmérgico de Despacho (.planning/refiner_seal.json) com o hash criptográfico da demanda crua, status 'SEALED_VALID', session_mode: 'Universal v5.0 — Hyper-Cortex Sovereign Session', mission_type ('ARCHITECTURAL' ou 'DIRECT_OPERATIONAL'), nodes_floor (100 ou 0), epsilon_score, active_thought_topology, modo Flash prescrito e lista estrita de operações autorizadas. Aplique o Null-Vocabulary estrito. Grave os arquivos no disco e notifique o Agente Principal para proceder."
     }
   ]
 }
@@ -326,12 +381,33 @@ O selo é um artefato estigmérgico obrigatório emitido exclusivamente pelo Pro
 ```json
 {
   "turn_index": 1,
-  "timestamp": "2026-09-14T11:20:00-03:00",
+  "timestamp": "2026-09-17T20:20:00-03:00",
   "user_raw_prompt_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "mission_dossier_path": ".planning/mission_dossier.md",
-  "session_mode": "Universal v4.1 — Sovereign Session",
+  "session_mode": "Universal v5.0 — Hyper-Cortex Sovereign Session",
   "mission_type": "DIRECT_OPERATIONAL",
   "nodes_floor": 0,
+  "epsilon_score": 0.08,
+  "active_thought_topology": "DIALECTIC_ADVERSARIAL_SYNTHESIS",
+  "problem_physical_signature": {
+    "spatial": 0.85,
+    "acoustic": 0.90,
+    "state": 0.80,
+    "epistemic": 0.95,
+    "cognitive": 0.92,
+    "economic": 0.60,
+    "distributed": 0.90,
+    "perceptual": 0.95
+  },
+  "active_skills_chain": [
+    "universal_prompt_refiner",
+    "dynamic_thought_router",
+    "hardened_clean_architecture",
+    "modern_ui_craft",
+    "tactile_audio_sfx",
+    "browser_visual_reasoning",
+    "forensic_adversarial_auditor"
+  ],
   "recommended_flash_mode": "Flash Low",
   "mandatory_keywords_injected": [
     "Água no Deserto",
@@ -340,13 +416,17 @@ O selo é um artefato estigmérgico obrigatório emitido exclusivamente pelo Pro
     "Foley real",
     "Auditoria no Chrome Real",
     "1:1 Subagente por Nó / Arquivo",
-    "Two-Mind Minimum"
+    "Two-Mind Minimum",
+    "Metacognição de 2ª Ordem",
+    "Topologia de Pensamento"
   ],
   "forensic_signoff": {
     "layer1_explicit_contracts": true,
     "layer2_implicit_contracts": true,
     "layer3_pre_mortem": true,
-    "layer4_two_man_rule": true
+    "layer4_two_man_rule": true,
+    "layer5_physical_signature": true,
+    "layer6_epistemic_calibration": true
   },
   "seal_status": "SEALED_VALID",
   "authorized_operations": [

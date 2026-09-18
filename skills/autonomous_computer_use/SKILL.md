@@ -1,14 +1,15 @@
 ---
 name: autonomous_computer_use
-version: 4.0
-description: "v4.0 — Universal Cognitive Parity — Autonomous Computer Use & OODA Closed-Loop. Playbook de Engenharia e Controle Operacional para Computer Use Autônomo de nível AGI. Governa o Ciclo OODA em malha fechada (Observe -> Orient -> Decide -> Act), a hierarquia mecânica de menor atrito motor (Arquivo/CLI > DOM > GUI XY), protocolos determinísticos de auto-cura (portas presas EADDRINUSE, processos órfãos, locks de arquivos EBUSY/EPERM, caches corrompidos), verificação sensorial em navegador real via browser-mcp com telemetria de zero erros e Checklist Forense Binário obrigatório (Lei 41)."
+version: 5.0.0
+description: "v5.0 — Universal Cognitive Parity & Closed-Loop Motor Mutator. Playbook de Engenharia e Controle Operacional para Computer Use Autônomo de nível AGI. Governa o Ciclo OODA em malha fechada (Observe -> Orient -> Decide -> Act), a hierarquia mecânica de menor atrito motor (Arquivo/AST > CLI > DOM > GUI XY), os 5 playbooks determinísticos de auto-cura A a E (EADDRINUSE, Zumbis, Locks EBUSY/EPERM, Caches corrompidos, Stale Git Locks), o veto [HARD REJECT: MOTOR_TASK_ABANDONMENT] e a telemetria fria padronizada MOTOR_EXECUTION_RECEIPT."
 ---
 
-# Autonomous Computer Use & Closed-Loop Motor Control — v4.0 (Universal Cognitive Parity)
+# Autonomous Computer Use & Closed-Loop Motor Control — v5.0 (Universal Cognitive Parity & Closed-Loop Motor Mutator)
 
-Manual de engenharia e governança de interação motora, sensorial e computacional com o sistema operacional (Windows 11, PowerShell, Node.js, compiladores, processos em background) e navegador web via `browser-mcp`. Estabelece o fim definitivo do paradigma amador "dispare e reze" (*fire-and-forget*), impondo **autonomia de malha fechada, propriocepção de ambiente e auto-cura determinística**.
+Manual de engenharia e governança de interação motora, sensorial e computacional com o sistema operacional (Windows 11, PowerShell, Node.js, compiladores, processos em background) e navegador web via `browser-mcp`. Estabelece o fim definitivo do paradigma amador "dispare e reze" (*fire-and-forget*), impondo **autonomia de malha fechada, propriocepção de ambiente, auto-cura determinística em nível de SO e o Mandato do Artífice Motor**.
 
-Na v4.0.0, o Ciclo OODA em Malha Fechada e o Self-Healing Protocol são disparados compulsoriamente em toda ação motora — sem distinção entre "comando simples" e "pipeline complexo". Não existe comando CLI que dispense verificação sensorial pós-execução (`$LASTEXITCODE === 0` e ausência de stderr fatais).
+> **Salvaguarda v5.0 — Ativação Compulsória Universal & Veto ao Abandono:**
+> Na v5.0.0, o Ciclo OODA em Malha Fechada e os Playbooks de Auto-Cura A a E são disparados compulsoriamente em toda ação motora. É expressamente proibido ao subagente motor abandonar tarefas diante de erros ou devolver texto/código no chat para o caller: a tarefa só se encerra com `$LASTEXITCODE === 0`, sob pena de cancelamento imediato via `[HARD REJECT: MOTOR_TASK_ABANDONMENT]`.
 
 ---
 
@@ -50,12 +51,21 @@ Toda ação motora sobre o computador deve executar compulsoriamente os quatro q
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 1.1. O Mandato do Artífice Motor no Quadrante ACT & VERIFY (Lei 43)
+### 1.1. O Mandato do Artífice Motor no Quadrante ACT & VERIFY (Leis 5, 39 e 43)
 
 Subagentes despachados com objetivo de produção, refatoração ou correção (`[ACTION_MODE: PHYSICAL_MUTATION]`, `TypeName: "self"`) fecham o ciclo OODA compulsoriamente dentro de sua própria sessão de execução:
+
 1. **Atuação Física Direta (Nível 1 - Arquivo):** O subagente não interrompe seu ciclo no quadrante DECIDE nem emite propostas textuais no chat. Ele dispara compulsoriamente ferramentas motoras de escrita (`replace_file_content`, `write_to_file`) para consumar a mutação física no disco.
 2. **Validação Sensorial Estrita (Nível 2 - CLI & Compilação):** Imediatamente após a mutação no filesystem, o subagente executa a etapa VERIFY disparando ferramentas de execução CLI (`run_command`) para validar que `$LASTEXITCODE === 0` (ex: compilação estática `npx tsc --noEmit`, suítes de teste ou linters).
-3. **Telemetria de Malha Fechada:** Somente após a mutação persistida e a validação sensorial executada, o subagente emite o `send_message` contendo o recibo fiduciário de encerramento (`DISK_MUTATION_RECEIPT_ONLY`). Devolver blocos de código em markdown no chat sem ter atuado fisicamente nas ferramentas motoras constitui colapso consultivo e aciona `[HARD REJECT: ADVISORY_ONLY_SUBAGENT]`.
+3. **Veto Inegociável ao Abandono de Tarefas em Erro (Anti-Surrender Mandate):**
+   - É expressamente proibido ao subagente motor emitir mensagens declarando falhas de ambiente sem antes executar a auto-cura: *"Ocorreu erro X. Por favor libere a porta / encerre o processo / limpe o cache"*.
+   - A ocorrência de qualquer erro de execução em comando ou build obriga o subagente a entrar recursivamente nos quadrantes **ORIENT $\to$ DECIDE $\to$ ACT**, executando os Playbooks Determinísticos de Auto-Cura A a E.
+4. **Critério de Repouso Inegociável:**
+   A tarefa física do subagente só é dada como concluída quando o comando de validação formal retornar exit code idêntico a zero:
+   $$\text{TaskCompletion}(\tau) \iff (\text{DiskMutationConfirmed} \land \$LASTEXITCODE = 0 \land \text{StderrFatal} = 0)$$
+5. **Trava Mecânica `[HARD REJECT: MOTOR_TASK_ABANDONMENT]`:**
+   Caso um subagente encerre sua execução enviando um relatório de erro sem ter aplicado as rotinas determinísticas de auto-cura e sem ter consumido seu orçamento de 2 ciclos do Circuit Breaker, sua resposta será sumariamente invalidada com a tag `[HARD REJECT: MOTOR_TASK_ABANDONMENT]`.
+6. **Telemetria de Malha Fechada & Recibo Fiduciário Motor:** Somente após a mutação física persistida e a validação sensorial executada, o subagente emite o `send_message` contendo o recibo estruturado `[MOTOR_EXECUTION_RECEIPT]`. Devolver blocos de código em markdown no chat sem ter atuado fisicamente nas ferramentas motoras constitui colapso consultivo e aciona `[HARD REJECT: ADVISORY_CODE_DUMP]`.
 
 ---
 
@@ -75,75 +85,214 @@ $$\text{Confiabilidade} \propto \frac{1}{\text{Graus de Liberdade Visual} \times
 
 ---
 
-## 3. Playbooks Determinísticos de Auto-Cura e Resiliência Operacional
+## 3. Playbooks Determinísticos de Auto-Cura e Resiliência Operacional no Sistema Operacional
 
-É terminantemente proibido ao agente congelar ou delegar ao usuário a solução de atritos operacionais triviais do ambiente de execução. Diante de falhas, execute o playbook cabível:
+É terminantemente proibido ao agente congelar ou delegar ao usuário a solução de atritos operacionais triviais do ambiente de execução (Windows 11 / PowerShell). Diante de qualquer falha mecânica, execute de forma autônoma o playbook determinístico cabível:
 
-### A. Colisão de Sockets & Portas Presas (`EADDRINUSE`)
-*Sintoma:* Um dev server falha ao subir porque a porta designada (ex: `3000`) já está em uso por processo anterior ou zumbi.
-*Playbook PowerShell de Auto-Cura:*
+```text
+                                [INCIDENTE OPERACIONAL]
+                                           │
+         ┌───────────────────┬─────────────┴───────┬───────────────────┬───────────────────┐
+         ▼                   ▼                     ▼                   ▼                   ▼
+    [EADDRINUSE]       [ZOMBIE PIDS]         [FILE LOCKS]        [CACHE ROT]         [GIT LOCKS]
+   Socket Ocupado     Processos Órfãos      EBUSY / EPERM      Build Corrompido    .git/index.lock
+         │                   │                     │                   │                   │
+         ▼                   ▼                     ▼                   ▼                   ▼
+    Get-NetTCP           Get-CimInstance        Exponential         Purga Atômica       Remoção de Lock
+    taskkill /T /F     Stop-Process -Force   Backoff + Jitter    .next, dist, cache      git fsck / reset
+         │                   │                     │                   │                   │
+         ▼                   ▼                     ▼                   ▼                   ▼
+  Polling 3000ms       Limpeza de Handles    Atomic Swap TMP      Re-verificação       Working Tree
+    ou Port N+1        Verificação PIDs      Move-Item -Force      tsc --noEmit            Clean
+```
+
+---
+
+### Playbook A: Colisão de Sockets & Portas Presas (`EADDRINUSE`)
+*Sintoma:* Um servidor local falha ao iniciar porque a porta designada (ex: `3000`) já está em uso por processo anterior ou zumbi retido em `TIME_WAIT`.
+*Procedimento Autônomo Obrigatório em PowerShell:*
 ```powershell
 $TargetPort = 3000
-$Connection = Get-NetTCPConnection -LocalPort $TargetPort -State Listen -ErrorAction SilentlyContinue
-if ($Connection) {
-    $ZombiePID = $Connection.OwningProcess
-    # Encerra em cascata o processo ocupante e seus filhos
-    taskkill /PID $ZombiePID /T /F | Out-Null
-    # Polling determinístico de liberação de socket (máximo 3000ms)
-    $Timeout = 0
-    while ((Get-NetTCPConnection -LocalPort $TargetPort -State Listen -ErrorAction SilentlyContinue) -and ($Timeout -lt 15)) {
-        Start-Sleep -Milliseconds 200
-        $Timeout++
+$MaxRetries = 2
+$Attempt = 0
+$PortCleared = $false
+
+while (-not $PortCleared -and $Attempt -lt $MaxRetries) {
+    $Attempt++
+    $Connection = Get-NetTCPConnection -LocalPort $TargetPort -State Listen -ErrorAction SilentlyContinue
+
+    if ($null -ne $Connection) {
+        $ZombiePID = $Connection.OwningProcess
+        # Encerramento forçado do processo pai e de toda a árvore de subprocessos
+        taskkill /PID $ZombiePID /T /F 2>&1 | Out-Null
+        
+        # Polling determinístico com timeout de 3000ms para liberação do socket no kernel
+        $WaitTimeout = 0
+        while ((Get-NetTCPConnection -LocalPort $TargetPort -State Listen -ErrorAction SilentlyContinue) -and ($WaitTimeout -lt 15)) {
+            Start-Sleep -Milliseconds 200
+            $WaitTimeout++
+        }
+    }
+
+    # Verificação pós-atuação
+    $CheckActive = Get-NetTCPConnection -LocalPort $TargetPort -State Listen -ErrorAction SilentlyContinue
+    if ($null -eq $CheckActive) {
+        $PortCleared = $true
+    }
+}
+
+# Fallback Determinístico Se o Socket Estiver Preso no Kernel (TIME_WAIT):
+if (-not $PortCleared) {
+    $AlternativePort = $TargetPort + 1
+    # Registra o desvio na variável de ambiente local para disparo do processo
+    $env:PORT = "$AlternativePort"
+}
+```
+
+---
+
+### Playbook B: Processos Órfãos, Vazamento de Memória & Zumbis de Compilação
+*Sintoma:* Processos de empacotamento (`esbuild`, `node`, `vite`, `next-server`) travam consumindo CPU, retendo memória ou bloqueando descritores de arquivos do projeto.
+*Procedimento Autônomo Obrigatório em PowerShell:*
+```powershell
+$TargetProcessNames = @("node", "esbuild", "vite", "next-server")
+
+foreach ($ProcName in $TargetProcessNames) {
+    # Localiza processos cuja linha de comando esteja associada ao diretório do workspace atual
+    $Processes = Get-CimInstance Win32_Process -Filter "Name LIKE '$ProcName%.exe'" -ErrorAction SilentlyContinue |
+                 Where-Object { $_.CommandLine -like "*$((Get-Location).Path.Replace('\', '\\'))*" }
+
+    foreach ($Proc in $Processes) {
+        if ($Proc.ProcessId -ne $PID) {
+            taskkill /PID $Proc.ProcessId /T /F 2>&1 | Out-Null
+        }
+    }
+}
+
+# Pausa mecânica de 300ms para liberação de handles no subsistema de arquivos Win32
+Start-Sleep -Milliseconds 300
+```
+
+---
+
+### Playbook C: Locks de Arquivos pelo Sistema Operacional (`EBUSY`, `EPERM`, Sharing Violation)
+*Sintoma:* Tentativa de reescrita de arquivo falha porque o Windows Defender, o Search Indexer ou outro processo retém descritor aberto sem compartilhamento.
+*Procedimento Autônomo Obrigatório em PowerShell:*
+```powershell
+function Mutate-FileWithLockResilience {
+    param (
+        [Parameter(Mandatory=$true)] [string]$FilePath,
+        [Parameter(Mandatory=$true)] [string]$Content
+    )
+
+    $Delays = @(200, 500, 1200) # Milissegundos progressivos
+    $Success = $false
+
+    # Tentativa 1: Escrita direta com backoff
+    foreach ($Delay in $Delays) {
+        try {
+            [System.IO.File]::WriteAllText($FilePath, $Content, [System.Text.Encoding]::UTF8)
+            $Success = $true
+            break
+        } catch [System.IO.IOException], [System.UnauthorizedAccessException] {
+            $Jitter = Get-Random -Minimum 10 -Maximum 50
+            Start-Sleep -Milliseconds ($Delay + $Jitter)
+        }
+    }
+
+    # Tentativa 2: Atomic Swap Transacional se a escrita direta for bloqueada
+    if (-not $Success) {
+        $Guid = [System.Guid]::NewGuid().ToString("N")
+        $TempPath = "$FilePath.tmp.$Guid"
+        
+        try {
+            [System.IO.File]::WriteAllText($TempPath, $Content, [System.Text.Encoding]::UTF8)
+            Move-Item -Path $TempPath -Destination $FilePath -Force -ErrorAction Stop
+            $Success = $true
+        } catch {
+            if (Test-Path $TempPath) { Remove-Item -Force $TempPath -ErrorAction SilentlyContinue }
+            throw "FALHA_FATAL_FILE_LOCK: Impossível liberar descritor para o arquivo $FilePath"
+        }
     }
 }
 ```
-*Fallback Determinístico:* Caso a porta permaneça bloqueada pelo kernel no estado `TIME_WAIT`, selecione a próxima porta sequencial ($N+1$) e atualize a variável de ambiente correspondente.
 
 ---
 
-### B. Processos Órfãos & Zumbis de Compilação
-*Sintoma:* Processos de empacotamento (`esbuild`, `node`, `vite`, `next-server`) travam consumindo CPU ou retendo descritores de arquivos.
-*Playbook de Encerramento em Árvore:*
+### Playbook D: Purga Determinística de Caches de Build Corrompidos
+*Sintoma:* Erros inexplicáveis de compilação, importação fantasma ou resolução circular persistindo após edições corretas de código.
+*Procedimento Autônomo Obrigatório em PowerShell:*
 ```powershell
-# Localiza e elimina a linhagem inteira do processo órfão
-taskkill /PID <PID_ALVO> /T /F
+$CachePaths = @(
+    ".next",
+    "dist",
+    "build",
+    ".turbo",
+    "node_modules/.cache",
+    "tsconfig.tsbuildinfo",
+    ".eslintcache"
+)
+
+foreach ($CachePath in $CachePaths) {
+    if (Test-Path $CachePath) {
+        Remove-Item -Recurse -Force $CachePath -ErrorAction SilentlyContinue
+    }
+}
+
+# Verificação imediata em malha fechada da higienização
+Start-Sleep -Milliseconds 200
 ```
 
 ---
 
-### C. Arquivos Travados por Locks do Sistema (`EBUSY`, `EPERM`)
-*Sintoma:* Tentativa de reescrita de arquivo falha porque o Windows Defender, o Search Indexer ou um processo em background está inspecionando o arquivo.
-*Playbook de Remediação em 2 Etapas:*
-1. **Exponential Backoff com Jitter:** Tente 3 vezes com espaçamento progressivo ($200\text{ms} \to 500\text{ms} \to 1200\text{ms}$).
-2. **Atomic Swap Transacional:** Grave os novos dados em arquivo sombra (`<target>.tmp.<guid>`) e execute a substituição atômica via `Move-Item -Force`.
-
----
-
-### D. Caches Corrompidos de Ferramentas de Build
-*Sintoma:* Erros inexplicáveis de compilação ou importação circular persistindo após edições corretas.
-*Playbook de Purga de Caches:*
+### Playbook E: Reparação de Travas Órfãs e Corrupção de Índice Git
+*Sintoma:* Quedas de processos, falhas de desligamento ou concorrência deixam travas residuais no diretório `.git` (`.git/index.lock`), impedindo checagens de integridade ou transições de estado.
+*Procedimento Autônomo Obrigatório em PowerShell:*
 ```powershell
-# Remove deterministamente os diretórios de cache efêmeros
-Remove-Item -Recurse -Force .next, dist, build, node_modules/.cache, .turbo -ErrorAction SilentlyContinue
-# Re-valida estritamente a tipagem
-npx tsc --noEmit
+$GitLockFiles = @(
+    ".git/index.lock",
+    ".git/HEAD.lock",
+    ".git/refs/heads/*.lock",
+    ".git/shallow.lock",
+    ".git/config.lock"
+)
+
+foreach ($LockPattern in $GitLockFiles) {
+    $Locks = Get-ChildItem -Path $LockPattern -ErrorAction SilentlyContinue
+    foreach ($Lock in $Locks) {
+        Remove-Item -Force $Lock.FullName -ErrorAction SilentlyContinue
+    }
+}
+
+# Verificação de integridade da árvore git sem destruição de dados do usuário
+git fsck --no-full --no-dangling 2>&1 | Out-Null
+if ($LASTEXITCODE -ne 0) {
+    # Reparar índice sem perder modificações na working tree
+    git read-tree HEAD 2>&1 | Out-Null
+}
+
+# Confirmação de status funcional
+$GitStatus = git status --porcelain 2>&1
+if ($LASTEXITCODE -ne 0) {
+    throw "FALHA_CRÍTICA_GIT: Repositório com metadados irrecuperáveis"
+}
 ```
 
 ---
 
-### E. Estabilização de DOM & Sincronização Assíncrona no `browser-mcp`
-*Sintoma:* O subagente clica em um botão, mas a ação falha porque o React/Vue ainda estava hidratando o componente ou uma animação de mola ainda estava em curso.
+### Playbook F: Estabilização de DOM & Sincronização Assíncrona no `browser-mcp`
+*Sintoma:* Ações visuais falham por hidratação assíncrona ou animações em andamento no frontend.
 *Playbook de Estabilização:*
-1. Disparar `browser_wait_for_network(Timeout: 5000)` para garantir zero requisições in-flight.
-2. Executar script de validação de repouso: `document.readyState === 'complete'`.
-3. Selecionar o elemento via `data-testid` ou atributos semânticos estritamente estáveis, jamais por classes utilitárias voláteis (`css-1a2b3c`).
+1. Disparar `browser_wait_for_network(Timeout: 5000)` para certificar zero requisições in-flight.
+2. Executar script de repouso: `document.readyState === 'complete'`.
+3. Selecionar elementos por `data-testid` ou atributos semânticos estritamente estáveis, jamais por classes CSS utilitárias voláteis (`css-1a2b3c`).
 
 ---
 
-### F. Circuit Breaker de Remediação Autônoma (Anti-Loop Invariant)
-*Invariante:* A auto-cura autônoma é uma salvaguarda determinística, não uma licença para loops infinitos.
+### Playbook G: Circuit Breaker de Remediação Autônoma (Anti-Loop Invariant)
+*Invariante:* A auto-cura autônoma opera sob salvaguarda determinística, nunca sob repetição cega infinita.
 - **Teto Rígido de 2 Ciclos:** Todo procedimento de auto-cura tem limite absoluto de **2 tentativas consecutivas** para o mesmo incidente.
-- **Disparo de Trava Epistêmica:** Se após 2 ciclos de remediação o erro persistir (porta travada por serviço do sistema, falha recorrente de compilação ou lock de arquivo persistente), é terminantemente proibido insistir em looping. O agente DEVE emitir `[EPISTEMIC_HALT: CIRCUIT_BREAKER_TRIPPED]`, reportar o diagnóstico forense e suspender a execução motora.
+- **Disparo de Trava Epistêmica:** Se após 2 ciclos de remediação o erro persistir, o subagente DEVE suspender a execução motora e disparar `[EPISTEMIC_HALT: CIRCUIT_BREAKER_TRIPPED]`, reportando a telemetria fria do estado terminal para arbitragem do Chief Architect.
 
 ---
 
@@ -158,6 +307,34 @@ Nenhuma tarefa de Computer Use é considerada concluída sem a satisfação cumu
    - **ZERO** erros 404 de carregamento de mídia, imagens, áudios ou fontes.
    - **ZERO** avisos de quebra de hidratação ou chaves duplicadas no React.
 4. **Health-Check Ativo:** Serviços locais só são considerados operacionais após resposta HTTP 200 via pooling de socket, banindo sleeps cegos.
+
+### 4.1. Erradicação do Dump Textual no `send_message` & Recibo Fiduciário Motor (`MOTOR_EXECUTION_RECEIPT`)
+
+O envio de blocos de código em markdown dentro do `send_message` por subagentes de produção é tipificado como Fraude de Transcrição Fiduciária (*Advisory Dump*). Subagentes motores (`TypeName: "self"`) transmitem exclusivamente telemetria fria padronizada através do formato abaixo:
+
+```markdown
+[MOTOR_EXECUTION_RECEIPT]
+- Subagent Role: <MY_SWARM_ROLE>
+- Synaptic Anchor: <MY_SYNAPTIC_ANCHOR>
+- Action Mode: PHYSICAL_MUTATION
+- Tool Invocations Confirmed:
+  * replace_file_content: <Count>
+  * write_to_file: <Count>
+  * run_command: <Count>
+- Mutated Files (On Disk):
+  * <Caminho Absoluto 1> [Delta: +X / -Y linhas | Status: PERSISTED]
+  * <Caminho Absoluto 2> [Delta: +X / -Y linhas | Status: PERSISTED]
+- Closed-Loop Verification Telemetry:
+  * Command Executed: <Comando exato, ex: npx tsc --noEmit>
+  * Exit Code: 0 ($LASTEXITCODE === 0)
+  * Stderr Stream: CLEAN (Zero fatal exceptions)
+- Self-Healing Events Triggered:
+  * <Nenhum / Playbook A / Playbook E>
+- Circuit Breaker Status: <0|1>/2 Retries Consumed
+- Forensic Checklist Binary State: ALL_CRITERIA_SATISFIED [1]
+- Synaptic Outputs Emitted:
+  * <Chave de Contrato>: <Valor ou Referência Persistida no Disco>
+```
 
 ---
 
@@ -221,15 +398,16 @@ if (-not $Ready) { throw "Falha na inicialização do servidor local na porta $P
 
 ---
 
-## Checklist Forense de Autonomous Computer Use (Binário — Lei 41)
+## 6. Checklist Forense de Autonomous Computer Use v5.0 (Binário — Lei 41)
 
-> Auditado pelo Agente Principal após cada ação motora e confirmado pelo Red Team na Época IV. Um único item reprovado sem evidência física dispara `[HARD REJECT: FRAUDULENT_CHECKLIST_SIGNOFF]`.
+> Auditado pelo Agente Principal após cada ação motora e confirmado pelo Red Team na Época IV. A reprovação de um único item anula a homologação do entregável.
 
-- [ ] **$LASTEXITCODE === 0:** todo comando shell retornou exit code 0; zero execuções "fire-and-forget" sem verificação pós-execução.
-- [ ] **Zero stderr Fatal:** ausência de exceções fatais, stack traces não capturadas ou mensagens `ERROR` em stderr.
-- [ ] **Hierarquia de Menor Atrito Respeitada:** Arquivo/AST > CLI > API Local > DOM > XY — XY usado apenas em Canvas/WebGL sem representação DOM acessível.
-- [ ] **Self-Healing Ativo:** colisões de porta (`EADDRINUSE`), locks (`EBUSY`/`EPERM`) e caches corrompidos tratados autonomamente sem delegar ao usuário.
-- [ ] **Working Tree Clean:** `git status` confirma zero arquivos untracked ou modificados sem commit ao final de cada expediente.
-- [ ] **Commit Semântico Verificado:** `git log -n 1` confirma commit com mensagem semântica e hash válido após cada expediente.
-- [ ] **Zero Processos Órfãos:** confirmação de zero processos de compilação ou servidor abandonados em background após cada turno.
-- [ ] **Loop OODA Motor Fechado pelo Subagente:** subagentes motores executaram ACT via ferramentas de escrita (`replace_file_content` / `write_to_file`) e VERIFY via compilação/testes (`run_command`) antes de notificar o parent; zero dumps de código em markdown no `send_message`.
+- [ ] **1. Mutação Física 100% Persistida no Disco:** O código foi alterado via `replace_file_content` ou `write_to_file`; zero sugestões ou diffs textuais no `send_message`.
+- [ ] **2. Fechamento de Malha Comprovado ($LASTEXITCODE === 0):** O subagente executou comando formal de verificação CLI (`tsc`, `vitest`, `npm test`, linter ou validação sintática) e obteve exit code 0.
+- [ ] **3. Zero Erros Fatais em Stderr:** O fluxo de stderr do comando de verificação não contém stack traces, exceções não tratadas ou mensagens críticas de falha.
+- [ ] **4. Veto ao Abandono de Erro Respeitado:** O subagente não transferiu atritos de ambiente (portas, locks, caches, git) para o caller; auto-cura executada com sucesso.
+- [ ] **5. Circuit Breaker Respeitado:** Em caso de re-tentativa, o número de ciclos de remediação não ultrapassou o teto rígido de 2 iterações.
+- [ ] **6. Stale Git Locks Purgados:** O diretório `.git` não contém arquivos `.lock` órfãos após a execução do subagente.
+- [ ] **7. Working Tree Íntegro:** `git status` comprova que o repositório permanece em estado consistente, com zero arquivos temporários abandonados.
+- [ ] **8. Zero Processos Zumbis Remanescentes:** Confirmação de ausência de processos orquestrados em background pendentes sem controle de vida.
+- [ ] **9. Recibo Fiduciário Motor Emitido:** O retorno via `send_message` adotou rigorosamente o schema estruturado de telemetria fria `[MOTOR_EXECUTION_RECEIPT]`.

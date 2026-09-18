@@ -1,33 +1,105 @@
 {
-  "bus_version": "4.1.0",
+  "bus_version": "5.0.0",
   "active_expediente": 3,
+  "cognitive_state_vector": {
+    "conviction_explicit": 0.98,
+    "conviction_implicit": 0.95,
+    "residual_uncertainty_epsilon": 0.04,
+    "dialectical_tension": 0.12,
+    "context_entropy": 0.18,
+    "synaptic_plasticity": 0.85
+  },
   "synaptic_signals": {
     "CONTRACT_STATUS": {
-      "rules/AGENTS.md": "CONTRACT_STABLE",
-      "rules/rule1.md": "CONTRACT_STABLE",
-      "skills/swarm_orchestration/SKILL.md": "CONTRACT_STABLE",
-      "skills/hardened_clean_architecture/SKILL.md": "CONTRACT_STABLE",
-      "skills/autonomous_computer_use/SKILL.md": "CONTRACT_STABLE",
-      "D:/MTA San Andreas 1.6/server/mods/deathmatch/resources/.agents/rules/agents.md": "CONTRACT_STABLE"
+      "rules/AGENTS.md": "CONTRACT_HOLD",
+      "rules/rule1.md": "CONTRACT_HOLD",
+      "rules/rule2.md": "CONTRACT_HOLD",
+      "skills/dynamic_thought_router/SKILL.md": "CONTRACT_DRAFT",
+      "skills/universal_prompt_refiner/SKILL.md": "CONTRACT_HOLD",
+      "skills/swarm_orchestration/SKILL.md": "CONTRACT_HOLD",
+      "skills/fractal_thought_graph/SKILL.md": "CONTRACT_HOLD",
+      "skills/adaptive_token_governance/SKILL.md": "CONTRACT_HOLD",
+      "skills/modern_ui_craft/SKILL.md": "CONTRACT_HOLD",
+      "skills/tactile_audio_sfx/SKILL.md": "CONTRACT_HOLD",
+      "skills/hardened_clean_architecture/SKILL.md": "CONTRACT_HOLD",
+      "skills/autonomous_computer_use/SKILL.md": "CONTRACT_HOLD",
+      "skills/forensic_adversarial_auditor/SKILL.md": "CONTRACT_HOLD",
+      "skills/browser_visual_reasoning/SKILL.md": "CONTRACT_HOLD",
+      "D:/MTA San Andreas 1.6/server/mods/deathmatch/resources/.agents/rules/agents.md": "CONTRACT_HOLD"
     },
     "INVESTIGATION_ARTIFACTS": [
-      ".planning/investigations/inv_001_root_cause_advisory_subagents.md",
-      ".planning/investigations/inv_002_blast_radius_motor_mandate.md",
-      ".planning/investigations/inv_003_red_team_gauntlet.md"
+      ".planning/investigations/inv_010_metacognitive_architecture.md",
+      ".planning/investigations/inv_011_dynamic_thought_graph_router.md",
+      ".planning/investigations/inv_012_skill_synthesizer_dynamic_activator.md",
+      ".planning/investigations/inv_013_synaptic_plasticity_state_vector.md",
+      ".planning/investigations/inv_014_epistemic_red_team_premortem.md",
+      ".planning/investigations/inv_015_deep_systems_concurrency.md",
+      ".planning/investigations/inv_016_multimodal_perceptual_craft.md",
+      ".planning/investigations/inv_017_tactile_foley_acoustic_spatial.md",
+      ".planning/investigations/inv_018_closed_loop_ooda_motor_mutator.md",
+      ".planning/investigations/inv_019_cross_platform_parity.md"
     ]
   },
   "propagated_synapses": [
     {
-      "origin_node": "inv_001_root_cause_advisory_subagents.md",
-      "emitted_by": "RootCauseForensicInvestigator",
-      "synaptic_output": "Instituir Lei 43 (Mandato do Artífice Motor & Banimento do Subagente Consultivo). Erradicar 'retorna a pepita de ouro lapidada (o patch exato)' de rule1.md:132 e swarm_orchestration:132. Proibir o parent de atuar como digitador sob pena de [HARD REJECT: ADVISORY_CODE_DUMP].",
-      "consumed_by": ["rules/AGENTS.md", "rules/rule1.md", "skills/swarm_orchestration/SKILL.md"]
+      "origin_node": "inv_010_metacognitive_architecture.md",
+      "emitted_by": "MetacognitiveArchitectureSpecialist",
+      "synaptic_output": "Formalizar Leis 44 a 47 (Governança Metacognitiva, Incerteza Epistêmica epsilon, Banimento da Convergência Prematura e Goal Drift Guard). Injetar rotina de recuperação tripartite Freeze -> Root-Probe -> Re-Anchoring.",
+      "consumed_by": ["rules/AGENTS.md", "rules/rule1.md", "skills/dynamic_thought_router/SKILL.md"]
     },
     {
-      "origin_node": "inv_002_blast_radius_motor_mandate.md",
-      "emitted_by": "DownstreamBlastRadiusAuditor",
-      "synaptic_output": "Obrigatoriedade de TypeName: 'self' para qualquer subagente com meta motora. Regra de Ortogonalidade Estrita 1:1 Subagente-por-Arquivo para prevenir race conditions. Aplicação de [ACTION_MODE: PHYSICAL_MUTATION] no payload cirúrgico e checklists binários de mutação em disco.",
-      "consumed_by": ["rules/rule1.md", "skills/swarm_orchestration/SKILL.md", "skills/hardened_clean_architecture/SKILL.md", "skills/autonomous_computer_use/SKILL.md", "D:/MTA San Andreas 1.6/server/mods/deathmatch/resources/.agents/rules/agents.md"]
+      "origin_node": "inv_011_dynamic_thought_graph_router.md",
+      "emitted_by": "DynamicThoughtGraphRouterSpecialist",
+      "synaptic_output": "Criar skill skills/dynamic_thought_router/SKILL.md com as 4 Topologias Cognitivas (LCS, ToT com poda fiduciária A*, GoT multilinear e DAS dialético). Instituir Lei 48 (Roteamento Dinâmico de Topologia de Pensamento).",
+      "consumed_by": ["skills/dynamic_thought_router/SKILL.md", "rules/AGENTS.md", "skills/fractal_thought_graph/SKILL.md"]
+    },
+    {
+      "origin_node": "inv_012_skill_synthesizer_dynamic_activator.md",
+      "emitted_by": "AutonomousSkillSynthesizerSpecialist",
+      "synaptic_output": "Instituir UISC v5.0 (Contrato Isomórfico Unificado de Skills) e Matriz de Afinidade Física de Skills. Composabilidade Quádrupla dos Titãs (dynamic_thought_router -> modern_ui_craft -> tactile_audio_sfx -> forensic_adversarial_auditor).",
+      "consumed_by": ["skills/universal_prompt_refiner/SKILL.md", "skills/swarm_orchestration/SKILL.md", "rules/AGENTS.md"]
+    },
+    {
+      "origin_node": "inv_013_synaptic_plasticity_state_vector.md",
+      "emitted_by": "SynapticPlasticityStateVectorEngineer",
+      "synaptic_output": "Schema JSON v5.0 com cognitive_state_vector, synaptic_weights, cognitive_engrams e máquina quântica de 5 fases (HOLD->DRAFT->VERIFYING->STABLE->DEPRECATED).",
+      "consumed_by": ["rules/rule1.md", "skills/swarm_orchestration/SKILL.md"]
+    },
+    {
+      "origin_node": "inv_014_epistemic_red_team_premortem.md",
+      "emitted_by": "EpistemicRedTeamAdversarialStrategist",
+      "synaptic_output": "Portões Contínuos de Auditoria G-0 a G-4, Pre-Mortem T+12 Meses, CAFE v5.0 (Fuzzing Cognitivo de Premissas) e Blacklist Expandida de Vetores de Falha.",
+      "consumed_by": ["skills/forensic_adversarial_auditor/SKILL.md", "rules/AGENTS.md"]
+    },
+    {
+      "origin_node": "inv_015_deep_systems_concurrency.md",
+      "emitted_by": "DeepSystemsConcurrencyArchitect",
+      "synaptic_output": "FsLockEngine atômico O_CREAT|O_EXCL, DeterministicAtomicSwap com dupla atestação SHA-256 e Kernel de Tipagem Defensiva Result<T,E>/Option<T> zero-allocation.",
+      "consumed_by": ["skills/hardened_clean_architecture/SKILL.md", "rules/rule1.md"]
+    },
+    {
+      "origin_node": "inv_016_multimodal_perceptual_craft.md",
+      "emitted_by": "MultiModalPerceptualCraftsman",
+      "synaptic_output": "Molas de 2ª ordem para 120Hz (damping ratio sub-crítico 0.72-0.86), fórmula óptica de 8 variáveis para generate_image e script de auditoria perceptual com telemetria CLS=0.000 / INP<=16ms.",
+      "consumed_by": ["skills/modern_ui_craft/SKILL.md", "skills/browser_visual_reasoning/SKILL.md"]
+    },
+    {
+      "origin_node": "inv_017_tactile_foley_acoustic_spatial.md",
+      "emitted_by": "TactileFoleyAcousticSpatialEngineSpecialist",
+      "synaptic_output": "Spatial Audio HRTF, Normalização LUFS diferencial (-16 LUFS UI / -14 LUFS Crítico), envelopes anti-click sub-5ms e verify-acoustic via Spectral Flatness Measure.",
+      "consumed_by": ["skills/tactile_audio_sfx/SKILL.md"]
+    },
+    {
+      "origin_node": "inv_018_closed_loop_ooda_motor_mutator.md",
+      "emitted_by": "ClosedLoopOODAMotorMutatorAuditor",
+      "synaptic_output": "Playbooks A a E de auto-cura determinística em SO, veto [HARD REJECT: MOTOR_TASK_ABANDONMENT] e formato padronizado MOTOR_EXECUTION_RECEIPT.",
+      "consumed_by": ["skills/autonomous_computer_use/SKILL.md", "rules/rule1.md"]
+    },
+    {
+      "origin_node": "inv_019_cross_platform_parity.md",
+      "emitted_by": "CrossPlatformParityEngineer",
+      "synaptic_output": "Lei 50 (Interoperabilidade Polímata & Paridade Cross-Platform). Validação estática multi-alvo e quarentena de vazamento de abstração.",
+      "consumed_by": ["rules/AGENTS.md", "D:/MTA San Andreas 1.6/server/mods/deathmatch/resources/.agents/rules/agents.md"]
     }
   ]
 }

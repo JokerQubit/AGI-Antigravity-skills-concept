@@ -1,9 +1,22 @@
 {
   "name": "agi-research",
-  "version": "4.1.0",
-  "description": "Universal Polymath Cognitive Architecture v4.1.0: Mission Mode Bifurcation (Architectural N >= 100 Nodes vs Direct Zero-Nodes Operational Track), Subagent Instinct (Solitary Investigation Ban, Two-Mind Minimum: Causal Root Cause + Downstream Blast Radius), High-Fidelity Neural Handoff (Law 42: raw investigation reports ingested via view_file, zero lossy prefrontal telephone game), Immediate Squad Activation Gate ([HARD HALT: SQUAD_DISPATCH_BYPASSED]), Universal Parity Pipeline (5 Epochs), Structured Neural Planning Mesh & Forensic Checklists (Law 41), Universal Prompt Refiner Gate (Epoch 0 mandatory seal), Synaptic Relay Neural Bus (HOLD/GO), Adversarial Red Team Gauntlet with Chrome Real Inspection, Titan Spring Physics & Real Acoustic Audio, Zero-Stub Clean Architecture, AGI OODA Self-Healing.",
+  "version": "5.0.0",
+  "description": "Universal Polymath Cognitive Architecture v5.0.0: Dynamic Thought Router (Linear Causal Stream, Tree of Thoughts com Poda A*, Graph of Thoughts com Fusão Multilinear, Dialectical Adversarial Synthesis com tripwire K <= 3), Mission Mode Bifurcation (Architectural N >= 100 Nodes vs Direct Zero-Nodes Operational Track), Subagent Instinct (Solitary Investigation Ban, Two-Mind Minimum: Causal Root Cause + Downstream Blast Radius), High-Fidelity Neural Handoff (Law 42: raw investigation reports ingested via view_file, zero lossy prefrontal telephone game), Immediate Squad Activation Gate ([HARD HALT: SQUAD_DISPATCH_BYPASSED]), Universal Parity Pipeline (5 Epochs), Structured Neural Planning Mesh & Forensic Checklists (Law 41), Universal Prompt Refiner Gate (Epoch 0 mandatory seal), Synaptic Relay Neural Bus (HOLD/GO), Adversarial Red Team Gauntlet with Chrome Real Inspection, Titan Spring Physics & Real Acoustic Audio, Zero-Stub Clean Architecture, AGI OODA Self-Healing.",
   "author": "OmniCognition Labs",
   "rules": "rules",
   "skills": "skills",
+  "skills_list": [
+    "dynamic_thought_router",
+    "universal_prompt_refiner",
+    "adaptive_token_governance",
+    "swarm_orchestration",
+    "fractal_thought_graph",
+    "hardened_clean_architecture",
+    "modern_ui_craft",
+    "tactile_audio_sfx",
+    "browser_visual_reasoning",
+    "forensic_adversarial_auditor",
+    "autonomous_computer_use"
+  ],
   "mcp": "mcp_config.json"
 }

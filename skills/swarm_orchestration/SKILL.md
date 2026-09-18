@@ -1,53 +1,197 @@
 ---
 name: swarm_orchestration
-description: "v4.0 — Universal Cognitive Parity — Orquestração Cybernética de Enxame & Governança Neural. Playbook operacional para gestão do Barramento Sináptico Neural (synaptic_bus.json), exclusão mútua sináptica (HOLD/GO), síntese dinâmica sob medida de esquadrões (Bespoke Dynamic Squads), identidade e autoconsciência de enxame, e veto técnico entre pares (Peer Veto)."
+description: "v5.0 — Autonomous Hyper-Cortex Neural Mesh — Orquestração Cybernética de Enxame & Governança Neural. Playbook operacional para gestão do Barramento Sináptico Neural Plástico (synaptic_bus.json v5.0), vetores de estado cognitivo S, plasticidade hebbiana (LTP/LTD), memória estigmérgica associativa (engramas cognitivos), transição quântica de contratos em 5 estados, resolução algorítmica de conflitos SCDA, exclusão mútua via FsLockEngine, e deliberação adversarial entre pares."
 ---
 
-# Swarm Orchestration & Cybernetic Neural Mesh Playbook — v4.0
+# Swarm Orchestration & Cybernetic Neural Mesh Playbook — v5.0
 
-Playbook operacional de engenharia de coordenação de enxames de inteligência artificial de alta escala, governando a comunicação inter-agentes, barramento sináptico, exclusão mútua em contratos estruturais, auto-organização dinâmica sob medida e deliberação adversarial entre pares.
+Playbook operacional de engenharia de coordenação de enxames de inteligência artificial em escala extrema (Hiper-Córtex v5.0), governando a comunicação inter-agentes em malha viva, barramento sináptico plástico, transição quântica de contratos estruturais em 5 fases, auto-organização sob medida, imunidade a deadlocks e integridade transacional de armazenamento.
 
 ---
 
-## 1. O Barramento Sináptico Neural (`synaptic_bus.json`)
+## 1. O Barramento Sináptico Neural Plástico (`synaptic_bus.json` v5.0)
 
-Subagentes operando em enxame não são silos isolados, mas neurônios de uma malha viva. Toda decisão, contrato de dados ou primitiva gerada por um subagente deve ser propagada para a rede através do arquivo estigmérgico `.planning/synaptic_bus.json`:
+Subagentes operando em enxame não são silos isolados, mas neurônios ativos de uma malha viva. Toda decisão, contrato de dados, heurística empírica ou primitiva gerada por um subagente deve ser propagada para a rede através do substrato estigmérgico `.planning/synaptic_bus.json`.
+
+### 1.1. Formulação Matemática do Vetor de Estado Cognitivo ($\vec{S}$)
+O estado global da orquestração neural é modelado continuamente pelo Vetor de Estado Cognitivo:
+
+$$\vec{S} = \begin{bmatrix} C_e \\ C_i \\ \tau \\ \Phi \\ \Psi \\ \Omega \end{bmatrix}$$
+
+Onde:
+- **$C_e \in [0.0, 1.0]$ (Convicção Epistêmica Global):** Média ponderada da aderência formal e validação mecânica dos contratos em vigor. $C_e = 1.0$ atesta saturação empírica total com compilação estrita e testes aprovados.
+- **$C_i \in [0.0, 1.0]$ (Incerteza Residual $\varepsilon$):** Volume normalizado de lacunas ontológicas, divergências ou premissas não verificadas no disco. Se $C_i > 0.15$, o enxame desacelera a taxa de expansão motora.
+- **$\tau \in [0.0, 1.0]$ (Tensão Dialética Ativa):** Mede a intensidade de conflito conceitual ativo entre teses e antíteses de subagentes concorrentes. Se $\tau \to 1.0$, o barramento aciona o motor arbitral SCDA.
+- **$\Phi \in [0.0, 1.0]$ (Entropia e Saturação de Contexto):** Métrica de pressão sobre a janela de contexto, orientando a poda de sinapses periféricas.
+- **$\Psi \in [0.0, 1.0]$ (Plasticidade Sináptica Efetiva):** Coeficiente dinâmico de adaptabilidade da malha; decresce à medida que o sistema converge para a homologação.
+- **$\Omega \in \{0, 1, 2, 3, 4, 5\}$ (Expediente Operacional Ativo):** O work shift discreto em execução.
+
+### 1.2. A Matriz de Pesos Sinápticos ($W_{ij}$) & Dinâmica Hebbiana-Estigmérgica
+Cada sinapse conectando a saída de um nó/subagente de origem $i$ à entrada de um consumidor downstream $j$ possui um peso numérico contínuo $w_{ij} \in [0.0, 1.0]$.
+
+1. **Lei de Potenciação de Longo Prazo (LTP - Long-Term Potentiation):**
+   Quando um subagente consumidor $j$ implementa com sucesso uma funcionalidade baseada na sinapse emitida por $i$, passando compilação estrita e testes sem regressão:
+   $$w_{ij}^{(t+1)} = \min\left(1.0, \; w_{ij}^{(t)} + \eta \cdot (1 - C_i)\right)$$
+   Onde $\eta = 0.20$ é a taxa de aprendizado estigmérgico e $(1 - C_i)$ modula o reforço pela clareza epistêmica.
+
+2. **Lei de Depressão de Longo Prazo (LTD - Long-Term Depression):**
+   Caso a sinapse induza erro de compilação, quebra de contrato, colisão de I/O ou receba veto técnico formal (`[PEER_VETO: CONTRACT_REJECTED]`):
+   $$w_{ij}^{(t+1)} = \max\left(0.0, \; w_{ij}^{(t)} - \delta_{penalty}\right)$$
+   Onde $\delta_{penalty} = 0.40$ impõe punição assimétrica severa para extinguir a propagação de falhas em cascata ($X \to Y \to \text{Erro}$).
+
+3. **Decaimento Sináptico Temporal Passivo:**
+   A cada transição de onda ou expediente, sinapses que não foram lidas nem consumidas por nenhum nó sofrem decaimento natural:
+   $$w_{ij}^{(t+1)} = w_{ij}^{(t)} \times (1 - \gamma_{decay})$$
+   Onde $\gamma_{decay} = 0.05$ por expediente.
+
+4. **Poda Sináptica e Limiar de Ativação (Synaptic Pruning):**
+   Ao compilar o payload cirúrgico para a Onda $K+1$, o Córtex Maestro aplica o filtro do limiar de ativação sináptica:
+   $$\text{Filtro}(w_{ij}) = \begin{cases} \text{Injetar no Payload Cirúrgico}, & \text{se } w_{ij} \ge \theta_{threshold} \; (0.65) \\ \text{Poda / Arquivamento em Cold Storage}, & \text{se } w_{ij} < \theta_{threshold} \end{cases}$$
+
+### 1.3. Memória Estigmérgica Associativa & Engramas Cognitivos (`cognitive_engrams`)
+Para superar a amnésia ontológica entre turnos e sessões (TaaS), o `synaptic_bus.json` v5.0 implementa retenção associativa de longo prazo através de **Enagramas Cognitivos** (`cognitive_engrams`). Os engramas encapsulam invariantes comprovados e blacklists de armadilhas empíricas no filesystem:
 
 ```json
 {
-  "bus_version": "4.0.0",
-  "active_expediente": 2,
-  "synaptic_signals": {
-    "CONTRACT_STATUS": {
-      "src/core/ports/IStorage.ts": "CONTRACT_STABLE",
-      "src/core/types/Order.ts": "CONTRACT_HOLD"
-    }
-  },
-  "propagated_synapses": [
-    {
-      "origin_node": "node_001_domain_entity.md",
-      "emitted_by": "DomainEntityArchitect",
-      "synaptic_output": "export type Result<T, E> = { ok: true; value: T } | { ok: false; error: E };",
-      "consumed_by": ["node_002_storage_adapter.md", "node_003_use_case.md"]
-    }
-  ]
+  "engram_id": "ENG-CONC-001-TARGET-ORTHOGONALITY",
+  "domain": "swarm_concurrency",
+  "heuristic_invariant": "Subagentes concorrentes da mesma onda devem possuir alvos de escrita estritamente disjuntos: FileSet(Si) ∩ FileSet(Sj) = ∅.",
+  "fiduciary_score": 1.00,
+  "reinforcement_count": 18,
+  "is_active": true
 }
 ```
 
-### Protocolo de Propagação Feedforward:
-1. **Onda $K$:** Subagentes emitem seus nós contendo explicitamente a tag `[SYNAPTIC_OUTPUTS]`.
-2. **Consolidação:** O Agente Principal atua como *Chief Systems Architect*, lê as saídas, valida consistência e atualiza `synaptic_bus.json`.
-3. **Injeção na Onda $K+1$:** Os subagentes da próxima onda recebem no prompt as sinapses consolidadas relevantes sob a tag `[SYNAPTIC_INPUTS]`. A onda subsequente constrói diretamente sobre a causalidade comprovada da onda anterior ($X \to Y \to Z$).
+### 1.4. Arquitetura do Schema JSON v5.0 do `synaptic_bus.json`:
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "bus_version": "5.0.0",
+  "meta": {
+    "engine": "Autonomous Hyper-Cortex Neural Mesh",
+    "updated_at": "2026-09-17T20:25:00-03:00",
+    "fiduciary_director": "Chief Systems Architect",
+    "mission_hash": "..."
+  },
+  "cognitive_state_vector": {
+    "epistemic_conviction_Ce": 0.95,
+    "residual_uncertainty_Ci": 0.05,
+    "active_dialectical_tension_tau": 0.08,
+    "context_entropy_Phi": 0.22,
+    "effective_plasticity_Psi": 0.85,
+    "active_expediente_Omega": 2,
+    "active_wave": 1,
+    "total_waves_scheduled": 2
+  },
+  "quantum_contracts": {
+    "src/core/ports/IStorage.ts": {
+      "status": "CONTRACT_STABLE",
+      "version": "5.0.0",
+      "owner_node": "StorageDomainArchitect",
+      "verification_hash": "...",
+      "superseded_by": null,
+      "allowed_consumers": ["all"],
+      "dependencies": []
+    }
+  },
+  "synaptic_weights_matrix": [
+    {
+      "origin_node": "node_001_domain_entity.md",
+      "target_node": "src/core/ports/IStorage.ts",
+      "weight_Wij": 0.98,
+      "synaptic_bandwidth": "HIGH",
+      "last_reinforced_wave": 1,
+      "ltp_events_count": 3,
+      "ltd_events_count": 0
+    }
+  ],
+  "associative_memory": {
+    "memory_tier": "LONG_TERM_STIGMERGIC",
+    "engrams": []
+  },
+  "propagated_synapses": [
+    {
+      "synapse_id": "SYN-001",
+      "origin_node": "node_001_domain_entity.md",
+      "emitted_by": "DomainEntityArchitect",
+      "weight": 0.98,
+      "synaptic_output": "export type Result<T, E> = { readonly ok: true; readonly value: T } | { readonly ok: false; readonly error: E };",
+      "consumed_by": ["src/core/ports/IStorage.ts", "src/core/usecases/OrderUseCase.ts"]
+    }
+  ],
+  "conflict_resolution_engine": {
+    "active_conflicts": [],
+    "arbitration_history": []
+  }
+}
+```
+
+### 1.5. Protocolo de Propagação Feedforward:
+1. **Onda $K$:** Subagentes emitem seus artefatos contendo explicitamente a tag `[SYNAPTIC_OUTPUTS]`.
+2. **Consolidação & Hebbian Update:** O Agente Principal atua como *Chief Systems Architect*, valida a consistência, computa LTP/LTD e atualiza `synaptic_bus.json`.
+3. **Injeção na Onda $K+1$:** Subagentes da próxima onda recebem no prompt as sinapses com peso $w_{ij} \ge 0.65$ sob `[SYNAPTIC_INPUTS]` e engramas relevantes sob `[ASSOCIATIVE_MEMORY_ENGRAMS]`.
 
 ---
 
-## 2. As Travas de Concorrência Sináptica & Protocolo HOLD/GO (Synaptic Mutex)
+## 2. Transição Quântica de Contratos em 5 Estados & Resolução Dialética SCDA
 
-Subagentes que definem ou refatoram contratos estruturais, tipos compartilhados ou portas arquiteturais (`src/core/ports/`) operam sob **exclusão mútua (*Synaptic Mutex*)**:
+Subagentes que definem ou refatoram contratos estruturais, tipos compartilhados ou portas arquiteturais (`src/core/ports/`) operam sob o modelo de **Transição Quântica de Contratos em 5 Estados**, erradicando a dualidade binária cega.
 
-- **Sinal `CONTRACT_HOLD`:** Enquanto o contrato estiver em elaboração pelo nó emissor, ele sinaliza `CONTRACT_HOLD` no barramento sináptico.
-- **Veto a Código Especulativo:** Subagentes consumidores estão terminantemente proibidos de gerar código especulativo sobre interfaces instáveis, devendo suspender a execução ou aguardar o sinal determinístico `CONTRACT_STABLE (GO)`.
-- **Eliminação de Colisões:** Este mecanismo previne refatorações concorrentes conflitantes, colisão de arquivos e retrabalho sob concorrência massiva.
+```text
+       ┌──────────────┐
+       │   1. HOLD    │ ◄─────────────────────────┐
+       └──────┬───────┘                           │
+              │ Subagente inicia rascunho         │ [PEER_VETO] ou Falha de Tipos
+              ▼                                   │
+       ┌──────────────┐                           │
+       │   2. DRAFT   │ ──────────────────────────┤
+       └──────┬───────┘                           │
+              │ Emissão para validação formal     │
+              ▼                                   │
+       ┌──────────────┐                           │
+       │ 3. VERIFYING │ ──────────────────────────┘
+       └──────┬───────┘
+              │ Teste de tipos Result<T,E> aprovado + Zero Stub
+              ▼
+       ┌──────────────┐
+       │  4. STABLE   │ (GO para todos os consumidores downstream)
+       └──────┬───────┘
+              │ Interface marcada para substituição arquitetural
+              ▼
+       ┌──────────────┐
+       │ 5. DEPRECATED│ (Consumo por novos nós proibido; prazo de migração)
+       └──────────────┘
+```
+
+### 2.1. Matriz Semântica dos 5 Estados de Contrato
+
+| Estado | Significado Semântico | Permissão de Leitura | Permissão de Mutação | Ação dos Consumidores Downstream |
+|---|---|---|---|---|
+| **`CONTRACT_HOLD`** | Interface bloqueada sob exclusão mútua profunda. Reestruturação estrutural em curso. | Proibida | Exclusiva do nó titular | **SUSPENSÃO TOTAL**. É proibido gerar qualquer linha de código especulativo. |
+| **`CONTRACT_DRAFT`** | Proposta de interface disponibilizada para inspeção preliminar e revisão técnica entre pares. | Aberta para leitura | Permitida ao nó titular | Análise estática preliminar permitida; proibido acoplar lógica de produção definitiva. |
+| **`CONTRACT_VERIFYING`** | Congelamento de contrato para execução de suítes de validação de tipos, interfaces de portas e testes de integração. | Aberta para testes | Bloqueada temporariamente | Execução de testes de compatibilidade; emissão de veto imediato se houver quebra. |
+| **`CONTRACT_STABLE`** | Contrato formalmente validado, homologado e imutável no escopo da missão. | Leitura plena irrestrita | Veto total a mutação sem nova RFC | **LIBERAÇÃO TOTAL (GO)**. Consumidores downstream autorizados a implementar adaptadores. |
+| **`CONTRACT_DEPRECATED`** | Interface obsoleta que será eliminada. Aponta obrigatoriamente para `superseded_by`. | Permitida (legada) | Bloqueada | Novos nós proibidos de consumir; nós existentes devem migrar para o novo contrato no work shift. |
+
+**Invariante de Fechamento:** É terminantemente proibido manter contratos em `CONTRACT_DRAFT` ou `CONTRACT_VERIFYING` na transição para a Época III. Todos os contratos montantes devem atingir deterministamente `CONTRACT_STABLE`.
+
+### 2.2. Algoritmo Synaptic Consensus & Dialectical Arbitration (SCDA v5.0)
+
+Sob concorrência de múltiplos subagentes, divergências e vetos cruzados são resolvidos pelo algoritmo **SCDA**, eliminando paralisias estéreis:
+
+1. **Taxonomia de Conflitos:**
+   - *Type Signature Collision:* Incompatibilidade de tipos compartilhados no mesmo domínio.
+   - *Cross-Domain Constraint Contention:* Conflito entre restrições não-funcionais (ex: taxa de quadros na UI vs. isolamento de agregados).
+   - *Deadlocked Peer Veto:* Impasse de vetos técnicos bilaterais entre pares adjacentes.
+
+2. **Protocolo de Resolução em 4 Etapas:**
+   - **Etapa 1: Quarentena:** Ambos os contratos entram em `CONTRACT_HOLD` e o conflito é registrado em `synaptic_bus.json -> conflict_resolution_engine`.
+   - **Etapa 2: Fator de Precedência Fiduciária ($FPF$):**
+     $$FPF_k = 0.40 \cdot S_{type\_safety} + 0.30 \cdot S_{fail\_isolation} + 0.20 \cdot S_{perf\_budget} + 0.10 \cdot S_{simplicity}$$
+     Onde a hierarquia constitucional prioriza: Segurança e Tipos > Isolamento de Falhas > Orçamento de Performance > Simplicidade Mecânica.
+   - **Etapa 3A: Resolução Determinística ($\Delta FPF \ge 0.20$):** A proposta dominante com maior $FPF$ é promovida a `CONTRACT_DRAFT`.
+   - **Etapa 3B: Síntese Dialética Automatizada ($\Delta FPF < 0.20$):** Em impasses de equivalência fiduciária, o barramento sintetiza uma camada intermediária de isolamento (Port Adapter Pattern), unificando as teses em tipos discriminados defensivos (`Result<T,E>`).
+   - **Etapa 4: Validação de Não-Regressão:** Testes de compilação validam a resolução e reemitem `CONTRACT_STABLE`.
 
 ---
 
@@ -138,6 +282,11 @@ Subagentes não são utilitários opcionais nem ferramentas de apoio secundária
    - É terminantemente proibido ao subagente atuar como consultor de chat ou devolver blocos de código em markdown no `send_message` para o Agente Principal digitar.
    - O subagente deve executar fisicamente as ferramentas motoras (`replace_file_content`, `write_to_file`, `run_command`) em sua própria sessão, validar a persistência e compilação, e reportar apenas a telemetria fria de arquivos modificados e testes executados.
    - **Trava de Auto-Veto do Agente Principal (`[HARD REJECT: ADVISORY_CODE_DUMP]`):** Se um subagente devolver código textual no `send_message` sem mutação comprovada no disco, o Agente Principal está terminantemente proibido de aplicar ou digitar o código. O Agente Principal deve rejeitar a entrega sumariamente e ordenar a mutação física direta via ferramenta.
+6. **Blindagem de Concorrência no Filesystem & Primitiva FsLockEngine:**
+   - Mutações concorrentes em arquivos compartilhados (`synaptic_bus.json`, `.planning/expediente_state.json`) exigem exclusão mútua atômica via lockfile semafórico (`O_CREAT | O_EXCL` com flag `'wx'`), algoritmo de backoff exponencial com full jitter e detecção de processos órfãos (PID liveness).
+   - Toda escrita física utiliza `DeterministicAtomicSwap` com verificação de integridade SHA-256 duplo (pré e pós-swap) e `fsyncSync` compulsório no mesmo volume (`<target>.tmp.<pid>.<time>`), eliminando truncamento parcial e erros `EBUSY` no Windows NTFS.
+7. **Governança de Plasticidade Sináptica em Ondas:**
+   - Subagentes da Onda $K$ consomem exclusivamente sinapses com peso calibrado $w_{ij} \ge 0.65$, registram emissões em `[SYNAPTIC_OUTPUTS]`, reforçam a malha com eventos de LTP ($\eta = 0.20$) após homologação ou LTD ($\delta_{penalty} = 0.40$) após vetos, e integram engramas heurísticos sob `[ASSOCIATIVE_MEMORY_ENGRAMS]`.
 
 ---
 
@@ -166,7 +315,7 @@ O erro estocástico clássico ocorre quando o Agente Principal intercepta essa s
 
 ---
 
-## 10. Checklist Forense de Orquestração de Enxame (Binário — Lei 41 & 42)
+## 10. Checklist Forense de Orquestração de Enxame (Binário — Leis 41 a 45 — v5.0)
 
 > Auditado pelo Agente Principal e pelo Red Team Juiz na Época IV.
 
@@ -177,11 +326,16 @@ O erro estocástico clássico ocorre quando o Agente Principal intercepta essa s
 - [ ] **Clean-Context Verificado:** subagente despachado com payload cirúrgico delimitado, sem vazamento do histórico da thread principal.
 - [ ] **Teto de Onda Respeitado:** máximo de 15 subagentes por chamada de `invoke_subagent`.
 - [ ] **Sinapses Feedforward Persistidas:** saídas registradas no `synaptic_bus.json` com `[SYNAPTIC_OUTPUTS]`.
-- [ ] **HOLD/GO Respeitado:** interfaces instáveis respeitaram exclusão mútua (`CONTRACT_HOLD` -> `CONTRACT_STABLE`).
+- [ ] **Plasticidade Sináptica Validada:** pesos sinápticos $w_{ij} \ge 0.65$ verificados para injeção em downstream; eventos LTP ($\eta = 0.20$) e LTD ($\delta_{penalty} = 0.40$) computados.
+- [ ] **Transição Quântica de Contratos em 5 Fases:** contratos transicionados formalmente (`HOLD` -> `DRAFT` -> `VERIFYING` -> `STABLE` -> `DEPRECATED`); zero contratos órfãos em DRAFT/VERIFYING na transição para Época III.
+- [ ] **Resolução Algorítmica de Conflitos SCDA:** divergências e vetos cruzados dirimidos por Fator de Precedência Fiduciária ($FPF$) ou Síntese Dialética.
+- [ ] **Blindagem FsLockEngine:** concorrência sobre arquivos compartilhados mediada por locks semafóricos atômicos ($O\_CREAT \mid O\_EXCL$) com TTL e detecção de PIDs órfãos.
+- [ ] **Atomic Swap com Atestação Dupla SHA-256:** gravações de arquivos e barramento realizadas via `DeterministicAtomicSwap` com `fsyncSync` e verificação criptográfica pré e pós-swap no mesmo volume.
 - [ ] **Esquadrões Sob Medida:** zero templates estáticos repetitivos; especialidades derivadas da física do problema.
 - [ ] **Zero Role Drift:** subagentes cumpriram estritamente seu `[MY_SWARM_DELIVERABLE]` sem invadir escopo alheio.
-- [ ] **Peer Veto Resolvido:** zero contratos contestados pendentes no `graph.json`.
+- [ ] **Peer Veto Resolvido:** zero contratos contestados pendentes no `graph.json` ou barramento sináptico.
 - [ ] **Mandato do Artífice Motor Cumprido:** subagentes de produção executaram mutações físicas no disco via ferramentas de escrita (`replace_file_content` / `write_to_file`); zero dumps de código em markdown no `send_message`.
 - [ ] **Veto ao Parent Digitador Mantido:** Agente Principal absteve-se de digitar ou colar código produzido por subagentes; atuou estritamente como árbitro e validador.
 - [ ] **Despacho Motor Válido:** todos os subagentes com meta de produção ou mutação foram despachados com `TypeName: "self"`.
 - [ ] **Ortogonalidade Estrita de Alvos:** nenhum arquivo físico compartilhado simultaneamente por múltiplos subagentes na mesma onda ($\text{FileSet}(S_i) \cap \text{FileSet}(S_j) = \emptyset$).
+- [ ] **Memória Estigmérgica de Engramas Ativa:** heurísticas empíricas e invariantes destilados consolidados em `cognitive_engrams` e consumidos pela malha.

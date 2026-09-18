@@ -1,21 +1,34 @@
 {
-  "turn_index": 1,
-  "timestamp": "2026-09-17T20:05:00-03:00",
-  "user_raw_prompt_hash": "2e4ac3d69239e1fd8318908b5834493d53ef9fdb636f8e8ab6ae6c853071929d",
+  "turn_index": 2,
+  "timestamp": "2026-09-17T20:18:00-03:00",
+  "user_raw_prompt_hash": "fc31cdef9c9501b587f98a55e421cb1fdcc8b964d93f1f8045fdb9658e92aa0b",
   "mission_dossier_path": ".planning/mission_dossier.md",
-  "session_mode": "Universal v4.1 — Sovereign Session",
-  "mission_type": "DIRECT_OPERATIONAL",
-  "nodes_floor": 0,
-  "recommended_flash_mode": "Flash Low",
+  "session_mode": "Universal v5.0 — Hyper-Cortex Sovereign Session",
+  "mission_type": "ARCHITECTURAL",
+  "nodes_floor": 100,
+  "total_subagents": 20,
+  "waves_count": 2,
+  "wave_distribution": {
+    "wave_1_investigation_ontology": 10,
+    "wave_2_motor_coding_mutators": 10
+  },
+  "max_subagents_per_wave": 15,
+  "recommended_flash_mode": "Flash Low (Época 0/II) | Flash Medium (Onda 1/III) | Flash High (Época IV)",
   "mandatory_keywords_injected": [
     "Água no Deserto",
+    "Salto Geracional v5.0",
+    "The Autonomous Hyper-Cortex",
+    "Dynamic Thought Graph Router",
+    "Autonomous Skill Synthesizer",
+    "Plasticidade Sináptica",
     "Mandato do Artífice Motor",
     "Banimento do Subagente Consultor",
     "Mutação Direta no Disco",
     "1:1 Subagente por Nó / Arquivo",
     "Two-Mind Minimum",
+    "Handoff Neural de Alta Fidelidade",
     "Zero-Stub Permanente",
-    "Universal Pipeline v4.1"
+    "Null-Vocabulary Estrito"
   ],
   "forensic_signoff": {
     "layer1_explicit_contracts": true,
@@ -25,11 +38,14 @@
   },
   "seal_status": "SEALED_VALID",
   "authorized_operations": [
-    "DISPATCH_INVESTIGATION_SQUAD",
+    "DISPATCH_WAVE_1_INVESTIGATION_SQUAD",
     "VIEW_INVESTIGATION_REPORTS",
-    "DISPATCH_MOTOR_CODING_SQUAD",
+    "CONSOLIDATE_SYNAPTIC_BUS_V5",
+    "COMPOSE_IMPLEMENTATION_PLAN_V5",
+    "DISPATCH_WAVE_2_MOTOR_CODING_SQUAD",
     "PHYSICAL_FILE_MUTATION",
-    "RUN_TESTS",
-    "DISPATCH_RED_TEAM_JUDGE"
+    "ACTIVATE_DYNAMIC_SKILL_ROUTER",
+    "RUN_SYSTEM_REGRESSION_TESTS",
+    "DISPATCH_RED_TEAM_GAUNTLET_JUDGE"
   ]
 }
