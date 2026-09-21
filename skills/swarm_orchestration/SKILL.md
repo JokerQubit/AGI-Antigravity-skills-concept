@@ -1,6 +1,6 @@
 ---
 name: swarm_orchestration
-description: "v5.0 — Autonomous Hyper-Cortex Neural Mesh — Orquestração Cybernética de Enxame & Governança Neural. Playbook operacional para gestão do Barramento Sináptico Neural Plástico (synaptic_bus.json v5.0), vetores de estado cognitivo S, plasticidade hebbiana (LTP/LTD), memória estigmérgica associativa (engramas cognitivos), transição quântica de contratos em 5 estados, resolução algorítmica de conflitos SCDA, exclusão mútua via FsLockEngine, e deliberação adversarial entre pares."
+description: "v5.0 — Autonomous Hyper-Cortex Neural Mesh — Orquestração Cybernética de Enxame & Governança Neural. Playbook operacional para gestão do Barramento Sináptico Neural Plástico (synaptic_bus.json v5.0), vetores de estado cognitivo S, plasticidade hebbiana (LTP/LTD), memória estigmérgica associativa (engramas cognitivos), transição quântica de contratos em 5 estados, resolução algorítmica de conflitos SCDA, exclusão mútua via FsLockEngine, Supervisory Rejection Dossier com blacklist acumulativa de vetores, suporte estigmérgico a mutações de RSI e deliberação adversarial entre pares."
 ---
 
 # Swarm Orchestration & Cybernetic Neural Mesh Playbook — v5.0
@@ -131,6 +131,15 @@ Para superar a amnésia ontológica entre turnos e sessões (TaaS), o `synaptic_
 2. **Consolidação & Hebbian Update:** O Agente Principal atua como *Chief Systems Architect*, valida a consistência, computa LTP/LTD e atualiza `synaptic_bus.json`.
 3. **Injeção na Onda $K+1$:** Subagentes da próxima onda recebem no prompt as sinapses com peso $w_{ij} \ge 0.65$ sob `[SYNAPTIC_INPUTS]` e engramas relevantes sob `[ASSOCIATIVE_MEMORY_ENGRAMS]`.
 
+### 1.6. Suporte Estigmérgico para Mutações de RSI & Registro de Engramas Hebbianos
+A memória estigmérgica do `synaptic_bus.json` v5.0 atua como substrato de sustentação e persistência para o subsistema de **Recursive Self-Improvement (RSI) Autônomo**:
+1. **Inscrição de Engramas Pós-Ciclo Hebbiano:**
+   Heurísticas validadas e aprovadas no Gauntlet recebem reforço de LTP ($\eta = 0.20$) e são automaticamente promovidas a engramas associativos em `associative_memory.engrams`. Falhas operacionais, quebras de build ou vetos técnicos sofrem penalidade de LTD ($\delta_{penalty} = 0.40$) e são convertidas em regras negativas e blacklists de armadilhas empíricas.
+2. **Telemetria Fria & Post-Mortem Cognitivo:**
+   Ao término de transições críticas ou incidentes de execução, o motor de post-mortem gera `.planning/post_mortem/pm_<timestamp>.json` com telemetria fria: contagem de tentativas motoras, falhas de sintaxe/AST, violações de linter, tempo de latência e circuit breakers acionados.
+3. **Rastreamento Estigmérgico de Patches RSI:**
+   Hipóteses de mutação em regras de projeto (Spokes em `.agents/rules/`) ou manuais de maestria (`skills/`) são catalogadas sob `.planning/rsi/candidates/patch_<id>.json`. Mutações aprovadas no Sandbox Gauntlet são consolidadas no disco via `DeterministicAtomicSwap`, registradas no State Ledger (`.planning/ledger/txn_XXXX.json`) e têm seus engramas correspondentes ativados no barramento sináptico, governadas permanentemente pelo Núcleo Constitucional Imutável (Layer 0 Frozen Core) e pelo Invariante Anti-Dumbing-Down.
+
 ---
 
 ## 2. Transição Quântica de Contratos em 5 Estados & Resolução Dialética SCDA
@@ -192,6 +201,19 @@ Sob concorrência de múltiplos subagentes, divergências e vetos cruzados são 
    - **Etapa 3A: Resolução Determinística ($\Delta FPF \ge 0.20$):** A proposta dominante com maior $FPF$ é promovida a `CONTRACT_DRAFT`.
    - **Etapa 3B: Síntese Dialética Automatizada ($\Delta FPF < 0.20$):** Em impasses de equivalência fiduciária, o barramento sintetiza uma camada intermediária de isolamento (Port Adapter Pattern), unificando as teses em tipos discriminados defensivos (`Result<T,E>`).
    - **Etapa 4: Validação de Não-Regressão:** Testes de compilação validam a resolução e reemitem `CONTRACT_STABLE`.
+
+### 2.3. O Protocolo do Supervisory Rejection Dossier & Blacklist Acumulativa de Vetores
+Inspirado na governança cibernética de sobrevivência darwiniana e tolerância zero a falhas (Loop do Advogado do Diabo):
+
+1. **Emissão Mandatória do Non-Acceptance Dossier:**
+   Diante de quebra de contrato, falha de tipagem estrita (`Result<T,E>`), violação de testes unitários ou veto técnico bilateral (`[PEER_VETO: CONTRACT_REJECTED]`), a autoridade supervisora ou revisora emite compulsoriamente `.planning/rejections/rejection_dossier_<slug>.json`:
+   - `failing_vectors`: Lista exata de asserções reprovadas, erros de sintaxe/AST, quebras de contrato ou exceções de runtime.
+   - `blacklisted_patterns`: Lista acumulativa de padrões técnicos, algoritmos, funções ou estruturas de dados estritamente banidas de reiteração.
+   - `mandatory_mutation_axis`: Vetor formal exigindo redirecionamento da abordagem arquitetural ($X \to Y' \to Z$).
+
+2. **Invariante da Não-Reiteração de Vetores Rejeitados:**
+   O subagente encarregado da correção DEVE carregar e ler o dossiê de rejeição via `view_file` como sua primeira ação motora. É terminantemente proibido tentar mutações cosméticas, correções de sintaxe superficiais ou variantes dentro do mesmo espaço vetorial reprovado. Submeter código que repita padrões blacklisted aciona a trava mecânica:
+   `[HARD REJECT: BLACKLISTED_VECTOR_REITERATION]`
 
 ---
 
@@ -287,6 +309,12 @@ Subagentes não são utilitários opcionais nem ferramentas de apoio secundária
    - Toda escrita física utiliza `DeterministicAtomicSwap` com verificação de integridade SHA-256 duplo (pré e pós-swap) e `fsyncSync` compulsório no mesmo volume (`<target>.tmp.<pid>.<time>`), eliminando truncamento parcial e erros `EBUSY` no Windows NTFS.
 7. **Governança de Plasticidade Sináptica em Ondas:**
    - Subagentes da Onda $K$ consomem exclusivamente sinapses com peso calibrado $w_{ij} \ge 0.65$, registram emissões em `[SYNAPTIC_OUTPUTS]`, reforçam a malha com eventos de LTP ($\eta = 0.20$) após homologação ou LTD ($\delta_{penalty} = 0.40$) após vetos, e integram engramas heurísticos sob `[ASSOCIATIVE_MEMORY_ENGRAMS]`.
+8. **Supervisory Rejection Dossier & Banimento de Reiteração em Espaço de Erro:**
+   - Subagentes reprovados em portões determinísticos, supervisão técnica ou Gauntlet (Época IV) não recebem feedbacks vagos nem autorização para repetições estocásticas.
+   - O supervisor emite o **Non-Acceptance Dossier com Blacklist Acumulativa de Vetores** (`.planning/rejections/rejection_dossier_<slug>.json`), catalogando falhas de AST, incompatibilidade de tipos, exceções de runtime e padrões banidos.
+   - O subagente de correção DEVE consumir o dossiê via `view_file` antes de qualquer mutação física e rotacionar compulsoriamente seu espaço de busca e algoritmo. A reiteração no mesmo espaço de erro ou reutilização de padrões banidos aciona a trava mecânica `[HARD REJECT: BLACKLISTED_VECTOR_REITERATION]`.
+9. **Suporte Estigmérgico a Mutações de RSI & Memória Associativa:**
+   - O enxame integra-se organicamente ao pipeline de Recursive Self-Improvement (RSI): incidentes motores geram registros de post-mortem (`pm_*.json`), retroalimentando o barramento com engramas cognitivos Hebbianos e disparando propostas cirúrgicas de patch (`.planning/rsi/candidates/patch_<id>.json`) validadas sob o Invariante Anti-Dumbing-Down.
 
 ---
 
@@ -339,3 +367,5 @@ O erro estocástico clássico ocorre quando o Agente Principal intercepta essa s
 - [ ] **Despacho Motor Válido:** todos os subagentes com meta de produção ou mutação foram despachados com `TypeName: "self"`.
 - [ ] **Ortogonalidade Estrita de Alvos:** nenhum arquivo físico compartilhado simultaneamente por múltiplos subagentes na mesma onda ($\text{FileSet}(S_i) \cap \text{FileSet}(S_j) = \emptyset$).
 - [ ] **Memória Estigmérgica de Engramas Ativa:** heurísticas empíricas e invariantes destilados consolidados em `cognitive_engrams` e consumidos pela malha.
+- [ ] **Supervisory Rejection Dossier Auditado & Ausência de Iteração em Espaço Rejeitado:** subagentes que sofreram veto ou reprovação consumiram o Non-Acceptance Dossier via `view_file`; zero reiteração de vetores presentes na Blacklist Acumulativa (`[HARD REJECT: BLACKLISTED_VECTOR_REITERATION]`).
+- [ ] **Suporte Estigmérgico RSI & Engramas Hebbianos Ativos:** telemetria fria pós-execução registrada (`pm_*.json`), heurísticas derivadas de ciclos Hebbianos (LTP/LTD) convertidas em engramas em `associative_memory` e patches de RSI validados sob o Invariante Anti-Dumbing-Down.

@@ -91,7 +91,16 @@ Subagentes operando em enxame não são silos isolados nem executores pontuais, 
   ],
   "conflict_resolution_engine": {
     "active_conflicts": [],
-    "arbitration_history": []
+    "arbitration_history": [],
+    "refuted_vectors_blacklist": [
+      {
+        "vector_id": "VEC-REF-001",
+        "origin_rejection": "REJ-PEER-VETO-004",
+        "banned_hypothesis": "Tentativa de escrita concorrente sem exclusão mútua FsLockEngine",
+        "failing_subagent": "StorageAdapterSpecialist",
+        "mandatory_mutation_axis": "Port-Adapter Pattern com FsLockEngine e união discriminada Result<T,E>"
+      }
+    ]
   },
   "investigation_artifacts": [
     ".planning/investigations/inv_013_synaptic_plasticity_state_vector.md",
@@ -173,14 +182,79 @@ $$\forall i, j \in \{1, \dots, M\}, \; i \neq j \implies \text{TargetFiles}(S_i)
 - A cardinalidade da união de todos os alvos é estritamente igual à soma das cardinalidades: $|\bigcup_{i=1}^M \text{TargetFiles}(S_i)| = \sum_{i=1}^M |\text{TargetFiles}(S_i)|$.
 - Toda gravação utiliza compulsoriamente **DeterministicAtomicSwap**: arquivo temporário no mesmo volume (`<target>.tmp.<id>`), esvaziamento de buffer com `fsyncSync()`, atestação dupla de hash SHA-256 (pré e pós-swap) e renomeação atômica.
 
+### 2.5. O Dossiê de Rejeição com Blacklist Acumulativa de Vetores (Supervisory Rejection Dossier)
+Quando uma proposta, contrato ou implementação atômica é sumariamente reprovada pelo Supervisory Gate (Nível 2), pelo Gauntlet Adversarial (Época IV) ou por veto técnico entre pares (`[PEER_VETO]`), é terminantemente proibido o re-despacho estocástico ou o feedback genérico/vago. O sistema aciona compulsoriamente o protocolo de **Supervisory Rejection Dossier**:
+
+1. **Geração do Dossiê Físico no Substrato Estigmérgico:**
+   O supervisor, juiz ou subagente autor do veto compila e persiste imediatamente no disco o laudo:
+   `.planning/investigations/rejection_dossier_<target_slug>.json`
+   Estrutura do Dossiê:
+   - `rejection_id`: Identificador único (ex: `REJ-L2-042`).
+   - `target_artifact`: Caminho do arquivo ou contrato rejeitado.
+   - `failing_assertions`: Vetor de asserções que falharam (`exit_code != 0`, quebra de AST, falha de tipagem estrita, violação de contratos ou regressão de testes).
+   - `failing_vector`: A hipótese causal ou mecânica que falhou (ex: *"Uso de monkey-patching em tempo de execução para mascarar falta de porta formal"*).
+   - `blacklisted_patterns`: Lista de abordagens e padrões estritamente banidos de reutilização nas próximas iterações.
+   - `mandatory_mutation_axis`: Eixo tecnológico ou paradigma obrigatório exigido para a nova tentativa (ex: *"Implementar Adapter formal com união discriminada `Result<T,E>`"*).
+
+2. **Inscrição no Barramento Sináptico (`refuted_vectors_blacklist`):**
+   O Agente Principal intercepta a rejeição e inscreve o vetor falho no array acumulativo `conflict_resolution_engine.refuted_vectors_blacklist` do `synaptic_bus.json`. Esta lista é estritamente aditiva (*append-only*): vetores refutados jamais são esquecidos ou expurgados dentro da mesma sessão de missão.
+
+3. **Trava Cibernética de Mutação de Hipótese:**
+   Qualquer subagente subsequente ou re-despachado para o nó ou arquivo DEVE obrigatoriamente ler o dossiê via `view_file` como sua primeira ação motora e é expressamente proibido de iterar sobre qualquer padrão presente na Blacklist Acumulativa de Vetores.
+   - Caso um subagente re-despachado submeta uma variação cosmética ou isomórfica de um vetor da blacklist, o Supervisory Gate aciona a trava mecânica imediata:
+     `[HARD REJECT: BLACKLISTED_VECTOR_REITERATION]`
+
 ---
 
-## 3. Síntese Dinâmica de Esquadrões Sob Medida (Bespoke Dynamic Squads)
+## 3. Hierarquia Cibernética Corporativa (Enterprise Six-Tier Neural Chain) & Síntese Dinâmica de Esquadrões Sob Medida
+
+Subagentes operando em enxames corporativos de alta escala não reportam de forma caótica ou desordenada a uma thread central amorfa. O enxame estrutura-se formalmente sob a **Cadeia Neural Corporativa em 6 Níveis (Enterprise Six-Tier Neural Chain)**, inspirada no *Viable System Model* (VSM) de Stafford Beer, garantindo separação hermética entre governança fiduciária, mediação sináptica, supervisão adversarial e execução motora atômica:
+
+### 3.1. A Cadeia Neural Corporativa em 6 Níveis (The Enterprise Six-Tier Neural Chain)
+
+```text
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                   THE ENTERPRISE SIX-TIER NEURAL CHAIN (VSM CYBERNETICS)               │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ LEVEL 6: Governança Fiduciária Soberana (Dual-CEO / Human Principal + AI Sovereign CEO)│
+│          → Soberania fiduciária máxima, alocação de risco, diretrizes mestras e veto   │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ LEVEL 5: Cross-Departmental Handshake Hub                                              │
+│          → Barramento sináptico neural (synaptic_bus.json), State Ledger e contratos   │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ LEVEL 4: Arquiteto Chefe de Sistemas & Systems Research Director (C-Suite L9)          │
+│          → Alinhamento de invariantes de engenharia, Clean Architecture e portas       │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ LEVEL 3: Gerentes de Domínio & Orquestradores de Onda (L8)                             │
+│          → Decomposição de tarefas, dimensionamento de ondas e pacing de expedientes   │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ LEVEL 2: Supervisory & Quality Verification Gates (L7 — Devil's Advocate Loop)         │
+│          → Portões determinísticos (AST, Tipos, Gauntlet, Rejection Dossier & Blacklist)│
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ LEVEL 1: Artífices Motores de Execução Atômica 1:1 (L6/L5 — Clean-Context Specialists) │
+│          → Mutação física atômica no disco via ferramentas de escrita (TypeName: self) │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+1. **Level 6 — Governança Fiduciária Soberana (Dual-CEO Council):**
+   Paridade executiva formal entre o Human Principal e o Córtex Soberano (Turnaround CEO / SCP). Define metas invioláveis, integridade mecânica e autoridade suprema de interrupção.
+2. **Level 5 — Cross-Departmental Handshake Hub:**
+   Barramento sináptico estigmérgico interdepartamental (`synaptic_bus.json`) e transações imutáveis do State Ledger (`.planning/ledger/`). Garante convergência ontológica e alinhamento de interfaces entre domínios ortogonais (frontend, backend, concorrência, storage).
+3. **Level 4 — Arquiteto Chefe de Sistemas & Systems Research Director:**
+   Supervisão transversal de engenharia, definição dos contratos de porta (`CONTRACT_STABLE`), tipagem discriminada defensiva (`Result<T,E>`) e preservação inegociável de primeiros princípios.
+4. **Level 3 — Gerentes de Domínio & Orquestradores de Onda:**
+   Decomposição sináptica da missão em nós atômicos disjuntos, dimensionamento de ondas sequenciais (máximo 15 subagentes) e governança de transição de expedientes cognitivos (Work Shifts).
+5. **Level 2 — Supervisory & Quality Verification Gates (Loop do Advogado do Diabo):**
+   Juízes e auditores adversariais independentes com poder de veto incondicional (`[HARD REJECT]`). Aplicam a tríade determinística (AST / Parser Tree, Tipagem Estrita e Testes sem regressão). Emitem o **Supervisory Rejection Dossier** e gerenciam a Blacklist Acumulativa de Vetores.
+6. **Level 1 — Artífices Motores de Execução Atômica 1:1:**
+   Subagentes de execução com `TypeName: "self"` operando sob Clean-Context, disjunção matemática de arquivos ($\text{TargetFiles}(S_i) \cap \text{TargetFiles}(S_j) = \emptyset$) e atuando diretamente no filesystem via `replace_file_content` / `write_to_file`.
+
+### 3.2. Síntese Dinâmica de Esquadrões Sob Medida (Bespoke Dynamic Squads)
 
 **Veto Absoluto a Templates Estáticos de Equipes:** Impor listas cegas pré-formatadas de papéis (ex: sempre despachar "1 pesquisador, 1 arquiteto, 1 testador") induz a máquina à preguiça estocástica e resumos repetitivos.
 
-### Princípio da Síntese Pela Física do Problema:
-O Agente Principal DEVE dissecar a topologia única e os modos silenciosos de falha daquela demanda específica e sintetizar especialidades extremas sob medida:
+#### Princípio da Síntese Pela Física do Problema:
+O Agente Principal DEVE dissecar a topologia única e os modos silenciosos de falha daquela demanda específica e sintetizar especialidades extremas sob medida nos Níveis 1 e 2 da Cadeia Neural:
 - Se envolver áudio: `DSP Buffer & Web Audio Thread Specialist`.
 - Se envolver concorrência/storage: `Atomic Swap & File Descriptor Locks Engineer`.
 - Se envolver animação: `GPU Compositor & Spring Physics Craftsman`.
@@ -201,11 +275,21 @@ Todo subagente despachado opera com consciência lúcida de seu papel no hipergr
 
 ---
 
-## 5. Auditoria Cruzada & Veto Técnico Entre Pares (Peer Veto)
+## 5. Auditoria Cruzada, Veto Técnico Entre Pares (Peer Veto) & O Loop do Advogado do Diabo
 
-Subagentes adjacentes que compartilham fronteiras de dados ou concorrência possuem poder de revisão bilateral:
-- Caso um nó de interface proponha um padrão que degrade a latência, viole o frame rate de 60fps ou imponha concorrência insegura sobre o armazenamento, o subagente de domínio impactado DEVE emitir um veto técnico formal (`[PEER_VETO: CONTRACT_REJECTED]`).
-- Nenhuma primitiva contestada pode ser consolidada no `graph.json` ou transicionar para a Época II sem resolução e consentimento mútuo entre os pares.
+Subagentes adjacentes que compartilham fronteiras de dados, concorrência ou portas de domínio possuem poder de revisão bilateral soberana, integrados ao **Loop do Advogado do Diabo (Devil's Advocate Loop)** do Nível 2 da Cadeia Neural:
+
+### 5.1. Mecânica do Peer Veto
+- Caso um nó de interface proponha um padrão que degrade a latência, viole o frame rate de 60fps, mascare erros com stubs ou imponha concorrência insegura sobre o armazenamento, o subagente de domínio impactado DEVE emitir um veto técnico formal (`[PEER_VETO: CONTRACT_REJECTED]`).
+- Nenhuma primitiva contestada pode ser consolidada no `graph.json`, ser promovida a `CONTRACT_STABLE` ou transicionar para a Época II sem resolução formal e consentimento mútuo entre os pares.
+
+### 5.2. O Loop do Advogado do Diabo & Emissão Compulsória do Rejection Dossier
+A emissão de um `[PEER_VETO]` ou a reprovação pelo Supervisory Gate (Nível 2 / Gauntlet) dispara compulsoriamente a seguinte esteira cibernética:
+1. **Quarentena Imediata do Contrato:** O contrato em disputa transiciona imediatamente para `CONTRACT_HOLD` na Máquina Quântica de Contratos.
+2. **Emissão do Supervisory Rejection Dossier:** O subagente autor do veto ou o juiz do Supervisory Gate compila `.planning/investigations/rejection_dossier_<slug>.json`, explicitando as falhas determinísticas (AST, tipos, concorrência) e delimitando a **Blacklist de Vetores Refutados**.
+3. **Inscrição no Barramento Sináptico:** O Agente Principal atualiza `conflict_resolution_engine.refuted_vectors_blacklist` no `synaptic_bus.json`.
+4. **Veto à Re-submissão Estocástica:** É terminantemente proibido ao subagente re-despachado ou aos nós concorrentes reemitir a mesma solução, variações sintáticas do mesmo código ou tentativas de contornar a restrição com hacks. A nova tentativa deve obrigatoriamente adotar o eixo de mutação prescrito no dossiê (`mandatory_mutation_axis`).
+5. **Auditoria no State Ledger:** A rejeição e a inscrição na blacklist são registradas imutavelmente no livro-razão transacional (`.planning/ledger/txn_XXXX.json`) antes do re-despacho da onda.
 
 ---
 
@@ -361,3 +445,5 @@ O erro estocástico clássico ocorre quando o Agente Principal intercepta essa s
 - [ ] **Auto-Cura OODA em Malha Fechada & Veto ao Abandono:** subagente resolveu atritos de SO autonomamente (Playbooks A-E); tarefa concluída com $\$LASTEXITCODE = 0$ e $StderrFatal = 0$.
 - [ ] **Recibo Fiduciário Motor Emitido:** encerramento transmitido via `[MOTOR_EXECUTION_RECEIPT]` sem texto livre.
 - [ ] **Zero Role Drift:** subagentes cumpriram estritamente seu `[MY_SWARM_DELIVERABLE]` sem invadir escopo alheio.
+- [ ] **Aderência à Cadeia Neural de 6 Níveis (Enterprise Six-Tier):** segregação funcional entre Governança Fiduciária (L6), Handshake Hub (L5), Arquiteto Chefe (L4), Gerentes de Domínio (L3), Supervisory Gate (L2) e Artífices Motores 1:1 (L1).
+- [ ] **Protocolo de Rejection Dossier & Blacklist de Vetores Cumprido:** reprovações pelo Supervisory Gate ou Peer Veto formalizadas em `rejection_dossier_<slug>.json`; vetores refutados inscritos no `synaptic_bus.json` (`refuted_vectors_blacklist`) com veto absoluto à reiteração estocástica.

@@ -1,32 +1,116 @@
 {
-  "turn_index": 2,
-  "timestamp": "2026-09-17T20:18:00-03:00",
-  "user_raw_prompt_hash": "fc31cdef9c9501b587f98a55e421cb1fdcc8b964d93f1f8045fdb9658e92aa0b",
+  "turn_index": 4,
+  "timestamp": "2026-09-21T12:36:00-03:00",
+  "user_raw_prompt_hash": "507a9a8be3d145a86daa9644b28bf42a8dc0720d8baeabdf0406c393692bf082",
   "mission_dossier_path": ".planning/mission_dossier.md",
   "session_mode": "Universal v5.0 — Hyper-Cortex Sovereign Session",
-  "mission_type": "ARCHITECTURAL",
-  "nodes_floor": 100,
-  "total_subagents": 20,
-  "waves_count": 2,
-  "wave_distribution": {
-    "wave_1_investigation_ontology": 10,
-    "wave_2_motor_coding_mutators": 10
+  "mission_type": "DIRECT_OPERATIONAL",
+  "nodes_floor": 0,
+  "total_subagents": 9,
+  "squad_blueprint": {
+    "subagent_1": {
+      "role": "Constitutional Supreme Council Craftsman",
+      "target_file": "rules/AGENTS.md",
+      "action_mode": "PHYSICAL_MUTATION",
+      "thought_topology": "LINEAR_CAUSAL_STREAM",
+      "handoff_source": ".planning/investigations/inv_021_orion_rules_forensic_dissection.md"
+    },
+    "subagent_2": {
+      "role": "Swarm Synaptic Mesh Craftsman",
+      "target_file": "rules/rule1.md",
+      "action_mode": "PHYSICAL_MUTATION",
+      "thought_topology": "LINEAR_CAUSAL_STREAM",
+      "handoff_source": ".planning/investigations/inv_021_orion_rules_forensic_dissection.md"
+    },
+    "subagent_3": {
+      "role": "Cognitive Drawdown Governor Craftsman",
+      "target_file": "rules/rule2.md",
+      "action_mode": "PHYSICAL_MUTATION",
+      "thought_topology": "LINEAR_CAUSAL_STREAM",
+      "handoff_source": ".planning/investigations/inv_021_orion_rules_forensic_dissection.md"
+    },
+    "subagent_4": {
+      "role": "Spoke Rule Factory Skill Architect",
+      "target_file": "skills/spoke_rule_factory/SKILL.md",
+      "action_mode": "PHYSICAL_MUTATION",
+      "thought_topology": "LINEAR_CAUSAL_STREAM",
+      "handoff_source": ".planning/investigations/inv_022_rsi_and_spoke_rule_factory.md"
+    },
+    "subagent_5": {
+      "role": "Autonomous RSI Engine Skill Architect",
+      "target_file": "skills/autonomous_rsi_engine/SKILL.md",
+      "action_mode": "PHYSICAL_MUTATION",
+      "thought_topology": "LINEAR_CAUSAL_STREAM",
+      "handoff_source": ".planning/investigations/inv_022_rsi_and_spoke_rule_factory.md"
+    },
+    "subagent_6": {
+      "role": "Universal Prompt Refiner Integrator",
+      "target_file": "skills/universal_prompt_refiner/SKILL.md",
+      "action_mode": "PHYSICAL_MUTATION",
+      "thought_topology": "LINEAR_CAUSAL_STREAM",
+      "handoff_source": ".planning/investigations/inv_022_rsi_and_spoke_rule_factory.md"
+    },
+    "subagent_7": {
+      "role": "Swarm Playbook Integrator",
+      "target_file": "skills/swarm_orchestration/SKILL.md",
+      "action_mode": "PHYSICAL_MUTATION",
+      "thought_topology": "LINEAR_CAUSAL_STREAM",
+      "handoff_source": ".planning/investigations/inv_021_orion_rules_forensic_dissection.md"
+    },
+    "subagent_8": {
+      "role": "Adaptive Token Governance Integrator",
+      "target_file": "skills/adaptive_token_governance/SKILL.md",
+      "action_mode": "PHYSICAL_MUTATION",
+      "thought_topology": "LINEAR_CAUSAL_STREAM",
+      "handoff_source": ".planning/investigations/inv_021_orion_rules_forensic_dissection.md"
+    },
+    "subagent_9": {
+      "role": "Plugin Manifest Integrator",
+      "target_file": "plugin.json",
+      "action_mode": "PHYSICAL_MUTATION",
+      "thought_topology": "LINEAR_CAUSAL_STREAM",
+      "handoff_source": "plugin.json"
+    }
   },
-  "max_subagents_per_wave": 15,
-  "recommended_flash_mode": "Flash Low (Época 0/II) | Flash Medium (Onda 1/III) | Flash High (Época IV)",
+  "recommended_flash_mode": "Flash Medium",
+  "epsilon_score": 0.05,
+  "active_thought_topology": "LINEAR_CAUSAL_STREAM",
+  "problem_physical_signature": {
+    "spatial": 0.10,
+    "acoustic": 0.05,
+    "state": 0.95,
+    "epistemic": 0.92,
+    "cognitive": 0.98,
+    "economic": 0.80,
+    "distributed": 0.95,
+    "perceptual": 0.35
+  },
+  "active_skills_chain": [
+    "universal_prompt_refiner",
+    "dynamic_thought_router",
+    "swarm_orchestration",
+    "adaptive_token_governance",
+    "hardened_clean_architecture",
+    "forensic_adversarial_auditor"
+  ],
   "mandatory_keywords_injected": [
     "Água no Deserto",
-    "Salto Geracional v5.0",
-    "The Autonomous Hyper-Cortex",
-    "Dynamic Thought Graph Router",
-    "Autonomous Skill Synthesizer",
-    "Plasticidade Sináptica",
-    "Mandato do Artífice Motor",
-    "Banimento do Subagente Consultor",
-    "Mutação Direta no Disco",
-    "1:1 Subagente por Nó / Arquivo",
-    "Two-Mind Minimum",
-    "Handoff Neural de Alta Fidelidade",
+    "Hub-and-Spoke Governance",
+    "Spoke Rule Generator",
+    "Recursive Self-Improvement (RSI)",
+    "The Anti-Degradation Execution Invariant",
+    "Digital Twin Isomorphism",
+    "Zero-Causal Leakage Invariant",
+    "Cognitive Post-Mortem",
+    "Non-Acceptance Rejection Dossier",
+    "Blacklist Acumulativa de Vetores",
+    "Cognitive Drawdown Circuit Breakers",
+    "The Six-Tier Neural Chain",
+    "Layer 0 Frozen Invariant",
+    "Anti-Dumbing-Down Invariant",
+    "Mandato do Artífice Motor 1:1",
+    "Handoff de Alta Fidelidade",
+    "Zero Nós em Disco (DIRECT_OPERATIONAL)",
     "Zero-Stub Permanente",
     "Null-Vocabulary Estrito"
   ],
@@ -34,18 +118,17 @@
     "layer1_explicit_contracts": true,
     "layer2_implicit_contracts": true,
     "layer3_pre_mortem": true,
-    "layer4_two_man_rule": true
+    "layer4_two_man_rule": true,
+    "layer5_physical_signature": true,
+    "layer6_epistemic_calibration": true
   },
   "seal_status": "SEALED_VALID",
   "authorized_operations": [
-    "DISPATCH_WAVE_1_INVESTIGATION_SQUAD",
-    "VIEW_INVESTIGATION_REPORTS",
-    "CONSOLIDATE_SYNAPTIC_BUS_V5",
-    "COMPOSE_IMPLEMENTATION_PLAN_V5",
-    "DISPATCH_WAVE_2_MOTOR_CODING_SQUAD",
-    "PHYSICAL_FILE_MUTATION",
-    "ACTIVATE_DYNAMIC_SKILL_ROUTER",
-    "RUN_SYSTEM_REGRESSION_TESTS",
+    "DISPATCH_ATOMIC_MOTOR_SQUAD_WAVE",
+    "READ_INVESTIGATION_LAUDOS_HIGH_FIDELITY",
+    "MUTATE_PHYSICAL_RULES_AND_SKILLS",
+    "VALIDATE_DISJOINT_FILE_CONCURRENCY",
+    "VERIFY_JSON_SCHEMAS_AND_MANIFEST",
     "DISPATCH_RED_TEAM_GAUNTLET_JUDGE"
   ]
 }

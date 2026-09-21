@@ -1,11 +1,11 @@
 ---
 name: adaptive_token_governance
-description: "v5.0 — The Autonomous Hyper-Cortex Sovereign Engine — Governança Adaptativa de Tokens & Roteamento Inteligente de Modelos. Playbook operacional para Análise de Custo-Complexidade (ACC), dimensionamento de eixos via assinatura de problema (vetor x in [0, 1]^6), escalonamento Flash Thinking coordenado com o dynamic_thought_router (LCS, ToT com poda A*, GoT com fusão multilinear, DAS com tripwire K <= 3), regimes de incerteza epistêmica (epsilon) e gestão por expedientes cognitivos (Work Shifts)."
+description: "v5.0 — The Autonomous Hyper-Cortex Sovereign Engine — Governança Adaptativa de Tokens & Roteamento Inteligente de Modelos. Playbook operacional para Análise de Custo-Complexidade (ACC), dimensionamento de eixos via assinatura de problema (vetor x in [0, 1]^6) e tensor de repositório (Sigma_R), orçamentos para Spoke Rule Factory e ciclos autônomos de RSI, limites multinível de Drawdown Cognitivo (Micro vs Macro), escalonamento Flash Thinking coordenado com o dynamic_thought_router (LCS, ToT com poda A*, GoT com fusão multilinear, DAS com tripwire K <= 3), blindagem do modo DIRECT_OPERATIONAL Zero-Nodes e Leis Constitucionais 51 a 53."
 ---
 
 # Adaptive Token Governance & Model Routing Playbook — v5.0 (The Autonomous Hyper-Cortex)
 
-Protocolo operacional de gestão soberana de tokens que governa sete comportamentos invioláveis: **(1)** chancela e avaliação de custo-complexidade (ACC) via extração compulsória do **Vetor de Assinatura do Problema ($\mathbf{x} \in [0, 1]^6$)** pelo **Prompt Refiner Ubíquo**, **(2)** classificação mandatória da missão em **Modo Arquitetural** ($N \ge 100$ nós) ou **Modo Direto / Operacional** (Zero nós em disco), **(3)** dimensionamento de eixos ontológicos e seleção determinística da topologia cognitiva via **Dynamic Thought Router** (`skills/dynamic_thought_router`), **(4)** emissão mandatória do selo estigmérgico (`.planning/refiner_seal.json`) antes de qualquer ação motora sob pena de `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`, **(5)** ativação imediata do esquadrão do blueprint do Dossiê antes de qualquer mutação de código (`[HARD HALT: SQUAD_DISPATCH_BYPASSED]`), **(6)** particionamento do trabalho em **Expedientes Cognitivos (Work Shifts)** com persistência e State Ledger (`.planning/ledger/`), e **(7)** escalonamento de modos **Flash Thinking (Low, Medium, High)** calibrado pelas **Zonas de Incerteza Epistêmica ($\varepsilon_t$)** e pela topologia ativa.
+Protocolo operacional de gestão soberana de tokens que governa nove comportamentos invioláveis: **(1)** chancela e avaliação de custo-complexidade (ACC) via extração compulsória do **Vetor de Assinatura do Problema ($\mathbf{x} \in [0, 1]^6$)** e do **Tensor de Assinatura de Repositório ($\vec{\Sigma}_R$)** pelo **Prompt Refiner Ubíquo**, **(2)** classificação mandatória da missão em **Modo Arquitetural** ($N \ge 100$ nós) ou **Modo Direto / Operacional (DIRECT_OPERATIONAL Zero-Nodes)** (Zero nós em disco), **(3)** dimensionamento de orçamentos para a **Spoke Rule Factory** (grounding local de nicho) e ciclos autônomos de **Recursive Self-Improvement (RSI)**, **(4)** controle estrito de **Drawdown Cognitivo Multinível (Micro vs Macro Drawdown)** com circuit breakers fiduciários, **(5)** seleção determinística da topologia cognitiva via **Dynamic Thought Router** (`skills/dynamic_thought_router`), **(6)** emissão mandatória do selo estigmérgico (`.planning/refiner_seal.json`) antes de qualquer ação motora sob pena de `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`, **(7)** ativação imediata do esquadrão do blueprint do Dossiê antes de qualquer mutação de código (`[HARD HALT: SQUAD_DISPATCH_BYPASSED]`), **(8)** particionamento do trabalho em **Expedientes Cognitivos (Work Shifts)** com persistência e State Ledger (`.planning/ledger/`), e **(9)** escalonamento de modos **Flash Thinking (Low, Medium, High)** calibrado pelas **Zonas de Incerteza Epistêmica ($\varepsilon_t$)** e governado pelas Leis Constitucionais 51, 52 e 53.
 
 > O ecossistema utiliza exclusivamente o modelo **Flash** nos modos **Low**, **Medium** e **High** de thinking. Não existem outros modelos no roteamento. `flash_lite` e `inherit` são termos banidos neste protocolo.
 
@@ -18,7 +18,7 @@ Protocolo operacional de gestão soberana de tokens que governa sete comportamen
 - **Chancela Ubíqua Pré-Turno (Micro-ACC sob TaaS):** Em todo e qualquer turno subsequente (Expedientes 1 a 5), antes de despachar subagentes de onda ou codificação, o Prompt Refiner disseca a intervenção do usuário do turno atual, recalcula o vetor $\mathbf{x}$, audita a incerteza $\varepsilon_t$, recalibra as ondas e emite o selo criptográfico/estigmérgico `.planning/refiner_seal.json` com status `SEALED_VALID`.
 - **Trava Mecânica de Portão:** Se o Agente Principal tentar executar ferramentas motoras (`write_to_file`, `replace_file_content`, `run_command`) ou despachar outros subagentes sem o selo válido do Prompt Refiner do turno, a operação é sumariamente abortada via `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`.
 
-### 1.1. Vetor de Assinatura do Problema ($\mathbf{x}$) & Dimensionamento de Eixos:
+### 1.1. Vetor de Assinatura do Problema ($\mathbf{x}$), Tensor de Repositório ($\vec{\Sigma}_R$) & Dimensionamento de Eixos:
 Toda demanda é decomposta no vetor normalizado:
 $$\mathbf{x} = \langle D_{\text{ont}}, U_{\text{unc}}, B_{\text{bif}}, C_{\text{conc}}, S_{\text{sens}}, P_{\text{risk}} \rangle \in [0, 1]^6$$
 
@@ -35,6 +35,19 @@ $$\mathbf{x} = \langle D_{\text{ont}}, U_{\text{unc}}, B_{\text{bif}}, C_{\text{
 - Se $D_{\text{ont}} \ge 0.6$: ativação do Eixo de Sistemas em Malha com fusão multilinear GoT no `synaptic_bus.json`.
 - Se $P_{\text{risk}} \ge 0.7$: ativação do Eixo de Engenharia do Caos e Modos Silenciosos de Falha com pre-mortem formal T+6 meses.
 
+#### Dimensionamento Especializado para a Spoke Rule Factory:
+Ao ancorar em qualquer repositório hospedeiro desconhecido ou heterogêneo $R$, o espaço é sondado pelo **Tensor de Assinatura do Repositório**:
+$$\vec{\Sigma}_R = \langle \mathcal{M}_{\text{manifest}}, \mathcal{L}_{\text{lockfiles}}, \mathcal{T}_{\text{ast}}, \mathcal{E}_{\text{execution}}, \mathcal{C}_{\text{concurrency}}, \mathcal{H}_{\text{hardware}}, \mathcal{V}_{\text{validation}} \rangle$$
+- **Reconhecimento Forense:** Identificação de manifestos (`Cargo.toml`, `CMakeLists.txt`, `package.json`, `meta.xml`, `pyproject.toml`), versões de lockfiles, amostragem de AST e binários nativos (`luac -p`, `cargo clippy`, `tsc --noEmit`).
+- **Orçamento de Spoke:** Alocação computacional para compilar os 4 módulos canônicos em `<repo>/.agents/rules/` (`domain_standards.md`, `runtime_constraints.md`, `toolchain_and_validation.md`, `security_and_contracts.md`) e emissão do manifesto estigmérgico `spoke_manifest.json`.
+- **Teorema da Não-Contaminação Constitucional:** $\forall r \in \mathcal{S}_R, \; \mathcal{K}_0 \vdash \neg (\neg r)$. Regras Spoke podem adicionar restrições técnicas específicas de runtime, mas jamais podem afrouxar ou revogar leis da Layer 0.
+
+#### Dimensionamento Especializado para Ciclos Autônomos de RSI:
+O subsistema de **Recursive Self-Improvement (RSI)** opera em 4 fases pós-execução (Gap Identification $\to$ Candidate Patch Synthesis $\to$ Sandboxing & Gauntlet Red Team $\to$ Ratificação Fiduciária & Ledger Commit):
+- **Teto Orçamentário Estrito:** $RSI_{\text{budget}} \le 15\%$ do capital de tokens da sessão, restrito a no máximo 1 patch por expediente de trabalho.
+- **Invariante Anti-Dumbing Down:** Patches candidatos só são homologados se $\text{Severidade}(R_{t+1}) \ge \text{Severidade}(R_t)$ com aprovação $\ge 0.95$ no Gauntlet.
+- **Resfriamento Compulsório:** Proibição absoluta de loops de meta-otimização sem colapso em entregável físico. O RSI só roda após entregas consolidadas nas Épocas III ou IV.
+
 ### 1.2. Integração com o Dynamic Thought Router:
 As pontuações de adequação das topologias de pensamento são calculadas determinísticamente a partir de $\mathbf{x}$:
 $$S_{\text{LCS}}(\mathbf{x}) = (1 - B_{\text{bif}}) \cdot (1 - U_{\text{unc}}) \cdot (1 - C_{\text{conc}}) \cdot (1 - D_{\text{ont}})$$
@@ -44,8 +57,12 @@ $$S_{\text{DAS}}(\mathbf{x}) = P_{\text{risk}} \cdot \max(U_{\text{unc}}, B_{\te
 
 A topologia ótima $\Phi(\mathbf{x}) = \arg\max_{T} S_T(\mathbf{x})$ governa o estilo de raciocínio da fase e é registrada em `.planning/thought_graph.json`.
 
-### 1.3. Sessão Soberana v5.0 & Escalonamento Flash Thinking:
-A intensidade computacional de Thinking no modelo Flash é governada conjuntamente pela **Topologia Ativa** e pelas **Zonas de Incerteza Epistêmica ($\varepsilon_t$)**:
+### 1.3. Sessão Soberana v5.0, Blindagem do Modo DIRECT_OPERATIONAL Zero-Nodes & Escalonamento Flash Thinking:
+O sistema opera sob duas vias mutuamente exclusivas de execução:
+- **Modo Arquitetural / Plataforma:** Novos sistemas, plataformas integradas, refatorações amplas ou módulos complexos. Piso inegociável de $N \ge 100$ nós em `.planning/nodes/`, estruturados em ondas sinápticas ($\le 15$ subagentes/onda).
+- **Modo Direto / Operacional (DIRECT_OPERATIONAL Zero-Nodes):** Resolução de bugs, diagnósticos, patches cirúrgicos, Spoke Rule Factory pontual ou alterações diretas em arquivos existentes. **ZERO nós em disco em `.planning/nodes/`**. É expressamente proibido gerar arquivos de nós de planejamento em disco em modo direto. Todo o capital computacional de tokens é preservado para a execução real: a Dupla Investigativa (Alfa vs. Beta) sob *Clean-Context* e os subagentes artífices motores 1:1 (`TypeName: "self"`) modificam o código diretamente via ferramentas de escrita (`replace_file_content` / `write_to_file`). O plano executivo vai diretamente para o `implementation_plan.md`.
+
+A intensidade de Thinking no modelo Flash é governada conjuntamente pela **Topologia Ativa** e pelas **Zonas de Incerteza Epistêmica ($\varepsilon_t$)**:
 - **`ZONE_GREEN` ($0.00 \le \varepsilon_t \le 0.15$):** Certeza determinística. Roteamento para **Flash Low** (ou **Flash Medium** durante codificação atômica complexa).
 - **`ZONE_AMBER` ($0.15 < \varepsilon_t \le 0.40$):** Atrito probabilístico. Roteamento obrigatório para **Flash Medium** ou **Flash High**. Dispara checagens empíricas antes de escrita.
 - **`ZONE_RED` ($\varepsilon_t > 0.40$):** Ambiguidade crítica. Disparo de `[EPISTEMIC_HALT]`. Congelamento imediato de mutações.
@@ -58,6 +75,18 @@ A intensidade computacional de Thinking no modelo Flash é governada conjuntamen
 | **Expediente 3 (Época II)** | LCS / Matriz de Despacho | $\varepsilon \le 0.15$ | **Flash Low** | Síntese determinística nó-a-nó, checklists binários e parada mecânica para aprovação. |
 | **Expediente 4 (Época III)** | LCS / GoT Motor 1:1 | $\varepsilon \le 0.15$ | **Flash Medium ou High** | Mutação atômica no disco via ferramentas motoras (`TypeName: "self"`), `Result<T,E>`, zero stubs. |
 | **Expediente 5 (Época IV)** | DAS (Dialética Adversarial) | Incerteza Red Team | **Flash High** | Gauntlet adversarial de 4 passadas + inspeção perceptual no Chrome real via `browser-mcp`. |
+
+### 1.4. Governança de Drawdown Cognitivo Multinível (Micro vs. Macro Drawdown):
+A governança de tokens e computação opera em dois horizontes temporais integrados, inspirados no teorema do Kelly Boundary e na preservação de capital fiduciário:
+
+1. **Micro-Drawdown (Piso de Erro Tático & Retries Motores):**
+   - *Limite Estrito de Retries:* Máximo de 2 tentativas consecutivas de autocura para o mesmo incidente mecânico, erro de lint ou falha de teste ($LASTEXITCODE \ne 0$). Persistindo a falha na 3ª tentativa, aciona-se compulsoriamente a trava mecânica `[EPISTEMIC_HALT: CONSECUTIVE_REPAIR_COLLAPSE]`.
+   - *Tripwire de Leitura Ociosa (Idle Read Tripwire):* Em turnos operacionais de implementação ou correção, é terminantemente proibido ler mais de 2 arquivos consecutivos sem realizar uma alteração física (`replace_file_content` ou `write_to_file`). Atingir 2 leituras força o despacho da ação motora ou parada.
+   - *Veto à Degradação de Pilha:* Tentativas de remediar falhas desativando testes, removendo tipagem estrita ou contornando middlewares acionam veto imediato (Lei 51).
+
+2. **Macro-Drawdown (Piso de Erro Estrutural & Deriva de Sessão):**
+   - *Gatilhos de Acionamento:* (1) Incerteza residual $\varepsilon_t > 0.40$ sustentada por mais de 2 turnos consecutivos, (2) Deriva de objetivo $\Delta_{\text{drift}} > 0.35$, (3) Tensão dialética $\tau \approx 1.0$ sem síntese ao fim de $K=3$ iterações no DAS, ou (4) Re-despacho de mais de 3 ondas sinápticas sem convergência.
+   - *Mecanismo Macro-Drawdown Freeze:* Congelamento sumário de todas as mutações e subagentes do enxame. O estado é persistido em `.planning/expediente_state.json` com `status: "MACRO_DRAWDOWN_FROZEN"`, transação formal registrada no State Ledger (`.planning/ledger/txn_XXXX.json`) e transferência compulsória da deliberação para o Human Principal sob o Conselho Dual-CEO.
 
 ---
 
@@ -213,13 +242,18 @@ Onda K: subagentes restantes...
 10. **Poda Fiduciária & Tripwire Dialético de Convergência (Lei 45):** Em árvores (ToT), ramos com $f(n) < 0.75$ sofrem poda imediata. Em debates dialéticos (DAS), impõe-se convergência estrita em $K \le 3$ iterações; na 3ª iteração sem consenso, adota-se compulsoriamente a via mais defensiva ("Água no Deserto").
 11. **Monitoramento Contínuo de Deriva de Objetivo (Lei 46):** Rastreamento invariante de $\Delta_{\text{drift}} \le 0.35$. Ultrapassar o limiar aciona `[EPISTEMIC_HALT: GOAL_DRIFT_BOUNDARY_VIOLATION]`.
 12. **Plasticidade Sináptica & Aprendizado Estigmérgico (Lei 47):** Conhecimento inscrito imutavelmente em `synaptic_bus.json` e no ledger. Vedada regressão epistêmica ou repetição de investigações já consolidadas.
+13. **O Invariante Anti-Degradação de Pilha de Execução (Lei 51):** É expressamente proibido ao Agente Principal ou a qualquer subagente desativar, omitir ou degradar componentes da arquitetura canônica do sistema (tais como middlewares de autenticação, checagens estritas de tipo, transações de banco de dados, locks atômicos no filesystem, físicas completas de animação ou suítes de testes de regressão) sob pretexto de "simplificação para teste", "depuração rápida" ou "execução pontual". Qualquer teste, benchmark ou build deve compulsoriamente ser executado contra a pilha institucional completa. Código que funcione apenas em ambientes degradados ou configurações toy é nulo de pleno direito e aciona a trava imediata `[HARD REJECT: DEGRADED_STACK_EXECUTION]`.
+14. **O Princípio do Digital Twin Isomorphism (Lei 52):** Todo ambiente de simulação, suíte de testes unitários/integrados, harness de benchmark ou mock de subsistemas deve manter isomorfismo estrutural e bit a bit com o comportamento do runtime real de produção ($\text{Contract}(\text{Sandbox}) \equiv \text{Contract}(\text{Production})$). É terminantemente proibido criar mocks que mascarem exceções reais do SO (como locks Win32 `EBUSY`, violações de concorrência ou latência de rede). A homologação de um subsistema exige prova formal de que os mesmos tipos, contratos `Result<T,E>` e invariantes operam de forma idêntica tanto no harness de testes quanto na infraestrutura viva.
+15. **Causalidade Temporal Estrita & Não-Vazamento de Estado (Lei 53):** Em qualquer pipeline de avaliação, teste automatizado, máquina de estados ou benchmark de acurácia, o conjunto de informação acessível ao sistema no passo temporal $t$ é estritamente limitado aos dados pretéritos e correntes ($\tau \le t$, $\mathcal{I}_t = \sigma(\{S_\tau, V_\tau, M_\tau\}_{\tau \le t})$). É sumariamente proibido qualquer vazamento de estado futuro ($t+1$), seja através de pré-alimentação de respostas esperadas no contexto de avaliação, mutação retroativa de variáveis de teste ou cálculos que indexem dados posteriores ao evento avaliado. A violação deste invariante invalida toda a suíte de testes e dispara `[HARD REJECT: CAUSAL_LEAKAGE_DETECTED]`.
 
-### 5.1. Catálogo dos Cinco Gatilhos de `[EPISTEMIC_HALT]`:
+### 5.1. Catálogo dos Sete Gatilhos de `[EPISTEMIC_HALT]`:
 1. `HALT_CRITICAL_UNCERTAINTY` ($\varepsilon_t > 0.40$): Incerteza crítica no tensor convexa de 4 componentes.
 2. `HALT_CONFIRMATION_BIAS_LOOP`: Repetição de premissa teórica por 2 turnos sem probe física no disco.
 3. `HALT_GOAL_DRIFT_EXCEEDED` ($\Delta_{\text{drift}} > 0.35$): Mutação fora dos arquivos do dossiê.
 4. `HALT_PREMATURE_CONVERGENCE`: Proposta de encerramento sem contrastar hipóteses alternativas ou Red Team.
 5. `HALT_CONSECUTIVE_REPAIR_COLLAPSE`: Duas tentativas consecutivas de auto-cura falham ($LASTEXITCODE \ne 0$).
+6. `HALT_MACRO_DRAWDOWN_TRIPPED`: Deriva contínua de escopo, incerteza $\varepsilon_t > 0.40$ por mais de 2 turnos, saturação dialética $\tau \approx 1.0$ após $K=3$ iterações no DAS, ou mais de 3 ondas sem convergência (`MACRO_DRAWDOWN_FROZEN`).
+7. `HALT_DEGRADED_STACK_ATTEMPTED`: Tentativa de rodar testes ou builds com mitigação de tipagem, bypass de middlewares ou supressão de flags de segurança (Lei 51).
 
 ### 5.2. Matriz de Calibração Anti-Satisficing:
 | Dimensão Técnica | Anti-Pattern (Satisficing) | Padrão dos Titãs (v5.0) |
@@ -230,3 +264,9 @@ Onda K: subagentes restantes...
 | **Tratamento de Exceções**| `catch (e) {}` vazio ou log passivo | Compensação transacional explícita e re-emissão de erro tipado |
 | **Concorrência de Enxame**| Suposição de serialização mágica | Travas Synaptic Mutex (`CONTRACT_HOLD` / `GO`) no barramento |
 | **Ativação de Enxame** | Equipes estáticas pré-moldadas | Esquadrões sob medida derivados da física única do problema |
+| **Pilha de Execução** | Desativar middlewares/tipos para "testar se roda" | Execução compulsória contra a pilha canônica completa (Lei 51) |
+| **Mocks e Sandboxes** | Mocks tautológicos que mascaram exceções de SO | Digital Twin Isomorphism bit a bit com o runtime de produção (Lei 52) |
+| **Causalidade de Testes**| Vazamento de respostas futuras $t+1$ no harness | Causalidade temporal estrita Zero-Lookahead $\mathcal{I}_t$ (Lei 53) |
+| **Governança de Erros** | Retries infinitos ou abandono passivo de erros | Limites de Micro e Macro Drawdown com paridade Dual-CEO |
+| **Regras de Repositório**| Suposições web em runtimes legados/C++/Lua | Spoke Rule Factory com reconhecimento $\vec{\Sigma}_R$ e Zero Leakage |
+| **Auto-Evolução (RSI)** | Afrouxamento conveniente de restrições | Monotonicidade de rigor ($\text{Severidade}(R_{t+1}) \ge \text{Severidade}(R_t)$) |

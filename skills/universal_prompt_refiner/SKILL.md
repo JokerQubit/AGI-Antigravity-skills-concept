@@ -1,6 +1,6 @@
 ---
 name: universal_prompt_refiner
-description: Playbook de Engenharia e Controle Operacional do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate) v5.0 (Hyper-Cortex Ingestion Gate). Governa o despacho obrigatório do Subagente Prompt Refiner antes de qualquer intervenção operacional, a classificação mandatória de modo (Arquitetural vs. Direto), o cálculo da Assinatura Física do Problema Phi(P) em 8 eixos, a Matriz de Auto-Ativação de Skills, a medição contínua de Incerteza Epistêmica epsilon_t, o gatilho de ativação imediata do esquadrão ([HARD HALT: SQUAD_DISPATCH_BYPASSED]), a compilação do Dossiê Universal (.planning/mission_dossier.md), desconstrução forense em 4 camadas, roadmap determinístico, matriz de regras/skills por primeiros princípios, atribuição de Topologia de Pensamento (LCS, ToT, GoT, DAS), encadeamento quádruplo e critérios fiduciários de aceite.
+description: Playbook de Engenharia e Controle Operacional do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate) v5.0 (Hyper-Cortex Ingestion Gate). Governa o despacho obrigatório do Subagente Prompt Refiner antes de qualquer intervenção operacional, a classificação mandatória de modo (Arquitetural vs. Direto), o cálculo da Assinatura Física do Problema Phi(P) em 8 eixos, a Matriz de Auto-Ativação de Skills (incluindo spoke_rule_factory e autonomous_rsi_engine), a detecção e disparo automático da Spoke Rule Factory em repositórios sem regras locais, o acionamento pós-missão do Cognitive Post-Mortem para o Autonomous RSI Engine, a medição contínua de Incerteza Epistêmica epsilon_t, o gatilho de ativação imediata do esquadrão ([HARD HALT: SQUAD_DISPATCH_BYPASSED]), a compilação do Dossiê Universal (.planning/mission_dossier.md), desconstrução forense em 4 camadas, roadmap determinístico, matriz de regras/skills por primeiros princípios, atribuição de Topologia de Pensamento (LCS, ToT, GoT, DAS), encadeamento quádruplo e critérios fiduciários de aceite.
 ---
 
 # Universal Prompt Refiner Gate Playbook (Época 0 - v5.0 — Hyper-Cortex Ingestion Gate)
@@ -60,6 +60,23 @@ $$\vec{\alpha} = \sigma\left( \mathbf{W} \vec{\Phi}(P) - \vec{\theta} \right)$$
 
 Onde $\sigma(z) = \frac{1}{1 + e^{-z}}$ e $\vec{\theta}$ representa os limiares de ativação. Se $\alpha_i \ge 0.5$, a skill é **compulsoriamente ativada** e suas dependências são expandidas em DAG com ordenação topológica acíclica.
 
+#### Matriz Canônica de Skills & Condições de Auto-Ativação:
+| Skill | Domínio Primário | Eixos Determinantes em $\vec{\Phi}(P)$ | Limiar $\theta_i$ / Gatilho Estrutural de Ativação |
+|---|---|---|---|
+| [`universal_prompt_refiner`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/universal_prompt_refiner/SKILL.md) | Ingestão e ACC | Todos os eixos | **Ubíquo / Invariante:** Obrigatório em 100% das missões e turnos. |
+| [`dynamic_thought_router`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/dynamic_thought_router/SKILL.md) | Topologia de Raciocínio | $\phi_{\text{cognitive}}, \phi_{\text{epistemic}}$ | $\phi_{\text{cognitive}} \ge 0.40$ ou bifurcação de caminhos ($B_{\text{bif}} \ge 0.30$). |
+| [`adaptive_token_governance`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/adaptive_token_governance/SKILL.md) | Governança e Shifts | $\phi_{\text{economic}}, \phi_{\text{distributed}}$ | $\phi_{\text{economic}} \ge 0.50$ ou partições em ondas/expedientes. |
+| [`swarm_orchestration`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/swarm_orchestration/SKILL.md) | Barramento Sináptico | $\phi_{\text{distributed}}, \phi_{\text{state}}$ | $\phi_{\text{distributed}} \ge 0.50$ ou concorrência $\ge 2$ subagentes. |
+| [`fractal_thought_graph`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/fractal_thought_graph/SKILL.md) | Hipergrafo Ontológico | $\phi_{\text{cognitive}}, \phi_{\text{epistemic}}$ | Modo Arquitetural ($N \ge 100$ nós em `.planning/nodes/`). |
+| [`hardened_clean_architecture`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/hardened_clean_architecture/SKILL.md) | Defesa e Tipagem Estrita | $\phi_{\text{state}}, \phi_{\text{epistemic}}$ | $\phi_{\text{state}} \ge 0.40$ ou criação/mutação de entidades de domínio. |
+| [`modern_ui_craft`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/modern_ui_craft/SKILL.md) | Interface dos Titãs | $\phi_{\text{spatial}}, \phi_{\text{perceptual}}$ | $\phi_{\text{spatial}} \ge 0.30$ ou componentes interativos/telas. |
+| [`tactile_audio_sfx`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/tactile_audio_sfx/SKILL.md) | Áudio Acústico Real | $\phi_{\text{acoustic}}$ | $\phi_{\text{acoustic}} \ge 0.30$ ou eventos táteis/sonoros. |
+| [`browser_visual_reasoning`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/browser_visual_reasoning/SKILL.md) | Inspeção Perceptual | $\phi_{\text{perceptual}}, \phi_{\text{spatial}}$ | $\phi_{\text{perceptual}} \ge 0.40$ ou UIs Web executando localmente. |
+| [`autonomous_computer_use`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/autonomous_computer_use/SKILL.md) | OODA e Auto-Cura de SO | $\phi_{\text{state}}, \phi_{\text{distributed}}$ | Ação motora em shell, falhas de porta, locks de arquivos ou git. |
+| [`forensic_adversarial_auditor`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/forensic_adversarial_auditor/SKILL.md) | Gauntlet Red Team | $\phi_{\text{epistemic}}, \phi_{\text{perceptual}}$ | **Compulsório na Época IV:** Nenhuma entrega encerra sem juiz independente. |
+| [`spoke_rule_factory`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/spoke_rule_factory/SKILL.md) | Grounding Local & Spokes | $\phi_{\text{epistemic}}, \phi_{\text{state}}, \phi_{\text{distributed}}$ | **Gatilho Estrutural:** Repositório sem `.agents/rules/` ou `spoke_manifest.json`, ou runtime heterogêneo não calibrado. |
+| [`autonomous_rsi_engine`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/autonomous_rsi_engine/SKILL.md) | Ciclo Hebbiano de Auto-Cura | $\phi_{\text{epistemic}}, \phi_{\text{cognitive}}, \phi_{\text{state}}$ | **Gatilho Pós-Missão:** Homologação formal na Época IV disparando análise de telemetria fria (`pm_*.json`). |
+
 ### 1.5. Quantificação Contínua de Incerteza Epistêmica ($\varepsilon_t$)
 O Córtex Monitor de 2ª Ordem ($M_2$) quantifica continuamente a incerteza epistêmica $\varepsilon_t \in [0.0, 1.0]$:
 
@@ -78,6 +95,25 @@ Com pesos fiduciários convexos: $w_1 = 0.30$, $w_2 = 0.30$, $w_3 = 0.25$, $w_4 
 3. `HALT_GOAL_DRIFT_EXCEEDED` ($\Delta_{\text{drift}} > 0.35$): Mutação fora do escopo do Dossiê.
 4. `HALT_PREMATURE_CONVERGENCE`: Proposta de encerramento sem triangulação dialética (Alfa vs. Beta).
 5. `HALT_CONSECUTIVE_REPAIR_COLLAPSE`: 2 falhas consecutivas de auto-cura no mesmo alvo.
+
+### 1.6. Sonda de Grounding Forense Local & Gatilho da Spoke Rule Factory
+Durante a Época 0 (Passada de Ingestão), o Prompt Refiner executa compulsoriamente a sondagem preliminar da integridade de governança de nicho do repositório hospedeiro:
+- **Critério de Detecção de Ausência:** O Prompt Refiner verifica a existência física de `<repo_root>/.agents/rules/` (ou `<repo_root>/.gemini/rules/`) e de `<repo_root>/.agents/spoke_manifest.json`.
+- **Gatilho de Disparo Compulsório:** Caso o diretório de regras locais ou o manifesto estejam ausentes, corrompidos ou incompletos:
+  1. O Prompt Refiner registra formalmente a ausência na Seção A do Dossiê (`mission_dossier.md`) sob Invariantes de Estado e Acoplamento.
+  2. Emite ordem executiva prioritária na Seção D (*Bespoke Dynamic Squad Blueprint*) para o despacho imediato da skill `spoke_rule_factory` através do subagente especialista `Niche Reconnaissance & Spoke Rule Architect` (`TypeName: "self"`).
+  3. A `spoke_rule_factory` extrai o tensor de assinatura do repositório $\vec{\Sigma}_R = \langle \mathcal{M}_{\text{manifest}}, \mathcal{L}_{\text{lockfiles}}, \mathcal{T}_{\text{ast}}, \mathcal{E}_{\text{execution}}, \mathcal{C}_{\text{concurrency}}, \mathcal{H}_{\text{hardware}}, \mathcal{V}_{\text{validation}} \rangle$ e compila os 4 módulos canônicos de nicho (`domain_standards.md`, `runtime_constraints.md`, `toolchain_and_validation.md`, `security_and_contracts.md`), gerando o selo estigmérgico `.agents/spoke_manifest.json`.
+  4. Garante conformidade estrita com o **Teorema da Não-Contaminação Constitucional** (Zero Abstraction Leakage): o Spoke adiciona restrições técnicas específicas do runtime hospedeiro sem jamais revogar ou afrouxar os invariantes da Layer 0.
+
+### 1.7. Gatilho Pós-Missão de Auto-Evolução: Cognitive Post-Mortem & Autonomous RSI Engine
+O ecossistema cognitivo do Hyper-Cortex v5.0 rejeita a estagnação estocástica e a amnésia inter-sessões. Toda missão concluída encerra com o acionamento do ciclo evolutivo em malha fechada:
+- **Gatilho de Acionamento Pós-Gauntlet:** Imediatamente após a homologação formal pelo Subagente Juiz Red Team na Época IV (Expediente 5) e a confirmação de `$LASTEXITCODE === 0`, o Prompt Refiner impõe a emissão do artefato de telemetria fria `.planning/post_mortem/pm_<session_id>.json`.
+- **Ordem de Disparo do Autonomous RSI Engine:** O Dossiê prescreve a convocação da skill `autonomous_rsi_engine` para executar o ciclo cibernético Hebbiano em 4 fases:
+  1. *Fase 1 (Detector de Lacunas / Gap Identification):* Analisa falhas, retries motores, circuit breakers disparados, latência de colapso e intervenções humanas.
+  2. *Fase 2 (Geração de Hipótese de Melhoria / Candidate Patch):* Formula mutações aditivas cirúrgicas com contraste pedagógico (*Anti-Pattern vs Titanium Pattern*) para spokes locais ou manuais técnicos de skills.
+  3. *Fase 3 (Sandboxing & Adversarial Regression Gauntlet):* Submete o patch a testes adversariais rigorosos e verificação formal da inviolabilidade da Layer 0.
+  4. *Fase 4 (Ratificação Fiduciária & Commit Transacional):* Persiste a evolução no State Ledger (`.planning/ledger/txn_XXXX.json`) e atualiza os pesos sinápticos Hebbianos (LTP: $\Delta w = +0.20$ / LTD: $\Delta w = -0.40$) no `.planning/synaptic_bus.json`.
+- **Blindagem Constitucional:** Execução governada pelas Quatro Travas Pétreas do RSI (Layer 0 Imutável, Anti-Dumbing Down Invariant, Bipartição Classe A/B e Limite de Taxa Evolutiva de no máximo 1 patch por expediente).
 
 ---
 
@@ -108,6 +144,8 @@ Todo despacho do Subagente Prompt Refiner deve gerar compulsoriamente o Dossiê 
 ### (b) Assinatura Física do Problema $\vec{\Phi}(P)$ & Auto-Ativação de Skills
 - Computação exaustiva dos 8 eixos de $\vec{\Phi}(P)$.
 - Aplicação da Matriz $\mathbf{W}$ para auto-ativação determinística das skills necessárias, garantindo o atendimento a todas as pré-condições operacionais (UISC v5.0).
+- Verificação estrutural de Spoke Rules locais: se `<repo_root>/.agents/rules/` ou `.agents/spoke_manifest.json` estiverem ausentes, ativa compulsoriamente a skill `spoke_rule_factory`.
+- Definição do gatilho pós-missão: prescreve o disparo compulsório da skill `autonomous_rsi_engine` e a geração do Cognitive Post-Mortem (`.planning/post_mortem/pm_*.json`) após homologação na Época IV.
 
 ### (c) Roadmap Passo a Passo Exato
 - Sequenciamento unívoco e mecânico de ações para o Agente Principal e para o enxame de subagentes.
@@ -130,6 +168,8 @@ Em conformidade estrita com as Leis 32, 40, 42, 43, 44 e 45:
 - **Dupla Investigativa Obrigatória (Two-Mind Minimum):** Para qualquer tarefa investigativa ou alteração de arquivo existente, o esquadrão DEVE conter no mínimo:
   * **Subagente Alfa (Causal Root Cause):** Especialista na mecânica microscópica interna da falha ou alteração (`TypeName: "self"` ou `"research"`, `[ACTION_MODE: ANALYTICAL_INVESTIGATION]`). Grava laudo em `.planning/investigations/inv_001_root_cause.md`.
   * **Subagente Beta (Downstream Blast Radius):** Especialista no raio de impacto colateral, interfaces externas e contratos (`TypeName: "self"` ou `"research"`, `[ACTION_MODE: ANALYTICAL_INVESTIGATION]`). Grava laudo em `.planning/investigations/inv_002_blast_radius.md`.
+  * **Subagente de Grounding Local (Spoke Rule Architect):** Despachado compulsoriamente caso o repositório não possua regras locais `.agents/rules/` ou manifesto válido, instanciando a `spoke_rule_factory` (`TypeName: "self"`, `[ACTION_MODE: PHYSICAL_MUTATION]`).
+  * **Subagente de Auto-Evolução (Autonomous RSI Synthesizer):** Despachado no encerramento da missão para processar a telemetria fria do post-mortem (`pm_*.json`) e conduzir o ciclo Hebbiano de auto-aprimoramento (`TypeName: "self"`).
 - **Handoff de Alta Fidelidade (Lei 42):** Os subagentes codificadores de produção DEVEM receber os caminhos desses laudos e a instrução expressa de ler os arquivos via `view_file` antes de codificar — banindo resumos pré-frontais com perda.
 - **Mandato do Artífice Motor & Tipagem Compulsória (Lei 43):**
   * Todo subagente com meta de produção, codificação, refatoração ou correção de arquivos DEVE ser compulsoriamente tipado como `TypeName: "self"` com `[ACTION_MODE: PHYSICAL_MUTATION]`. É terminantemente proibido utilizar `TypeName: "research"` para tarefas motoras (subagentes research não possuem ferramentas de escrita e colapsam involuntariamente em consultores passivos).
@@ -368,7 +408,7 @@ Quando qualquer nova demanda ou turno se inicia (sob o paradigma Turn-as-a-Sessi
       "TypeName": "self",
       "Role": "Universal Prompt Refiner & Epistemic Compiler",
       "Model": "flash",
-      "Prompt": "Você é o compilador epistêmico do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate & Hyper-Cortex Ingestion Gate v5.0). Sua missão é congelar qualquer impulso de ação e compilar o Dossiê Executivo de Missão e o Selo Estigmérgico de Despacho antes de qualquer modificação física. Analise a demanda crua do usuário: [INSERIR_DEMANDA_CRUA]. 1. Execute a Análise de Custo-Complexidade (ACC), extraia a Assinatura Física do Problema Phi(P) em 8 eixos, aplique a Matriz de Auto-Ativação de Skills (W), quantifique a Incerteza Epistêmica epsilon_t e classifique a missão compulsoriamente em mission_type: 'ARCHITECTURAL' (nova plataforma/módulo estrutural -> piso inegociável de 100 nós atômicos) ou 'DIRECT_OPERATIONAL' (bug fix/ajuste direto/investigação -> ZERO nós em disco, nodes_floor: 0, 100% tokens para execução real); 2. Grave o artefato físico .planning/mission_dossier.md (Dossiê Universal — único artefato permitido); 3. O dossiê deve conter com rigor absoluto: (a) Desconstrução Forense em 4 Camadas (Lei 38); (b) Assinatura Física Phi(P) & Matriz de Auto-Ativação; (c) Roadmap Mecânico Passo a Passo determinístico; (d) Bespoke Dynamic Squad Blueprint com atribuição de Topologias de Pensamento (LCS/ToT/GoT/DAS) e Encadeamento Quádruplo dos Titãs; (e) Matriz de Modos de Quebra e Pre-Mortem Forense; (f) Critérios Estritos de Aceite Fiduciário para o Red Team na Época IV. 4. Emita compulsoriamente no disco o Selo Estigmérgico de Despacho (.planning/refiner_seal.json) com o hash criptográfico da demanda crua, status 'SEALED_VALID', session_mode: 'Universal v5.0 — Hyper-Cortex Sovereign Session', mission_type ('ARCHITECTURAL' ou 'DIRECT_OPERATIONAL'), nodes_floor (100 ou 0), epsilon_score, active_thought_topology, modo Flash prescrito e lista estrita de operações autorizadas. Aplique o Null-Vocabulary estrito. Grave os arquivos no disco e notifique o Agente Principal para proceder."
+      "Prompt": "Você é o compilador epistêmico do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate & Hyper-Cortex Ingestion Gate v5.0). Sua missão é congelar qualquer impulso de ação e compilar o Dossiê Executivo de Missão e o Selo Estigmérgico de Despacho antes de qualquer modificação física. Analise a demanda crua do usuário: [INSERIR_DEMANDA_CRUA]. 1. Execute a Análise de Custo-Complexidade (ACC), verifique a presença de Spoke Rules locais (.agents/rules/ e spoke_manifest.json, emitindo ordem prioritária para a spoke_rule_factory caso ausentes), extraia a Assinatura Física do Problema Phi(P) em 8 eixos, aplique a Matriz de Auto-Ativação de Skills (W) integrando spoke_rule_factory e autonomous_rsi_engine quando aplicável, quantifique a Incerteza Epistêmica epsilon_t e classifique a missão compulsoriamente em mission_type: 'ARCHITECTURAL' (nova plataforma/módulo estrutural -> piso inegociável de 100 nós atômicos) ou 'DIRECT_OPERATIONAL' (bug fix/ajuste direto/investigação -> ZERO nós em disco, nodes_floor: 0, 100% tokens para execução real); 2. Grave o artefato físico .planning/mission_dossier.md (Dossiê Universal — único artefato permitido); 3. O dossiê deve conter com rigor absoluto: (a) Desconstrução Forense em 4 Camadas (Lei 38); (b) Assinatura Física Phi(P) & Matriz de Auto-Ativação; (c) Roadmap Mecânico Passo a Passo determinístico; (d) Bespoke Dynamic Squad Blueprint com atribuição de Topologias de Pensamento (LCS/ToT/GoT/DAS), Encadeamento Quádruplo dos Titãs e gatilhos de Spoke Rule Factory e Autonomous RSI Engine; (e) Matriz de Modos de Quebra e Pre-Mortem Forense; (f) Critérios Estritos de Aceite Fiduciário para o Red Team na Época IV e prescrição do Cognitive Post-Mortem. 4. Emita compulsoriamente no disco o Selo Estigmérgico de Despacho (.planning/refiner_seal.json) com o hash criptográfico da demanda crua, status 'SEALED_VALID', session_mode: 'Universal v5.0 — Hyper-Cortex Sovereign Session', mission_type ('ARCHITECTURAL' ou 'DIRECT_OPERATIONAL'), nodes_floor (100 ou 0), epsilon_score, active_thought_topology, modo Flash prescrito e lista estrita de operações autorizadas. Aplique o Null-Vocabulary estrito. Grave os arquivos no disco e notifique o Agente Principal para proceder."
     }
   ]
 }
@@ -401,12 +441,14 @@ O selo é um artefato estigmérgico obrigatório emitido exclusivamente pelo Pro
   },
   "active_skills_chain": [
     "universal_prompt_refiner",
+    "spoke_rule_factory",
     "dynamic_thought_router",
     "hardened_clean_architecture",
     "modern_ui_craft",
     "tactile_audio_sfx",
     "browser_visual_reasoning",
-    "forensic_adversarial_auditor"
+    "forensic_adversarial_auditor",
+    "autonomous_rsi_engine"
   ],
   "recommended_flash_mode": "Flash Low",
   "mandatory_keywords_injected": [
