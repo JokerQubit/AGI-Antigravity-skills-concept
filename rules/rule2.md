@@ -154,8 +154,11 @@ O sistema rejeita a ilusão de resolver grandes arquiteturas em um único "sprin
 │ • Modo: Flash Low                                           │
 ├─────────────────────────────────────────────────────────────┤
 │ EXPEDIENTE 4: Codificação Concorrente Atômica 1:1 (Época III)│
-│ • Subagentes artífices motores 1:1 (TypeName: "self")       │
-│ • Mutação direta no disco, Result<T,E>, Atomic Swap         │
+│ • Parent PROIBIDO de codificar na thread principal          │
+│ • 1 Subagente Motor por arquivo (TypeName: "self")          │
+│ • Despacho com Contexto Holístico + Link do laudo pericial  │
+│ • Leitura obrigatória do laudo via view_file como Step 0    │
+│ • Mutação física direta no disco, Result<T,E>, Atomic Swap  │
 │ • Modo: Flash Medium ou Flash High                          │
 ├─────────────────────────────────────────────────────────────┤
 │ EXPEDIENTE 5: Auditoria Adversarial Independente (Época IV) │

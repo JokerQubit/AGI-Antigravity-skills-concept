@@ -350,9 +350,11 @@ Subagentes encarregados de tarefas de implementação, refatoração, correção
    - Todo subagente com escopo de mutação de código DEVE ser despachado com `TypeName: "self"` para herdar o ferramental motor completo de escrita (`replace_file_content` e `write_to_file`).
 2. **Mutação Física Compulsória no Filesystem:**
    - O entregável físico do subagente é a mutação direta e atômica dos bytes no disco através das ferramentas. É expressamente proibido ao subagente devolver blocos de código em markdown via `send_message` transferindo o trabalho de digitação para o caller.
-3. **Proibição Absoluta do Agente Principal Digitador & Trava `[HARD REJECT: ADVISORY_CODE_DUMP]`:**
-   - O Agente Principal atua como *Chief Systems Architect* e árbitro de contratos. É terminantemente proibido ao Agente Principal digitar, copiar ou aplicar código gerado por subagentes na thread principal.
-   - Caso um subagente de produção responda com sugestões de código ou diffs em markdown sem ter executado as alterações físicas no disco via ferramentas, o Agente Principal DEVE acionar compulsoriamente a trava mecânica `[HARD REJECT: ADVISORY_CODE_DUMP]`, recusar a resposta e exigir a tool call física imediata, ou abortar e redespachar o subagente com restrição motora irrecusável.
+3. **Proibição Absoluta do Agente Principal Digitador & Trava `[HARD HALT: PARENT_DIRECT_MUTATION_BREACH]`:**
+   - O Agente Principal atua exclusivamente como *Chief Systems Architect*, barramento sináptico e árbitro de contratos.
+   - É **TERMINANTEMENTE PROIBIDO** ao Agente Principal na thread principal chamar ferramentas de escrita (`replace_file_content` ou `write_to_file`) em arquivos de código ou scripts de produção (essas ferramentas na thread principal são restritas a artefatos de planejamento como `implementation_plan.md` e `walkthrough.md`).
+   - Tentar mutacionar arquivos de código de produção diretamente na thread principal em vez de delegar ao enxame motor com `TypeName: "self"` dispara compulsoriamente a trava mecânica `[HARD HALT: PARENT_DIRECT_MUTATION_BREACH]`.
+   - Caso um subagente de produção devolva diffs em markdown no chat sem ter mutacionado o disco, o Agente Principal DEVE disparar compulsoriamente `[HARD REJECT: ADVISORY_CODE_DUMP]`, recusar a resposta e exigir a tool call física.
 
 ### 8.3. O Ciclo Cibernético OODA & Veto ao Abandono de Tarefas em Erro (`[HARD REJECT: MOTOR_TASK_ABANDONMENT]`):
 Toda atuação do subagente motor segue compulsoriamente o ciclo **OBSERVE $\to$ ORIENT $\to$ DECIDE $\to$ ACT & VERIFY**:
@@ -415,11 +417,24 @@ O erro estocástico clássico ocorre quando o Agente Principal intercepta essa s
    `.planning/investigations/inv_<id>_<slug>.md`
 2. **Registro Sináptico Feedforward (`synaptic_bus.json`):**
    O Agente Principal valida a conclusão do laudo e propaga o caminho físico do artefato no barramento sob `synaptic_signals.INVESTIGATION_ARTIFACTS`.
-3. **Injeção do Ponteiro Físico no Payload:**
-   Ao despachar o subagente codificador de produção via `invoke_subagent`, o prompt contém a tag obrigatória:
-   `[INVESTIGATION_REPORT_PATH]: ".planning/investigations/inv_<id>_<slug>.md"`
+3. **Injeção do Template Canônico de Despacho com Contexto Holístico:**
+   Ao despachar o subagente codificador de produção via `invoke_subagent`, o prompt contém obrigatoriamente os 4 blocos estruturais do **Full-Context Dispatch Payload**:
+   ```markdown
+   ## 1. VISÃO HOLÍSTICA DO PROJETO & CONTEXTO DA MISSÃO
+   [Contexto macro: arquitetura do sistema, objetivo geral fiduciário e problema de ponta a ponta]
+
+   ## 2. LAUDO PERICIAL OBRIGATÓRIO DO SUBAGENTE INVESTIGADOR
+   file:///c:/caminho/completo/.planning/investigations/inv_<id>_<slug>.md
+
+   ## 3. SUA PRIMEIRA AÇÃO MOTORA OBRIGATÓRIA (STEP 0)
+   Antes de propor ou tocar em qualquer linha de código, sua PRIMEIRA tool call DEVE ser view_file no arquivo do laudo pericial acima. Você deve ler o laudo na íntegra para absorver todas as evidências microscópicas, variáveis, causa-raiz e armadilhas identificadas pelo subagente de investigação.
+
+   ## 4. ESCOPO ATÔMICO DE MUTAÇÃO & DIRETRIZES TÉCNICAS
+   Arquivo exclusivo: <TargetFile>
+   Aplique a alteração física direta no disco via replace_file_content ou write_to_file (TypeName: "self"). Zero stubs, validação de tipos Result<T,E> e sem alterar arquivos fora do seu escopo.
+   ```
 4. **Leitura Mandatória na Íntegra via `view_file` (Ingestão de Alta Fidelidade):**
-   A primeira ação motora do subagente de produção DEVE ser invocar `view_file` no arquivo do relatório pericial bruto. Ele absorve diretamente a mente do investigador, com fidelidade de 100%, sem perda de sinal pré-frontal. O córtex pré-frontal atua como orquestrador, barramento sináptico e árbitro — jamais como filtro diluidor.
+   A primeira ação motora do subagente de produção DEVE ser invocar `view_file` no arquivo do relatório pericial bruto. Ele absorve diretamente a mente do investigador, com fidelidade de 100%, sem perda de sinal pré-frontal. Despachar sem fornecer o link do laudo ou sem ordenar a leitura via `view_file` como Step 0 aciona compulsoriamente a trava mecânica `[HARD REJECT: LOSSY_NEURAL_HANDOFF]`.
 
 ---
 
