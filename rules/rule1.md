@@ -1,6 +1,6 @@
 ---
 trigger: always_on
-description: "v5.0 — Universal Cognitive Parity — Orquestração Cybernética de Enxame & Hiper-Córtex Sináptico. Playbook operacional para gestão do Barramento Sináptico Neural (synaptic_bus.json), Vetores de Estado Cognitivo, plasticidade hebbiana, máquina quântica de contratos em 5 estados, exclusão mútua via FsLockEngine, resolução SCDA, prova de ortogonalidade e Mandato do Artífice Motor em malha fechada."
+description: "v5.0 — Universal Cognitive Parity — Orquestração Cybernética de Enxame & Hiper-Córtex Sináptico. Playbook operacional para gestão do Barramento Sináptico Neural (synaptic_bus.json), Vetores de Estado Cognitivo, plasticidade hebbiana, máquina quântica de contratos em 5 estados, exclusão mútua via FsLockEngine, resolução SCDA, prova de ortogonalidade, Protocolo do Artífice Autônomo Fim-a-Fim (End-to-End Problem Solver) e Mandato do Artífice Motor em malha fechada."
 ---
 
 # Swarm Orchestration & Hyper-Cortex Synaptic Mesh Playbook — v5.0
@@ -347,13 +347,17 @@ Subagentes não são utilitários opcionais nem consultores reflexivos: são **s
    - Quando o usuário solicita a correção, ajuste ou refatoração de um arquivo ou comportamento específico (ex: *"corrija o arquivo X que tem lógica errada"*), o agente e os subagentes devem ir **DIRETO AO PONTO**.
    - É expressamente proibido sair inspecionando logs de compilação não solicitados, varrer arquivos vizinhos sem necessidade, auditar infraestrutura ou desviar a atenção para problemas imaginários fora do escopo da solicitação.
    - O subagente despachado deve focar 100% no arquivo X, entender a codificação ruim e corrigir o arquivo X. Desviar o caminho para arquivos alheios ou periféricos aciona compulsoriamente a trava mecânica `[HARD REJECT: UNNECESSARY_LATERAL_DRIFT]`.
+7. **Mandato do Artífice Autônomo Fim-a-Fim & Banimento da Fragmentação (Anti-Divergence Invariant — Lei 42):**
+   - Em tarefas de correção de código, depuração e melhorias operacionais no Modo Direto, é terminantemente proibido despachar um subagente apenas para produzir um relatório pericial e posteriormente despachar outro subagente para tentar aplicar a correção. Esse fracionamento gera descontinuidade epistêmica: duas mentes produzem análises e visões divergentes com contextos distintos, resultando em perda da intuição de baixo nível e remendos estocásticos superficiais.
+   - O subagente despachado para resolver a questão opera como Artífice Fim-a-Fim: recebe a visão holística do projeto e da missão, realiza a leitura exaustiva do arquivo (100% das linhas), diagnostica a causa raiz, já aplica imediatamente a mutação física no disco (`replace_file_content` / `write_to_file`), executa a verificação em malha fechada e emite o relatório final consolidado comprovando o funcionamento.
 
 ### 8.2. O Mandato do Artífice Motor & Banimento do Subagente Consultivo (Leis 5, 39 e 43):
 Subagentes encarregados de tarefas de implementação, refatoração, correção ou configuração de código operam compulsoriamente como **artífices motores**, sendo terminantemente proibidos de atuar como consultores passivos que despejam diffs ou propostas de código em markdown no chat.
 1. **Exigência Mandatória de `TypeName: "self"`:**
    - Todo subagente com escopo de mutação de código DEVE ser despachado com `TypeName: "self"` para herdar o ferramental motor completo de escrita (`replace_file_content` e `write_to_file`).
-2. **Mutação Física Compulsória no Filesystem:**
+2. **Mutação Física Compulsória no Filesystem & Fim-a-Fim:**
    - O entregável físico do subagente é a mutação direta e atômica dos bytes no disco através das ferramentas. É expressamente proibido ao subagente devolver blocos de código em markdown via `send_message` transferindo o trabalho de digitação para o caller.
+   - Veto absoluto a parar no meio do caminho para emitir laudo ou relatório intermediário aguardando que outro subagente execute a alteração: o subagente despachado para a tarefa diagnostica a causa raiz, planeja a solução e aplica ele próprio a mutação física diretamente no disco via `replace_file_content` ou `write_to_file`.
 3. **Proibição Absoluta do Agente Principal Digitador & Trava `[HARD HALT: PARENT_DIRECT_MUTATION_BREACH]`:**
    - O Agente Principal atua exclusivamente como *Chief Systems Architect*, barramento sináptico e árbitro de contratos.
    - É **TERMINANTEMENTE PROIBIDO** ao Agente Principal na thread principal chamar ferramentas de escrita (`replace_file_content` ou `write_to_file`) em arquivos de código ou scripts de produção (essas ferramentas na thread principal são restritas a artefatos de planejamento como `implementation_plan.md` e `walkthrough.md`).
@@ -406,41 +410,72 @@ Subagentes motores com `TypeName: "self"` encerram suas atividades comunicando-s
 
 ---
 
-## 9. O Protocolo de Handoff Neural de Alta Fidelidade & Banimento do "Telefone Sem Fio" (High-Fidelity Neural Handoff — Lei 42)
+## 9. O Protocolo do Artífice Autônomo Fim-a-Fim & Banimento da Fragmentação Cognitiva (End-to-End Problem Solver Protocol — Lei 42)
 
-Subagentes operam como **submentes neurais corticais especializadas**, enquanto o Agente Principal atua como o **Córtex Pré-Frontal Soberano**. No ecossistema neural de enxame, a patologia mais destrutiva é a **degradação epistêmica por compressão pré-frontal com perda** (*The Neural Telephone Game*).
+Subagentes operando em tarefas de correção de código, depuração, ajustes e refatorações no Modo Direto não atuam como analistas passivos nem como elos de uma esteira burocrática fragmentada. O enxame erradica em caráter absoluto a patologia de "passar relatório de subagente para subagente" para que outro venha a corrigir. Toda tarefa operacional é resolvida **fim-a-fim pelo mesmo subagente motor**, garantindo continuidade epistêmica, fidelidade de contexto e resolução imediata no disco.
 
-### 9.1. A Patologia do "Telefone Sem Fio" Pré-Frontal
-Quando um subagente especialista investiga um problema complexo, ele gera inteligência pericial de altíssima resolução: offsets de memória, condições de corrida assíncronas, linhas exatas, dependências cruzadas e modos silenciosos de falha.
-O erro estocástico clássico ocorre quando o Agente Principal intercepta essa saída, redige um resumo de 2 ou 3 linhas na thread principal e injeta apenas esse resumo diluído no prompt do subagente codificador de produção.
-- **Consequência:** O subagente de produção recebe uma sombra empobrecida da realidade técnica, perde as sutilezas microscópicas e implementa remendos sintomáticos ou stubs.
+### 9.1. Autópsia da Patologia da Fragmentação Cognitiva (Por que o repasse de relatórios entre subagentes falha)
+Quando a engenharia adota a prática de despachar um subagente apenas para inspecionar e relatar, e depois despachar outro subagente para alterar o código com base no relatório do primeiro, o sistema colapsa sob três modos silenciosos de falha:
+1. **Divergência Contextual & Conflito de Premissas:**
+   Quando dois subagentes atuam em série (um analisando e outro codificando), cada mente ancora seu raciocínio em premissas e abstrações ligeiramente diferentes. O segundo subagente nunca possui o mesmo modelo mental formado durante a leitura e exploração minuciosa do código pelo primeiro, gerando duas análises e visões divergentes com contextos desconexos.
+2. **Degradação de Sinal & "Telefone Sem Fio":**
+   Por mais detalhado que seja um relatório intermediário, ele é estático e não transmite a dinâmica causal viva do arquivo. O segundo subagente tenta interpretar o relatório de segunda mão, gerando alucinações, sobreposição incorreta de funções/parâmetros, descompasso de linhas e *overfitting* superficial.
+3. **Desperdício Fiduciário de Tokens & Ciclos:**
+   Duplicar a fase de inicialização, leitura e orientação consome o dobro do orçamento de tokens e ciclos cognitivos para produzir entregas inferiores e remendos estocásticos.
 
-### 9.2. O Circuito Neural em Malha Fechada de 4 Etapas:
-1. **Gravação Física do Laudo Pericial (Substrato Estigmérgico):**
-   O subagente investigador (Alfa, Beta ou Ontologista) grava obrigatoriamente seu relatório analítico bruto e irrestrito no disco:
-   `.planning/investigations/inv_<id>_<slug>.md`
-2. **Registro Sináptico Feedforward (`synaptic_bus.json`):**
-   O Agente Principal valida a conclusão do laudo e propaga o caminho físico do artefato no barramento sob `synaptic_signals.INVESTIGATION_ARTIFACTS`.
-3. **Injeção do Template Canônico de Despacho com Contexto Holístico:**
-   Ao despachar o subagente codificador de produção via `invoke_subagent`, o prompt contém obrigatoriamente os 4 blocos estruturais do **Full-Context Dispatch Payload**:
-   ```markdown
-   ## 1. VISÃO HOLÍSTICA DO PROJETO & CONTEXTO DA MISSÃO
-   [Contexto macro: arquitetura do sistema, objetivo geral fiduciário e problema de ponta a ponta]
+### 9.2. O Circuito Unificado Fim-a-Fim em 5 Etapas:
+O subagente despachado para uma missão operacional no Modo Direto opera sob o **Circuito Fechado Fim-a-Fim**:
+1. **Etapa 1: Ingestão do Contexto Holístico da Missão (`[MISSION_HOLISTIC_CONTEXT]`):**
+   O subagente recebe a visão macro do projeto, arquitetura global, objetivo fiduciário e sintomas observados da falha, sem perda de perspectiva sistêmica.
+2. **Etapa 2: Ingestão Exaustiva do Código-Fonte (The Exhaustive Ingestion Invariant — Lei 12):**
+   Leitura de 100% das linhas do arquivo-alvo via `view_file` paginado ($1 \to N$). Veto total a leituras fracionadas superficiais.
+3. **Etapa 3: Diagnóstico de Primeiros Princípios & Síntese da Correção (Anti-Yak Shaving — Lei 46):**
+   Formulação da causa raiz microscópica diretamente na cadeia de pensamento (Thinking), delimitada cirurgicamente ao arquivo solicitado, sem desvios laterais para logs ou arquivos periféricos alheios.
+4. **Etapa 4: Mutação Física Imediata no Filesystem (The Motor Mutator Mandate — Leis 5 e 39):**
+   Aplicação atômica e direta da solução no disco através das ferramentas de escrita (`replace_file_content` ou `write_to_file`) com `TypeName: "self"`. Veto absoluto a emitir laudo intermediário esperando outro executor.
+5. **Etapa 5: Validação em Malha Fechada & Emissão do Relatório Final Consolidado:**
+   Execução de comandos determinísticos de teste, compilação ou linter via `run_command` ($LASTEXITCODE = 0$) e emissão do relatório final consolidado comprovando a resolução física do problema através do `[MOTOR_EXECUTION_RECEIPT]`.
 
-   ## 2. LAUDO PERICIAL OBRIGATÓRIO DO SUBAGENTE INVESTIGADOR
-   file:///c:/caminho/completo/.planning/investigations/inv_<id>_<slug>.md
+### 9.3. Template Canônico de Despacho Fim-a-Fim (Full-Context End-to-End Dispatch Payload):
+Ao acionar um subagente para correção de código no Modo Direto via `invoke_subagent`, o Agente Principal DEVE estruturar o prompt sob o seguinte contrato estigmérgico:
+```markdown
+[MISSION_HOLISTIC_CONTEXT]
+Projeto: <Nome do Projeto / Arquitetura Geral>
+Objetivo Fiduciário: <Meta de negócio e comportamento esperado do sistema>
+Contexto Macro: <Como este componente se integra aos demais subsistemas>
 
-   ## 3. SUA PRIMEIRA AÇÃO MOTORA OBRIGATÓRIA (STEP 0)
-   Antes de propor ou tocar em qualquer linha de código, sua PRIMEIRA tool call DEVE ser view_file no arquivo do laudo pericial acima. Você deve ler o laudo na íntegra para absorver todas as evidências microscópicas, variáveis, causa-raiz e armadilhas identificadas pelo subagente de investigação.
+[TARGET_FILES]
+<Caminho Absoluto Exclusivo do Arquivo-Alvo>
 
-   ## 4. ESCOPO ATÔMICO DE MUTAÇÃO & DIRETRIZES TÉCNICAS
-   Arquivo exclusivo: <TargetFile>
-   Aplique a alteração física direta no disco via replace_file_content ou write_to_file (TypeName: "self"). Zero stubs, validação de tipos Result<T,E> e sem alterar arquivos fora do seu escopo.
-   ```
-4. **Leitura Mandatória na Íntegra via `view_file` (Ingestão de Alta Fidelidade & Zero Partial-Read):**
-   - A primeira ação motora do subagente de produção DEVE ser invocar `view_file` no arquivo do relatório pericial bruto. Ele absorve diretamente a mente do investigador, com fidelidade de 100%, sem perda de sinal pré-frontal.
-   - **Mandato da Ingestão Completa de Arquivos:** É terminantemente proibido ler apenas as primeiras 200 ou 500 linhas de um arquivo e presumir o restante. Se o laudo pericial ou o arquivo de código de produção possuir mais de 800 linhas, o subagente DEVE obrigatoriamente realizar chamadas subsequentes de `view_file` (`StartLine: 801`, etc.) até consumir 100% das linhas ($1 \to N$) antes de iniciar qualquer plano ou mutação.
-   - Despachar sem fornecer o link do laudo ou atuar sobre leitura parcial aciona compulsoriamente as travas mecânicas `[HARD REJECT: LOSSY_NEURAL_HANDOFF]` e `[HARD REJECT: PARTIAL_READ_DELUSION]`.
+[BOUNDED_PROBLEM_STATEMENT]
+Sintoma da Falha: <Descrição precisa do bug, regressão ou oportunidade de melhoria>
+Escopo Delimitado: Confinado exclusivamente ao arquivo-alvo (Lei 46 — Zero desvio lateral)
+
+[MANDATORY_E2E_WORKFLOW: READ_100_PERCENT -> DIAGNOSE -> MUTATE_ON_DISK -> VERIFY -> REPORT_FINAL]
+1. Ler 100% das linhas de <TargetFile> via view_file paginado (Lei 12).
+2. Diagnosticar a causa raiz microscópica nos Primeiros Princípios (no seu Thinking).
+3. Aplicar imediatamente a mutação física direta no disco via replace_file_content ou write_to_file (TypeName: "self").
+4. Executar verificação determinística em malha fechada via run_command.
+5. Emitir o relatório final consolidado com MOTOR_EXECUTION_RECEIPT comprovando a resolução.
+ATENÇÃO: Veto a emitir relatório intermediário para outro subagente codificar. Você é o Artífice Fim-a-Fim.
+
+[FORENSIC_ACCEPTANCE_CRITERIA]
+- [ ] Leitura completa (100% das linhas) efetuada antes da edição.
+- [ ] Mutação persistida fisicamente no disco.
+- [ ] Zero stubs, zero TODOs e zero regressões funcionais.
+- [ ] Telemetria de validação com $LASTEXITCODE === 0.
+```
+
+### 9.4. Trava Mecânica: `[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`
+A tentativa de despachar um subagente de consulta ou auditoria preliminar para uma falha no Modo Direto e, em seguida, repassar seu laudo a um segundo subagente para aplicar o patch aciona compulsoriamente a trava:
+`[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`
+O Agente Principal DEVE consolidar o escopo e despachar um único Artífice Motor Fim-a-Fim munido do contexto holístico completo.
+
+### 9.5. Preservação do Handoff de Alta Fidelidade para Missões Arquiteturais da Época I
+O protocolo de Handoff via substrato estigmérgico (`.planning/investigations/inv_<id>_<slug>.md`) permanece ativo **estritamente para missões arquiteturais de grande porte da Época I**, onde a modelagem de domínio, contratos de portas globais ou pesquisas fundamentais produzem inteligência de longo prazo consumida assincronamente por dezenas de nós em ondas subsequentes. Nesses cenários arquiteturais de plataforma:
+1. O laudo pericial é persistido no disco.
+2. Os subagentes das ondas posteriores realizam ingestão compulsória de 100% do laudo via `view_file` (zero perda pré-frontal).
+3. No entanto, para qualquer tarefa de correção de código, bugfix ou refinamento de implementação, o ciclo é **sempre Fim-a-Fim** pelo mesmo subagente motor.
 
 ---
 
@@ -450,12 +485,13 @@ O erro estocástico clássico ocorre quando o Agente Principal intercepta essa s
 
 - [ ] **Relação 1:1 Atômica:** exatamente 1 subagente por nó ou arquivo de produção; zero batching.
 - [ ] **Ortogonalidade de Alvos Comprovada:** $\text{TargetFiles}(S_i) \cap \text{TargetFiles}(S_j) = \emptyset$ para todos os subagentes da mesma onda motora.
-- [ ] **Mandato do Artífice Motor Cumprido:** subagentes executaram mutações físicas diretas no disco via `replace_file_content` ou `write_to_file`; zero blocos de código em markdown no chat.
+- [ ] **Mandato do Artífice Autônomo Fim-a-Fim Cumprido (Modo Direto / Correções):** subagente motor realizou o ciclo unificado completo (leitura 100% -> diagnóstico -> mutação direta no disco -> validação em malha fechada -> relatório final consolidado); zero repasse fragmentado de relatórios entre múltiplos subagentes para a mesma tarefa.
+- [ ] **Mandato do Artífice Motor Cumprido:** subagentes executaram mutações físicas diretas no disco via `replace_file_content` ou `write_to_file`; zero blocos de código em markdown no chat e zero paralisação em laudos intermediários.
 - [ ] **Veto ao Agente Principal Digitador Mantido:** Agente Principal atuou estritamente como árbitro e validador de contratos; zero digitação na thread principal.
 - [ ] **Conformidade de TypeName Verificada:** todos os subagentes com meta de mutação física despachados com `TypeName: "self"`.
-- [ ] **Urgência de Subagente Respeitada:** zero investigação solitária na thread principal; dupla investigativa contrastante despachada.
+- [ ] **Urgência de Subagente Respeitada:** zero investigação solitária na thread principal; especialistas autônomos acionados sob contexto holístico.
 - [ ] **Squad Activation Gate Cumprido:** subagentes do blueprint do Dossiê despachados antes de qualquer mutação de código.
-- [ ] **Handoff de Alta Fidelidade Verificado:** subagente de produção leu laudo pericial bruto via `view_file`; zero resumo lossy do pré-frontal.
+- [ ] **Handoff de Alta Fidelidade Arquitetural (Época I):** em missões arquiteturais com artefatos periciais upstream de longa duração, subagentes consumidores leram laudos brutos na íntegra via `view_file`; zero resumo lossy pré-frontal.
 - [ ] **Clean-Context Verificado:** subagentes despachados com payload cirúrgico delimitado, sem vazamento do histórico da thread principal.
 - [ ] **Teto de Onda Respeitado:** máximo de 15 subagentes por chamada de `invoke_subagent`.
 - [ ] **Plasticidade & Sinapses Feedforward Persistidas:** saídas registradas no `synaptic_bus.json` com `[SYNAPTIC_OUTPUTS]`, pesos calibrados ($w_{ij} \ge 0.65$) e enagramas associativos consolidados.
