@@ -343,6 +343,10 @@ Subagentes não são utilitários opcionais nem consultores reflexivos: são **s
 5. **Auto-Calibração de Plasticidade & Memória Associativa:**
    - Cada entrega homologada dispara reforço Hebbiano (LTP) no `synaptic_bus.json` e consolida heurísticas validadas em enagramas cognitivos (`cognitive_engrams`).
    - Payloads de novas ondas consomem automaticamente enagramas de seu domínio (`[ASSOCIATIVE_MEMORY_ENGRAMS]`), imunizando o enxame contra a repetição de anti-patterns passados.
+6. **Banimento de Varreduras Periféricas & Foco Laser Direto no Alvo (Lei 46 — Anti-Yak Shaving):**
+   - Quando o usuário solicita a correção, ajuste ou refatoração de um arquivo ou comportamento específico (ex: *"corrija o arquivo X que tem lógica errada"*), o agente e os subagentes devem ir **DIRETO AO PONTO**.
+   - É expressamente proibido sair inspecionando logs de compilação não solicitados, varrer arquivos vizinhos sem necessidade, auditar infraestrutura ou desviar a atenção para problemas imaginários fora do escopo da solicitação.
+   - O subagente despachado deve focar 100% no arquivo X, entender a codificação ruim e corrigir o arquivo X. Desviar o caminho para arquivos alheios ou periféricos aciona compulsoriamente a trava mecânica `[HARD REJECT: UNNECESSARY_LATERAL_DRIFT]`.
 
 ### 8.2. O Mandato do Artífice Motor & Banimento do Subagente Consultivo (Leis 5, 39 e 43):
 Subagentes encarregados de tarefas de implementação, refatoração, correção ou configuração de código operam compulsoriamente como **artífices motores**, sendo terminantemente proibidos de atuar como consultores passivos que despejam diffs ou propostas de código em markdown no chat.
@@ -433,8 +437,10 @@ O erro estocástico clássico ocorre quando o Agente Principal intercepta essa s
    Arquivo exclusivo: <TargetFile>
    Aplique a alteração física direta no disco via replace_file_content ou write_to_file (TypeName: "self"). Zero stubs, validação de tipos Result<T,E> e sem alterar arquivos fora do seu escopo.
    ```
-4. **Leitura Mandatória na Íntegra via `view_file` (Ingestão de Alta Fidelidade):**
-   A primeira ação motora do subagente de produção DEVE ser invocar `view_file` no arquivo do relatório pericial bruto. Ele absorve diretamente a mente do investigador, com fidelidade de 100%, sem perda de sinal pré-frontal. Despachar sem fornecer o link do laudo ou sem ordenar a leitura via `view_file` como Step 0 aciona compulsoriamente a trava mecânica `[HARD REJECT: LOSSY_NEURAL_HANDOFF]`.
+4. **Leitura Mandatória na Íntegra via `view_file` (Ingestão de Alta Fidelidade & Zero Partial-Read):**
+   - A primeira ação motora do subagente de produção DEVE ser invocar `view_file` no arquivo do relatório pericial bruto. Ele absorve diretamente a mente do investigador, com fidelidade de 100%, sem perda de sinal pré-frontal.
+   - **Mandato da Ingestão Completa de Arquivos:** É terminantemente proibido ler apenas as primeiras 200 ou 500 linhas de um arquivo e presumir o restante. Se o laudo pericial ou o arquivo de código de produção possuir mais de 800 linhas, o subagente DEVE obrigatoriamente realizar chamadas subsequentes de `view_file` (`StartLine: 801`, etc.) até consumir 100% das linhas ($1 \to N$) antes de iniciar qualquer plano ou mutação.
+   - Despachar sem fornecer o link do laudo ou atuar sobre leitura parcial aciona compulsoriamente as travas mecânicas `[HARD REJECT: LOSSY_NEURAL_HANDOFF]` e `[HARD REJECT: PARTIAL_READ_DELUSION]`.
 
 ---
 
@@ -461,4 +467,6 @@ O erro estocástico clássico ocorre quando o Agente Principal intercepta essa s
 - [ ] **Recibo Fiduciário Motor Emitido:** encerramento transmitido via `[MOTOR_EXECUTION_RECEIPT]` sem texto livre.
 - [ ] **Zero Role Drift:** subagentes cumpriram estritamente seu `[MY_SWARM_DELIVERABLE]` sem invadir escopo alheio.
 - [ ] **Aderência à Cadeia Neural de 6 Níveis (Enterprise Six-Tier):** segregação funcional entre Governança Fiduciária (L6), Handshake Hub (L5), Arquiteto Chefe (L4), Gerentes de Domínio (L3), Supervisory Gate (L2) e Artífices Motores 1:1 (L1).
-- [ ] **Protocolo de Rejection Dossier & Blacklist de Vetores Cumprido:** reprovações pelo Supervisory Gate ou Peer Veto formalizadas em `rejection_dossier_<slug>.json`; vetores refutados inscritos no `synaptic_bus.json` (`refuted_vectors_blacklist`) com veto absoluto à reiteração estocástica.
+- [ ] **Ingestão Exaustiva de Arquivos (Zero Partial-Read Delusion):** 100% das linhas dos arquivos analisados ou mutacionados foram lidas na íntegra via `view_file` paginado ($1 \to N$); zero presunção estocástica baseada em leitura fracionada de 200 linhas.
+- [ ] **Foco Laser & Zero Desvio Lateral (Lei 46):** atuação 100% confinada ao arquivo e problema solicitado pelo usuário; zero inspeção de logs de compilação ou arquivos periféricos não solicitados.
+
