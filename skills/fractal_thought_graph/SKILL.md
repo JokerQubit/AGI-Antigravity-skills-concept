@@ -1,12 +1,12 @@
 ---
 name: fractal_thought_graph
-description: "v5.0 — The Autonomous Hyper-Cortex Sovereign Engine. Manual técnico e playbook operacional para gestão do substrato de pensamento (.planning/), coordenação harmônica entre o grafo fractal estigmérgico e o dynamic_thought_router (ToT com poda fiduciária A* e GoT com fusão multilinear e relaxamento cíclico), bifurcação de missões (Arquitetural N >= 100 vs Direto Zero Nós), modelagem determinística do manifesto graph.json e thought_graph.json, e despacho concorrente atômico 1:1 de subagentes sob monitoramento metacognitivo de 2ª ordem."
+description: "v5.0 — The Autonomous Hyper-Cortex Sovereign Engine. Manual técnico e playbook operacional para gestão do substrato de pensamento (.planning/), coordenação harmônica entre o grafo fractal estigmérgico e o dynamic_thought_router (ToT com poda fiduciária A* e GoT com fusão multilinear e relaxamento cíclico), bifurcação de missões (Arquitetural Grafo Modular Denso 3 a 7 nós com padrão áureo de 5 nós vs Direto Zero Nós), modelagem determinística do manifesto graph.json e thought_graph.json, e despacho concorrente atômico 1:1 de subagentes sob monitoramento metacognitivo de 2ª ordem."
 ---
 
 # Fractal Thought Graph Operations Playbook (v5.0 — The Autonomous Hyper-Cortex | Leis 41, 44 & 45)
 
 Manual prático de orquestração do substrato cognitivo pré-execução (`.planning/`). Estabelece a metodologia de expansão de pensamento de nível AGI com bifurcação determinística de modo e integração profunda com o **Dynamic Thought Router** (`skills/dynamic_thought_router`):
-1. **MODO ARQUITETURAL / PLATAFORMA:** Saturação exaustiva do hipergrafo até a **Fronteira do Impassável** ($N \ge 100$ nós em `.planning/nodes/`) com Chief Ontologist empírico, despacho em ondas sequenciais (máx 15 nós/onda) e coordenação sináptica de topologias avançadas (ToT e GoT).
+1. **MODO ARQUITETURAL / PLATAFORMA:** **Grafo Modular Denso de Alta Densidade Semiótica (3 a 7 nós ricos e substanciais, com padrão áureo de 5 nós arquiteturais)** em `.planning/nodes/`. Cada nó cobre um domínio sistêmico completo (Domínio/Portas, Adaptadores/Infra, Concorrência/Kernel, UI/Física Perceptual, Auditoria/Contratos), equivalendo pelo conteúdo de dezenas de nós atômicos fragmentados. Primazia absoluta de **Qualidade sobre Quantidade (Lei 4)**: menor consumo de tokens, máxima densidade técnica e veto definitivo à inflação estocástica de nós vazios. Coordenado via Chief Ontologist empírico e topologias avançadas (ToT e GoT).
 2. **MODO DIRETO / OPERACIONAL / INVESTIGATIVO:** **Zero nós em disco (`nodes_floor: 0`)**. É terminantemente proibido criar arquivos markdown em `.planning/nodes/`. O plano executivo é gerado diretamente no `implementation_plan.md` e todo o orçamento de tokens é preservado para a Dupla Investigativa e para os subagentes que codificam os arquivos diretamente sob Linear Causal Stream (LCS) ou Dialética Adversarial (DAS).
 
 Governa a conexão polímata universal entre domínios correlacionados e não-correlacionados com:
@@ -36,12 +36,13 @@ Governa a conexão polímata universal entre domínios correlacionados e não-co
 │   ├── inv_001_root_cause.md   # Laudo microscópico emitido pelo Subagente Alfa
 │   └── inv_002_blast_radius.md # Laudo de raio de impacto emitido pelo Subagente Beta
 ├── node_000_root.md            # [MODO ARQUITETURAL APENAS] Decomposição Ontológica Raiz
-├── hypergraph_seed.json        # [MODO ARQUITETURAL APENAS] Semente Empírica: Lista dos 100+ nós
-└── nodes/                      # [MODO ARQUITETURAL APENAS] Piso mínimo inegociável de 100 nós (N >= 100)
-    ├── node_001_<slug>.md      # Nós Primários Estruturais (d=1, Camada Base)
-    ├── node_001_1_<atrito>.md  # Nós Filhos de Resolução de Atrito (d=2, Delta Puro)
-    ├── node_001_2_<falha>.md   # Nós Filhos de Modos Silenciosos de Falha (d=2, Delta Puro)
-    └── ...
+├── hypergraph_seed.json        # [MODO ARQUITETURAL APENAS] Semente Empírica: Lista dos 3 a 7 nós densos
+└── nodes/                      # [MODO ARQUITETURAL APENAS] Grafo Modular Denso (3 a 7 nós ricos, padrão áureo de 5 nós)
+    ├── node_001_domain_ports.md         # Domínio Central, Entidades & Portas Abstratas
+    ├── node_002_storage_infra.md        # Adaptadores de Infraestrutura, ACID WAL & Atomic Swap
+    ├── node_003_concurrency_kernel.md   # Concorrência, Event Loops, Trava Semafórica FsLockEngine
+    ├── node_004_ui_perceptual_craft.md  # UI Titã, Cinemática de Molas 2ª Ordem & Glassmorphism
+    └── node_005_audit_contracts.md      # Contratos Formais, Red Team Pre-Mortem & Telemetria
 
 > ⚠️ REGRA DE OURO DO MODO DIRETO: Se a missão for classificada como DIRECT_OPERATIONAL, o diretório .planning/nodes/ NÃO é criado/populado. Zero arquivos gerados em nodes/. Todo planejamento vai direto para implementation_plan.md.
 ```
@@ -54,7 +55,7 @@ O ecossistema v5.0 supera a falsa dicotomia entre planejamento persistido e raci
 
 1. **O Grafo Fractal Estigmérgico (Substrato Espacial & Histórico):**
    - Opera no domínio da persistência em disco (`.planning/nodes/`, `graph.json`, `synaptic_bus.json`).
-   - Define a ontologia estática e evolutiva do sistema, a decomposição em $N \ge 100$ nós atômicos em missões arquiteturais, os contratos fiduciários e o histórico transacional append-only em `.planning/ledger/`.
+   - Define a ontologia estática e evolutiva do sistema, a decomposição em Grafo Modular Denso (3 a 7 nós de alta densidade semiótica, padrão áureo de 5 nós arquiteturais que cobrem domínios inteiros) em missões arquiteturais, os contratos fiduciários e o histórico transacional append-only em `.planning/ledger/`.
    - Garante rastreabilidade, auditabilidade pós-sessão e imunidade contra perda de memória de trabalho (*zero context rot*).
 
 2. **O Dynamic Thought Router (Substrato Temporal & Operacional Online):**
@@ -69,7 +70,7 @@ O ecossistema v5.0 supera a falsa dicotomia entre planejamento persistido e raci
 ├───────────────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                           │
 │   [GRAFO FRACTAL ESTRUTURAL]                     [DYNAMIC THOUGHT ROUTER EM EXECUÇÃO]    │
-│   • .planning/nodes/ (N >= 100)                  • .planning/thought_graph.json           │
+│   • .planning/nodes/ (3 a 7 nós densos, áureo: 5)• .planning/thought_graph.json           │
 │                                                                                           │
 │   ┌─────────────────────────────┐                ┌─────────────────────────────────────┐  │
 │   │ Nó Isolado com Bifurcação   │ ─────────────> │ Tree of Thoughts (ToT)              │  │
@@ -139,7 +140,7 @@ Antes de qualquer dedução arquitetural ou despacho de nós, o Agente Principal
 
 ## 3. Matriz de Ativação de Skills & Regras
 - Skills Ativadas: [fractal_thought_graph, modern_ui_craft, tactile_audio_sfx, hardened_clean_architecture, browser_visual_reasoning, autonomous_computer_use]
-- Tier de Complexidade ACC: Sessão Soberana v4.0 — Piso Inegociável ≥ 100 Nós
+- Tier de Complexidade ACC: Sessão Soberana v5.0 — Grafo Modular Denso (3 a 7 Nós Ricos, Padrão Áureo = 5 Nós; Qualidade sobre Quantidade)
 
 ## 4. Protocolo de Deconstrução Forense Prévia (Lei 38)
 ### 4.1 Camada 1: Contratos Explícitos Mapeados (CE-01 ... CE-n)
@@ -197,7 +198,7 @@ $$\varepsilon_t = 0.30 \cdot \mathcal{H}_{\text{entropy}}(S_t) + 0.30 \cdot \mat
 ## 4. Playbook da Época I (Fase A): Subagente Chief Ontologist (Arq.) ou Dupla Investigativa (Direto)
 
 > ⚠️ DIFERENCIAÇÃO CRÍTICA DE EXECUÇÃO NA ÉPOCA I:
-> - **Se mission_type == "ARCHITECTURAL":** O Chief Ontologist gera `node_000_root.md` e `hypergraph_seed.json` para ancorar as ondas subsequentes que saturam os 100+ nós em `.planning/nodes/`.
+> - **Se mission_type == "ARCHITECTURAL":** O Chief Ontologist gera `node_000_root.md` e `hypergraph_seed.json` para ancorar a geração do **Grafo Modular Denso de Alta Densidade Semiótica (3 a 7 nós ricos e substanciais, com padrão áureo de 5 nós arquiteturais)** em `.planning/nodes/`. Cada nó equivale a dezenas de nós atomizados com economia drástica de tokens e primazia da qualidade técnica.
 > - **Se mission_type == "DIRECT_OPERATIONAL":** A fase do Chief Ontologist e a saturação de nós são SUBSTITUÍDAS pela ativação imediata da **Dupla Investigativa (Two-Mind Minimum)**:
 >   1. **Subagente Alfa (Causal Root Cause):** disseca a falha, fluxo interno e causas raízes microscópicas nos arquivos reais.
 >   2. **Subagente Beta (Downstream Blast Radius):** disseca efeitos colaterais, quebra de contratos e dependências downstream.
@@ -233,7 +234,7 @@ O Agente Principal é **TERMINANTEMENTE PROIBIDO** de inventar tópicos de nós 
       "TypeName": "self",
       "Role": "Chief Ontological Architect & Empirical Researcher",
       "Model": "flash",
-      "Prompt": "Sob as diretrizes de .planning/mission_dossier.md, execute varredura empírica completa no ecossistema (código existente, contratos, estado da arte da indústria). Decomponha o domínio nos 8 eixos ontológicos nativos. Estabeleça as cadeias de causa e efeito X -> Y -> Z. Gere o arquivo .planning/nodes/node_000_root.md e o mapa de sementes empíricas .planning/hypergraph_seed.json contendo a lista discriminada de todos os 100+ nós atômicos a serem explorados pelas ondas."
+      "Prompt": "Sob as diretrizes de .planning/mission_dossier.md, execute varredura empírica completa no ecossistema (código existente, contratos, estado da arte da indústria). Decomponha o domínio nos eixos ontológicos nativos sob o Grafo Modular Denso de Alta Densidade Semiótica (3 a 7 nós ricos e substanciais, com padrão áureo de 5 nós arquiteturais cobrindo domínios inteiros: Domínio/Portas, Adaptadores/Infra, Concorrência/Kernel, UI/Física Perceptual, Auditoria/Contratos). Qualidade sobre quantidade (Lei 4): cada nó denso sintetiza o conteúdo equivalente a dezenas de nós atomizados com profunda substância técnica e economia de tokens. Estabeleça as cadeias de causa e efeito X -> Y -> Z. Gere o arquivo .planning/nodes/node_000_root.md e o mapa de sementes empíricas .planning/hypergraph_seed.json contendo a lista discriminada dos 3 a 7 nós densos planejados."
     }
   ]
 }
@@ -252,23 +253,47 @@ O Agente Principal é **TERMINANTEMENTE PROIBIDO** de inventar tópicos de nós 
 ### Estrutura do Manifesto de Sementes (`.planning/hypergraph_seed.json`):
 ```json
 {
-  "total_planned_nodes": 105,
+  "total_planned_nodes": 5,
   "nodes": [
     {
-      "id": "node_001_concurrency_engine",
-      "axis": "concurrency",
+      "id": "node_001_domain_ports",
+      "axis": "domain_logic",
       "depth": 1,
-      "research_foundation": "Benchmark LMAX Disruptor e Zero-Allocation pipelines.",
-      "target_file": ".planning/nodes/node_001_concurrency_engine.md",
-      "checklist_ref": ".planning/nodes/node_001_concurrency_engine.md#checklist-forense-atômico-de-verificação"
+      "research_foundation": "Clean Architecture defensiva, entidades imutáveis e portas formais desacopladas.",
+      "target_file": ".planning/nodes/node_001_domain_ports.md",
+      "checklist_ref": ".planning/nodes/node_001_domain_ports.md#checklist-forense-atômico-de-verificação"
     },
     {
-      "id": "node_002_titan_spring_kinematics",
+      "id": "node_002_storage_infra",
+      "axis": "data_contracts",
+      "depth": 1,
+      "research_foundation": "Isolamento ACID, WAL e DeterministicAtomicSwap com atestação SHA-256.",
+      "target_file": ".planning/nodes/node_002_storage_infra.md",
+      "checklist_ref": ".planning/nodes/node_002_storage_infra.md#checklist-forense-atômico-de-verificação"
+    },
+    {
+      "id": "node_003_concurrency_kernel",
+      "axis": "concurrency",
+      "depth": 1,
+      "research_foundation": "Benchmark LMAX Disruptor, exclusão mútua FsLockEngine e zero frame allocation.",
+      "target_file": ".planning/nodes/node_003_concurrency_kernel.md",
+      "checklist_ref": ".planning/nodes/node_003_concurrency_kernel.md#checklist-forense-atômico-de-verificação"
+    },
+    {
+      "id": "node_004_ui_perceptual_craft",
       "axis": "hci_gestures",
       "depth": 1,
-      "research_foundation": "Física de molas de 2ª ordem Linear/Apple via framer-motion.",
-      "target_file": ".planning/nodes/node_002_titan_spring_kinematics.md",
-      "checklist_ref": ".planning/nodes/node_002_titan_spring_kinematics.md#checklist-forense-atômico-de-verificação"
+      "research_foundation": "Cinemática de molas de 2ª ordem Linear/Apple via framer-motion e isolamento GPU.",
+      "target_file": ".planning/nodes/node_004_ui_perceptual_craft.md",
+      "checklist_ref": ".planning/nodes/node_004_ui_perceptual_craft.md#checklist-forense-atômico-de-verificação"
+    },
+    {
+      "id": "node_005_audit_contracts",
+      "axis": "forensic_telemetry",
+      "depth": 1,
+      "research_foundation": "Pre-Mortem T+6 meses, contratos Result<T,E> invariantes e telemetria de zero erros.",
+      "target_file": ".planning/nodes/node_005_audit_contracts.md",
+      "checklist_ref": ".planning/nodes/node_005_audit_contracts.md#checklist-forense-atômico-de-verificação"
     }
   ]
 }
@@ -393,10 +418,10 @@ Para notas de descompasso, avisos assíncronos ou descobertas inesperadas que im
 ---
 
 ### 6. Mecanismo de Propagação entre Ondas:
-1. **Onda 1 (Nós 001–015):** Recebe o `hypergraph_seed.json` e inicializa as sinapses de base com status `GO`.
-2. **Consolidação:** O Agente Principal lê os `[SYNAPTIC_OUTPUTS]` dos nós gerados na Onda 1 e atualiza o `synaptic_bus.json`.
-3. **Onda 2 (Nós 016–030):** O Agente Principal injeta no prompt de cada subagente da Onda 2 as sinapses relevantes consolidadas do `synaptic_bus.json`. O subagente do nó 018 já inicia com pleno conhecimento dos contratos e status definidos nos nós anteriores.
-4. **Ondas Subsequentes:** O ciclo de alimentação, travas mutex e propagação se repete até a saturação integral ($N \ge 100$).
+1. **Onda 1 (Nós de Fundação: Domínio & Concorrência/Kernel):** Recebe o `hypergraph_seed.json` e inicializa as sinapses de base com status `GO` (ex: `node_001` e `node_003`).
+2. **Consolidação Sináptica:** O Agente Principal lê os `[SYNAPTIC_OUTPUTS]` dos nós gerados na Onda 1 e atualiza o `synaptic_bus.json`.
+3. **Onda 2 (Nós de Aplicação/Percepção: Adaptadores, UI Craft & Auditoria):** O Agente Principal injeta no prompt de cada subagente da Onda 2 as sinapses consolidadas do `synaptic_bus.json`. Os subagentes iniciam com pleno conhecimento dos contratos estabilizados (`CONTRACT_STABLE`).
+4. **Consolidação Final do Grafo Denso:** O ciclo de alimentação, travas mutex e propagação se conclui com a saturação integral dos 3 a 7 nós densos (padrão áureo de 5 nós), alcançando máxima densidade semiótica com mínimo overhead de tokens.
 
 
 ---
@@ -418,12 +443,12 @@ Turno 5: Expediente 5 — Auditoria Adversarial Independente no Chrome Real (Fla
 ```json
 {
   "current_expediente": 2,
-  "expediente_name": "Saturação Sináptica em Ondas",
+  "expediente_name": "Saturação de Grafo Modular Denso",
   "status": "IN_PROGRESS",
   "current_wave": 2,
-  "total_waves": 7,
-  "nodes_completed": 30,
-  "nodes_target": 105,
+  "total_waves": 2,
+  "nodes_completed": 3,
+  "nodes_target": 5,
   "recommended_flash_mode": "Medium",
   "last_synaptic_sync": "2026-09-12T15:30:00Z"
 }
@@ -445,7 +470,7 @@ Tabela determinística que mapeia cada nó atômico ao seu subagente codificador
 | `node_002_titan_spring_kinematics.md` / `src/ui/spring/kinematics.ts` | Subagente-002 | Framer-Motion 2nd-Order Damped Spring Specialist | — | PENDING |
 | `node_016_fluid_gestures.md` / `src/ui/gestures/fluidController.ts` | Subagente-016 | Fluid Gesture & Rubber-Banding Specialist | `spring_stiffness` (node_002 GO), `spring_damping` (node_002 GO) | HOLD |
 
-> Replicar para todos os $N \ge 100$ nós saturados antes de emitir a matriz para aprovação.
+> Replicar para todos os nós densos saturados (3 a 7 nós, padrão áureo de 5 nós) antes de emitir a matriz para aprovação.
 
 ---
 
@@ -504,17 +529,17 @@ Ordem de execução, dependências GO/HOLD e sequência de commits semânticos. 
 ```markdown
 ## Ordem de Execução (Waves)
 
-Wave 1 [Nós 001–015] — Camada Base (sem dependências upstream)
-  → Cada subagente escreve seu nó e emite SYNAPTIC_OUTPUTS com mutex_status: "GO".
+Wave 1 [Nós de Fundação: Domínio & Concorrência/Kernel] — Camada Base (sem dependências upstream)
+  → Cada subagente escreve seu nó denso e emite SYNAPTIC_OUTPUTS com mutex_status: "GO".
   → Agente Principal consolida synaptic_bus.json.
-  → Commit semântico: `feat(planning): saturate wave-1 base nodes [001-015]`
+  → Commit semântico: `feat(planning): saturate wave-1 foundation dense nodes [001, 003]`
 
-Wave 2 [Nós 016–030] — Camada Intermediária (dependências da Wave 1)
+Wave 2 [Nós de Aplicação/Percepção: Adaptadores, UI Craft & Auditoria] — Camada Downstream
   → Subagentes consomem sinapses GO da Wave 1.
   → Nós em HOLD aguardam sinal GO explícito do produtor antes de progredir.
-  → Commit semântico: `feat(planning): saturate wave-2 intermediate nodes [016-030]`
+  → Commit semântico: `feat(planning): saturate wave-2 application dense nodes [002, 004, 005]`
 
-[Repetir para cada wave até N >= 100]
+[Concluir saturação do Grafo Modular Denso: 3 a 7 nós, padrão áureo de 5 nós]
 
 ## Handoff Final para Época III
   → Condição: todos os nós com status SATURATED no graph.json.

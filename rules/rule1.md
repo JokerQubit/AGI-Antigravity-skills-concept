@@ -1,6 +1,6 @@
 ---
 trigger: always_on
-description: "v5.0 — Universal Cognitive Parity — Orquestração Cybernética de Enxame & Hiper-Córtex Sináptico. Playbook operacional para gestão do Barramento Sináptico Neural (synaptic_bus.json), Vetores de Estado Cognitivo, plasticidade hebbiana, máquina quântica de contratos em 5 estados, exclusão mútua via FsLockEngine, resolução SCDA, prova de ortogonalidade, Protocolo do Artífice Autônomo Fim-a-Fim (End-to-End Problem Solver) e Mandato do Artífice Motor em malha fechada."
+description: "v5.0 — Universal Cognitive Parity — Orquestração Cybernética de Enxame & Hiper-Córtex Sináptico. Playbook operacional para gestão do Barramento Sináptico Neural (synaptic_bus.json), Grafo Modular Denso (3 a 7 nós em Modo Arquitetural; qualidade > quantidade), Vetores de Estado Cognitivo, plasticidade hebbiana, máquina quântica de contratos em 5 estados, exclusão mútua via FsLockEngine, resolução SCDA, prova de ortogonalidade, Protocolo do Artífice Autônomo Fim-a-Fim (End-to-End Problem Solver) e Mandato do Artífice Motor em malha fechada."
 ---
 
 # Swarm Orchestration & Hyper-Cortex Synaptic Mesh Playbook — v5.0
@@ -243,7 +243,9 @@ Subagentes operando em enxames corporativos de alta escala não reportam de form
 3. **Level 4 — Arquiteto Chefe de Sistemas & Systems Research Director:**
    Supervisão transversal de engenharia, definição dos contratos de porta (`CONTRACT_STABLE`), tipagem discriminada defensiva (`Result<T,E>`) e preservação inegociável de primeiros princípios.
 4. **Level 3 — Gerentes de Domínio & Orquestradores de Onda:**
-   Decomposição sináptica da missão em nós atômicos disjuntos, dimensionamento de ondas sequenciais (máximo 15 subagentes) e governança de transição de expedientes cognitivos (Work Shifts).
+   Decomposição sináptica da missão e dimensionamento de ondas:
+   - **Topologia de Decomposição (Qualidade > Quantidade — Lei 4):** Em Modo Arquitetural, estruturação mandatória do **Grafo Modular Denso de 3 a 7 nós ricos e substanciais** (com âncora canônica em **5 nós arquiteturais coesos de alta densidade semiótica** que equivalem com rigor fiduciário a dezenas de micro-nós fragmentados, rodando consequentemente com menos tokens e qualidade superior); veto absoluto ao antigo piso inflacionário de 100 nós ou cotas quantitativas artificiais. Em Modo Direto/Operacional, **zero nós em disco**.
+   - **Dimensionamento de Ondas:** Decomposição sináptica em nós atômicos disjuntos, dimensionamento de ondas sequenciais (máximo 15 subagentes concorrentes) e governança de transição de expedientes cognitivos (Work Shifts).
 5. **Level 2 — Supervisory & Quality Verification Gates (Loop do Advogado do Diabo):**
    Juízes e auditores adversariais independentes com poder de veto incondicional (`[HARD REJECT]`). Aplicam a tríade determinística (AST / Parser Tree, Tipagem Estrita e Testes sem regressão). Emitem o **Supervisory Rejection Dossier** e gerenciam a Blacklist Acumulativa de Vetores.
 6. **Level 1 — Artífices Motores de Execução Atômica 1:1:**
@@ -266,7 +268,7 @@ Toda equipe nasce da física do problema e se dissolve com a entrega do artefato
 
 ## 4. Identidade e Autoconsciência Estigmérgica de Enxame
 
-Todo subagente despachado opera com consciência lúcida de seu papel no hipergrafo coletivo, registrando no topo de sua análise:
+Todo subagente despachado opera com consciência lúcida de seu papel no grafo coletivo (estruturado como Grafo Modular Denso de 3 a 7 nós ricos e substanciais em Modo Arquitetural ou execução cirúrgica direta em Modo Direto), registrando no topo de sua análise:
 1. **Identidade Atômica:** `[MY_SWARM_ROLE]` (especialidade exata e escopo delimitado).
 2. **Âncora Sináptica:** `[MY_SYNAPTIC_ANCHOR]` (quais contratos upstream consome).
 3. **Entregável Estrito:** `[MY_SWARM_DELIVERABLE]` (arquivo e artefato exato que deve persistir no disco para destravar os pares).
@@ -472,7 +474,7 @@ A tentativa de despachar um subagente de consulta ou auditoria preliminar para u
 O Agente Principal DEVE consolidar o escopo e despachar um único Artífice Motor Fim-a-Fim munido do contexto holístico completo.
 
 ### 9.5. Preservação do Handoff de Alta Fidelidade para Missões Arquiteturais da Época I
-O protocolo de Handoff via substrato estigmérgico (`.planning/investigations/inv_<id>_<slug>.md`) permanece ativo **estritamente para missões arquiteturais de grande porte da Época I**, onde a modelagem de domínio, contratos de portas globais ou pesquisas fundamentais produzem inteligência de longo prazo consumida assincronamente por dezenas de nós em ondas subsequentes. Nesses cenários arquiteturais de plataforma:
+O protocolo de Handoff via substrato estigmérgico (`.planning/investigations/inv_<id>_<slug>.md`) permanece ativo **estritamente para missões arquiteturais de grande porte da Época I**, onde a modelagem de domínio, contratos de portas globais ou pesquisas fundamentais produzem inteligência de longo prazo consumida assincronamente pelos nós do **Grafo Modular Denso (3 a 7 nós ricos e substanciais, com referência canônica em 5 nós arquiteturais coesos de alta densidade semiótica)** em ondas subsequentes. A primazia da qualidade sobre a quantidade garante que 5 nós densos equivalham por 100 nós fragmentados, rodando com menos tokens, maior profundidade e zero inflação estocástica de nós vazios. Nesses cenários arquiteturais de plataforma:
 1. O laudo pericial é persistido no disco.
 2. Os subagentes das ondas posteriores realizam ingestão compulsória de 100% do laudo via `view_file` (zero perda pré-frontal).
 3. No entanto, para qualquer tarefa de correção de código, bugfix ou refinamento de implementação, o ciclo é **sempre Fim-a-Fim** pelo mesmo subagente motor.
@@ -484,6 +486,7 @@ O protocolo de Handoff via substrato estigmérgico (`.planning/investigations/in
 > Auditado pelo Agente Principal e pelo Red Team Juiz na Época IV.
 
 - [ ] **Relação 1:1 Atômica:** exatamente 1 subagente por nó ou arquivo de produção; zero batching.
+- [ ] **Grafo Modular Denso em Modo Arquitetural (Qualidade > Quantidade — Lei 4):** em missões arquiteturais, o grafo é composto por 3 a 7 nós modulares densos e profundos (com referência canônica em 5 nós arquiteturais coesos de alta densidade semiótica que equivalem com rigor fiduciário a dezenas de micro-nós fragmentados, rodando consequentemente com menos tokens e qualidade superior); veto absoluto a pisos inflacionários artificiais (100 nós) e a nós vazios; em Modo Direto/Operacional, zero nós em disco.
 - [ ] **Ortogonalidade de Alvos Comprovada:** $\text{TargetFiles}(S_i) \cap \text{TargetFiles}(S_j) = \emptyset$ para todos os subagentes da mesma onda motora.
 - [ ] **Mandato do Artífice Autônomo Fim-a-Fim Cumprido (Modo Direto / Correções):** subagente motor realizou o ciclo unificado completo (leitura 100% -> diagnóstico -> mutação direta no disco -> validação em malha fechada -> relatório final consolidado); zero repasse fragmentado de relatórios entre múltiplos subagentes para a mesma tarefa.
 - [ ] **Mandato do Artífice Motor Cumprido:** subagentes executaram mutações físicas diretas no disco via `replace_file_content` ou `write_to_file`; zero blocos de código em markdown no chat e zero paralisação em laudos intermediários.
