@@ -25,6 +25,21 @@ Subagentes operando em enxame não são silos isolados nem executores pontuais, 
     "fiduciary_director": "Chief Systems Architect",
     "mission_hash": "fc31cdef9c9501b587f98a55e421cb1fdcc8b964d93f1f8045fdb9658e92aa0b"
   },
+  "machine_neural_profile": {
+    "host_os": "Windows (NTFS)",
+    "cpu_logical_cores": 12,
+    "ram_total_gb": 32,
+    "ram_free_gb": 18,
+    "gpu_accelerator": "Dedicated (DirectX / HLSL)",
+    "active_listening_ports": [3000, 8080],
+    "max_safe_concurrent_workers": 6
+  },
+  "project_neural_map_ref": {
+    "map_file": ".planning/project_neural_map.json",
+    "human_readable_summary": ".planning/PROJECT_NEURAL_MAP.md",
+    "last_synced_session": "SES-2026-09-24-001",
+    "indexed_files_count": 42
+  },
   "cognitive_state_vector": {
     "epistemic_conviction_Ce": 0.95,
     "residual_uncertainty_Ci": 0.05,
@@ -124,8 +139,11 @@ O estado do enxame é modelado por um vetor contínuo $\vec{S} = [C_e, C_i, \tau
 2. **LTD (Long-Term Depression):** $w_{ij}^{(t+1)} = \max(0.0, \; w_{ij}^{(t)} - \delta_{penalty})$ com $\delta = 0.40$ diante de quebras de compilação, bugs ou `[PEER_VETO]`.
 3. **Decaimento Passivo & Poda:** $w_{ij}^{(t+1)} = w_{ij}^{(t)} \times (1 - \gamma_{decay})$ ($\gamma = 0.05$). Apenas sinapses com $w_{ij} \ge \theta_{threshold} \; (0.65)$ são injetadas em payloads cirúrgicos.
 
-### 1.3. Memória Estigmérgica Associativa (`cognitive_engrams`)
-Supera a amnésia inter-turnos (TaaS). Enagramas encapsulam invariantes comprovados e blacklists de armadilhas (ex: locks Win32, isolamento de threads GPU). Payloads de novas ondas realizam *recall* associativo automático via `[ASSOCIATIVE_MEMORY_ENGRAMS]`.
+### 1.3. Memória Estigmérgica Associativa (`cognitive_engrams`), Mapa Neural da Máquina & Mapa Neural do Projeto
+Supera a amnésia inter-turnos (TaaS) e ancora a cognição na realidade física:
+1. **Engramas Cognitivos (`cognitive_engrams`):** Encapsulam invariantes comprovados e blacklists de armadilhas (ex: locks Win32, isolamento de threads GPU). Payloads de novas ondas realizam *recall* associativo automático via `[ASSOCIATIVE_MEMORY_ENGRAMS]`.
+2. **Grounding da Máquina (`machine_neural_profile`):** Telemetria em tempo real do ambiente host (SO, núcleos, memória, GPU e portas ativas) incorporada diretamente no barramento, delimitando o teto seguro de subagentes concorrentes e prevenindo saturação de hardware.
+3. **Memória Contínua do Projeto (`project_neural_map_ref`):** Aponta para o mapa neural vivo do repositório (`.planning/project_neural_map.json`), permitindo ingestão instantânea no Step 0 da missão e atualização contínua para erradicar a perda de contexto histórico e a duplicidade de interfaces.
 
 ### 1.4. Protocolo de Propagação Feedforward:
 1. **Onda $K$:** Subagentes emitem nós e relatórios contendo `[SYNAPTIC_OUTPUTS]` e peso sugerido.
@@ -203,6 +221,14 @@ Quando uma proposta, contrato ou implementação atômica é sumariamente reprov
    Qualquer subagente subsequente ou re-despachado para o nó ou arquivo DEVE obrigatoriamente ler o dossiê via `view_file` como sua primeira ação motora e é expressamente proibido de iterar sobre qualquer padrão presente na Blacklist Acumulativa de Vetores.
    - Caso um subagente re-despachado submeta uma variação cosmética ou isomórfica de um vetor da blacklist, o Supervisory Gate aciona a trava mecânica imediata:
      `[HARD REJECT: BLACKLISTED_VECTOR_REITERATION]`
+
+### 2.6. O Protocolo Shadow Spike (Pesquisa em Cópia-Sombra & Enxerto Diferencial Cirúrgico — Lei 17)
+Para erradicar a "Síndrome da Reconstrução do Zero" (The Greenfield Delusion) quando for necessário experimentar novas arquiteturas, otimizações algorítmicas, bibliotecas desconhecidas ou testar hipóteses:
+1. **Veto à Mutação Cega de Produção:** É expressamente proibido tentar recriar arquivos de produção do zero ou aplicar testes arriscados diretamente em código estável.
+2. **Duplicação Segura (Shadow Spike):** O subagente clona a lógica-chave para uma sandbox isolada de pesquisa (ex: `<target>.spike.<ext>` ou `.planning/spikes/spike_<slug>.<ext>`).
+3. **Research & Benchmarking Isolado:** Realiza-se a pesquisa, profiling de memória/CPU, testes de estresse e verificação de contratos no arquivo de spike, sem tocar na produção.
+4. **Enxerto Cirúrgico Diferencial (Differential Grafting):** Uma vez comprovada a superioridade da nova lógica ($LASTEXITCODE = 0$, benchmarks validados), o artífice transporta estritamente o delta necessário para o arquivo original via `replace_file_content`, preservando 100% da casca existente, imports e contratos downstream.
+5. **Purga Determinística do Spike:** O arquivo de spike é removido do filesystem.
 
 ---
 
@@ -410,6 +436,17 @@ Subagentes motores com `TypeName: "self"` encerram suas atividades comunicando-s
   * <Chave de Contrato>: <Valor ou Referência Persistida no Disco>
 ```
 
+### 8.6. O Mapa Neural da Máquina & Grounding Ambiental do Host (Lei 39)
+O enxame opera com autoconsciência da topologia física e runtime da máquina hospedeira através do objeto `machine_neural_profile` no `synaptic_bus.json`:
+1. **Topologia de Hardware & Dimensionamento de Carga:** Inspeção prévia de cores lógicos de CPU e RAM disponível. Concorrência limitada a no máximo 50% dos núcleos lógicos para não travar a máquina do usuário.
+2. **Física do SO Windows NTFS:** Consciência ativa de locks mandatórios Win32 (`EBUSY`/`EPERM`), case-insensitivity do filesystem e exigência do `DeterministicAtomicSwap`.
+3. **Mapa de Portas e Processos Zumbis:** Inspeção preventiva de sockets em escuta (`Get-NetTCPConnection`) antes de lançar servidores de teste, e purga automática de instâncias órfãs presas (Playbooks A e B).
+
+### 8.7. O Mapa Neural de Memória Contínua do Projeto & Mecânica Anti-Amnésia (Lei 47)
+Para erradicar o esquecimento do projeto ao longo do tempo e a sobreposição cega de funções ou parâmetros, o repositório é governado por `.planning/project_neural_map.json`:
+1. **Ingestão Prévia Obrigatória (Step 0):** Antes de iniciar qualquer análise ou plano, a IA ou subagente consulta o Mapa Neural para saber o que cada arquivo faz de cima a baixo e o histórico das sessões passadas.
+2. **Atualização Gradual Contínua (Step Final):** Ao concluir as alterações de uma sessão, a entrada dos arquivos modificados é atualizada no `file_neural_index` e o registro da sessão é adicionado em `session_chronicles` com commit atômico no Git.
+
 ---
 
 ## 9. O Protocolo do Artífice Autônomo Fim-a-Fim & Banimento da Fragmentação Cognitiva (End-to-End Problem Solver Protocol — Lei 42)
@@ -508,4 +545,7 @@ O protocolo de Handoff via substrato estigmérgico (`.planning/investigations/in
 - [ ] **Aderência à Cadeia Neural de 6 Níveis (Enterprise Six-Tier):** segregação funcional entre Governança Fiduciária (L6), Handshake Hub (L5), Arquiteto Chefe (L4), Gerentes de Domínio (L3), Supervisory Gate (L2) e Artífices Motores 1:1 (L1).
 - [ ] **Ingestão Exaustiva de Arquivos (Zero Partial-Read Delusion):** 100% das linhas dos arquivos analisados ou mutacionados foram lidas na íntegra via `view_file` paginado ($1 \to N$); zero presunção estocástica baseada em leitura fracionada de 200 linhas.
 - [ ] **Foco Laser & Zero Desvio Lateral (Lei 46):** atuação 100% confinada ao arquivo e problema solicitado pelo usuário; zero inspeção de logs de compilação ou arquivos periféricos não solicitados.
+- [ ] **Protocolo Shadow Spike Respeitado (Lei 17):** novos experimentos e testes isolados em sandbox `.spike`; zero reconstrução do zero de arquivos de produção existentes.
+- [ ] **Mapa Neural da Máquina Grounded (Lei 39):** hardware, RAM, SO e portas ativas checados antes de execuções paralelas pesadas.
+- [ ] **Mapa Neural do Projeto Consultado & Atualizado (Lei 47):** consulta no Step 0 e atualização incremental no fechamento da sessão; zero amnésia sobre o propósito dos arquivos.
 

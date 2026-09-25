@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "5.0.0",
+  "project_name": "agi-research",
+  "last_synced_session": "SES-2026-09-24-003",
+  "last_updated": "2026-09-24T22:02:00-03:00",
+  "macro_architecture": {
+    "domain_summary": "Plugin soberano de governança cognitiva, paridade operacional universal e orquestração de hiper-córtex neural (v5.0 — Sovereign Synthetic Hyper-Cortex) para Antigravity / Gemini.",
+    "architectural_pattern": "Hub-and-Spoke Constitucional (Layer 0 imutável vs Layer 1 playbooks operacionais sob demanda)",
+    "key_technologies": [
+      "Markdown Constitucional",
+      "JSON Schemas Estigmérgicos",
+      "PowerShell CLI Nativo",
+      "Git Append-Only",
+      "Modelos Flash (Thinking Low/Medium/High)"
+    ],
+    "core_invariants": [
+      "Invariante 1: Primazia do Entregável Real no Disco e Foco Laser no Alvo (Leis 1 e 46)",
+      "Invariante 2: Veto Absoluto ao Parent Digitador (Lei 5) e Mandato do Artífice Autônomo Fim-a-Fim (Lei 42)",
+      "Invariante 3: Ingestão Exaustiva de Arquivos 100% lidos via view_file paginado (Lei 12)",
+      "Invariante 4: Primazia da Qualidade sobre Quantidade com Grafo Modular Denso de 3 a 7 nós (Lei 4)",
+      "Invariante 5: Protocolo Shadow Spike sem reconstrução do zero (Lei 17)",
+      "Invariante 6: Mapa Neural de Memória Contínua do Projeto Anti-Amnésia (Lei 47)",
+      "Invariante 7: Autonomia Motora em Malha Fechada e Host Grounding da Máquina (Lei 39)"
+    ]
+  },
+  "file_neural_index": {
+    "rules/AGENTS.md": {
+      "purpose": "Constituição Soberana de Layer 0 e governança executiva mestre do ecossistema.",
+      "scope_and_responsibilities": "Define a Tríade Fiduciária, divisão ontológica rules vs skills, o paradigma dos Titãs, as 5 Épocas Cognitivas e o Código das 53 Leis Supremas invioláveis.",
+      "exports": [
+        {"name": "Tríade Fiduciária", "signature": "CEO + Research Director + Epistemic Red Team", "description": "Postura cognitiva permanente"},
+        {"name": "5 Épocas Cognitivas", "signature": "Época 0 (Refiner) -> I (Ontologia) -> II (Matriz) -> III (Artífices) -> IV (Gauntlet)", "description": "Ciclo vital da cognição"},
+        {"name": "53 Leis Supremas", "signature": "Leis 1 a 53", "description": "Invariantes universais inegociáveis"}
+      ],
+      "dependencies": [],
+      "dependents": ["rules/rule1.md", "rules/rule2.md", "skills/*"],
+      "internal_state_and_side_effects": "Injetada permanentemente em todo prompt do agente pelo host Antigravity.",
+      "anti_patterns_to_avoid": "Nunca resumir telegráficamente de forma empobrecedora. Manter sempre vocabulário rico e densidade semiótica.",
+      "last_modified_session": "SES-2026-09-24-003"
+    },
+    "rules/rule1.md": {
+      "purpose": "Playbook Canônico de Orquestração de Enxame, Barramento Sináptico e Concorrência de Layer 1.",
+      "scope_and_responsibilities": "Governa o synaptic_bus.json v5.0, Máquina Quântica de Contratos em 5 fases, FsLockEngine, Protocolo Shadow Spike (Lei 17), Artífice Autônomo Fim-a-Fim (Lei 42), Mapa Neural da Máquina (Lei 39) e Mapa Neural do Projeto (Lei 47).",
+      "exports": [
+        {"name": "synaptic_bus.json v5.0", "signature": "Vetor S, Contratos Quânticos, Enagramas e Blacklists", "description": "Barramento estigmérgico neural"},
+        {"name": "FsLockEngine", "signature": "O_CREAT | O_EXCL ('wx') com TTL e jitter", "description": "Exclusão mútua no filesystem"},
+        {"name": "Shadow Spike Protocol", "signature": "Clone .spike -> Research -> Differential Grafting", "description": "Anti-Greenfield Delusion"},
+        {"name": "End-to-End Problem Solver Protocol", "signature": "Contexto Macro -> Leitura 100% -> Diagnóstico -> Mutação Física -> Verificação", "description": "Lei 42 anti-fragmentação"}
+      ],
+      "dependencies": ["rules/AGENTS.md", "skills/swarm_orchestration/SKILL.md"],
+      "dependents": ["rules/rule2.md", "skills/*"],
+      "internal_state_and_side_effects": "Governa transições do barramento sináptico e sincronização de concorrência.",
+      "anti_patterns_to_avoid": "Veto a pipeline fragmentado de passar relatório para outro codificar. Veto a reconstruir arquivos do zero.",
+      "last_modified_session": "SES-2026-09-24-003"
+    },
+    "rules/rule2.md": {
+      "purpose": "Playbook Canônico de Governança Adaptativa de Tokens, Roteamento Cognitivo Dinâmico e Expedientes.",
+      "scope_and_responsibilities": "Governa a Análise de Custo-Complexidade (ACC) com Host Grounding, roteamento entre LCS/ToT/GoT/DAS, Expedientes Cognitivos 0 a 5, Multi-Horizon Circuit Breakers, Grafo Modular Denso e Leis de Governança.",
+      "exports": [
+        {"name": "ACC Multi-Dimensional", "signature": "Vetor x in [0,1]^7 + incerteza epsilon_t", "description": "Avaliação pré-despacho"},
+        {"name": "Expedientes Cognitivos", "signature": "Work Shifts 0 a 5 em expediente_state.json", "description": "Pacing fiduciário"},
+        {"name": "Multi-Horizon Circuit Breakers", "signature": "Micro (retries/leitura) + Macro (tokens/freeze)", "description": "Drawdown cognitivo multinível"}
+      ],
+      "dependencies": ["rules/AGENTS.md", "rules/rule1.md", "skills/adaptive_token_governance/SKILL.md"],
+      "dependents": ["skills/*"],
+      "internal_state_and_side_effects": "Controla persistência de expedientes e seleção de modos Flash Thinking.",
+      "anti_patterns_to_avoid": "Veto ao flash high no Expediente 2. Veto a cotas infladas de 100 nós.",
+      "last_modified_session": "SES-2026-09-24-003"
+    },
+    "skills/fractal_thought_graph/SKILL.md": {
+      "purpose": "Manual técnico e playbook operacional para gestão do substrato de pensamento e Grafo Modular Denso.",
+      "scope_and_responsibilities": "Governa a modelagem de 3 a 7 nós modulares de alta densidade semiótica (padrão áureo de 5 nós arquiteturais), erradicando a cota inflacionária de 100 nós e gerindo o hypergraph_seed.json.",
+      "exports": [
+        {"name": "Grafo Modular Denso", "signature": "3 a 7 nós densos (áureo: 5 nós)", "description": "Especificações ricas por subsistema"},
+        {"name": "hypergraph_seed.json", "signature": "5 nós arquiteturais canônicos", "description": "Semente empírica ontológica"}
+      ],
+      "dependencies": ["rules/AGENTS.md", "rules/rule2.md"],
+      "dependents": [],
+      "internal_state_and_side_effects": "Define os arquivos gerados em .planning/nodes/ em missões arquiteturais.",
+      "anti_patterns_to_avoid": "Proibido criar mais de 7 nós sem justificativa. Qualidade vale mais do que quantidade.",
+      "last_modified_session": "SES-2026-09-24-002"
+    }
+  },
+  "session_chronicles": [
+    {
+      "session_id": "SES-2026-09-24-001",
+      "timestamp": "2026-09-24T18:30:00-03:00",
+      "user_intent": "Veto ao parent digitador, leitura fracionada e desvios laterais desnecessários.",
+      "actions_taken": [
+        "Consagrada a Lei 5 com [HARD HALT: PARENT_DIRECT_MUTATION_BREACH] impedindo o parent de editar código na thread principal",
+        "Consagrada a Lei 12 com [HARD REJECT: PARTIAL_READ_DELUSION] forçando a leitura de 100% das linhas via view_file paginado",
+        "Consagrada a Lei 46 com [HARD REJECT: UNNECESSARY_LATERAL_DRIFT] forçando foco laser no arquivo solicitado sem abrir logs ou arquivos periféricos"
+      ],
+      "mutated_files": ["rules/AGENTS.md", "rules/rule1.md"],
+      "lessons_and_decisions": "O parent na thread principal é estritamente maestro; a mutação física cabe ao subagente motor 1:1. Leitura parcial de 200 linhas é fraude epistêmica.",
+      "git_commit": "4536e0c"
+    },
+    {
+      "session_id": "SES-2026-09-24-002",
+      "timestamp": "2026-09-24T19:15:00-03:00",
+      "user_intent": "Unificação do ciclo de subagentes (Artífice Fim-a-Fim) e abolição da cota de 100 nós.",
+      "actions_taken": [
+        "Consagrada a Lei 42 com [HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE] unificando diagnóstico e mutação motora no mesmo subagente fim-a-fim",
+        "Consagrada a Lei 4 abolindo a cota de 100 nós e instituindo o Grafo Modular Denso de 3 a 7 nós ricos (padrão áureo em 5 nós densos)",
+        "Atualizados AGENTS.md, rule1.md, rule2.md e fractal_thought_graph/SKILL.md"
+      ],
+      "mutated_files": ["rules/AGENTS.md", "rules/rule1.md", "rules/rule2.md", "skills/fractal_thought_graph/SKILL.md"],
+      "lessons_and_decisions": "Subagentes divididos geram visões divergentes e 'telefone sem fio'. Qualidade de especificação vale infinitamente mais do que volume estocástico de 100 arquivos.",
+      "git_commit": "066e8d6"
+    },
+    {
+      "session_id": "SES-2026-09-24-003",
+      "timestamp": "2026-09-24T22:00:00-03:00",
+      "user_intent": "Protocolo Shadow Spike (pesquisa em cópia-sombra sem reconstruir do zero) e Mapa Neural de Memória Contínua do Projeto.",
+      "actions_taken": [
+        "Consagrada a Lei 17 formalizando o Protocolo Shadow Spike (clone .spike -> research -> enxerto cirúrgico diferencial)",
+        "Consagrada a Lei 39 formalizando o Mapa Neural da Máquina (Host Grounding: CPU, RAM, SO NTFS, portas de rede)",
+        "Consagrada a Lei 47 formalizando o Mapa Neural do Projeto (.planning/project_neural_map.json) com fluxo bidirecional e trava [HARD REJECT: PROJECT_AMNESIA_DRIFT]",
+        "Inicializado o exemplar vivo .planning/project_neural_map.json no repositório agi-research"
+      ],
+      "mutated_files": ["rules/AGENTS.md", "rules/rule1.md", "rules/rule2.md", ".planning/project_neural_map.json"],
+      "lessons_and_decisions": "Reconstruir do zero destrói edge cases. O projeto precisa de memória viva acumulativa para nunca esquecer o que cada arquivo faz.",
+      "git_commit": "PENDING"
+    }
+  ]
+}
