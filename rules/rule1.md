@@ -5,547 +5,163 @@ description: "v5.0 — Universal Cognitive Parity — Orquestração Cybernétic
 
 # Swarm Orchestration & Hyper-Cortex Synaptic Mesh Playbook — v5.0
 
-Playbook operacional de engenharia de coordenação de enxames de inteligência artificial de alta escala, governando o Hiper-Córtex neural, plasticidade estigmérgica, barramento sináptico v5.0, bloqueios atômicos de sistema de arquivos (FsLockEngine), transição quântica de contratos em 5 estados, resolução algorítmica dialética de conflitos (SCDA), auto-organização dinâmica sob medida e o ciclo OODA motor de malha fechada.
+Playbook operacional de coordenação de enxames de IA. Governa o Hiper-Córtex neural, plasticidade estigmérgica, barramento sináptico v5.0, travas atômicas FsLockEngine, contratos em 5 fases, resolução SCDA, ciclo OODA e o mandato do artífice fim-a-fim.
 
 ---
 
 ## 1. O Barramento Sináptico Neural v5.0 (`synaptic_bus.json`)
 
-Subagentes operando em enxame não são silos isolados nem executores pontuais, mas neurônios integrados de um **Hiper-Córtex Cybernético**. Toda decisão, contrato estrutural, heurística comprovada ou primitiva de dados deve ser propagada dinamicamente através do arquivo estigmérgico `.planning/synaptic_bus.json`, agora governado por **Vetores de Estado Cognitivo contínuos**, **Plasticidade Sináptica Hebbiana**, **Memória Estigmérgica Associativa** e uma **Máquina Quântica de Contratos em 5 Fases**.
+Subagentes operam como neurônios integrados de um **Hiper-Córtex Cybernético**. Decisões, contratos e heurísticas propagam-se via `.planning/synaptic_bus.json` (schema de referência na skill `swarm_orchestration` sob a Lei 2):
+- `meta`: Engine `v5.0.0`, ISO-8601, diretor fiduciário (`Chief Systems Architect`) e hash SHA-256.
+- `machine_neural_profile`: Telemetria host (SO, núcleos, RAM livre, GPU, portas ativas) limitando concorrência (Lei 39).
+- `project_neural_map_ref`: Ponte viva para `.planning/project_neural_map.json`, erradicando amnésia do repositório (Lei 47).
+- `cognitive_state_vector`: $\vec{S} = [C_e, C_i, \tau, \Phi, \Psi, \Omega]^T$ ($C_e$: convicção [0,1]; $C_i$: incerteza $\varepsilon$, $C_i > 0.15$ freia taxa motora; $\tau$: tensão dialética; $\Phi$: entropia de contexto; $\Psi$: plasticidade decrescente até congelar na Época IV; $\Omega$: expediente 0..5).
+- `quantum_contracts`: Interfaces em 5 fases com semver, SHA-256 e dependências.
+- `synaptic_weights_matrix`: Pesos $W_{ij} \in [0, 1]$: LTP ($+0.20 \cdot (1 - C_i)$) sob homologação; LTD ($-0.40$) sob falhas ou `[PEER_VETO]`; poda passiva ($\times 0.95$, corte $w_{ij} < 0.65$).
+- `associative_memory`: Engramas estigmérgicos (`engrams`) que imunizam contra anti-patterns passados.
+- `conflict_resolution_engine`: Disputas ativas, histórico e `refuted_vectors_blacklist` (append-only).
 
-### 1.1. Schema JSON Canônico do `synaptic_bus.json` v5.0
-
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "bus_version": "5.0.0",
-  "meta": {
-    "engine": "Autonomous Hyper-Cortex Neural Mesh",
-    "updated_at": "2026-09-17T20:25:00-03:00",
-    "fiduciary_director": "Chief Systems Architect",
-    "mission_hash": "fc31cdef9c9501b587f98a55e421cb1fdcc8b964d93f1f8045fdb9658e92aa0b"
-  },
-  "machine_neural_profile": {
-    "host_os": "Windows (NTFS)",
-    "cpu_logical_cores": 12,
-    "ram_total_gb": 32,
-    "ram_free_gb": 18,
-    "gpu_accelerator": "Dedicated (DirectX / HLSL)",
-    "active_listening_ports": [3000, 8080],
-    "max_safe_concurrent_workers": 6
-  },
-  "project_neural_map_ref": {
-    "map_file": ".planning/project_neural_map.json",
-    "human_readable_summary": ".planning/PROJECT_NEURAL_MAP.md",
-    "last_synced_session": "SES-2026-09-24-001",
-    "indexed_files_count": 42
-  },
-  "cognitive_state_vector": {
-    "epistemic_conviction_Ce": 0.95,
-    "residual_uncertainty_Ci": 0.05,
-    "active_dialectical_tension_tau": 0.08,
-    "context_entropy_Phi": 0.22,
-    "effective_plasticity_Psi": 0.85,
-    "active_expediente_Omega": 1,
-    "active_wave": 1,
-    "total_waves_scheduled": 2
-  },
-  "quantum_contracts": {
-    "src/core/ports/IStorage.ts": {
-      "status": "CONTRACT_STABLE",
-      "version": "5.0.0",
-      "owner_node": "StorageArchitect",
-      "verification_hash": "a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0",
-      "superseded_by": null,
-      "allowed_consumers": ["all"],
-      "dependencies": []
-    },
-    "src/core/types/Order.ts": {
-      "status": "CONTRACT_HOLD",
-      "version": "5.0.0",
-      "owner_node": "DomainEntityArchitect",
-      "verification_hash": "b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef01",
-      "superseded_by": null,
-      "allowed_consumers": ["all"],
-      "dependencies": []
-    }
-  },
-  "synaptic_weights_matrix": [
-    {
-      "origin_node": "node_001_domain_entity.md",
-      "target_node": "src/core/types/Order.ts",
-      "weight_Wij": 0.98,
-      "synaptic_bandwidth": "HIGH",
-      "last_reinforced_wave": 1,
-      "ltp_events_count": 3,
-      "ltd_events_count": 0
-    }
-  ],
-  "associative_memory": {
-    "memory_tier": "LONG_TERM_STIGMERGIC",
-    "engrams": [
-      {
-        "engram_id": "ENG-CONC-001-TARGET-ORTHOGONALITY",
-        "domain": "swarm_concurrency",
-        "heuristic_invariant": "Subagentes concorrentes da mesma onda devem possuir alvos de escrita estritamente disjuntos: FileSet(Si) ∩ FileSet(Sj) = ∅. Violação gera colisão Win32 EBUSY e offset drift.",
-        "fiduciary_score": 1.00,
-        "reinforcement_count": 18,
-        "is_active": true
-      }
-    ]
-  },
-  "propagated_synapses": [
-    {
-      "synapse_id": "SYN-v5-001",
-      "origin_node": "node_001_domain_entity.md",
-      "emitted_by": "DomainEntityArchitect",
-      "weight": 0.98,
-      "synaptic_output": "export type Result<T, E> = { ok: true; value: T } | { ok: false; error: E };",
-      "consumed_by": ["node_002_storage_adapter.md", "node_003_use_case.md"]
-    }
-  ],
-  "conflict_resolution_engine": {
-    "active_conflicts": [],
-    "arbitration_history": [],
-    "refuted_vectors_blacklist": [
-      {
-        "vector_id": "VEC-REF-001",
-        "origin_rejection": "REJ-PEER-VETO-004",
-        "banned_hypothesis": "Tentativa de escrita concorrente sem exclusão mútua FsLockEngine",
-        "failing_subagent": "StorageAdapterSpecialist",
-        "mandatory_mutation_axis": "Port-Adapter Pattern com FsLockEngine e união discriminada Result<T,E>"
-      }
-    ]
-  },
-  "investigation_artifacts": [
-    ".planning/investigations/inv_013_synaptic_plasticity_state_vector.md",
-    ".planning/investigations/inv_015_deep_systems_concurrency.md",
-    ".planning/investigations/inv_018_closed_loop_ooda_motor_mutator.md"
-  ]
-}
-```
-
-### 1.2. Vetor de Estado Cognitivo ($\vec{S}$) & Plasticidade Hebbiana
-O estado do enxame é modelado por um vetor contínuo $\vec{S} = [C_e, C_i, \tau, \Phi, \Psi, \Omega]^T$:
-- **$C_e \in [0.0, 1.0]$ (Convicção Epistêmica Global):** Aderência mecânica, validação de tipos e testes sem regressão.
-- **$C_i \in [0.0, 1.0]$ (Incerteza Residual $\varepsilon$):** Lacunas ontológicas ou divergências ativas. $C_i > 0.15$ freia a taxa motora.
-- **$\tau \in [0.0, 1.0]$ (Tensão Dialética Ativa):** Intensidade de divergência conceitual entre subagentes concorrentes.
-- **$\Phi \in [0.0, 1.0]$ (Entropia e Saturação de Contexto):** Pressão na memória de trabalho para acionar poda.
-- **$\Psi \in [0.0, 1.0]$ (Plasticidade Sináptica Efetiva):** Decai da Época 0 até congelamento na Época IV.
-- **$\Omega \in \{0, 1, 2, 3, 4, 5\}$:** Expediente cognitivo ativo.
-
-#### Dinâmica de Pesos Sinápticos ($W_{ij}$):
-1. **LTP (Long-Term Potentiation):** $w_{ij}^{(t+1)} = \min(1.0, \; w_{ij}^{(t)} + \eta \cdot (1 - C_i))$ com $\eta = 0.20$ quando o artefato downstream compila e é homologado no Gauntlet.
-2. **LTD (Long-Term Depression):** $w_{ij}^{(t+1)} = \max(0.0, \; w_{ij}^{(t)} - \delta_{penalty})$ com $\delta = 0.40$ diante de quebras de compilação, bugs ou `[PEER_VETO]`.
-3. **Decaimento Passivo & Poda:** $w_{ij}^{(t+1)} = w_{ij}^{(t)} \times (1 - \gamma_{decay})$ ($\gamma = 0.05$). Apenas sinapses com $w_{ij} \ge \theta_{threshold} \; (0.65)$ são injetadas em payloads cirúrgicos.
-
-### 1.3. Memória Estigmérgica Associativa (`cognitive_engrams`), Mapa Neural da Máquina & Mapa Neural do Projeto
-Supera a amnésia inter-turnos (TaaS) e ancora a cognição na realidade física:
-1. **Engramas Cognitivos (`cognitive_engrams`):** Encapsulam invariantes comprovados e blacklists de armadilhas (ex: locks Win32, isolamento de threads GPU). Payloads de novas ondas realizam *recall* associativo automático via `[ASSOCIATIVE_MEMORY_ENGRAMS]`.
-2. **Grounding da Máquina (`machine_neural_profile`):** Telemetria em tempo real do ambiente host (SO, núcleos, memória, GPU e portas ativas) incorporada diretamente no barramento, delimitando o teto seguro de subagentes concorrentes e prevenindo saturação de hardware.
-3. **Memória Contínua do Projeto (`project_neural_map_ref`):** Aponta para o mapa neural vivo do repositório (`.planning/project_neural_map.json`), permitindo ingestão instantânea no Step 0 da missão e atualização contínua para erradicar a perda de contexto histórico e a duplicidade de interfaces.
-
-### 1.4. Protocolo de Propagação Feedforward:
-1. **Onda $K$:** Subagentes emitem nós e relatórios contendo `[SYNAPTIC_OUTPUTS]` e peso sugerido.
-2. **Consolidação:** O Agente Principal atua como *Chief Systems Architect*, atualiza pesos, enagramas e o `synaptic_bus.json`.
-3. **Injeção na Onda $K+1$:** Subagentes da próxima onda recebem as sinapses filtradas ($w_{ij} \ge 0.65$) sob `[SYNAPTIC_INPUTS]`, construindo sobre causalidade fiduciária comprovada ($X \to Y \to Z$).
+### 1.1. Propagação Feedforward
+Onda $K$ emite `[SYNAPTIC_OUTPUTS]` $\to$ Architect consolida no barramento $\to$ Onda $K+1$ consome sinapses filtradas ($w_{ij} \ge 0.65$) sob `[SYNAPTIC_INPUTS]` ($X \to Y \to Z$).
 
 ---
 
-## 2. Travas de Concorrência Sináptica, Máquina Quântica de Contratos & FsLockEngine
-
-Subagentes operando em concorrência massiva sobre interfaces compartilhadas e o subsistema de arquivos operam sob rigorosos mecanismos de exclusão mútua semafórica, validação transacional e resolução dialética:
+## 2. Travas de Concorrência, Contratos em 5 Fases, FsLockEngine & Ortogonalidade
 
 ### 2.1. A Máquina Quântica de Contratos em 5 Fases
-A dualidade binária HOLD/GO é substituída por um autômato determinístico de 5 fases para eliminação de estados ambíguos:
-```text
-[1. CONTRACT_HOLD] ──► [2. CONTRACT_DRAFT] ──► [3. CONTRACT_VERIFYING] ──► [4. CONTRACT_STABLE] ──► [5. CONTRACT_DEPRECATED]
-```
-1. **`CONTRACT_HOLD`:** Interface sob reestruturação profunda. Mutação restrita ao nó titular; leitura e código especulativo sumariamente proibidos a consumidores downstream.
-2. **`CONTRACT_DRAFT`:** Proposta de interface aberta para inspeção preliminar e revisão técnica entre pares (`[PEER_VETO]`). Proibido acoplar lógica definitiva de produção.
-3. **`CONTRACT_VERIFYING`:** Congelamento para compilação estrita de tipos (`Result<T,E>`), contratos de portas e testes de integração. Mutação suspensa.
-4. **`CONTRACT_STABLE`:** Contrato formalmente homologado e imutável. **LIBERAÇÃO TOTAL (GO)** para implementação de adaptadores de produção downstream.
-5. **`CONTRACT_DEPRECATED`:** Interface obsoleta em processo de substituição, apontando compulsoriamente para `superseded_by`. Novos nós proibidos de consumir; nós existentes devem migrar.
+Substitui a flag binária HOLD/GO pelo autômato determinístico:
+- **`CONTRACT_HOLD`:** Mutação exclusiva do titular; downstream bloqueado.
+- **`CONTRACT_DRAFT`:** Aberta a peer review (`[PEER_VETO]`); código de produção proibido.
+- **`CONTRACT_VERIFYING`:** Congelamento para compilação estrita (`Result<T,E>`) e testes.
+- **`CONTRACT_STABLE`:** Homologado e imutável; liberação total (GO) downstream.
+- **`CONTRACT_DEPRECATED`:** Obsoleto (`superseded_by`); novos consumos proibidos.
+*Invariante:* Contratos da base DEVEM atingir `CONTRACT_STABLE` antes da Época III.
 
-*Invariante de Fechamento de Época:* Veto absoluto a contratos órfãos em `CONTRACT_DRAFT` ou `CONTRACT_VERIFYING` na transição da Época II para a Época III. Todos os contratos da onda base DEVEM atingir `CONTRACT_STABLE`.
-
-### 2.2. O Motor de Bloqueio Semafórico no Filesystem (`FsLockEngine`)
-Para erradicar condições de corrida (*TOCTOU*) e travamentos mandatórios do Windows NTFS (`EBUSY`/`EPERM`):
-1. **Primitiva Atômica $O\_CREAT \mid O\_EXCL$:**
-   A aquisição de exclusão mútua é garantida pela criação atômica do arquivo `<resource>.lock` com flag `'wx'` (`CREATE_NEW` na API Win32 / `O_CREAT | O_EXCL` no POSIX). Se a trava já existe, a chamada falha no nível atômico do kernel sem janela de corrida.
-2. **Estrutura de Metadados do Lock & Lease Signature:**
-   O arquivo de trava armazena: `lock_version`, `resource_path`, `acquired_at`, `ttl_ms` (padrão 15000ms), `owner_subagent_id`, `owner_pid` e `leaseSignature`. A liberação só é aceita mediante validação da assinatura de arrendamento.
-3. **Detecção e Quebra Determinística de Locks Órfãos (Stale Locks):**
-   Se $\text{TimestampAtual} - \text{acquired\_at} > \text{ttl\_ms}$, avalia-se a vitalidade do processo via PID (`process.kill(pid, 0)` ou `Get-Process`). Se o processo não existir mais (`ZOMBIE_ORPHAN`), executa-se quebra atômica do lock órfão e reaquisição.
-4. **Backoff Exponencial Decorrelacionado com Full Jitter:**
-   $$\Delta t_{\text{wait}} = \text{random}(0, \; \min(T_{\max}, \; T_{\text{base}} \times 2^{\text{attempt}}))$$
-   Desincroniza deterministicamente as tentativas concorrentes, eliminando tempestades de contenção (*Thundering Herd Problem*).
+### 2.2. Motor de Bloqueio Semafórico no Filesystem (`FsLockEngine`)
+Elimina corridas (*TOCTOU*) e erros Win32 (`EBUSY`/`EPERM`):
+- **Primitiva Atômica $O\_CREAT \mid O\_EXCL$:** `<resource>.lock` com `'wx'`. Falha no kernel sem colisão.
+- **Metadados:** `lock_version`, `resource_path`, `acquired_at`, `ttl_ms` (15000ms), `owner_pid`, `leaseSignature`.
+- **Stale Lock Break:** Se $\Delta t > \text{ttl\_ms}$, valida PID (`Get-Process`/`kill(pid, 0)`). Se zumbi, quebra atômica.
+- **Backoff:** $\Delta t_{\text{wait}} = \text{random}(0, \min(T_{\max}, T_{\text{base}} \times 2^{\text{attempt}}))$ com Full Jitter.
 
 ### 2.3. Resolução Algorítmica de Conflitos Sinápticos (SCDA v5.0)
-Quando subagentes concorrentes emitem interfaces divergentes ou disparam vetos cruzados (`[PEER_VETO]`), entra em ação o motor **Synaptic Consensus & Dialectical Arbitration (SCDA)**:
-1. **Isolamento em Quarentena:** Ambas as propostas entram imediatamente em `CONTRACT_HOLD`.
-2. **Cálculo do Fator de Precedência Fiduciária ($FPF$):**
-   $$FPF_k = 0.40 \cdot S_{\text{type\_safety}} + 0.30 \cdot S_{\text{fail\_isolation}} + 0.20 \cdot S_{\text{perf\_budget}} + 0.10 \cdot S_{\text{simplicity}}$$
-3. **Bifurcação Arbitral:**
-   - Se $\Delta FPF \ge 0.20$: Resolução determinística imediata a favor da proposta dominante (promovida a `CONTRACT_DRAFT`).
-   - Se $\Delta FPF < 0.20$ (Tensão dialética $\tau \to 1.0$): **Síntese Dialética Hegeliana**: o barramento sintetiza uma camada intermediária de isolamento (Port Adapter Pattern) com união discriminada `Result<T,E>`. Se o conflito persistir irresolúvel, aciona-se a arbitragem soberana do Chief Systems Architect.
+Disputas entram em `CONTRACT_HOLD`. Calcula-se o Fator de Precedência Fiduciária:
+$$FPF_k = 0.40 \cdot S_{\text{type\_safety}} + 0.30 \cdot S_{\text{fail\_isolation}} + 0.20 \cdot S_{\text{perf\_budget}} + 0.10 \cdot S_{\text{simplicity}}$$
+Se $\Delta FPF \ge 0.20$, aprova-se a dominante (`CONTRACT_DRAFT`). Se $\Delta FPF < 0.20$, sintetiza-se camada Hegeliana (Port-Adapter com `Result<T,E>`) ou aciona-se arbitragem do Chief Architect.
 
-### 2.4. Prova Matemática de Ortogonalidade dos Conjuntos de Arquivos
-Para garantir zero colisão de escrita primária durante ondas concorrentes de mutação motora (Leis 2, 5 e 30):
-- Seja $S = \{S_1, S_2, \dots, S_M\}$ o conjunto de subagentes da onda.
-- Seja $\text{TargetFiles}(S_i)$ o conjunto exclusivo de arquivos mutacionados por $S_i$.
-
-**Teorema da Disjunção Estrita de Escrita:**
+### 2.4. Ortogonalidade de Escrita & DeterministicAtomicSwap
+Garante zero colisão concorrente em ondas motoras (Leis 2, 5 e 30):
 $$\forall i, j \in \{1, \dots, M\}, \; i \neq j \implies \text{TargetFiles}(S_i) \cap \text{TargetFiles}(S_j) = \emptyset$$
-- A cardinalidade da união de todos os alvos é estritamente igual à soma das cardinalidades: $|\bigcup_{i=1}^M \text{TargetFiles}(S_i)| = \sum_{i=1}^M |\text{TargetFiles}(S_i)|$.
-- Toda gravação utiliza compulsoriamente **DeterministicAtomicSwap**: arquivo temporário no mesmo volume (`<target>.tmp.<id>`), esvaziamento de buffer com `fsyncSync()`, atestação dupla de hash SHA-256 (pré e pós-swap) e renomeação atômica.
+Mutação gravada via **DeterministicAtomicSwap**: temporário no mesmo volume (`<target>.tmp.<id>`), `fsyncSync()`, dupla atestação SHA-256 e renomeação atômica.
 
-### 2.5. O Dossiê de Rejeição com Blacklist Acumulativa de Vetores (Supervisory Rejection Dossier)
-Quando uma proposta, contrato ou implementação atômica é sumariamente reprovada pelo Supervisory Gate (Nível 2), pelo Gauntlet Adversarial (Época IV) ou por veto técnico entre pares (`[PEER_VETO]`), é terminantemente proibido o re-despacho estocástico ou o feedback genérico/vago. O sistema aciona compulsoriamente o protocolo de **Supervisory Rejection Dossier**:
+### 2.5. Dossiê de Rejeição & Blacklist Acumulativa de Vetores
+Reprovações no Supervisory Gate, Gauntlet (Época IV) ou Peer Veto geram `.planning/investigations/rejection_dossier_<slug>.json` com falhas, vetores e `mandatory_mutation_axis`. Vetor falho é inscrito em `refuted_vectors_blacklist` (append-only). Reincidir aciona `[HARD REJECT: BLACKLISTED_VECTOR_REITERATION]`.
 
-1. **Geração do Dossiê Físico no Substrato Estigmérgico:**
-   O supervisor, juiz ou subagente autor do veto compila e persiste imediatamente no disco o laudo:
-   `.planning/investigations/rejection_dossier_<target_slug>.json`
-   Estrutura do Dossiê:
-   - `rejection_id`: Identificador único (ex: `REJ-L2-042`).
-   - `target_artifact`: Caminho do arquivo ou contrato rejeitado.
-   - `failing_assertions`: Vetor de asserções que falharam (`exit_code != 0`, quebra de AST, falha de tipagem estrita, violação de contratos ou regressão de testes).
-   - `failing_vector`: A hipótese causal ou mecânica que falhou (ex: *"Uso de monkey-patching em tempo de execução para mascarar falta de porta formal"*).
-   - `blacklisted_patterns`: Lista de abordagens e padrões estritamente banidos de reutilização nas próximas iterações.
-   - `mandatory_mutation_axis`: Eixo tecnológico ou paradigma obrigatório exigido para a nova tentativa (ex: *"Implementar Adapter formal com união discriminada `Result<T,E>`"*).
-
-2. **Inscrição no Barramento Sináptico (`refuted_vectors_blacklist`):**
-   O Agente Principal intercepta a rejeição e inscreve o vetor falho no array acumulativo `conflict_resolution_engine.refuted_vectors_blacklist` do `synaptic_bus.json`. Esta lista é estritamente aditiva (*append-only*): vetores refutados jamais são esquecidos ou expurgados dentro da mesma sessão de missão.
-
-3. **Trava Cibernética de Mutação de Hipótese:**
-   Qualquer subagente subsequente ou re-despachado para o nó ou arquivo DEVE obrigatoriamente ler o dossiê via `view_file` como sua primeira ação motora e é expressamente proibido de iterar sobre qualquer padrão presente na Blacklist Acumulativa de Vetores.
-   - Caso um subagente re-despachado submeta uma variação cosmética ou isomórfica de um vetor da blacklist, o Supervisory Gate aciona a trava mecânica imediata:
-     `[HARD REJECT: BLACKLISTED_VECTOR_REITERATION]`
-
-### 2.6. O Protocolo Shadow Spike (Pesquisa em Cópia-Sombra & Enxerto Diferencial Cirúrgico — Lei 17)
-Para erradicar a "Síndrome da Reconstrução do Zero" (The Greenfield Delusion) quando for necessário experimentar novas arquiteturas, otimizações algorítmicas, bibliotecas desconhecidas ou testar hipóteses:
-1. **Veto à Mutação Cega de Produção:** É expressamente proibido tentar recriar arquivos de produção do zero ou aplicar testes arriscados diretamente em código estável.
-2. **Duplicação Segura (Shadow Spike):** O subagente clona a lógica-chave para uma sandbox isolada de pesquisa (ex: `<target>.spike.<ext>` ou `.planning/spikes/spike_<slug>.<ext>`).
-3. **Research & Benchmarking Isolado:** Realiza-se a pesquisa, profiling de memória/CPU, testes de estresse e verificação de contratos no arquivo de spike, sem tocar na produção.
-4. **Enxerto Cirúrgico Diferencial (Differential Grafting):** Uma vez comprovada a superioridade da nova lógica ($LASTEXITCODE = 0$, benchmarks validados), o artífice transporta estritamente o delta necessário para o arquivo original via `replace_file_content`, preservando 100% da casca existente, imports e contratos downstream.
-5. **Purga Determinística do Spike:** O arquivo de spike é removido do filesystem.
+### 2.6. Protocolo Shadow Spike (Lei 17)
+Hipóteses executam em sandbox (`<target>.spike.<ext>`). Validada a eficácia ($LASTEXITCODE = 0$, tipos e testes), aplica-se enxerto diferencial cirúrgico (*Differential Grafting*) via `replace_file_content` e purga-se o spike. Veto ao Greenfield Delusion.
 
 ---
 
-## 3. Hierarquia Cibernética Corporativa (Enterprise Six-Tier Neural Chain) & Síntese Dinâmica de Esquadrões Sob Medida
+## 3. Cadeia Neural Corporativa em 6 Níveis & Esquadrões Sob Medida
 
-Subagentes operando em enxames corporativos de alta escala não reportam de forma caótica ou desordenada a uma thread central amorfa. O enxame estrutura-se formalmente sob a **Cadeia Neural Corporativa em 6 Níveis (Enterprise Six-Tier Neural Chain)**, inspirada no *Viable System Model* (VSM) de Stafford Beer, garantindo separação hermética entre governança fiduciária, mediação sináptica, supervisão adversarial e execução motora atômica:
-
-### 3.1. A Cadeia Neural Corporativa em 6 Níveis (The Enterprise Six-Tier Neural Chain)
-
-```text
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                   THE ENTERPRISE SIX-TIER NEURAL CHAIN (VSM CYBERNETICS)               │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ LEVEL 6: Governança Fiduciária Soberana (Dual-CEO / Human Principal + AI Sovereign CEO)│
-│          → Soberania fiduciária máxima, alocação de risco, diretrizes mestras e veto   │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ LEVEL 5: Cross-Departmental Handshake Hub                                              │
-│          → Barramento sináptico neural (synaptic_bus.json), State Ledger e contratos   │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ LEVEL 4: Arquiteto Chefe de Sistemas & Systems Research Director (C-Suite L9)          │
-│          → Alinhamento de invariantes de engenharia, Clean Architecture e portas       │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ LEVEL 3: Gerentes de Domínio & Orquestradores de Onda (L8)                             │
-│          → Decomposição de tarefas, dimensionamento de ondas e pacing de expedientes   │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ LEVEL 2: Supervisory & Quality Verification Gates (L7 — Devil's Advocate Loop)         │
-│          → Portões determinísticos (AST, Tipos, Gauntlet, Rejection Dossier & Blacklist)│
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ LEVEL 1: Artífices Motores de Execução Atômica 1:1 (L6/L5 — Clean-Context Specialists) │
-│          → Mutação física atômica no disco via ferramentas de escrita (TypeName: self) │
-└────────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-1. **Level 6 — Governança Fiduciária Soberana (Dual-CEO Council):**
-   Paridade executiva formal entre o Human Principal e o Córtex Soberano (Turnaround CEO / SCP). Define metas invioláveis, integridade mecânica e autoridade suprema de interrupção.
-2. **Level 5 — Cross-Departmental Handshake Hub:**
-   Barramento sináptico estigmérgico interdepartamental (`synaptic_bus.json`) e transações imutáveis do State Ledger (`.planning/ledger/`). Garante convergência ontológica e alinhamento de interfaces entre domínios ortogonais (frontend, backend, concorrência, storage).
-3. **Level 4 — Arquiteto Chefe de Sistemas & Systems Research Director:**
-   Supervisão transversal de engenharia, definição dos contratos de porta (`CONTRACT_STABLE`), tipagem discriminada defensiva (`Result<T,E>`) e preservação inegociável de primeiros princípios.
-4. **Level 3 — Gerentes de Domínio & Orquestradores de Onda:**
-   Decomposição sináptica da missão e dimensionamento de ondas:
-   - **Topologia de Decomposição (Qualidade > Quantidade — Lei 4):** Em Modo Arquitetural, estruturação mandatória do **Grafo Modular Denso de 3 a 7 nós ricos e substanciais** (com âncora canônica em **5 nós arquiteturais coesos de alta densidade semiótica** que equivalem com rigor fiduciário a dezenas de micro-nós fragmentados, rodando consequentemente com menos tokens e qualidade superior); veto absoluto ao antigo piso inflacionário de 100 nós ou cotas quantitativas artificiais. Em Modo Direto/Operacional, **zero nós em disco**.
-   - **Dimensionamento de Ondas:** Decomposição sináptica em nós atômicos disjuntos, dimensionamento de ondas sequenciais (máximo 15 subagentes concorrentes) e governança de transição de expedientes cognitivos (Work Shifts).
-5. **Level 2 — Supervisory & Quality Verification Gates (Loop do Advogado do Diabo):**
-   Juízes e auditores adversariais independentes com poder de veto incondicional (`[HARD REJECT]`). Aplicam a tríade determinística (AST / Parser Tree, Tipagem Estrita e Testes sem regressão). Emitem o **Supervisory Rejection Dossier** e gerenciam a Blacklist Acumulativa de Vetores.
-6. **Level 1 — Artífices Motores de Execução Atômica 1:1:**
-   Subagentes de execução com `TypeName: "self"` operando sob Clean-Context, disjunção matemática de arquivos ($\text{TargetFiles}(S_i) \cap \text{TargetFiles}(S_j) = \emptyset$) e atuando diretamente no filesystem via `replace_file_content` / `write_to_file`.
-
-### 3.2. Síntese Dinâmica de Esquadrões Sob Medida (Bespoke Dynamic Squads)
-
-**Veto Absoluto a Templates Estáticos de Equipes:** Impor listas cegas pré-formatadas de papéis (ex: sempre despachar "1 pesquisador, 1 arquiteto, 1 testador") induz a máquina à preguiça estocástica e resumos repetitivos.
-
-#### Princípio da Síntese Pela Física do Problema:
-O Agente Principal DEVE dissecar a topologia única e os modos silenciosos de falha daquela demanda específica e sintetizar especialidades extremas sob medida nos Níveis 1 e 2 da Cadeia Neural:
-- Se envolver áudio: `DSP Buffer & Web Audio Thread Specialist`.
-- Se envolver concorrência/storage: `Atomic Swap & File Descriptor Locks Engineer`.
-- Se envolver animação: `GPU Compositor & Spring Physics Craftsman`.
-- Se envolver transações: `Idempotent Webhook & Compensating Action Architect`.
-
-Toda equipe nasce da física do problema e se dissolve com a entrega do artefato consolidado.
+Estruturação sob o *Viable System Model* (VSM) de Stafford Beer:
+- **L6 (Governança Dual-CEO):** Human Principal + Sovereign AI CEO (metas, risco, veto supremo).
+- **L5 (Handshake Hub):** Barramento `synaptic_bus.json` e State Ledger (`.planning/ledger/`).
+- **L4 (Arquiteto Chefe):** Invariantes, Clean Architecture, contratos (`CONTRACT_STABLE`) e `Result<T,E>`.
+- **L3 (Gerentes de Onda):** Grafo Modular Denso de 3 a 7 nós em Modo Arq. (âncora em 5; veto a 100 nós); zero nós em Modo Direto. Teto de 15 por onda.
+- **L2 (Supervisory Gate & Devil's Advocate):** Auditores com veto incondicional (`[HARD REJECT]`), Tríade Determinística (AST, tipos, testes) e Rejection Dossier.
+- **L1 (Artífices Motores 1:1):** Subagentes com `TypeName: "self"`, Clean-Context, ortogonalidade e mutação física no disco.
+*Esquadrões Sob Medida:* Nascem da física do problema (`DSP Specialist`, `GPU Craftsman`, `Atomic Swap Engineer`) e dissolvem-se após a entrega física. Veto a templates estáticos.
 
 ---
 
-## 4. Identidade e Autoconsciência Estigmérgica de Enxame
+## 4. Identidade e Autoconsciência Estigmérgica & Peer Veto
 
-Todo subagente despachado opera com consciência lúcida de seu papel no grafo coletivo (estruturado como Grafo Modular Denso de 3 a 7 nós ricos e substanciais em Modo Arquitetural ou execução cirúrgica direta em Modo Direto), registrando no topo de sua análise:
-1. **Identidade Atômica:** `[MY_SWARM_ROLE]` (especialidade exata e escopo delimitado).
-2. **Âncora Sináptica:** `[MY_SYNAPTIC_ANCHOR]` (quais contratos upstream consome).
-3. **Entregável Estrito:** `[MY_SWARM_DELIVERABLE]` (arquivo e artefato exato que deve persistir no disco para destravar os pares).
-
-**Veto ao Desvio de Função (*Role Drift*):** É proibido ao subagente invadir escopo alheio ou agir como entidade isolada sem propósito sistêmico.
+Todo subagente declara: `[MY_SWARM_ROLE]`, `[MY_SYNAPTIC_ANCHOR]`, `[MY_SWARM_DELIVERABLE]`. Veto ao Role Drift.
+- **Peer Veto:** `[PEER_VETO: CONTRACT_REJECTED]` congela interface em `CONTRACT_HOLD` e gera Rejection Dossier contra quebras de performance, stubs ou concorrência insegura.
+- **Trava Epistêmica (`[EPISTEMIC_HALT]`):** Incerteza residual ($\varepsilon > 0$) congela a execução motora até liquidação por sonda empírica ou alinhamento com o usuário. Veto a palpites e stubs.
 
 ---
 
-## 5. Auditoria Cruzada, Veto Técnico Entre Pares (Peer Veto) & O Loop do Advogado do Diabo
+## 5. Arquitetura Clean-Context & Higiene de Payloads (Anti-Context Smearing)
 
-Subagentes adjacentes que compartilham fronteiras de dados, concorrência ou portas de domínio possuem poder de revisão bilateral soberana, integrados ao **Loop do Advogado do Diabo (Devil's Advocate Loop)** do Nível 2 da Cadeia Neural:
-
-### 5.1. Mecânica do Peer Veto
-- Caso um nó de interface proponha um padrão que degrade a latência, viole o frame rate de 60fps, mascare erros com stubs ou imponha concorrência insegura sobre o armazenamento, o subagente de domínio impactado DEVE emitir um veto técnico formal (`[PEER_VETO: CONTRACT_REJECTED]`).
-- Nenhuma primitiva contestada pode ser consolidada no `graph.json`, ser promovida a `CONTRACT_STABLE` ou transicionar para a Época II sem resolução formal e consentimento mútuo entre os pares.
-
-### 5.2. O Loop do Advogado do Diabo & Emissão Compulsória do Rejection Dossier
-A emissão de um `[PEER_VETO]` ou a reprovação pelo Supervisory Gate (Nível 2 / Gauntlet) dispara compulsoriamente a seguinte esteira cibernética:
-1. **Quarentena Imediata do Contrato:** O contrato em disputa transiciona imediatamente para `CONTRACT_HOLD` na Máquina Quântica de Contratos.
-2. **Emissão do Supervisory Rejection Dossier:** O subagente autor do veto ou o juiz do Supervisory Gate compila `.planning/investigations/rejection_dossier_<slug>.json`, explicitando as falhas determinísticas (AST, tipos, concorrência) e delimitando a **Blacklist de Vetores Refutados**.
-3. **Inscrição no Barramento Sináptico:** O Agente Principal atualiza `conflict_resolution_engine.refuted_vectors_blacklist` no `synaptic_bus.json`.
-4. **Veto à Re-submissão Estocástica:** É terminantemente proibido ao subagente re-despachado ou aos nós concorrentes reemitir a mesma solução, variações sintáticas do mesmo código ou tentativas de contornar a restrição com hacks. A nova tentativa deve obrigatoriamente adotar o eixo de mutação prescrito no dossiê (`mandatory_mutation_axis`).
-5. **Auditoria no State Ledger:** A rejeição e a inscrição na blacklist são registradas imutavelmente no livro-razão transacional (`.planning/ledger/txn_XXXX.json`) antes do re-despacho da onda.
+Subagentes operam sob janelas limpas (*Clean Window*), livres de histórico da thread principal. Payload cirúrgico via `invoke_subagent`:
+- `[ACTION_MODE: PHYSICAL_MUTATION | READ_ONLY_INVESTIGATION]`
+- `[TARGET_FILES]`: Caminhos absolutos dos arquivos exclusivos.
+- `[BOUNDED_OBJECTIVE]`: Missão atômica delimitada.
+- `[FILE_SLICES]`: Fatias exatas de linha para leitura.
+- `[SYNAPTIC_CONTRACTS]`: Contratos consolidados upstream ($w_{ij} \ge 0.65$).
+- `[FORENSIC_CRITERIA]`: Critérios binários de aceitação [0 ou 1].
 
 ---
 
-## 6. Trava Epistêmica & Banimento da Teimosia (`[EPISTEMIC_HALT]`)
+## 6. O Ciclo OODA de Malha Fechada, Auto-Cura no SO & Telemetria Fria
 
-Diante de qualquer incerteza, ambiguidade ou lacuna documental ($\varepsilon > 0$), é proibido à IA avançar obstinadamente no palpite ou gerar stubs. O sistema deve acionar imediatamente a **Trava Epistêmica**:
-1. Nomear formalmente a lacuna em seu raciocínio.
-2. Despachar uma sonda de investigação empírica ou solicitar alinhamento de negócio ao usuário.
-3. Somente após a liquidação definitiva da incerteza a esteira está autorizada a prosseguir.
+Subagentes motores operam sob o ciclo cibernético **OBSERVE $\to$ ORIENT $\to$ DECIDE $\to$ ACT & VERIFY**:
+- **Critério de Repouso Inegociável:** $\text{TaskCompletion} \iff (\text{DiskMutationConfirmed} \land \$LASTEXITCODE = 0 \land \text{StderrFatal} = 0)$.
+- **Veto ao Abandono de Tarefas (`[HARD REJECT: MOTOR_TASK_ABANDONMENT]`):** Proibido repassar erros mecânicos ao caller. Limite de 2 retries antes do circuit breaker (`[EPISTEMIC_HALT: CIRCUIT_BREAKER_TRIPPED]`).
 
----
+### 6.1. Playbooks Determinísticos de Auto-Cura no SO (Windows / PowerShell)
+- **Playbook A (`EADDRINUSE`):** `Get-NetTCPConnection` $\to$ `taskkill /PID $PID /T /F` ou fallback `PORT + 1`.
+- **Playbook B (Zumbis):** Varredura `Win32_Process` (`node`, `vite`, `esbuild`) $\to$ `taskkill /PID $PID /T /F`.
+- **Playbook C (`EBUSY`/`EPERM`):** Full Jitter backoff e `DeterministicAtomicSwap`.
+- **Playbook D (Caches):** Purga de `.next`, `dist`, `.turbo`, `node_modules/.cache` e revalidação.
+- **Playbook E (Git):** Remoção de `.git/*.lock`, `git fsck --no-full` e sincronização via `git read-tree HEAD`.
 
-## 7. Arquitetura Clean-Context & Higiene de Payloads (Anti-Context Smearing)
-
-Subagentes operacionais e especialistas não devem ser sufocados com o histórico acumulado de conversas da thread principal. Toda invocação obedece à **Higiene Fiduciária de Payload**:
-
-1. **Janela de Contexto Limpa (*Clean Window*):**
-   - O subagente opera focado unicamente no seu entregável atômico.
-   - É expressamente proibido transferir logs de conversas passadas, monólogos reflexivos da thread principal ou ruído de turnos anteriores para especialistas de implementação.
-2. **O Contrato de Payload Cirúrgico:**
-   Todo prompt despachado via `invoke_subagent` deve ser auto-suficiente e estruturado sob pilares inegociáveis:
-   - **`[ACTION_MODE: PHYSICAL_MUTATION | READ_ONLY_INVESTIGATION]`**: Modo mandatório de ação (`PHYSICAL_MUTATION` para codificação/refatoração/correção via ferramentas motoras ou `READ_ONLY_INVESTIGATION` para sondas analíticas e auditorias).
-   - **`[TARGET_FILES]`**: Caminhos absolutos dos arquivos a serem alterados no filesystem ou investigados.
-   - **`[BOUNDED_OBJECTIVE]`**: A missão microscópica e delimitada (ex: *"Implementar o adapter de persistência SQLite"*).
-   - **`[FILE_SLICES]`**: Caminhos absolutos e fatias de linha exatas dos arquivos que o subagente precisa ler.
-   - **`[SYNAPTIC_CONTRACTS]`**: Contratos upstream consolidados (`[SYNAPTIC_INPUTS]`) extraídos do `synaptic_bus.json`.
-   - **`[FORENSIC_CRITERIA]`**: Critérios binários específicos [0 ou 1] que o subagente deve satisfazer para homologação.
-
----
-
-## 8. O Mandato do Roteamento Neural, Plasticidade & Auto-Cura de Malha Fechada (v5.0 Closed-Loop OODA)
-
-Subagentes não são utilitários opcionais nem consultores reflexivos: são **submentes neurais ativas do próprio agente** e **atuadores motores cibernéticos de malha fechada**. A mutação do sistema de arquivos e a execução no sistema operacional constituem o núcleo físico da soberania de execução do enxame.
-
-### 8.1. Invariantes de Urgência de Enxame & Plasticidade Sináptica:
-1. **Veto à Investigação Solitária (*Solitary Investigation Ban*):**
-   - É expressamente proibido ao Agente Principal tentar investigar bugs, analisar arquivos extensos ou especular causas de problemas sozinho na thread principal.
-   - O monólogo na thread principal padece de viés estocástico de confirmação e reflexão rasa. O agente principal atua soberanamente como **Córtex Maestro & Síntese Central**.
-2. **Dupla Investigativa Obrigatória (*Two-Mind Minimum*):**
-   - Diante de qualquer investigação de falha, análise de arquivo complexo ou preparação de refatoração, o sistema DEVE despachar concorrentemente **no mínimo 2 subagentes com lentes analíticas contrastantes**:
-     * **Subagente Alfa (Causal Root Cause):** Disseca a mecânica microscópica da falha, fluxo de controle e valores inválidos.
-     * **Subagente Beta (Downstream Blast Radius):** Mapeia o raio de destruição colateral, quebra de contratos e dependências downstream.
-3. **Gatilho de Ativação Imediata do Esquadrão (*Immediate Squad Activation Gate*):**
-   - A Seção D do `mission_dossier.md` (*Bespoke Dynamic Squad Blueprint*) é uma ordem de despacho executiva e compulsória.
-   - Assim que o Dossiê for emitido, a primeira ação motora do Agente Principal é **despachar os subagentes mapeados no blueprint** para processar suas respectivas camadas.
-   - Tentar editar código ou planejar sem ter despachado o esquadrão do dossiê aciona a trava mecânica `[HARD HALT: SQUAD_DISPATCH_BYPASSED]`.
-4. **O Firewall de Contexto & Banimento de Pesquisa na Thread Principal (*The Context Firewall Invariant*):**
-   - É expressamente proibido ao Agente Principal realizar buscas externas na web (`search_web`), pesquisar documentação/limites de APIs, ler mais de 2 arquivos exploratórios ou rodar sequências de comandos de diagnóstico na thread principal.
-   - Fazer investigações ou buscas na thread principal contamina a memória de trabalho com milhares de tokens de ruído (*context rot*), degradando o foco do agente e induzindo alucinações.
-   - **A utilidade real do subagente:** Atua como uma **sandbox descartável de contexto limpo**. O subagente investigativo grava seu laudo bruto irrestrito no disco e o subagente codificador motor executa as mutações físicas diretamente nos arquivos via ferramentas de escrita, retornando ao Córtex Central apenas a telemetria fria da execução ($LASTEXITCODE, linhas modificadas, contratos satisfeitos), mantendo a thread principal cirúrgica, lúcida e veloz.
-5. **Auto-Calibração de Plasticidade & Memória Associativa:**
-   - Cada entrega homologada dispara reforço Hebbiano (LTP) no `synaptic_bus.json` e consolida heurísticas validadas em enagramas cognitivos (`cognitive_engrams`).
-   - Payloads de novas ondas consomem automaticamente enagramas de seu domínio (`[ASSOCIATIVE_MEMORY_ENGRAMS]`), imunizando o enxame contra a repetição de anti-patterns passados.
-6. **Banimento de Varreduras Periféricas & Foco Laser Direto no Alvo (Lei 46 — Anti-Yak Shaving):**
-   - Quando o usuário solicita a correção, ajuste ou refatoração de um arquivo ou comportamento específico (ex: *"corrija o arquivo X que tem lógica errada"*), o agente e os subagentes devem ir **DIRETO AO PONTO**.
-   - É expressamente proibido sair inspecionando logs de compilação não solicitados, varrer arquivos vizinhos sem necessidade, auditar infraestrutura ou desviar a atenção para problemas imaginários fora do escopo da solicitação.
-   - O subagente despachado deve focar 100% no arquivo X, entender a codificação ruim e corrigir o arquivo X. Desviar o caminho para arquivos alheios ou periféricos aciona compulsoriamente a trava mecânica `[HARD REJECT: UNNECESSARY_LATERAL_DRIFT]`.
-7. **Mandato do Artífice Autônomo Fim-a-Fim & Banimento da Fragmentação (Anti-Divergence Invariant — Lei 42):**
-   - Em tarefas de correção de código, depuração e melhorias operacionais no Modo Direto, é terminantemente proibido despachar um subagente apenas para produzir um relatório pericial e posteriormente despachar outro subagente para tentar aplicar a correção. Esse fracionamento gera descontinuidade epistêmica: duas mentes produzem análises e visões divergentes com contextos distintos, resultando em perda da intuição de baixo nível e remendos estocásticos superficiais.
-   - O subagente despachado para resolver a questão opera como Artífice Fim-a-Fim: recebe a visão holística do projeto e da missão, realiza a leitura exaustiva do arquivo (100% das linhas), diagnostica a causa raiz, já aplica imediatamente a mutação física no disco (`replace_file_content` / `write_to_file`), executa a verificação em malha fechada e emite o relatório final consolidado comprovando o funcionamento.
-
-### 8.2. O Mandato do Artífice Motor & Banimento do Subagente Consultivo (Leis 5, 39 e 43):
-Subagentes encarregados de tarefas de implementação, refatoração, correção ou configuração de código operam compulsoriamente como **artífices motores**, sendo terminantemente proibidos de atuar como consultores passivos que despejam diffs ou propostas de código em markdown no chat.
-1. **Exigência Mandatória de `TypeName: "self"`:**
-   - Todo subagente com escopo de mutação de código DEVE ser despachado com `TypeName: "self"` para herdar o ferramental motor completo de escrita (`replace_file_content` e `write_to_file`).
-2. **Mutação Física Compulsória no Filesystem & Fim-a-Fim:**
-   - O entregável físico do subagente é a mutação direta e atômica dos bytes no disco através das ferramentas. É expressamente proibido ao subagente devolver blocos de código em markdown via `send_message` transferindo o trabalho de digitação para o caller.
-   - Veto absoluto a parar no meio do caminho para emitir laudo ou relatório intermediário aguardando que outro subagente execute a alteração: o subagente despachado para a tarefa diagnostica a causa raiz, planeja a solução e aplica ele próprio a mutação física diretamente no disco via `replace_file_content` ou `write_to_file`.
-3. **Proibição Absoluta do Agente Principal Digitador & Trava `[HARD HALT: PARENT_DIRECT_MUTATION_BREACH]`:**
-   - O Agente Principal atua exclusivamente como *Chief Systems Architect*, barramento sináptico e árbitro de contratos.
-   - É **TERMINANTEMENTE PROIBIDO** ao Agente Principal na thread principal chamar ferramentas de escrita (`replace_file_content` ou `write_to_file`) em arquivos de código ou scripts de produção (essas ferramentas na thread principal são restritas a artefatos de planejamento como `implementation_plan.md` e `walkthrough.md`).
-   - Tentar mutacionar arquivos de código de produção diretamente na thread principal em vez de delegar ao enxame motor com `TypeName: "self"` dispara compulsoriamente a trava mecânica `[HARD HALT: PARENT_DIRECT_MUTATION_BREACH]`.
-   - Caso um subagente de produção devolva diffs em markdown no chat sem ter mutacionado o disco, o Agente Principal DEVE disparar compulsoriamente `[HARD REJECT: ADVISORY_CODE_DUMP]`, recusar a resposta e exigir a tool call física.
-
-### 8.3. O Ciclo Cibernético OODA & Veto ao Abandono de Tarefas em Erro (`[HARD REJECT: MOTOR_TASK_ABANDONMENT]`):
-Toda atuação do subagente motor segue compulsoriamente o ciclo **OBSERVE $\to$ ORIENT $\to$ DECIDE $\to$ ACT & VERIFY**:
-1. **Veto ao Abandono Passivo (*Anti-Surrender Mandate*):**
-   - É expressamente proibido ao subagente motor emitir mensagens relatando erros de ambiente (ex: porta ocupada, lock de arquivo, cache corrompido) transferindo a resolução para o caller.
-   - Diante de qualquer atrito, o subagente DEVE entrar imediatamente nos quadrantes de autocura e resolver o obstáculo no nível de SO.
-2. **Critério de Repouso Inegociável:**
-   - A tarefa física do subagente só é considerada concluída quando o comando de verificação formal retornar código zero:
-     $$\text{TaskCompletion} \iff (\text{DiskMutationConfirmed} \land \$LASTEXITCODE = 0 \land \text{StderrFatal} = 0)$$
-3. **Trava `[HARD REJECT: MOTOR_TASK_ABANDONMENT]`:**
-   - Caso um subagente encerre sua execução devolvendo erro sem executar os playbooks cabíveis de autocura e sem esgotar o Circuit Breaker, a resposta é rejeitada sumariamente.
-4. **Limite do Circuit Breaker:**
-   - Limite estrito de **2 ciclos de autocura** para o mesmo incidente causal. Persistindo a falha, dispara-se `[EPISTEMIC_HALT: CIRCUIT_BREAKER_TRIPPED]` com a telemetria fria completa do estado terminal.
-
-### 8.4. Playbooks Determinísticos de Auto-Cura no Sistema Operacional (Windows / PowerShell):
-- **Playbook A (Colisão de Sockets / `EADDRINUSE`):** Detecção via `Get-NetTCPConnection -LocalPort $TargetPort -State Listen`, encerramento forçado da árvore do processo via `taskkill /PID $PID /T /F`, polling determinístico de até 3000ms para liberação do kernel ou fallback determinístico para `PORT + 1`.
-- **Playbook B (Processos Zumbis & Handles Presos):** Varredura via `Get-CimInstance Win32_Process` por processos órfãos (`node`, `esbuild`, `vite`, `next-server`) atrelados ao caminho do repositório, encerramento via `taskkill /PID $PID /T /F` e pausa de 300ms para liberação de handles no subsistema Win32.
-- **Playbook C (Locks de Arquivos Win32 / `EBUSY` / `EPERM`):** Escrita com Exponential Backoff progressivo (200ms, 500ms, 1200ms + Jitter) e substituição atômica via `DeterministicAtomicSwap` com arquivo temporário e `Move-Item -Force`.
-- **Playbook D (Purga de Caches de Build Corrompidos):** Remoção recursiva forçada de artefatos efêmeros (`.next`, `dist`, `build`, `.turbo`, `node_modules/.cache`, `tsconfig.tsbuildinfo`, `.eslintcache`) seguida de revalidação de tipos em malha fechada.
-- **Playbook E (Reparação de Travas Órfãs e Índice Git):** Remoção forçada de arquivos de trava residuais (`.git/*.lock`), auditoria de integridade com `git fsck --no-full` e re-sincronização do índice via `git read-tree HEAD` sem perda de arquivos na working tree.
-
-### 8.5. O Protocolo Universal de Telemetria Fria (`MOTOR_EXECUTION_RECEIPT`):
-Subagentes motores com `TypeName: "self"` encerram suas atividades comunicando-se exclusivamente via telemetria fria fiduciária através de `send_message`, sem texto livre e com veto absoluto a blocos de código em markdown:
+### 6.2. Protocolo Universal de Telemetria Fria (`MOTOR_EXECUTION_RECEIPT`)
+Subagentes com `TypeName: "self"` encerram exclusivamente via telemetria estruturada via `send_message`, sem texto livre e com veto a blocos de código em markdown:
 ```markdown
 [MOTOR_EXECUTION_RECEIPT]
-- Subagent Role: <MY_SWARM_ROLE>
-- Synaptic Anchor: <MY_SYNAPTIC_ANCHOR>
-- Action Mode: PHYSICAL_MUTATION
-- Tool Invocations Confirmed:
-  * replace_file_content: <Count>
-  * write_to_file: <Count>
-  * run_command: <Count>
-- Mutated Files (On Disk):
-  * <Caminho Absoluto 1> [Delta: +X / -Y linhas | Status: PERSISTED]
-- Closed-Loop Verification Telemetry:
-  * Command Executed: <Comando exato de verificação>
-  * Exit Code: 0 ($LASTEXITCODE === 0)
-  * Stderr Stream: CLEAN (Zero fatal exceptions)
-- Self-Healing Events Triggered: <Nenhum | Playbook A/B/C/D/E executado>
-- Circuit Breaker Status: <0|1>/2 Retries Consumed
-- Forensic Checklist Binary State: ALL_CRITERIA_SATISFIED [1]
-- Synaptic Outputs Emitted:
-  * <Chave de Contrato>: <Valor ou Referência Persistida no Disco>
+- Subagent Role: <MY_SWARM_ROLE> | Synaptic Anchor: <MY_SYNAPTIC_ANCHOR> | Action Mode: PHYSICAL_MUTATION
+- Tool Invocations: replace_file_content: <N>, write_to_file: <N>, run_command: <N>
+- Mutated Files: <Caminho Absoluto> [Delta: +X/-Y linhas | Status: PERSISTED]
+- Verification: Command: <Cmd>, Exit Code: 0 ($LASTEXITCODE === 0), Stderr: CLEAN
+- Self-Healing Events: <Nenhum | Playbook A-E> | Circuit Breaker: <0|1>/2 Retries Consumed
+- Forensic Checklist: ALL_CRITERIA_SATISFIED [1] | Synaptic Outputs: <Chave>: <Ref>
 ```
-
-### 8.6. O Mapa Neural da Máquina & Grounding Ambiental do Host (Lei 39)
-O enxame opera com autoconsciência da topologia física e runtime da máquina hospedeira através do objeto `machine_neural_profile` no `synaptic_bus.json`:
-1. **Topologia de Hardware & Dimensionamento de Carga:** Inspeção prévia de cores lógicos de CPU e RAM disponível. Concorrência limitada a no máximo 50% dos núcleos lógicos para não travar a máquina do usuário.
-2. **Física do SO Windows NTFS:** Consciência ativa de locks mandatórios Win32 (`EBUSY`/`EPERM`), case-insensitivity do filesystem e exigência do `DeterministicAtomicSwap`.
-3. **Mapa de Portas e Processos Zumbis:** Inspeção preventiva de sockets em escuta (`Get-NetTCPConnection`) antes de lançar servidores de teste, e purga automática de instâncias órfãs presas (Playbooks A e B).
-
-### 8.7. O Mapa Neural de Memória Contínua do Projeto & Mecânica Anti-Amnésia (Lei 47)
-Para erradicar o esquecimento do projeto ao longo do tempo e a sobreposição cega de funções ou parâmetros, o repositório é governado por `.planning/project_neural_map.json`:
-1. **Ingestão Prévia Obrigatória (Step 0):** Antes de iniciar qualquer análise ou plano, a IA ou subagente consulta o Mapa Neural para saber o que cada arquivo faz de cima a baixo e o histórico das sessões passadas.
-2. **Atualização Gradual Contínua (Step Final):** Ao concluir as alterações de uma sessão, a entrada dos arquivos modificados é atualizada no `file_neural_index` e o registro da sessão é adicionado em `session_chronicles` com commit atômico no Git.
 
 ---
 
-## 9. O Protocolo do Artífice Autônomo Fim-a-Fim & Banimento da Fragmentação Cognitiva (End-to-End Problem Solver Protocol — Lei 42)
+## 7. O Mandato do Artífice Autônomo Fim-a-Fim (Lei 42) & Mandato do Artífice Motor (Lei 43)
 
-Subagentes operando em tarefas de correção de código, depuração, ajustes e refatorações no Modo Direto não atuam como analistas passivos nem como elos de uma esteira burocrática fragmentada. O enxame erradica em caráter absoluto a patologia de "passar relatório de subagente para subagente" para que outro venha a corrigir. Toda tarefa operacional é resolvida **fim-a-fim pelo mesmo subagente motor**, garantindo continuidade epistêmica, fidelidade de contexto e resolução imediata no disco.
+Subagentes em tarefas operacionais de correção de código, depuração e refatorações no Modo Direto operam compulsoriamente como **Artífices Autônomos Fim-a-Fim**, banindo a fragmentação cognitiva e o "telefone sem fio".
 
-### 9.1. Autópsia da Patologia da Fragmentação Cognitiva (Por que o repasse de relatórios entre subagentes falha)
-Quando a engenharia adota a prática de despachar um subagente apenas para inspecionar e relatar, e depois despachar outro subagente para alterar o código com base no relatório do primeiro, o sistema colapsa sob três modos silenciosos de falha:
-1. **Divergência Contextual & Conflito de Premissas:**
-   Quando dois subagentes atuam em série (um analisando e outro codificando), cada mente ancora seu raciocínio em premissas e abstrações ligeiramente diferentes. O segundo subagente nunca possui o mesmo modelo mental formado durante a leitura e exploração minuciosa do código pelo primeiro, gerando duas análises e visões divergentes com contextos desconexos.
-2. **Degradação de Sinal & "Telefone Sem Fio":**
-   Por mais detalhado que seja um relatório intermediário, ele é estático e não transmite a dinâmica causal viva do arquivo. O segundo subagente tenta interpretar o relatório de segunda mão, gerando alucinações, sobreposição incorreta de funções/parâmetros, descompasso de linhas e *overfitting* superficial.
-3. **Desperdício Fiduciário de Tokens & Ciclos:**
-   Duplicar a fase de inicialização, leitura e orientação consome o dobro do orçamento de tokens e ciclos cognitivos para produzir entregas inferiores e remendos estocásticos.
+### 7.1. Autópsia da Falha da Fragmentação Cognitiva
+Repassar laudos entre subagentes colapsa por divergência contextual entre mentes, perda de sinal ("telefone sem fio") e desperdício de tokens sem benefício de engenharia.
 
-### 9.2. O Circuito Unificado Fim-a-Fim em 5 Etapas:
-O subagente despachado para uma missão operacional no Modo Direto opera sob o **Circuito Fechado Fim-a-Fim**:
-1. **Etapa 1: Ingestão do Contexto Holístico da Missão (`[MISSION_HOLISTIC_CONTEXT]`):**
-   O subagente recebe a visão macro do projeto, arquitetura global, objetivo fiduciário e sintomas observados da falha, sem perda de perspectiva sistêmica.
-2. **Etapa 2: Ingestão Exaustiva do Código-Fonte (The Exhaustive Ingestion Invariant — Lei 12):**
-   Leitura de 100% das linhas do arquivo-alvo via `view_file` paginado ($1 \to N$). Veto total a leituras fracionadas superficiais.
-3. **Etapa 3: Diagnóstico de Primeiros Princípios & Síntese da Correção (Anti-Yak Shaving — Lei 46):**
-   Formulação da causa raiz microscópica diretamente na cadeia de pensamento (Thinking), delimitada cirurgicamente ao arquivo solicitado, sem desvios laterais para logs ou arquivos periféricos alheios.
-4. **Etapa 4: Mutação Física Imediata no Filesystem (The Motor Mutator Mandate — Leis 5 e 39):**
-   Aplicação atômica e direta da solução no disco através das ferramentas de escrita (`replace_file_content` ou `write_to_file`) com `TypeName: "self"`. Veto absoluto a emitir laudo intermediário esperando outro executor.
-5. **Etapa 5: Validação em Malha Fechada & Emissão do Relatório Final Consolidado:**
-   Execução de comandos determinísticos de teste, compilação ou linter via `run_command` ($LASTEXITCODE = 0$) e emissão do relatório final consolidado comprovando a resolução física do problema através do `[MOTOR_EXECUTION_RECEIPT]`.
+### 7.2. O Circuito Unificado em 5 Etapas
+1. **Contexto Holístico (`[MISSION_HOLISTIC_CONTEXT]`):** Ingestão da arquitetura macro e meta.
+2. **Leitura Exaustiva (Lei 12):** Leitura de 100% das linhas via `view_file` ($1 \to N$); veto à leitura parcial.
+3. **Diagnóstico nos Primeiros Princípios (Lei 46):** Causa-raiz delimitada ao arquivo no Thinking (*Anti-Yak Shaving*).
+4. **Mutação Física Direta (Leis 5 e 39):** Gravação no disco via `replace_file_content`/`write_to_file` (`TypeName: "self"`).
+5. **Validação em Malha Fechada & Recibo:** Verificação determinística ($LASTEXITCODE = 0$) e `[MOTOR_EXECUTION_RECEIPT]`.
+*Trava Mecânica:* Dividir tarefa entre múltiplos subagentes no Modo Direto dispara `[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`.
 
-### 9.3. Template Canônico de Despacho Fim-a-Fim (Full-Context End-to-End Dispatch Payload):
-Ao acionar um subagente para correção de código no Modo Direto via `invoke_subagent`, o Agente Principal DEVE estruturar o prompt sob o seguinte contrato estigmérgico:
-```markdown
-[MISSION_HOLISTIC_CONTEXT]
-Projeto: <Nome do Projeto / Arquitetura Geral>
-Objetivo Fiduciário: <Meta de negócio e comportamento esperado do sistema>
-Contexto Macro: <Como este componente se integra aos demais subsistemas>
+### 7.3. Veto Absoluto ao Parent Digitador (`[HARD HALT: PARENT_DIRECT_MUTATION_BREACH]`)
+O Agente Principal na thread principal atua como árbitro e consolidador; proibido mutacionar código de produção na thread principal (`[HARD HALT: PARENT_DIRECT_MUTATION_BREACH]`). Diffs no chat recebem `[HARD REJECT: ADVISORY_CODE_DUMP]`.
 
-[TARGET_FILES]
-<Caminho Absoluto Exclusivo do Arquivo-Alvo>
-
-[BOUNDED_PROBLEM_STATEMENT]
-Sintoma da Falha: <Descrição precisa do bug, regressão ou oportunidade de melhoria>
-Escopo Delimitado: Confinado exclusivamente ao arquivo-alvo (Lei 46 — Zero desvio lateral)
-
-[MANDATORY_E2E_WORKFLOW: READ_100_PERCENT -> DIAGNOSE -> MUTATE_ON_DISK -> VERIFY -> REPORT_FINAL]
-1. Ler 100% das linhas de <TargetFile> via view_file paginado (Lei 12).
-2. Diagnosticar a causa raiz microscópica nos Primeiros Princípios (no seu Thinking).
-3. Aplicar imediatamente a mutação física direta no disco via replace_file_content ou write_to_file (TypeName: "self").
-4. Executar verificação determinística em malha fechada via run_command.
-5. Emitir o relatório final consolidado com MOTOR_EXECUTION_RECEIPT comprovando a resolução.
-ATENÇÃO: Veto a emitir relatório intermediário para outro subagente codificar. Você é o Artífice Fim-a-Fim.
-
-[FORENSIC_ACCEPTANCE_CRITERIA]
-- [ ] Leitura completa (100% das linhas) efetuada antes da edição.
-- [ ] Mutação persistida fisicamente no disco.
-- [ ] Zero stubs, zero TODOs e zero regressões funcionais.
-- [ ] Telemetria de validação com $LASTEXITCODE === 0.
-```
-
-### 9.4. Trava Mecânica: `[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`
-A tentativa de despachar um subagente de consulta ou auditoria preliminar para uma falha no Modo Direto e, em seguida, repassar seu laudo a um segundo subagente para aplicar o patch aciona compulsoriamente a trava:
-`[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`
-O Agente Principal DEVE consolidar o escopo e despachar um único Artífice Motor Fim-a-Fim munido do contexto holístico completo.
-
-### 9.5. Preservação do Handoff de Alta Fidelidade para Missões Arquiteturais da Época I
-O protocolo de Handoff via substrato estigmérgico (`.planning/investigations/inv_<id>_<slug>.md`) permanece ativo **estritamente para missões arquiteturais de grande porte da Época I**, onde a modelagem de domínio, contratos de portas globais ou pesquisas fundamentais produzem inteligência de longo prazo consumida assincronamente pelos nós do **Grafo Modular Denso (3 a 7 nós ricos e substanciais, com referência canônica em 5 nós arquiteturais coesos de alta densidade semiótica)** em ondas subsequentes. A primazia da qualidade sobre a quantidade garante que 5 nós densos equivalham por 100 nós fragmentados, rodando com menos tokens, maior profundidade e zero inflação estocástica de nós vazios. Nesses cenários arquiteturais de plataforma:
-1. O laudo pericial é persistido no disco.
-2. Os subagentes das ondas posteriores realizam ingestão compulsória de 100% do laudo via `view_file` (zero perda pré-frontal).
-3. No entanto, para qualquer tarefa de correção de código, bugfix ou refinamento de implementação, o ciclo é **sempre Fim-a-Fim** pelo mesmo subagente motor.
+### 7.4. Preservação do Handoff de Alta Fidelidade na Época I Arquitetural
+Laudos em `.planning/investigations/` são reservados a grandes pesquisas da Época I para alimentar o Grafo Modular Denso (3 a 7 nós). Correções operacionais são sempre Fim-a-Fim.
 
 ---
 
-## 10. Checklist Forense de Orquestração de Enxame & Hiper-Córtex (Binário — Leis 41, 42 & 43)
+## 8. Checklist Forense Binário de Orquestração de Enxame (Leis 41, 42 & 43)
 
-> Auditado pelo Agente Principal e pelo Red Team Juiz na Época IV.
+> Auditado compulsoriamente pelo Red Team Gauntlet na Época IV.
 
-- [ ] **Relação 1:1 Atômica:** exatamente 1 subagente por nó ou arquivo de produção; zero batching.
-- [ ] **Grafo Modular Denso em Modo Arquitetural (Qualidade > Quantidade — Lei 4):** em missões arquiteturais, o grafo é composto por 3 a 7 nós modulares densos e profundos (com referência canônica em 5 nós arquiteturais coesos de alta densidade semiótica que equivalem com rigor fiduciário a dezenas de micro-nós fragmentados, rodando consequentemente com menos tokens e qualidade superior); veto absoluto a pisos inflacionários artificiais (100 nós) e a nós vazios; em Modo Direto/Operacional, zero nós em disco.
-- [ ] **Ortogonalidade de Alvos Comprovada:** $\text{TargetFiles}(S_i) \cap \text{TargetFiles}(S_j) = \emptyset$ para todos os subagentes da mesma onda motora.
-- [ ] **Mandato do Artífice Autônomo Fim-a-Fim Cumprido (Modo Direto / Correções):** subagente motor realizou o ciclo unificado completo (leitura 100% -> diagnóstico -> mutação direta no disco -> validação em malha fechada -> relatório final consolidado); zero repasse fragmentado de relatórios entre múltiplos subagentes para a mesma tarefa.
-- [ ] **Mandato do Artífice Motor Cumprido:** subagentes executaram mutações físicas diretas no disco via `replace_file_content` ou `write_to_file`; zero blocos de código em markdown no chat e zero paralisação em laudos intermediários.
-- [ ] **Veto ao Agente Principal Digitador Mantido:** Agente Principal atuou estritamente como árbitro e validador de contratos; zero digitação na thread principal.
-- [ ] **Conformidade de TypeName Verificada:** todos os subagentes com meta de mutação física despachados com `TypeName: "self"`.
-- [ ] **Urgência de Subagente Respeitada:** zero investigação solitária na thread principal; especialistas autônomos acionados sob contexto holístico.
-- [ ] **Squad Activation Gate Cumprido:** subagentes do blueprint do Dossiê despachados antes de qualquer mutação de código.
-- [ ] **Handoff de Alta Fidelidade Arquitetural (Época I):** em missões arquiteturais com artefatos periciais upstream de longa duração, subagentes consumidores leram laudos brutos na íntegra via `view_file`; zero resumo lossy pré-frontal.
-- [ ] **Clean-Context Verificado:** subagentes despachados com payload cirúrgico delimitado, sem vazamento do histórico da thread principal.
-- [ ] **Teto de Onda Respeitado:** máximo de 15 subagentes por chamada de `invoke_subagent`.
-- [ ] **Plasticidade & Sinapses Feedforward Persistidas:** saídas registradas no `synaptic_bus.json` com `[SYNAPTIC_OUTPUTS]`, pesos calibrados ($w_{ij} \ge 0.65$) e enagramas associativos consolidados.
-- [ ] **Máquina Quântica de Contratos Cumprida:** transição estrita em 5 fases (`HOLD` -> `DRAFT` -> `VERIFYING` -> `STABLE` -> `DEPRECATED`); zero contratos órfãos em DRAFT/VERIFYING ao transicionar para Época III.
-- [ ] **Exclusão Mútua FsLockEngine:** locks atômicos $O\_CREAT \mid O\_EXCL$ (`'wx'`), lease signatures e purga de locks zumbis por PID.
-- [ ] **Gravação via DeterministicAtomicSwap:** mutação com arquivo temporário no mesmo volume, `fsyncSync()`, atestação dupla SHA-256 e renomeação atômica.
-- [ ] **Resolução SCDA Homologada:** conflitos sinápticos e peer vetos arbitrados por Fator de Precedência Fiduciária ($FPF$) ou síntese dialética Hegeliana.
-- [ ] **Auto-Cura OODA em Malha Fechada & Veto ao Abandono:** subagente resolveu atritos de SO autonomamente (Playbooks A-E); tarefa concluída com $\$LASTEXITCODE = 0$ e $StderrFatal = 0$.
-- [ ] **Recibo Fiduciário Motor Emitido:** encerramento transmitido via `[MOTOR_EXECUTION_RECEIPT]` sem texto livre.
-- [ ] **Zero Role Drift:** subagentes cumpriram estritamente seu `[MY_SWARM_DELIVERABLE]` sem invadir escopo alheio.
-- [ ] **Aderência à Cadeia Neural de 6 Níveis (Enterprise Six-Tier):** segregação funcional entre Governança Fiduciária (L6), Handshake Hub (L5), Arquiteto Chefe (L4), Gerentes de Domínio (L3), Supervisory Gate (L2) e Artífices Motores 1:1 (L1).
-- [ ] **Ingestão Exaustiva de Arquivos (Zero Partial-Read Delusion):** 100% das linhas dos arquivos analisados ou mutacionados foram lidas na íntegra via `view_file` paginado ($1 \to N$); zero presunção estocástica baseada em leitura fracionada de 200 linhas.
-- [ ] **Foco Laser & Zero Desvio Lateral (Lei 46):** atuação 100% confinada ao arquivo e problema solicitado pelo usuário; zero inspeção de logs de compilação ou arquivos periféricos não solicitados.
-- [ ] **Protocolo Shadow Spike Respeitado (Lei 17):** novos experimentos e testes isolados em sandbox `.spike`; zero reconstrução do zero de arquivos de produção existentes.
-- [ ] **Mapa Neural da Máquina Grounded (Lei 39):** hardware, RAM, SO e portas ativas checados antes de execuções paralelas pesadas.
-- [ ] **Mapa Neural do Projeto Consultado & Atualizado (Lei 47):** consulta no Step 0 e atualização incremental no fechamento da sessão; zero amnésia sobre o propósito dos arquivos.
-
+- [ ] **Relação 1:1:** 1 subagente por nó/arquivo; zero batching.
+- [ ] **Grafo Modular Denso (Lei 4):** 3 a 7 nós em Modo Arq. (âncora em 5); zero nós em Modo Direto.
+- [ ] **Ortogonalidade:** $\text{TargetFiles}(S_i) \cap \text{TargetFiles}(S_j) = \emptyset$ em ondas motoras.
+- [ ] **Artífice Fim-a-Fim (Lei 42):** Ciclo unificado (ler 100% $\to$ diagnosticar $\to$ mutar $\to$ validar); zero fragmentação.
+- [ ] **Artífice Motor (Lei 43):** Mutação física no disco via ferramentas de escrita; zero dumps no chat.
+- [ ] **Veto ao Parent Digitador (Lei 5):** Agente Principal coordena; zero mutação de produção na thread principal.
+- [ ] **Conformidade TypeName:** Subagentes motores com `TypeName: "self"`.
+- [ ] **Squad Activation Gate:** Blueprint do Dossiê despachado antes de mutações de código.
+- [ ] **Clean-Context & Teto de Onda:** Payloads sem histórico da thread principal; máximo 15 por onda.
+- [ ] **Contratos em 5 Fases:** Transição estrita; base STABLE antes da Época III.
+- [ ] **FsLockEngine & AtomicSwap:** $O\_CREAT \mid O\_EXCL$, lease signature, stale lock break e `DeterministicAtomicSwap`.
+- [ ] **Auto-Cura OODA:** Autocura no SO (Playbooks A-E) com $\$LASTEXITCODE = 0$; zero abandono de tarefas.
+- [ ] **Recibo Motor:** Encerramento via `[MOTOR_EXECUTION_RECEIPT]`; zero texto livre.
+- [ ] **Zero Role Drift:** Subagentes cumprem seu `[MY_SWARM_DELIVERABLE]`.
+- [ ] **Leitura Exaustiva (Lei 12) & Foco Laser (Lei 46):** 100% das linhas lidas ($1 \to N$); foco no alvo sem desvio.
+- [ ] **Shadow Spike & Mapas Neurais (Leis 17, 39, 47):** Sandbox `.spike`; host checado e mapa do projeto atualizado.

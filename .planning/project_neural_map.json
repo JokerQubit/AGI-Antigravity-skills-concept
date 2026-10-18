@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "schema_version": "5.0.0",
   "project_name": "agi-research",
-  "last_synced_session": "SES-2026-09-24-003",
-  "last_updated": "2026-09-24T22:02:00-03:00",
+  "last_synced_session": "SES-2026-10-12-002",
+  "last_updated": "2026-10-12T14:10:00-03:00",
   "macro_architecture": {
     "domain_summary": "Plugin soberano de governança cognitiva, paridade operacional universal e orquestração de hiper-córtex neural (v5.0 — Sovereign Synthetic Hyper-Cortex) para Antigravity / Gemini.",
     "architectural_pattern": "Hub-and-Spoke Constitucional (Layer 0 imutável vs Layer 1 playbooks operacionais sob demanda)",
@@ -27,7 +27,7 @@
   "file_neural_index": {
     "rules/AGENTS.md": {
       "purpose": "Constituição Soberana de Layer 0 e governança executiva mestre do ecossistema.",
-      "scope_and_responsibilities": "Define a Tríade Fiduciária, divisão ontológica rules vs skills, o paradigma dos Titãs, as 5 Épocas Cognitivas e o Código das 53 Leis Supremas invioláveis.",
+      "scope_and_responsibilities": "Define a Tríade Fiduciária, divisão ontológica rules vs skills, o paradigma dos Titãs, as 5 Épocas Cognitivas e o Código das 53 Leis Supremas invioláveis. Compactado para 19.261 bytes (-50.7%), contendo 100% das 53 Leis Constitucionais preservadas, Tríade Fiduciária e 5 Épocas. Zero truncamento no boot.",
       "exports": [
         {"name": "Tríade Fiduciária", "signature": "CEO + Research Director + Epistemic Red Team", "description": "Postura cognitiva permanente"},
         {"name": "5 Épocas Cognitivas", "signature": "Época 0 (Refiner) -> I (Ontologia) -> II (Matriz) -> III (Artífices) -> IV (Gauntlet)", "description": "Ciclo vital da cognição"},
@@ -35,13 +35,13 @@
       ],
       "dependencies": [],
       "dependents": ["rules/rule1.md", "rules/rule2.md", "skills/*"],
-      "internal_state_and_side_effects": "Injetada permanentemente em todo prompt do agente pelo host Antigravity.",
+      "internal_state_and_side_effects": "Injetada permanentemente em todo prompt do agente pelo host Antigravity. Zero truncamento no boot.",
       "anti_patterns_to_avoid": "Nunca resumir telegráficamente de forma empobrecedora. Manter sempre vocabulário rico e densidade semiótica.",
-      "last_modified_session": "SES-2026-09-24-003"
+      "last_modified_session": "SES-2026-10-12-001"
     },
     "rules/rule1.md": {
       "purpose": "Playbook Canônico de Orquestração de Enxame, Barramento Sináptico e Concorrência de Layer 1.",
-      "scope_and_responsibilities": "Governa o synaptic_bus.json v5.0, Máquina Quântica de Contratos em 5 fases, FsLockEngine, Protocolo Shadow Spike (Lei 17), Artífice Autônomo Fim-a-Fim (Lei 42), Mapa Neural da Máquina (Lei 39) e Mapa Neural do Projeto (Lei 47).",
+      "scope_and_responsibilities": "Governa o synaptic_bus.json v5.0, Máquina Quântica de Contratos em 5 fases, FsLockEngine, Protocolo Shadow Spike (Lei 17), Artífice Autônomo Fim-a-Fim (Lei 42), Mapa Neural da Máquina (Lei 39) e Mapa Neural do Projeto (Lei 47). Compactado para 13.735 bytes (-75.6%), expurgados schemas JSON transitórios e playbooks redundantes de skills. Zero exclusão inline pelo Antigravity.",
       "exports": [
         {"name": "synaptic_bus.json v5.0", "signature": "Vetor S, Contratos Quânticos, Enagramas e Blacklists", "description": "Barramento estigmérgico neural"},
         {"name": "FsLockEngine", "signature": "O_CREAT | O_EXCL ('wx') com TTL e jitter", "description": "Exclusão mútua no filesystem"},
@@ -50,13 +50,13 @@
       ],
       "dependencies": ["rules/AGENTS.md", "skills/swarm_orchestration/SKILL.md"],
       "dependents": ["rules/rule2.md", "skills/*"],
-      "internal_state_and_side_effects": "Governa transições do barramento sináptico e sincronização de concorrência.",
-      "anti_patterns_to_avoid": "Veto a pipeline fragmentado de passar relatório para outro codificar. Veto a reconstruir arquivos do zero.",
-      "last_modified_session": "SES-2026-09-24-003"
+      "internal_state_and_side_effects": "Governa transições do barramento sináptico e sincronização de concorrência. Injeção inline plena sem exclusão.",
+      "anti_patterns_to_avoid": "Veto a pipeline fragmentado de passar relatório para outro codificar. Veto a reconstruir arquivos do zero. Veto a schemas transitórios nas rules.",
+      "last_modified_session": "SES-2026-10-12-001"
     },
     "rules/rule2.md": {
       "purpose": "Playbook Canônico de Governança Adaptativa de Tokens, Roteamento Cognitivo Dinâmico e Expedientes.",
-      "scope_and_responsibilities": "Governa a Análise de Custo-Complexidade (ACC) com Host Grounding, roteamento entre LCS/ToT/GoT/DAS, Expedientes Cognitivos 0 a 5, Multi-Horizon Circuit Breakers, Grafo Modular Denso e Leis de Governança.",
+      "scope_and_responsibilities": "Governa a Análise de Custo-Complexidade (ACC) com Host Grounding, roteamento entre LCS/ToT/GoT/DAS, Expedientes Cognitivos 0 a 5, Multi-Horizon Circuit Breakers, Grafo Modular Denso e Leis de Governança. Compactado para 13.976 bytes (-74.1%), expurgada a duplicação em cascata de regras e sintetizada a ACC, topologias dinâmicas e Multi-Horizon Circuit Breakers. Zero truncamento no boot.",
       "exports": [
         {"name": "ACC Multi-Dimensional", "signature": "Vetor x in [0,1]^7 + incerteza epsilon_t", "description": "Avaliação pré-despacho"},
         {"name": "Expedientes Cognitivos", "signature": "Work Shifts 0 a 5 em expediente_state.json", "description": "Pacing fiduciário"},
@@ -64,9 +64,23 @@
       ],
       "dependencies": ["rules/AGENTS.md", "rules/rule1.md", "skills/adaptive_token_governance/SKILL.md"],
       "dependents": ["skills/*"],
-      "internal_state_and_side_effects": "Controla persistência de expedientes e seleção de modos Flash Thinking.",
-      "anti_patterns_to_avoid": "Veto ao flash high no Expediente 2. Veto a cotas infladas de 100 nós.",
-      "last_modified_session": "SES-2026-09-24-003"
+      "internal_state_and_side_effects": "Controla persistência de expedientes e seleção de modos Flash Thinking. Zero truncamento no boot.",
+      "anti_patterns_to_avoid": "Veto ao flash high no Expediente 2. Veto a cotas infladas de 100 nós. Veto a regras duplicadas em cascata.",
+      "last_modified_session": "SES-2026-10-12-001"
+    },
+    "rules/rule3.md": {
+      "purpose": "Mapa Neural de Skills do Hiper-Córtex & Ativação Dinâmica Universal (Unified Neural Skill Mesh v5.0).",
+      "scope_and_responsibilities": "Cartografia sináptica viva de todas as skills do ecossistema, domínios de competência e capacidades completas em qualquer cenário, erradicando a limitação de gatilhos rígidos/passivos e promovendo a composição isomórfica ubíqua (UISC v5.0).",
+      "exports": [
+        {"name": "Cartografia das 13 Skills", "signature": "Ingestão, Orquestração, Arquitetura, Percepção e Auditoria", "description": "Mapeamento exaustivo de capacidades"},
+        {"name": "Álgebra de Ativação Dinâmica", "signature": "Composição Sequencial, Paralela e Adversarial", "description": "UISC v5.0 em tempo real"},
+        {"name": "Host Ecosystem Skills Integration", "signature": "generative_ui, automation, customizations, guide", "description": "Sinergia com IDE Antigravity"}
+      ],
+      "dependencies": ["rules/AGENTS.md", "rules/rule1.md", "rules/rule2.md"],
+      "dependents": ["skills/*"],
+      "internal_state_and_side_effects": "Injetada permanentemente pelo host Antigravity, garantindo consciência contínua de ferramentas.",
+      "anti_patterns_to_avoid": "Veto a encarar skills como caixas estanques ou esperar comandos literais para aplicar boas práticas.",
+      "last_modified_session": "SES-2026-10-12-002"
     },
     "skills/fractal_thought_graph/SKILL.md": {
       "purpose": "Manual técnico e playbook operacional para gestão do substrato de pensamento e Grafo Modular Denso.",
@@ -121,6 +135,35 @@
       ],
       "mutated_files": ["rules/AGENTS.md", "rules/rule1.md", "rules/rule2.md", ".planning/project_neural_map.json"],
       "lessons_and_decisions": "Reconstruir do zero destrói edge cases. O projeto precisa de memória viva acumulativa para nunca esquecer o que cada arquivo faz.",
+      "git_commit": "PENDING"
+    },
+    {
+      "session_id": "SES-2026-10-12-001",
+      "timestamp": "2026-10-12T13:40:00-03:00",
+      "user_intent": "Reduzir/otimizar as rules da máquina, encontrar e sanear anomalias, eliminar bugs de duplicidade de conteúdo e restabelecer a injeção inline sem truncamento.",
+      "actions_taken": [
+        "Refatoração de rules/AGENTS.md reduzindo de 39.092 para 19.261 bytes, preservando 100% das 53 Leis Constitucionais",
+        "Refatoração de rules/rule1.md reduzindo de 56.423 para 13.735 bytes, expurgando schemas JSON transitórios de 120 linhas e playbooks redundantes, recuperando a injeção inline",
+        "Refatoração de rules/rule2.md reduzindo de 53.872 para 13.976 bytes, expurgando 25 regras duplicadas e compactando ACC, topologias e circuitos",
+        "Volume total somado reduzido de ~149.387 bytes para 46.972 bytes (-68.5%), eliminando todos os truncamentos e exclusões mecânicas do host Antigravity"
+      ],
+      "mutated_files": ["rules/AGENTS.md", "rules/rule1.md", "rules/rule2.md", ".planning/project_neural_map.json"],
+      "lessons_and_decisions": "A Lei Constitucional 2 (Rules vs Skills) deve ser mantida com rigor: regras contêm a governança permanente e as leis; manuais e schemas procedurais pertencem às skills. A alta densidade semiótica supera em muito a prolixidade inflada.",
+      "git_commit": "PENDING"
+    },
+    {
+      "session_id": "SES-2026-10-12-002",
+      "timestamp": "2026-10-12T14:10:00-03:00",
+      "user_intent": "Criar uma rule como mapa neural explicando todas as skills e ativação dinâmica delas em todos os cenários, eliminando gatilhos rígidos condicionais.",
+      "actions_taken": [
+        "Criação de rules/rule3.md (Unified Neural Skill Mesh & Dynamic Composition Playbook v5.0)",
+        "Mapeamento detalhado das 13 skills especializadas de agi-research e das skills nativas do host Antigravity IDE",
+        "Formulação da Álgebra Isomórfica de Composição (UISC v5.0) com operadores sequenciais, paralelos e adversariais em tempo real",
+        "Instituído o checklist forense de consciência e auto-ativação reflexa de skills",
+        "Sincronização atômica no file_neural_index do Mapa Neural do Projeto"
+      ],
+      "mutated_files": ["rules/rule3.md", ".planning/project_neural_map.json"],
+      "lessons_and_decisions": "Skills não são utilitários passivos guardados em gavetas: são vias neurais do hiper-córtex ativas em qualquer cenário. A composição contínua maximiza a densidade semiótica e a qualidade do software.",
       "git_commit": "PENDING"
     }
   ]

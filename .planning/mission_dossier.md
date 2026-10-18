@@ -1,16 +1,16 @@
-# Dossiê Executivo de Missão: Absorção Constitucional Orion v3 (Leis 51 a 53), Spoke Rule Factory & Autonomous RSI Engine
+# Dossiê Executivo de Missão: Mapa Neural de Skills do Hiper-Córtex & Ativação Dinâmica Universal (`rules/rule3.md`)
 
-**Portão de Ingestão Mandatória Ubíqua — Época 0 (v5.0 Sovereign Architectural & Operational Ingestion)**  
-**Hash da Demanda Crua (SHA-256):** `507a9a8be3d145a86daa9644b28bf42a8dc0720d8baeabdf0406c393692bf082`  
-**Demanda Crua:**  
+**Portão de Ingestão Mandatória Ubíqua — Época 0 (v5.0 Sovereign Architectural & Operational Ingestion Gate)**  
+**Hash da Demanda Crua (SHA-256):** `9fec748b5d32b0575002beab52c2432f4da34850b65ca677d082e37b44533264`  
+**Demanda Crua do Usuário:**  
 ```text
-sim (Aprovação executiva para implementar a absorção das Leis 51 a 53 do Orion v3 em rules/AGENTS.md, a criação da Skill spoke_rule_factory, a criação da Skill autonomous_rsi_engine e as integrações em rules/rule1.md, rules/rule2.md, skills/universal_prompt_refiner, skills/swarm_orchestration, skills/adaptive_token_governance e plugin.json)
+faça uma rule como se fosse um mapa neural explicando todas as skills e ativação delas, para a maquina ter ciencia que tem a skill e tudo o que elas podem ser utilizadas, para todo os cenarios. tirando uma 'limitação' de gatilho que é ativado por momentos 'chaves' e passa-se a utilizar em tudo corretamente de forma dinamica
 ```  
-**Data/Hora:** `2026-09-21T12:36:00-03:00`  
+**Data/Hora da Emissão:** `2026-10-12T17:05:00-03:00`  
 **Classificação Soberana de Missão:** `DIRECT_OPERATIONAL`  
-**Piso de Nós em Disco (`nodes_floor`):** `0` (Zero nós em disco; 100% dos tokens alocados aos subagentes artífices motores 1:1)  
-**Topologia de Pensamento Primária:** `LINEAR_CAUSAL_STREAM` (LCS para execução motora) & `DIALECTIC_ADVERSARIAL_SYNTHESIS` (DAS para validação Red Team)  
-**Modo Flash Prescrito:** `Flash Medium` (Execução motora e validação com balanceamento fiduciário ótimo)  
+**Piso de Nós em Disco (`nodes_floor`):** `0` (Zero nós em disco em conformidade com as Leis 4 e 24; 100% do orçamento computacional alocado aos subagentes artífices motores fim-a-fim)  
+**Topologia de Pensamento Primária:** `LINEAR_CAUSAL_STREAM` (LCS para síntese e mutação física atômica) & `DIALECTICAL_ADVERSARIAL_SYNTHESIS` (DAS para o Gauntlet Red Team na Época IV)  
+**Modo Flash Prescrito:** `Flash Medium` (Rigor de engenharia com balanceamento fiduciário ótimo)  
 
 ---
 
@@ -18,359 +18,248 @@ sim (Aprovação executiva para implementar a absorção das Leis 51 a 53 do Ori
 
 ### 1.1. Análise de Custo-Complexidade (ACC) & Classificação Soberana
 - **Classificação:** `DIRECT_OPERATIONAL`.
-- **Fundamentação Fiduciária:** A fase investigativa e exploratória foi integralmente saturada e homologada na etapa anterior através dos laudos periciais brutos:
-  1. `inv_021_orion_rules_forensic_dissection.md` (35.546 bytes): anatomia completa do Orion v3, extração dos 6 meta-invariantes e texto normativo das Leis 51 a 53;
-  2. `inv_022_rsi_and_spoke_rule_factory.md` (42.693 bytes): especificação arquitetural matemática do Spoke Rule Factory, pipeline de 5 fases, vetor $\vec{\Sigma}_R$, ciclo Hebbiano de RSI em 4 fases, 4 travas pétreas de segurança e schemas JSON canônicos.
-- **Roteamento de Nós em Disco:** Conforme estipulado pelas Leis Constitucionais 4 e 24, projetos que partem para a implementação física direta de especificações técnicas já saturadas em laudos periciais operam sob **Modo Direto / Operacional**. A geração de arquivos intermediários em `.planning/nodes/` é **sumariamente desativada** (`nodes_floor: 0`). A dispersão de tokens em arquivos periféricos de nós é expressamente banida; todo o orçamento cognitivo é transferido com rendimento de 100% para a onda de **9 Subagentes Artífices Motores 1:1** (`TypeName: "self"`), dotados de alvos de escrita estritamente disjuntos no sistema de arquivos.
+- **Fundamentação Fiduciária:** A demanda exige a criação de uma nova regra constitucional de Layer 1 (`rules/rule3.md`), instituindo o **Mapa Neural de Skills do Hiper-Córtex & Ativação Dinâmica Universal** (Unified Neural Skill Mesh & Dynamic Composition). A missão opera diretamente sobre arquivos de governança do repositório, não requerendo a instanciação de grafo de subsistemas em `.planning/nodes/`.
+- **Roteamento de Nós em Disco:** Conforme a Lei Constitucional 4 (Primazia da Qualidade sobre Quantidade) e a Lei 24, a missão opera com **Zero Nós em disco (`nodes_floor: 0`)**. O plano executivo é governado por este Dossiê e pelo `implementation_plan.md`, e a escrita física é delegada a artífices motores atômicos 1:1 (`TypeName: "self"`), com alvos de escrita estritamente disjuntos.
 
-#### Vetor de Atributos da Demanda $\mathbf{x} \in [0, 1]^6$ & Incerteza Residual ($\varepsilon$):
+### 1.2. Diagnóstico Crítico da Demanda: Superação do Viés de Gatilho Reativo
+O usuário identificou uma vulnerabilidade metacognitiva primária dos sistemas de agentes convencionais: **a limitação por gatilho rígido e reativo**.
+1. **O Anti-Pattern do Gatilho Rígido Passivo:** O agente convencional só lembra de uma skill quando ocorre um evento pontual explícito (ex.: só cogita `modern_ui_craft` quando o usuário cita textualmente "framer motion" ou "CSS"; só cogita `hardened_clean_architecture` se houver refatoração em grande escala; só cogita `autonomous_computer_use` após um erro grotesco no terminal).
+2. **A Solução Neural Dinâmica (Unified Neural Skill Mesh):** Instituir a consciência ontológica contínua e ativa de **todas as 21 skills disponíveis** (13 especializadas de `agi-research` + 8 do ecossistema `Antigravity`), concebendo-as como uma malha sináptica integrada que se auto-ativa de forma fluida, combinatória e dinâmica em **qualquer cenário de engenharia** (Frontend, Backend, CLI, DevOps, Arquitetura, Bugfix, Manutenção, Automação, Extensibilidade).
+
+### 1.3. Vetor de Atributos da Demanda $\mathbf{x} \in [0, 1]^7$ & Incerteza Residual ($\varepsilon_t$)
 $$\mathbf{x} = \begin{bmatrix}
-D_{\text{ont}} = 0.85 & \text{(Constituição, governança de enxame, automação de regras de nicho, RSI e manifesto)} \\
-U_{\text{unc}} = 0.05 & \text{(Incerteza quase nula: laudos inv_021 e inv_022 forneceram os contratos exatos)} \\
-B_{\text{bif}} = 0.15 & \text{(Baixa bifurcação: diretrizes arquiteturais já selecionadas e aprovadas pelo usuário)} \\
-C_{\text{conc}} = 0.90 & \text{(Alta concorrência: 9 subagentes simultâneos sob prova matemática de disjunção)} \\
-S_{\text{sens}} = 0.20 & \text{(Sensibilidade perceptual baixa: artefatos normativos em Markdown e JSON)} \\
-P_{\text{risk}} = 0.80 & \text{(Alto impacto sistêmico: expansão do núcleo constitucional e criação de novas skills)}
+D_{\text{ont}} = 0.95 & \text{(Ontologia profunda: 21 skills articuladas sob o modelo UISC v5.0)} \\
+U_{\text{unc}} = 0.04 & \text{(Incerteza nula: inventário e arquivos de skills conhecidos empiricamente)} \\
+B_{\text{bif}} = 0.08 & \text{(Baixa bifurcação: rota unívoca de criação de rule3.md na Layer 1)} \\
+C_{\text{conc}} = 0.85 & \text{(Alta concorrência: 3 subagentes motores 1:1 com alvos estritamente disjuntos)} \\
+S_{\text{sens}} = 0.20 & \text{(Densidade semiótica alta; respeito estrito ao orçamento de 10.000 a 13.500 bytes)} \\
+P_{\text{risk}} = 0.90 & \text{(Risco crítico: a regra rege a ativação cognitiva de todas as capacidades do agente)} \\
+H_{\text{host}} = 0.92 & \text{(Limites do host: preservação da elegibilidade inline das 4 rules sem truncamento)}
 \end{bmatrix}$$
-- **Índice de Incerteza Epistêmica Global ($\varepsilon_t$):** `0.05` (`ZONE_GREEN` $\le 0.15$). Convicção epistêmica total ($C_e = 0.95$). Execução autorizada sem restrições.
+
+- **Índice de Incerteza Epistêmica Global ($\varepsilon_t$):** `0.04` (`ZONE_GREEN` $\le 0.15$). Convicção Epistêmica Plena ($C_e = 0.96$). Execução motora totalmente autorizada.
 
 ---
 
-### 1.2. Desconstrução Forense em 4 Camadas (Two-Man Rule)
+### 1.4. Desconstrução Forense em 4 Camadas (Two-Man Rule)
 
 #### Camada 1: Contratos Explícitos (CE)
-- **CE-01 (Absorção Constitucional das Leis 51 a 53 em `rules/AGENTS.md`):**
-  - *Lei 51 (O Invariante Anti-Degradação de Pilha de Execução):* Proibição absoluta de desativar middlewares, linters, checagens estritas de tipos, transações de BD ou locks para testes pontuais.
-  - *Lei 52 (O Princípio do Digital Twin Isomorphism):* Identidade bit a bit entre o ambiente de testes/sandbox e a infraestrutura de produção.
-  - *Lei 53 (Causalidade Temporal Estrita & Não-Vazamento de Estado):* Impossibilidade matemática de acesso a estados futuros ($t+1$) em testes, benchmarks e avaliações.
-- **CE-02 (Criação da Skill `spoke_rule_factory`):**
-  - Instanciação de `skills/spoke_rule_factory/SKILL.md` contendo:
-    * YAML frontmatter formal com descrição e triggers;
-    * Vetor de Assinatura do Repositório em 7 dimensões ($\vec{\Sigma}_R = \langle \mathcal{M}, \mathcal{L}, \mathcal{T}, \mathcal{E}, \mathcal{C}, \mathcal{H}, \mathcal{V} \rangle$);
-    * Arquitetura Hub-and-Spoke com Teorema da Não-Contaminação Constitucional;
-    * Pipeline mecânico em 5 fases (Reconhecimento $\to$ Matriz de Armadilhas $\to$ Síntese dos 4 Módulos $\to$ Auto-Verificação $\to$ Selamento);
-    * Especificação canônica dos 4 módulos: `domain_standards.md`, `runtime_constraints.md`, `toolchain_and_validation.md`, `security_and_contracts.md`;
-    * Schema canônico de `spoke_manifest.json`.
-- **CE-03 (Criação da Skill `autonomous_rsi_engine`):**
-  - Instanciação de `skills/autonomous_rsi_engine/SKILL.md` contendo:
-    * YAML frontmatter formal;
-    * Função de Utilidade Fiduciária $U_{\text{Fiduciary}}(\mathbf{P}_t)$ e métricas de telemetria fria;
-    * Motor de Post-Mortem Cognitivo com schema de `pm_telemetry.json`;
-    * Ciclo Hebbiano em 4 fases: Gap Detector $\to$ Candidate Patch $\to$ Sandbox Regression Gauntlet $\to$ Fiduciary Ratification & Ledger Commit;
-    * As Quatro Travas Pétreas Invioláveis: (1) Layer 0 Frozen Invariant, (2) Anti-Dumbing-Down Invariant, (3) Bipartição Classes A/B, (4) Evolutionary Rate Limiter;
-    * Schema formal do patch candidato `rsi_candidate_patch.json`.
-- **CE-04 (Integrações em `rules/rule1.md`):**
-  - Injeção da Cadeia Neural em 6 Níveis (L1..L6) inspirada no Orion v3;
-  - Formalização do protocolo de Non-Acceptance Rejection Dossier com Blacklist Acumulativa de Vetores.
-- **CE-05 (Integrações em `rules/rule2.md`):**
-  - Circuit Breaker de Drawdown Cognitivo em dois níveis: Micro-Drawdown (2 erros motores consecutivos) vs. Macro-Drawdown Freeze ($\varepsilon_t > 0.40$ ou 3 ondas sem convergência);
-  - Blindagem do modo `DIRECT_OPERATIONAL` com `nodes_floor: 0`.
-- **CE-06 (Integrações em `skills/universal_prompt_refiner/SKILL.md`):**
-  - Ativação automática da Spoke Rule Factory em repositórios novos/estrangeiros;
-  - Disparo do Post-Mortem Cognitivo na selagem de encerramento de sessão.
-- **CE-07 (Integrações em `skills/swarm_orchestration/SKILL.md`):**
-  - Integração do protocolo de Rejection Dossier e canalização de sinapses para enagramas Hebbianos associativos.
-- **CE-08 (Integrações em `skills/adaptive_token_governance/SKILL.md`):**
-  - Orçamento e rate-limiting de tokens para o motor de RSI;
-  - Invariante formal de bypass de nós em missões operacionais diretas.
-- **CE-09 (Integrações em `plugin.json`):**
-  - Registro de `"spoke_rule_factory"` e `"autonomous_rsi_engine"` na matriz `skills_list`.
+- **CE-01 (Criação de `rules/rule3.md`):** Criar a 4ª regra constitucional do ecossistema (`rules/rule3.md`), intitulada *Mapa Neural de Skills do Hiper-Córtex & Ativação Dinâmica Universal (Unified Neural Skill Mesh & Dynamic Composition — v5.0)*.
+- **CE-02 (Consciência Ontológica Plena de 21 Skills):** Cobrir exaustivamente as 13 skills especializadas do plugin `agi-research` e as 8 skills nativas do ecossistema `Antigravity`, detalhando suas assinaturas, domínios de maestria, potenciais sinápticos e aplicações práticas irrestritas.
+- **CE-03 (Erradicação do Viés de Gatilho Rígido):** Descrever o protocolo de ativação dinâmica contínua, onde as skills operam como conexões neurais ativas sob o formalismo UISC v5.0, ativando-se por relevância sináptica, composição algébrica ($\circ, \otimes, \rhd$) e antecipação de valor, e não por meros ganchos reativos.
+- **CE-04 (Mapeamento Cross-Cenário Universal):** Apresentar a matriz de aplicação multidimensional, explicitando como cada skill gera impacto real em diversos cenários práticos (Sistemas Críticos, UIs & Web, Infra & Terminal, Refatorações, Auditoria Forense, Automação & Extensibilidade).
+- **CE-05 (Orçamento Estrito de Bytes):** A regra `rules/rule3.md` DEVE possuir tamanho final entre **10.000 e 13.500 bytes**, assegurando máxima densidade semiótica e garantindo que o conjunto total das 4 regras (`AGENTS.md` ~19.2k, `rule1.md` ~13.7k, `rule2.md` ~14.0k, `rule3.md` ~12k) permaneça $\le 60.000$ bytes, 100% elegível para injeção inline sem risco de truncamento.
+- **CE-06 (Sincronização do Mapa Neural do Projeto):** Atualizar `.planning/project_neural_map.json` para registrar `rules/rule3.md` no índice neural e nos cronogramas de sessão.
 
-#### Camada 2: Contratos Implícitos (CI) & Invariantes Arquiteturais
-- **CI-01 (Disjunção Estrita de Arquivos - Teorema de Disjunção):**
-  $$\forall i, j \in \{1, \dots, 9\}, \; i \neq j \implies \text{TargetFiles}(S_i) \cap \text{TargetFiles}(S_j) = \emptyset$$
-  Garantia matemática absoluta de zero colisão de escrita, zero locks Win32 `EBUSY` e zero deslocamento de offset no filesystem.
-- **CI-02 (Handoff Neural de Alta Fidelidade - Lei 42):**
-  Cada subagente motor despachado DEVE receber a instrução compulsória de ler a íntegra dos laudos periciais brutos relevantes (`inv_021_...` e/ou `inv_022_...`) via `view_file` como sua primeiríssima ação antes de qualquer edição de código.
-- **CI-03 (Mandato do Artífice Motor - Leis 5 e 43):**
-  Todos os 9 subagentes devem operar com `TypeName: "self"` e mutacionar fisicamente os bytes no disco através de `replace_file_content` ou `write_to_file`. É terminantemente proibido ao subagente devolver código em markdown na thread de chat transferindo o trabalho de digitação para o caller.
-- **CI-04 (Zero-Stub Permanente & Null-Vocabulary - Leis 18 e 34):**
-  Nenhum arquivo novo ou modificado pode conter `// TODO`, `pass`, retornos nulos simplistas ou prosa prolixa. Texto denso, técnico e imediatamente executável.
-- **CI-05 (Imutabilidade Criptográfica da Layer 0):**
-  A inclusão das Leis 51 a 53 em `rules/AGENTS.md` é autorizada exclusivamente nesta sessão pela aprovação executiva do usuário ("sim"). O motor de RSI futuro permanece proibido de mutacionar a Layer 0 (Trava Pétrea 1).
+#### Camada 2: Contratos Implícitos (CI) & Invariantes Constitucionais
+- **CI-01 (Inviolabilidade Merkle de Layer 0 - Trava Pétrea 1):** `rules/rule3.md` é uma regra de Layer 1. Ela adiciona capacidades cognitivas de ativação dinâmica, mas JAMAIS pode revogar, afrouxar ou contrariar qualquer uma das 53 Leis Constitucionais de Layer 0 (`rules/AGENTS.md`).
+- **CI-02 (Anti-Dumbing Down Invariant - Trava Pétrea 2):** $\text{Severidade}(\mathcal{R}_{\text{novo}}) \ge \text{Severidade}(\mathcal{R}_{\text{antigo}})$. O dinamismo de ativação não autoriza flexibilização de rigor técnico (Zero-Stub, molas de 2ª ordem, áudio real, inspeção perceptual no Chrome e Gauntlet Red Team continuam obrigatórios).
+- **CI-03 (Teorema da Disjunção de Escrita 1:1 - Lei 5):** $\text{FileSet}(S_1) \cap \text{FileSet}(S_2) \cap \text{FileSet}(S_3) = \emptyset$. Subagente 1 escreve `rules/rule3.md`, Subagente 2 escreve `.planning/project_neural_map.json`, Subagente 3 escreve `.planning/adversarial_audit_report.md`. Zero colisões.
+- **CI-04 (Veto Absoluto ao Parent Digitador - Lei 5):** O Agente Principal atua exclusivamente como maestro e consolidador; a criação de `rules/rule3.md` e mutações físicas cabem aos subagentes artífices motores com `TypeName: "self"`.
+- **CI-05 (Mandato do Artífice Autônomo Fim-a-Fim - Lei 42):** Subagente 1 atua de ponta a ponta: recebe o handoff deste Dossiê, gera o conteúdo completo de `rules/rule3.md`, aplica `write_to_file` diretamente no disco, afere a contagem de bytes e emite o recibo motor padronizado.
+- **CI-06 (Null-Vocabulary Estrito - Lei 34):** Proibição total de preâmbulos de bajulação, desculpas ou fórmulas decorativas em todas as interações.
 
 #### Camada 3: Exercício Pre-Mortem Forense (T+6 Meses)
-*Cenário Hipotético de Falha:* 6 meses após a implementação, o ecossistema sofre instabilidade: o gerador de spokes gerou regras excessivamente permissivas em um novo projeto, e o motor de RSI introduziu uma regra que causou looping em tarefas complexas.  
+*Cenário de Falha:* 6 meses após a implementação, o sistema começa a invocar indiscriminadamente todas as 21 skills em tarefas simples, esgotando o limite de contexto, ou colapsa de volta na passividade ignorando as skills nativas do Antigravity.  
 *Autópsia Forense das Causas Raízes:*
-1. **Regras de Spoke Permissivas:** O repositório alvo não possuía linters configurados e o spoke assumiu ausência de restrições.
-   *Contramedida Determinística:* Monotonicidade Constitucional e Fallback Severo na Skill `spoke_rule_factory`: se o repositório não tem linter, injeta-se o validador mais rigoroso da linguagem em vez de tolerar código solto.
-2. **Auto-Degradação por RSI:** Uma falha pontual de compilação levou o RSI a relaxar um timeout ou suprimir uma checagem.
-   *Contramedida Determinística:* A Trava Pétrea 2 (Anti-Dumbing-Down Invariant) implementada na Skill `autonomous_rsi_engine` invalida e aborta com `[HARD HALT]` qualquer mutação cuja severidade normativa seja menor que a anterior ($\text{Severidade}(R_{t+1}) < \text{Severidade}(R_t)$).
-3. **Inchaço de Contexto de Rules:** O spoke compilou 10 arquivos extensos com 20.000 tokens de regras.
-   *Contramedida Determinística:* Teto rígido de 4 módulos canônicos e orçamento máximo de 8.000 tokens totais para qualquer spoke gerado.
+1. **Ativação Caótica Desgovernada vs. Gradiente de Relevância Sináptica:**
+   - *Causa:* Confundir "ativação dinâmica para todos os cenários" com "ativação simultânea de tudo a todo instante".
+   - *Contramedida:* Modelar a ativação em `rule3.md` através da Matriz de Pesos Sinápticos UISC v5.0 e da Assinatura do Problema $\vec{\Phi}(P)$. As skills estão sempre **cognitivamente conscientes**, mas sua execução motora é ponderada pelo limiar de relevância física $\alpha_i \ge 0.50$ e pela álgebra de composição ($\circ, \otimes, \rhd$).
+2. **Estouro Volumétrico e Truncamento pelo Host:**
+   - *Causa:* Redação excessivamente prolixa ultrapassando 13.500 bytes e forçando o host Antigravity a truncar o arquivo.
+   - *Contramedida:* Travas de contagem de bytes no Red Team Gauntlet (rejeição sumária se $\text{size} < 10.000$ ou $\text{size} > 13.500$ bytes).
+3. **Esquecimento das Skills do Antigravity:**
+   - *Causa:* Foco apenas nas 13 skills locais do plugin, tratando as skills nativas da plataforma (`generative_ui`, `automation`, `agy-customizations`) como entidades alienígenas.
+   - *Contramedida:* Seção canônica dedicada às 8 skills nativas em `rule3.md`, detalhando sua interface com sidecars, painéis e ferramentas de sistema.
 
-#### Camada 4: Duplo-Check Fiduciário & Regra de Dois Homens (Two-Man Rule)
-- A demanda responde a uma necessidade real de escala da infraestrutura de IA? Sim, resolve o problema de adaptação a nichos heterogêneos e auto-evolução em malha fechada.
-- Os 9 alvos de escrita cobrem integralmente o pedido do usuário sem redundâncias? Sim.
-- A integridade da Constituição v5.0 é preservada e expandida harmonicamente? Sim, as Leis 51 a 53 completam as 50 leis precedentes sem qualquer atrito vetorial.
+#### Camada 4: Duplo-Check Fiduciário Independente
+- O Turnaround CEO confirma a viabilidade física e o ganho de produtividade no disco.
+- O Systems Research Director valida a coerência da álgebra composicional UISC v5.0.
+- O Epistemic Red Team Lead atesta a ausência de cosmética, confirmando a blindagem contra truncamento.
 
 ---
 
 ## 2. Assinatura Física do Problema $\vec{\Phi}(P)$ em 8 Eixos & Matriz de Auto-Ativação ($\mathbf{W}$)
 
-### 2.1. Vetor de Assinatura Física $\vec{\Phi}(P)$
 $$\vec{\Phi}(P) = \begin{bmatrix}
-\phi_{\text{spatial}} & = & 0.10 & \text{(Sem renderização de viewport visual)} \\
-\phi_{\text{acoustic}} & = & 0.05 & \text{(Sem foley ou transientes de áudio)} \\
-\phi_{\text{state}} & = & 0.95 & \text{(Versionamento constitucional, persistência estigmérgica, integridade de schemas JSON)} \\
-\phi_{\text{epistemic}} & = & 0.92 & \text{(Incerteza mitigada por laudos periciais, rigor de não-regressão)} \\
-\phi_{\text{cognitive}} & = & 0.98 & \text{(Orquestração em enxame de 9 agentes motores, meta-regras e RSI recursivo)} \\
-\phi_{\text{economic}} & = & 0.80 & \text{(Orçamento Flash Medium, modo DIRECT_OPERATIONAL, zero nós em disco)} \\
-\phi_{\text{distributed}} & = & 0.95 & \text{(Concorrência 1:1 estritamente disjunta no filesystem)} \\
-\phi_{\text{perceptual}} & = & 0.35 & \text{(Sintaxe estrita de markdown, schemas JSON válidos e manifesto de plugins)}
+\phi_{\text{spatial}} = 0.20 & \text{(Estruturação textual de tabelas e diagramas conceituais)} \\
+\phi_{\text{acoustic}} = 0.10 & \text{(Sem exigência imediata de síntese sonora física)} \\
+\phi_{\text{state}} = 0.90 & \text{(Criação de arquivo permanente de Layer 1 e atualização de mapas estigmérgicos)} \\
+\phi_{\text{epistemic}} = 0.95 & \text{(Modelagem do mapa ontológico de cognição de todas as capacidades do agente)} \\
+\phi_{\text{cognitive}} = 0.95 & \text{(Desconstrução da malha neural de 21 skills e álgebra de composição UISC v5.0)} \\
+\phi_{\text{economic}} = 0.95 & \text{(Controle estrito de tokens: teto de 10.000 a 13.500 bytes para evitar truncamento)} \\
+\phi_{\text{distributed}} = 0.85 & \text{(Coordenação de esquadrão atômico 1:1 e Gauntlet independente)} \\
+\phi_{\text{perceptual}} = 0.20 & \text{(Formatação Markdown rigorosa e verificação estática de AST/bytes)}
 \end{bmatrix}$$
 
-### 2.2. Matriz de Auto-Ativação de Skills ($\mathbf{W}$)
-- **`universal_prompt_refiner` ($\alpha = 1.00$):** Portão Ubíquo, emissão de Dossiê e Selo Estigmérgico.
-- **`dynamic_thought_router` ($\alpha = 0.95$):** Topologia Linear Causal Stream (LCS) para execução motora dos artífices.
-- **`swarm_orchestration` ($\alpha = 0.98$):** Barramento sináptico, garantia de disjunção $\text{FileSet}(S_i) \cap \text{TargetFiles}(S_j) = \emptyset$ e protocolos de handoff.
-- **`adaptive_token_governance` ($\alpha = 0.90$):** Enforcement de `mission_type: DIRECT_OPERATIONAL` e `nodes_floor: 0`.
-- **`hardened_clean_architecture` ($\alpha = 0.92$):** Tipagem de contratos, schemas JSON canônicos e Atomic Swaps.
-- **`forensic_adversarial_auditor` ($\alpha = 0.98$):** Gauntlet de 4 passadas para homologação independente na Época IV.
+### Projeção na Matriz de Pesos Sinápticos ($\mathbf{W}$) & Cadeia de Skills Auto-Ativadas:
+1. `universal_prompt_refiner`: Condução da Época 0, cálculo de $\vec{\Phi}(P)$, emissão deste Dossiê e do Selo `refiner_seal.json`.
+2. `adaptive_token_governance`: Governança estrita do orçamento de bytes de `rule3.md` (10.000 a 13.500 bytes) e preservação do teto de injeção inline.
+3. `dynamic_thought_router`: Parametrização das topologias cognitivas (LCS para síntese motora, DAS para o Gauntlet).
+4. `swarm_orchestration`: Coordenação do esquadrão com alvos disjuntos 1:1 e protocolo HOLD/GO.
+5. `fractal_thought_graph`: Ancoragem no modo DIRECT_OPERATIONAL (Zero nós em disco, plano centralizado no Dossiê).
+6. `hardened_clean_architecture`: Estruturação modular em Layer 1 com zero abstrações vazias e contratos nítidos.
+7. `forensic_adversarial_auditor`: Gauntlet Red Team na Época IV auditando bytes, formatação e completude.
+8. `autonomous_computer_use`: Mutação física direta via `write_to_file` e conferência em terminal PowerShell.
+9. `autonomous_rsi_engine`: Registro de aprendizado no State Ledger e atualização do Mapa Neural do Projeto.
 
 ---
 
-## 3. Roadmap Mecânico Passo a Passo nos Arquivos-Alvo
+## 3. Mapa Ontológico Completo das 21 Skills do Ecossistema
 
-```text
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                              ROADMAP MECÂNICO DE EXECUÇÃO (ÉPOCAS 0 A IV)                              │
-├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│ ÉPOCA 0: Selagem do Portão de Ingestão Mandatória (CONCLUÍDA NESTA ETAPA)                               │
-│ • Emissão deste Dossiê Universal (.planning/mission_dossier.md)                                        │
-│ • Gravação do Selo Estigmérgico (.planning/refiner_seal.json) com SEALED_VALID                         │
-│ • Notificação formal ao Agente Principal para disparar a Onda Motora de 9 Subagentes                   │
-├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│ ÉPOCAS I & II: Consolidação Sináptica & Plano de Implementação                                         │
-│ • Handoff de Alta Fidelidade dos laudos periciais inv_021 e inv_022                                   │
-│ • Validação dos contratos disjuntos no Barramento Sináptico (synaptic_bus.json)                        │
-│ • Verificação de conformidade do implementation_plan.md                                                │
-├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│ ÉPOCA III: Onda Concorrente Atômica de 9 Subagentes Motores 1:1 (TypeName: "self")                    │
-│ ┌─── Subagente M1: rules/AGENTS.md (Promulgação das Leis 51 a 53)                                      │
-│ ├─── Subagente M2: rules/rule1.md (Injeção do Rejection Dossier com Blacklist & L1..L6 Neural Chain)   │
-│ ├─── Subagente M3: rules/rule2.md (Injeção de Micro/Macro Drawdown & Governança DIRECT_OPERATIONAL)   │
-│ ├─── Subagente M4: skills/spoke_rule_factory/SKILL.md [NOVO] (Implementação integral da Skill)        │
-│ ├─── Subagente M5: skills/autonomous_rsi_engine/SKILL.md [NOVO] (Implementação integral da Skill)     │
-│ ├─── Subagente M6: skills/universal_prompt_refiner/SKILL.md (Integração de Gatilhos Spoke/RSI)       │
-│ ├─── Subagente M7: skills/swarm_orchestration/SKILL.md (Integração de Rejection Dossier & Blacklist)   │
-│ ├─── Subagente M8: skills/adaptive_token_governance/SKILL.md (Integração de Drawdowns e Zero-Nodes)   │
-│ └─── Subagente M9: plugin.json (Registro das novas skills no manifesto oficial)                        │
-├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│ ÉPOCA IV: Auditoria Adversarial Gauntlet v5.0 (Subagente Juiz Independente Red Team)                   │
-│ • Passada 0: Auditoria Binária de Checklists Forenses (CHK-01 a CHK-12)                                │
-│ • Passada 1: Ceticismo e Não-Regressão das 50 Leis Precedentes                                         │
-│ • Passada 2: Zero-Stub e Erradicação de TODOs em todos os 9 arquivos                                   │
-│ • Passada 3: Verificação de Schemas JSON canônicos e integridade do manifesto                          │
-│ • Passada 4: Veredito Final Fiduciário: [HOMOLOGATED_SUCCESS] ou [HARD REJECT]                         │
-└────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
+### 3.1. As 13 Skills Especializadas de `agi-research`
+1. **`universal_prompt_refiner`:** Portão Ubíquo de Ingestão (Época 0), Desconstrução Forense em 4 Camadas, Assinatura Física $\vec{\Phi}(P)$, ACC Multi-Dimensional, Dossiê Universal e Selo Estigmérgico (`refiner_seal.json`). *Uso universal:* Erradica o impulso cego; audita e decompõe qualquer solicitação antes da ação.
+2. **`adaptive_token_governance`:** Gestão fiduciária de tokens, 5 Expedientes Cognitivos, dimensionamento de ondas sinápticas (máx 15 subagentes), Multi-Horizon Circuit Breakers (micro e macro drawdown) e calibração de modos Flash Thinking. *Uso universal:* Otimiza recursos, previne estouros de contexto e disciplina o ritmo operacional em qualquer projeto.
+3. **`swarm_orchestration`:** Coordenação do Hiper-Córtex neural via Barramento Sináptico (`synaptic_bus.json` v5.0), Máquina Quântica de Contratos em 5 Fases, FsLockEngine ($O\_CREAT \mid O\_EXCL$), SCDA v5.0 e exclusão mútua 1:1. *Uso universal:* Coordena equipes de agentes concorrentes com garantia de integridade transacional no disco.
+4. **`fractal_thought_graph`:** Grafo de Pensamento Fractal, gestão do substrato `.planning/`, Grafo Modular Denso de 3 a 7 nós em Modo Arquitetural vs Zero Nós em Modo Direto, manifesto `thought_graph.json`. *Uso universal:* Estrutura ontologicamente qualquer espaço de solução sem cair em caos nem em inflação artificial de nós.
+5. **`dynamic_thought_router`:** Roteamento em tempo de execução entre 4 topologias de pensamento: Linear Causal Stream (LCS), Tree of Thoughts (ToT com poda $A^*$), Graph of Thoughts (GoT com fusão multilinear) e Dialectical Adversarial Synthesis (DAS com tripwire $K \le 3$). *Uso universal:* Alinha a topologia mental ótima para qualquer problema específico.
+6. **`hardened_clean_architecture`:** Arquitetura limpa desacoplada (Portas e Adaptadores), tipagem estrita de zero alocação via `Result<T, E>` / `Option<T>`, ausência absoluta de stubs (Zero-Stub) e DeterministicAtomicSwap. *Uso universal:* Constrói código de produção à prova de falhas em qualquer stack técnica.
+7. **`modern_ui_craft`:** Craft Perceptual dos Titãs (Linear, Apple, Stripe), física de molas de 2ª ordem calibradas para 120Hz/ProMotion (damping ratio 0.72-0.86, $k/m < 57600$), tipografia suíça, glassmorphism e fórmula fotográfica de 8 variáveis. *Uso universal:* Eleva qualquer interface visual ao estado da arte de resposta táctil e estética.
+8. **`tactile_audio_sfx`:** Engenharia de áudio acústico físico real via gravações fatiadas (CC0) com `sfx_tool.py`, Spatial Audio HRTF cartesiano (PannerNode), normalização LUFS diferencial (-16 UI / -14 Crítico) e veto sumário a osciladores matemáticos. *Uso universal:* Adiciona feedback sonoro e transdução táctil autêntica a qualquer interação.
+9. **`browser_visual_reasoning`:** Inspeção perceptual em tempo de execução via Chrome real (`browser-mcp`), medição de CLS/INP, validação de 60fps/120Hz, telemetria de console (`browser_console_logs`) com zero erros. *Uso universal:* Validação empírica in-vivo de aplicações web, garantindo ausência de regressões visuais e erros de runtime.
+10. **`forensic_adversarial_auditor`:** Auditoria Red Team Gauntlet independente na Época IV, executando 5 passadas (AST/Linters, Tipos, Testes, Runtime e Rejection Dossier com Blacklist de Vetores) com poder de veto soberano (`[HARD REJECT]`). *Uso universal:* Garante homologação fiduciária imparcial sem tolerar auto-aprovação.
+11. **`autonomous_computer_use`:** Ciclo OODA em malha fechada (Observe $\to$ Orient $\to$ Decide $\to$ Act & Verify), hierarquia de menor atrito motor, 5 playbooks determinísticos de auto-cura A-E (`EADDRINUSE`, Zumbis, Locks `EBUSY`, Caches corrompidos, Stale Git Locks) e recibo `MOTOR_EXECUTION_RECEIPT`. *Uso universal:* Domínio operacional absoluto do ambiente host (Windows/PowerShell) com resiliência a falhas de SO.
+12. **`spoke_rule_factory`:** Arquitetura Hub-and-Spoke, reconhecimento de repositórios via tensor de 7 dimensões $\vec{\Sigma}_R$, compilação das 4 regras canônicas de nicho em `.agents/rules/` e emissão do `spoke_manifest.json` sob o Teorema da Não-Contaminação. *Uso universal:* Ancoragem instantânea do agente em qualquer ecossistema específico (MTA:SA Lua, Rust, C++, Python, Web).
+13. **`autonomous_rsi_engine`:** Auto-Melhoria Recursiva Soberana (RSI) em malha fechada, Ciclo Hebbiano de 5 Fases, Cognitive Post-Mortem (`pm_*.json`), plasticidade sináptica (LTP/LTD) e governança sob as Quatro Travas Pétreas. *Uso universal:* Converte falhas operacionais em evolução permanente das regras e skills do sistema.
+
+### 3.2. As 8 Skills Nativas e Complementares do Antigravity
+14. **`agy-customizations`:** Manual abrangente do sistema de customizações do Antigravity: ordem de carregamento, prioridades de sobreposição (workspace vs. global), mecanismos de descoberta e anatomia de skills, rules, plugins e hooks. *Uso universal:* Criação, manutenção e depuração da própria infraestrutura de extensões da plataforma.
+15. **`antigravity-guide`:** Guia mestre e mapa da plataforma Antigravity, cobrindo o CLI `agy`, IDE Antigravity 2.0, Python SDK, slash commands, keybindings e sidecars. *Uso universal:* Consulta de capacidades nativas, parametrização avançada do ambiente e integração profunda com as ferramentas do ecossistema.
+16. **`automation`:** Concepção e implantação de automações em background, governando agendamentos recorrentes (cron de 5 campos) ou temporizadores únicos (one-shot timers) via ferramenta `schedule`. *Uso universal:* Monitoramento contínuo de builds, relatórios periódicos, heartbeats de deploys e tarefas assíncronas sem bloqueio de sessão.
+17. **`generative_ui`:** Renderização de widgets interativos inline e componentes HTML/CSS/JS dinâmicos diretamente no fluxo de chat ou em artefatos dedicados. *Uso universal:* Visualização de dados complexos, gráficos de telemetria, controles interativos de inspeção e demonstrações visuais ricas para o usuário.
+18. **`migrate-workflows`:** Protocolo de migração de fluxos de trabalho legados para a arquitetura moderna de skills baseada em `SKILL.md`. *Uso universal:* Modernização e padronização de automações e scripts prévios para a governança v5.0.
+19. **`plugin`:** Criação, empacotamento, instalação, ativação e remoção de plugins Antigravity como unidades atômicas e namespaced (reunindo skills, agents, rules, MCP servers e hooks). *Uso universal:* Distribuição e modularização de capacidades do sistema entre múltiplos projetos e ambientes.
+20. **`ui-extension`:** Desenvolvimento, empacotamento e depuração de painéis interativos ricos no painel lateral do Antigravity, servidos por sidecars Node.js via Sidecar SDK. *Uso universal:* Construção de ferramentas gráficas embutidas, consoles de telemetria e interfaces de controle operando em paralelo ao editor.
+21. **`ui-plugin-navigation`:** Identificação contextual de painéis laterais de UI relevantes para a tarefa ativa e injeção de atalhos rápidos (one-click pills) para alternância no painel lateral. *Uso universal:* Auxilia a navegação do usuário e proporciona acesso instantâneo a ferramentas visuais ativas durante a sessão.
 
 ---
 
-## 4. Matriz de Regras Constitucionais Ativadas por Primeiros Princípios
+## 4. O Protocolo de Auto-Ativação Dinâmica e Composabilidade Universal (UISC v5.0)
 
-| Norma Constitucional | Função Específica nesta Missão | Fundamentação Fiduciária por Primeiros Princípios |
-|---|---|---|
-| **Lei 2 (Atribuição Atômica 1:1)** | Cada um dos 9 arquivos/módulos é mutacionado por exatamente 1 subagente motor. | Elimina sobrecarga cognitiva e mistura de contextos em um único executor. |
-| **Lei 4 (Modo Direto Zero-Nodes)** | `nodes_floor: 0`; zero arquivos criados em `.planning/nodes/`. | Em expansões cirúrgicas documentadas em laudos, criar nós é ruído estocástico que drena capital de tokens. |
-| **Lei 5 (Ação Motora Direta 1:1)** | Subagentes utilizam ferramentas de filesystem (`replace_file_content`/`write_to_file`). | O Agente Principal atua como coordenador e árbitro; proibido atuar como digitador de código. |
-| **Lei 24 (Governança de Tokens)** | Alocação em Flash Medium e respeito estrito ao limite de 15 subagentes por onda (9 subagentes). | Otimização fiduciária máxima dentro dos limites de computação do sistema. |
-| **Lei 26 (Portão Ubíquo & Selo)** | Emissão compulsória de `refiner_seal.json` com `SEALED_VALID` antes de qualquer ação. | Blindagem mecânica de entrada; previne execução de código impensado ou impulsivo. |
-| **Lei 34 (Null-Vocabulary)** | Banimento de adjetivos servis, saudações ou saudações de encerramento em todos os entregáveis. | Foco mecânico puro no entregável físico gravado no disco. |
-| **Lei 42 (Handoff de Alta Fidelidade)** | Leitura compulsória de `inv_021_...` e `inv_022_...` via `view_file` como primeira ação motora. | Erradicação da síndrome do telefone sem fio; o executor consome a evidência microscópica bruta. |
-| **Lei 43 (Mandato do Artífice Motor)** | Despacho com `TypeName: "self"` e proibição de retorno em markdown consultivo no chat. | Subagentes entregam bytes mutacionados no disco, não conselhos ou propostas textuais. |
-| **Lei 48 (Topologia de Pensamento LCS)** | Linear Causal Stream para os subagentes artífices motores. | Ações de escrita determinística não requerem deliberação ramificada, mas tração causal direta. |
-| **Lei 50 (Paridade Cross-Platform)** | Spoke Rule Factory projetada para respeitar runtimes heterogêneos (MTA:SA, Rust, Web). | Elimina a projeção cega de suposições web/Node em sistemas embarcados ou de tempo real. |
+### 4.1. Superação do Viés de Gatilho Passivo / Reativo
+A regra `rules/rule3.md` estabelece que nenhuma skill permanece latente aguardando um "gancho perfeito". Em vez disso:
+- Toda intenção é processada contra a **Malha Neural Viva de 21 Pontos**.
+- A ativação ocorre em tempo real com base no **Gradiente de Relevância Fiduciária**:
+  $$\text{Relevância}(\mathcal{S}_i) = f(\vec{\Phi}(P), \text{Domínio}, \text{Risco})$$
+- O sistema combina capacidades dinamicamente através da álgebra composicional UISC v5.0:
+  * **Composição Sequencial ($\mathcal{S}_A \circ \mathcal{S}_B$):** Handoff tipado onde a saída de $\mathcal{S}_A$ alimenta as pré-condições de $\mathcal{S}_B$ (ex.: `dynamic_thought_router` seleciona a topologia $\to$ `hardened_clean_architecture` implementa a entidade $\to$ `forensic_adversarial_auditor` audita).
+  * **Composição Paralela ($\mathcal{S}_A \otimes \mathcal{S}_B$):** Execução concorrente por subagentes com conjuntos de arquivos mutuamente exclusivos ($\text{TargetFiles}_A \cap \text{TargetFiles}_B = \emptyset$).
+  * **Composição Adversarial ($\mathcal{S}_{\text{auditor}} \rhd \mathcal{S}_{\text{worker}}$):** Gauntlet contínuo de verificação onde o auditor opera com poder de veto soberano.
 
----
-
-## 5. Bespoke Dynamic Squad Blueprint (Seção D: Ordem Executiva de Despacho)
-
-> **GATILHO MECÂNICO (Leis 26 e 43):** Esta seção constitui a ordem executiva e mandatória de despacho. A onda deve ser disparada de forma atômica e concorrente em uma única chamada de `invoke_subagent` com exatamente 9 subagentes motores (`TypeName: "self"`), cumprindo o limite de 15 subagentes por onda e garantindo a prova matemática de disjunção de escrita.
-
-```text
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                   ONDA MOTORA ATÔMICA 1:1 (9 SUBAGENTES ARTÍFICES MOTORES CONCORRENTES)                 │
-├────┬───────────────────────────────────────┬───────────────────────────────────────────────────────────┤
-│ ID │ Role do Subagente Motor               │ Arquivo-Alvo Exclusivo (Disjunção Estrita 1:1)           │
-├────┼───────────────────────────────────────┼───────────────────────────────────────────────────────────┤
-│ M1 │ Constitutional Supreme Council Cft.   │ rules/AGENTS.md                                           │
-│ M2 │ Swarm Synaptic Mesh Craftsman         │ rules/rule1.md                                            │
-│ M3 │ Cognitive Drawdown Governor Craftsman │ rules/rule2.md                                            │
-│ M4 │ Spoke Rule Factory Skill Architect    │ skills/spoke_rule_factory/SKILL.md [NOVO]                 │
-│ M5 │ Autonomous RSI Engine Skill Architect │ skills/autonomous_rsi_engine/SKILL.md [NOVO]              │
-│ M6 │ Universal Prompt Refiner Integrator   │ skills/universal_prompt_refiner/SKILL.md                  │
-│ M7 │ Swarm Playbook Integrator             │ skills/swarm_orchestration/SKILL.md                       │
-│ M8 │ Adaptive Token Governance Integrator  │ skills/adaptive_token_governance/SKILL.md                 │
-│ M9 │ Plugin Manifest Integrator            │ plugin.json                                               │
-└────┴───────────────────────────────────────┴───────────────────────────────────────────────────────────┘
-```
-
-### 5.1. Subagente M1: Constitutional Supreme Council Craftsman
-- **Role:** `Constitutional Supreme Council Craftsman`
-- **TypeName:** `self` | **Model:** `flash` | **Thought Topology:** `LINEAR_CAUSAL_STREAM`
-- **TargetFile Exclusivo:** `c:\Users\pichau\.gemini\config\plugins\agi-research\rules\AGENTS.md`
-- **Payload Cirúrgico:**
-  - `[ACTION_MODE: PHYSICAL_MUTATION]`
-  - `[TARGET_FILES]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\rules\AGENTS.md`
-  - `[HANDOFF_SOURCE]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\.planning\investigations\inv_021_orion_rules_forensic_dissection.md` (Seção 5, Propostas 1, 2 e 3).
-  - `[BOUNDED_OBJECTIVE]`: Ler primeiramente o laudo `inv_021` via `view_file`. Em seguida, promulgar as Leis 51, 52 e 53 em `rules/AGENTS.md`, criando a nova subseção `### Leis de Integridade de Execução, Isomorfismo e Causalidade Temporal (51 a 53)`:
-    * **Lei 51 — O Invariante Anti-Degradação de Pilha de Execução (The Anti-Degradation Execution Invariant):** Veto absoluto à execução de código, testes ou benchmarks sob pilhas parciais ou degradadas.
-    * **Lei 52 — O Princípio do Digital Twin Isomorphism (Gêmeo Digital Isomórfico):** Exigência de paridade bit a bit entre o harness de testes/sandbox e o runtime de produção real.
-    * **Lei 53 — Causalidade Temporal Estrita & Não-Vazamento de Estado (Zero-Causal Leakage Invariant):** Blindagem temporal absoluta contra indexação de variáveis futuras ($t+1$) ou lookahead bias.
-    * Atualizar a introdução do documento refletindo a expansão para 53 Leis Supremas do Hiper-Córtex.
-  - `[FORENSIC_CRITERIA]`: Mutação direta no disco via `replace_file_content`. Ausência total de stubs. Verificação de numeração contínua e texto normativo integral.
-
-### 5.2. Subagente M2: Swarm Synaptic Mesh Craftsman
-- **Role:** `Swarm Synaptic Mesh Craftsman`
-- **TypeName:** `self` | **Model:** `flash` | **Thought Topology:** `LINEAR_CAUSAL_STREAM`
-- **TargetFile Exclusivo:** `c:\Users\pichau\.gemini\config\plugins\agi-research\rules\rule1.md`
-- **Payload Cirúrgico:**
-  - `[ACTION_MODE: PHYSICAL_MUTATION]`
-  - `[TARGET_FILES]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\rules\rule1.md`
-  - `[HANDOFF_SOURCE]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\.planning\investigations\inv_021_orion_rules_forensic_dissection.md` (Seção 2.3 e Seção 5, Proposta 4) e `inv_022_rsi_and_spoke_rule_factory.md` (Seção 4).
-  - `[BOUNDED_OBJECTIVE]`: Ler primeiramente os laudos `inv_021` e `inv_022` via `view_file`. Injetar em `rules/rule1.md`:
-    * A Hierarquia Cibernética em 6 Níveis (The Six-Tier Neural Chain: L6 Estratégico, L5/L4/L3 Orquestração e Barramento, L2 Verificação Adversarial com Advogado do Diabo, L1 Artífices Motores);
-    * O Protocolo do Non-Acceptance Rejection Dossier com Blacklist Acumulativa de Vetores (geração obrigatória de `.planning/investigations/rejection_dossier_<slug>.json` diante de reprovações, com injeção compulsória dos vetores banidos no próximo subagente).
-  - `[FORENSIC_CRITERIA]`: Mutação física direta via `replace_file_content`. Zero-stub permanente.
-
-### 5.3. Subagente M3: Cognitive Drawdown Governor Craftsman
-- **Role:** `Cognitive Drawdown Governor Craftsman`
-- **TypeName:** `self` | **Model:** `flash` | **Thought Topology:** `LINEAR_CAUSAL_STREAM`
-- **TargetFile Exclusivo:** `c:\Users\pichau\.gemini\config\plugins\agi-research\rules\rule2.md`
-- **Payload Cirúrgico:**
-  - `[ACTION_MODE: PHYSICAL_MUTATION]`
-  - `[TARGET_FILES]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\rules\rule2.md`
-  - `[HANDOFF_SOURCE]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\.planning\investigations\inv_021_orion_rules_forensic_dissection.md` (Seção 5, Proposta 5) e `inv_022_rsi_and_spoke_rule_factory.md` (Seção 3.4).
-  - `[BOUNDED_OBJECTIVE]`: Ler primeiramente os laudos periciais via `view_file`. Injetar em `rules/rule2.md`:
-    * O Circuit Breaker de Drawdown Cognitivo em Dois Níveis:
-      - **Micro-Drawdown:** Limite estrito de 2 erros mecânicos consecutivos em ferramentas motoras $\to$ Parada obrigatória de auto-cura;
-      - **Macro-Drawdown Freeze:** Deriva epistêmica acumulada ($\varepsilon_t > 0.40$) ou persistência de desvios por mais de 3 transições sem convergência $\to$ Congelamento do enxame, persistência no State Ledger e intervenção soberana;
-    * A Governança do Modo Direto / Operacional (`DIRECT_OPERATIONAL`), estabelecendo formalmente que em missões de implementação direta o piso de nós em disco é zero (`nodes_floor: 0`) e a criação de arquivos em `.planning/nodes/` é bloqueada.
-  - `[FORENSIC_CRITERIA]`: Mutação direta no disco via `replace_file_content`. Equações e tabelas completas.
-
-### 5.4. Subagente M4: Spoke Rule Factory Skill Architect
-- **Role:** `Spoke Rule Factory Skill Architect`
-- **TypeName:** `self` | **Model:** `flash` | **Thought Topology:** `LINEAR_CAUSAL_STREAM`
-- **TargetFile Exclusivo:** `c:\Users\pichau\.gemini\config\plugins\agi-research\skills\spoke_rule_factory\SKILL.md` [NOVO]
-- **Payload Cirúrgico:**
-  - `[ACTION_MODE: PHYSICAL_MUTATION]`
-  - `[TARGET_FILES]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\skills\spoke_rule_factory\SKILL.md`
-  - `[HANDOFF_SOURCE]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\.planning\investigations\inv_022_rsi_and_spoke_rule_factory.md` (Seção 2 e Seção 5.1).
-  - `[BOUNDED_OBJECTIVE]`: Ler primeiramente o laudo `inv_022` via `view_file`. Criar o arquivo `skills/spoke_rule_factory/SKILL.md` com profundidade e rigor completos:
-    * YAML frontmatter formal: `name: spoke_rule_factory`, `description: ...`;
-    * Vetor de Assinatura de Repositório em 7 dimensões ($\vec{\Sigma}_R = \langle \mathcal{M}, \mathcal{L}, \mathcal{T}, \mathcal{E}, \mathcal{C}, \mathcal{H}, \mathcal{V} \rangle$);
-    * Arquitetura Hub-and-Spoke e Teorema da Não-Contaminação Constitucional;
-    * Pipeline Mecânico Determinístico em 5 Fases (Reconhecimento $\to$ Matriz de Armadilhas $\to$ Síntese dos 4 Módulos $\to$ Auto-Verificação $\to$ Selamento no Ledger);
-    * Especificação dos 4 módulos canônicos (`domain_standards.md`, `runtime_constraints.md`, `toolchain_and_validation.md`, `security_and_contracts.md`);
-    * Schema JSON formal completo de `spoke_manifest.json`;
-    * Exemplos contrastantes de spokes (MTA:SA Lua vs. Rust vs. Web TS).
-  - `[FORENSIC_CRITERIA]`: Gravação do arquivo via `write_to_file`. Zero-stub absoluto, sem placeholders ou `TODO`.
-
-### 5.5. Subagente M5: Autonomous RSI Engine Skill Architect
-- **Role:** `Autonomous RSI Engine Skill Architect`
-- **TypeName:** `self` | **Model:** `flash` | **Thought Topology:** `LINEAR_CAUSAL_STREAM`
-- **TargetFile Exclusivo:** `c:\Users\pichau\.gemini\config\plugins\agi-research\skills\autonomous_rsi_engine\SKILL.md` [NOVO]
-- **Payload Cirúrgico:**
-  - `[ACTION_MODE: PHYSICAL_MUTATION]`
-  - `[TARGET_FILES]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\skills\autonomous_rsi_engine\SKILL.md`
-  - `[HANDOFF_SOURCE]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\.planning\investigations\inv_022_rsi_and_spoke_rule_factory.md` (Seção 3, Seção 4 e Seção 5.2/5.3).
-  - `[BOUNDED_OBJECTIVE]`: Ler primeiramente o laudo `inv_022` via `view_file`. Criar o arquivo `skills/autonomous_rsi_engine/SKILL.md` com especificação completa:
-    * YAML frontmatter formal: `name: autonomous_rsi_engine`, `description: ...`;
-    * Teoria da Auto-Evolução Fiduciária, Função de Utilidade $U_{\text{Fiduciary}}(\mathbf{P}_t)$ e vetor $\mathbf{P}_t$;
-    * Motor de Post-Mortem Cognitivo com métricas frias de telemetria e schema JSON canônico de `pm_telemetry.json`;
-    * O Ciclo Hebbiano em 4 Fases (Gap Detector $\to$ Candidate Patch $\to$ Sandbox Gauntlet $\to$ Ratification & Ledger Commit);
-    * As Quatro Travas Pétreas de Segurança: (1) Layer 0 Frozen Invariant, (2) Anti-Dumbing-Down Invariant, (3) Bipartição de Mutações Classes A e B, (4) Evolutionary Rate Limiter;
-    * Schema JSON formal completo de `rsi_candidate_patch.json`;
-    * Integração Hebbiana no `synaptic_bus.json` (LTP/LTD) e Ledger Transacional.
-  - `[FORENSIC_CRITERIA]`: Gravação do arquivo via `write_to_file`. Zero-stub permanente.
-
-### 5.6. Subagente M6: Universal Prompt Refiner Integrator
-- **Role:** `Universal Prompt Refiner Integrator`
-- **TypeName:** `self` | **Model:** `flash` | **Thought Topology:** `LINEAR_CAUSAL_STREAM`
-- **TargetFile Exclusivo:** `c:\Users\pichau\.gemini\config\plugins\agi-research\skills\universal_prompt_refiner\SKILL.md`
-- **Payload Cirúrgico:**
-  - `[ACTION_MODE: PHYSICAL_MUTATION]`
-  - `[TARGET_FILES]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\skills\universal_prompt_refiner\SKILL.md`
-  - `[HANDOFF_SOURCE]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\.planning\investigations\inv_022_rsi_and_spoke_rule_factory.md` (Seção 2 e Seção 3).
-  - `[BOUNDED_OBJECTIVE]`: Ler primeiramente o laudo pericial via `view_file`. Atualizar `skills/universal_prompt_refiner/SKILL.md`:
-    * Integrar a verificação de ancoragem de repositório no Portão da Época 0: caso o repositório não possua `.agents/rules/` ou `.gemini/rules/`, o Prompt Refiner aciona compulsoriamente a skill `spoke_rule_factory` na Seção D do Dossiê;
-    * Integrar a rotina de pós-fechamento com disparo do Cognitive Post-Mortem (`autonomous_rsi_engine`) na finalização de turnos complexos;
-    * Injetar o campo `nodes_floor: 0` e o suporte formal para `mission_type: DIRECT_OPERATIONAL` no schema do `refiner_seal.json`.
-  - `[FORENSIC_CRITERIA]`: Mutação direta no disco via `replace_file_content`.
-
-### 5.7. Subagente M7: Swarm Playbook Integrator
-- **Role:** `Swarm Playbook Integrator`
-- **TypeName:** `self` | **Model:** `flash` | **Thought Topology:** `LINEAR_CAUSAL_STREAM`
-- **TargetFile Exclusivo:** `c:\Users\pichau\.gemini\config\plugins\agi-research\skills\swarm_orchestration\SKILL.md`
-- **Payload Cirúrgico:**
-  - `[ACTION_MODE: PHYSICAL_MUTATION]`
-  - `[TARGET_FILES]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\skills\swarm_orchestration\SKILL.md`
-  - `[HANDOFF_SOURCE]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\.planning\investigations\inv_021_orion_rules_forensic_dissection.md` (Seção 5, Proposta 4) e `inv_022_rsi_and_spoke_rule_factory.md` (Seção 4).
-  - `[BOUNDED_OBJECTIVE]`: Ler primeiramente os laudos periciais via `view_file`. Atualizar `skills/swarm_orchestration/SKILL.md`:
-    * Integrar o protocolo operacional do Non-Acceptance Rejection Dossier com Blacklist Acumulativa de Vetores;
-    * Integrar a máquina de estados para absorção de enagramas do RSI no barramento estigmérgico (`synaptic_bus.json`);
-    * Incorporar o fluxo de isolamento de falhas em tempo de compilação/teste com propagação feedforward imediata.
-  - `[FORENSIC_CRITERIA]`: Mutação física direta via `replace_file_content`.
-
-### 5.8. Subagente M8: Adaptive Token Governance Integrator
-- **Role:** `Adaptive Token Governance Integrator`
-- **TypeName:** `self` | **Model:** `flash` | **Thought Topology:** `LINEAR_CAUSAL_STREAM`
-- **TargetFile Exclusivo:** `c:\Users\pichau\.gemini\config\plugins\agi-research\skills\adaptive_token_governance\SKILL.md`
-- **Payload Cirúrgico:**
-  - `[ACTION_MODE: PHYSICAL_MUTATION]`
-  - `[TARGET_FILES]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\skills\adaptive_token_governance\SKILL.md`
-  - `[HANDOFF_SOURCE]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\.planning\investigations\inv_021_orion_rules_forensic_dissection.md` (Seção 5, Proposta 5) e `inv_022_rsi_and_spoke_rule_factory.md` (Seção 3.4).
-  - `[BOUNDED_OBJECTIVE]`: Ler primeiramente os laudos periciais via `view_file`. Atualizar `skills/adaptive_token_governance/SKILL.md`:
-    * Integrar os Circuit Breakers de Micro-Drawdown (2 retries motores) e Macro-Drawdown Freeze no motor de governança;
-    * Formalizar a governança estrita de `mission_type: DIRECT_OPERATIONAL` com `nodes_floor: 0`, assegurando que em missões operacionais nenhum token seja alocado para arquivos periféricos de nós;
-    * Integrar os tetos e rate-limits para o motor de auto-melhoria recursiva (máximo 1 patch por expediente).
-  - `[FORENSIC_CRITERIA]`: Mutação física direta via `replace_file_content`.
-
-### 5.9. Subagente M9: Plugin Manifest Integrator
-- **Role:** `Plugin Manifest Integrator`
-- **TypeName:** `self` | **Model:** `flash` | **Thought Topology:** `LINEAR_CAUSAL_STREAM`
-- **TargetFile Exclusivo:** `c:\Users\pichau\.gemini\config\plugins\agi-research\plugin.json`
-- **Payload Cirúrgico:**
-  - `[ACTION_MODE: PHYSICAL_MUTATION]`
-  - `[TARGET_FILES]`: `c:\Users\pichau\.gemini\config\plugins\agi-research\plugin.json`
-  - `[BOUNDED_OBJECTIVE]`: Registrar formalmente as duas novas skills (`spoke_rule_factory` e `autonomous_rsi_engine`) na chave `skills_list` do arquivo `plugin.json`.
-    * Atualizar a descrição (`description`) do plugin para refletir a incorporação das Leis 51 a 53, da Spoke Rule Factory e do motor de RSI autônomo.
-    * Garantir validade estrita da sintaxe JSON.
-  - `[FORENSIC_CRITERIA]`: Mutação direta no disco via `replace_file_content`. Parse JSON válido sem erros de lint.
-
----
-
-## 6. Matriz de Modos de Quebra & Pre-Mortem Forense da Onda
-
-| ID | Modo Silencioso de Quebra ($X \to Y \to \text{Falha}$) | Severidade | Gatilho Causal | Contramedida Fiduciária Determinística v5.0 |
-|---|---|---|---|---|
-| **MQ-01** | Subagentes colidirem em escritas no mesmo arquivo. | Catastrófica | Sobreposição de arquivos alocados na onda. | **Teorema de Disjunção Estrita:** Cardinalidade da interseção é exatamente 0. Cada subagente tem alvo 100% isolado. |
-| **MQ-02** | Subagente motor responder com markdown em vez de aplicar tool call física. | Alta | Cacoete de subagente consultivo. | Mandato do Artífice Motor (Lei 43) + Trava `[HARD REJECT: ADVISORY_CODE_DUMP]` no parent. |
-| **MQ-03** | Agente Principal tentar aplicar diffs ou colar código na thread principal. | Alta | Parent atuando como digitador. | Proibição absoluta da Lei 43. O parent orquestra e audita; a mutação é 100% dos subagentes motores. |
-| **MQ-04** | Entrega de arquivos novos (`SKILL.md`) contendo seções abreviadas ou `TODO`. | Crítica | Preguiça algorítmica de subagente. | Gauntlet Passada 2: busca por regex de stubs (`TODO`, `FIXME`, `pass`, `...`) dispara reprovação imediata. |
-| **MQ-05** | `plugin.json` corrompido com vírgula residual ou sintaxe JSON inválida. | Crítica | Edição de JSON sem validação de parse. | Teste imediato via `python -m json.tool plugin.json` após escrita. |
-| **MQ-06** | Subagente ignorar a leitura prévia dos laudos brutos `inv_021` e `inv_022`. | Alta | Violação da Lei 42 (Handoff de Alta Fidelidade). | Instrução mandatória no payload: primeira tool call do subagente DEVE ser `view_file` no laudo de origem. |
-
----
-
-## 7. Matriz de Checklists Forenses e Critérios Estritos de Aceite Fiduciário para o Red Team na Época IV (Lei 41)
-
-| # | Item de Verificação Fiduciária | Evidência Física Exigida no Disco | Status |
+### 4.2. Matriz de Ativação Cross-Cenário Universal
+| Cenário Operacional | Skills Primárias Auto-Ativadas | Composição UISC v5.0 | Entregável Fiduciário |
 |---|---|---|---|
-| **CHK-01** | **Dossiê Universal Emitido e Selado** | `.planning/mission_dossier.md` gravado com as 4 camadas, 9 subagentes motores mapeados e checklists. | `[CONFORME]` |
-| **CHK-02** | **Selo Estigmérgico Emitido** | `.planning/refiner_seal.json` gravado com `SEALED_VALID`, `nodes_floor: 0`, hash verificado e 9 subagentes. | `[CONFORME]` |
-| **CHK-03** | **Zero Nós em Disco (`nodes_floor: 0`)** | Diretório `.planning/nodes/` permanece sem criação de novos arquivos durante esta missão. | `[CONFORME]` |
-| **CHK-04** | **Leis 51 a 53 Promulgadas em `rules/AGENTS.md`** | Existência física das Leis 51, 52 e 53 no texto normativo de `rules/AGENTS.md`. | `[PENDENTE_ONDA_III]` |
-| **CHK-05** | **Rejection Dossier Injetado em `rules/rule1.md`** | Presença formal do Non-Acceptance Dossier com Blacklist de Vetores e Neural Chain L1..L6. | `[PENDENTE_ONDA_III]` |
-| **CHK-06** | **Cognitive Drawdown Injetado em `rules/rule2.md`** | Presença do Micro/Macro Drawdown e diretriz de `nodes_floor: 0` em `rules/rule2.md`. | `[PENDENTE_ONDA_III]` |
-| **CHK-07** | **Skill `spoke_rule_factory` Criada sem Stubs** | Arquivo `skills/spoke_rule_factory/SKILL.md` existente, completo, com frontmatter e schema de manifest. | `[PENDENTE_ONDA_III]` |
-| **CHK-08** | **Skill `autonomous_rsi_engine` Criada sem Stubs** | Arquivo `skills/autonomous_rsi_engine/SKILL.md` existente, com 4 travas pétreas e schemas de telemetria/patch. | `[PENDENTE_ONDA_III]` |
-| **CHK-09** | **Integrações no Prompt Refiner Homologadas** | `skills/universal_prompt_refiner/SKILL.md` contendo triggers de Spoke e Post-Mortem. | `[PENDENTE_ONDA_III]` |
-| **CHK-10** | **Integrações no Swarm Playbook Homologadas** | `skills/swarm_orchestration/SKILL.md` contendo Rejection Dossier e fluxo Hebbiano. | `[PENDENTE_ONDA_III]` |
-| **CHK-11** | **Integrações no Token Governance Homologadas** | `skills/adaptive_token_governance/SKILL.md` contendo limites de drawdown e zero-nodes. | `[PENDENTE_ONDA_III]` |
-| **CHK-12** | **Manifesto `plugin.json` Atualizado e Válido** | `plugin.json` com `spoke_rule_factory` e `autonomous_rsi_engine` em `skills_list` e JSON íntegro. | `[PENDENTE_ONDA_III]` |
+| **Criação de Interface / Web** | `modern_ui_craft`, `tactile_audio_sfx`, `browser_visual_reasoning`, `generative_ui` | $(\mathcal{S}_{\text{MUC}} \otimes \mathcal{S}_{\text{TAS}}) \circ \mathcal{S}_{\text{BVR}}$ | Telas cinematográficas a 120Hz com áudio físico real e zero erros no console. |
+| **Backend / Arquitetura de Domínio** | `hardened_clean_architecture`, `dynamic_thought_router`, `swarm_orchestration` | $\mathcal{S}_{\text{DTR}} \circ \mathcal{S}_{\text{HCA}} \circ \mathcal{S}_{\text{FAA}}$ | Entidades desacopladas com `Result<T,E>`, Atomic Swap e zero stubs. |
+| **CLI / DevOps / Automação no SO** | `autonomous_computer_use`, `automation`, `adaptive_token_governance` | $\mathcal{S}_{\text{ACU}} \circ \mathcal{S}_{\text{AUTO}}$ | Processos sem locks, auto-cura OODA e agendamentos robustos via schedule. |
+| **Correção de Bugs / Refatoração** | `universal_prompt_refiner`, `dynamic_thought_router`, `forensic_adversarial_auditor` | $\mathcal{S}_{\text{UPR}} \circ \mathcal{S}_{\text{DTR (DAS)}} \circ \mathcal{S}_{\text{HCA}}$ | Causa raiz microscópica sanada fim-a-fim sem regressões laterais. |
+| **Reconhecimento de Nichos / Novo Repo** | `spoke_rule_factory`, `autonomous_computer_use`, `hardened_clean_architecture` | $\mathcal{S}_{\text{SRF}} \circ \mathcal{S}_{\text{HCA}}$ | Tensor $\vec{\Sigma}_R$ extraído e 4 regras locais compiladas em `.agents/rules/`. |
+| **Extensões & Ferramentas de Plataforma** | `ui-extension`, `plugin`, `agy-customizations`, `ui-plugin-navigation` | $(\mathcal{S}_{\text{AGY}} \otimes \mathcal{S}_{\text{PLUG}}) \circ \mathcal{S}_{\text{UIE}}$ | Painéis laterais interativos servidos por sidecars e empacotamento modular. |
+| **Ciclo Pós-Entrega & Auto-Evolução** | `autonomous_rsi_engine`, `swarm_orchestration` | $\mathcal{S}_{\text{RSI}} \circ \mathcal{S}_{\text{SWARM}}$ | Cognitive Post-Mortem (`pm_*.json`), plasticidade Hebbiana e atualização do Ledger. |
 
 ---
-*Dossiê compilado, auditado e selado pelo Compilador Epistêmico do Portão de Ingestão Mandatória Ubíqua — v5.0 The Autonomous Hyper-Cortex.*
+
+## 5. Roadmap Determinístico Passo a Passo
+
+### Passo 0: Homologação da Época 0 (Prompt Refiner Gate) — [CONCLUÍDO NESTE TURNO]
+- Geração do Dossiê Universal `.planning/mission_dossier.md` (este documento).
+- Emissão do Selo Estigmérgico `.planning/refiner_seal.json` com status `SEALED_VALID`.
+- Envio de telemetria de emissão ao Agente Principal via `send_message`.
+
+### Passo 1: Apresentação da Análise de Expediente & Parada Mecânica
+- O Agente Principal consome o selo e apresenta ao usuário a Análise de Expediente e ACC.
+- Aguarda a confirmação fiduciária explícita ("Proceed").
+
+### Passo 2: Despacho Atômico Concorrente do Esquadrão (Época III)
+- Despacho simultâneo dos 2 subagentes artífices motores com alvos estritamente disjuntos:
+  * **Subagente 1 (`Unified Neural Skill Mesh Architect`):**
+    - Alvo: `rules/rule3.md` (exclusivo).
+    - Ação: Mutação física direta via `write_to_file`.
+    - Controle: Sintetizar a regra garantindo densidade máxima e tamanho estrito entre **10.000 e 13.500 bytes**.
+  * **Subagente 2 (`Neural Map & Ecosystem Ledger Synchronizer`):**
+    - Alvo: `.planning/project_neural_map.json` (exclusivo).
+    - Ação: Mutação física direta via `replace_file_content` / `write_to_file`.
+    - Controle: Indexar `rules/rule3.md` no catálogo neural do projeto e registrar a sessão no histórico.
+
+### Passo 3: Auditoria Adversarial por Subagente Juiz Red Team (Época IV)
+- Despacho do **Subagente 3 (`Forensic Red Team Gauntlet Judge`)**:
+  - Alvo: `.planning/adversarial_audit_report.md`.
+  - Passadas:
+    * Passada 0: Aferição métrica de tamanho ($10.000 \le \text{bytes} \le 13.500$) de `rule3.md` e contagem agregada das 4 rules ($\le 60.000$ bytes).
+    * Passada 1: AST e sintaxe de Markdown (tabelas, listas, fórmulas KaTeX, referências a arquivos).
+    * Passada 2: Completude ontológica (presença das 21 skills e conformidade com o UISC v5.0).
+    * Passada 3: Anti-Dumbing Down e inviolabilidade da Layer 0.
+    * Passada 4: Emissão de relatório de veredito fiduciário (`[HARD ACCEPT]` ou `[HARD REJECT]`).
+
+### Passo 4: Telemetria Fria & Encerramento
+- Emissão do recibo de telemetria `MOTOR_EXECUTION_RECEIPT`.
+- Invalidação transacional do selo (`seal_status: "TURN_CONSUMED"`).
+- Disparo do Cognitive Post-Mortem para o `autonomous_rsi_engine`.
+
+---
+
+## 6. Bespoke Dynamic Squad Blueprint (Ordem Executiva de Despacho)
+
+> **ATENÇÃO:** O Agente Principal está terminantemente proibido de mutacionar código ou arquivos de regras na thread principal (`[HARD HALT: PARENT_DIRECT_MUTATION_BREACH]`). O despacho do blueprint abaixo é mandatório (`[HARD HALT: SQUAD_DISPATCH_BYPASSED]`).
+
+### Subagente 1: Unified Neural Skill Mesh Architect
+- **Role:** `Unified Neural Skill Mesh Architect`
+- **TypeName:** `"self"`
+- **Model:** `"flash"`
+- **Action Mode:** `[ACTION_MODE: PHYSICAL_MUTATION]`
+- **Topologia de Pensamento:** `LINEAR_CAUSAL_STREAM`
+- **Arquivo Alvo Exclusivo:** `rules/rule3.md`
+- **Handoff Source:** `.planning/mission_dossier.md` (Seções 1, 2, 3 e 4)
+- **Bounded Objective:** Sintetizar e gravar no disco a regra `rules/rule3.md` com máxima densidade semiótica, contendo o mapa neural das 21 skills, princípios de ativação dinâmica contínua, matriz cross-cenário e formalismo UISC v5.0, com tamanho estritamente calibrado entre 10.000 e 13.500 bytes.
+- **Ferramentas Autorizadas:** `view_file`, `write_to_file`, `replace_file_content`, `run_command` (para conferência de bytes via PowerShell).
+
+### Subagente 2: Neural Map & Ecosystem Ledger Synchronizer
+- **Role:** `Neural Map & Ecosystem Ledger Synchronizer`
+- **TypeName:** `"self"`
+- **Model:** `"flash"`
+- **Action Mode:** `[ACTION_MODE: PHYSICAL_MUTATION]`
+- **Topologia de Pensamento:** `LINEAR_CAUSAL_STREAM`
+- **Arquivo Alvo Exclusivo:** `.planning/project_neural_map.json`
+- **Handoff Source:** `.planning/mission_dossier.md` (Seção 1 e 5)
+- **Bounded Objective:** Atualizar o mapa neural do projeto registrando a nova regra `rules/rule3.md` no índice de arquivos e integrando o registro de sessão `SES-2026-10-12-002` com os aprendizados sobre ativação dinâmica contínua de skills.
+- **Ferramentas Autorizadas:** `view_file`, `replace_file_content`, `write_to_file`.
+
+### Subagente 3: Forensic Red Team Gauntlet Judge
+- **Role:** `Forensic Red Team Gauntlet Judge`
+- **TypeName:** `"self"`
+- **Model:** `"flash"`
+- **Action Mode:** `[ACTION_MODE: PHYSICAL_MUTATION]`
+- **Topologia de Pensamento:** `DIALECTICAL_ADVERSARIAL_SYNTHESIS`
+- **Arquivo Alvo Exclusivo:** `.planning/adversarial_audit_report.md`
+- **Handoff Source:** `.planning/mission_dossier.md` e artefatos físicos no disco
+- **Bounded Objective:** Executar o Gauntlet de 5 passadas sobre `rules/rule3.md` e `.planning/project_neural_map.json`, auditando tamanho em bytes, ausência de truncamento inline, integridade de Markdown, completude das 21 skills e inviolabilidade da Layer 0.
+- **Ferramentas Autorizadas:** `view_file`, `run_command` (para medições físicas de bytes), `write_to_file`.
+
+---
+
+## 7. Matriz de Modos de Quebra, Pre-Mortem Forense & Riscos Operacionais
+
+| Modo de Quebra Potencial | Mecanismo Físico de Falha | Impacto no Sistema | Contramedida Fiduciária Blindada |
+|---|---|---|---|
+| **Estouro Volumétrico de Tokens** | `rule3.md` excede 13.500 bytes | Host Antigravity trunca ou exclui a regra da injeção inline no boot | Subagente afere os bytes exatos via PowerShell antes da entrega; Red Team Gauntlet aplica veto mecânico (`[HARD REJECT]`) se $\text{size} > 13.500$ bytes. |
+| **Sub-dimensionamento / Vazio Semiótico** | `rule3.md` fica menor que 10.000 bytes por excesso de cortes | A regra torna-se rasa, virando mero resumo telegráfico inútil | Piso volumétrico de 10.000 bytes com exigência de especificações ricas para todas as 21 skills. |
+| **Conflito Normativo com Layer 0** | Alguma cláusula de `rule3.md` flexibiliza regras de `AGENTS.md` | Degradação da constituição e colapso do rigor de engenharia | Aplicação estrita da Trava Pétrea de Layer 0: `rule3.md` é Layer 1 subordinada. Red Team verifica compatibilidade formal. |
+| **Omissão das Skills Nativas** | Esquecer as 8 skills do Antigravity e detalhar apenas as 13 do plugin | O agente permanece cego para ferramentas de plataforma (UI extensions, crons, etc.) | Seção 3.2 do Dossiê mapeia explicitamente as 8 skills do Antigravity com inclusão obrigatória no texto. |
+| **Colisão de Escrita Concorrente** | Múltiplos subagentes tentando editar o mesmo arquivo | Erros Win32 `EBUSY`/`EPERM` e perda de dados | Teorema da Disjunção de Escrita 1:1: conjuntos de arquivos estritamente disjuntos. |
+
+---
+
+## 8. Matriz de Checklists Forenses Extensivos & Aceite Fiduciário (Lei 41)
+
+> **Critérios Binários Auditáveis na Época IV:** Cada item deve ser homologado com valor `[1]` mediante evidência física no disco. Qualquer desvio aciona `[HARD REJECT]`.
+
+- [ ] **Métrica Volumétrica de `rules/rule3.md`:** Tamanho físico do arquivo entre 10.000 e 13.500 bytes aferido via `(Get-Item rules/rule3.md).Length` [0 ou 1].
+- [ ] **Métrica Volumétrica Agregada das Rules:** Soma total dos 4 arquivos de regras (`AGENTS.md`, `rule1.md`, `rule2.md`, `rule3.md`) $\le 60.000$ bytes, garantindo injeção inline sem truncamento [0 ou 1].
+- [ ] **Completude Ontológica de 21 Skills:** Mapeamento integral e nominal das 13 skills de `agi-research` e das 8 skills nativas do `Antigravity` [0 ou 1].
+- [ ] **Fundamentação UISC v5.0:** Formalização da álgebra de composição ($\circ, \otimes, \rhd$) e do gradiente de relevância sináptica contínua [0 ou 1].
+- [ ] **Matriz Cross-Cenário Universal:** Tabela detalhada exemplificando a auto-ativação dinâmica em múltiplos domínios práticos [0 ou 1].
+- [ ] **Inviolabilidade da Layer 0:** Zero revogação ou atenuação das 53 Leis Constitucionais de `rules/AGENTS.md` [0 ou 1].
+- [ ] **Zero-Stub Constitucional:** Ausência total de marcações de incompletude (`TODO`, `FIXME`, seções vazias ou stubs) [0 ou 1].
+- [ ] **Sincronização do Mapa Neural do Projeto:** `rules/rule3.md` indexada com metadados completos em `.planning/project_neural_map.json` [0 ou 1].
+- [ ] **Ortogonalidade de Escrita 1:1:** Mutação executada exclusivamente por subagentes motores tipados como `TypeName: "self"` com alvos disjuntos [0 ou 1].
+- [ ] **Null-Vocabulary Estrito:** Ausência total de bajulação, pedidos de desculpa ou clichês de IA no conteúdo e nos relatórios [0 ou 1].

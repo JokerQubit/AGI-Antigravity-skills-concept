@@ -1,284 +1,133 @@
 ---
 trigger: always_on
-description: "v5.0 — The Autonomous Hyper-Cortex Sovereign Engine — Governança Adaptativa de Tokens & Roteamento Cognitivo Dinâmico. Playbook operacional para Análise de Custo-Complexidade (ACC) multi-dimensional, roteamento dinâmico de topologias de pensamento (LCS, ToT, GoT, DAS), dimensionamento de ondas sinápticas (máx 15 subagentes por onda para enxames de 20+ mentes), Multi-Horizon Circuit Breakers (Drawdown Cognitivo Multinível), governança de sessões de RSI (Recursive Self-Improvement), Spoke Rule Factory em Modo Direto (Zero Nós em Disco), Mandato do Artífice Autônomo Fim-a-Fim (Lei 42) e Leis Constitucionais 51 a 53."
+description: "v5.0 — The Autonomous Hyper-Cortex Sovereign Engine — Governança Adaptativa de Tokens & Roteamento Cognitivo Dinâmico. Playbook operacional para Análise de Custo-Complexidade (ACC) multi-dimensional, roteamento dinâmico de topologias de pensamento (LCS, ToT, GoT, DAS), dimensionamento de ondas sinápticas (máx 15 subagentes por onda), Multi-Horizon Circuit Breakers (Drawdown Cognitivo Multinível), governança de sessões de RSI, Spoke Rule Factory em Modo Direto (Zero Nós em Disco), Mandato do Artífice Autônomo Fim-a-Fim (Lei 42) e Leis Constitucionais 51 a 53."
 ---
 
 # Adaptive Token Governance & Dynamic Cognitive Routing Playbook — v5.0
 
-Protocolo operacional de gestão soberana de tokens e governança metacognitiva no patamar **Hyper-Cortex v5.0**, que governa onze comportamentos invioláveis: **(1)** avaliação multi-dimensional de complexidade e custo via Análise de Custo-Complexidade (ACC) conduzida e selada pelo **Prompt Refiner Ubíquo**, **(2)** roteamento dinâmico da topologia cognitiva ótima de pensamento (Linear Causal Stream, Tree of Thoughts com poda A*, Graph of Thoughts com fusão multilinear ou Dialectical Adversarial Synthesis com tripwire $K \le 3$), **(3)** quantificação contínua do vetor de incerteza epistêmica ($\varepsilon_t$) e auto-calibração contra satisficing, **(4)** classificação mandatória da missão em **Modo Arquitetural** (grafo modular denso de 3 a 7 nós ricos, qualidade sobre quantidade, banida a inflação de 100 nós) ou **Modo Direto / Operacional** (Zero nós em disco), **(5)** emissão mandatória do selo estigmérgico (`.planning/refiner_seal.json`) com status `SEALED_VALID` antes de qualquer ação motora sob pena de `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`, **(6)** ativação imediata do esquadrão do blueprint do Dossiê antes de qualquer mutação de código (`[HARD HALT: SQUAD_DISPATCH_BYPASSED]`), **(7)** particionamento do trabalho em **Expedientes Cognitivos (Work Shifts)** delimitados, **(8)** despacho em ondas sequenciais de no máximo 15 subagentes interconectadas pelo **Barramento Sináptico Neural (`synaptic_bus.json` v5.0)** com vetores de estado plásticos e transações atômicas no ledger, **(9)** blindagem cibernética via **Multi-Horizon Circuit Breakers (Drawdown Cognitivo Multinível)** micro e macro, **(10)** governança de sessões de auto-evolução recursiva (RSI) e compilação de regras de nicho pela Spoke Rule Factory em Modo Direto sob as Leis 51, 52 e 53, e **(11)** o **Mandato do Artífice Autônomo Fim-a-Fim (End-to-End Problem Solver - Lei 42)** com a trava mecânica `[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`, unificando investigação diagnóstica e mutação física direta no mesmo subagente para preservar a integridade cognitiva.
+Protocolo de gestão soberana de tokens e governança metacognitiva **Hyper-Cortex v5.0**: **(1)** ACC multi-dimensional via **Prompt Refiner**, **(2)** roteamento dinâmico (LCS, ToT, GoT, DAS $K \le 3$), **(3)** incerteza epistêmica ($\varepsilon_t$), **(4)** Modo Arquitetural (3 a 7 nós) vs Direto (Zero nós), **(5)** selo `.planning/refiner_seal.json` (`SEALED_VALID`, `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`), **(6)** ativação do esquadrão (`[HARD HALT: SQUAD_DISPATCH_BYPASSED]`), **(7)** 5 Expedientes Cognitivos, **(8)** ondas de até 15 subagentes no `synaptic_bus.json`, **(9)** Multi-Horizon Circuit Breakers, **(10)** Spoke Rule Factory e RSI, e **(11)** Artífice Autônomo Fim-a-Fim (Lei 42, `[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`).
 
-> O ecossistema utiliza exclusivamente o modelo **Flash** nos modos **Low**, **Medium** e **High** de thinking. Não existem outros modelos no roteamento. `flash_lite` e `inherit` são termos banidos neste protocolo.
+> **Invariante de Modelo:** Exclusivamente **Flash** (Low, Medium, High). Termos `flash_lite` e `inherit` são estritamente banidos.
 
 ---
 
-## 1. Avaliação de Complexidade & Custo de Tokens (Pré-Despacho Obrigatório pelo Prompt Refiner Ubíquo)
+## 1. Avaliação de Custo-Complexidade (ACC) & Portão do Prompt Refiner
 
-**Antes de despachar qualquer subagente ou executar qualquer alteração de código**, a **Análise de Custo-Complexidade (ACC) Multi-Dimensional** DEVE ser executada compulsoriamente pelo **Subagente Especialista: Prompt Refiner & Epistemic Compiler**:
-- **Chancela no Expediente 0 (Macro-ACC, Mapa Neural do Projeto & Roteamento de Topologia):** No início da missão, o Prompt Refiner consome compulsoriamente o Mapa Neural do Projeto (`.planning/project_neural_map.json`) como Step 0 indispensável para ancorar o contexto macro da arquitetura, subsistemas, rotas e dependências sem amnésia epistêmica. Em seguida, avalia a demanda do usuário, quantifica o vetor de atributos $\mathbf{x} \in [0, 1]^7$ (incorporando o Grounding de Host $H_{\text{host}}$), computa o tensor de incerteza epistêmica ($\varepsilon_t$), classifica o modo de missão (Arquitetural vs. Direto), seleciona a **Topologia Cognitiva Dinâmica Dominante** (LCS, ToT, GoT ou DAS), dimensiona os eixos ontológicos e calcula a estrutura de ondas ($\lceil N/15 \rceil$ se arquitetural ou enxame massivo), emitindo o `mission_dossier.md` com o blueprint do esquadrão tático e o selo inicial de governança.
-- **Chancela Ubíqua Pré-Turno (Micro-ACC sob TaaS):** Em todo e qualquer turno subsequente (Expedientes 1 a 5), antes de despachar subagentes de onda ou codificação motora, o Prompt Refiner disseca a intervenção do usuário do turno atual, recalcula o vetor de incerteza $\varepsilon_t$, recalibra a topologia cognitiva e o número de ondas e emite o selo estigmérgico `.planning/refiner_seal.json` com status `SEALED_VALID`.
-- **Trava Mecânica de Portão:** Se o Agente Principal tentar executar ferramentas motoras (`write_to_file`, `replace_file_content`, `run_command`) ou despachar outros subagentes sem o selo válido do Prompt Refiner do turno, a operação é sumariamente abortada via `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`.
+Antes de ação motora ou despacho, a **ACC Multi-Dimensional** é executada pelo **Subagente Prompt Refiner & Epistemic Compiler**:
+1. **Passo 0 (Mapa Neural):** Consome `.planning/project_neural_map.json` para ancorar subsistemas, rotas e dependências sem amnésia.
+2. **Vetor $\mathbf{x} \in [0, 1]^7$ & Grounding de Host ($H_{\text{host}}$):**
+   - Dimensões: $D_{\text{ont}}$ (Subsistemas), $U_{\text{unc}}$ (Incerteza), $B_{\text{bif}}$ (Caminhos viáveis), $C_{\text{conc}}$ (Concorrência), $S_{\text{sens}}$ (120Hz/molas/áudio real), $P_{\text{risk}}$ (Risco fiduciário) e $H_{\text{host}}$ (Host Grounding: CPU, RAM, portas ativas e locks Win32/NTFS contra `EADDRINUSE` e contenção).
+3. **Incerteza Epistêmica ($\varepsilon_t$) & Regimes:**
+   $\varepsilon_t = 0.30 \mathcal{H}_{\text{entropy}} + 0.30 \mathcal{D}_{\text{disagreement}} + 0.25 \Delta_{\text{drift}} + 0.15 \Omega_{\text{satisficing}}$.
+   - **ZONE_GREEN ($\varepsilon_t \le 0.15$):** Certeza empírica; ação motora liberada.
+   - **ZONE_AMBER ($0.15 < \varepsilon_t \le 0.40$):** Incerteza moderada; probes direcionadas.
+   - **ZONE_RED ($\varepsilon_t > 0.40$):** `[EPISTEMIC_HALT]`; escrita congelada até liquidação das dúvidas no disco.
+4. **Bifurcação de Modo:**
+   - **Modo Arquitetural:** Grafo modular denso em `.planning/nodes/` de **3 a 7 nós ricos** (referência em 5 nós cobrindo domínios completos; banida inflação de 100 nós). Despacho em ondas sinápticas.
+   - **Modo Direto / Operacional (inclui Spoke Rule Factory):** **Zero nós em disco** (`.planning/nodes/` proibido). Orçamento 100% alocado ao Artífice Autônomo Fim-a-Fim.
+5. **Selo Estigmérgico & Travas de Portão:**
+   - Ação motora sem `.planning/refiner_seal.json` (`seal_status: "SEALED_VALID"`) dispara `[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`.
+   - Modificar código sem despachar subagentes da Seção D do Dossiê dispara `[HARD HALT: SQUAD_DISPATCH_BYPASSED]`.
 
-### Sessão Soberana v5.0 (Hyper-Cortex Sovereign Session & Dynamic Cognitive Topology):
+---
 
-Toda e qualquer intervenção que realize mutação de código, arquivos ou arquitetura opera sob o pipeline soberano de 5 Épocas com governança adaptativa de tokens calibrada pela **bifurcação de modo** e pelo **roteamento dinâmico de topologia de pensamento**:
+## 2. Roteamento Dinâmico de Topologias Cognitivas (Dynamic Thought Router)
 
-1. **Bifurcação de Modo de Missão:**
-   - **Modo Arquitetural / Plataforma:** Novos sistemas, plataformas, módulos complexos ou refatorações estruturais de grande porte. Grafo modular de alta densidade semiótica em `.planning/nodes/` (qualidade sobre quantidade: 3 a 7 nós ricos e substanciais, com padrão de referência em 5 nós arquiteturais que cobrem domínios completos, banindo a inflação estocástica de 100 nós). Despachados em ondas sequenciais integradas ao Barramento Sináptico Neural (`synaptic_bus.json` v5.0).
-   - **Modo Direto / Operacional / Investigativo (incluindo Spoke Rule Factory):** Bugs, diagnósticos de falhas, alterações diretas em arquivos existentes, melhorias operacionais e compilação de regras locais de nicho via Spoke Rule Factory. **Zero nós em disco**. Proibido gerar arquivos em `.planning/nodes/`. O orçamento computacional de tokens é 100% canalizado para a execução física direta: o subagente despachado opera compulsoriamente como **Artífice Autônomo Fim-a-Fim (End-to-End Problem Solver - Lei 42)** com `TypeName: 'self'`. Ele recebe o contexto geral macro da missão, realiza a ingestão exaustiva de 100% das linhas do arquivo-alvo, diagnostica a causa raiz profunda, aplica imediatamente a alteração física direta no código via ferramentas de escrita (`replace_file_content` / `write_to_file`) e entrega o relatório final com verificação em circuito fechado ($LASTEXITCODE = 0$), eliminando sumariamente o repasse intermediário de relatórios entre múltiplos subagentes e a fragmentação do pipeline (`[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`).
+A topologia ótima $\Phi(\mathbf{x}) = \arg\max_T S_T(\mathbf{x})$ é gravada em `.planning/thought_graph.json`:
+- **Linear Causal Stream (LCS):** Grafo simples ($b=1$, $O(L)$). Tração causal direta ($X \to Y \to Z$) para builds, comandos e mutações determinísticas.
+- **Tree of Thoughts (ToT com Poda $A^*$):** Ramificação $b \in [2, 5], d \le 4$. Poda mecânica ($A^*$) imediata para ramos com $f(n) < 0.75$ ou desvios constitucionais. Mandatório para otimizações algorítmicas e multi-hipóteses.
+- **Graph of Thoughts (GoT com Fusão Multilinear):** Agregação $\mathcal{F}_{\text{fuse}}$ e relaxamento cíclico $\mathcal{R}_{\text{relax}}$. Mandatório para concorrência em malha e sistemas distribuídos.
+- **Dialectical Adversarial Synthesis (DAS):** Triádica $\langle \mathcal{T}_k, \mathcal{A}_k, \mathcal{S}_k \rangle$ (Tese vs Antítese Red Team $\to$ Síntese) para alto risco ($P_{\text{risk}} \ge 0.85$). **Tripwire inegociável $K \le 3$**: na 3ª divergência, adota-se a via mais defensiva sob "Água no Deserto", colapsando imediatamente para ação motora no disco.
 
-2. **Roteamento Dinâmico de Topologias Cognitivas (Dynamic Thought Router):**
-   A ACC não impõe uma estrutura linear única. O raciocínio é dinamicamente configurado na topologia matematicamente ótima calculada pela função de seleção $\Phi(\mathbf{x}) = \arg\max_T S_T(\mathbf{x})$:
-   - **Linear Causal Stream (LCS):** Grafo direcionado simples ($b=1$, complexidade $O(L)$). Utilizado em micro-mutações determinísticas, execução de comandos e builds sem bifurcação deliberativa ($X \to Y \to Z$).
-   - **Tree of Thoughts (ToT com Poda Fiduciária $A^*$):** Árvore direcionada com ramificação controlada ($b \in [2, 5]$, $d \le 4$). Avaliação por $f(n) = g(n) + h(n)$, com poda mecânica imediata para ramos com $f(n) < 0.75$ ou qualquer violação constitucional. Ideal para otimizações algorítmicas e isolamento multi-hipótese.
-   - **Graph of Thoughts (GoT com Fusão Multilinear):** Grafo direcionado com nós de agregação e dependências cruzadas. Opera via operadores de fusão $\mathcal{F}_{\text{fuse}}$, agregação sináptica e relaxamento cíclico $\mathcal{R}_{\text{relax}}$. Mandatório para sistemas distribuídos e concorrência em malha.
-   - **Dialectical Adversarial Synthesis (DAS):** Processo triádico estocástico-fiduciário iterativo $\langle \mathcal{T}_k, \mathcal{A}_k, \mathcal{S}_k \rangle$ (Tese vs. Antítese Red Team $\to$ Síntese Fiduciária Invariante) com **Tripwire Inegociável de Parada de Máximo 3 Iterações ($K \le 3$)**. Mandatório para trade-offs arquiteturais críticos e situações de alto risco de produção ($P_{\text{risk}} \ge 0.85$).
+---
 
-| Expediente / Época | Operação Primária | Topologia Cognitiva Prescrita | Modo Flash Prescrito | Justificativa Fiduciária |
+## 3. O Sistema dos Cinco Expedientes Cognitivos (Work Shifts)
+
+O trabalho é faturado em 5 expedientes com estado em `.planning/expediente_state.json`:
+
+| Expediente / Época | Operação Primária | Topologia | Modo Flash | Foco Fiduciário & Entregável Físico |
 |---|---|---|---|---|
-| **Expediente 0 (Época 0)** | Subagente Prompt Refiner | **LCS** (ou **DAS** em trade-offs de escopo) | **Flash Low** | Desconstrução forense em 4 camadas, vetor $\mathbf{x}$, incerteza $\varepsilon$, Dossiê Universal e selo `refiner_seal.json`. |
-| **Expediente 1 (Época I - Fase A)** | Chief Ontologist (Arq.: 3 a 7 nós densos) / Artífice Fim-a-Fim (Direto: investigação integrada à correção) / Sonda Spoke | **GoT** (Arquitetural) / **ToT** (Investigativo / Spoke Recon) | **Flash Medium** | Varredura empírica de fatos brutos, contraste dialético causal, mapeamento de raio de impacto e grounding forense de nicho. |
-| **Expediente 2 (Época I - Fase B)** | Ondas 1:1 (Arq.: 3 a 7 nós modulares densos, qualidade > quantidade) / Esquadrão Especialista (Direto) | **GoT** (Fusão Multilinear) / **ToT** | **Flash Low ou Medium** | Saturação sináptica de 3 a 7 nós modulares densos (qualidade > quantidade) em ondas integradas ao `synaptic_bus.json` v5.0. |
-| **Expediente 3 (Época II)** | Matriz Neural de Despacho & Checklists Forenses | **LCS** (Tração Causal Direta) | **Flash Low** | Síntese determinística formal no `implementation_plan.md`, travas HOLD/GO e checklists binários. |
-| **Expediente 4 (Época III)** | Subagentes Codificadores 1:1 (Arq.) / Artífices Autônomos Fim-a-Fim (Direto: mutação imediata no disco) | **LCS** (Execução Motora) / **GoT** | **Flash Medium ou High** | Mutação física atômica no disco via `replace_file_content` / `write_to_file`, `Result<T,E>`, Atomic Swap. |
-| **Expediente 5 (Época IV)** | Subagente Juiz Red Team Gauntlet | **DAS** (Dialética Adversarial) / **LCS** | **Flash High** | Gauntlet de 4 passadas + inspeção perceptual no Chrome real via `browser-mcp`, veredito ou `[HARD REJECT]`. |
+| **Exp 0 (Ép 0)** | Prompt Refiner | LCS / DAS | **Flash Low** | `project_neural_map.json` consultado; `mission_dossier.md` e `refiner_seal.json`. |
+| **Exp 1 (Ép I-A)** | Chief Ontologist (Arq) / Artífice Fim-a-Fim (Dir) | GoT / ToT | **Flash Medium** | Varredura empírica, diagnóstico causal e grounding de nicho. |
+| **Exp 2 (Ép I-B)** | Ondas Sinápticas 1:1 (Arq: 3 a 7 nós) | GoT / ToT | **Flash Low/Med** | Saturação de nós densos no `synaptic_bus.json` (Veto total a Flash High). |
+| **Exp 3 (Ép II)** | Matriz Neural de Despacho | LCS | **Flash Low** | `implementation_plan.md`, HOLD/GO e checklists. Parada mecânica ("Proceed"). |
+| **Exp 4 (Ép III)** | Codificadores 1:1 (Arq) / Artífice Fim-a-Fim (Dir) | LCS / GoT | **Flash Med/High** | Mutação atômica no disco via `write_to_file`/`replace_file_content`, `Result<T,E>`, Atomic Swap. |
+| **Exp 5 (Ép IV)** | Juiz Red Team Gauntlet | DAS / LCS | **Flash High** | Gauntlet de 4 passadas + Chrome real via `browser-mcp`. Veredito. |
 
-**Critérios de Avaliação da ACC Multi-Dimensional (Vetor $\mathbf{x} \in [0, 1]^7$ & Incerteza $\varepsilon$):**
-- **$D_{\text{ont}}$ (Dimensionalidade Ontológica):** Quantidade de subsistemas ou domínios ortogonais impactados (UI, Storage, Concorrência, Rede, SO, Finanças).
-- **$U_{\text{unc}}$ (Incerteza Epistêmica $\varepsilon$):** Nível de ausência de documentação, bibliotecas opacas ou comportamento estocástico externo (Zonas GREEN $\le 0.15$, AMBER $\le 0.40$, RED $> 0.40$).
-- **$B_{\text{bif}}$ (Fator de Bifurcação de Decisão):** Número de arquiteturas ou soluções concorrentes viáveis com trade-offs distintos.
-- **$C_{\text{conc}}$ (Complexidade de Concorrência & Estado):** Risco de race conditions, bloqueios de thread (`EBUSY`), Atomic Swaps sob múltiplos escritores.
-- **$S_{\text{sens}}$ (Sensibilidade Multissensorial):** Requisitos de 120fps ProMotion, física de molas viscoelásticas, isolamento de GPU, óptica fotográfica real e micro-acústica espacial via `sfx_tool.py`.
-- **$P_{\text{risk}}$ (Criticidade de Risco de Produção):** Gravidade do modo de falha para a integridade de dados e estabilidade do negócio.
-- **$H_{\text{host}}$ (Grounding de Host & Limites Físicos da Máquina):** Avaliação dos recursos da máquina real (núcleos lógicos de CPU, memória RAM disponível, portas de rede em uso, locks Win32 e permissões de filesystem), prevenindo contenção de hardware, gargalos de I/O e colisão de portas.
-- **Classificação de Modo:** Plataforma estrutural (Arquitetural: 3 a 7 nós densos) vs. Resolução de bug/ajuste direto (Direto: Zero Nós).
-- **Topologia de Enxame & Ondas:** Estruturação em ondas sequenciais respeitando o teto inviolável de 15 subagentes por chamada (ex: 20 subagentes particionados em 2 ondas sequenciais de 10).
+### Mandato do Artífice Autônomo Fim-a-Fim no Modo Direto (Lei 42):
+Em correções de bugs, diagnósticos, ajustes e Spoke Rule Factory, os Expedientes 1 e 4 são **unificados no mesmo Artífice Autônomo Fim-a-Fim** (`TypeName: "self"`):
+- O artífice consome 100% das linhas do arquivo-alvo, diagnostica a causa raiz e **já aplica a mutação física diretamente no disco** no mesmo ciclo.
+- Proibida a cisão entre subagente investigativo e codificador (`[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`).
+- Validação em circuito fechado ($LASTEXITCODE = 0$) e emissão do `MOTOR_EXECUTION_RECEIPT`.
 
 ---
 
-### 1.1. Invocação da Spoke Rule Factory em Modo Direto (Zero Nós em Disco)
+## 4. Protocolo de Interação com o Usuário e Despacho em Ondas Sinápticas
 
-Ao ancorar em repositórios hospedeiros desconhecidos ou ecossistemas de nicho heterogêneo (ex.: Rust distribuído, MTA:SA / Lua 5.1 e C++, game engines, drivers, Python científico, Swift/Kotlin), a compilação de regras de projeto (`.agents/rules/` ou `.gemini/rules/`) opera compulsoriamente sob **Modo Direto / Operacional (Zero Nós em Disco)**:
-1. **Veto à Geração de Nós em Disco:** É terminantemente proibido gerar arquivos em `.planning/nodes/` para tarefas de reconhecimento de nicho ou compilação de regras locais. Todo o orçamento de tokens é canalizado para a Sonda de Grounding Forense em sandbox Clean-Context (`Niche Reconnaissance Investigator`, `TypeName: "research"`).
-2. **O Tensor de Assinatura do Repositório ($\vec{\Sigma}_R$):**
-   A investigação forense extrai a física particular do runtime sem adivinhações estocásticas:
-   $$\vec{\Sigma}_R = \langle \mathcal{M}_{\text{manifest}}, \mathcal{L}_{\text{lockfiles}}, \mathcal{T}_{\text{ast}}, \mathcal{E}_{\text{execution}}, \mathcal{C}_{\text{concurrency}}, \mathcal{H}_{\text{hardware}}, \mathcal{V}_{\text{validation}} \rangle$$
-   - $\mathcal{M}_{\text{manifest}}$ & $\mathcal{L}_{\text{lockfiles}}$: Manifestos (`Cargo.toml`, `CMakeLists.txt`, `package.json`, `meta.xml`, `pyproject.toml`) e lockfiles amarrando versões exatas de compiladores e dependências;
-   - $\mathcal{T}_{\text{ast}}$: Amostragem sintática de AST (paradigmas de alocação de memória, tratamento de erros `Result<T,E>` vs exceções, modelo de concorrência);
-   - $\mathcal{E}_{\text{execution}}$ & $\mathcal{H}_{\text{hardware}}$: Física do runtime e restrições de tempo real (latência por frame $\le 16.66\text{ms}$ para 60fps / $\le 8.33\text{ms}$ para 120fps; gerenciamento de GC; limites de shaders DX9 HLSL SM 2.0/3.0 e drivers);
-   - $\mathcal{V}_{\text{validation}}$: Toolchains nativas de validação executáveis (`luac -p`, `cargo clippy`, `tsc --noEmit`, etc.).
-3. **Síntese dos Quatro Módulos Canônicos do Spoke:**
-   O subagente artífice motor (`TypeName: "self"`) gera fisicamente em `<repo>/.agents/rules/` (ou `<repo>/.gemini/rules/`):
-   - `domain_standards.md`: Padrões de arquitetura interna, tipagem estrita e convenções idiomáticas;
-   - `runtime_constraints.md`: Orçamentos de tempo de CPU/frame, gestão de memória e concorrência nativa;
-   - `toolchain_and_validation.md`: Comandos determinísticos de validação em malha fechada ($LASTEXITCODE = 0$);
-   - `security_and_contracts.md`: Modelo de confiança (Zero Client Trust), sanitização e integridade.
-   Além do manifesto `.agents/spoke_manifest.json` com hashes SHA-256 e atestação constitucional.
-4. **Teorema de Não-Contaminação Constitucional (Zero Abstraction Leakage):**
-   $$\forall r \in \mathcal{S}_R, \quad \mathcal{K}_0 \vdash \neg(\neg r)$$
-   As regras do Spoke podem adicionar restrições técnicas específicas do runtime, mas **jamais afrouxar** leis da Layer 0 (precedência absoluta do Kernel Hub). Conceitos alienígenas (ex: jargões web em runtimes de baixo nível ou C++) são sumariamente filtrados.
-
----
-
-### 1.2. Governança de Sessões de RSI (Recursive Self-Improvement) Autônomo
-
-Sessões destinadas à auto-evolução cibernética do ecossistema aprimoram regras e skills através da observação fria de sucessos e atritos operacionais passados, operando sob uma esteira em malha fechada guiada por dados empíricos:
-1. **Motor de Post-Mortem Cognitivo (`.planning/post_mortem/pm_*.json`):**
-   Ao término de cada sessão de trabalho, a telemetria fria é consolidada em disco: taxas de retries motores ($R_{\text{attempts}}$), disparos de circuit breakers ($CB_{\text{trips}}$), intervenções humanas ($C_{\text{user}}$), saturação de contexto e eventos sinápticos Hebbianos (LTP para heurísticas homologadas na primeira passada; LTD para quebras de compilação ou `[PEER_VETO]`).
-2. **O Ciclo Hebbiano em Quatro Fases:**
-   - *Fase 1 (Detector de Lacunas / Cognitive Gap):* Agrupamento de incidentes por causa-raiz comum e detecção de atritos repetitivos;
-   - *Fase 2 (Síntese de Patch Candidato):* Subagente engenheiro de regras formula mutação cirúrgica aditiva com contraste pedagógico (*Anti-Pattern vs Titanium Pattern*), gravando em `.planning/rsi/candidates/`;
-   - *Fase 3 (Sandboxing & Adversarial Regression Gauntlet):* O Subagente Juiz Red Team (`Forensic Adversarial Auditor`) submete o patch a testes históricos e verifica formalmente que nenhum invariante da Layer 0 foi quebrado ($Score \ge 0.95$);
-   - *Fase 4 (Ratificação Fiduciária & Ledger Commit):* Mutação definitiva via `DeterministicAtomicSwap`, registro imutável no State Ledger (`.planning/ledger/txn_XXXX.json`) e reforço Hebbiano no `synaptic_bus.json`.
-3. **As Quatro Travas Pétreas de Segurança do RSI (Anti-Catastrophic Drift):**
-   - *Trava 1 (Layer 0 Frozen Core):* O núcleo constitucional (`rules/AGENTS.md`, `rule1.md`, `rule2.md` e Leis 1 a 53) é criptograficamente imutável para agentes autônomos. Qualquer mutação na Layer 0 é de prerrogativa exclusiva e manual do usuário humano;
-   - *Trava 2 (Anti-Dumbing-Down Gate):* É matematicamente vedado ao RSI aprovar patches que reduzam restrições, afrouxem linters ou tolerem stubs. A função de severidade é monotonicamente não-decrescente: $\text{Severidade}(\mathcal{R}_{t+1}) \ge \text{Severidade}(\mathcal{R}_t)$. Violação aciona `[HARD HALT: ATTEMPTED_GOVERNANCE_DUMBING_DOWN]`;
-   - *Trava 3 (Bipartição de Classes de Mutação):* Classe A (Spokes locais de repositório) pode ser auto-ratificada pelo Gauntlet Red Team; Classe B (Skills globais em `skills/`) é persistida como proposta e exige ratificação explícita do usuário na thread principal;
-   - *Trava 4 (Freio de Frequência Evolutiva & Resfriamento):* Máximo de 1 mutação de regra por expediente de trabalho, ativada apenas após entregas físicas consolidadas nas Épocas III/IV.
-
----
-
-### 1.3. Multi-Horizon Circuit Breakers (Drawdown Cognitivo Multinível)
-
-Inspirado nos teoremas de preservação de capital de Kelly e nos pisos de drawdown institucional de múltiplos horizontes (intradiário vs pico-a-fundo do Orion v3), o Hyper-Cortex v5.0 substitui limites empíricos isolados por uma arquitetura integrada de **Drawdown Cognitivo Multinível**:
+### Alinhamento Fiduciário Pré-Turno:
+Antes de transições de modo ou despacho de subagentes, o Agente Principal apresenta o alinhamento com dados de `refiner_seal.json`:
 
 ```text
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│               ARQUITETURA DE MULTI-HORIZON CIRCUIT BREAKERS (DRAWDOWN COGNITIVO)       │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ HORIZONTE MICRO (Tático / Por Turno)                                                   │
-│ • Limite Estrito de 2 Retries Consecutivos para o Mesmo Incidente Causal               │
-│ • Tripwire de Leitura Ociosa (Máximo 2 Leituras Consecutivas sem Mutação Física)       │
-│ • Trava de Cegueira de Host: Comandos sem checagem de portas/hardware -> [HARD REJECT]│
-│ • Disparo: [EPISTEMIC_HALT: MICRO_DRAWDOWN_BREACHED] -> Probes Frias ou Alinhamento    │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ HORIZONTE MACRO (Estrutural / Por Sessão)                                              │
-│ • Teto de Consumo de Tokens Ociosos sem Gravação de Bytes no Filesystem                │
-│ • Deriva Epistêmica Acumulada: ε_t > 0.40 (ZONE_RED) por mais de 3 transições         │
-│ • Despacho Circular de Enxame: Mais de 3 ondas sem convergência ou entrega real       │
-│ • Tripwire de Amnésia de Projeto: Mutação sem ler Mapa Neural ou sem atualizar         │
-│   -> Disparo: [HARD REJECT: PROJECT_AMNESIA_DRIFT]                                     │
-│ • Disparo: [EPISTEMIC_HALT: MACRO_DRAWDOWN_FREEZE] -> Congelamento Total e Ledger Lock │
-└────────────────────────────────────────────────────────────────────────────────────────┘
+🔍 ANÁLISE DE EXPEDIENTE & ACC (v5.0 Hyper-Cortex)
+Expediente: [0-5] | Modo: [Arquitetural (3-7 nós) | Direto (0 nós)] | Topologia: [LCS|ToT|GoT|DAS]
+Incerteza: ε=0.XX [GREEN|AMBER|RED] | Vetor: <D_ont, U_unc, B_bif, C_conc, S_sens, P_risk, H_host>
+Ondas: [1..K (Máx 15/onda)] | Custo: [Baixo|Médio|Alto] | Modo Prescrito: Flash [Low|Medium|High]
+Próximos Passos: [Objetivo do turno e entregáveis físicos esperados]
+Altere o modo de thinking para Flash [Low|Medium|High] e responda "Proceed" para autorizar.
 ```
+
+### Invariantes do Despacho em Ondas (Wave Dispatch):
+1. **Teto de 15 Subagentes:** Ultrapassar 15 subagentes por chamada aciona `[HARD HALT: WAVE_BURST_EXCEEDED]`. Enxames maiores dividem-se em ondas sequenciais (ex: 20 subagentes em 2 ondas de 10).
+2. **Barreira de Sincronização:** Cada onda aguarda validação de contratos e consolidação no `synaptic_bus.json` v5.0 antes da próxima.
+3. **Disjunção Ortogonal:** Exatamente 1 subagente por arquivo/nó: $\text{TargetFiles}(S_i) \cap \text{TargetFiles}(S_j) = \emptyset$.
+4. **Handoff Feedforward:** Subagentes downstream consomem laudos via `view_file` como Step 0. Em Modo Direto, vigora o Artífice Fim-a-Fim sem intermediários.
+
+---
+
+## 5. Multi-Horizon Circuit Breakers (Drawdown Cognitivo Multinível)
+
+Blindagem cibernética contra desperdício e deriva em dois horizontes:
 
 1. **Drawdown Micro (Nível Tático / Por Turno):**
-   - *Piso de Falhas Consecutivas:* Limite estrito de **2 tentativas de auto-cura** no SO ou correções de compilação para o mesmo erro mecânico/causal. A persistência da falha na 3ª tentativa dispara `[EPISTEMIC_HALT: MICRO_DRAWDOWN_BREACHED]`, proibindo novas tool calls cegas e forçando análise causal profunda com evidências brutas.
-   - *Tripwire de Leitura Ociosa (Idle Read Tripwire):* Em turnos operacionais de implementação ou correção, é proibido ler mais de 2 arquivos consecutivos sem realizar uma alteração física (`replace_file_content` ou `write_to_file`). Atingir 2 leituras força o despacho da ação motora ou parada imediata.
-   - *Trava de Cegueira de Host (Host Blindness Circuit Breaker):* É expressamente proibido disparar comandos concorrentes pesados, testes de estresse ou inicialização de serviços/servidores sem prévio perfilamento dos recursos do host (núcleos lógicos de CPU, memória RAM disponível) e sem inspecionar deterministicamente portas de rede ativas. Lançar comandos que ignorem portas em uso (`EADDRINUSE`) ou recursos de hardware aciona compulsoriamente a trava mecânica imediata: `[HARD REJECT: HOST_BLINDNESS]`.
-2. **Drawdown Macro (Nível Estrutural / Por Sessão):**
-   - *Teto de Consumo Ocioso de Tokens:* É terminantemente proibido manter a sessão consumindo tokens em diálogos reflexivos, investigações redundantes ou re-despacho de subagentes sem que haja progresso mensurável gravado em disco.
-   - *Tripwire de Deriva Epistêmica:* Se o vetor de incerteza $\varepsilon_t$ permanecer em `ZONE_RED` ($\varepsilon_t > 0.40$) por 3 avaliações sucessivas, ou se a tensão dialética $\tau$ persistir próxima de $1.0$ sem síntese, ou se mais de 3 ondas sinápticas forem despachadas sem homologação de contratos, dispara-se compulsoriamente o **Macro-Drawdown Freeze** (`[EPISTEMIC_HALT: MACRO_DRAWDOWN_FREEZE]`).
-   - *Tripwire de Amnésia de Projeto (Anti-Amnesia Circuit Breaker):* É terminantemente proibido a qualquer agente ou subagente iniciar mutações em arquivos sem ter consultado previamente o Mapa Neural do Projeto (`.planning/project_neural_map.json`) como Step 0, ou encerrar a sessão de trabalho sem atualizar gradualmente o mapa neural com novos subsistemas, contratos, rotas e dependências validadas. A detecção de mutações sem leitura prévia do mapa ou tentativa de encerramento omisso aciona sumariamente a trava mecânica: `[HARD REJECT: PROJECT_AMNESIA_DRIFT]`.
-   - *Ação de Congelamento:* Todo o enxame é imediatamente paralisado, as interfaces entram em `CONTRACT_HOLD`, o estado da sessão é persistido no State Ledger (`.planning/ledger/`) e o controle é transferido soberanamente para o usuário na thread principal.
+   - *Piso de Falhas:* Limite de 2 tentativas de auto-cura/compilação para o mesmo erro. A 3ª falha dispara `[EPISTEMIC_HALT: MICRO_DRAWDOWN_BREACHED]`.
+   - *Tripwire de Leitura Ociosa:* Máximo de 2 arquivos lidos sem mutação física (`replace_file_content`/`write_to_file`). Atingir 2 leituras força ação motora.
+   - *Trava de Cegueira de Host:* Comandos pesados ou servidores sem checagem de CPU/RAM e portas ativas disparam `[HARD REJECT: HOST_BLINDNESS]`.
+2. **Drawdown Macro (Nível Estrutural):**
+   - *Teto Ocioso:* Banido consumo de tokens sem gravação de bytes no disco.
+   - *Deriva Acumulada:* $\varepsilon_t > 0.40$ por >3 transições ou >3 ondas sem entregas dispara `[EPISTEMIC_HALT: MACRO_DRAWDOWN_FREEZE]`.
+   - *Tripwire de Amnésia de Projeto:* Mutações sem ler `project_neural_map.json` ou encerramento sem atualizar o mapa dispara `[HARD REJECT: PROJECT_AMNESIA_DRIFT]`.
+   - *Congelamento:* Enxame paralisado, `CONTRACT_HOLD`, commit no ledger (`.planning/ledger/txn_XXXX.json`) e escalonamento ao usuário.
 
 ---
 
-## 2. O Sistema de Expedientes Cognitivos (Work Shifts)
+## 6. Governança de Spoke Rule Factory e Sessões de RSI
 
-O sistema rejeita a ilusão de resolver grandes arquiteturas em um único "sprint cego" contínuo. Toda demanda é particionada em **Expedientes Cognitivos** formais com estado persistido no disco em `.planning/expediente_state.json`:
+### 6.1. Spoke Rule Factory em Modo Direto (Zero Nós em Disco):
+Em repositórios desconhecidos ou ecossistemas de nicho (Rust, C++, MTA:SA Lua), regras locais são compiladas em Modo Direto:
+1. **Zero Nós em Disco:** Proibido criar nós em `.planning/nodes/`. Orçamento focado no subagente de reconhecimento (`TypeName: "research"`).
+2. **Tensor de Assinatura ($\vec{\Sigma}_R$):** $\vec{\Sigma}_R = \langle \mathcal{M}_{\text{manifest}}, \mathcal{L}_{\text{lockfiles}}, \mathcal{T}_{\text{ast}}, \mathcal{E}_{\text{execution}}, \mathcal{C}_{\text{concurrency}}, \mathcal{H}_{\text{hardware}}, \mathcal{V}_{\text{validation}} \rangle$. Avalia manifestos, lockfiles, AST, frame budget ($\le 16.66\text{ms}$ a 60fps / $\le 8.33\text{ms}$ a 120fps), drivers e validação nativa.
+3. **Quatro Módulos Canônicos:** O artífice motor (`TypeName: "self"`) gera em `<repo>/.agents/rules/`: `domain_standards.md` (Padrões/tipagem), `runtime_constraints.md` (CPU/memória/concorrência), `toolchain_and_validation.md` (Validação $LASTEXITCODE = 0$), `security_and_contracts.md` (Zero Client Trust/sanitização), além de `.agents/spoke_manifest.json` com hashes SHA-256.
+4. **Teorema da Não-Contaminação:** $\forall r \in \mathcal{S}_R, \mathcal{K}_0 \vdash \neg(\neg r)$. Regras locais podem adicionar rigores, mas jamais revogar a Layer 0. Abstrações alienígenas são expurgadas.
 
-```text
-┌─────────────────────────────────────────────────────────────┐
-│ EXPEDIENTE 0: Ingestão Estratégica, Metacognição & ACC v5.0 │
-│ • Leitura de project_neural_map.json como Step 0            │
-│ • Subagente Prompt Refiner compila mission_dossier.md       │
-│ • Cálculo do vetor x e incerteza epsilon; seleção da topologia│
-│ • Modo: Flash Low / Medium                                  │
-├─────────────────────────────────────────────────────────────┤
-│ EXPEDIENTE 1: Investigação Empírica & Arquitetura Ontológica│
-│ • Arq.: Chief Ontologist estrutura 3 a 7 nós densos         │
-│ • Direto: Artífice Fim-a-Fim integra investigação ao código │
-│ • Emissão de laudos periciais brutos (se arquitetural)      │
-│ • Modo: Flash Medium                                        │
-├─────────────────────────────────────────────────────────────┤
-│ EXPEDIENTE 2: Saturação Sináptica em Ondas (3 a 7 Nós Densos)│
-│ • Arq.: 3 a 7 nós modulares densos (qualidade > quantidade) │
-│ • Despacho sequencial com barramento synaptic_bus v5.0      │
-│ • Vetores de estado plásticos e handoff de alta fidelidade  │
-│ • Modo: Flash Low ou Flash Medium                           │
-├─────────────────────────────────────────────────────────────┤
-│ EXPEDIENTE 3: Matriz de Despacho & Trava Humana (Época II)  │
-│ • Síntese formal nó-a-nó no implementation_plan.md          │
-│ • Trava mecânica: cessa ferramentas e aguarda "Proceed"     │
-│ • Modo: Flash Low                                           │
-├─────────────────────────────────────────────────────────────┤
-│ EXPEDIENTE 4: Codificação Concorrente Atômica 1:1 (Época III)│
-│ • Parent PROIBIDO de codificar na thread principal          │
-│ • 1 Subagente Motor por arquivo (TypeName: "self")          │
-│ • Arq.: Despacho com Contexto + Leitura de laudo via view_file│
-│ • Direto: Artífice Fim-a-Fim unifica diagnóstico e mutação  │
-│ • Mutação física direta no disco, Result<T,E>, Atomic Swap  │
-│ • Modo: Flash Medium ou Flash High                          │
-├─────────────────────────────────────────────────────────────┤
-│ EXPEDIENTE 5: Auditoria Adversarial Independente (Época IV) │
-│ • Subagente Juiz Red Team executa Gauntlet de 4 passadas    │
-│ • Inspeção perceptual no Chrome real via browser-mcp        │
-│ • Modo: Flash High                                          │
-└─────────────────────────────────────────────────────────────┘
-```
-
-### A Unificação Fim-a-Fim no Modo Direto (Expedientes 1 & 4):
-
-Em demandas de arquitetura de grande porte, a investigação ontológica preliminar (Expediente 1) e a implementação de adaptadores de produção downstream (Expediente 4) operam em ondas desacopladas com handoff formal via `view_file` nos laudos periciais brutos.
-
-Contudo, **em tarefas operacionais, correções de bugs e refatorações pontuais (Modo Direto / Zero Nós)**, essa separação é terminantemente extinta:
-- **Modelo Mental Íntegro:** A investigação diagnóstica e a codificação física motora são compulsoriamente **unificadas no mesmo Subagente Artífice Autônomo Fim-a-Fim (End-to-End Problem Solver - Lei 42)** com `TypeName: 'self'`.
-- **Banimento do Telefone Sem Fio:** O subagente despachado recebe o contexto macro do sistema, consome 100% das linhas do arquivo-alvo, diagnostica a causa raiz profunda e, no mesmo fluxo contínuo de raciocínio, já executa a mutação física no filesystem via `replace_file_content` ou `write_to_file`.
-- **Eliminação da Fragmentação de Pipeline:** Fica sumariamente banida a divisão de trabalho entre um "subagente que apenas analisa e relata" e outro "subagente que apenas codifica", vício que induz divergência contextual, perda de nuances e atrasos de handoff. Qualquer tentativa de particionar tarefas operacionais dessa forma aciona compulsoriamente a trava mecânica `[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`.
-- **Verificação em Circuito Fechado:** O artífice finaliza seu ciclo testando a alteração em malha fechada ($LASTEXITCODE = 0$) e emitindo o relatório final consolidado comprovando a cura física no disco.
+### 6.2. Governança de Sessões de RSI (Recursive Self-Improvement):
+Auto-melhoria guiada por telemetria fria:
+1. **Telemetria de Post-Mortem (`.planning/post_mortem/pm_*.json`):** Retries ($R_{\text{attempts}}$), circuit breakers ($CB_{\text{trips}}$) e plasticidade Hebbiana (LTP para aprovação direta; LTD para vetos).
+2. **Ciclo Hebbiano:** (1) Gap Detection $\to$ (2) Patch em Sandbox $\to$ (3) Gauntlet de Não-Regressão $\to$ (4) Ratificação via State Ledger.
+3. **Quatro Travas Pétreas do RSI:**
+   - *Trava 1 (Layer 0 Merkle Frozen Core):* `rules/AGENTS.md`, `rule1.md`, `rule2.md` e Leis 1 a 53 são imutáveis para agentes autônomos.
+   - *Trava 2 (Anti-Dumbing Down Gate):* $\text{Severidade}(\mathcal{R}_{t+1}) \ge \text{Severidade}(\mathcal{R}_t)$. Afrouxar regras dispara `[HARD HALT: ATTEMPTED_GOVERNANCE_DUMBING_DOWN]`.
+   - *Trava 3 (Bipartição de Classes):* Classe A (Spokes locais) auto-ratificável pelo Gauntlet Red Team; Classe B (Skills globais) exige aprovação manual do usuário.
+   - *Trava 4 (Freio de Taxa):* Máximo de 1 mutação de regra por expediente, ativada após entregas consolidadas.
 
 ---
 
-## 3. Protocolo Obrigatório de Interação com o Usuário (Alinhamento Pré-Turno)
+## 7. Invariantes Constitucionais de Execução (Leis 51 a 53)
 
-Antes de iniciar qualquer novo expediente ou turno que exija mudança de modo ou despacho de subagentes, **o Agente Principal DEVE PARAR e interagir com o usuário**, alimentando a mensagem obrigatoriamente com os dados auditados do selo estigmérgico `.planning/refiner_seal.json` emitido pelo Prompt Refiner:
+### Lei 51 — O Invariante Anti-Degradação de Pilha de Execução:
+Proibido desativar, omitir ou degradar componentes da arquitetura canônica (middlewares, tipagem estrita, transações BD, locks, animações ou testes) para "simplificação" ou depuração rápida. Testes DEVEM rodar contra a pilha completa. Código funcional apenas sob ambientes degradados ou configurações toy é nulo e dispara `[HARD REJECT: DEGRADED_STACK_EXECUTION]`.
 
-### Formato da Mensagem de Roteamento (Template Constitucional v5.0):
+### Lei 52 — O Princípio do Digital Twin Isomorphism (Gêmeo Digital Isomórfico):
+Todo ambiente de simulação, suíte de testes, harness ou mock deve manter isomorfismo estrutural e comportamental idêntico ao runtime de produção: $\text{Contract}(\text{Sandbox}) \equiv \text{Contract}(\text{Production})$. Proibido criar mocks superficiais que mascarem exceções reais do SO (locks Win32 `EBUSY`/`EPERM`, race conditions, latência) ou usar motores de banco incompatíveis (ex: SQLite em memória simulando PostgreSQL com locking pessimista). O mesmo contrato `Result<T,E>` opera idêntico na sandbox e em produção, sob pena de `[HARD REJECT: DIGITAL_TWIN_DIVERGENCE]`.
 
-```text
-🔍 ANÁLISE DE EXPEDIENTE & CUSTO-COMPLEXIDADE CONCLUÍDA (v5.0 Hyper-Cortex)
-══════════════════════════════════════════════════════════════════════════════
-Expediente Atual:        [Expediente 0 | 1 | 2 | 3 | 4 | 5]
-Modo de Missão:          [Arquitetural (3 a 7 Nós Densos) | Direto / Operacional (Zero Nós)]
-Topologia Cognitiva:     [Linear Causal Stream (LCS) | Tree of Thoughts (ToT) | Graph of Thoughts (GoT) | Dialectical Adversarial Synthesis (DAS)]
-Vetor de Incerteza (ε):  [ε = 0.XX — ZONE_GREEN (≤0.15) | ZONE_AMBER (0.16-0.40) | ZONE_RED (>0.40)]
-Vetor de Atributos (x):  <D_ont=0.X, U_unc=0.X, B_bif=0.X, C_conc=0.X, S_sens=0.X, P_risk=0.X, H_host=0.X>
-Nós em Disco:            [3 a 7 nós modulares em .planning/nodes/ | 0 nós (Plano Direto)]
-Estrutura de Ondas:      [Ondas 1..K (Máx 15 por onda) | Squad Concorrente Particionado]
-Custo Estimado:          [Baixo | Médio | Alto]
-
-ROTEAMENTO DE MODO FLASH RECOMENDADO:
-→ Modo Prescrito para este Turno: Flash [Low | Medium | High]
-→ Próximos Passos: [Breve descrição do objetivo do turno e entregáveis físicos esperados]
-
-Por favor, altere o modo de thinking do Flash para
-[Low | Medium | High] no seletor antes de confirmar.
-
-Quando estiver pronto, responda "Proceed" ou "Pode começar".
-══════════════════════════════════════════════════════════════════════════════
-```
-
----
-
-## 4. Protocolo de Despacho em Ondas Sinápticas (Máximo 15 por Onda)
-
-Durante o Expediente 2 (Época I, Fase B) ou em qualquer despacho de enxame, o despacho de subagentes obedece ao protocolo sequencial em ondas integradas ao Barramento Sináptico Neural (`synaptic_bus.json` v5.0). No Modo Arquitetural, estrutura-se um grafo modular denso de 3 a 7 nós ricos e substanciais (qualidade sobre quantidade: 5 nós arquiteturais de alta densidade semiótica equivalem a 100 nós dispersos, consumindo muito menos tokens com rigor e qualidade superiores):
-
-```text
-ESTRUTURA DE ONDAS COM BARRAMENTO SINÁPTICO v5.0:
-
-Onda 1: Subagentes dos Nós Arquiteturais (3 a 7 nós modulares densos)
-  → Lê domínios delimitados no mission_dossier.md
-  → Cada subagente aprofunda seu nó modular de alta densidade e emite [SYNAPTIC_OUTPUTS]
-  → Consolidação: Agente Principal valida e atualiza synaptic_bus.json v5.0
-
-Onda 2: Artífices Motores de Produção 1:1 por Arquivo/Contrato (Máx 15 por onda)
-  → Lê sinapses upstream da Onda 1 no synaptic_bus.json
-  → Cada subagente consome [SYNAPTIC_INPUTS] e aplica mutações físicas diretas no código
-  → Consolidação: Agente Principal valida e atualiza synaptic_bus.json v5.0
-
-Onda K: Subagentes restantes (se houver particionamento de adaptadores downstream)...
-  → Propagação sináptica feedforward contínua X -> Y -> Z
-
-→ Ao término de cada onda: emitir relatório do expediente e consolidar
-  transação no State Ledger antes de transicionar de modo Flash.
-```
-
-**Invariantes do Wave Dispatch:**
-- **Máximo 15 subagentes por `invoke_subagent` call:** Ultrapassar 15 entradas aciona `[HARD HALT: WAVE_BURST_EXCEEDED]`. Enxames de 20 subagentes são compulsoriamente particionados em 2 ondas sequenciais de 10 subagentes.
-- **Barreira de Sincronização:** Cada onda deve aguardar a conclusão, validação e consolidação no `synaptic_bus.json` antes de disparar a próxima onda.
-- **Relação 1:1 Atômica:** Exatamente 1 subagente por nó ou arquivo de produção, com conjuntos de arquivos estritamente disjuntos ($\text{TargetFiles}(S_i) \cap \text{TargetFiles}(S_j) = \emptyset$).
-- **Handoff Feedforward de Alta Fidelidade & Ciclo Fim-a-Fim (Lei 42):** Em missões arquiteturais ou pipelines com dependências formais entre camadas distintas (ex: portas de domínio na Onda 1 $\to$ adaptadores downstream na Onda 2), os subagentes da Onda $K$ consomem obrigatoriamente as sinapses consolidadas e os laudos periciais brutos da Onda $K-1$ via `view_file` como Step 0. Por outro lado, **em correções operacionais e tarefas de código em Modo Direto**, o ciclo é estritamente **fim-a-fim no mesmo subagente artífice** (`End-to-End Problem Solver`): a ingestão de laudos prévios entre múltiplos subagentes é abolida, unificando diagnóstico e mutação motora imediata para banir a fragmentação do enxame (`[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`).
-
----
-
-## 5. Leis da Governança Adaptativa Soberana (Invariantes Invioláveis)
-
-1. **Veto ao Despacho Cego:** É terminantemente proibido invocar qualquer subagente sem ter executado a ACC e interagido com o usuário para confirmar o modo Flash e receber autorização explícita.
-2. **Veto ao Burst de 100 Subagentes:** É terminantemente proibido despachar mais de 15 subagentes em uma única chamada de `invoke_subagent`. Mais de 15 entradas no array `Subagents` aciona `[HARD HALT]` imediato.
-3. **Veto ao Flash High na Saturação de Nós:** Subagentes de planejamento dos 3 a 7 nós modulares densos (Expediente 2) NUNCA são despachados quando o usuário está no modo Flash High. O modo High é reservado para Codificação (Expediente 4) e Auditoria Adversarial (Expediente 5). Se o usuário estiver em Flash High antes do Expediente 2, o agente DEVE pedir a troca para Flash Low ou Medium.
-4. **Persistência de Estado por Expediente:** O Agente Principal DEVE persistir o progresso em `.planning/expediente_state.json` ao término de cada expediente antes de solicitar a transição para o próximo turno.
-5. **Relatório de Consumo & Sinapses Pós-Onda:** Após cada onda de subagentes, o agente emite status formal: *"Onda [N] concluída. [X] nós saturados. Sinapses propagadas no synaptic_bus.json. Próxima onda em espera."*
-6. **Veto ao Despacho e Execução sem Selo do Prompt Refiner (`[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`) e sem Ativação do Esquadrão (`[HARD HALT: SQUAD_DISPATCH_BYPASSED]`):** É expressamente proibido ao Agente Principal despachar qualquer subagente adicional, disparar ondas sinápticas, modificar arquivos (`write_to_file`, `replace_file_content`) ou executar comandos de modificação (`run_command`) sem que o **Subagente Prompt Refiner & Epistemic Compiler** tenha sido previamente despachado no turno atual e persistido o selo criptográfico `.planning/refiner_seal.json` com `seal_status: "SEALED_VALID"` e hash coincidente com o prompt cru do usuário. Adicionalmente, assim que o Dossiê for emitido, os subagentes especializados listados na Seção D do dossiê DEVEM ser despachados imediatamente antes de qualquer mutação de código, sob pena de `[HARD HALT: SQUAD_DISPATCH_BYPASSED]`. Em Modo Direto, esses subagentes operam compulsoriamente como Artífices Autônomos Fim-a-Fim (Lei 42). O Dossiê Universal (`.planning/mission_dossier.md`) é o único artefato de ingestão permitido — a distinção entre dossiê cirúrgico e arquitetural está extinta.
-7. **Circuit Breakers Cognitivos de Múltiplos Horizontes & Tripwires de Consumo (Drawdown Cognitivo Multinível):**
-   É terminantemente proibido consumir tokens em investigações circulares infinitas ou insistir em falhas estocásticas sem mutação física de código. A governança adota a física dos Multi-Horizon Circuit Breakers:
-   - *Micro-Drawdown (Nível Tático / Por Turno):* Limite estrito de 2 tentativas consecutivas de remediação para o mesmo erro mecânico ou incidente causal. A persistência na 3ª tentativa dispara compulsoriamente `[EPISTEMIC_HALT: MICRO_DRAWDOWN_BREACHED]`. Tripwire de Leitura Ociosa: máximo de 2 arquivos lidos consecutivamente sem mutação física (`replace_file_content` ou `write_to_file`).
-   - *Macro-Drawdown (Nível Estrutural / Por Sessão):* Limite fiduciário de consumo de tokens ociosos sem mutação física de arquivos no filesystem. Se a incerteza residual $\varepsilon_t > 0.40$ persistir por mais de 3 transições, ou se mais de 3 ondas de enxame forem despachadas sem convergência ou entrega real no disco, aciona-se compulsoriamente o **Macro-Drawdown Freeze** (`[EPISTEMIC_HALT: MACRO_DRAWDOWN_FREEZE]`), paralisando o enxame, persistindo transação no State Ledger e escalonando para deliberação soberana do usuário.
-8. **Livro-Razão Transacional Imutável (State Ledger Append-Only Invariant):** Nenhuma transição de expediente, homologação de época ou mutação de barramento sináptico é concluída sem o registro de uma transação imutável numerada em `.planning/ledger/txn_XXXX.json` (contendo timestamp, hash do commit, estado de contratos e assinatura do fiduciário), além da sincronização em `.planning/expediente_state.json`.
-9. **Lei 44 — Governança Metacognitiva de 2ª Ordem & Calibração de Incerteza Epistêmica ($\varepsilon$):** É expressamente proibida a ação motora ou avanço de época sob regime de incerteza desgovernada ($\varepsilon_t > 0.40$). A cognição do sistema opera sob um Córtex Monitor de Segunda Ordem ($M_2$), que calcula continuamente o tensor de incerteza ponderado $\varepsilon_t = 0.30 \mathcal{H}_{\text{entropy}} + 0.30 \mathcal{D}_{\text{disagreement}} + 0.25 \Delta_{\text{drift}} + 0.15 \Omega_{\text{satisficing}}$. Atingir a zona de incerteza crítica (`ZONE_RED` com $\varepsilon_t > 0.40$) dispara compulsoriamente o gatilho de auto-interrupção mecânica `[EPISTEMIC_HALT]`, congelando toda escrita no filesystem até que sondas de fato bruto liquidem a incerteza e reancorem $\varepsilon_t \le 0.15$ (`ZONE_GREEN`). Proibido simular convicção ou prosseguir na ausência de evidência empírica no disco.
-10. **Lei 45 — Roteamento Dinâmico de Topologias de Pensamento & Poda Fiduciária (Tripwire DAS $K \le 3$):** Veto irrevogável a moldes cognitivos estáticos. Toda deliberação de engenharia deve instanciar a topologia ótima via `dynamic_thought_router` (LCS, ToT, GoT ou DAS). Em buscas em árvore (ToT), qualquer nó com avaliação $f(n) < 0.75$ ou com desvios constitucionais sofre poda mecânica imediata ($A^*$). Em deliberações dialéticas (DAS), impõe-se o tripwire inegociável de no máximo 3 iterações ($K \le 3$). Persistindo divergência técnica ao fim da 3ª iteração, encerra-se o debate adotando compulsoriamente a via mais defensiva sob o Princípio "Água no Deserto", colapsando imediatamente para ação motora no disco.
-11. **Lei 46 — Composabilidade e Desacoplamento Dinâmico de Skills (Inter-Skill Composability):** Proibido acoplamento monolítico, duplicidade ou colisão normativa entre skills. A ativação e combinação sob demanda de múltiplas skills é coordenada pela Matriz de Precedência Constitucional e de Incompatibilidade governada pelo `Dynamic Skill Synthesizer`, assegurando que diretrizes de Clean Architecture, UI Craft, Áudio Real e Computer Use operem em estrita harmonia composicional sem vazamento ou degradação de contexto.
-12. **Lei 47 — Plasticidade Sináptica & Vetores de Estado no Barramento (`synaptic_bus.json` v5.0):** Decisões arquiteturais, contratos de interface e laudos periciais são inscritos imutavelmente no substrato estigmérgico do barramento sináptico com vetores plásticos de estado e no State Ledger append-only (`.planning/ledger/`). Subagentes subsequentes consomem compulsoriamente as sinapses upstream consolidadas. É terminantemente proibida a regressão epistêmica, a amnésia de contexto ou a rediscussão de problemas cuja solução já foi chancelada em laudos de ondas precedentes.
-13. **Lei 48 — Concorrência Atômica Fiduciária de Baixo Nível & Disjunção de Escrita Subagente-Arquivo:** Em regimes de concorrência massiva (10 a 15+ subagentes motores da Onda 2), impõe-se a garantia matemática de ortogonalidade e disjunção de conjuntos de arquivos ($\text{FileSet}(S_i) \cap \text{FileSet}(S_j) = \emptyset$). Toda mutação física de arquivo no disco é executada obrigatoriamente através do padrão `DeterministicAtomicSwap` (gravação em staging `.tmp` no mesmo volume, `fsync` compulsório dos buffers do controlador, dupla atestação de integridade por hash criptográfico SHA-256 e substituição atômica via `renameSync`). A concorrência sobre arquivos de estado compartilhado é governada pelo protocolo de semáforo atômico no filesystem via flag exclusiva $O\_CREAT \mid O\_EXCL$ (`.lock`) com TTL, backoff exponencial com Full Jitter e detecção determinística de processos órfãos via PID.
-14. **Lei 49 — Padrão Perceptual de 120fps ProMotion & Óptica Fotográfica Real:** Veto absoluto a UIs estáticas ou animações simplistas (`transition-all duration-300`). Toda interface interativa exige cinemática física de molas de 2ª ordem viscoelásticas calibradas para taxas de atualização de 120fps (frame budget estrito sub-8.33ms), isolamento de GPU em camadas de composição desacopladas e latência tátil sub-16ms. Toda mídia visual requer fotografia óptica autêntica com calibração das 6 variáveis físicas via `generate_image`, e todo efeito sonoro exige micro-acústica espacializada real fatiada via `sfx_tool.py` (banimento definitivo de osciladores matemáticos senoidais).
-15. **Lei 50 — Paridade Operacional Cross-Platform Universal & Governança Federada:** O ecossistema garante isomorfismo estrito de execução em todos os ambientes operacionais suportados (CLI Windows PowerShell nativo, ambiente de plugins Antigravity IDE e subsistemas parceiros federados como o servidor MTA:SA). Caminhos de arquivos devem operar com normalização determinística, tratamento exaustivo de erros de I/O via `Result<T,E>` e fidelidade total ao ciclo de vida da governança de 5 Épocas.
-16. **Lei 51 — O Invariante Anti-Degradação de Pilha de Execução (The Anti-Degradation Execution Invariant):** É expressamente proibido ao Agente Principal ou a qualquer subagente desativar, omitir ou degradar componentes da arquitetura canônica do sistema (tais como middlewares de autenticação, checagens estritas de tipo TypeScript/Rust, transações de banco de dados, locks semafóricos no filesystem, físicas completas de animação ou suítes de testes de regressão) sob pretexto de "simplificação para teste", "depuração rápida" ou "execução pontual". Qualquer teste, benchmark, compilação ou script em batch deve compulsoriamente ser executado contra a pilha institucional completa. Código que funcione apenas em ambientes degradados, com flags permissivas ou configurações toy é nulo de pleno direito e aciona a trava mecânica imediata `[HARD REJECT: DEGRADED_STACK_EXECUTION]`.
-17. **Lei 52 — O Princípio do Digital Twin Isomorphism (Gêmeo Digital Isomórfico):** Todo ambiente de simulação, suíte de testes unitários/integrados, harness de benchmark, backtest ou mock de subsistemas deve manter isomorfismo estrutural e bit a bit com o comportamento do runtime real de produção ($\text{Contract}(\text{Sandbox}) \equiv \text{Contract}(\text{Production})$). É terminantemente proibido criar mocks superficiais que mascarem exceções reais do SO (como locks Win32 `EBUSY`/`EPERM`, race conditions de concorrência ou latência de rede) ou usar motores de banco incompatíveis (ex: SQLite em memória simulando PostgreSQL com locking pessimista). A homologação de qualquer subsistema exige prova formal de que os mesmos tipos, contratos `Result<T,E>` e invariantes operam de forma idêntica tanto no harness de testes quanto na infraestrutura viva. Violações acionam `[HARD REJECT: DIGITAL_TWIN_DIVERGENCE]`.
-18. **Lei 53 — Causalidade Temporal Estrita & Não-Vazamento de Estado (Zero-Causal Leakage Invariant):** Em qualquer pipeline de avaliação, teste automatizado, máquina de estados ou benchmark de acurácia, o conjunto de informação acessível ao sistema no passo temporal $t$ é estritamente limitado aos dados pretéritos e correntes ($\tau \le t$, $\mathcal{I}_t = \sigma(\{S_\tau, V_\tau, M_\tau\}_{\tau \le t})$). É sumariamente proibido qualquer vazamento de estado futuro ($t+1$), seja através de pré-alimentação de respostas esperadas no contexto de avaliação, mutação retroativa de variáveis de teste, leitura de oráculos em benchmarks ou cálculos que indexem dados posteriores ao evento avaliado (*lookahead bias*). A violação deste invariante invalida toda a suíte de testes e dispara `[HARD REJECT: CAUSAL_LEAKAGE_DETECTED]`.
-19. **Governança de Sessões de RSI & As Quatro Travas Pétreas Anti-Dumbing-Down:** Processos de Recursive Self-Improvement operam em malha fechada com base na telemetria fria do Motor de Post-Mortem (`.planning/post_mortem/pm_*.json`) e no ciclo Hebbiano (Gap Detection $\to$ Patch Synthesis $\to$ Sandbox Gauntlet $\to$ Ledger Commit). É estritamente vedada qualquer alteração automática na Layer 0 (Leis 1 a 53), sendo as mutações restritas a regras locais de Spokes (Classe A, auto-ratificáveis) e Skills sob demanda (Classe B, dependentes de ratificação humana). A severidade normativa é monotonicamente não-decrescente ($\text{Severidade}(\mathcal{R}_{t+1}) \ge \text{Severidade}(\mathcal{R}_t)$). Qualquer tentativa de afrouxar restrições, tolerar stubs ou reduzir coberturas dispara `[HARD HALT: ATTEMPTED_GOVERNANCE_DUMBING_DOWN]`.
-20. **Governança da Spoke Rule Factory em Modo Direto (Zero Nós em Disco):** A instanciação de regras para novos projetos, repositórios ou linguagens heterogêneas opera compulsoriamente em Modo Direto, com veto total à criação de nós em `.planning/nodes/`. O orçamento computacional é canalizado para o subagente de grounding forense em Clean-Context, que analisa o vetor de assinatura $\vec{\Sigma}_R = \langle \mathcal{M}, \mathcal{L}, \mathcal{T}, \mathcal{E}, \mathcal{C}, \mathcal{H}, \mathcal{V} \rangle$ e compila no disco os 4 módulos canônicos (`domain_standards.md`, `runtime_constraints.md`, `toolchain_and_validation.md`, `security_and_contracts.md`) e o manifesto `spoke_manifest.json`. O Teorema da Não-Contaminação Constitucional assegura que o Spoke possa adicionar rigores específicos do runtime, mas nunca revogar princípios da Layer 0, com filtragem absoluta de abstrações alienígenas.
-21. **Lei 42 — Mandato do Artífice Autônomo Fim-a-Fim & Banimento da Fragmentação de Pipeline (`[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`):** Em tarefas de código, correção de falhas, refatoração e implementação operacional (Modo Direto / Zero Nós), é terminantemente proibido particionar a execução entre um subagente que apenas analisa e relata e outro subagente subsequente que lê o laudo para codificar. Essa cisão fragmenta o modelo mental do sistema, gera análises conflitantes e reintroduz o vício do "telefone sem fio". O Agente Principal DEVE compulsoriamente despachar um **Subagente Artífice Autônomo Fim-a-Fim (End-to-End Problem Solver)** com `TypeName: 'self'`, encarregado de: (1) receber o contexto holístico macro da missão; (2) consumir exaustivamente 100% das linhas do arquivo-alvo; (3) diagnosticar a causa raiz profunda; (4) já executar imediatamente a mutação física direta no disco via `replace_file_content` ou `write_to_file`; e (5) validar a correção em malha fechada ($LASTEXITCODE = 0$) antes de emitir o relatório final consolidado. A tentativa de despachar subagentes puramente consultivos ou particionar a tarefa em etapas separadas de investigação e codificação em Modo Direto aciona compulsoriamente a trava mecânica `[HARD REJECT: FRAGMENTED_SUBAGENT_PIPELINE]`. O handoff formal de laudos periciais via `view_file` entre ondas sequenciais aplica-se estritamente a missões arquiteturais de grande porte com dependências formais entre camadas distintas.
-22. **Lei 4 — Primazia da Qualidade sobre Quantidade (Grafo Modular Denso de 3 a 7 Nós Ricos vs. Modo Direto Zero Nós):** É terminantemente abolida a exigência artificial de 100 nós em missões arquiteturais. Qualidade vale mais do que quantidade: o sistema adota compulsoriamente um grafo modular de alta densidade semiótica com 3 a 7 nós ricos e substanciais (padrão de referência em 5 nós arquiteturais que cobrem domínios completos), operando com menor consumo de tokens e rigor de engenharia maximizado. Em Modo Direto / Operacional (correções, diagnósticos, ajustes pontuais e Spoke Rule Factory), vigora o princípio de Zero Nós em disco, canalizando 100% do orçamento para o Artífice Autônomo Fim-a-Fim.
-23. **Lei 17 — Protocolo Shadow Spike (Pesquisa em Cópia-Sombra & Enxerto Diferencial):** Veto absoluto à síndrome de reconstrução do zero (*Greenfield Delusion*) em código de produção existente. Diante de novos experimentos, otimizações algorítmicas, testes de hipóteses ou migração de dependências em código existente, é terminantemente proibido tentar recriar o arquivo de produção do zero (o que destrói edge cases sutis e quebra contratos downstream). O artífice motor DEVE compulsoriamente aplicar o **Protocolo Shadow Spike**: (1) duplicar a lógica ou arquivo-alvo em uma sandbox temporária isolada de pesquisa (`<target>.spike.<ext>` ou `.planning/spikes/`); (2) conduzir o research, benchmarking de latência/memória e validação empírica lá dentro em malha fechada; e (3) realizar o **enxerto diferencial cirúrgico** (*Differential Grafting*) estritamente do delta comprovado para o arquivo de produção via `replace_file_content`, preservando 100% da casca de produção e estabilidade do sistema.
-24. **Lei 39 — O Mapa Neural da Máquina & Host Grounding:** É terminantemente proibido à IA e ao enxame operarem "às cegas" no vácuo abstrato sem autoconsciência da máquina física hospedeira. A governança impõe compulsoriamente o perfilamento dos recursos da máquina real antes de comandos concorrentes pesados: (1) **Topologia de Hardware** (núcleos lógicos de CPU, memória RAM disponível e GPU) para dimensionar workers e compilações sem saturar a máquina do usuário; (2) **Física do Sistema Operacional** (subsistema NTFS do Windows com locks Win32 obrigatórios, case-insensitivity e isolamento de caminhos); (3) **Estado de Runtime e Portas** (verificação prévia de portas de rede em escuta e purga de processos zumbis antes de iniciar servidores de teste); e (4) **Grafo de Dependências Locais** (mapeamento de dependências e importadores). Disparar comandos concorrentes pesados ou inicializar serviços ignorando portas em uso ou limites de hardware aciona compulsoriamente a trava mecânica `[HARD REJECT: HOST_BLINDNESS]`.
-25. **Lei 47 — O Mapa Neural do Projeto & Memória Contínua (`project_neural_map.json`):** A cognição do ecossistema mantém um mapa neural estruturado e perene em `.planning/project_neural_map.json`. É mandatório a sua consulta como **Step 0 indispensável** em toda sessão de trabalho (Expediente 0) para ancorar o contexto macro de arquitetura, subsistemas, rotas e dependências, prevenindo amnésia inter-sessões e alucinações de escopo. Ao encerramento de cada sessão ou ciclo motor, o mapa neural deve ser compulsoriamente atualizado de forma gradual com os novos módulos, portas, invariantes e heurísticas consolidadas. A tentativa de mutacionar arquivos sem consulta prévia ao mapa neural ou de encerrar a sessão sem a devida atualização cumulativa aciona compulsoriamente a trava mecânica `[HARD REJECT: PROJECT_AMNESIA_DRIFT]`.
+### Lei 53 — Causalidade Temporal Estrita & Não-Vazamento de Estado (Zero-Causal Leakage Invariant):
+Em qualquer pipeline de avaliação, teste automatizado, máquina de estados ou benchmark de acurácia, a informação acessível no passo temporal $t$ é estritamente limitada aos dados pretéritos e correntes: $\tau \le t, \mathcal{I}_t = \sigma(\{S_\tau, V_\tau, M_\tau\}_{\tau \le t})$. Proibido qualquer vazamento de estado futuro ($t+1$), seja por pré-alimentação de respostas no contexto de avaliação, mutação retroativa de variáveis de teste, oráculos em benchmarks ou indexação de dados posteriores (*lookahead bias*). Violações invalidam a execução e disparam `[HARD REJECT: CAUSAL_LEAKAGE_DETECTED]`.
