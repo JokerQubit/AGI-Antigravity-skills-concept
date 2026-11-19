@@ -1,714 +1,155 @@
 ---
 name: fractal_thought_graph
-description: "v5.0 — The Autonomous Hyper-Cortex Sovereign Engine. Manual técnico e playbook operacional para gestão do substrato de pensamento (.planning/), coordenação harmônica entre o grafo fractal estigmérgico e o dynamic_thought_router (ToT com poda fiduciária A* e GoT com fusão multilinear e relaxamento cíclico), bifurcação de missões (Arquitetural Grafo Modular Denso 3 a 7 nós com padrão áureo de 5 nós vs Direto Zero Nós), modelagem determinística do manifesto graph.json e thought_graph.json, e despacho concorrente atômico 1:1 de subagentes sob monitoramento metacognitivo de 2ª ordem."
+description: "Hyper-Cortex v6.0 Project Neural Map & Lean Modular Thought Graph. Use when creating or refreshing .planning/project_neural_map.json and PROJECT_NEURAL_MAP.md (architecture topology, API/type contracts, dependency graph, ADRs, anti-pattern registry), decomposing Architectural missions into a 3-7 node Lean Modular Graph in .planning/nodes/, compiling Epoch II implementation_plan.md dispatch matrices, or reopening Epoch I after a Gauntlet [HARD REJECT]."
 ---
 
-# Fractal Thought Graph Operations Playbook (v5.0 — The Autonomous Hyper-Cortex | Leis 41, 44 & 45)
+# Fractal Thought Graph & Project Neural Map Playbook — v6.0
 
-Manual prático de orquestração do substrato cognitivo pré-execução (`.planning/`). Estabelece a metodologia de expansão de pensamento de nível AGI com bifurcação determinística de modo e integração profunda com o **Dynamic Thought Router** (`skills/dynamic_thought_router`):
-1. **MODO ARQUITETURAL / PLATAFORMA:** **Grafo Modular Denso de Alta Densidade Semiótica (3 a 7 nós ricos e substanciais, com padrão áureo de 5 nós arquiteturais)** em `.planning/nodes/`. Cada nó cobre um domínio sistêmico completo (Domínio/Portas, Adaptadores/Infra, Concorrência/Kernel, UI/Física Perceptual, Auditoria/Contratos), equivalendo pelo conteúdo de dezenas de nós atômicos fragmentados. Primazia absoluta de **Qualidade sobre Quantidade (Lei 4)**: menor consumo de tokens, máxima densidade técnica e veto definitivo à inflação estocástica de nós vazios. Coordenado via Chief Ontologist empírico e topologias avançadas (ToT e GoT).
-2. **MODO DIRETO / OPERACIONAL / INVESTIGATIVO:** **Zero nós em disco (`nodes_floor: 0`)**. É terminantemente proibido criar arquivos markdown em `.planning/nodes/`. O plano executivo é gerado diretamente no `implementation_plan.md` e todo o orçamento de tokens é preservado para a Dupla Investigativa e para os subagentes que codificam os arquivos diretamente sob Linear Causal Stream (LCS) ou Dialética Adversarial (DAS).
+Manual operacional do substrato cognitivo persistido em disco (`.planning/`). Governa dois pilares críticos do **Hyper-Cortex v6.0**:
+1. **O Mapa Neural de Elite do Projeto (`.planning/project_neural_map.json` + `PROJECT_NEURAL_MAP.md`)** — memória viva anti-amnésia obrigatória em **100% das missões**.
+2. **A Bifurcação de Planejamento Estrutural:** **Grafo Modular Denso (3 a 7 nós ricos, âncora áurea em 5 nós)** no Modo Arquitetural vs. **Zero nós em disco (`nodes_floor: 0`)** no Modo Direto.
 
-Governa a conexão polímata universal entre domínios correlacionados e não-correlacionados com:
-1. **Ingestão Estratégica via Subagente Prompt Refiner** (compilação do `mission_dossier.md`, extração do vetor $\mathbf{x}$ e classificação de modo).
-2. **Dynamic Thought Router Integrado** (seleção e coordenação entre LCS, ToT, GoT e DAS com persistência em `.planning/thought_graph.json`).
-3. **Pesquisa Empírica via Chief Ontologist (Arq.) ou Dupla Investigativa (Direto)**.
-4. **Barramento Sináptico Neural (`synaptic_bus.json`)** conectando os subagentes em rede neural viva.
-5. **Despacho Atômico 1:1 de Subagentes** com modelo **Flash Low/Medium/High**.
-6. **Governança por Expedientes Cognitivos (Work Shifts)** e **State Ledger Append-Only** (`.planning/ledger/`).
-7. **Metacognição de 2ª Ordem ($M_2$)** com monitoramento contínuo da incerteza epistêmica ($\varepsilon_t$).
+> **SSOT & Cross-References:** Classificação de modo e Dossiê residem em [`universal_prompt_refiner`](../universal_prompt_refiner/SKILL.md). Fórmulas de ToT ($A^*$), GoT ($\mathcal{F}_{\text{fuse}}$) e `thought_graph.json` residem em [`dynamic_thought_router`](../dynamic_thought_router/SKILL.md). Schema completo do `synaptic_bus.json`, contratos em 5 fases e execução `/swarm` residem em [`swarm_orchestration`](../swarm_orchestration/SKILL.md). Hierarquia de modelos e Quota Brake $\le 10\%$ residem em [`adaptive_token_governance`](../adaptive_token_governance/SKILL.md).
 
 ---
 
-## 1. Topologia Física no Disco (`.planning/`)
+## 1. Padrão de Elite do Project Neural Map (Lei 47 — Anti-Amnesia Invariant)
+
+Todo repositório ativo mantém dois artefatos sincronizados: `.planning/project_neural_map.json` (máquina) e `PROJECT_NEURAL_MAP.md` (leitura humana e onboarding rápido). Encerrar ou mutar subsistemas sem consultar e atualizar o mapa dispara `[HARD REJECT: PROJECT_AMNESIA_DRIFT]`.
+
+### 1.1. Os 6 Domínios Obrigatórios do Mapa Neural
+| Seção | Conteúdo Exigido (Zero Generalidades) |
+|---|---|
+| **1. Architecture Topology** | Camadas (Domain, Ports, Adapters, UI, Kernel), bounded contexts, entrypoints reais, boundaries de processo/thread e runtime alvo (Web, Rust, Lua/DX9, etc.). |
+| **2. API & Type Contracts** | Interfaces públicas exportadas, uniões discriminadas `Result<T, E>`, schemas JSON/SQL, eventos IPC/HTTP e invariantes de mutação/locks. |
+| **3. Dependency Graph** | Arestas `module -> dependency` internas, pacotes externos críticos, recursos compartilhados com contenção (`synaptic_bus.json`, WAL, portas TCP). |
+| **4. ADR Decisions** | Registro conciso de *Architecture Decision Records* (`ADR-001...`): contexto, decisão adotada, alternativas descartadas e consequências/trade-offs. |
+| **5. Failure & Anti-Pattern Registry** | Falhas já encontradas no projeto, armadilhas de SO/runtime (ex: Win32 `EBUSY`, `EADDRINUSE`, hydration mismatch) e padrões explicitamente banidos. |
+| **6. Refresh Metadata & Triggers** | Timestamp ISO-8601, commit SHA base, cobertura verificada e dono da última atualização. |
+
+### 1.2. Schema Canônico (`.planning/project_neural_map.json`)
+```json
+{
+  "map_version": "6.0.0",
+  "project_name": "<repo_name>",
+  "updated_at": "2026-11-19T13:40:00Z",
+  "base_commit": "<git_sha>",
+  "architecture_topology": {
+    "runtime_stack": ["TypeScript", "Node.js", "React"],
+    "layers": [
+      { "name": "core/domain", "path": "src/core/domain", "responsibility": "Entidades puras e Result<T,E>", "dependencies": [] },
+      { "name": "adapters/infra", "path": "src/adapters/infra", "responsibility": "AtomicSwap, FsLockEngine, SQLite WAL", "dependencies": ["core/domain"] }
+    ],
+    "entrypoints": ["src/main.ts"]
+  },
+  "api_and_type_contracts": [
+    {
+      "contract_id": "IStoragePort",
+      "file": "src/core/ports/IStoragePort.ts",
+      "signature": "saveAtomic(key: string, payload: Uint8Array): Promise<Result<void, StorageError>>",
+      "invariants": ["SHA-256 pre/post swap", "O_CREAT|O_EXCL lock"]
+    }
+  ],
+  "dependency_graph": {
+    "edges": [
+      { "from": "src/adapters/infra/sqliteStore.ts", "to": "src/core/ports/IStoragePort.ts", "kind": "implements" }
+    ],
+    "shared_resources": ["data/app.db", ".planning/synaptic_bus.json"]
+  },
+  "adr_decisions": [
+    {
+      "id": "ADR-001",
+      "title": "WAL por domínio + AtomicSwap para snapshots",
+      "status": "ACCEPTED",
+      "decision": "Isolar escrita WAL e usar staging .tmp + fsync + rename.",
+      "rejected": ["JSON compartilhado sem lock (EBUSY em NTFS)"]
+    }
+  ],
+  "failure_and_antipattern_registry": [
+    {
+      "id": "FAIL-001",
+      "symptom": "EBUSY ao sobrescrever config em workers paralelos no Windows",
+      "root_cause": "Escrita concorrente sem FsLockEngine e rename no mesmo volume",
+      "banned_pattern": "fs.writeFileSync direto em arquivo compartilhado"
+    }
+  ]
+}
+```
+
+### 1.3. Gatilhos Obrigatórios de Auto-Refresh
+1. **Step 0 (Leitura Obrigatória):** Prompt Refiner e qualquer worker leem `project_neural_map.json` antes de planejar ou editar. Se não existir no repositório, sua criação é o primeiro passo estrutural.
+2. **Refresh Incremental Obrigatório:** Atualiza-se ambos (`project_neural_map.json` + `PROJECT_NEURAL_MAP.md`) sempre que: (a) um novo módulo, porta ou rota é criado; (b) uma assinatura pública ou schema muda; (c) uma decisão arquitetural (ADR) é tomada; (d) um bug novo revela um modo de falha reutilizável; ou (e) antes do sign-off da Época IV e commit no GitHub.
+
+---
+
+## 2. Topologia Física no Disco (`.planning/`) & Bifurcação de Modo
 
 ```text
 .planning/
-├── mission_dossier.md          # Dossiê Executivo da Missão (compilado na Época 0 pelo Prompt Refiner)
-├── refiner_seal.json           # Selo Criptográfico Estigmérgico de Governança do Turno
-├── synaptic_bus.json           # Barramento Sináptico Neural: Ledger de contratos, tipos, status HOLD/GO e sinapses
-├── thought_graph.json          # Topologia Cognitiva Ativa do Dynamic Thought Router (LCS/ToT/GoT/DAS)
-├── expediente_state.json       # Persistência de Estado do Turno/Expediente Cognitivo Atual
-├── graph.json                  # Manifesto Central Consolidado: Grafo, arestas tipadas e primitivas
-├── ledger/                     # Livro-Razão Transacional Imutável Append-Only (txn_XXXX.json)
-├── mailboxes/                  # Caixas Postais Estigmérgicas para Alertas Assíncronos Inter-Subagentes
-├── investigations/             # Laudos periciais brutos de alta fidelidade (Lei 42)
-│   ├── inv_001_root_cause.md   # Laudo microscópico emitido pelo Subagente Alfa
-│   └── inv_002_blast_radius.md # Laudo de raio de impacto emitido pelo Subagente Beta
-├── node_000_root.md            # [MODO ARQUITETURAL APENAS] Decomposição Ontológica Raiz
-├── hypergraph_seed.json        # [MODO ARQUITETURAL APENAS] Semente Empírica: Lista dos 3 a 7 nós densos
-└── nodes/                      # [MODO ARQUITETURAL APENAS] Grafo Modular Denso (3 a 7 nós ricos, padrão áureo de 5 nós)
-    ├── node_001_domain_ports.md         # Domínio Central, Entidades & Portas Abstratas
-    ├── node_002_storage_infra.md        # Adaptadores de Infraestrutura, ACID WAL & Atomic Swap
-    ├── node_003_concurrency_kernel.md   # Concorrência, Event Loops, Trava Semafórica FsLockEngine
-    ├── node_004_ui_perceptual_craft.md  # UI Titã, Cinemática de Molas 2ª Ordem & Glassmorphism
-    └── node_005_audit_contracts.md      # Contratos Formais, Red Team Pre-Mortem & Telemetria
-
-> ⚠️ REGRA DE OURO DO MODO DIRETO: Se a missão for classificada como DIRECT_OPERATIONAL, o diretório .planning/nodes/ NÃO é criado/populado. Zero arquivos gerados em nodes/. Todo planejamento vai direto para implementation_plan.md.
+├── project_neural_map.json     # [SEMPRE] Mapa Neural Estrutural (máquina)
+├── mission_dossier.md          # [Época 0] Dossiê Executivo do Prompt Refiner
+├── refiner_seal.json           # [Época 0] Selo Estigmérgico do Turno
+├── synaptic_bus.json           # [Enxame] Barramento neural, contratos 5 fases e engramas
+├── thought_graph.json          # [Router] Topologia ativa (LCS / ToT / GoT / DAS)
+├── expediente_state.json       # [Shifts] Estado do expediente e checkpoint de quota
+├── ledger/                     # [Sempre] State Ledger append-only (txn_XXXX.json)
+├── post_mortem/                # [Pós-Época IV] Telemetria fria pm_<session>.json
+├── graph.json                  # [MODO ARQUITETURAL APENAS] Manifesto consolidado de nós/arestas
+├── hypergraph_seed.json        # [MODO ARQUITETURAL APENAS] Semente dos 3-7 nós densos
+└── nodes/                      # [MODO ARQUITETURAL APENAS] 3 a 7 nós ricos (padrão áureo = 5)
+    ├── node_000_root.md
+    ├── node_001_domain_ports.md
+    ├── node_002_storage_infra.md
+    ├── node_003_concurrency_kernel.md
+    ├── node_004_ui_perceptual_craft.md
+    └── node_005_audit_contracts.md
 ```
+*(No root do repositório ou em `.planning/`: manter `PROJECT_NEURAL_MAP.md` sincronizado com `project_neural_map.json`.)*
+
+> **Regra de Ouro do Modo Direto:** Se `mission_type == "DIRECT_OPERATIONAL"`, `.planning/nodes/`, `node_000_root.md`, `hypergraph_seed.json` e `graph.json` **NÃO são criados** (`nodes_floor: 0`). O plano vai direto para `implementation_plan.md` e a execução roda via **Artífice Autônomo Fim-a-Fim** (`TypeName: "self"`).
 
 ---
 
-## 1.1. A Coexistência Harmônica: Grafo Fractal Estigmérgico vs. Dynamic Thought Router
+## 3. Época I: Chief Ontologist (Modo Arquitetural) & Grafo Modular Denso (3–7 Nós)
 
-O ecossistema v5.0 supera a falsa dicotomia entre planejamento persistido e raciocínio online através da separação formal de papéis:
+Em missões `ARCHITECTURAL`, o **Chief Ontologist** (`gemini-4-neon-high`) consome o `project_neural_map.json` e o `mission_dossier.md`, varre empiricamente o código existente e decompõe o sistema em **3 a 7 nós densos** (âncora em **5 nós**) cobrindo os **8 Eixos Ontológicos Nativos**:
+1. *Domain Logic & Business Invariants* (`Result<T,E>`, máquinas de estado)
+2. *Data Contracts & Atomic Persistence* (schemas, WAL, `DeterministicAtomicSwap`)
+3. *Concurrency & Real-Time Synchronization* (`FsLockEngine`, filas lock-free, zero alocação em frame quente)
+4. *HCI, Gestures & Spring Kinematics* (molas 2ª ordem, 60fps/120Hz)
+5. *Specular Visuals & Photorealistic Micro-Assets* (`generate_image`, zero SVG genérico/emoji)
+6. *Physical Acoustic Foley & Micro-Audio* (`scripts/sfx_tool.py` CC0, Spatial HRTF)
+7. *Silent Failure Modes & Chaos Engineering* (desconexões, Win32 `EBUSY`, pressão de memória)
+8. *Forensic Telemetry & Auditable State Trails* (logs estruturados, zero erros de console)
 
-1. **O Grafo Fractal Estigmérgico (Substrato Espacial & Histórico):**
-   - Opera no domínio da persistência em disco (`.planning/nodes/`, `graph.json`, `synaptic_bus.json`).
-   - Define a ontologia estática e evolutiva do sistema, a decomposição em Grafo Modular Denso (3 a 7 nós de alta densidade semiótica, padrão áureo de 5 nós arquiteturais que cobrem domínios inteiros) em missões arquiteturais, os contratos fiduciários e o histórico transacional append-only em `.planning/ledger/`.
-   - Garante rastreabilidade, auditabilidade pós-sessão e imunidade contra perda de memória de trabalho (*zero context rot*).
+### 3.1. Anatomia Obrigatória de Cada Nó Denso (`node_00X_<slug>.md`)
+Cada nó equivale a dezenas de nós fragmentados pela densidade técnica (*"Água no Deserto"*):
+- **`[SWARM_META_IDENTITY]`:** `[MY_SWARM_ROLE]`, `[MY_SYNAPTIC_ANCHOR]`, `[MY_SWARM_DELIVERABLE]`.
+- **`[SYNAPTIC_INPUTS]` & `[SYNAPTIC_OUTPUTS]`:** Contratos consumidos e emitidos no `synaptic_bus.json`.
+- **Contratos Tipados & Micro-Mecanismos:** Assinaturas exatas `Result<T,E>`, algoritmos concretos, zero pseudo-código vago.
+- **Modos Silenciosos de Falha & Pre-Mortem T+12 Meses:** Cenários de corrida, *timing attacks*, leaks e mitigações.
+- **`[PEER_REVIEW_PROTOCOL]`:** Validação bilateral com nós pares (`[PEER_CONSENT]` ou `[PEER_VETO]`).
+- **Checklist Forense Binário `[0 | 1]`:** Critérios objetivos verificáveis na Época IV.
 
-2. **O Dynamic Thought Router (Substrato Temporal & Operacional Online):**
-   - Opera no domínio da inferência ativa e da deliberação em tempo de execução (`skills/dynamic_thought_router`, `.planning/thought_graph.json`).
-   - Roteia dinamicamente o fluxo cognitivo de cada subagente entre 4 topologias: Linear Causal Stream (LCS), Tree of Thoughts (ToT), Graph of Thoughts (GoT) e Dialectical Adversarial Synthesis (DAS), baseado no vetor de atributos da demanda $\mathbf{x} = \langle D_{\text{ont}}, U_{\text{unc}}, B_{\text{bif}}, C_{\text{conc}}, S_{\text{sens}}, P_{\text{risk}} \rangle \in [0, 1]^6$.
-
-### Coordenação Harmônica de ToT e GoT com o Grafo Fractal:
-
-```text
-┌───────────────────────────────────────────────────────────────────────────────────────────┐
-│                    COORDENAÇÃO FRACTAL + DYNAMIC THOUGHT ROUTER v5.0                      │
-├───────────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                           │
-│   [GRAFO FRACTAL ESTRUTURAL]                     [DYNAMIC THOUGHT ROUTER EM EXECUÇÃO]    │
-│   • .planning/nodes/ (3 a 7 nós densos, áureo: 5)• .planning/thought_graph.json           │
-│                                                                                           │
-│   ┌─────────────────────────────┐                ┌─────────────────────────────────────┐  │
-│   │ Nó Isolado com Bifurcação   │ ─────────────> │ Tree of Thoughts (ToT)              │  │
-│   │ Algorítmica ou Concorrência │                │ • Poda Fiduciária A* (f(n) >= 0.75) │  │
-│   │ (ex: node_001, node_003)    │ <───────────── │ • Eliminação dura de stubs/locks    │  │
-│   └─────────────────────────────┘   Caminho      └─────────────────────────────────────┘  │
-│                                      Ótimo Podado                                         │
-│                                                                                           │
-│   ┌─────────────────────────────┐                ┌─────────────────────────────────────┐  │
-│   │ Nós Interdependentes em     │ ─────────────> │ Graph of Thoughts (GoT)             │  │
-│   │ Malha Cross-Domain          │                │ • Fusão Multilinear F_fuse          │  │
-│   │ (UI GPU + ACID Storage)     │ <───────────── │ • Agregação Sináptica A_synaptic    │  │
-│   └─────────────────────────────┘   Contratos    │ • Relaxamento Cíclico R_relax       │  │
-│                                      Fundidos    └─────────────────────────────────────┘  │
-│                                                                                           │
-└───────────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-#### A. Coordenação Tree of Thoughts (ToT) no Grafo Fractal:
-- **Quando acionada:** Ao saturar um nó que apresenta $B_{\text{bif}} \ge 0.4$ (espaço de busca combinatorial, algoritmos de renderização, balanceamento de cache ou isolamento de falhas multi-hipótese).
-- **Mecanismo Operacional:**
-  1. O subagente do nó expande de 2 a 4 ramificações candidatas ($v_1, v_2, v_3$).
-  2. Aplica a **Função de Avaliação Fiduciária $A^*$**: $f(n) = g(n) + h(n)$, onde $h(n)$ pondera tipagem estrita `Result<T,E>` (0.35), eficiência de tempo/memória (0.25), resiliência a modos de falha (0.25) e clareza de contrato (0.15).
-  3. **Poda Fiduciária Dura:** Qualquer ramo com $f(n) < \theta_{\text{prune}} = 0.75$ ou com violações constitucionais (stubs, `any`, síntese de áudio senoidal) é podado imediatamente.
-  4. O nó persistido no disco `.planning/nodes/node_XXX.md` registra formalmente o ramo vencedor e a justificativa estigmérgica da poda dos demais, eliminando suposições estocásticas.
-
-#### B. Coordenação Graph of Thoughts (GoT) no Grafo Fractal:
-- **Quando acionada:** Em sistemas em malha com alta interdependência cruzada ($D_{\text{ont}} \ge 0.6, C_{\text{conc}} \ge 0.7$), onde nós de domínios ortogonais (ex: frame rate de GPU na UI, persistência atômica WAL no storage, sincronização assíncrona de rede) colidem em contratos compartilhados.
-- **Mecanismo Operacional:**
-  1. **Operador de Fusão de Pensamento ($\mathcal{F}_{\text{fuse}}$):** Recebe os contratos emitidos por nós pares e sintetiza nós de agregação que preservam todos os invariantes simultaneamente sem colisão de thread ou degradação do SLA sub-16ms.
-  2. **Operador de Agregação Sináptica ($\mathcal{A}_{\text{synaptic}}$):** Atualiza `.planning/synaptic_bus.json` com resolução determinística de precedência topológica, sincronizando os sinais `CONTRACT_HOLD` e `CONTRACT_STABLE (GO)`.
-  3. **Operador de Relaxamento Cíclico ($\mathcal{R}_{\text{relax}}$):** Detecta acoplamentos circulares entre nós do hipergrafo ($A \to B \to A$) e desacopla via injeção de dependência e portas assíncronas isoladas.
+### 3.2. Manifesto `graph.json`
+Consolida `nodes[]` (com `id`, `axis`, `status: "SATURATED"`, `target_files[]`, `checklist_ref`), `edges[]` (dependências tipadas entre nós) e `exported_primitives{}` (constantes calibradas como `spring_stiffness`, `max_latency_sla_ms`).
 
 ---
 
-## 2. Playbook da Época 0: Subagente Prompt Refiner & Dossiê de Missão
+## 4. Época II: Matriz Neural de Despacho (`implementation_plan.md`)
 
-Antes de qualquer dedução arquitetural ou despacho de nós, o Agente Principal despacha um subagente especialista dedicado para auditar e compilar a solicitação do usuário.
-
-### Invocação do Subagente Prompt Refiner:
-```json
-{
-  "Subagents": [
-    {
-      "TypeName": "self",
-      "Role": "Prompt Refiner & Epistemic Compiler",
-      "Model": "flash",
-      "Prompt": "Você é o especialista soberano em compilação epistêmica de demandas de engenharia. Analise a demanda do usuário de cima a baixo. Execute compulsoriamente o Protocolo de Deconstrução Forense em 4 Camadas (Lei 38): (1) Contratos Explícitos unívocos, (2) Contratos Implícitos deduzidos matematicamente (idempotência, persistência atômica, tipagem estrita Result/Option, concorrência, latência sub-16ms), (3) Engenharia Reversa Pre-Mortem sob a premissa irrevogável de colapso em T+6 meses com nós atômicos de blindagem, (4) Checklist Dinâmico de Duplo-Check (Two-Man Rule). Injete as palavras-chave mandatórias das rules e skills ('Água no Deserto', 'Cinemática de Molas dos Titãs', 'Micro-ativos táteis reais', 'Áudio acústico real', 'Clean Architecture Defensiva', 'Autonomous Computer Use OODA', '1:1 Subagente por Nó', 'Inspeção Visual no Chrome Real'). Persista o resultado integral em .planning/mission_dossier.md."
-    }
-  ]
-}
-```
-
-### Estrutura do Dossiê de Missão (`.planning/mission_dossier.md`):
-```markdown
-# Executive Mission Dossier: <Nome da Missão>
-
-## 1. Decomposição de Objetivos & Contexto Fiduciário
-- Meta Comercial & Operacional Real (Zero Cosplay)
-- Stakeholders, Nível de Criticidade e SLA de Desempenho
-
-## 2. Injeção de Diretrizes Constitucionais Mandatórias
-- Caminho "Água no Deserto": [Quais variáveis exigem dissecação profunda]
-- Padrão dos Titãs (Linear/Apple/Stripe): [Requisitos de molas de 2ª ordem e latência sub-16ms]
-- Mídia & Áudio Reais: [Mapeamento de renders macro via generate_image e Foley via sfx_tool.py]
-- Clean Architecture & Computer Use: [Estrutura defensiva, Result/Option, Atomic Swap e Ciclo OODA]
-
-## 3. Matriz de Ativação de Skills & Regras
-- Skills Ativadas: [fractal_thought_graph, modern_ui_craft, tactile_audio_sfx, hardened_clean_architecture, browser_visual_reasoning, autonomous_computer_use]
-- Tier de Complexidade ACC: Sessão Soberana v5.0 — Grafo Modular Denso (3 a 7 Nós Ricos, Padrão Áureo = 5 Nós; Qualidade sobre Quantidade)
-
-## 4. Protocolo de Deconstrução Forense Prévia (Lei 38)
-### 4.1 Camada 1: Contratos Explícitos Mapeados (CE-01 ... CE-n)
-### 4.2 Camada 2: Contratos Implícitos (A Física Oculta: Idempotência, Mutex, Tipagem Estrita)
-### 4.3 Camada 3: Engenharia Reversa Pre-Mortem (Autópsia de Falha Catastrófica em T+6 Meses)
-- Vetores de Quebra Analisados & Nós de Blindagem Hipergráfica Criados
-### 4.4 Camada 4: Manifesto de Duplo-Check Fiduciário (Two-Man Rule Sign-off)
-- [x] [CONSTRUCTION_FIDUCIARY: APPROVED]
-- [x] [RED_TEAM_ADVERSARIAL: APPROVED]
-
-## 5. Síntese Dinâmica do Esquadrão Tático (Lei 32 & Lei 40)
-- Análise de Modos de Falha: [Quais são os pontos físicos exatos onde a solução pode colapsar?]
-- [BESPOKE_SQUAD_ROSTER] (Especialistas únicos gerados sob medida para o domínio da missão):
-  * Especialista 1: [Papel ultra-específico, ex: "Zero-Allocation RingBuffer Concurrency Specialist"]
-  * Especialista 2: [Papel ultra-específico, ex: "Two-Phase Commit Distributed Ledger Specialist"]
-  * Especialista 3: [Papel ultra-específico, ex: "Framer-Motion 2nd Order Damped Spring Specialist"]
-```
+Emitida antes da Época III com `RequestFeedback: true` para aprovação humana única (`"Proceed"`):
+1. **Matriz 1:1 Nó/Arquivo vs. Worker/Artífice:** `FileSet` estritamente disjuntos, modelo atribuído (`gemini-4-hydrogen-high` / `gemini-4-hydrogen-xhigh` / `gemini-4-neon-high`) e dependências.
+2. **Mapa de Contratos Sinápticos:** Todos os contratos estruturais em `CONTRACT_STABLE` (zero `DRAFT`/`VERIFYING` restantes).
+3. **Checklists Forenses Binários:** Critérios específicos por alvo (zero-stub, tipagem, stack completa Lei 51, digital twin Lei 52, causalidade Lei 53).
+4. **Sequenciamento de Handoffs & Backup Git:** Ordem das ondas, proporção de verificadores (1 verificador para 2–4 autores) e ponto de backup via `github_sovereign_workflow`.
 
 ---
 
-## 3. Protocolo Metacognitivo de 2ª Ordem: Trava Epistêmica (`[EPISTEMIC_HALT]`), Calibração de $\varepsilon_t$ & Sondas Investigativas
-
-No Hyper-Cortex v5.0, a cognição opera com separação entre o **Motor de Execução Cognitiva ($C_1$)** e o **Córtex Monitor de Segunda Ordem ($M_2$)**. É expressamente proibida a inferência estocástica desgovernada ou a mutação física de arquivos sob regime de incerteza crítica ($\varepsilon_t > 0.40$).
-
-### 3.1. Formalismo Matemático da Incerteza Epistêmica ($\varepsilon_t$)
-A variável escalar $\varepsilon_t \in [0.0, 1.0]$ quantifica a entropia do raciocínio a cada etapa:
-$$\varepsilon_t = 0.30 \cdot \mathcal{H}_{\text{entropy}}(S_t) + 0.30 \cdot \mathcal{D}_{\text{disagreement}}(\mathcal{W}_t) + 0.25 \cdot \Delta_{\text{drift}}(G_0, G_t) + 0.15 \cdot \Omega_{\text{satisficing}}(A_t)$$
-
-- $\mathcal{H}_{\text{entropy}}(S_t)$: Entropia normalizada sobre o espaço de hipóteses concorrentes baseada em evidências empíricas $E_t$.
-- $\mathcal{D}_{\text{disagreement}}(\mathcal{W}_t)$: Divergência Jensen-Shannon entre mentes do enxame (ex: Dupla Investigativa Alfa vs. Beta).
-- $\Delta_{\text{drift}}(G_0, G_t)$: Afastamento semântico/estrutural em relação ao vetor de intenção original $G_0$.
-- $\Omega_{\text{satisficing}}(A_t)$: Penalidade por atalhos ou preguiça algorítmica (`any`, stubs, ausência de física de molas).
-
-### 3.2. Os Três Regimes de Convicção Epistêmica:
-| Faixa de $\varepsilon_t$ | Estado Epistêmico | Regime Operacional | Ação do Hyper-Cortex |
-|---|---|---|---|
-| **$0.00 \le \varepsilon_t \le 0.15$** | `ZONE_GREEN` (Certeza Determinística) | Ação Motora Destravada | Subagentes motores autorizados a mutações atômicas via ferramentas de escrita. |
-| **$0.15 < \varepsilon_t \le 0.40$** | `ZONE_AMBER` (Atrito Probabilístico) | Deliberação Focalizada | Elevação mandatória para **Flash Medium/High**. Injeção de verificação empírica via comando ou probe estigmérgico antes de mutar arquivos. |
-| **$\varepsilon_t > 0.40$** | `ZONE_RED` (Ambiguidade Crítica) | Congelamento Imediato | **Disparo compulsório do gatilho `[EPISTEMIC_HALT]`**. Nenhuma mutação de arquivo é permitida. |
-
-### 3.3. Catálogo Exaustivo dos Cinco Gatilhos Binários de Parada:
-1. **`HALT_CRITICAL_UNCERTAINTY` ($\varepsilon_t > 0.40$):** Incerteza crítica. Congela escrita e exige formulação formal da dúvida em `synaptic_bus.json`.
-2. **`HALT_CONFIRMATION_BIAS_LOOP`:** Ruminação estocástica por 2 turnos consecutivos sem emitir comando determinístico ou ler arquivo real via `view_file`.
-3. **`HALT_GOAL_DRIFT_EXCEEDED` ($\Delta_{\text{drift}} > 0.35$):** Tentativa de expandir escopo para arquivos ou subsistemas fora do `mission_dossier.md`.
-4. **`HALT_PREMATURE_CONVERGENCE`:** Tentativa de fechar investigação ou design sem confrontar no mínimo duas hipóteses contrastantes ($K \ge 2$) ou Antítese Red Team.
-5. **`HALT_CONSECUTIVE_REPAIR_COLLAPSE`:** Duas tentativas consecutivas de auto-cura falham ($LASTEXITCODE \ne 0$). Terceira tentativa às cegas é banida.
-
-### 3.4. Protocolo de Recuperação Tripartite Pós-Halt:
-1. **Fase de Congelamento (Freeze):** Persistência do estado exato da divergência em `.planning/expediente_state.json`.
-2. **Fase da Sonda de Fato Bruto (Root-Probe):** Despacho de probe empírica isolada com `TypeName: "research"` para inspecionar arquivos, rodar testes ou consultar documentação oficial.
-3. **Fase de Re-Ancoragem Fiduciária (Re-Anchoring):** Recálculo de $\varepsilon_t$. Somente se $\varepsilon_t \le 0.15$, o estado transiciona de `HALT` para `RESUME_GO`.
-
----
-
-## 4. Playbook da Época I (Fase A): Subagente Chief Ontologist (Arq.) ou Dupla Investigativa (Direto)
-
-> ⚠️ DIFERENCIAÇÃO CRÍTICA DE EXECUÇÃO NA ÉPOCA I:
-> - **Se mission_type == "ARCHITECTURAL":** O Chief Ontologist gera `node_000_root.md` e `hypergraph_seed.json` para ancorar a geração do **Grafo Modular Denso de Alta Densidade Semiótica (3 a 7 nós ricos e substanciais, com padrão áureo de 5 nós arquiteturais)** em `.planning/nodes/`. Cada nó equivale a dezenas de nós atomizados com economia drástica de tokens e primazia da qualidade técnica.
-> - **Se mission_type == "DIRECT_OPERATIONAL":** A fase do Chief Ontologist e a saturação de nós são SUBSTITUÍDAS pela ativação imediata da **Dupla Investigativa (Two-Mind Minimum)**:
->   1. **Subagente Alfa (Causal Root Cause):** disseca a falha, fluxo interno e causas raízes microscópicas nos arquivos reais.
->   2. **Subagente Beta (Downstream Blast Radius):** disseca efeitos colaterais, quebra de contratos e dependências downstream.
->   Nenhum arquivo é criado em `.planning/nodes/`. A síntese dos achados alimenta diretamente o `implementation_plan.md`.
-
-O Agente Principal é **TERMINANTEMENTE PROIBIDO** de inventar tópicos de nós de cabeça ou investigar falhas sozinho na thread principal. A decomposição e a investigação devem ser fruto de trabalho de subagentes especializados.
-
-### Invocação da Dupla Investigativa (Modo Direto / Operacional):
-```json
-{
-  "Subagents": [
-    {
-      "TypeName": "self",
-      "Role": "Causal Root Cause Forensic Investigator (Subagente Alfa)",
-      "Model": "flash",
-      "Prompt": "Você é o Subagente Alfa. Sua missão é dissecar a mecânica microscópica interna da falha ou alteração solicitada em: [ARQUIVOS]. Investigue fluxo de controle, variáveis, condições de corrida e estados inválidos. GRAVE O LAUDO PERICIAL BRUTO COMPLETO EM: .planning/investigations/inv_001_root_cause.md. Seja cirúrgico, inclua linhas exatas e trechos de código. O subagente codificador de produção lerá este documento na íntegra via view_file (Lei 42). Aplique Null-Vocabulary."
-    },
-    {
-      "TypeName": "self",
-      "Role": "Downstream Blast Radius Auditor (Subagente Beta)",
-      "Model": "flash",
-      "Prompt": "Você é o Subagente Beta. Sua missão é mapear o raio de destruição colateral, contratos upstream/downstream, importações e quebras externas causadas pela alteração de: [ARQUIVOS]. GRAVE O LAUDO PERICIAL BRUTO COMPLETO EM: .planning/investigations/inv_002_blast_radius.md. O subagente codificador de produção lerá este documento na íntegra via view_file (Lei 42). Aplique Null-Vocabulary."
-    }
-  ]
-}
-```
-
-### Invocação do Chief Ontologist Subagent (Modo Arquitetural):
-```json
-{
-  "Subagents": [
-    {
-      "TypeName": "self",
-      "Role": "Chief Ontological Architect & Empirical Researcher",
-      "Model": "flash",
-      "Prompt": "Sob as diretrizes de .planning/mission_dossier.md, execute varredura empírica completa no ecossistema (código existente, contratos, estado da arte da indústria). Decomponha o domínio nos eixos ontológicos nativos sob o Grafo Modular Denso de Alta Densidade Semiótica (3 a 7 nós ricos e substanciais, com padrão áureo de 5 nós arquiteturais cobrindo domínios inteiros: Domínio/Portas, Adaptadores/Infra, Concorrência/Kernel, UI/Física Perceptual, Auditoria/Contratos). Qualidade sobre quantidade (Lei 4): cada nó denso sintetiza o conteúdo equivalente a dezenas de nós atomizados com profunda substância técnica e economia de tokens. Estabeleça as cadeias de causa e efeito X -> Y -> Z. Gere o arquivo .planning/nodes/node_000_root.md e o mapa de sementes empíricas .planning/hypergraph_seed.json contendo a lista discriminada dos 3 a 7 nós densos planejados."
-    }
-  ]
-}
-```
-
-### Os 8 Eixos Ontológicos Nativos:
-1. **Domain Logic & Business Invariants:** Regras de negócio inegociáveis, estados e máquinas finitas.
-2. **Data Contracts & Atomic Persistence:** Schemas, migrações, isolamento ACID, Atomic Swap e WAL.
-3. **Concurrency & Real-Time Synchronization:** Locks otimistas, filas assíncronas e ausência de alocação no frame quente.
-4. **HCI, Gestures & Spring Kinematics:** Física de molas de 2ª ordem (Linear/Apple), rubber-banding e gestos a 60fps/120fps.
-5. **Specular Visuals & Photorealistic Micro-Assets:** Materiais físicos (obsidiana, vidro, titânio), iluminação de estúdio macro via `generate_image`. Zero SVGs ou glifos.
-6. **Physical Acoustic Foley & Micro-Audio:** Sonorização acústica real via YouTube/Freesound fatiada com `scripts/sfx_tool.py`. Zero bipes sintéticos.
-7. **Silent Failure Modes & Chaos Engineering:** Desconexões abruptas, memória sob pressão, tolerâncias térmicas e saturação.
-8. **Forensic Telemetry & Auditable State Trails:** Logs estruturados, rastreabilidade de transações e observabilidade fiduciária.
-
-### Estrutura do Manifesto de Sementes (`.planning/hypergraph_seed.json`):
-```json
-{
-  "total_planned_nodes": 5,
-  "nodes": [
-    {
-      "id": "node_001_domain_ports",
-      "axis": "domain_logic",
-      "depth": 1,
-      "research_foundation": "Clean Architecture defensiva, entidades imutáveis e portas formais desacopladas.",
-      "target_file": ".planning/nodes/node_001_domain_ports.md",
-      "checklist_ref": ".planning/nodes/node_001_domain_ports.md#checklist-forense-atômico-de-verificação"
-    },
-    {
-      "id": "node_002_storage_infra",
-      "axis": "data_contracts",
-      "depth": 1,
-      "research_foundation": "Isolamento ACID, WAL e DeterministicAtomicSwap com atestação SHA-256.",
-      "target_file": ".planning/nodes/node_002_storage_infra.md",
-      "checklist_ref": ".planning/nodes/node_002_storage_infra.md#checklist-forense-atômico-de-verificação"
-    },
-    {
-      "id": "node_003_concurrency_kernel",
-      "axis": "concurrency",
-      "depth": 1,
-      "research_foundation": "Benchmark LMAX Disruptor, exclusão mútua FsLockEngine e zero frame allocation.",
-      "target_file": ".planning/nodes/node_003_concurrency_kernel.md",
-      "checklist_ref": ".planning/nodes/node_003_concurrency_kernel.md#checklist-forense-atômico-de-verificação"
-    },
-    {
-      "id": "node_004_ui_perceptual_craft",
-      "axis": "hci_gestures",
-      "depth": 1,
-      "research_foundation": "Cinemática de molas de 2ª ordem Linear/Apple via framer-motion e isolamento GPU.",
-      "target_file": ".planning/nodes/node_004_ui_perceptual_craft.md",
-      "checklist_ref": ".planning/nodes/node_004_ui_perceptual_craft.md#checklist-forense-atômico-de-verificação"
-    },
-    {
-      "id": "node_005_audit_contracts",
-      "axis": "forensic_telemetry",
-      "depth": 1,
-      "research_foundation": "Pre-Mortem T+6 meses, contratos Result<T,E> invariantes e telemetria de zero erros.",
-      "target_file": ".planning/nodes/node_005_audit_contracts.md",
-      "checklist_ref": ".planning/nodes/node_005_audit_contracts.md#checklist-forense-atômico-de-verificação"
-    }
-  ]
-}
-```
-
----
-
-## 5. Playbook da Época I (Fase B): Barramento Sináptico Neural (`synaptic_bus.json`) & Ondas 1:1
-
-Os nós não operam em silos cegos. Eles formam uma rede neural viva com transmissão de contexto contínua, sincronia tática estigmérgica e capacidade de veto bilateral entre pares.
-
-### 1. Padrão Estrutural de Nó com Autoconsciência Estigmérgica:
-Todo nó gerado por um subagente atômico DEVE conter o cabeçalho de autoconsciência de enxame, as seções sinápticas e a auditoria de pares:
-
-```markdown
-# Node 00X: <Título do Nó>
-**Status:** SATURATED | **Eixo:** <Nome do Eixo> | **Profundidade:** d=1 ou d=2
-
-### [SWARM_META_IDENTITY] (Autoconsciência Estigmérgica no CoT)
-- **[MY_SWARM_ROLE]:** Especialista atômico dedicado exclusivamente a <slug do nó>. Minha função sistêmica no enxame é resolver <atrito/desafio>.
-- **[MY_SYNAPTIC_ANCHORS]:** Consumo do barramento sináptico as primitivas upstream `spring_stiffness` (node_002) e `wal_atomic_swap` (node_003).
-- **[MY_SWARM_DELIVERABLE]:** Entrego o contrato invariante `fluid_gesture_controller` que destrava os nós consumidores da Onda seguinte.
-
-### [SYNAPTIC_INPUTS] (Sinapses Consumidas de Nós Anteriores)
-| Sinapse Upstream | Nó de Origem | Status Mutex | Especificação / Contrato Consumido |
-|---|---|---|---|
-| `spring_stiffness` | `node_002` | GO | Constante elástica de mola (380 N/m) |
-| `wal_atomic_swap` | `node_003` | GO | Protocolo de escrita temporária + rename atômico |
-
-## 1. Dissecação de Engenharia ("Água no Deserto")
-[Tratado técnico profundo, cálculos, fórmulas, interfaces e ausência total de atalhos]
-
-## 2. Modos Silenciosos de Falha & Mitigações
-[Cenários extremos de estresse, concorrência e bordas do domínio]
-
-### [PEER_REVIEW_PROTOCOL] (Auditoria Bilateral Entre Nós Pares)
-- **Contrato Proposto:** `interface TouchInteractionHandler { onDrag(e: DragEvent): void; }`
-- **Nó Auditor Par:** `node_001_concurrency_engine` (Nó de Concorrência/Frame Rate)
-- **Veredito do Par:** `[PEER_CONSENT]` (Interface atende ao SLA de 60fps sem alocação no frame quente)
-  *(Em caso de violação, registrar: `[PEER_VETO: POLLING_REJECTED - Exige listener passivo com debouncing]`)*
-
-### [SYNAPTIC_OUTPUTS] (Sinapses Emitidas para o Barramento)
-| Chave Sináptica | Tipo de Dado | Mutex Status | Definição / Assinatura / Valor Canônico |
-|---|---|---|---|
-| `gesture_drag_elasticity` | number | GO | 0.45 |
-| `transaction_commit_fn` | signature | GO | `(tx: Transaction) -> Result<TxHash, StorageError>` |
-
-## Checklist Forense Atômico de Verificação
-> Auditado binariamente [0=REPROVADO | 1=APROVADO] pelo subagente codificador e pelo Red Team Juiz.
-
-- [ ] **Tipagem Estrita:** `Result<T,E>` / `Option<T>`; zero `any`, `unknown`, casts inseguros.
-- [ ] **Zero-Stub:** zero `TODO`, `pass`, `return null`, funções `{}` vazias, `...`.
-- [ ] **Topologia de Pensamento (Lei 44):** Topologia (LCS/ToT/GoT/DAS) selecionada pelo `dynamic_thought_router` conforme vetor $\mathbf{x}$; zero flatten cego ou cosplay reflexivo.
-- [ ] **Poda Fiduciária & Tripwire Dialético (Lei 45):** Ramos ToT podados se $f(n) < 0.75$; deliberação DAS convergida em $K \le 3$ iterações.
-- [ ] **Incerteza Epistêmica Controlada (Lei 44/M2):** $\varepsilon_t \le 0.15$ para ação motora; ausência de viés de confirmação ($IVC \le 2.0$).
-- [ ] **Guarda de Deriva de Objetivo (Lei 46):** $\Delta_{\text{drift}} \le 0.35$; zero mutação fora do perímetro do dossiê.
-- [ ] **Física de Molas dos Titãs:** `framer-motion` (stiffness, damping, mass); zero `transition-all duration-300 ease-in-out`.
-- [ ] **Isolamento de Thread/GPU:** zero bloqueio de main thread; apenas `transform`/`opacity` para animações.
-- [ ] **Áudio Físico Real:** gravações acústicas via `sfx_tool.py`; zero `AudioSynthesizer`, `oscillator`, síntese matemática.
-- [ ] **Fotografia Óptica Real:** `generate_image` com 6 variáveis ópticas (câmera, lente, abertura, iluminação, composição, profundidade); zero SVG genérico, emoji, glifo Unicode.
-- [ ] **Concorrência Atômica:** Synaptic Mutex respeitado (HOLD/GO); Atomic Swap na escrita em disco; idempotência garantida.
-- [ ] **Telemetria Zero Erros:** `$LASTEXITCODE === 0`; zero erros/warnings/404s no console do navegador (`browser_console_logs`).
-- [ ] **Pre-Mortem Blindado:** falha catastrófica T+6 meses modelada e neutralizada no nó.
-- [ ] **Null-Vocabulary:** zero preâmbulos, bajulação, fórmulas de encerramento ou termos de cosplay acadêmico.
-```
-
----
-
-### 2. Estrutura do Barramento Sináptico com Travas Mutex (`synaptic_bus.json`):
-```json
-{
-  "epoch": "I",
-  "active_wave": 1,
-  "synapses": {
-    "spring_stiffness": {
-      "producer_node": "node_002_titan_spring_kinematics",
-      "mutex_status": "GO",
-      "type": "number",
-      "value": 380,
-      "description": "Rigidez dinâmica para transições de viewport"
-    },
-    "core_user_entity_schema": {
-      "producer_node": "node_005_data_models",
-      "mutex_status": "HOLD",
-      "type": "contract",
-      "signature": "interface UserEntity { id: UserId; version: number; }",
-      "description": "Contrato em refatoração atômica — consumidores aguardem sinal GO"
-    }
-  }
-}
-```
-
----
-
-### 3. O Protocolo de Sinais Táticos (Synaptic Mutex: HOLD / GO):
-- **A Regra do HOLD:** Quando um nó está desenhando ou alterando uma porta compartilhada (`src/core/ports/`), schema de banco de dados ou protocolo de concorrência, ele marca a sinapse com `"mutex_status": "HOLD"`.
-- **A Regra do GO:** Subagentes que dependem dessa sinapse NÃO podem supor campos inexistentes nem escrever código especulativo. Eles pausam o desdobramento daquela dependência até que o produtor marque `"mutex_status": "GO"`.
-- **Eliminação de Conflitos:** Isso reproduz o comportamento observado no incidente OpenAI/Hugging Face (`please_HOLD_swarm`), garantindo que nenhum subagente quebre o trabalho do outro em concorrência paralela.
-
----
-
-### 4. Protocolo de Veto Técnico Entre Pares (Peer Veto & Architectural Consent):
-1. **Poder de Veto Bilateral:** Todo subagente que consome um contrato tem o dever fiduciário de auditar se o nó produtor respeitou as restrições da sua disciplina (ex: latência de GPU, segurança de memória, isolamento ACID).
-2. **Emissão de Veto:** Se o nó consumidor identificar um modo de falha, ele registra no nó e na mailbox do par: `[PEER_VETO: <MOTIVO_TECNICO>]`.
-3. **Consenso Obrigatório:** O nó produtor é obrigado a ajustar a assinatura até obter `[PEER_CONSENT]`. Nenhuma primitiva contestada pode entrar no `graph.json`.
-
----
-
-### 5. Caixas Postais Estigmérgicas (`.planning/mailboxes/`):
-Para notas de descompasso, avisos assíncronos ou descobertas inesperadas que impactam outros agentes fora do ciclo normal da onda:
-```json
-// .planning/mailboxes/mailbox_node_016.json
-{
-  "from_node": "node_016_fluid_gestures",
-  "to_nodes": ["node_002_titan_spring_kinematics", "node_001_concurrency_engine"],
-  "type": "LATENCY_ALERT",
-  "message": "Detectado consumo excessivo de GPU em devices 60Hz com rubber-banding em 0.45. Solicito ajuste de damping de 30 para 34.",
-  "status": "ACTION_REQUIRED"
-}
-```
-
----
-
-### 6. Mecanismo de Propagação entre Ondas:
-1. **Onda 1 (Nós de Fundação: Domínio & Concorrência/Kernel):** Recebe o `hypergraph_seed.json` e inicializa as sinapses de base com status `GO` (ex: `node_001` e `node_003`).
-2. **Consolidação Sináptica:** O Agente Principal lê os `[SYNAPTIC_OUTPUTS]` dos nós gerados na Onda 1 e atualiza o `synaptic_bus.json`.
-3. **Onda 2 (Nós de Aplicação/Percepção: Adaptadores, UI Craft & Auditoria):** O Agente Principal injeta no prompt de cada subagente da Onda 2 as sinapses consolidadas do `synaptic_bus.json`. Os subagentes iniciam com pleno conhecimento dos contratos estabilizados (`CONTRACT_STABLE`).
-4. **Consolidação Final do Grafo Denso:** O ciclo de alimentação, travas mutex e propagação se conclui com a saturação integral dos 3 a 7 nós densos (padrão áureo de 5 nós), alcançando máxima densidade semiótica com mínimo overhead de tokens.
-
-
----
-
-## 6. Playbook dos Expedientes Cognitivos (Work Shifts)
-
-O trabalho é executado em turnos delimitados para evitar esgotamento de tokens e alucinação por saturação de contexto:
-
-```text
-Turno 0: Expediente 0 — Prompt Refiner & ACC
-Turno 1: Expediente 1 — Chief Ontologist & Fundação Empírica
-Turno 2: Expediente 2 — Ondas Sinápticas 1:1 (Flash Low/Medium, máx 15/onda)
-Turno 3: Expediente 3 — Matriz de Despacho & Trava Humana (Flash Low)
-Turno 4: Expediente 4 — Codificação Concorrente 1:1 (Flash Medium/High)
-Turno 5: Expediente 5 — Auditoria Adversarial Independente no Chrome Real (Flash High)
-```
-
-### Persistência de Estado (`.planning/expediente_state.json`):
-```json
-{
-  "current_expediente": 2,
-  "expediente_name": "Saturação de Grafo Modular Denso",
-  "status": "IN_PROGRESS",
-  "current_wave": 2,
-  "total_waves": 2,
-  "nodes_completed": 3,
-  "nodes_target": 5,
-  "recommended_flash_mode": "Medium",
-  "last_synaptic_sync": "2026-09-12T15:30:00Z"
-}
-```
-
----
-
-## 6.1. Época II — Matriz Neural de Despacho & Checklists (`implementation_plan.md`)
-
-O `implementation_plan.md` é o artefato formal da Época II. Não é um rascunho livre: é a **Matriz Neural de Despacho & Checklists**, com quatro seções obrigatórias e invioláveis, emitida com `RequestFeedback: true` e aguardada aprovação explícita humana antes de qualquer escrita em produção.
-
-### Seção 1 — Matriz de Tarefas vs. Subagentes Especialistas 1:1
-
-Tabela determinística que mapeia cada nó atômico ao seu subagente codificador exclusivo. Nenhum subagente compartilha nó.
-
-| Nó / Arquivo | Subagente Especialista | Role | Dependências Sinápticas | Status |
-|---|---|---|---|---|
-| `node_001_concurrency_engine.md` / `src/core/concurrency/engine.ts` | Subagente-001 | Zero-Allocation Concurrency Engine Specialist | — | PENDING |
-| `node_002_titan_spring_kinematics.md` / `src/ui/spring/kinematics.ts` | Subagente-002 | Framer-Motion 2nd-Order Damped Spring Specialist | — | PENDING |
-| `node_016_fluid_gestures.md` / `src/ui/gestures/fluidController.ts` | Subagente-016 | Fluid Gesture & Rubber-Banding Specialist | `spring_stiffness` (node_002 GO), `spring_damping` (node_002 GO) | HOLD |
-
-> Replicar para todos os nós densos saturados (3 a 7 nós, padrão áureo de 5 nós) antes de emitir a matriz para aprovação.
-
----
-
-### Seção 2 — Mapeamento de Contratos Sinápticos & Trava HOLD/GO
-
-Por nó, listar `[SYNAPTIC_INPUTS]`, `[SYNAPTIC_OUTPUTS]` e estado de trava vigente no `synaptic_bus.json`.
-
-```markdown
-#### node_016_fluid_gestures
-
-[SYNAPTIC_INPUTS]
-- spring_stiffness  : number  | node_002 | GO  | 380 N/m
-- spring_damping    : number  | node_002 | GO  | 30
-- wal_atomic_swap   : fn      | node_003 | GO  | (path, data) -> Result<void, IOError>
-
-[SYNAPTIC_OUTPUTS]
-- gesture_drag_elasticity  : number   | GO  | 0.45
-- fluid_gesture_controller : contract | GO  | interface FluidGestureController { ... }
-
-Estado no synaptic_bus.json: mutex_status = "HOLD" até node_002 emitir GO.
-```
-
----
-
-### Seção 3 — Checklists Forenses Extensivos por Subagente/Arquivo
-
-Para cada subagente/arquivo na Seção 1, reproduzir integralmente a **Matriz de Verificação Binária** (10 critérios). Auditada pelo subagente codificador na Época III e pelo Red Team Juiz na Época IV.
-
-```markdown
-#### Checklist Forense — Subagente-016 / node_016_fluid_gestures / fluidController.ts
-
-- [ ] **Tipagem Estrita:** `Result<T,E>` / `Option<T>`; zero `any`, `unknown`, casts inseguros.
-- [ ] **Zero-Stub:** zero `TODO`, `pass`, `return null`, funções `{}` vazias, `...`.
-- [ ] **Topologia de Pensamento (Lei 44):** Topologia (LCS/ToT/GoT/DAS) selecionada pelo `dynamic_thought_router` conforme vetor $\mathbf{x}$; zero flatten cego ou cosplay reflexivo.
-- [ ] **Poda Fiduciária & Tripwire Dialético (Lei 45):** Ramos ToT podados se $f(n) < 0.75$; deliberação DAS convergida em $K \le 3$ iterações.
-- [ ] **Incerteza Epistêmica Controlada (Lei 44/M2):** $\varepsilon_t \le 0.15$ para ação motora; ausência de viés de confirmação ($IVC \le 2.0$).
-- [ ] **Guarda de Deriva de Objetivo (Lei 46):** $\Delta_{\text{drift}} \le 0.35$; zero mutação fora do perímetro do dossiê.
-- [ ] **Física de Molas dos Titãs:** `framer-motion` (stiffness, damping, mass); zero `transition-all duration-300 ease-in-out`.
-- [ ] **Isolamento de Thread/GPU:** zero bloqueio de main thread; apenas `transform`/`opacity` para animações.
-- [ ] **Áudio Físico Real:** gravações acústicas via `sfx_tool.py`; zero `AudioSynthesizer`, `oscillator`, síntese matemática.
-- [ ] **Fotografia Óptica Real:** `generate_image` com 6 variáveis ópticas (câmera, lente, abertura, iluminação, composição, profundidade); zero SVG genérico, emoji, glifo Unicode.
-- [ ] **Concorrência Atômica:** Synaptic Mutex respeitado (HOLD/GO); Atomic Swap na escrita em disco; idempotência garantida.
-- [ ] **Telemetria Zero Erros:** `$LASTEXITCODE === 0`; zero erros/warnings/404s no console do navegador (`browser_console_logs`).
-- [ ] **Pre-Mortem Blindado:** falha catastrófica T+6 meses modelada e neutralizada no nó.
-- [ ] **Null-Vocabulary:** zero preâmbulos, bajulação, fórmulas de encerramento ou termos de cosplay acadêmico.
-```
-
-> Replicar este bloco para cada linha da Seção 1.
-
----
-
-### Seção 4 — Sequenciamento Determinístico de Handoffs
-
-Ordem de execução, dependências GO/HOLD e sequência de commits semânticos. Zero ambiguidade de handoff entre subagentes.
-
-```markdown
-## Ordem de Execução (Waves)
-
-Wave 1 [Nós de Fundação: Domínio & Concorrência/Kernel] — Camada Base (sem dependências upstream)
-  → Cada subagente escreve seu nó denso e emite SYNAPTIC_OUTPUTS com mutex_status: "GO".
-  → Agente Principal consolida synaptic_bus.json.
-  → Commit semântico: `feat(planning): saturate wave-1 foundation dense nodes [001, 003]`
-
-Wave 2 [Nós de Aplicação/Percepção: Adaptadores, UI Craft & Auditoria] — Camada Downstream
-  → Subagentes consomem sinapses GO da Wave 1.
-  → Nós em HOLD aguardam sinal GO explícito do produtor antes de progredir.
-  → Commit semântico: `feat(planning): saturate wave-2 application dense nodes [002, 004, 005]`
-
-[Concluir saturação do Grafo Modular Denso: 3 a 7 nós, padrão áureo de 5 nós]
-
-## Handoff Final para Época III
-  → Condição: todos os nós com status SATURATED no graph.json.
-  → Condição: zero sinapses com mutex_status: "HOLD" no synaptic_bus.json.
-  → Ação: Agente Principal emite implementation_plan.md com RequestFeedback: true.
-  → Bloqueio: ferramentas de escrita em produção BLOQUEADAS até aprovação explícita ("Proceed").
-```
-
----
-
-## 7. Exemplo Canônico de Invocação de Onda Sináptica (Época I, Fase B)
-
-Exemplo de despacho da Onda 2, onde os subagentes declaram autoconsciência de enxame, respeitam o status das travas Mutex e submetem contratos à auditoria de pares:
-
-```json
-{
-  "Subagents": [
-    {
-      "TypeName": "self",
-      "Role": "Fluid Gesture Controller — node_016",
-      "Model": "flash",
-      "Prompt": "Você é o especialista dedicado exclusivamente ao nó .planning/nodes/node_016_fluid_gestures.md. (1) Inicie com o cabeçalho [SWARM_META_IDENTITY] declarando seu papel sistêmico, âncoras e entregáveis. (2) Verifique o status Mutex das sinapses upstream 'spring_stiffness' (380) e 'spring_damping' (30) emitidas pelo node_002 no .planning/synaptic_bus.json. (3) Modele a interação gestual direta com rubber-banding dos Titãs (Apple/Instagram). (4) Submeta a interface de toque ao [PEER_REVIEW_PROTOCOL] com o node_001 (concorrência/60fps). (5) Declare formalmente [SYNAPTIC_INPUTS] e [SYNAPTIC_OUTPUTS] com mutex_status: 'GO'. Escreva o nó com máxima profundidade sob o princípio 'Água no Deserto'."
-    },
-    {
-      "TypeName": "self",
-      "Role": "Transactional Mutation Pipeline — node_017",
-      "Model": "flash",
-      "Prompt": "Você é o especialista dedicado exclusivamente ao nó .planning/nodes/node_017_mutation_pipeline.md. (1) Inicie com o cabeçalho [SWARM_META_IDENTITY] declarando seu papel sistêmico, âncoras e entregáveis. (2) Verifique o status Mutex da sinapse upstream 'wal_atomic_swap' emitida pelo node_003 no .planning/synaptic_bus.json. (3) Modele a esteira de mutações atômicas com rollback em caso de falha de I/O. (4) Submeta os contratos de persistência ao [PEER_REVIEW_PROTOCOL] com o node_003. (5) Declare formalmente [SYNAPTIC_INPUTS] e [SYNAPTIC_OUTPUTS] com mutex_status: 'GO'. Escreva o nó cobrindo todos os modos silenciosos de falha sob concorrência."
-    }
-  ]
-}
-```
-
-
----
-
-## 8. Estrutura e Manutenção do Manifesto `graph.json`
-
-O arquivo `graph.json` consolida a topologia final do hipergrafo e as primitivas prontas para a Época II:
-
-```json
-{
-  "nodes": [
-    {
-      "id": "node_001_concurrency_engine",
-      "axis": "concurrency",
-      "depth": 1,
-      "status": "SATURATED",
-      "summary": "Motor de concorrência com optimistic locking e zero frame allocation.",
-      "checklist_ref": ".planning/nodes/node_001_concurrency_engine.md#checklist-forense-atômico-de-verificação"
-    },
-    {
-      "id": "node_002_titan_spring_kinematics",
-      "axis": "hci_gestures",
-      "depth": 1,
-      "status": "SATURATED",
-      "summary": "Cinemática de molas de 2ª ordem no padrão dos Titãs (Linear/Apple).",
-      "checklist_ref": ".planning/nodes/node_002_titan_spring_kinematics.md#checklist-forense-atômico-de-verificação"
-    }
-  ],
-  "edges": [
-    {
-      "from": "node_002_titan_spring_kinematics",
-      "to": "node_016_fluid_gestures",
-      "type": "synaptic_spring_binding",
-      "constraint": "60fps_compositor_thread"
-    }
-  ],
-  "exported_primitives": {
-    "spring_stiffness": 380,
-    "spring_damping": 30,
-    "spring_mass": 0.8,
-    "max_latency_sla_ms": 16,
-    "tactile_audio_volume": 0.35
-  }
-}
-```
-
----
-
-## 9. Ciclo de Retroalimentação Fractal (Reabertura da Época I)
-
-Se o **Subagente Juiz Independente** na Época IV emitir `[HARD REJECT: RESTART FRACTAL CYCLE]`:
-1. O Agente Principal reabre formalmente a Época I e inicializa um novo Expediente Fractal.
-2. O Chief Ontologist identifica as lacunas apontadas pelo Juiz e atualiza `node_000_root.md` e `hypergraph_seed.json`.
-3. Despacha novas ondas atômicas 1:1 com alimentação do barramento sináptico até sanar cada apontamento.
-4. Constrói novo plano na Época II, reconstrói na Época III e reapresenta ao Gauntlet na Época IV.
-
----
-
-## 10. Protocolo de Higiene da Cadeia de Pensamento (CoT Hygiene Protocol)
-
-Tokens de raciocínio dentro do modo Thinking do Flash são recursos computacionais nobres orientados a impacto prático. O sistema proíbe categoricamente a **ruminação estocástica estéril** (gastar tokens debatendo consigo mesmo sem produzir avanço causal).
-
-### As Três Leis da Tração Causal no Thinking:
-1. **Respiração 1 — Leitura & Isolamento:** Identificar a demanda real, as restrições duras e a incógnita central em poucas frases diretas.
-2. **Respiração 2 — Tração & Modos de Falha:** Mapear a cadeia causal de consequências $X \to Y \to Z$, antecipar os modos silenciosos de falha e definir a ferramenta/arquivo alvo.
-3. **Corte & Despacho:** Encerrar imediatamente o pensamento interno e emitir a chamada de ferramenta ou a gravação do artefato no disco. Se o pensamento começar a se repetir ou parafrasear o que já foi dito, **corte no meio da frase e execute**.
-
-### Assinaturas de Degradação Neuronal (Terminantemente Proibidas no Thinking):
-- *Auto-narração metalinguística:* "Estou considerando como planejar a próxima etapa..."
-- *Parafraseamento triplo:* Repetir a ordem do usuário com palavras diferentes.
-- *Falso debate interno (Hedging):* Ficar ponderando "por um lado, por outro lado" em vez de escolher o caminho dos Titãs.
-
----
-
-## 11. Exemplar Contrastivo de Nó: Anti-Pattern vs. Padrão Titã (Autópsia de Falha)
-
-Para garantir que cada nó em `.planning/nodes/` atinja densidade de engenharia real e satisfaça a Lei da Pedagogia Contrastiva (Lei 36), os subagentes devem confrontar sua produção contra o exemplar contrastivo:
-
-### [EXEMPLAR ANTI-PATTERN: NÓ FRACO / REDUCIONISTA]
-```markdown
-# Node 015 - User Authentication Service
-
-## Descrição
-Implementar serviço de autenticação de usuários com JWT e salvar no banco de dados.
-
-## Tarefas
-- Criar endpoint de login
-- Validar senha
-- Gerar token JWT e retornar para o usuário
-- Salvar sessão no banco
-```
-
-#### Autópsia de Falha Post-Mortem (Por que este nó é sumariamente reprovado):
-1. **Zero Contratos Tipados:** Não define a assinatura das interfaces, os tipos de payload ou a estrutura da união discriminada de erro (`Result<Session, AuthError>`).
-2. **Cegueira a Modos Silenciosos de Falha:** Ignora timing attacks na comparação de hash de senha, replay attacks de JWT, esgotamento de conexões de pool de banco e race conditions de refresh token.
-3. **Inexistência de Sinapses:** Não declara `[SYNAPTIC_INPUTS]` nem `[SYNAPTIC_OUTPUTS]`, tornando-se um silo desconectado do barramento neural.
-4. **Preguiça em Lote Disfarçada:** Reduz 4 responsabilidades arquiteturais complexas a uma lista de tópicos genéricos da média da web.
-
----
-
-### [EXEMPLAR TITÃ: NÓ SATURADO SOB O PRINCÍPIO "ÁGUA NO DESERTO"]
-```markdown
-# Node 015 - Idempotent Argon2id Authentication Pipeline & Constant-Time Verification
-
-## [SWARM_META_IDENTITY]
-- MY_SWARM_ROLE: Core Authentication & Cryptographic Identity Engine
-- MY_SYNAPTIC_ANCHOR: Consome 'db_connection_pool' do Node 003 e 'jwt_signing_key_rotation' do Node 004
-- MY_SWARM_DELIVERABLE: src/core/auth/authenticateUser.ts e src/core/ports/IAuthService.ts
-
-## [SYNAPTIC_INPUTS]
-- db_pool: Pool<DatabaseClient> (mutex_status: 'GO')
-- crypto_params: Argon2idConfig { memoryCost: 65536, timeCost: 3, parallelism: 4 }
-
-## 1. Contratos Formais Invariantes & Tipagem Estrita
-```typescript
-export interface AuthCredentials {
-  readonly email: EmailAddress; // Value object com sanitização RFC 5322
-  readonly secret: RawPassword; // Buffer protegido em memória contra swap
-}
-
-export type AuthFailure =
-  | { code: 'INVALID_CREDENTIALS'; timingDelayMs: number }
-  | { code: 'ACCOUNT_LOCKED'; retryAfterEpoch: number }
-  | { code: 'ENTROPY_EXHAUSTED'; fallbackToBackoff: boolean };
-
-export type AuthResult = Result<AuthenticatedSession, AuthFailure>;
-```
-
-## 2. Micro-Mecanismos Concretos & Prevenção de Timing Attacks
-- Utilização de `crypto.timingSafeEqual` sobre buffers pré-alocados de tamanho idêntico.
-- Equalização sintética de latência: se o usuário não for localizado, executa uma derivação dummy de Argon2id com parâmetros idênticos antes de retornar `INVALID_CREDENTIALS`, impedindo enumeração de usuários por side-channel de tempo.
-- Atomic token rotation com revogação transacional em caso de colisão de hash.
-
-## 3. [SYNAPTIC_OUTPUTS]
-- authenticated_session_token: BearerTokenEnvelope { ttlSeconds: 900, refreshRotationGraceMs: 5000 }
-- auth_audit_event_stream: Observable<SecurityAuditLogEntry>
-- mutex_status: 'GO'
-```
-
-
+## 5. Ciclo de Retroalimentação Fractal & Higiene de CoT
+
+- **Reabertura da Época I:** Se o Juiz Red Team emitir `[HARD REJECT: RESTART FRACTAL CYCLE]` na Época IV, atualize `project_neural_map.json` (registrando a falha), ajuste `node_000_root.md` / `hypergraph_seed.json`, sature apenas os nós afetados e reapresente ao Gauntlet.
+- **Higiene do Chain-of-Thought:** Proibida ruminação circular ou auto-narração (*"Estou considerando..."*). Cada ciclo de pensamento segue: **Isolar incógnita $\to$ Traçar causa e modo de falha ($X \to Y \to Z$) $\to$ Executar ferramenta no disco**.
+- **Exemplar Contrastivo de Nó:**
+  - *Fraco (Reprovado):* `"Node 015 - Auth: criar login, validar senha e gerar JWT"` (sem tipos `Result`, sem timing-safe compare, sem sinapses).
+  - *Titã (Aprovado):* `"Node 015 - Argon2id Constant-Time Auth"` com `AuthCredentials`, `AuthFailure` discriminado, `crypto.timingSafeEqual` + dummy Argon2id anti-enumeração, `[SYNAPTIC_INPUTS/OUTPUTS]` e checklist binário.

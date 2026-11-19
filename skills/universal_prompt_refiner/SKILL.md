@@ -1,405 +1,103 @@
 ---
 name: universal_prompt_refiner
-description: Playbook de Engenharia e Controle Operacional do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate) v5.0 (Hyper-Cortex Ingestion Gate). Governa o despacho obrigatório do Subagente Prompt Refiner antes de qualquer intervenção operacional, a classificação mandatória de modo (Arquitetural vs. Direto), o cálculo da Assinatura Física do Problema Phi(P) em 8 eixos, a Matriz de Auto-Ativação de Skills (incluindo spoke_rule_factory e autonomous_rsi_engine), a detecção e disparo automático da Spoke Rule Factory em repositórios sem regras locais, o acionamento pós-missão do Cognitive Post-Mortem para o Autonomous RSI Engine, a medição contínua de Incerteza Epistêmica epsilon_t, o gatilho de ativação imediata do esquadrão ([HARD HALT: SQUAD_DISPATCH_BYPASSED]), a compilação do Dossiê Universal (.planning/mission_dossier.md), desconstrução forense em 4 camadas, roadmap determinístico, matriz de regras/skills por primeiros princípios, atribuição de Topologia de Pensamento (LCS, ToT, GoT, DAS), encadeamento quádruplo e critérios fiduciários de aceite.
+description: "Hyper-Cortex v6.0 Epoch 0 Ingestion Gate & Mission Dossier Compiler. Use when starting any new task, turn, refactor, bugfix, feature, or architecture request to run 4-layer forensic deconstruction, compute the 8-axis Problem Physical Signature Phi(P), auto-activate the 14 skills (including spoke_rule_factory, autonomous_rsi_engine, and github_sovereign_workflow), classify Architectural (3-7 Lean Modular Graph nodes) vs Direct Operational (0 nodes), measure epistemic uncertainty epsilon_t, and emit .planning/mission_dossier.md and .planning/refiner_seal.json."
 ---
 
-# Universal Prompt Refiner Gate Playbook (Época 0 - v5.0 — Hyper-Cortex Ingestion Gate)
+# Universal Prompt Refiner Gate Playbook (Época 0 — Hyper-Cortex v6.0)
 
-Playbook operacional definitivo que rege o **Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate & Hyper-Cortex Ingestion Gate v5.0)**. Estabelece as travas mecânicas supremas do ecossistema:
-1. **Trava de Refinamento:** O Agente Principal está terminantemente proibido de agir, planejar, editar arquivos ou rodar comandos modificadores sem antes despachar o Subagente Especialista Prompt Refiner (`[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`).
-2. **Trava de Ativação do Esquadrão:** O Agente Principal está terminantemente proibido de mutacionar código sem antes despachar os subagentes do blueprint do Dossiê (`[HARD HALT: SQUAD_DISPATCH_BYPASSED]`).
-3. **Trava de Incerteza Epistêmica:** Incerteza crítica ($\varepsilon_t > 0.40$) aciona o congelamento imediato da esteira (`[EPISTEMIC_HALT: CRITICAL_UNCERTAINTY_EXCEEDED]`).
+Playbook operacional do **Portão de Ingestão Mandatória Ubíqua (Época 0)**. Rege três travas mecânicas intransponíveis antes de qualquer mutação física no repositório:
+1. **Trava de Refinamento:** Proibido editar arquivos ou rodar comandos modificadores sem o selo ativo `.planning/refiner_seal.json` (`[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`).
+2. **Trava de Ativação do Esquadrão:** Proibido mutacionar código antes de despachar o esquadrão mapeado na Seção D do Dossiê (`[HARD HALT: SQUAD_DISPATCH_BYPASSED]`).
+3. **Trava de Incerteza Epistêmica:** Incerteza crítica ($\varepsilon_t > 0.40$) congela imediatamente a esteira (`[EPISTEMIC_HALT]`).
 
-Nenhuma intervenção operacional — seja a correção de uma vírgula de CSS, um script CLI pontual ou uma plataforma distribuída — é executada no impulso do prompt cru. Toda demanda é desconstruída, avaliada em sua assinatura física $\vec{\Phi}(P)$, classificada em modo arquitetural ou direto, blindada por subagentes especializados, associada à sua Topologia de Pensamento e roteada com precisão cirúrgica antes de qualquer mutação física no repositório.
+> **SSOT & Cross-References:** Orçamento, Work Shifts, Hierarquia de Modelos e Quota Brake $\le 10\%$ residem em [`adaptive_token_governance`](../adaptive_token_governance/SKILL.md). Fórmulas de seleção de topologia residem em [`dynamic_thought_router`](../dynamic_thought_router/SKILL.md). Layout de `.planning/` e *Project Neural Map* residem em [`fractal_thought_graph`](../fractal_thought_graph/SKILL.md). Protocolo `/swarm` e `synaptic_bus.json` residem em [`swarm_orchestration`](../swarm_orchestration/SKILL.md).
 
 ---
 
-## 1. O Portão de Ingestão Mandatória Ubíqua & Córtex Monitor de 2ª Ordem
+## 1. Portão Ubíquo, Bifurcação de Modo & Assinatura $\vec{\Phi}(P)$
 
-### 1.1. O Veto Absoluto à Ação por Impulso Estocástico
-Modelos convencionais de linguagem operam sob impulso reativo: ao receberem uma solicitação, disparam ferramentas de edição de arquivos ou geração de planos imediatamente. Esse vício cognitivo resulta em:
-- Suposições cegas sobre o codebase existente;
-- Acoplamentos ocultos que causam regressões em cascata;
-- Adoção involuntária do "menor denominador comum" (CSS duro, emojis, stubs, ruídos de áudio sintéticos);
-- Vazamentos de termos internos no produto final (*Prompt Bleed*);
-- Retrabalho exponencial decorrente de premissas não validadas.
+### 1.1. Veto à Ação por Impulso Estocástico
+Agir diretamente sobre o prompt cru gera suposições cegas sobre o codebase, acoplamentos ocultos, regressões e *Prompt Bleed*. Toda demanda passa pelo Refiner na Época 0 e é classificada em um de dois modos mutuamente exclusivos:
 
-**A LEI É CATEGÓRICA:** Qualquer chamada de ferramenta de escrita (`replace_file_content`, `write_to_file`), comandos de alteração de estado no shell (`run_command`), ou geração de planos executivos na Época II sem a prévia existência física do Dossiê do Prompt Refiner no disco aciona **veto mecânico sumário imediato (`[HARD HALT: UNREFINED_ACTION_ATTEMPT]`)**.
+1. **MODO ARQUITETURAL (`mission_type: "ARCHITECTURAL"`):**
+   - Para novas plataformas, sistemas multi-módulo ou refatorações estruturais transversais.
+   - Dispara o **Grafo Modular Denso (Lean Modular Graph)**: **3 a 7 nós ricos e substanciais** em `.planning/nodes/` (padrão áureo de **5 nós**, `nodes_floor: 3`, teto `7` — banida qualquer inflação de nós vazios).
+2. **MODO DIRETO / OPERACIONAL (`mission_type: "DIRECT_OPERATIONAL"`):**
+   - Para correções de bugs, ajustes cirúrgicos, scripts pontuais ou *Spoke Rule Factory* isolada.
+   - **Zero nós em disco (`nodes_floor: 0`)**. Proibido criar arquivos em `.planning/nodes/`. O plano vai direto para `implementation_plan.md` e 100% do orçamento vai para execução via Artífice Autônomo Fim-a-Fim.
 
-### 1.2. A Ubiquidade do Portão & A Bifurcação de Modo de Missão
-A ilusão da "tarefa negligenciável" é a fonte primária de incidentes em sistemas de alta complexidade. Na v5.0, toda demanda passa pelo Portão do Prompt Refiner, mas a execução subsequente é calibrada por dois modos mutuamente exclusivos:
+### 1.2. Assinatura Física do Problema $\vec{\Phi}(P) \in [0, 1]^8$
+O Prompt Refiner quantifica a demanda em 8 eixos físicos reais (zero equação decorativa):
+- $\phi_{\text{spatial}}$: UI, layout, animação, GPU, latência sub-16ms / 120Hz.
+- $\phi_{\text{acoustic}}$: Feedback sonoro físico real, Foley, Spatial Audio HRTF.
+- $\phi_{\text{state}}$: Persistência ACID, locks de filesystem, Atomic Swap, integridade Git.
+- $\phi_{\text{epistemic}}$: Ambiguidade de requisitos, opacidade de APIs, risco de regressão.
+- $\phi_{\text{cognitive}}$: Espaço combinatório de decisões, trade-offs, multi-hipóteses.
+- $\phi_{\text{economic}}$: Orçamento de tokens, particionamento em ondas/expedientes, quota Gemini.
+- $\phi_{\text{distributed}}$: Concorrência de múltiplos workers/subagentes, contratos compartilhados.
+- $\phi_{\text{perceptual}}$: Inspeção viva no Chrome real (`browser-mcp`), DevTools, console/CLS/INP.
 
-1. **MODO ARQUITETURAL / PLATAFORMA:**
-   - Para criação de novas plataformas, módulos estruturais complexos ou refatorações profundas de arquitetura.
-   - Dispara compulsoriamente a saturação exaustiva de **$N \ge 100$ nós atômicos** em `.planning/nodes/`.
-2. **MODO DIRETO / OPERACIONAL / INVESTIGATIVO:**
-   - Para correções de bugs, investigações de falhas, alterações diretas em arquivos existentes ou pequenas melhorias.
-   - **Zero nós em disco (`nodes_floor: 0`)**. É terminantemente proibido poluir o disco com arquivos `.planning/nodes/`.
-   - O plano é sintetizado diretamente em `implementation_plan.md` e 100% dos tokens são canalizados para os subagentes que investigam e codificam de fato.
+### 1.3. Matriz Universal de Auto-Ativação das 14 Skills ($\mathbf{W}$)
+A ativação de cada skill $\mathcal{S}_i$ deriva da projeção $\vec{\alpha} = \sigma(\mathbf{W}\vec{\Phi}(P) - \vec{\theta})$ ($\alpha_i \ge 0.5 \implies$ ativação compulsória) e dos gatilhos estruturais abaixo:
 
-### 1.3. A Assinatura Física do Problema $\vec{\Phi}(P)$ em 8 Eixos
-Toda tarefa de engenharia possui uma assinatura física microscópica mensurável no espaço vetorial $\vec{\Phi}(P) \in [0, 1]^8$:
-
-$$\vec{\Phi}(P) = \begin{bmatrix}
-\phi_{\text{spatial}} & \text{(Renderização visual, layout, animação, GPU, latência de frame)} \\
-\phi_{\text{acoustic}} & \text{(Feedback sonoro, transdução tátil, foley mecânico, áudio real)} \\
-\phi_{\text{state}} & \text{(Persistência, ACID, concorrência de I/O, file locks, atomic swap)} \\
-\phi_{\text{epistemic}} & \text{(Incerteza documental, ambiguidade de requisitos, risco adversarial)} \\
-\phi_{\text{cognitive}} & \text{(Espaço de estados combinatório, múltiplos caminhos, trade-offs)} \\
-\phi_{\text{economic}} & \text{(Orçamento de tokens, escala de nós, limites de contexto, shifts)} \\
-\phi_{\text{distributed}} & \text{(Múltiplos agentes concorrentes, protocolos de barramento, peer veto)} \\
-\phi_{\text{perceptual}} & \text{(Inspeção em navegador real, DevTools, console de runtime, DOM vivo)}
-\end{bmatrix}$$
-
-O Prompt Refiner calcula $\vec{\Phi}(P)$ durante a desconstrução forense e injeta os valores no `mission_dossier.md` e no `refiner_seal.json`.
-
-### 1.4. A Matriz Universal de Auto-Ativação de Skills ($\mathbf{W}$)
-A seleção de skills não segue listas estáticas cegas. A ativação de cada skill $\mathcal{S}_i$ é computada determinísticamente pela projeção da assinatura do problema sobre a matriz de pesos de afinidade física $\mathbf{W} \in \mathbb{R}^{m \times 8}$:
-
-$$\vec{\alpha} = \sigma\left( \mathbf{W} \vec{\Phi}(P) - \vec{\theta} \right)$$
-
-Onde $\sigma(z) = \frac{1}{1 + e^{-z}}$ e $\vec{\theta}$ representa os limiares de ativação. Se $\alpha_i \ge 0.5$, a skill é **compulsoriamente ativada** e suas dependências são expandidas em DAG com ordenação topológica acíclica.
-
-#### Matriz Canônica de Skills & Condições de Auto-Ativação:
-| Skill | Domínio Primário | Eixos Determinantes em $\vec{\Phi}(P)$ | Limiar $\theta_i$ / Gatilho Estrutural de Ativação |
+| # | Skill | Domínio Primário | Eixos / Gatilho Determinante |
 |---|---|---|---|
-| [`universal_prompt_refiner`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/universal_prompt_refiner/SKILL.md) | Ingestão e ACC | Todos os eixos | **Ubíquo / Invariante:** Obrigatório em 100% das missões e turnos. |
-| [`dynamic_thought_router`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/dynamic_thought_router/SKILL.md) | Topologia de Raciocínio | $\phi_{\text{cognitive}}, \phi_{\text{epistemic}}$ | $\phi_{\text{cognitive}} \ge 0.40$ ou bifurcação de caminhos ($B_{\text{bif}} \ge 0.30$). |
-| [`adaptive_token_governance`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/adaptive_token_governance/SKILL.md) | Governança e Shifts | $\phi_{\text{economic}}, \phi_{\text{distributed}}$ | $\phi_{\text{economic}} \ge 0.50$ ou partições em ondas/expedientes. |
-| [`swarm_orchestration`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/swarm_orchestration/SKILL.md) | Barramento Sináptico | $\phi_{\text{distributed}}, \phi_{\text{state}}$ | $\phi_{\text{distributed}} \ge 0.50$ ou concorrência $\ge 2$ subagentes. |
-| [`fractal_thought_graph`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/fractal_thought_graph/SKILL.md) | Hipergrafo Ontológico | $\phi_{\text{cognitive}}, \phi_{\text{epistemic}}$ | Modo Arquitetural ($N \ge 100$ nós em `.planning/nodes/`). |
-| [`hardened_clean_architecture`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/hardened_clean_architecture/SKILL.md) | Defesa e Tipagem Estrita | $\phi_{\text{state}}, \phi_{\text{epistemic}}$ | $\phi_{\text{state}} \ge 0.40$ ou criação/mutação de entidades de domínio. |
-| [`modern_ui_craft`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/modern_ui_craft/SKILL.md) | Interface dos Titãs | $\phi_{\text{spatial}}, \phi_{\text{perceptual}}$ | $\phi_{\text{spatial}} \ge 0.30$ ou componentes interativos/telas. |
-| [`tactile_audio_sfx`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/tactile_audio_sfx/SKILL.md) | Áudio Acústico Real | $\phi_{\text{acoustic}}$ | $\phi_{\text{acoustic}} \ge 0.30$ ou eventos táteis/sonoros. |
-| [`browser_visual_reasoning`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/browser_visual_reasoning/SKILL.md) | Inspeção Perceptual | $\phi_{\text{perceptual}}, \phi_{\text{spatial}}$ | $\phi_{\text{perceptual}} \ge 0.40$ ou UIs Web executando localmente. |
-| [`autonomous_computer_use`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/autonomous_computer_use/SKILL.md) | OODA e Auto-Cura de SO | $\phi_{\text{state}}, \phi_{\text{distributed}}$ | Ação motora em shell, falhas de porta, locks de arquivos ou git. |
-| [`forensic_adversarial_auditor`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/forensic_adversarial_auditor/SKILL.md) | Gauntlet Red Team | $\phi_{\text{epistemic}}, \phi_{\text{perceptual}}$ | **Compulsório na Época IV:** Nenhuma entrega encerra sem juiz independente. |
-| [`spoke_rule_factory`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/spoke_rule_factory/SKILL.md) | Grounding Local & Spokes | $\phi_{\text{epistemic}}, \phi_{\text{state}}, \phi_{\text{distributed}}$ | **Gatilho Estrutural:** Repositório sem `.agents/rules/` ou `spoke_manifest.json`, ou runtime heterogêneo não calibrado. |
-| [`autonomous_rsi_engine`](file:///c:/Users/pichau/.gemini/config/plugins/agi-research/skills/autonomous_rsi_engine/SKILL.md) | Ciclo Hebbiano de Auto-Cura | $\phi_{\text{epistemic}}, \phi_{\text{cognitive}}, \phi_{\text{state}}$ | **Gatilho Pós-Missão:** Homologação formal na Época IV disparando análise de telemetria fria (`pm_*.json`). |
+| 1 | [`universal_prompt_refiner`](SKILL.md) | Portão Época 0 & Dossiê | **Ubíquo:** 100% das missões e turnos. |
+| 2 | [`adaptive_token_governance`](../adaptive_token_governance/SKILL.md) | ACC, Modelos & Quota Brake | $\phi_{\text{economic}} \ge 0.45$, Work Shifts ou checagem de quota $\le 10\%$. |
+| 3 | [`dynamic_thought_router`](../dynamic_thought_router/SKILL.md) | Topologias (LCS/ToT/GoT/DAS) | $\phi_{\text{cognitive}} \ge 0.40$ ou bifurcação de caminhos ($B_{\text{bif}} \ge 0.30$). |
+| 4 | [`swarm_orchestration`](../swarm_orchestration/SKILL.md) | `/swarm`, Subagentes & Bus | $\phi_{\text{distributed}} \ge 0.45$ ou $\ge 2$ workers/subagentes concorrentes. |
+| 5 | [`fractal_thought_graph`](../fractal_thought_graph/SKILL.md) | Grafo 3-7 Nós & Neural Map | Modo Arquitetural (3–7 nós) e leitura/atualização de `project_neural_map.json`. |
+| 6 | [`hardened_clean_architecture`](../hardened_clean_architecture/SKILL.md) | `Result<T,E>`, Locks & Zero-Stub | $\phi_{\text{state}} \ge 0.40$ ou criação/mutação de código de produção. |
+| 7 | [`modern_ui_craft`](../modern_ui_craft/SKILL.md) | UI Titã, Molas 2ª Ordem & GPU | $\phi_{\text{spatial}} \ge 0.30$ ou qualquer componente visual/interativo. |
+| 8 | [`tactile_audio_sfx`](../tactile_audio_sfx/SKILL.md) | Áudio Acústico Real (CC0) | $\phi_{\text{acoustic}} \ge 0.30$ ou eventos sonoros/táteis. |
+| 9 | [`browser_visual_reasoning`](../browser_visual_reasoning/SKILL.md) | Inspeção Chrome (`browser-mcp`) | $\phi_{\text{perceptual}} \ge 0.40$ ou UI Web executando localmente. |
+| 10 | [`autonomous_computer_use`](../autonomous_computer_use/SKILL.md) | Ciclo OODA & Auto-Cura SO | Execução shell/PowerShell, portas, processos zumbis ou locks Win32/Git. |
+| 11 | [`forensic_adversarial_auditor`](../forensic_adversarial_auditor/SKILL.md) | Gauntlet Red Team (Época IV) | **Compulsório na Época IV:** Nenhuma missão fecha sem juiz independente. |
+| 12 | [`spoke_rule_factory`](../spoke_rule_factory/SKILL.md) | Grounding Local & Spokes | Repositório sem `.agents/rules/` ou `.agents/spoke_manifest.json`, ou runtime heterogêneo. |
+| 13 | [`autonomous_rsi_engine`](../autonomous_rsi_engine/SKILL.md) | Post-Mortem & Ciclo Hebbiano | **Pós-Missão / Auto-Crítica:** Emissão de `pm_<session>.json` e evolução isolada Dual-Pole. |
+| 14 | [`github_sovereign_workflow`](../github_sovereign_workflow/SKILL.md) | Backup Git, PR & Push Seguro | **Sovereign Git:** Pré-operação arriscada, conclusão de tarefa segura (`add`/`commit`/`push`) ou fluxo GitHub. |
 
-### 1.5. Quantificação Contínua de Incerteza Epistêmica ($\varepsilon_t$)
-O Córtex Monitor de 2ª Ordem ($M_2$) quantifica continuamente a incerteza epistêmica $\varepsilon_t \in [0.0, 1.0]$:
+### 1.4. Quantificação Contínua de Incerteza Epistêmica ($\varepsilon_t$)
+$$\varepsilon_t = 0.30 \cdot \mathcal{H}_{\text{entropy}}(S_t) + 0.30 \cdot \mathcal{D}_{\text{disagreement}}(\mathcal{W}_t) + 0.25 \cdot \Delta_{\text{drift}}(G_0, G_t) + 0.15 \cdot \Omega_{\text{satisficing}}(A_t)$$
 
-$$\varepsilon_t = w_1 \cdot \mathcal{H}_{\text{entropy}}(S_t) + w_2 \cdot \mathcal{D}_{\text{disagreement}}(\mathcal{W}_t) + w_3 \cdot \Delta_{\text{drift}}(G_0, G_t) + w_4 \cdot \Omega_{\text{satisficing}}(A_t)$$
+- **`ZONE_GREEN` ($0.00 \le \varepsilon_t \le 0.15$):** Certeza empírica. Mutação motora liberada (`gemini-4-hydrogen-high` / `gemini-4-hydrogen-xhigh`).
+- **`ZONE_AMBER` ($0.15 < \varepsilon_t \le 0.40$):** Atrito probabilístico. Escalar raciocínio para **`gemini-4-neon-high`** e rodar probe empírica antes de editar.
+- **`ZONE_RED` ($\varepsilon_t > 0.40$):** **Disparo de `[EPISTEMIC_HALT]`**. Congelamento imediato de escritas até re-ancoragem empírica (também acionado por 2 turnos sem probe, $\Delta_{\text{drift}} > 0.35$, convergência prematura sem DAS, ou 2 falhas consecutivas de auto-cura).
 
-Com pesos fiduciários convexos: $w_1 = 0.30$, $w_2 = 0.30$, $w_3 = 0.25$, $w_4 = 0.15$.
-
-#### Regimes Operacionais de $\varepsilon_t$:
-- **`ZONE_GREEN` ($0.00 \le \varepsilon_t \le 0.15$):** Certeza Determinística. Ação motora autorizada via `replace_file_content` / `write_to_file`.
-- **`ZONE_AMBER` ($0.15 < \varepsilon_t \le 0.40$):** Atrito Probabilístico. Elevação para Flash Medium/High; injeção de probe empírica antes da escrita.
-- **`ZONE_RED` ($\varepsilon_t > 0.40$):** Ambiguidade Crítica. **Disparo compulsório de `[EPISTEMIC_HALT]`**. Congelamento imediato de mutações de arquivos.
-
-#### Gatilhos Formais de `[EPISTEMIC_HALT]`:
-1. `HALT_CRITICAL_UNCERTAINTY` ($\varepsilon_t > 0.40$): Incerteza crítica sem fundamento empírico.
-2. `HALT_CONFIRMATION_BIAS_LOOP`: Ruminação teórica por 2 turnos sem probe física no disco.
-3. `HALT_GOAL_DRIFT_EXCEEDED` ($\Delta_{\text{drift}} > 0.35$): Mutação fora do escopo do Dossiê.
-4. `HALT_PREMATURE_CONVERGENCE`: Proposta de encerramento sem triangulação dialética (Alfa vs. Beta).
-5. `HALT_CONSECUTIVE_REPAIR_COLLAPSE`: 2 falhas consecutivas de auto-cura no mesmo alvo.
-
-### 1.6. Sonda de Grounding Forense Local & Gatilho da Spoke Rule Factory
-Durante a Época 0 (Passada de Ingestão), o Prompt Refiner executa compulsoriamente a sondagem preliminar da integridade de governança de nicho do repositório hospedeiro:
-- **Critério de Detecção de Ausência:** O Prompt Refiner verifica a existência física de `<repo_root>/.agents/rules/` (ou `<repo_root>/.gemini/rules/`) e de `<repo_root>/.agents/spoke_manifest.json`.
-- **Gatilho de Disparo Compulsório:** Caso o diretório de regras locais ou o manifesto estejam ausentes, corrompidos ou incompletos:
-  1. O Prompt Refiner registra formalmente a ausência na Seção A do Dossiê (`mission_dossier.md`) sob Invariantes de Estado e Acoplamento.
-  2. Emite ordem executiva prioritária na Seção D (*Bespoke Dynamic Squad Blueprint*) para o despacho imediato da skill `spoke_rule_factory` através do subagente especialista `Niche Reconnaissance & Spoke Rule Architect` (`TypeName: "self"`).
-  3. A `spoke_rule_factory` extrai o tensor de assinatura do repositório $\vec{\Sigma}_R = \langle \mathcal{M}_{\text{manifest}}, \mathcal{L}_{\text{lockfiles}}, \mathcal{T}_{\text{ast}}, \mathcal{E}_{\text{execution}}, \mathcal{C}_{\text{concurrency}}, \mathcal{H}_{\text{hardware}}, \mathcal{V}_{\text{validation}} \rangle$ e compila os 4 módulos canônicos de nicho (`domain_standards.md`, `runtime_constraints.md`, `toolchain_and_validation.md`, `security_and_contracts.md`), gerando o selo estigmérgico `.agents/spoke_manifest.json`.
-  4. Garante conformidade estrita com o **Teorema da Não-Contaminação Constitucional** (Zero Abstraction Leakage): o Spoke adiciona restrições técnicas específicas do runtime hospedeiro sem jamais revogar ou afrouxar os invariantes da Layer 0.
-
-### 1.7. Gatilho Pós-Missão de Auto-Evolução: Cognitive Post-Mortem & Autonomous RSI Engine
-O ecossistema cognitivo do Hyper-Cortex v5.0 rejeita a estagnação estocástica e a amnésia inter-sessões. Toda missão concluída encerra com o acionamento do ciclo evolutivo em malha fechada:
-- **Gatilho de Acionamento Pós-Gauntlet:** Imediatamente após a homologação formal pelo Subagente Juiz Red Team na Época IV (Expediente 5) e a confirmação de `$LASTEXITCODE === 0`, o Prompt Refiner impõe a emissão do artefato de telemetria fria `.planning/post_mortem/pm_<session_id>.json`.
-- **Ordem de Disparo do Autonomous RSI Engine:** O Dossiê prescreve a convocação da skill `autonomous_rsi_engine` para executar o ciclo cibernético Hebbiano em 4 fases:
-  1. *Fase 1 (Detector de Lacunas / Gap Identification):* Analisa falhas, retries motores, circuit breakers disparados, latência de colapso e intervenções humanas.
-  2. *Fase 2 (Geração de Hipótese de Melhoria / Candidate Patch):* Formula mutações aditivas cirúrgicas com contraste pedagógico (*Anti-Pattern vs Titanium Pattern*) para spokes locais ou manuais técnicos de skills.
-  3. *Fase 3 (Sandboxing & Adversarial Regression Gauntlet):* Submete o patch a testes adversariais rigorosos e verificação formal da inviolabilidade da Layer 0.
-  4. *Fase 4 (Ratificação Fiduciária & Commit Transacional):* Persiste a evolução no State Ledger (`.planning/ledger/txn_XXXX.json`) e atualiza os pesos sinápticos Hebbianos (LTP: $\Delta w = +0.20$ / LTD: $\Delta w = -0.40$) no `.planning/synaptic_bus.json`.
-- **Blindagem Constitucional:** Execução governada pelas Quatro Travas Pétreas do RSI (Layer 0 Imutável, Anti-Dumbing Down Invariant, Bipartição Classe A/B e Limite de Taxa Evolutiva de no máximo 1 patch por expediente).
+### 1.5. Sondas Estruturais Automáticas (Spoke, Neural Map, Git Backup & RSI)
+Na Época 0, o Refiner executa quatro checagens automáticas e injeta ordens no Dossiê:
+1. **Project Neural Map:** Verifica `.planning/project_neural_map.json` e `PROJECT_NEURAL_MAP.md`. Se ausentes ou desatualizados, agenda leitura/criação conforme [`fractal_thought_graph`](../fractal_thought_graph/SKILL.md).
+2. **Spoke Rule Factory:** Verifica `<repo_root>/.agents/rules/` e `.agents/spoke_manifest.json`. Se ausentes, ativa [`spoke_rule_factory`](../spoke_rule_factory/SKILL.md) (respeitando o *Teorema da Não-Contaminação Constitucional* entre Layer 0 e Layer 1).
+3. **GitHub Sovereign Backup:** Se a missão envolver refatoração ampla, exclusão ou risco estrutural, ativa [`github_sovereign_workflow`](../github_sovereign_workflow/SKILL.md) para checkpoint commit antes das mutações e `git add .`/`commit`/`push` seguro ao concluir.
+4. **Pós-Missão RSI:** Prescreve emissão de `.planning/post_mortem/pm_<session>.json` após homologação na Época IV e disparo de [`autonomous_rsi_engine`](../autonomous_rsi_engine/SKILL.md) respeitando isolamento **Dual-Pole** (Global vs. Projeto).
 
 ---
 
-## 2. Os Sete Entregáveis Obrigatórios do Dossiê Universal (`.planning/mission_dossier.md`)
+## 2. Os Sete Entregáveis Obrigatórios do Dossiê (`.planning/mission_dossier.md`)
 
-Todo despacho do Subagente Prompt Refiner deve gerar compulsoriamente o Dossiê Universal contendo os blocos fiduciários inegociáveis:
-
-```text
-┌────────────────────────────────────────────────────────────────────────┐
-│                   ANATOMIA DOS ENTREGÁVEIS v5.0                        │
-├────────────────────────────────────────────────────────────────────────┤
-│ 1. Classificação de Modo & Desconstrução Forense (4 Camadas - Lei 38) │
-│ 2. Assinatura Física do Problema Φ(P) & Matriz de Auto-Ativação (W)    │
-│ 3. Roadmap Determinístico Passo a Passo (arquivo a arquivo)            │
-│ 4. Matriz de Regras e Skills Ativadas (Primeiros Princípios)           │
-│ 5. Bespoke Dynamic Squad Blueprint & Topologias Cognitivas (LCS/ToT/GoT│
-│ 6. Matriz de Modos de Quebra & Pre-Mortem Forense                      │
-│ 7. Matriz de Checklists Forenses Extensivos & Aceite Fiduciário        │
-└────────────────────────────────────────────────────────────────────────┘
-```
-
-### (a) Classificação de Modo & Desconstrução Forense da Demanda
-- **Classificação:** `mission_type: "ARCHITECTURAL"` ($N \ge 100$ nós) ou `"DIRECT_OPERATIONAL"` (Zero nós em disco).
-- **Contratos Explícitos (CE):** Declarações literais, entradas, saídas esperadas e restrições expressas pelo usuário.
-- **Contratos Implícitos (CI):** Invariantes não ditos, mas mandatórios (idempotência, `AbortController`, ARIA, concorrência atômica, 60fps, latência $<16\text{ms}$, `Result<T, E>`).
-- **Invariantes de Estado & Acoplamento:** Mapeamento do estado atual, dependências circulares e impacto em rotas/contratos existentes.
-
-### (b) Assinatura Física do Problema $\vec{\Phi}(P)$ & Auto-Ativação de Skills
-- Computação exaustiva dos 8 eixos de $\vec{\Phi}(P)$.
-- Aplicação da Matriz $\mathbf{W}$ para auto-ativação determinística das skills necessárias, garantindo o atendimento a todas as pré-condições operacionais (UISC v5.0).
-- Verificação estrutural de Spoke Rules locais: se `<repo_root>/.agents/rules/` ou `.agents/spoke_manifest.json` estiverem ausentes, ativa compulsoriamente a skill `spoke_rule_factory`.
-- Definição do gatilho pós-missão: prescreve o disparo compulsório da skill `autonomous_rsi_engine` e a geração do Cognitive Post-Mortem (`.planning/post_mortem/pm_*.json`) após homologação na Época IV.
-
-### (c) Roadmap Passo a Passo Exato
-- Sequenciamento unívoco e mecânico de ações para o Agente Principal e para o enxame de subagentes.
-- Definição estrita de dependências: sequencial vs concorrência paralela.
-- Travas de isolamento: protocolo `HOLD/GO` no `synaptic_bus.json` para interfaces compartilhadas.
-
-### (d) Bespoke Dynamic Squad Blueprint & Atribuição de Topologia de Pensamento (Ordem Executiva de Despacho)
-Em conformidade estrita com as Leis 32, 40, 42, 43, 44 e 45:
-- **Ordem de Execução Mandatória:** A Seção D NÃO é decorativa; é uma ordem de despacho executiva imediata para o Agente Principal. Mutacionar código sem despachar os subagentes mapeados aciona `[HARD HALT: SQUAD_DISPATCH_BYPASSED]`.
-- **Atribuição Obrigatória de Topologia de Pensamento:**
-  Todo subagente e fluxo de trabalho do esquadrão DEVE ser explicitamente parametrizado com sua **Topologia Cognitiva Ótima**:
-  * **LCS (Linear Causal Sequence):** Cadeias determinísticas diretas de causa e efeito ($X \to Y \to Z$). Indicado para refatorações pontuais, scripts CLI determinísticos e pipelines sem bifurcação.
-  * **ToT (Tree of Thoughts):** Exploração em árvore com poda analítica e backtracking. Indicado para trade-offs heurísticos, seleção de algoritmos ou exploração de múltiplos designs arquiteturais concorrentes.
-  * **GoT (Graph of Thoughts):** Hipergrafo direcionado acíclico com convergência, divergência e fusão de nós de raciocínio. Indicado para sistemas distribuídos, modelagem de concorrência massiva e expansão de nós na Época I.
-  * **DAS (Dialectic Adversarial Synthesis):** Confronto dialético tripartite (Tese Alfa $\to$ Antítese Beta/Red Team $\to$ Síntese Fiduciária Empírica). Obrigatório para diagnósticos de causa raiz e auditoria pré-homologação.
-- **Protocolo de Encadeamento Quádruplo dos Titãs:**
-  Para demandas que atravessam lógica, interface, áudio e validação, o blueprint deve compor formalmente a esteira integrada:
-  $$\mathcal{S}_{\text{DTR}} \xrightarrow{\tau_1} \mathcal{S}_{\text{MUC}} \xrightarrow{\tau_2} \mathcal{S}_{\text{TAS}} \xrightarrow{\tau_3} \mathcal{S}_{\text{FAA \& BVR}}$$
-  Onde os contratos intermediários $\tau_1$ (especificação cinemática de molas e estados), $\tau_2$ (ganchos de eventos táteis e transientes de áudio) e $\tau_3$ (hashes de áudio e checklist de telemetria) são propagados deterministicamente pelo `synaptic_bus.json`.
-- **Dupla Investigativa Obrigatória (Two-Mind Minimum):** Para qualquer tarefa investigativa ou alteração de arquivo existente, o esquadrão DEVE conter no mínimo:
-  * **Subagente Alfa (Causal Root Cause):** Especialista na mecânica microscópica interna da falha ou alteração (`TypeName: "self"` ou `"research"`, `[ACTION_MODE: ANALYTICAL_INVESTIGATION]`). Grava laudo em `.planning/investigations/inv_001_root_cause.md`.
-  * **Subagente Beta (Downstream Blast Radius):** Especialista no raio de impacto colateral, interfaces externas e contratos (`TypeName: "self"` ou `"research"`, `[ACTION_MODE: ANALYTICAL_INVESTIGATION]`). Grava laudo em `.planning/investigations/inv_002_blast_radius.md`.
-  * **Subagente de Grounding Local (Spoke Rule Architect):** Despachado compulsoriamente caso o repositório não possua regras locais `.agents/rules/` ou manifesto válido, instanciando a `spoke_rule_factory` (`TypeName: "self"`, `[ACTION_MODE: PHYSICAL_MUTATION]`).
-  * **Subagente de Auto-Evolução (Autonomous RSI Synthesizer):** Despachado no encerramento da missão para processar a telemetria fria do post-mortem (`pm_*.json`) e conduzir o ciclo Hebbiano de auto-aprimoramento (`TypeName: "self"`).
-- **Handoff de Alta Fidelidade (Lei 42):** Os subagentes codificadores de produção DEVEM receber os caminhos desses laudos e a instrução expressa de ler os arquivos via `view_file` antes de codificar — banindo resumos pré-frontais com perda.
-- **Mandato do Artífice Motor & Tipagem Compulsória (Lei 43):**
-  * Todo subagente com meta de produção, codificação, refatoração ou correção de arquivos DEVE ser compulsoriamente tipado como `TypeName: "self"` com `[ACTION_MODE: PHYSICAL_MUTATION]`. É terminantemente proibido utilizar `TypeName: "research"` para tarefas motoras (subagentes research não possuem ferramentas de escrita e colapsam involuntariamente em consultores passivos).
-  * O prompt cirúrgico DEVE conter ordem expressa de mutação física direta via `replace_file_content` ou `write_to_file`. Proibido devolver código em markdown no `send_message`.
-- **Parametrização Estrita:** Para cada subagente: `Role`, `TypeName: "self"` (produção/motor) ou `"research"` (apenas leitura analítica), `Model: "flash"`, `[ACTION_MODE]`, Topologia Cognitiva atribuída (`LCS` | `ToT` | `GoT` | `DAS`), prompt cirúrgico Clean-Context e ferramentas autorizadas.
-
-### (e) Matriz de Modos de Quebra e Pre-Mortem Forense
-- Exercício Pre-Mortem: *"Assumindo que este código quebrou catastroficamente em produção 3 meses após o deploy, quais foram as causas raízes microscópicas?"*
-- Mapeamento explícito de condições de corrida, memory leaks, quebra de contratos e degradação de frame-rate.
-
-### (f) Matriz de Checklists Forenses & Critérios Estritos de Aceite Fiduciário
-- Checklists binários de verificação [0 ou 1] por nó/arquivo (Lei 41).
-- Métricas quantificáveis para o Subagente Juiz (Época IV): `$LASTEXITCODE === 0`, zero erros no console (`browser_console_logs`), zero stubs e inspeção visual perceptual aprovada no Chrome real via `browser-mcp`.
-
-O artefato físico único de ingestão é `.planning/mission_dossier.md`. Qualquer tentativa de ignorar este artefato aciona `[HARD HALT]`.
-
-
-
-## 3. Exemplar Contrastivo & Autópsia Forense de Falha
-
-Para ilustrar o poder de blindagem do Portão Ubíquo, examinemos um caso real de engenharia de produto.
-
-### 3.1. A Demanda Bruta do Usuário
-> *"Adicione um botão de exportar relatórios na tabela de transações com um som de feedback e um indicador visual de progresso."*
+1. **Classificação de Modo & Desconstrução Forense em 4 Camadas:**
+   - `mission_type`: `"ARCHITECTURAL"` (`nodes_floor: 3`, teto `7`) ou `"DIRECT_OPERATIONAL"` (`nodes_floor: 0`).
+   - **Camada 1 — Contratos Explícitos (CE):** Entradas, saídas e restrições literais do usuário.
+   - **Camada 2 — Contratos Implícitos (CI):** Invariantes obrigatórios (idempotência, `Result<T,E>`, `AbortController`, ARIA, 60fps/120Hz, atomic swap, segurança).
+   - **Camada 3 — Pre-Mortem Forense T+12 Meses:** *"Assumindo falha catastrófica em produção, quais causas raízes microscópicas ocorreram?"*
+   - **Camada 4 — Two-Man Rule Sign-Off:** Checklist de dupla checagem construtiva vs. Red Team.
+2. **Assinatura Física $\vec{\Phi}(P)$ & Matriz de Skills ($\mathbf{W}$):** Vetor de 8 eixos + subconjunto das 14 skills ativadas e justificadas.
+3. **Roadmap Determinístico Arquivo-a-Arquivo:** Sequência exata de dependências, sets disjuntos de arquivos e barreiras `HOLD/GO`.
+4. **Matriz de Regras/Spokes Aplicáveis:** Leis aplicáveis e regras locais de `.agents/rules/`.
+5. **Bespoke Dynamic Squad Blueprint & Topologia Cognitiva:**
+   - Ordem executiva de despacho (não decorativa; ignorá-la dispara `[HARD HALT: SQUAD_DISPATCH_BYPASSED]`).
+   - Parametrização de cada worker/subagente: `Role` sob medida para a física do problema, `FileSet` disjunto, Topologia (`LCS` | `ToT` | `GoT` | `DAS`), Modelo da Hierarquia v6.0 (`gemini-4-hydrogen-high` | `gemini-4-hydrogen-xhigh` | `gemini-4-neon-high`) e modo de execução (`TypeName: "self"` para artífice motor fim-a-fim ou `/swarm` worker com `workspace:"share"`).
+   - **Encadeamento Quádruplo dos Titãs** (quando aplicável a UI/Áudio/Web):
+     $$\mathcal{S}_{\text{DTR}} \xrightarrow{\tau_1} \mathcal{S}_{\text{MUC}} \xrightarrow{\tau_2} \mathcal{S}_{\text{TAS}} \xrightarrow{\tau_3} \mathcal{S}_{\text{FAA \& BVR}}$$
+6. **Matriz de Modos de Quebra & Mitigações:** Race conditions, locks Win32 `EBUSY`, memory leaks, quota $\le 10\%$.
+7. **Checklists Forenses Binários `[0 | 1]` & Critérios de Aceite:** Verificáveis fisicamente no disco/console pelo Red Team na Época IV (`$LASTEXITCODE === 0`, zero stubs, zero erros no console; mentira aciona `[HARD REJECT: FRAUDULENT_CHECKLIST_SIGNOFF]`).
 
 ---
 
-### 3.2. O Anti-Pattern: Ação Estocástica por Impulso do Prompt Cru
+## 3. Protocolo de Invocação & Selo Estigmérgico (`.planning/refiner_seal.json`)
 
-#### O Que a IA Sem Portão Faz:
-1. Pula a Época 0. Não despacha subagentes.
-2. Abre imediatamente `TransactionTable.tsx` e injeta código diretamente na thread principal.
-3. Código gerado pelo impulso:
-
-```tsx
-// ANTI-PATTERN: Implementação ingênua no impulso
-import React, { useState } from 'react';
-
-export function ExportButton({ transactions }: { transactions: any }) {
-  const [loading, setLoading] = useState(false);
-
-  const handleExport = async () => {
-    setLoading(true);
-    // Áudio ingênuo: crasha por autoplay ou dá 404
-    const audio = new Audio('/beep.mp3');
-    audio.play().catch(() => {});
-
-    try {
-      const res = await fetch('/api/export', {
-        method: 'POST',
-        body: JSON.stringify(transactions),
-      });
-      const blob = await res.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'report.csv';
-      a.click();
-    } catch (e) {
-      alert('Erro ao exportar');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  return (
-    <button
-      onClick={handleExport}
-      className="bg-blue-600 text-white px-4 py-2 rounded transition-all duration-300 ease-in-out hover:bg-blue-700 disabled:opacity-50"
-      disabled={loading}
-    >
-      {loading ? 'Exportando...' : '📥 Exportar Relatório'}
-    </button>
-  );
-}
-```
-
-4. A IA encerra a resposta dizendo:
-   > *"Pronto! Adicionei o botão de exportação com feedback sonoro e indicador de progresso como você pediu. Espero que ajude! Se precisar de mais alguma coisa, estou à disposição."*
-
----
-
-#### A Autópsia Forense da Falha (Post-Mortem)
-
-```text
-┌────────────────────────────────────────────────────────────────────────┐
-│                   AUTÓPSIA FORENSE DE FALHA (POST-MORTEM)              │
-├────────────────────────────────────────────────────────────────────────┤
-│ INCIDENTE: Falha em Produção no Módulo de Exportação Financeira        │
-│ CLASSIFICAÇÃO: Severidade Alta (Data Desync & UI Jank)                 │
-└────────────────────────────────────────────────────────────────────────┘
-```
-
-1. **Vulnerabilidade de Concorrência & Memory Leak (DoS no Cliente):**
-   - O botão desabilita `onClick` apenas localmente, mas não utiliza `AbortController`.
-   - Se a rota de backend atrasar e o usuário navegar para outra página, a promessa continua aberta em background tentando manipular o DOM após o desmonte do componente (*unmounted component state mutation*).
-   - Não há proteção contra cliques simultâneos em abas múltiplas ou reenvio de payload massivo de dados brutos de transações no corpo da requisição (`body: JSON.stringify(transactions)`), sobrecarregando o canal HTTP.
-2. **Degradação Perceptual & Menor Denominador Comum (Violação da Lei 7):**
-   - Uso de `transition-all duration-300 ease-in-out` de CSS. Transições lineares de 300ms geram atraso tátil perceptivo inaceitável. O clique parece pesado, viscoso e amador.
-3. **Mídia Falsa & Fraude de Interface (Violação das Leis 9 e 10):**
-   - Uso de emoji `📥` como substituto preguiçoso de ícone de vetor autêntico ou tipografia suíça.
-   - Chamada a `/beep.mp3` que não existe fisicamente no disco, gerando erro **HTTP 404** gritante no console do navegador e violando o portão de telemetria de zero erros.
-   - Pior: se gerasse som via Web Audio API senoidal sintética, violaria sumariamente a Lei 10 (proibição absoluta de áudio matemático sintético).
-4. **Ausência de Tipagem Estrita & Clean Architecture (Violação da Lei 18 e da Skill de Arquitetura):**
-   - `transactions: any` destrói a segurança de tipos do sistema financeiro.
-   - Acoplamento direto entre camada de UI e protocolo de rede HTTP (violação do desacoplamento de Portas e Adaptadores).
-5. **Poluição de Assistente & Violação da Lei 34 (Null-Vocabulary):**
-   - Uso explícito de clichês proibidos: *"Espero que ajude!"*, *"estou à disposição"*, evidenciando perda de postura fiduciária.
-6. **Zero Inspeção Visual no Chrome:**
-   - O agente nunca abriu o navegador real via `browser-mcp`. Se tivesse aberto, o erro 404 no console teria sido detectado imediatamente.
-
----
-
-### 3.3. O Padrão dos Titãs: Execução Blindada pelo Universal Prompt Refiner Gate
-
-#### O Fluxo de Execução Governado pelo Portão:
-
-```text
-[Demanda Bruta: Exportar Relatório com Som & Progresso]
-                          │
-                          ▼
-       [PORTÃO MANDATÓRIO: ÉPOCA 0 INTERCEPTAÇÃO]
-                          │
-     invoke_subagent: Prompt Refiner & Epistemic Compiler
-                          │
-                          ▼
-      Gravação de .planning/mission_dossier.md
-   • Desconstrução Forense (AbortController, Máquina de Estados Finitos)
-   • Foley Real via scripts/sfx_tool.py slice-youtube
-   • Cinemática de Molas de 2ª Ordem Framer Motion (stiffness 400)
-   • Porta ExportService desacoplada com Result<Blob, ExportError>
-   • Subagentes Bespoke Despachados:
-     - FoleyEngineer (áudio físico real no disco)
-     - UIKinematicCraftsman (Framer Motion + Tipografia Suíça)
-     - StreamingNetworkAdapter (AbortController + State Machine)
-                          │
-                          ▼
-            Execução das Épocas I, II e III
-                          │
-                          ▼
-    [ÉPOCA IV: Red Team Judge Mind no Chrome Real via browser-mcp]
-   • Validação de 60fps no frame graph
-   • Telemetria: Zero erros 404, zero warnings de hidratação
-   • Homologação fiduciária e entrega com working tree clean
-```
-
-#### O Código Blindado Resultante do Padrão dos Titãs:
-
-```tsx
-// PADRÃO DOS TITÃS: Código desacoplado, resiliente e cinemático
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ExportState } from '@/core/domain/export_types';
-import { useExportController } from '@/adapters/ui/use_export_controller';
-
-// Molas dinâmicas de 2ª ordem (Padrão Apple/Linear)
-const springTransition = {
-  type: "spring",
-  stiffness: 420,
-  damping: 28,
-  mass: 0.8
-};
-
-export function ExportActionTrigger({ reportId }: { reportId: string }) {
-  const { state, progress, triggerExport, abortExport } = useExportController(reportId);
-
-  return (
-    <div className="relative inline-flex items-center">
-      <motion.button
-        layout
-        transition={springTransition}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        onClick={state === 'streaming' ? abortExport : triggerExport}
-        className="relative overflow-hidden rounded-md border border-neutral-800 bg-neutral-900/90 px-3.5 py-1.5 text-xs font-medium tracking-tight text-neutral-200 shadow-sm backdrop-blur-md"
-        aria-label={state === 'streaming' ? "Cancelar exportação" : "Exportar relatório analítico"}
-      >
-        <AnimatePresence mode="wait">
-          {state === 'idle' && (
-            <motion.span
-              key="idle"
-              initial={{ opacity: 0, y: 4 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -4 }}
-              transition={springTransition}
-              className="flex items-center gap-2"
-            >
-              <span className="font-mono text-[10px] text-neutral-400">CSV</span>
-              <span>Exportar Dados</span>
-            </motion.span>
-          )}
-
-          {state === 'streaming' && (
-            <motion.span
-              key="streaming"
-              initial={{ opacity: 0, y: 4 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -4 }}
-              transition={springTransition}
-              className="flex items-center gap-2"
-            >
-              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
-              <span>Gerando ({progress}%)</span>
-            </motion.span>
-          )}
-        </AnimatePresence>
-
-        {/* Barra de progresso física com aceleração por GPU */}
-        {state === 'streaming' && (
-          <motion.div
-            className="absolute bottom-0 left-0 h-[2px] bg-emerald-500"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ ease: "linear", duration: 0.2 }}
-          />
-        )}
-      </motion.button>
-    </div>
-  );
-}
-```
-
-E os arquivos de áudio associados provêm de fatiamento cirúrgico de áudios mecânicos autênticos via script:
-`python scripts/sfx_tool.py slice-youtube "https://www.youtube.com/watch?v=..." 12.4 12.8 assets/audio/tactile_click.wav`
-
----
-
-## 4. Protocolo de Invocação do Subagente Prompt Refiner
-
-Quando qualquer nova demanda ou turno se inicia (sob o paradigma Turn-as-a-Session da Lei 37), o Agente Principal DEVE emitir a chamada de ferramenta de despacho com a seguinte estrutura invariante:
+### 3.1. Invocação do Subagente Prompt Refiner (Época 0)
+Despachar antes de qualquer edição com modelo padrão operacional `gemini-4-hydrogen-high` (ou `gemini-4-neon-high` se $\varepsilon_t > 0.25$ ou arquitetura crítica):
 
 ```json
 {
@@ -407,130 +105,47 @@ Quando qualquer nova demanda ou turno se inicia (sob o paradigma Turn-as-a-Sessi
     {
       "TypeName": "self",
       "Role": "Universal Prompt Refiner & Epistemic Compiler",
-      "Model": "flash",
-      "Prompt": "Você é o compilador epistêmico do Portão de Ingestão Mandatória Ubíqua (Universal Prompt Refinement Gate & Hyper-Cortex Ingestion Gate v5.0). Sua missão é congelar qualquer impulso de ação e compilar o Dossiê Executivo de Missão e o Selo Estigmérgico de Despacho antes de qualquer modificação física. Analise a demanda crua do usuário: [INSERIR_DEMANDA_CRUA]. 1. Execute a Análise de Custo-Complexidade (ACC), verifique a presença de Spoke Rules locais (.agents/rules/ e spoke_manifest.json, emitindo ordem prioritária para a spoke_rule_factory caso ausentes), extraia a Assinatura Física do Problema Phi(P) em 8 eixos, aplique a Matriz de Auto-Ativação de Skills (W) integrando spoke_rule_factory e autonomous_rsi_engine quando aplicável, quantifique a Incerteza Epistêmica epsilon_t e classifique a missão compulsoriamente em mission_type: 'ARCHITECTURAL' (nova plataforma/módulo estrutural -> piso inegociável de 100 nós atômicos) ou 'DIRECT_OPERATIONAL' (bug fix/ajuste direto/investigação -> ZERO nós em disco, nodes_floor: 0, 100% tokens para execução real); 2. Grave o artefato físico .planning/mission_dossier.md (Dossiê Universal — único artefato permitido); 3. O dossiê deve conter com rigor absoluto: (a) Desconstrução Forense em 4 Camadas (Lei 38); (b) Assinatura Física Phi(P) & Matriz de Auto-Ativação; (c) Roadmap Mecânico Passo a Passo determinístico; (d) Bespoke Dynamic Squad Blueprint com atribuição de Topologias de Pensamento (LCS/ToT/GoT/DAS), Encadeamento Quádruplo dos Titãs e gatilhos de Spoke Rule Factory e Autonomous RSI Engine; (e) Matriz de Modos de Quebra e Pre-Mortem Forense; (f) Critérios Estritos de Aceite Fiduciário para o Red Team na Época IV e prescrição do Cognitive Post-Mortem. 4. Emita compulsoriamente no disco o Selo Estigmérgico de Despacho (.planning/refiner_seal.json) com o hash criptográfico da demanda crua, status 'SEALED_VALID', session_mode: 'Universal v5.0 — Hyper-Cortex Sovereign Session', mission_type ('ARCHITECTURAL' ou 'DIRECT_OPERATIONAL'), nodes_floor (100 ou 0), epsilon_score, active_thought_topology, modo Flash prescrito e lista estrita de operações autorizadas. Aplique o Null-Vocabulary estrito. Grave os arquivos no disco e notifique o Agente Principal para proceder."
+      "Model": "gemini-4-hydrogen-high",
+      "Prompt": "Execute o Portão de Ingestão Mandatória v6.0 para a demanda: [DEMANDA_CRUA]. 1. Consulte .planning/project_neural_map.json (se existir) e verifique .agents/rules/ + spoke_manifest.json. 2. Calcule Phi(P) em 8 eixos, selecione as skills dentre as 14 do plugin, compute epsilon_t e a topologia inicial (LCS/ToT/GoT/DAS). 3. Classifique mission_type em 'ARCHITECTURAL' (Lean Modular Graph: 3-7 nós ricos, padrão 5) ou 'DIRECT_OPERATIONAL' (nodes_floor: 0). 4. Grave .planning/mission_dossier.md com os 7 entregáveis obrigatórios e .planning/refiner_seal.json com status SEALED_VALID. Aplique Null-Vocabulary estrito e retorne apenas o recibo."
     }
   ]
 }
 ```
 
-### 4.1. O Selo Estigmérgico de Despacho (`.planning/refiner_seal.json`)
-
-O selo é um artefato estigmérgico obrigatório emitido exclusivamente pelo Prompt Refiner para atestar a blindagem do turno:
-
+### 3.2. Schema Canônico do Selo (`.planning/refiner_seal.json`)
 ```json
 {
+  "seal_version": "6.0.0",
   "turn_index": 1,
-  "timestamp": "2026-09-17T20:20:00-03:00",
-  "user_raw_prompt_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-19T13:40:00Z",
+  "user_raw_prompt_hash": "<sha256>",
   "mission_dossier_path": ".planning/mission_dossier.md",
-  "session_mode": "Universal v5.0 — Hyper-Cortex Sovereign Session",
   "mission_type": "DIRECT_OPERATIONAL",
-  "nodes_floor": 0,
+  "nodes_target": 0,
   "epsilon_score": 0.08,
-  "active_thought_topology": "DIALECTIC_ADVERSARIAL_SYNTHESIS",
+  "epistemic_zone": "ZONE_GREEN",
+  "active_thought_topology": "LINEAR_CAUSAL_STREAM",
+  "recommended_model": "gemini-4-hydrogen-high",
   "problem_physical_signature": {
-    "spatial": 0.85,
-    "acoustic": 0.90,
-    "state": 0.80,
-    "epistemic": 0.95,
-    "cognitive": 0.92,
-    "economic": 0.60,
-    "distributed": 0.90,
-    "perceptual": 0.95
+    "spatial": 0.10, "acoustic": 0.00, "state": 0.70, "epistemic": 0.25,
+    "cognitive": 0.35, "economic": 0.20, "distributed": 0.50, "perceptual": 0.00
   },
   "active_skills_chain": [
     "universal_prompt_refiner",
-    "spoke_rule_factory",
-    "dynamic_thought_router",
     "hardened_clean_architecture",
-    "modern_ui_craft",
-    "tactile_audio_sfx",
-    "browser_visual_reasoning",
     "forensic_adversarial_auditor",
-    "autonomous_rsi_engine"
+    "github_sovereign_workflow"
   ],
-  "recommended_flash_mode": "Flash Low",
-  "mandatory_keywords_injected": [
-    "Água no Deserto",
-    "Cinemática de Molas dos Titãs",
-    "Micro-ativos táteis reais",
-    "Foley real",
-    "Auditoria no Chrome Real",
-    "1:1 Subagente por Nó / Arquivo",
-    "Two-Mind Minimum",
-    "Metacognição de 2ª Ordem",
-    "Topologia de Pensamento"
-  ],
-  "forensic_signoff": {
-    "layer1_explicit_contracts": true,
-    "layer2_implicit_contracts": true,
-    "layer3_pre_mortem": true,
-    "layer4_two_man_rule": true,
-    "layer5_physical_signature": true,
-    "layer6_epistemic_calibration": true
-  },
   "seal_status": "SEALED_VALID",
-  "authorized_operations": [
-    "DISPATCH_SQUAD",
-    "ATOMIC_CODE",
-    "RUN_TESTS"
-  ]
+  "authorized_operations": ["DISPATCH_SQUAD", "ATOMIC_CODE", "RUN_TESTS"]
 }
 ```
 
-### 4.2. Protocolo de Despacho de Subagentes Motores de Produção (Lei 43)
-
-Quando o Agente Principal despacha subagentes para implementar código, refatorar ou corrigir bugs com base no blueprint do Dossiê, o payload DEVE obedecer rigorosamente à tipagem motora:
-
-1. **Tipagem Compulsória:** `TypeName: "self"` (nunca `"research"`). Subagentes `"research"` são estritamente para leitura e colapsam em consultores textuais caso incumbidos de escrita.
-2. **Tag de Modo:** `[ACTION_MODE: PHYSICAL_MUTATION]`.
-3. **Ponteiro de Investigação:** `[INVESTIGATION_REPORT_PATH]: ".planning/investigations/inv_<id>_<slug>.md"` com ordem imperativa de leitura integral via `view_file` antes de tocar no código.
-4. **Alvos Estritos:** `[TARGET_FILES]` com caminhos absolutos e garantia de conjuntos disjuntos ($\text{FileSet}(S_i) \cap \text{FileSet}(S_j) = \emptyset$) para blindagem contra colisões de locks (`EBUSY`) e offset drift.
-5. **Ordem Motora Direta:** Instrução expressa: *"Você é um artífice motor. Sua missão é invocar diretamente as ferramentas replace_file_content / write_to_file em sua própria sessão. É terminantemente proibido devolver blocos de código em markdown no send_message."*
-6. **Retorno Exclusivo:** O `send_message` reporta unicamente a telemetria fria de encerramento (`DISK_MUTATION_RECEIPT_ONLY`): caminhos alterados, linhas, status de build/testes e garantia de Zero-Stub.
-7. **Trava de Auto-Veto do Agente Principal (`[HARD REJECT: ADVISORY_CODE_DUMP]`):** Caso o subagente devolva código textual no chat sem mutação física comprovada no disco, o Agente Principal DEVE rejeitar a entrega sumariamente e exigir a execução motora direta. É terminantemente proibido ao Agente Principal digitar ou colar o código pelo subagente.
-
-### 4.3. As Travas Mecânicas: `[HARD HALT]`
-
-O ecossistema opera sob duas travas mecânicas intransponíveis:
-
-1. **Portão do Refiner Bypassed (`[HARD HALT: PROMPT_REFINER_GATE_BYPASSED]`):**
-   Tentativa de ação motora, comandos shell (`run_command`), ferramentas de escrita (`write_to_file`, `replace_file_content`) ou despacho a jusante sem a presença ativa de `.planning/refiner_seal.json` com status `SEALED_VALID`.
-2. **Esquadrão Bypassed (`[HARD HALT: SQUAD_DISPATCH_BYPASSED]`):**
-   Tentativa do Agente Principal de mutacionar código diretamente sem antes ter despachado o esquadrão de subagentes especializados definido na Seção D do `mission_dossier.md`.
-
-```text
-⛔ [HARD HALT: SQUAD_DISPATCH_BYPASSED]
-═════════════════════════════════════════════════════════════════
-VIOLAÇÃO CONSTITUCIONAL DETECTADA: Tentativa de mutação de código
-sem o prévio despacho do Esquadrão Especializado mapeado na Seção D
-do Dossiê Universal (.planning/mission_dossier.md).
-Causa: Agente Principal agiu sozinho sem ativar as mentes do squad.
-Ação Corretiva Compulsória: Disparo imediato dos subagentes do squad.
-═════════════════════════════════════════════════════════════════
-```
-
-### 4.4. O Ciclo Vital de Fechamento (Teardown Transacional)
-Ao término do turno (Lei 37), o Agente Principal invalida transacionalmente o selo ativo (`"seal_status": "TURN_CONSUMED"`). Isso garante que o próximo turno desperte em estado limpo, forçando compulsoriamente um novo despacho do Prompt Refiner durante o Cold Boot Handshake.
+> **Teardown Transacional:** Ao final do turno (TaaS), o Agente Principal atualiza `"seal_status": "TURN_CONSUMED"` para que o próximo turno revalide o contexto sem amnésia ou estado obsoleto.
 
 ---
 
-## 5. Geração da Matriz de Checklists Forenses da Cadeia Neural (Lei 41)
+## 4. Exemplar Contrastivo: Impulso Estocástico vs. Portão Titã v6.0
 
-O Prompt Refiner deve compilar, dentro do `mission_dossier.md` (Seção E — Matriz de Checklists), a lista completa de critérios binários que cada subagente da Época III e o Red Team da Época IV devem verificar. Para cada arquivo ou nó a ser produzido, o dossiê lista:
-
-| Critério | Descrição | Verificável em |
-|---|---|---|
-| Tipagem Estrita `Result<T,E>` | Zero `any`, `unknown` ou casts inseguros | TypeScript/source |
-| Zero-Stub | Zero `TODO`, `pass`, `return null`, `{}` vazio | Grep no repositório |
-| Física de Molas dos Titãs | `framer-motion` com stiffness/damping/mass reais; zero `transition-all duration-300` | Inspeção de código |
-| Isolamento de Thread/GPU | Zero bloqueio de main thread; apenas `transform`/`opacity` | DevTools Performance |
-| Áudio Físico Real | Gravações acústicas via `sfx_tool.py`; zero síntese por script | Grep por `AudioSynthesizer`/`oscillator` |
-| Fotografia Óptica Real | `generate_image` com 6 variáveis ópticas; zero SVG genérico/emoji | Inspeção visual |
-| Concorrência Atômica | Mutex sináptico (HOLD/GO); Atomic Swap na escrita; idempotência | Review de contrato |
-| Telemetria Zero Erros | `$LASTEXITCODE === 0`; zero erros/warnings/404s no console | browser-mcp console |
-| Pre-Mortem Blindado | Falha T+6 meses modelada e neutralizada em nó atômico | node_XXX_premortem.md |
-| Null-Vocabulary | Zero preâmbulos, bajulação ou fórmulas de encerramento | Review de output |
-
-O Red Team (Época IV) audita cada linha desta matriz com evidência física no disco ou no navegador. Qualquer item marcado como concluído sem evidência dispara `[HARD REJECT: FRAUDULENT_CHECKLIST_SIGNOFF]`.
+- **Anti-Pattern (Sem Portão):** IA abre `TransactionTable.tsx` diretamente, usa `transactions: any`, `new Audio('/beep.mp3')` (404 no console), `transition-all duration-300`, emoji `📥`, zero `AbortController` e responde *"Espero que ajude!"*. Resultado: memory leak em unmount, jank visual, erro 404, vazamento de tipos e violação de Null-Vocabulary.
+- **Padrão Titã v6.0 (Com Portão):** Refiner compila `.planning/mission_dossier.md` (`DIRECT_OPERATIONAL`, `nodes_target: 0`), ativa `modern_ui_craft` + `tactile_audio_sfx` + `hardened_clean_architecture` + `browser_visual_reasoning`, despacha artífice fim-a-fim (`TypeName: "self"`, `gemini-4-hydrogen-xhigh`) que isola `useExportController` com `AbortController` e `Result<Blob, ExportError>`, aplica `framer-motion` spring (`stiffness: 420, damping: 28`), gera foley CC0 via `scripts/sfx_tool.py` e submete ao Juiz Red Team (`gemini-4-neon-high`) no Chrome real com zero erros de console.
